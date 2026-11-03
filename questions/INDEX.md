@@ -1,6 +1,6 @@
 # ACE Exam Review Index
 
-**Score: 35 / 238 (15%)**: 26 incorrect, 177 didn't know
+**Score: 35 / 375 (9%)**: 26 incorrect, 314 didn't know
 
 | # | Topic | My Answer | Correct | Result | File |
 |---|---|---|---|---|---|
@@ -48,11 +48,13 @@
 | 42 | Kubernetes / GKE (database password in Secret vs ConfigMap, image, volume) | B | B | ✅ | [Q042-kubernetes-secret-database-password.md](Q042-kubernetes-secret-database-password.md) |
 | 43 | Compute Engine MIG (autoscaling, health-check startup delay) | C | D | ❌ | [Q043-mig-autoscaling-startup-delay.md](Q043-mig-autoscaling-startup-delay.md) |
 | 44 | Compute Engine (nightly batch jobs, Spot/preemptible VMs vs GKE/micro bursting) | A | C | ❌ | [Q044-batch-jobs-spot-vms.md](Q044-batch-jobs-spot-vms.md) |
+| 45 | App Engine (roll back: route 100% traffic to previous version) | — | C | ❓ Didn't know | [Q045-app-engine-rollback-traffic.md](Q045-app-engine-rollback-traffic.md) |
 | 46 | App Engine + gcloud CLI (active project configuration vs app.yaml) | A | D | ❌ | [Q046-app-engine-gcloud-project-config.md](Q046-app-engine-gcloud-project-config.md) |
 | 47 | Compute Engine (instance template, automatic restart, host maintenance migration vs autohealing) | C | A | ❌ | [Q047-compute-engine-maintenance-restart.md](Q047-compute-engine-maintenance-restart.md) |
 | 48 | Cloud Storage (PDF object Content-Type vs public access, CDN, bucket labels) | B | C | ❌ | [Q048-cloud-storage-pdf-content-type.md](Q048-cloud-storage-pdf-content-type.md) |
 | 49 | Compute Engine (stop → increase memory / custom machine type → start) | D | D | ✅ | [Q049-vm-increase-memory.md](Q049-vm-increase-memory.md) |
 | 50 | VPC networking (one VPC, 2 subnets, non-overlapping CIDR; VPC global) | B | A | ❌ | [Q050-vpc-two-subnets-prod-test.md](Q050-vpc-two-subnets-prod-test.md) |
+| 51 | Compute Engine (MIG autohealing: HTTPS health check on port 443) | — | A | ❓ Didn't know | [Q051-mig-https-health-check-autohealing.md](Q051-mig-https-health-check-autohealing.md) |
 | 52 | IAM + BigQuery (group + jobUser to run queries; dataViewer can't query) | D | C | ❌ | [Q052-bigquery-jobuser-group.md](Q052-bigquery-jobuser-group.md) |
 | 53 | VPC firewall (ingress, target/source by service account, TCP:8080 only) | B | B | ✅ | [Q053-firewall-tiers-service-accounts.md](Q053-firewall-tiers-service-accounts.md) |
 | 54 | VPC networking (new region → new subnet in the same global VPC) | A | A | ✅ | [Q054-new-region-subnet-same-vpc.md](Q054-new-region-subnet-same-vpc.md) |
@@ -242,3 +244,138 @@
 | 238 | GKE (GKE Autopilot + Stable Release Channel) | — | B | ❓ Didn't know | [Q238-reliable-k8s-autopilot-stable-channel.md](Q238-reliable-k8s-autopilot-stable-channel.md) |
 | 239 | Monitoring (Cloud Monitoring Alert Policy) | — | B | ❓ Didn't know | [Q239-latency-5-min-alert-policy.md](Q239-latency-5-min-alert-policy.md) |
 | 240 | Serverless (Container + Cloud Scheduler → Cloud Run Job) | — | A | ❓ Didn't know | [Q240-midnight-binaries-cloud-run-job.md](Q240-midnight-binaries-cloud-run-job.md) |
+| 241 | GKE (gcloud container clusters get-credentials dev-cluster) | — | A | ❓ Didn't know | [Q241-kubectl-switch-cluster-get-credentials.md](Q241-kubectl-switch-cluster-get-credentials.md) |
+| 242 | Organization Policy (Org Policies: Key Expiry 24h + Deny Key Creation Except pj-sa) | — | C | ❓ Didn't know | [Q242-sa-keys-24h-org-policies.md](Q242-sa-keys-24h-org-policies.md) |
+| 243 | Billing (Pricing Calculator per Resource) | — | D | ❓ Didn't know | [Q243-estimate-cost-pricing-calculator.md](Q243-estimate-cost-pricing-calculator.md) |
+| 244 | Logging (Data Read/Write + Admin Read Logs, Sink to Pub/Sub) | — | C | ❓ Didn't know | [Q244-bigtable-pii-audit-logs-pubsub-siem.md](Q244-bigtable-pii-audit-logs-pubsub-siem.md) |
+| 245 | GKE (Private Autopilot Cluster) | — | A | ❓ Didn't know | [Q245-gke-private-autopilot.md](Q245-gke-private-autopilot.md) |
+| 246 | Serverless (App Engine, Cloud Run, Cloud Tasks → Cloud Run) | — | B | ❓ Didn't know | [Q246-serverless-flask-api-job-appengine-cloudrun.md](Q246-serverless-flask-api-job-appengine-cloudrun.md) |
+| 247 | IAM (One SA per Pipeline, Keys in Secret Manager) | — | D | ❓ Didn't know | [Q247-cicd-pipeline-per-pipeline-sa-secrets.md](Q247-cicd-pipeline-per-pipeline-sa-secrets.md) |
+| 248 | Cloud Storage (Lifecycle Rule → Archive After 30 Days) | — | A | ❓ Didn't know | [Q248-lifecycle-archive-after-30-days.md](Q248-lifecycle-archive-after-30-days.md) |
+| 249 | GKE (HPA for Availability, VPA Recommendations for Suggestions) | — | B | ❓ Didn't know | [Q249-unknown-resources-hpa-vpa-recommendations.md](Q249-unknown-resources-hpa-vpa-recommendations.md) |
+| 250 | Cloud Storage (Object Versioning + Lifecycle Rules) | — | D | ❓ Didn't know | [Q250-invoices-versioning-lifecycle.md](Q250-invoices-versioning-lifecycle.md) |
+| 251 | gcloud CLI (Set CLOUDSDK_PROXY_USERNAME/PASSWORD as Environment Variables) | — | D | ❓ Didn't know | [Q251-gcloud-proxy-credentials-env-vars.md](Q251-gcloud-proxy-credentials-env-vars.md) |
+| 252 | GKE (Spot Pool for Fault-Tolerant, Standard Pool for Critical) | — | D | ❓ Didn't know | [Q252-gke-spot-pool-fault-tolerant-standard-critical.md](Q252-gke-spot-pool-fault-tolerant-standard-critical.md) |
+| 253 | Cloud Run (Cloud Run Gradual Rollouts) | — | A | ❓ Didn't know | [Q253-serverless-canary-cloud-run-gradual-rollout.md](Q253-serverless-canary-cloud-run-gradual-rollout.md) |
+| 254 | Compute Engine (OS Config Agent + roles/osconfig.vulnerabilityReportViewer) | — | C | ❓ Didn't know | [Q254-vulnerability-report-viewer-os-config.md](Q254-vulnerability-report-viewer-os-config.md) |
+| 255 | Cloud Run (Gradual Rollout, Split Traffic Between Revisions) | — | B | ❓ Didn't know | [Q255-cloud-run-gradual-rollout-limit-impact.md](Q255-cloud-run-gradual-rollout-limit-impact.md) |
+| 256 | Compute Engine (Their Public Key Added to the VM) | — | C | ❓ Didn't know | [Q256-consultant-no-google-account-ssh-public-key.md](Q256-consultant-no-google-account-ssh-public-key.md) |
+| 257 | Monitoring (Log-Based Metrics + Alerts) | — | B | ❓ Didn't know | [Q257-monitor-firewall-instance-changes-log-metrics.md](Q257-monitor-firewall-instance-changes-log-metrics.md) |
+| 258 | IAM (bigquery.dataViewer on crm-databases) | — | D | ❓ Didn't know | [Q258-cross-project-bigquery-dataviewer.md](Q258-cross-project-bigquery-dataviewer.md) |
+| 259 | Networking (Expand the Subnet to 172.16.20.0/24) | — | A | ❓ Didn't know | [Q259-dataproc-subnet-full-expand-24.md](Q259-dataproc-subnet-full-expand-24.md) |
+| 260 | Databases (Multi-Region Cloud Spanner) | — | A | ❓ Didn't know | [Q260-global-transactions-sql-spanner.md](Q260-global-transactions-sql-spanner.md) |
+| 261 | IAM (gcloud iam roles copy to the Startup's Org ID) | — | C | ❓ Didn't know | [Q261-copy-custom-role-to-other-org.md](Q261-copy-custom-role-to-other-org.md) |
+| 262 | Serverless (Cloud Function With a Cloud Storage Trigger) | — | D | ❓ Didn't know | [Q262-speech-to-text-function-gcs-trigger.md](Q262-speech-to-text-function-gcs-trigger.md) |
+| 263 | Load balancing (External HTTPS LB, Managed Cert, URL Map to Bucket Backend) | — | A | ❓ Didn't know | [Q263-secure-autoscaled-site-https-lb-url-map-bucket.md](Q263-secure-autoscaled-site-https-lb-url-map-bucket.md) |
+| 264 | Databases (Bigtable, Timestamp Row Key) | — | D | ❓ Didn't know | [Q264-sensor-events-bigtable-timestamp.md](Q264-sensor-events-bigtable-timestamp.md) |
+| 265 | gcloud CLI (gcloud auth login + gcloud config set project) | — | A, E | ❓ Didn't know | [Q265-new-laptop-gcloud-auth-login-set-project.md](Q265-new-laptop-gcloud-auth-login-set-project.md) |
+| 266 | Migration (Transfer Appliance, BigQuery Data Transfer Service, Storage Transfer Service) | — | B | ❓ Didn't know | [Q266-migrate-transfer-appliance-bq-dts-sts.md](Q266-migrate-transfer-appliance-bq-dts-sts.md) |
+| 267 | GKE (GKE Autopilot) | — | A | ❓ Didn't know | [Q267-k8s-manifest-full-control-autopilot.md](Q267-k8s-manifest-full-control-autopilot.md) |
+| 268 | Serverless (Pub/Sub → Cloud Functions) | — | D | ❓ Didn't know | [Q268-votes-pubsub-cloud-functions.md](Q268-votes-pubsub-cloud-functions.md) |
+| 269 | Cloud SQL (Cloud SQL IAM Auth + Cloud SQL Auth Proxy) | — | C | ❓ Didn't know | [Q269-cloud-sql-iam-auth-proxy.md](Q269-cloud-sql-iam-auth-proxy.md) |
+| 270 | Networking (VPC Network Peering) | — | B | ❓ Didn't know | [Q270-two-projects-vpc-peering.md](Q270-two-projects-vpc-peering.md) |
+| 271 | Compute Engine (Scheduled Snapshots With 7-Day Retention) | — | B | ❓ Didn't know | [Q271-daily-snapshot-schedule-7-days.md](Q271-daily-snapshot-schedule-7-days.md) |
+| 272 | Infrastructure as Code (Terraform Modules in a Repository) | — | D | ❓ Didn't know | [Q272-approved-config-terraform-modules.md](Q272-approved-config-terraform-modules.md) |
+| 273 | Resource hierarchy (Folders per Department, Set Both on Folders) | — | C | ❓ Didn't know | [Q273-dept-folders-org-policies-log-sinks.md](Q273-dept-folders-org-policies-log-sinks.md) |
+| 274 | Load balancing + Cloud DNS (HTTP(S) Load Balancing + A Record in a Public DNS Zone) | — | D | ❓ Didn't know | [Q274-mig-secure-ha-https-lb-a-record.md](Q274-mig-secure-ha-https-lb-a-record.md) |
+| 275 | GKE (Vertical Pod Autoscaler per Microservice) | — | A | ❓ Didn't know | [Q275-right-size-limits-vpa.md](Q275-right-size-limits-vpa.md) |
+| 276 | BigQuery (INFORMATION_SCHEMA Views + Cloud Audit Logs) | — | B, D | ❓ Didn't know | [Q276-bigquery-quota-exceeded-info-schema-audit-logs.md](Q276-bigquery-quota-exceeded-info-schema-audit-logs.md) |
+| 277 | Compute Engine (Managed Instance Group + Autoscaling) | — | A | ❓ Didn't know | [Q277-stateless-vm-app-mig-autoscaling.md](Q277-stateless-vm-app-mig-autoscaling.md) |
+| 278 | Cloud Run (Lower the Maximum Number of Cloud Run Instances) | — | C | ❓ Didn't know | [Q278-cloud-run-cloud-sql-quota-max-instances.md](Q278-cloud-run-cloud-sql-quota-max-instances.md) |
+| 279 | Cloud Run (Cloud Run With Private Service Connect) | — | C | ❓ Didn't know | [Q279-internal-web-app-cloud-run-psc.md](Q279-internal-web-app-cloud-run-psc.md) |
+| 280 | Logging (Enable Log Analytics on the Log Bucket + Linked BigQuery Dataset) | — | B | ❓ Didn't know | [Q280-sql-on-logs-log-analytics.md](Q280-sql-on-logs-log-analytics.md) |
+| 281 | Compute Engine (Hyperdisk Extreme in a Stateful MIG) | — | C | ❓ Didn't know | [Q281-fastest-disk-recover-hyperdisk-stateful-mig.md](Q281-fastest-disk-recover-hyperdisk-stateful-mig.md) |
+| 282 | Networking (Promote Its IP to a Static Internal IP) | — | B | ❓ Didn't know | [Q282-fixed-internal-ip-promote-static.md](Q282-fixed-internal-ip-promote-static.md) |
+| 283 | GKE (Create an Autopilot Cluster) | — | B | ❓ Didn't know | [Q283-preview-to-ga-autopilot.md](Q283-preview-to-ga-autopilot.md) |
+| 284 | IAM (gcloud Service Account Impersonation) | — | C | ❓ Didn't know | [Q284-test-sa-permissions-impersonation.md](Q284-test-sa-permissions-impersonation.md) |
+| 285 | IAM + Organization Policy (Groups + IAM Roles + Org Policy Blocking Other Domains) | — | B | ❓ Didn't know | [Q285-company-accounts-groups-iam-domain-policy.md](Q285-company-accounts-groups-iam-domain-policy.md) |
+| 286 | Networking (Internal Application LB + Cloud DNS + Serverless VPC Access Connector) | — | D | ❓ Didn't know | [Q286-cloud-run-to-gke-api-internal-lb-vpc-connector.md](Q286-cloud-run-to-gke-api-internal-lb-vpc-connector.md) |
+| 287 | Logging (Log Sink to Pub/Sub, SaaS Subscribes) | — | B | ❓ Didn't know | [Q287-logs-to-saas-sink-pubsub.md](Q287-logs-to-saas-sink-pubsub.md) |
+| 288 | GKE (StatefulSet + Cluster Autoscaling) | — | A | ❓ Didn't know | [Q288-gke-database-statefulset-cluster-autoscaler.md](Q288-gke-database-statefulset-cluster-autoscaler.md) |
+| 289 | Cloud Storage (Versioning + Pub/Sub Notifications for Cloud Storage) | — | B | ❓ Didn't know | [Q289-notify-gcs-changes-pubsub-notifications.md](Q289-notify-gcs-changes-pubsub-notifications.md) |
+| 290 | Cloud Storage (Cloud Storage Lifecycle → Coldline After 6 Months) | — | A | ❓ Didn't know | [Q290-invoices-3-years-lifecycle-coldline.md](Q290-invoices-3-years-lifecycle-coldline.md) |
+| 291 | GKE (Autopilot) | — | D | ❓ Didn't know | [Q291-gke-ha-no-node-mgmt-autopilot.md](Q291-gke-ha-no-node-mgmt-autopilot.md) |
+| 292 | Storage choice (Cloud SQL, Cloud Storage Archive, Bigtable) | — | C | ❓ Didn't know | [Q292-mixed-data-cloudsql-archive-bigtable.md](Q292-mixed-data-cloudsql-archive-bigtable.md) |
+| 293 | Networking (Premium Tier for Prod, Standard Tier for Dev) | — | B | ❓ Didn't know | [Q293-prod-premium-dev-standard-tier.md](Q293-prod-premium-dev-standard-tier.md) |
+| 294 | Compute Engine (OS Login + Google Group) | — | D | ❓ Didn't know | [Q294-ssh-team-oslogin-group.md](Q294-ssh-team-oslogin-group.md) |
+| 295 | Monitoring (Cloud Monitoring Alert on Data Freshness) | — | B | ❓ Didn't know | [Q295-dataflow-stuck-data-freshness-alert.md](Q295-dataflow-stuck-data-freshness-alert.md) |
+| 296 | GKE (GKE Autopilot) | — | A | ❓ Didn't know | [Q296-private-microservices-gke-autopilot.md](Q296-private-microservices-gke-autopilot.md) |
+| 297 | IAM (Custom SA, Data Viewer on the Dataset) | — | B | ❓ Didn't know | [Q297-vm-bigquery-dataset-custom-sa.md](Q297-vm-bigquery-dataset-custom-sa.md) |
+| 298 | Serverless (Pub/Sub + Cloud Run) | — | C | ❓ Didn't know | [Q298-async-transactions-pubsub-cloud-run.md](Q298-async-transactions-pubsub-cloud-run.md) |
+| 299 | Storage (Filestore) | — | B | ❓ Didn't know | [Q299-nfs-modernize-filestore.md](Q299-nfs-modernize-filestore.md) |
+| 300 | Logging (Ops Agent + Log Analytics) | — | C | ❓ Didn't know | [Q300-vm-logs-ops-agent-log-analytics.md](Q300-vm-logs-ops-agent-log-analytics.md) |
+| 301 | GKE security (Workload Identity Federation for GKE) | — | B | ❓ Didn't know | [Q301-gke-pods-gcs-no-keys-workload-identity.md](Q301-gke-pods-gcs-no-keys-workload-identity.md) |
+| 302 | Compute Engine (OS Login + IAM Roles) | — | A | ❓ Didn't know | [Q302-linux-account-lifecycle-oslogin-iam.md](Q302-linux-account-lifecycle-oslogin-iam.md) |
+| 303 | IAM (Custom Role With Only the Required Permissions) | — | C | ❓ Didn't know | [Q303-ops-team-custom-role-only-needed.md](Q303-ops-team-custom-role-only-needed.md) |
+| 304 | Infrastructure as Code (Terraform) | — | B | ❓ Didn't know | [Q304-multicloud-iac-terraform.md](Q304-multicloud-iac-terraform.md) |
+| 305 | Serverless (Cloud Run + Eventarc) | — | D | ❓ Didn't know | [Q305-events-public-scale-to-zero-cloud-run-eventarc.md](Q305-events-public-scale-to-zero-cloud-run-eventarc.md) |
+| 306 | Networking (Same CIDR Ranges, Same Static IPs) | — | C | ❓ Didn't know | [Q306-lift-shift-hardcoded-ips-same-cidr.md](Q306-lift-shift-hardcoded-ips-same-cidr.md) |
+| 307 | Compute Engine (Spot VMs) | — | C | ❓ Didn't know | [Q307-nightly-batch-interruptible-spot.md](Q307-nightly-batch-interruptible-spot.md) |
+| 308 | Databases (Spanner) | — | B | ❓ Didn't know | [Q308-growing-postgres-multiregion-spanner.md](Q308-growing-postgres-multiregion-spanner.md) |
+| 309 | Billing (Enable Billing Export to BigQuery) | — | A | ❓ Didn't know | [Q309-billing-export-bigquery.md](Q309-billing-export-bigquery.md) |
+| 310 | Serverless (Cloud Run Job + Cloud Scheduler) | — | C | ❓ Didn't know | [Q310-overnight-batch-retry-cloud-run-job.md](Q310-overnight-batch-retry-cloud-run-job.md) |
+| 311 | Databases (AlloyDB) | — | A | ❓ Didn't know | [Q311-postgres-150tb-performance-alloydb.md](Q311-postgres-150tb-performance-alloydb.md) |
+| 312 | AI/ML infrastructure (GKE + Hardware Accelerators) | — | D | ❓ Didn't know | [Q312-llm-finetune-gke-accelerators.md](Q312-llm-finetune-gke-accelerators.md) |
+| 313 | GKE (kubectl rollout undo) | — | C | ❓ Didn't know | [Q313-gke-rollback-rollout-undo.md](Q313-gke-rollback-rollout-undo.md) |
+| 314 | Networking (Private Nodes + Cloud NAT With Static IPs) | — | B | ❓ Didn't know | [Q314-gke-vendor-allowlist-cloud-nat-static.md](Q314-gke-vendor-allowlist-cloud-nat-static.md) |
+| 315 | Serverless (Both on Cloud Run) | — | C | ❓ Didn't know | [Q315-static-site-and-http-job-cloud-run.md](Q315-static-site-and-http-job-cloud-run.md) |
+| 316 | Billing (Folder + Budget Scoped to Folder) | — | B | ❓ Didn't know | [Q316-sandbox-folder-budget-alert.md](Q316-sandbox-folder-budget-alert.md) |
+| 317 | Networking (Shared VPC + Hierarchical Firewall Policies) | — | D | ❓ Didn't know | [Q317-landing-zone-shared-vpc-hierarchical-fw.md](Q317-landing-zone-shared-vpc-hierarchical-fw.md) |
+| 318 | Infrastructure as Code (Compliant Terraform Modules) | — | C | ❓ Didn't know | [Q318-compliant-terraform-modules.md](Q318-compliant-terraform-modules.md) |
+| 319 | Cloud Run (Revision Min Instances = 2) | — | C | ❓ Didn't know | [Q319-cloud-run-revision-min-instances.md](Q319-cloud-run-revision-min-instances.md) |
+| 320 | GKE (Vertical Pod Autoscaler) | — | B | ❓ Didn't know | [Q320-single-replica-more-cpu-vpa.md](Q320-single-replica-more-cpu-vpa.md) |
+| 321 | Billing (Billing Export to BigQuery + Looker Studio) | — | B | ❓ Didn't know | [Q321-cost-analysis-billing-export-looker-studio.md](Q321-cost-analysis-billing-export-looker-studio.md) |
+| 322 | Data transfer (Storage Transfer Service) | — | A | ❓ Didn't know | [Q322-migrate-150tb-video-storage-transfer-service.md](Q322-migrate-150tb-video-storage-transfer-service.md) |
+| 323 | Compute Engine (Enforce OS Login via Organization Policy) | — | C | ❓ Didn't know | [Q323-company-ssh-standard-oslogin-org-policy.md](Q323-company-ssh-standard-oslogin-org-policy.md) |
+| 324 | Databases (Bigtable) | — | B | ❓ Didn't know | [Q324-iot-submillisecond-bigtable.md](Q324-iot-submillisecond-bigtable.md) |
+| 325 | Pub/Sub (gcloud pubsub subscriptions pull --auto-ack) | — | C | ❓ Didn't know | [Q325-pubsub-pull-auto-ack.md](Q325-pubsub-pull-auto-ack.md) |
+| 326 | IAM (Single-Purpose Service Accounts + Manage Them as Resources) | — | C, D | ❓ Didn't know | [Q326-service-account-best-practices-two.md](Q326-service-account-best-practices-two.md) |
+| 327 | Databases (Spanner) | — | B | ❓ Didn't know | [Q327-global-relational-scale-spanner.md](Q327-global-relational-scale-spanner.md) |
+| 328 | Troubleshooting (Review the Error Message) | — | D | ❓ Didn't know | [Q328-troubleshoot-review-error-first.md](Q328-troubleshoot-review-error-first.md) |
+| 329 | Networking (Expand the Primary IP Range) | — | D | ❓ Didn't know | [Q329-subnet-full-expand-range.md](Q329-subnet-full-expand-range.md) |
+| 330 | Serverless (Cloud Run Service) | — | C | ❓ Didn't know | [Q330-unpredictable-web-cloud-run-service.md](Q330-unpredictable-web-cloud-run-service.md) |
+| 331 | Networking (Multi-Region VMs + Global External Application Load Balancer) | — | B, D | ❓ Didn't know | [Q331-global-website-multiregion-global-alb.md](Q331-global-website-multiregion-global-alb.md) |
+| 332 | IAM (Impersonation + gcloud config set) | — | B | ❓ Didn't know | [Q332-local-script-sa-impersonation.md](Q332-local-script-sa-impersonation.md) |
+| 333 | Organization Policy (Resource Locations Constraint at Org Level With Allowed Locations) | — | B | ❓ Didn't know | [Q333-eea-resource-locations-org-allowed.md](Q333-eea-resource-locations-org-allowed.md) |
+| 334 | Networking (One /16 Custom VPC, Three Subnets, Subnet-Based Firewall Rules) | — | B | ❓ Didn't know | [Q334-three-tier-one-vpc-three-subnets.md](Q334-three-tier-one-vpc-three-subnets.md) |
+| 335 | Billing (Budget Alerts + Billing Export to BigQuery) | — | D | ❓ Didn't know | [Q335-team-cost-alerts-billing-export.md](Q335-team-cost-alerts-billing-export.md) |
+| 336 | Databases (AlloyDB via Database Migration Service) | — | C | ❓ Didn't know | [Q336-postgres-demanding-alloydb-dms.md](Q336-postgres-demanding-alloydb-dms.md) |
+| 337 | Identity (Google Cloud Directory Sync) | — | D | ❓ Didn't know | [Q337-ldap-ou-sync-gcds.md](Q337-ldap-ou-sync-gcds.md) |
+| 338 | GKE (GKE Standard Fixed Node Pool + Cloud Service Mesh) | — | D | ❓ Didn't know | [Q338-mesh-fixed-instances-gke-standard.md](Q338-mesh-fixed-instances-gke-standard.md) |
+| 339 | Networking (Cloud DNS Private Zone) | — | B | ❓ Didn't know | [Q339-internal-domain-cloud-dns-private-zone.md](Q339-internal-domain-cloud-dns-private-zone.md) |
+| 340 | Security (gcloud asset search-all-resources for ServiceAccountKey) | — | D | ❓ Didn't know | [Q340-audit-old-sa-keys-asset-search.md](Q340-audit-old-sa-keys-asset-search.md) |
+| 341 | Infrastructure as Code (Cloud Storage Backend) | — | B | ❓ Didn't know | [Q341-terraform-gcs-backend.md](Q341-terraform-gcs-backend.md) |
+| 342 | Resource hierarchy & Billing (One Org, a Folder per Startup, Separate Billing Accounts) | — | B | ❓ Didn't know | [Q342-startups-folders-separate-billing.md](Q342-startups-folders-separate-billing.md) |
+| 343 | Logging (Explain This Log Entry with Gemini in Logs Explorer) | — | C | ❓ Didn't know | [Q343-cryptic-logs-gemini-explain.md](Q343-cryptic-logs-gemini-explain.md) |
+| 344 | Logging (Log View + logging.viewAccessor) | — | D | ❓ Didn't know | [Q344-log-view-view-accessor.md](Q344-log-view-view-accessor.md) |
+| 345 | IAM (roles/iam.serviceAccountAdmin) | — | A | ❓ Didn't know | [Q345-modify-sa-iam-policy-sa-admin.md](Q345-modify-sa-iam-policy-sa-admin.md) |
+| 346 | IAM (Storage Object Viewer on the Bucket) | — | D | ❓ Didn't know | [Q346-vendor-read-bucket-object-viewer.md](Q346-vendor-read-bucket-object-viewer.md) |
+| 347 | IAM (Custom Role With Exactly Those Permissions) | — | C | ❓ Didn't know | [Q347-ops-start-stop-reset-custom-role.md](Q347-ops-start-stop-reset-custom-role.md) |
+| 348 | Security (Cloud Asset Inventory) | — | C | ❓ Didn't know | [Q348-public-ip-audit-asset-inventory.md](Q348-public-ip-audit-asset-inventory.md) |
+| 349 | Resource Manager / IAM (Check the Owner Role on the IAM Page) | — | D | ❓ Didn't know | [Q349-project-creator-owner-role.md](Q349-project-creator-owner-role.md) |
+| 350 | Organization Policy / IAM (Folder + Org Policy Locations & Services + Owner) | — | A | ❓ Didn't know | [Q350-ds-sandbox-folder-orgpolicy-owner.md](Q350-ds-sandbox-folder-orgpolicy-owner.md) |
+| 351 | Networking (Cloud NAT) | — | D | ❓ Didn't know | [Q351-no-external-ip-internet-cloud-nat.md](Q351-no-external-ip-internet-cloud-nat.md) |
+| 352 | GKE (gcloud services enable container.googleapis.com) | — | D | ❓ Didn't know | [Q352-gke-api-disabled-enable-container.md](Q352-gke-api-disabled-enable-container.md) |
+| 353 | Billing (Standard + Detailed Usage Cost Export) | — | B | ❓ Didn't know | [Q353-billing-standard-detailed-export.md](Q353-billing-standard-detailed-export.md) |
+| 354 | GKE (Create Nodes With That Service Account) | — | C | ❓ Didn't know | [Q354-gke-nodes-custom-sa-pull-images.md](Q354-gke-nodes-custom-sa-pull-images.md) |
+| 355 | Databases (Database Center) | — | D | ❓ Didn't know | [Q355-db-fleet-health-database-center.md](Q355-db-fleet-health-database-center.md) |
+| 356 | Cloud Storage (Uniform Access + IAM Condition on the Prefix) | — | D | ❓ Didn't know | [Q356-prefix-access-ubla-iam-condition.md](Q356-prefix-access-ubla-iam-condition.md) |
+| 357 | IAM (Grant Roles to the Agent's Service Account) | — | A | ❓ Didn't know | [Q357-vertex-agent-sa-pubsub-roles.md](Q357-vertex-agent-sa-pubsub-roles.md) |
+| 358 | IAM (serviceAccountTokenCreator) | — | C | ❓ Didn't know | [Q358-test-sa-permissions-token-creator.md](Q358-test-sa-permissions-token-creator.md) |
+| 359 | BigQuery (Cloud Storage + Partitioned External Table) | — | C | ❓ Didn't know | [Q359-avro-petabytes-external-table.md](Q359-avro-petabytes-external-table.md) |
+| 360 | GKE security (Workload Identity Federation) | — | D | ❓ Didn't know | [Q360-gke-monitoring-no-keys-workload-identity.md](Q360-gke-monitoring-no-keys-workload-identity.md) |
+| 361 | IAM (Add to Group With container.developer) | — | A | ❓ Didn't know | [Q361-dev-deploy-gke-group-container-developer.md](Q361-dev-deploy-gke-group-container-developer.md) |
+| 362 | IAM (Google Groups With Security Label) | — | D | ❓ Didn't know | [Q362-team-access-security-groups.md](Q362-team-access-security-groups.md) |
+| 363 | Security (asset search-all-resources for ServiceAccountKey) — repeat of Q340) | — | C | ❓ Didn't know | [Q363-audit-old-sa-keys-asset-search-2.md](Q363-audit-old-sa-keys-asset-search-2.md) |
+| 364 | Organization Policy (gcp.resourceLocations allowed in:australia-locations) | — | B | ❓ Didn't know | [Q364-australia-locations-allowed-values.md](Q364-australia-locations-allowed-values.md) |
+| 365 | IAM (domain:terramearth.com Principal) | — | A | ❓ Didn't know | [Q365-all-employees-domain-principal.md](Q365-all-employees-domain-principal.md) |
+| 366 | Infrastructure as Code (Root Directory per Application) | — | B | ❓ Didn't know | [Q366-terraform-root-dir-per-app.md](Q366-terraform-root-dir-per-app.md) |
+| 367 | Cloud Storage (Lifecycle Rule age 90 → SetStorageClass Archive) | — | B | ❓ Didn't know | [Q367-lifecycle-age-90-archive.md](Q367-lifecycle-age-90-archive.md) |
+| 368 | Monitoring (Log Each Connection + Log-Based Metric) | — | B | ❓ Didn't know | [Q368-track-db-connections-log-metric.md](Q368-track-db-connections-log-metric.md) |
+| 369 | IAM (Dedicated SA + objectCreator on That Bucket) | — | A | ❓ Didn't know | [Q369-vm-logs-bucket-object-creator.md](Q369-vm-logs-bucket-object-creator.md) |
+| 370 | Billing (Budget → Pub/Sub → Cloud Run Function That Stops the VM) | — | B | ❓ Didn't know | [Q370-budget-stop-vm-pubsub-function.md](Q370-budget-stop-vm-pubsub-function.md) |
+| 371 | Monitoring (Monitoring Alerting Policy on cpu/utilization) | — | C | ❓ Didn't know | [Q371-mig-cpu-75-alert-policy.md](Q371-mig-cpu-75-alert-policy.md) |
+| 372 | Infrastructure as Code (Config Connector) | — | D | ❓ Didn't know | [Q372-gke-declarative-config-connector.md](Q372-gke-declarative-config-connector.md) |
+| 373 | Serverless (Cloud Run) | — | D | ❓ Didn't know | [Q373-container-scale-to-zero-cloud-run.md](Q373-container-scale-to-zero-cloud-run.md) |
+| 374 | Billing (Budget → Pub/Sub → Cloud Run Function → Slack) | — | B | ❓ Didn't know | [Q374-budget-slack-pubsub-function.md](Q374-budget-slack-pubsub-function.md) |
+| 375 | Compute Engine (Hyperdisk Extreme) | — | A | ❓ Didn't know | [Q375-sap-hana-hyperdisk-extreme.md](Q375-sap-hana-hyperdisk-extreme.md) |

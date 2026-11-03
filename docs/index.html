@@ -186,7 +186,7 @@ h2 { font-size: 1.2rem; margin: 0 0 16px; }
   border: 1.5px solid var(--border); background: var(--surface); border-radius: 12px;
   padding: 18px 20px; cursor: pointer; transition: border-color .15s, background .15s;
 }
-.opt:hover:not(:disabled) { border-color: var(--accent); }
+@media (hover: hover) { .opt:hover:not(:disabled) { border-color: var(--accent); } }
 .opt .letter {
   flex: none; width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center;
   background: var(--surface-2); font-weight: 700; font-size: .9rem;
@@ -258,24 +258,81 @@ details.other > summary > span:not(.badge) { font-weight: 500; }
 .foot { color: var(--muted); font-size: .8rem; margin-top: 28px; text-align: center; }
 .empty { color: var(--muted); text-align: center; padding: 30px 0; }
 
+/* Touch: no sticky hover colors after a tap, no double-tap zoom delay on buttons */
+button, summary, select { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+@media (hover: none) { .foot { display: none; } }
+
 @media (max-width: 760px) {
   .wrap { padding: 0 16px; }
   main.wrap { padding: 28px 16px 80px; }
 }
-@media (max-width: 560px) {
-  h1 { font-size: 1.6rem; }
-  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-  .stat { padding: 12px 14px; }
+@media (max-width: 640px) {
+  body { line-height: 1.5; }
+  .bar { height: 52px; gap: 8px; }
+  .brand { font-size: .95rem; }
+  .brand span { display: none; }
+  .icon-btn { width: 40px; height: 40px; }
+  main.wrap { padding: 20px 12px calc(110px + env(safe-area-inset-bottom)); }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.08rem; margin-bottom: 12px; }
+  .lead { font-size: .97rem; margin-bottom: 20px; }
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 16px; }
+  .stat { padding: 12px 14px; border-radius: 12px; }
   .stat .n { font-size: 1.4rem; }
-  .card { padding: 20px; }
-  .opt { padding: 14px 16px; gap: 6px 12px; flex-wrap: wrap; }
-  .opt .txt { flex: 1 1 0; min-width: 0; }
-  .opt .mark { order: -1; width: 100%; padding: 0; font-size: .72rem; }
-  .why { padding: 16px 18px; }
+  .card { padding: 18px 16px; border-radius: 14px; }
+  .two-col > * + * { margin-top: 16px; }
+  .field { margin-bottom: 22px; }
+  .chip { padding: 8px 14px; min-height: 40px; }
+  .seg.blocks { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .seg.blocks .chip { padding: 6px 0; min-height: 36px; text-align: center; }
+  .range-row, .select, .range-input { max-width: none; }
+  .btn { padding: 12px 16px; }
+  .actions { gap: 10px; margin-top: 22px; }
   .actions .btn { flex: 1; }
   .actions .right { margin-left: 0; }
-  .actions.stack { flex-direction: column; }
+  .actions.stack, .actions.stack-sm { flex-direction: column; }
+  .actions.stack-sm .pill { text-align: center; }
+  .qlist li { padding: 12px 0; gap: 10px; }
   .hide-sm { display: none; }
+
+  /* Question: drop the card frame so the text gets the full screen width */
+  .qpane.card { background: none; border: 0; box-shadow: none; padding: 0; border-radius: 0; }
+  .meta { margin-bottom: 12px; }
+  .stem { font-size: 1.04rem; line-height: 1.55; margin-bottom: 18px; }
+  .stem p { margin-bottom: 10px; }
+  .hint { margin: -6px 0 14px; }
+  .options { gap: 10px; }
+  .opt { padding: 12px 14px; gap: 6px 12px; flex-wrap: wrap; border-radius: 12px; line-height: 1.45; }
+  .opt .letter { width: 26px; height: 26px; }
+  .opt .txt { flex: 1 1 0; min-width: 0; padding-top: 1px; }
+  .opt .mark { order: -1; width: 100%; padding: 0; font-size: .72rem; }
+
+  /* Back / Check / Next always within thumb reach at the bottom of the screen */
+  .qpane .actions {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; margin: 0;
+    flex-wrap: nowrap; gap: 8px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--surface) 94%, transparent);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border);
+  }
+  .qpane .actions .btn { flex: 1 1 0; white-space: nowrap; min-height: 48px; }
+  .qpane .actions .btn.primary { flex: 2 1 0; }
+  .review-bar { margin-bottom: 12px; }
+  .review-bar .btn { padding: 8px 12px; }
+
+  /* Answer reveal */
+  .verdict { scroll-margin-top: 64px; padding: 16px; margin-top: 20px; }
+  .verdict .big { font-size: 1.05rem; }
+  .why { padding: 14px 16px; margin-top: 14px; }
+  .group-title { margin: 28px 0 10px; }
+  details { margin-top: 10px; border-radius: 12px; }
+  details > summary { padding: 14px 16px; min-height: 48px; }
+  details > .body { padding: 4px 16px 14px; }
+  .md ul, .md ol { padding-left: 18px; }
+  .md pre code { font-size: .76rem; }
+
+  .score-ring .pct { font-size: 2.6rem; }
 }
 </style>
 </head>
@@ -466,7 +523,7 @@ details.other > summary > span:not(.badge) { font-weight: 500; }
             }).join("") +
           "</div>" +
           '<p class="field-error" id="range-error" role="alert" hidden></p></div>' +
-        '<div class="actions"><button class="btn primary" id="start">Start quiz →</button>' +
+        '<div class="actions stack-sm"><button class="btn primary" id="start">Start quiz →</button>' +
           '<button class="btn" id="random-all">🎲 Random quiz: all ' + ALL.length + '</button>' +
           '<span class="pill" id="count" style="align-self:center"></span></div>' +
       '</div>' +
