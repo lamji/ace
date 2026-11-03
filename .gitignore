@@ -1,0 +1,21 @@
+# Local project metadata and editor files
+.nocturne/
+.vscode/
+.idea/
+.DS_Store
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Reference material not needed by the quiz site
+associate_cloud_engineer_renewal_exam_guide_english.pdf
