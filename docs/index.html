@@ -230,6 +230,10 @@ details > .body { padding: 4px 20px 18px; border-top: 1px solid var(--border); }
 details.other > summary > span:not(.badge) { font-weight: 500; }
 .badge.good { background: var(--good-soft); color: var(--good); }
 .badge.bad { background: var(--bad-soft); color: var(--bad); }
+details.other.good { border-left: 4px solid var(--good); }
+details.other.picked { border-left: 4px solid var(--bad); }
+.why-h.good { color: var(--good); }
+.why-h.bad { color: var(--bad); }
 
 /* Rendered markdown */
 .md { overflow-wrap: anywhere; }
@@ -734,12 +738,14 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
     if (session.i > 0) { session.i--; renderQuestion(); window.scrollTo(0, 0); }
   }
 
-  function whyBlock(q, letter, good, heading) {
+  // One collapsed row per option. Tap to open the explanation.
+  function optionBlock(q, letter, kind, heading) {
     var body = q.explanations[letter];
-    return '<div class="why ' + (good ? "good" : "bad") + '">' +
-      '<div class="h">' + heading + "</div>" +
-      '<div class="q">“' + inline(optText(q, letter)) + "”</div>" +
-      '<div class="md">' + (body ? md(body) : "<p>No explanation saved for this option.</p>") + "</div></div>";
+    var good = kind === "good";
+    return '<details class="other ' + kind + '"><summary><span class="badge ' + (good ? "good" : "bad") + '">' + (good ? "✓ " : "✗ ") + letter + "</span>" +
+      "<span>" + inline(optText(q, letter)) + "</span></summary>" +
+      '<div class="body md">' + (heading ? '<p class="why-h ' + (good ? "good" : "bad") + '"><strong>' + heading + "</strong></p>" : "") +
+      (body ? md(body) : "<p>No explanation saved for this option.</p>") + "</div></details>";
   }
 
   function renderReveal(q, ans) {
@@ -756,12 +762,11 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
       var l = o.letter;
       var mine = ans.picked.indexOf(l) >= 0;
       if (q.correct.indexOf(l) >= 0) {
-        html += whyBlock(q, l, true, (mine ? "Why your answer (" + l + ") is correct" : "Why " + l + " is the correct answer"));
+        html += optionBlock(q, l, "good", (mine ? "Why your answer (" + l + ") is correct" : "Why " + l + " is the correct answer"));
       } else if (mine) {
-        html += whyBlock(q, l, false, "Why your answer (" + l + ") is wrong");
+        html += optionBlock(q, l, "picked", "Why your answer (" + l + ") is wrong");
       } else {
-        html += "<details class=\"other\"><summary><span class=\"badge bad\">✗ " + l + "</span><span>" + inline(o.text) + "</span></summary>" +
-          '<div class="body md">' + md(q.explanations[l] || "No explanation saved.") + "</div></details>";
+        html += optionBlock(q, l, "bad", "");
       }
     });
 
