@@ -743,7 +743,6 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
   }
 
   function renderReveal(q, ans) {
-    var wrongPicks = ans.picked.filter(function (l) { return q.correct.indexOf(l) < 0; });
     var correctTxt = q.correct.map(function (l) { return "<strong>" + l + ".</strong> " + inline(optText(q, l)); }).join("<br>");
 
     var html = '<div class="verdict ' + (ans.ok ? "good" : "bad") + '">' +
@@ -752,22 +751,19 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
       (ans.ok ? "<strong>" + ans.picked.join(", ") + "</strong>: " + q.correct.map(function (l) { return inline(optText(q, l)); }).join(" / ") : correctTxt) +
       "</div></div>";
 
-    wrongPicks.forEach(function (l) {
-      html += whyBlock(q, l, false, "Why your answer (" + l + ") is wrong");
-    });
-    q.correct.forEach(function (l) {
+    // Show every option in A, B, C, D order so it's easy to review on a phone.
+    q.options.forEach(function (o) {
+      var l = o.letter;
       var mine = ans.picked.indexOf(l) >= 0;
-      html += whyBlock(q, l, true, (mine ? "Why your answer (" + l + ") is correct" : "Why " + l + " is the correct answer"));
+      if (q.correct.indexOf(l) >= 0) {
+        html += whyBlock(q, l, true, (mine ? "Why your answer (" + l + ") is correct" : "Why " + l + " is the correct answer"));
+      } else if (mine) {
+        html += whyBlock(q, l, false, "Why your answer (" + l + ") is wrong");
+      } else {
+        html += "<details class=\"other\"><summary><span class=\"badge bad\">✗ " + l + "</span><span>" + inline(o.text) + "</span></summary>" +
+          '<div class="body md">' + md(q.explanations[l] || "No explanation saved.") + "</div></details>";
+      }
     });
-
-    var others = q.options.filter(function (o) { return ans.picked.indexOf(o.letter) < 0 && q.correct.indexOf(o.letter) < 0; });
-    if (others.length) {
-      html += '<div class="group-title">The other options</div>';
-      others.forEach(function (o) {
-        html += "<details class=\"other\"><summary><span class=\"badge bad\">✗ " + o.letter + "</span><span>" + inline(o.text) + "</span></summary>" +
-          '<div class="body md">' + md(q.explanations[o.letter] || "No explanation saved.") + "</div></details>";
-      });
-    }
 
     var deeper = q.sections.filter(function (s) { return s.md; });
     if (deeper.length) {
