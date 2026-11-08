@@ -63,7 +63,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Your team needs admin access to many virtual machines (VMs). How do you give them that access so that:\n1. It's **easy to manage**, even across lots of servers, and\n2. Security can **see exactly which person** logged into which server?"
  },
  {
   "file": "Q002-vpc-subnet-cidr.md",
@@ -128,7 +129,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You're creating your own private network in Google Cloud (a **custom VPC**) with only **one subnet**. Which IP range gives that subnet the **most IP addresses**, while still being a range you're allowed to use?"
  },
  {
   "file": "Q003-cloud-sql-pitr.md",
@@ -193,7 +195,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You need a database for tables (rows and columns). The data is **small**, it lives in **one location**, and you want it **cheap**. You also need to be able to **rewind the database to an exact moment in the past** (point-in-time recovery). Which database do you choose, and which setting do you turn on?"
  },
  {
   "file": "Q004-mig-autohealing.md",
@@ -258,7 +261,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "You have a group of VMs spread across several zones. If a VM **stops responding** (it fails a check **3 times in a row**, checked **every 10 seconds**), you want Google Cloud to **automatically delete it and create a fresh one**. What's the **simplest** way to set that up?"
  },
  {
   "file": "Q005-gcloud-configurations.md",
@@ -323,7 +327,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You have several saved **gcloud profiles** (configurations), for example one for dev and one for prod. You're currently using one of them. You want to **peek at the settings of a different one** (the inactive one), specifically which GKE cluster it points to, **without switching to it** and with **as few commands as possible**."
  },
  {
   "file": "Q006-storage-class-disaster-recovery.md",
@@ -388,7 +393,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "You keep **backup files** in Cloud Storage just in case of a disaster. You **almost never read them**; you only need them if something goes badly wrong. Which **storage class** does Google recommend for this, so you pay as little as possible for data you rarely touch?"
  },
  {
   "file": "Q007-centralize-billing-account.md",
@@ -453,7 +459,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Employees have been paying for their Google Cloud projects with **their own credit cards**, and the company pays them back later. That's messy. The company wants **one company billing account** that pays for **all** these projects. What's the first, correct step?"
  },
  {
   "file": "Q008-static-internal-ip.md",
@@ -518,7 +525,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "An app is **hard-coded** to look for its licensing server at **10.0.3.21**, and you can't change the app. You're putting the licensing server on a Google Cloud VM. How do you make sure the VM **gets exactly 10.0.3.21** and **keeps it permanently**?"
  },
  {
   "file": "Q009-app-engine-scaling.md",
@@ -588,7 +596,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Your app runs on App Engine. You want App Engine to **add or remove instances automatically** depending on **how many requests come in**. You **also** want **3 free (idle) instances always waiting**, ready for sudden traffic. Which scaling type and setting does this?"
  },
  {
   "file": "Q010-copy-iam-custom-roles.md",
@@ -653,7 +662,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "In your **dev** project, you created your own **custom IAM roles** (permission bundles). Now you're making a **prod** project and want the **same roles there**. What's the quickest way to copy them over?"
  },
  {
   "file": "Q011-deployment-manager-iac.md",
@@ -718,7 +728,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You want to **create VMs automatically** by writing what you want (machine type, disk, network, and so on) in a **configuration file**, instead of clicking in the Console. Which Google tool reads a config file and builds the VMs for you?"
  },
  {
   "file": "Q012-deploy-dockerfile-gke.md",
@@ -783,7 +794,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "You have a **Dockerfile** (a recipe for packaging your app). You want to run the app on **GKE (Kubernetes)**. What are the correct steps?"
  },
  {
   "file": "Q013-jenkins-marketplace.md",
@@ -848,7 +860,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Your developers need **Jenkins** (a popular tool for building and testing code automatically). What's the **quickest, easiest** way to get a working Jenkins server on Google Cloud?"
  },
  {
   "file": "Q014-deployment-manager-update.md",
@@ -913,7 +926,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You already built your infrastructure with **Deployment Manager** (review from Q011). Now you changed the config file and want to **apply the changes** to the **existing** deployment, **without taking things down**. Which command does that?"
  },
  {
   "file": "Q015-bigquery-dry-run-cost.md",
@@ -983,7 +997,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Before running a big BigQuery query, you want to know **how much it will cost**. With **on-demand pricing**, BigQuery charges by **how much data the query reads**. How do you get that number **without actually running (and paying for) the query**?"
  },
  {
   "file": "Q016-mig-cpu-autoscaling.md",
@@ -1048,7 +1063,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You have **one program** that you want to run on **VMs** (company rule). When the VMs' **CPU gets busy**, more VMs should be added **automatically**, and when it's quiet, they should be removed. You want this to be **easy to manage** and **fast**. What do you use?"
  },
  {
   "file": "Q017-billing-export-bigquery.md",
@@ -1113,7 +1129,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "You want to study your Google Cloud **spending** across **3 projects**, grouped **by service** (Compute Engine, Cloud SQL, BigQuery, ...) and **by day and month**, to **estimate the next 6 months**. You want to do it with **standard query syntax**, meaning **SQL**. Where should the billing data go?"
  },
  {
   "file": "Q018-storage-lifecycle-age.md",
@@ -1178,7 +1195,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Videos in a bucket should **automatically** move to the cheaper **Coldline** class **90 days** after they're uploaded, and be **deleted 1 year after they were uploaded**. How do you set that up, and what numbers do you use?"
  },
  {
   "file": "Q019-vm-service-account.md",
@@ -1246,7 +1264,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "A VM needs to talk to **Cloud SQL**. You made a **special service account** (a robot identity) that has permission to do that. How do you make the VM **use that service account** instead of the **default** one Google gives every VM?"
  },
  {
   "file": "Q020-rdp-windows-vm.md",
@@ -1311,7 +1330,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "You made a **Windows VM** with **SQL Server 2017** on it. You want to **log in to its desktop remotely** (with RDP) in the **fewest steps** that actually **work**. What do you need?"
  },
  {
   "file": "Q021-gcloud-multiple-configurations.md",
@@ -1379,7 +1399,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You work in **two different Google Cloud accounts**. Each one uses a **different region and zone**. From your terminal, you want to **create one VM in each account**. How do you switch cleanly between the two setups?"
  },
  {
   "file": "Q022-deployment-manager-preview.md",
@@ -1444,7 +1465,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "You made **big changes** to a Deployment Manager template, the file that describes your infrastructure. Before you **actually build** anything, you want to check that every resource can find the other resources it **depends on**, like a VM that needs its network. And you want the answer **fast**. How?"
  },
  {
   "file": "Q023-time-series-pipeline.md",
@@ -1509,7 +1531,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Lots of **devices** (sensors, smart lights, speakers) keep sending **readings with a timestamp**, for example \"temperature at 10:00:01, 10:00:02, …\". That's **time-series data**. The data flows into Google Cloud through 4 boxes:"
  },
  {
   "file": "Q024-app-engine-new-prod-project.md",
@@ -1574,7 +1597,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Your app runs on App Engine in a **dev project**, and testing passed. Now you want a **separate production project** with the **same app** in it. What are the right steps?"
  },
  {
   "file": "Q025-bigquery-auditors-group-roles.md",
@@ -1644,7 +1668,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**Outside auditors** need to **look at BigQuery's audit logs and data**, read-only. How should you give them access the way Google recommends?"
  },
  {
   "file": "Q026-vm-write-bucket-objectcreator.md",
@@ -1709,7 +1734,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Some VMs need to **put files into one specific bucket**. That's all: **write**, into **that one bucket**. What's the Google-recommended way to give them that permission?"
  },
  {
   "file": "Q027-storage-data-access-logs.md",
@@ -1774,7 +1800,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You turned on **data access logging** for 3 sensitive buckets. Now you want to see what **one specific person** did: **which files they opened** and **which metadata labels they added**. Where do you look, with the fewest steps?"
  },
  {
   "file": "Q028-storage-admin-buckets-and-files.md",
@@ -1839,7 +1866,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You own the project. You want some colleagues to take care of **Cloud Storage**, both the **buckets** (the containers) and the **files** inside them. Which **one role** gives them exactly that, and nothing else?"
  },
  {
   "file": "Q029-signed-url-external-share.md",
@@ -1904,7 +1932,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You need to give an outside company **one sensitive file**. They **don't have a Google account**, so you can't add them in IAM. Their access must **stop after 4 hours**. What's the **safest** way with the **fewest steps**?"
  },
  {
   "file": "Q030-gke-daemonset-monitoring.md",
@@ -1967,7 +1996,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Your GKE cluster **adds and removes nodes automatically** (autoscaler). You need **exactly one monitoring pod on every node**, including **new nodes that appear later**. Which Kubernetes object does that by itself?"
  },
  {
   "file": "Q031-enable-pubsub-api.md",
@@ -2032,7 +2062,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Your App Engine app needs to **send and receive Pub/Sub messages**. The **Pub/Sub API is switched off** in the project. What must you do so the app can actually use Pub/Sub?"
  },
  {
   "file": "Q032-monitoring-multiple-projects.md",
@@ -2097,7 +2128,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Your VMs, databases and apps live in **several different projects**. You want to see **all of them on one monitoring dashboard**. How do you set that up?"
  },
  {
   "file": "Q033-mig-single-instance-always-on.md",
@@ -2162,7 +2194,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You run an app on a VM inside a **managed instance group (MIG)**. Two rules:\n1. **Always running**: if the VM dies, a new one must replace it.\n2. **Never more than one** VM at the same time."
  },
  {
   "file": "Q034-verify-iam-members-roles.md",
@@ -2227,7 +2260,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "You want to see **who** (users, groups, service accounts) has **which role** in `my-project`. Where do you look?"
  },
  {
   "file": "Q035-new-billing-account-link-project.md",
@@ -2292,7 +2326,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Two tasks, in order: **(1) create a NEW billing account**, then **(2) link it to a project that ALREADY exists**. Which option does **both**, with the right permission?"
  },
  {
   "file": "Q036-cross-project-sa-snapshots.md",
@@ -2357,7 +2392,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Your service accounts live in **`proj-sa`**. The VMs live in **`proj-vm`**. You want a service account from `proj-sa` to **take snapshots** of the VMs in `proj-vm`. How do you give it permission?"
  },
  {
   "file": "Q037-app-engine-change-region.md",
@@ -2422,7 +2458,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Your App Engine app runs in **us-central**. You want it to run in **asia-northeast1 (Tokyo)** instead. How do you move it?"
  },
  {
   "file": "Q038-spanner-databaseuser-group.md",
@@ -2492,7 +2529,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "three people need permission to both look at and change rows in a Cloud Spanner database. Which role and access-management approach fit?"
  },
  {
   "file": "Q039-gke-node-auto-upgrades.md",
@@ -2562,7 +2600,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "after creating a Kubernetes cluster, how do you keep its software version maintained as GKE releases supported updates?"
  },
  {
   "file": "Q040-https-load-balancer-tls-termination.md",
@@ -2632,7 +2671,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "a public website runs on a group of VM instances. You want the load balancer to handle the secure connection from visitors and spread their web requests across the instances."
  },
  {
   "file": "Q041-large-file-parallel-upload.md",
@@ -2700,7 +2740,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "one very large file must travel over a fast, otherwise unused internet connection. Which method can send parts of that one file simultaneously to increase transfer speed?"
  },
  {
   "file": "Q042-kubernetes-secret-database-password.md",
@@ -2770,7 +2811,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "the application needs a password to connect to its database, but the password is written directly into a Kubernetes Deployment configuration. Where should the password live, and how should the container receive it?"
  },
  {
   "file": "Q043-mig-autoscaling-startup-delay.md",
@@ -2840,7 +2882,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "the group starts new VMs when CPU goes above 80%, but new VMs need about three minutes before people can use them. The health-check delay is only 30 seconds. How should you give starting VMs enough time before judging them?"
  },
  {
   "file": "Q044-batch-jobs-spot-vms.md",
@@ -2910,7 +2953,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "a workload runs for about two hours each night. Which compute option can run that work at the lowest service cost without paying for a large cluster that sits unused?"
  },
  {
   "file": "Q045-app-engine-rollback-traffic.md",
@@ -2973,7 +3017,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "You pushed a new release to App Engine and it has a bug. How do you switch back to the old, working release **right now**?"
  },
  {
   "file": "Q046-app-engine-gcloud-project-config.md",
@@ -3043,7 +3088,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "an App Engine deployment landed in the wrong Google Cloud project. Which file or setting should you inspect to discover which project `gcloud` was targeting?"
  },
  {
   "file": "Q047-compute-engine-maintenance-restart.md",
@@ -3113,7 +3159,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "create ten similar VMs that recover automatically from crashes and keep serving through planned maintenance on their physical host."
  },
  {
   "file": "Q048-cloud-storage-pdf-content-type.md",
@@ -3183,7 +3230,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "the PDF links work, but the browser offers to download the files. Configure the object so the browser recognizes the response as a PDF and can show it inline."
  },
  {
   "file": "Q049-vm-increase-memory.md",
@@ -3248,7 +3296,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "A VM has **2 CPUs and 4 GB of memory (RAM)** and keeps running out of memory. You want **exactly 8 GB**. What's the right way to change it?"
  },
  {
   "file": "Q050-vpc-two-subnets-prod-test.md",
@@ -3318,7 +3367,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Prod VMs and test VMs must be in **two different subnets**, but **all VMs must reach each other by private (internal) IP** with **no extra routes**. Which setup works?"
  },
  {
   "file": "Q051-mig-https-health-check-autohealing.md",
@@ -3381,7 +3431,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You're making a group of identical VMs that grows and shrinks on its own and serves an HTTPS website. If one VM breaks, you want Google to notice and **replace it automatically**. What do you set up?"
  },
  {
   "file": "Q052-bigquery-jobuser-group.md",
@@ -3446,7 +3497,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "A small data science team, **whose members change often**, needs to **run queries** in BigQuery. How do you give them access the Google-recommended way?"
  },
  {
   "file": "Q053-firewall-tiers-service-accounts.md",
@@ -3516,7 +3568,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You have a classic 3-tier app (for example **web → API → database**), each tier in its own subnet, and **each tier has its own service account**. You must open **only TCP port 8080**, and **only in two directions**:\n- Tier 1 → Tier 2\n- Tier 2 → Tier 3"
  },
  {
   "file": "Q054-new-region-subnet-same-vpc.md",
@@ -3581,7 +3634,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You have one VPC with one subnet in **us-central1**, and an app runs there. You need a new VM in **europe-west1** that can reach the app. What's the simplest Google-recommended setup?"
  },
  {
   "file": "Q055-disable-gke-container-logs.md",
@@ -3646,7 +3700,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "One **development container** in GKE wrote **tons of logs**, and you're paying for storing them. Stop those logs **quickly**, in the **fewest steps**."
  },
  {
   "file": "Q056-app-engine-traffic-split.md",
@@ -3711,7 +3766,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Your website runs on App Engine. You built a new version and want **only 1% of visitors** to see it while 99% keep the current one. What's the simplest way?"
  },
  {
   "file": "Q057-mig-rolling-update-maxsurge.md",
@@ -3774,7 +3830,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Your website runs on a group of identical VMs (a MIG) and real customers are using it. You want to swap in the new version **a few VMs at a time**, and the number of working VMs must **never go down** while you do it."
  },
  {
   "file": "Q058-global-relational-db-spanner.md",
@@ -3839,7 +3896,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Your app stores data in **tables with relationships** (users, orders, ...). Users are **all over the world**, and you don't know how big it will get. Which database grows with you without lots of reconfiguring?"
  },
  {
   "file": "Q059-finance-link-billing-roles.md",
@@ -3904,7 +3962,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Engineers can create projects, but they must **not** be able to connect projects to the company credit card (billing account). **Only finance** should do that linking, and finance must **not** be able to change anything else in the projects."
  },
  {
   "file": "Q060-gke-internal-lb-vpc-peering.md",
@@ -3969,7 +4028,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Your app runs as several pods in GKE (VPC 1). A VM lives in a **different VPC** (`gce-network`, VPC 2), same region, no overlapping IP ranges. The VM must call the app. Do it with the **least effort**."
  },
  {
   "file": "Q061-audit-logs-sink-coldline.md",
@@ -4034,7 +4094,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "A bank-like company must **keep audit logs for 3 years** (rules require it), across **hundreds of projects**. Nobody will read them unless an auditor or investigator asks. What's the **cheapest** way to keep them?"
  },
  {
   "file": "Q062-reverse-proxy-memory-custom-vm.md",
@@ -4099,7 +4160,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You have a small program (a caching reverse proxy) that needs **lots of memory (32 GB)** but **almost no CPU**. It must respond fast. Where's the **cheapest** place to run it?"
  },
  {
   "file": "Q063-onprem-private-google-access.md",
@@ -4169,7 +4231,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Your servers are in **your own building**. They must read/write Cloud Storage, but they're **not allowed on the internet** and can't have public IPs. What's Google's recommended way to connect them to Cloud Storage **privately**?"
  },
  {
   "file": "Q064-pubsub-push-cloud-run.md",
@@ -4234,7 +4297,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Messages arrive in a Pub/Sub topic. Your app on Cloud Run must process each one. What's Google's recommended way to get the messages **into** Cloud Run?"
  },
  {
   "file": "Q065-low-traffic-container-cloud-run.md",
@@ -4299,7 +4363,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You have an app already packed in a container. It answers web requests, but only **a few times a day**. Where can you run it for the **lowest cost**?"
  },
  {
   "file": "Q066-acquisition-single-invoice-link-billing.md",
@@ -4364,7 +4429,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Two companies, two Google Cloud organizations, two billing accounts, hundreds of projects each. Finance wants **one bill** for everything, **starting tomorrow**. What's the quickest way?"
  },
  {
   "file": "Q067-spanner-support-monitoring-viewer.md",
@@ -4429,7 +4495,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The support team must **watch how Spanner is doing** (is it busy? slow? full?), but must **never see the customer data** inside the tables. Which single role gives them exactly that?"
  },
  {
   "file": "Q068-compute-logs-sink-bigquery.md",
@@ -4494,7 +4561,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Your VMs already send their logs to Cloud Logging (the agent is installed). Now you want a copy of **only the Compute Engine logs** in a BigQuery dataset called `platform-logs`, so you can analyze them with SQL. Do it as **cheaply** as possible."
  },
  {
   "file": "Q069-deployment-manager-type-provider-daemonset.md",
@@ -4559,7 +4627,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "One Deployment Manager config already creates a GKE cluster. You want the **same** config to also create a **DaemonSet** (one pod on every node) inside the cluster, using as **few extra services** as possible."
  },
  {
   "file": "Q070-onprem-service-account-key-file.md",
@@ -4624,7 +4693,8 @@ window.QUIZ_QUESTIONS = [
   ],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Your app runs **in your own building**, not in Google Cloud. It must call Google APIs (AutoML) **as the service account** you already set up. What do you **do** so the app can prove it's that service account?"
  },
  {
   "file": "Q071-gke-pull-images-other-project.md",
@@ -4687,7 +4757,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Your container images live in **project A** (the central registry). Your GKE cluster lives in **project B**. The cluster's nodes must be allowed to **download** those images. How?"
  },
  {
   "file": "Q072-gke-pod-pending-describe.md",
@@ -4750,7 +4821,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "One pod won't start; it's stuck at **Pending**. Where do you look to find out **why**?"
  },
  {
   "file": "Q073-windows-vm-rdp-password.md",
@@ -4813,7 +4885,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You made a **Windows** VM. To log in with **RDP** (Remote Desktop), you need a **Windows username and password**. How do you get one?"
  },
  {
   "file": "Q074-ssh-one-instance-oslogin.md",
@@ -4876,7 +4949,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The **dev1 group** must be able to SSH into **one VM only**, and nothing else in the project. What's the clean, Google-recommended way?"
  },
  {
   "file": "Q075-list-enabled-apis-gcloud.md",
@@ -4939,7 +5013,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You know the project's **name** (`my-project`). You want the list of APIs that are **turned on** in it. Which gcloud commands do that?"
  },
  {
   "file": "Q076-app-engine-split-traffic-console.md",
@@ -5002,7 +5077,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Your app runs on App Engine. You made a new version and want **1% of users** to try it before everyone gets it. How?"
  },
  {
   "file": "Q077-gke-pricing-calculator-local-ssd.md",
@@ -5065,7 +5141,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You're estimating the price of a GKE cluster. The app needs **very fast disk reads/writes** and you'll take **disk snapshots** (backups). After entering nodes and hours, which fields do you fill in next?"
  },
  {
   "file": "Q078-gke-https-ingress-nodeport.md",
@@ -5128,7 +5205,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Your app runs in GKE, and nodes come and go (autoscaling). You want people on the internet to reach it at **one public IP** using **HTTPS**. What's the standard way?"
  },
  {
   "file": "Q079-shared-vpc-two-projects.md",
@@ -5191,7 +5269,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Two projects, each with its own VPC and its own VMs. The VMs must talk to each other. Which option connects them correctly?"
  },
  {
   "file": "Q080-auditor-project-viewer.md",
@@ -5254,7 +5333,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "A new auditor must be able to **look at everything** in the project but **change nothing**. What's the simplest correct role?"
  },
  {
   "file": "Q081-gke-gpu-node-pool.md",
@@ -5317,7 +5397,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "One shared GKE cluster. Only the ML team needs GPUs. How do you give GPUs to **only them**, with the **least work and cost**?"
  },
  {
   "file": "Q082-expand-subnet-ip-range.md",
@@ -5380,7 +5461,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Your subnet is tiny (/28 = 16 addresses) and full. You need 10 more addresses, and the old and new VMs must stay on the same network. What's the simplest fix?"
  },
  {
   "file": "Q083-gsuite-users-iam-roles.md",
@@ -5443,7 +5525,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Everyone already has a G Suite (now called **Google Workspace**) account. You want a few of them to use your Google Cloud project. What do you do?"
  },
  {
   "file": "Q084-gcloud-configurations-list-instances.md",
@@ -5506,7 +5589,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Every day, a script must list all VMs in **two projects** (dev and prod). How do you set that up?"
  },
  {
   "file": "Q085-avro-bigquery-external-table.md",
@@ -5569,7 +5653,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "A huge file sits in Cloud Storage. Analysts only know SQL. What's the **quickest, cheapest** way to let them run SQL on it?"
  },
  {
   "file": "Q086-service-account-created-activity-log.md",
@@ -5632,7 +5717,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You want to see **when a service account was created**. Which log category and which resource type do you filter on?"
  },
  {
   "file": "Q087-firewall-ingress-udp-636-tag.md",
@@ -5695,7 +5781,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Clients must **connect in** to your VM on **UDP port 636**. How do you open that door?"
  },
  {
   "file": "Q088-budget-alert-one-project.md",
@@ -5758,7 +5845,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Three projects share one billing account. You want a **budget alert** for **only one** of them. Who can do it, and how?"
  },
  {
   "file": "Q089-96-vcpu-n1-standard-96.md",
@@ -5821,7 +5909,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The app **needs 96 vCPUs** and is **production-critical**. How do you make sure the new VM has that from day one?"
  },
  {
   "file": "Q090-lifecycle-noncurrent-versions-nearline.md",
@@ -5884,7 +5973,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Old **versions** of files should move to cheaper storage after 30 days. They're opened **once a month**. Which rule and which storage class?"
  },
  {
   "file": "Q091-burst-onprem-cloud-vpn.md",
@@ -5947,7 +6037,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Your own data center is full. Extra work will run on Google Cloud, and those cloud machines must talk to your office machines **by private IP**. How do you connect the two places?"
  },
  {
   "file": "Q092-regional-storage-coldline-compliance.md",
@@ -6010,7 +6101,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "The data must stay in **one geographic location** for compliance. After 30 days it's archived and read **once a year**. Which location type and storage class?"
  },
  {
   "file": "Q093-data-catalog-find-column.md",
@@ -6073,7 +6165,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Thousands of datasets in hundreds of projects. Find every table with a column named `employee_ssn`, with the **least effort**."
  },
  {
   "file": "Q094-pending-pod-preempted-node.md",
@@ -6136,7 +6229,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Two identical pods. One is running, one is **Pending**. The cluster runs **only on preemptible nodes**. What most likely happened?"
  },
  {
   "file": "Q095-spanner-iam-admin-activity-logs.md",
@@ -6199,7 +6293,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Not **who** has Spanner roles now, but **when** they were added. Where is that history?"
  },
  {
   "file": "Q096-bigquery-control-query-costs.md",
@@ -6268,7 +6363,8 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B",
    "E"
-  ]
+  ],
+  "plain": "Many teams query BigQuery and the bill is huge. Pick **two** ways to **limit query costs**."
  },
  {
   "file": "Q097-gke-sandbox-gvisor-isolation.md",
@@ -6331,7 +6427,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Customers can run **any code** inside their pods, all in one cluster. How do you **wall off** each customer's pod as strongly as possible?"
  },
  {
   "file": "Q098-spanner-monotonic-primary-key.md",
@@ -6394,7 +6491,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "One Spanner table is slow to read. Users always look rows up **by primary key**. What fixes it?"
  },
  {
   "file": "Q099-finance-billing-viewer.md",
@@ -6457,7 +6555,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Finance should **look at** the billing reports, and get **nothing else**. Which role?"
  },
  {
   "file": "Q100-sre-access-approval-group.md",
@@ -6520,7 +6619,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "When Google Support needs to look at your data for a support case, someone in your company must **approve** it. SREs should be the approvers. Which role, and how do you grant it?"
  },
  {
   "file": "Q101-deletion-protection-shared-project.md",
@@ -6583,7 +6683,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Other teams work in the same project. You don't want one of them to delete your VM by mistake. Which setting protects it?"
  },
  {
   "file": "Q102-bigquery-custom-role-no-delete-group.md",
@@ -6646,7 +6747,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Users must **query** BigQuery but must **not be able to delete datasets**. Follow Google best practice."
  },
  {
   "file": "Q103-datastore-emulator-apt-install.md",
@@ -6709,7 +6811,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "You want to run Datastore **on your laptop** for testing. Your gcloud was installed with **apt** (Ubuntu's package manager). How do you add the emulator?"
  },
  {
   "file": "Q104-view-hierarchy-browser-role-group.md",
@@ -6772,7 +6875,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "A few people need to **see the tree** of folders and projects, and nothing more. Which role, granted how?"
  },
  {
   "file": "Q105-cloud-identity-saml-sso-third-party.md",
@@ -6835,7 +6939,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Your company already has a login system (SSO). You want users to sign in to Google with **that** system. How do you set it up?"
  },
  {
   "file": "Q106-service-account-admin-role.md",
@@ -6898,7 +7003,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "One person **creates and manages service accounts**. Which role is the smallest that lets them do that?"
  },
  {
   "file": "Q107-archive-quarterly-coldline.md",
@@ -6961,7 +7067,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Archived data, read **once every 3 months**. Which storage class is cheapest?"
  },
  {
   "file": "Q108-gke-gpu-node-auto-provisioning.md",
@@ -7024,7 +7131,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Data scientists need GPUs **only sometimes**, for long jobs that **can't be interrupted**. How do you keep cost low?"
  },
  {
   "file": "Q109-ad-sync-gcds-cloud-identity.md",
@@ -7087,7 +7195,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Users live in **Active Directory**. AD must stay the master list, and the company must fully control everyone's Google accounts. How?"
  },
  {
   "file": "Q110-prod-env-new-project.md",
@@ -7150,7 +7259,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Dev is done. Now build production. Security says dev and prod must **not be connected by network routes**. Best practice?"
  },
  {
   "file": "Q111-auditor-domain-restricted-sharing.md",
@@ -7213,7 +7323,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "An outside auditor must **see all resources** in one project. But a policy says only accounts from **your own domain** can be granted roles. What do you do?"
  },
  {
   "file": "Q112-boot-disk-snapshot-schedule.md",
@@ -7276,7 +7387,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Back up the boot disk **regularly**, restore **fast**, and **delete old backups automatically**. What's the Google way?"
  },
  {
   "file": "Q113-auditor-private-log-viewer.md",
@@ -7339,7 +7451,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "An auditor must read **audit logs**, including the private **Data Access** logs. Which role, and what else?"
  },
  {
   "file": "Q114-logs-60-days-sink-bigquery.md",
@@ -7402,7 +7515,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Logs from **several projects**, kept **60 days**, and you want to **analyze them quickly**. Best practice?"
  },
  {
   "file": "Q115-shut-down-project-owner.md",
@@ -7465,7 +7579,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Stop **everything** in one project, in as **few steps** as possible."
  },
  {
   "file": "Q116-cross-project-bigquery-service-account.md",
@@ -7528,7 +7643,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "VMs in `web-applications` use a service account. That account must read BigQuery data in `crm-databases-proj`. Where do you grant the role?"
  },
  {
   "file": "Q117-terminated-employee-data-access-logs.md",
@@ -7591,7 +7707,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "A fired employee kept access for 2 weeks. Did they **read customer data**? Which logs, and what do you search for?"
  },
  {
   "file": "Q118-custom-role-supported-alpha.md",
@@ -7654,7 +7771,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You're making the **first version** of a custom role. The permissions must be **production-safe**, and you want everyone to see the role's **status**."
  },
  {
   "file": "Q119-unstructured-data-dataflow-cloud-storage.md",
@@ -7717,7 +7835,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Lots of **unstructured files** in **different formats** must be available to a **Dataflow** job. Where do you put them?"
  },
  {
   "file": "Q120-gcloud-configurations-multiple-projects.md",
@@ -7780,7 +7899,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You work on several projects. How do you set up gcloud so switching is **easy** and takes the **fewest steps**?"
  },
  {
   "file": "Q121-mig-instance-creation-failed-disk-autodelete.md",
@@ -7843,7 +7963,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "The MIG keeps failing to create VMs. You need it back to the right number of VMs. What fixes the usual causes?"
  },
  {
   "file": "Q122-cassandra-dev-marketplace.md",
@@ -7906,7 +8027,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Many teams each need **their own Cassandra** for development. You want it **fast** and with **little support work** from you."
  },
  {
   "file": "Q123-cpu-alert-monitoring-policy-email.md",
@@ -7969,7 +8091,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Send an **email** when the VM's **CPU > 90% for 15 minutes**, using Google services."
  },
  {
   "file": "Q124-spanner-autoscale-alert-webhook-function.md",
@@ -8032,7 +8155,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Spanner nodes should go **up and down automatically** with traffic. Which option does it **without a person**?"
  },
  {
   "file": "Q125-egress-cost-alert-billing-export-bigquery.md",
@@ -8095,7 +8219,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "You want an email when **only this one server's egress (outbound network) cost** passes **$100 this month**, **as Google bills it**. Other apps share the project."
  },
  {
   "file": "Q126-estimate-costs-pricing-calculator.md",
@@ -8158,7 +8283,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Before building, estimate the **monthly total cost** of a design that uses **several products**."
  },
  {
   "file": "Q127-global-ssl-tcp-ssl-proxy-lb.md",
@@ -8221,7 +8347,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Your app receives **SSL-encrypted TCP** (not HTTP) on port 443, from users **all over the world**. Which load balancer gives them the **lowest latency**?"
  },
  {
   "file": "Q128-pd-read-throttling-local-ssd.md",
@@ -8284,7 +8411,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "The app reads big files and the disk is too slow (throttled). You want the **most throughput** for the **least money**."
  },
  {
   "file": "Q129-expand-subnet-dataproc.md",
@@ -8347,7 +8475,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The subnet `172.16.20.128/25` (128 addresses) is full. You need room for new VMs that talk to Dataproc, in the **fewest steps**."
  },
  {
   "file": "Q130-app-engine-sa-bigquery-other-project.md",
@@ -8410,7 +8539,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Your App Engine app (running as its default service account) must **read** a BigQuery dataset in **another team's project** that you can't manage."
  },
  {
   "file": "Q131-copy-vm-custom-image-from-snapshot.md",
@@ -8473,7 +8603,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "You have one carefully set-up VM. More traffic is coming, so you need **copies** of it. What's the right way to make many identical VMs?"
  },
  {
   "file": "Q132-vm-app-logs-install-logging-agent.md",
@@ -8536,7 +8667,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "The app writes logs to **files on the VM's disk**. Users see errors. How do you look at those logs the Google way?"
  },
  {
   "file": "Q133-vm-sa-object-creator-other-project-bucket.md",
@@ -8599,7 +8731,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "A VM in **project A** must write report files into a bucket in **project B**. Fewest steps, best practice."
  },
  {
   "file": "Q134-adc-on-vm-attached-service-account.md",
@@ -8662,7 +8795,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The app uses **ADC**, which on your laptop uses your own login. On a VM, ADC automatically uses the **VM's service account**. What do you change?"
  },
  {
   "file": "Q135-new-project-enable-api-create-instance.md",
@@ -8725,7 +8859,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The project **doesn't exist yet**. In what order do you get a VM into it?"
  },
  {
   "file": "Q136-30-hour-batch-regular-vm-start-stop.md",
@@ -8788,7 +8923,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "A **30-hour** job, once a month. If it's interrupted, it must **start over**. Cheapest safe option?"
  },
  {
   "file": "Q137-jenkins-marketplace.md",
@@ -8851,7 +8987,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You need **Jenkins** (a build server), installed **quickly and easily**."
  },
  {
   "file": "Q138-gcloud-config-default-zone.md",
@@ -8914,7 +9051,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You keep typing `--zone=europe-west1-d`. How do you make it the **default for the CLI**?"
  },
  {
   "file": "Q139-sensor-events-bigtable.md",
@@ -8977,7 +9115,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Huge numbers of sensor events, read back **by time**, and each write and read must be **atomic**. Which database?"
  },
  {
   "file": "Q140-monitoring-workspace-multiple-projects.md",
@@ -9040,7 +9179,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Watch CPU, memory and disk for **three projects in one place**."
  },
  {
   "file": "Q141-costs-multiple-billing-accounts-bigquery-datastudio.md",
@@ -9103,7 +9243,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Several projects on **different billing accounts**. You want **one chart** of all costs, with new data showing up **quickly**."
  },
  {
   "file": "Q142-no-public-ip-instance.md",
@@ -9166,7 +9307,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The new VM must be **unreachable from the internet**, but still reachable from your offices over VPN."
  },
  {
   "file": "Q143-iac-templates-cloud-source-repositories.md",
@@ -9229,7 +9371,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You want to **propose** infrastructure changes so teammates can review them. Best practice?"
  },
  {
   "file": "Q144-daily-snapshot-schedule-30-days-console.md",
@@ -9292,7 +9435,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Daily backups, kept **30 days**, with the **least work** and **fewest services**."
  },
  {
   "file": "Q145-gke-new-node-pool-highmem.md",
@@ -9355,7 +9499,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "New pods need **big-memory nodes**. Existing pods must keep running (**no downtime**)."
  },
  {
   "file": "Q146-join-spanner-export-bigtable-bigquery.md",
@@ -9418,7 +9563,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "An analyst wants a **one-time join** of user data (from the Spanner export in Cloud Storage) with events (in Bigtable). Most efficient way?"
  },
  {
   "file": "Q147-survive-zone-failure-two-zones-lb.md",
@@ -9481,7 +9627,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Today everything is in **one zone**. If that zone fails, the app is down. How do you survive one zone failing, with no downtime and low cost?"
  },
  {
   "file": "Q148-who-has-owner-get-iam-policy.md",
@@ -9544,7 +9691,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "See **who currently has Owner** on the project."
  },
  {
   "file": "Q149-gke-nodes-ip-exhausted-expand-subnet.md",
@@ -9607,7 +9755,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Node IPs come from the subnet's **primary range**, and it's full. How do the clusters get room to add nodes?"
  },
  {
   "file": "Q150-fault-tolerant-batch-preemptible.md",
@@ -9670,7 +9819,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "A big nightly batch that **can survive losing some VMs**. It costs too much. What do you change?"
  },
  {
   "file": "Q151-egress-deny-low-allow-high-priority.md",
@@ -9733,7 +9883,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "By default, VPCs **allow all outgoing traffic**. You want **only a few ports** open outbound."
  },
  {
   "file": "Q152-ops-partner-no-google-accounts-ssh-keys.md",
@@ -9796,7 +9947,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "The partner has **no Google accounts** but needs to log in to the Linux VMs."
  },
  {
   "file": "Q153-gcs-upload-trigger-cloud-functions.md",
@@ -9859,7 +10011,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "A small piece of code must run **every time a file lands in a bucket**."
  },
  {
   "file": "Q154-lifecycle-standard-30-then-archive.md",
@@ -9922,7 +10075,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Files are read **a lot for 30 days**, then **almost never**, and kept **3 years**. Cheapest plan?"
  },
  {
   "file": "Q155-record-reads-data-access-logs-gcs.md",
@@ -9985,7 +10139,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Every **read** of the bucket's data must be **recorded**."
  },
  {
   "file": "Q156-budget-per-sandbox-project.md",
@@ -10048,7 +10203,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "10 sandboxes. **Notify** if **any one** spends more than **$500/month**."
  },
  {
   "file": "Q157-deletion-protection-production.md",
@@ -10111,7 +10267,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Stop people from **accidentally deleting** the production VM."
  },
  {
   "file": "Q158-devops-custom-role-production-project.md",
@@ -10174,7 +10331,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "DevOps needs access to **production** services. Their permissions must **not grow automatically** when Google adds features."
  },
  {
   "file": "Q159-signed-urls-lifecycle-45-days.md",
@@ -10243,7 +10401,8 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A",
    "B"
-  ]
+  ],
+  "plain": "Thousands of suppliers upload files. Each may write **only their own file**, **only for 30 minutes**. Files must vanish after **45 days**, with minimal maintenance."
  },
  {
   "file": "Q160-iac-deployment-manager-templates.md",
@@ -10306,7 +10465,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Manage resources as **code**, with **as little repeated code** as possible."
  },
  {
   "file": "Q161-who-can-view-data-review-iam.md",
@@ -10369,7 +10529,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Who **has access** (can view data) right now?"
  },
  {
   "file": "Q162-onprem-db-cloud-dns-private-zone.md",
@@ -10432,7 +10593,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Apps connect to an **on-prem DB by IP**. When the IP changes, you don't want to edit every app."
  },
  {
   "file": "Q163-cloud-run-min-instances-zero.md",
@@ -10495,7 +10657,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "A container app used only in office hours. **Zero cost** when nobody uses it. New project, nothing else set up."
  },
  {
   "file": "Q164-move-projects-company-billing-account.md",
@@ -10558,7 +10721,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Your projects bill **your card**. The company wants them on **its invoice**."
  },
  {
   "file": "Q165-partner-sa-access-your-bigquery-dataset.md",
@@ -10621,7 +10785,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "The partner's app (in **their** project) must read **your** dataset."
  },
  {
   "file": "Q166-cloud-run-anthos-canary-revision-split.md",
@@ -10684,7 +10849,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Send a **percentage** of users to the new version on Cloud Run."
  },
  {
   "file": "Q167-udp-game-external-network-lb.md",
@@ -10747,7 +10913,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Players on the **internet** send **UDP**. Many VMs, **one IP**. Which load balancer?"
  },
  {
   "file": "Q168-onprem-images-gsutil-rsync-cron.md",
@@ -10810,7 +10977,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "New images appear **on-prem**. They must **automatically** be copied to Cloud Storage."
  },
  {
   "file": "Q169-auditor-gcs-data-access-logs-query.md",
@@ -10873,7 +11041,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "\"**Who accessed data** in buckets?\" Which logs?"
  },
  {
   "file": "Q170-gcloud-activate-service-account-key.md",
@@ -10936,7 +11105,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You have a **service account key file** and want **gcloud** to use it."
  },
  {
   "file": "Q171-cloud-sql-month-end-export-archive.md",
@@ -10999,7 +11169,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Keep **one copy per month** of a Cloud SQL database for **3 years**, cheaply."
  },
  {
   "file": "Q172-notify-on-error-log-based-metric-alert.md",
@@ -11062,7 +11233,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "You fixed an error and want an **automatic notification** if it happens again."
  },
  {
   "file": "Q173-global-relational-consistent-spanner.md",
@@ -11125,7 +11297,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "**Global**, **relational**, **same data for everyone** (strong consistency), **multi-region**."
  },
  {
   "file": "Q174-in-memory-erp-m1-machine-type.md",
@@ -11188,7 +11361,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "The app keeps the **entire database in RAM**. Which VM type?"
  },
  {
   "file": "Q175-gke-deployment-per-microservice.md",
@@ -11251,7 +11425,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Each microservice has its own image and must **scale on its own**."
  },
  {
   "file": "Q176-specify-service-account-at-creation.md",
@@ -11314,7 +11489,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Give **each VM its own** service account."
  },
  {
   "file": "Q177-managed-mongodb-atlas-marketplace.md",
@@ -11377,7 +11553,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "You want **MongoDB**, **managed**, with a **support SLA**."
  },
  {
   "file": "Q178-bi-team-bigquery-user-group.md",
@@ -11440,7 +11617,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "BI users must **run their own SQL** on **live** data in BigQuery."
  },
  {
   "file": "Q179-dmz-lan-single-vpc-two-subnets.md",
@@ -11503,7 +11681,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Public servers (DMZ) and private servers (LAN) must **talk to each other**. Only the DMZ is reachable **from the internet**."
  },
  {
   "file": "Q180-first-step-enable-spanner-api.md",
@@ -11566,7 +11745,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "New project. What's the **first step** before making a Spanner instance?"
  },
  {
   "file": "Q181-cli-new-project-enable-compute-api.md",
@@ -11629,7 +11809,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "New project (made with gcloud, billing linked). What must you do before `gcloud compute instances create`?"
  },
  {
   "file": "Q182-gke-node-pool-autoscaling-min-max.md",
@@ -11692,7 +11873,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "The **cluster** (nodes) must grow automatically as **more apps** are added."
  },
  {
   "file": "Q183-new-sa-only-this-vm-reads-files.md",
@@ -11755,7 +11937,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Only the **new** VM should read the files. Other VMs use the **default** service account."
  },
  {
   "file": "Q184-mission-critical-analytics-storage-class.md",
@@ -11818,7 +12001,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Files used **all the time**, at **lowest cost**, users in **one city**."
  },
  {
   "file": "Q185-app-engine-version-traffic-split.md",
@@ -11881,7 +12065,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Send a **small part** of real users to the update; most stay on the stable version."
  },
  {
   "file": "Q186-cloud-identity-conflicting-accounts-transfer.md",
@@ -11944,7 +12129,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Some new users already made Google accounts with their **work email**. How do you avoid conflicts?"
  },
  {
   "file": "Q187-spanner-cpu-65-add-nodes.md",
@@ -12007,7 +12193,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "**Single-region** Spanner. Best practice threshold, and the **fastest** fix."
  },
  {
   "file": "Q188-postgres-acid-single-site-cloud-sql.md",
@@ -12070,7 +12257,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Orders app, **one location**, **ACID**, already **PostgreSQL**, **minimal code changes**."
  },
  {
   "file": "Q189-gcloud-config-set-container-cluster.md",
@@ -12133,7 +12321,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Make **dev** the **default cluster** for future gcloud commands."
  },
  {
   "file": "Q190-separate-project-marketing-team.md",
@@ -12196,7 +12385,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Marketing needs **its own** set of resources, **separate** from Sales."
  },
  {
   "file": "Q191-ssh-no-public-ip-iap-tcp.md",
@@ -12259,7 +12449,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "SSH from the internet into VMs that have **no public IP**, without setting up each VM."
  },
  {
   "file": "Q192-docker-image-gke-container-registry-deployment.md",
@@ -12322,7 +12513,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Where do you put the image, and which Kubernetes object runs it?"
  },
  {
   "file": "Q193-data-studio-broken-check-bigquery-job.md",
@@ -12385,7 +12577,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Charts broke. The table is rebuilt **every night**. Where do you look?"
  },
  {
   "file": "Q194-group-common-iam-folders.md",
@@ -12448,7 +12641,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Group resources that should have the **same IAM policies**."
  },
  {
   "file": "Q195-ha-vpn-custom-vpc-bgp-active-passive.md",
@@ -12511,7 +12705,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "HA VPN with **dynamic routing**, a **specific IP range**, and **no extra tunnel load** when one fails."
  },
  {
   "file": "Q196-cpu-heavy-microservice-compute-node-pool.md",
@@ -12574,7 +12769,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "One service needs **lots of CPU**, others are **standard**. Make everything efficient."
  },
  {
   "file": "Q197-bill-marketing-new-project-billing-account.md",
@@ -12637,7 +12833,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Marketing must **pay only for** their new initiative."
  },
  {
   "file": "Q198-tcp-389-preserve-client-ip-network-lb.md",
@@ -12700,7 +12897,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "TCP **389** (LDAP), from the **internet**, and the app must see the **real client IP**."
  },
  {
   "file": "Q199-global-game-db-spanner.md",
@@ -12763,7 +12961,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "**Global** players, **consistent** performance as it grows, **no extra management**."
  },
  {
   "file": "Q200-global-relational-unknown-scale-spanner.md",
@@ -12826,7 +13025,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "**Relational**, **global**, growth **unknown**, scale with **little config**."
  },
  {
   "file": "Q201-custom-cost-metrics-bigquery-export-looker.md",
@@ -12889,7 +13089,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Costs with **your own calculated metrics**, updated **automatically**."
  },
  {
   "file": "Q202-internal-only-vm-gcs-private-google-access.md",
@@ -12952,7 +13153,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "VMs have **no external IP** and **no internet**, but must reach **Cloud Storage**."
  },
  {
   "file": "Q203-move-acquired-project-projects-move.md",
@@ -13015,7 +13217,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Move a project from **their org** to **yours** and bill it to **you**, with little effort."
  },
  {
   "file": "Q204-restrict-dev-resources-us-org-policy.md",
@@ -13078,7 +13281,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Dev projects may only create resources **in US locations**."
  },
  {
   "file": "Q205-cloud-dns-a-record-cname.md",
@@ -13141,7 +13345,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Three names, one **IP address**. Which record types?"
  },
  {
   "file": "Q206-firewall-sa-app-to-sa-db.md",
@@ -13204,7 +13409,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Only **app servers** (not web servers in the same subnet) may reach the **DB servers**."
  },
  {
   "file": "Q207-cms-deploy-directly-marketplace.md",
@@ -13267,7 +13473,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Install a CMS (like WordPress) **quickly and easily**."
  },
  {
   "file": "Q208-engineers-create-projects-shared-billing-account.md",
@@ -13330,7 +13537,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Engineers should create projects **without their own cards**."
  },
  {
   "file": "Q209-cicd-sa-check-iam-roles-inherited.md",
@@ -13393,7 +13601,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Does the service account **have the right roles** in this project?"
  },
  {
   "file": "Q210-secure-cheap-ssh-iap-tunnel.md",
@@ -13456,7 +13665,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "**Most secure** and **cheapest** way to SSH."
  },
  {
   "file": "Q211-external-user-list-images-disks-custom-role.md",
@@ -13519,7 +13729,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "An outsider should only **list** images and disks."
  },
  {
   "file": "Q212-cloud-run-cold-start-min-instances.md",
@@ -13582,7 +13793,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The **first** page is slow, later pages are fast."
  },
  {
   "file": "Q213-iot-data-lake-pubsub-dataflow-gcs.md",
@@ -13645,7 +13857,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Millions of sensors streaming **mixed data** into a **data lake**, highly available."
  },
  {
   "file": "Q214-subnet-out-of-ips-expand-to-18.md",
@@ -13708,7 +13921,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "VMs need more **primary** IPs in a /20 subnet."
  },
  {
   "file": "Q215-same-dev-permissions-org-custom-role-group.md",
@@ -13771,7 +13985,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Every developer, **every project**, the **same** permissions, only **Compute, Functions, SQL**, with **little effort**."
  },
  {
   "file": "Q216-onprem-images-gcloud-storage-rsync-cron.md",
@@ -13834,7 +14049,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Same as Q168, with the newer `gcloud storage` command."
  },
  {
   "file": "Q217-postgres-acid-single-site-cloud-sql-v2.md",
@@ -13897,7 +14113,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Same as Q188 with different option letters: PostgreSQL, one site, ACID, minimal changes."
  },
  {
   "file": "Q218-monthly-30h-batch-regular-vm-v2.md",
@@ -13960,7 +14177,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Same idea as Q136, with **Spot** VMs in the wrong options."
  },
  {
   "file": "Q219-migrate-mysql-kafka-postgres-spanner-pubsub-bq.md",
@@ -14023,7 +14241,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Main DB, event streaming, analytics → **global scale**, **minimal management**."
  },
  {
   "file": "Q220-domain-restricted-sharing-remove-existing.md",
@@ -14086,7 +14305,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Stop sharing with outside domains **from now on**, and remove the outsiders **already** there."
  },
  {
   "file": "Q221-mig-replace-one-vm-recreate-instances.md",
@@ -14149,7 +14369,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Replace **one** bad VM in a MIG, **fast**."
  },
  {
   "file": "Q222-config-connector-delete-kubectl.md",
@@ -14212,7 +14433,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "The topic is **managed by Config Connector**. How do you delete it for good?"
  },
  {
   "file": "Q223-scale-identity-groups-mfa.md",
@@ -14275,7 +14497,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "10x more users, **no extra complexity**, **secure**."
  },
  {
   "file": "Q224-video-encoding-mig-cpu-autoscaling.md",
@@ -14338,7 +14561,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Highly available, no CPU limits, **automated**."
  },
  {
   "file": "Q225-mig-creation-failed-template-disk-names.md",
@@ -14401,7 +14625,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "The MIG can't create VMs. What two things usually fix it?"
  },
  {
   "file": "Q226-docker-image-gke-artifact-registry-deployment.md",
@@ -14464,7 +14689,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Same as Q192, with **Artifact Registry** (the current registry)."
  },
  {
   "file": "Q227-looker-studio-broken-check-bigquery-job.md",
@@ -14527,7 +14753,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Same as Q193 with new names and letters."
  },
  {
   "file": "Q228-fault-tolerant-batch-spot-n2.md",
@@ -14590,7 +14817,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Same as Q150, with **Spot** instead of preemptible."
  },
  {
   "file": "Q229-multi-billing-single-view-bq-export-looker.md",
@@ -14653,7 +14881,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Same as Q141, with Looker Studio."
  },
  {
   "file": "Q230-unstructured-etl-dataflow-cloud-storage.md",
@@ -14716,7 +14945,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Lots of **unstructured files** must be available to **Dataflow**."
  },
  {
   "file": "Q231-logs-on-disk-ops-agent.md",
@@ -14779,7 +15009,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Same as Q132, with the newer **Ops Agent**."
  },
  {
   "file": "Q232-enable-compute-and-storage-apis.md",
@@ -14842,7 +15073,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Turn on **only** the APIs you need: Compute (VMs + firewalls) and Cloud Storage."
  },
  {
   "file": "Q233-containers-no-infra-autoscale-cloud-run.md",
@@ -14905,7 +15137,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Containers, **no infrastructure to manage**, **auto-scaling**."
  },
  {
   "file": "Q234-zonal-failure-regional-pd-attach.md",
@@ -14968,7 +15201,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Data must be **immediately available** if a **zone** fails."
  },
  {
   "file": "Q235-devops-compute-admin-plus-viewer.md",
@@ -15031,7 +15265,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**Full** Compute control, **no** write access elsewhere."
  },
  {
   "file": "Q236-python-microservices-serverless-cloud-run.md",
@@ -15094,7 +15329,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Dockerized microservices → **serverless**, reusing what you have."
  },
  {
   "file": "Q237-cpu-heavy-microservice-compute-node-pool-n2.md",
@@ -15157,7 +15393,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Same as Q196 with n2 instead of n1."
  },
  {
   "file": "Q238-reliable-k8s-autopilot-stable-channel.md",
@@ -15220,7 +15457,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Production, **business critical**, **reliability** first."
  },
  {
   "file": "Q239-latency-5-min-alert-policy.md",
@@ -15283,7 +15521,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "**Automatic** notification on high latency for 5 minutes, **no coding**."
  },
  {
   "file": "Q240-midnight-binaries-cloud-run-job.md",
@@ -15346,7 +15585,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "A **45-minute nightly** job, files up to **16 GB in memory**. Cheapest and easiest."
  },
  {
   "file": "Q241-kubectl-switch-cluster-get-credentials.md",
@@ -15409,7 +15649,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "kubectl is pointed at prod-cluster. How do you point it at **dev-cluster** and see its nodes?"
  },
  {
   "file": "Q242-sa-keys-24h-org-policies.md",
@@ -15472,7 +15713,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Keys must **expire after 1 day**, and only **pj-sa** may create keys. Quick and cheap."
  },
  {
   "file": "Q243-estimate-cost-pricing-calculator.md",
@@ -15535,7 +15777,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Estimate cost **before** moving: VMs + Cloud SQL."
  },
  {
   "file": "Q244-bigtable-pii-audit-logs-pubsub-siem.md",
@@ -15598,7 +15841,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Log **every read/write** and **metadata/config reads**, and send them to the **SIEM**."
  },
  {
   "file": "Q245-gke-private-autopilot.md",
@@ -15661,7 +15905,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**Shielded nodes**, **no public node access**, **least management**."
  },
  {
   "file": "Q246-serverless-flask-api-job-appengine-cloudrun.md",
@@ -15724,7 +15969,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "All three must be **serverless** and **cheap**."
  },
  {
   "file": "Q247-cicd-pipeline-per-pipeline-sa-secrets.md",
@@ -15787,7 +16033,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "A pipeline that manages **all** infrastructure needs permissions, but **securely**."
  },
  {
   "file": "Q248-lifecycle-archive-after-30-days.md",
@@ -15850,7 +16097,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "After 30 days files aren't used. **Save cost automatically** (not delete)."
  },
  {
   "file": "Q249-unknown-resources-hpa-vpa-recommendations.md",
@@ -15913,7 +16161,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Keep the app **running in any load** and get **CPU/memory recommendations**."
  },
  {
   "file": "Q250-invoices-versioning-lifecycle.md",
@@ -15976,7 +16225,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Keep **5 revisions**, move to cheaper class after **365 days**, delete after **5 years**, no code."
  },
  {
   "file": "Q251-gcloud-proxy-credentials-env-vars.md",
@@ -16039,7 +16289,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Use a proxy with gcloud **without** the username/password ending up in logs or config files."
  },
  {
   "file": "Q252-gke-spot-pool-fault-tolerant-standard-critical.md",
@@ -16102,7 +16353,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Parts that may go down → cheap **Spot**. Critical parts → **standard** VMs."
  },
  {
   "file": "Q253-serverless-canary-cloud-run-gradual-rollout.md",
@@ -16165,7 +16417,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**Serverless** + send a **small %** to the new version."
  },
  {
   "file": "Q254-vulnerability-report-viewer-os-config.md",
@@ -16228,7 +16481,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Show **vulnerabilities and OS info** for a VM to a security person."
  },
  {
   "file": "Q255-cloud-run-gradual-rollout-limit-impact.md",
@@ -16291,7 +16545,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Limit how many customers a bad release can hurt, with **no work for customers**."
  },
  {
   "file": "Q256-consultant-no-google-account-ssh-public-key.md",
@@ -16354,7 +16609,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "No Google account, but on the VPN. How do they SSH in?"
  },
  {
   "file": "Q257-monitor-firewall-instance-changes-log-metrics.md",
@@ -16417,7 +16673,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Watch for **firewall changes** and **new VMs**, simply."
  },
  {
   "file": "Q258-cross-project-bigquery-dataviewer.md",
@@ -16480,7 +16737,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "VMs in project A must read BigQuery in project B, with least privilege."
  },
  {
   "file": "Q259-dataproc-subnet-full-expand-24.md",
@@ -16543,7 +16801,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Subnet is full. Add VMs with the **fewest steps**."
  },
  {
   "file": "Q260-global-transactions-sql-spanner.md",
@@ -16606,7 +16865,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**Global transactions**, **SQL**, **highly available**, **scalable**."
  },
  {
   "file": "Q261-copy-custom-role-to-other-org.md",
@@ -16669,7 +16929,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Copy your SRE custom role into **another organization**."
  },
  {
   "file": "Q262-speech-to-text-function-gcs-trigger.md",
@@ -16732,7 +16993,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Each audio file that **arrives** in a bucket → call Speech-to-Text. **Serverless**."
  },
  {
   "file": "Q263-secure-autoscaled-site-https-lb-url-map-bucket.md",
@@ -16795,7 +17057,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Secure (HTTPS) public site, VMs that autoscale, static files from Cloud Storage."
  },
  {
   "file": "Q264-sensor-events-bigtable-timestamp.md",
@@ -16858,7 +17121,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Same as Q139: high-throughput sensor events, time-based reads, atomic rows."
  },
  {
   "file": "Q265-new-laptop-gcloud-auth-login-set-project.md",
@@ -16927,7 +17191,8 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A",
    "E"
-  ]
+  ],
+  "plain": "Fresh gcloud install. What two things are **required** before listing VMs?"
  },
  {
   "file": "Q266-migrate-transfer-appliance-bq-dts-sts.md",
@@ -16990,7 +17255,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Pick the right **no-code** transfer tool for each data source."
  },
  {
   "file": "Q267-k8s-manifest-full-control-autopilot.md",
@@ -17053,7 +17319,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**Kubernetes manifest**, **full control of the Deployment**, **little infrastructure work**."
  },
  {
   "file": "Q268-votes-pubsub-cloud-functions.md",
@@ -17116,7 +17383,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Many votes at **varying rates**. Store and process efficiently."
  },
  {
   "file": "Q269-cloud-sql-iam-auth-proxy.md",
@@ -17179,7 +17447,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Encrypted + authenticated + **IAM** + **minimal management**."
  },
  {
   "file": "Q270-two-projects-vpc-peering.md",
@@ -17242,7 +17511,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Connect two VPCs in Google Cloud, **cheaply and efficiently**. Ranges don't overlap."
  },
  {
   "file": "Q271-daily-snapshot-schedule-7-days.md",
@@ -17305,7 +17575,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Same idea as Q144: **daily** disk backups, kept **7 days**, **minimal setup**."
  },
  {
   "file": "Q272-approved-config-terraform-modules.md",
@@ -17368,7 +17639,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Let engineers **deploy and update** resources only in **approved** configurations."
  },
  {
   "file": "Q273-dept-folders-org-policies-log-sinks.md",
@@ -17431,7 +17703,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Per-department policies and sinks that **Project Owners can't remove**."
  },
  {
   "file": "Q274-mig-secure-ha-https-lb-a-record.md",
@@ -17494,7 +17767,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Public **web** app, secure and HA: which LB and which DNS record?"
  },
  {
   "file": "Q275-right-size-limits-vpa.md",
@@ -17557,7 +17831,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Each microservice's **CPU/memory settings** are wrong. Fix the **size** of each pod."
  },
  {
   "file": "Q276-bigquery-quota-exceeded-info-schema-audit-logs.md",
@@ -17626,7 +17901,8 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B",
    "D"
-  ]
+  ],
+  "plain": "A query failed with **quotaExceeded**. Where do you look?"
  },
  {
   "file": "Q277-stateless-vm-app-mig-autoscaling.md",
@@ -17689,7 +17965,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**Must run on VMs**, stateless, scale automatically."
  },
  {
   "file": "Q278-cloud-run-cloud-sql-quota-max-instances.md",
@@ -17752,7 +18029,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Morning spikes create too many Cloud Run instances → too many Cloud SQL connections/API calls."
  },
  {
   "file": "Q279-internal-web-app-cloud-run-psc.md",
@@ -17815,7 +18093,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Reachable on an **internal IP** from VPC and on-prem; **minimal infrastructure**; frequent updates."
  },
  {
   "file": "Q280-sql-on-logs-log-analytics.md",
@@ -17878,7 +18157,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Run **SQL** on logs **in Cloud Logging**."
  },
  {
   "file": "Q281-fastest-disk-recover-hyperdisk-stateful-mig.md",
@@ -17941,7 +18221,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "**Fastest** disk, one VM with a database, **recovers** if it fails."
  },
  {
   "file": "Q282-fixed-internal-ip-promote-static.md",
@@ -18004,7 +18285,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Services **in the same VPC** need a **fixed** address for this VM. Cheapest way?"
  },
  {
   "file": "Q283-preview-to-ga-autopilot.md",
@@ -18067,7 +18349,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Move from **one zone** to a **highly available** production cluster."
  },
  {
   "file": "Q284-test-sa-permissions-impersonation.md",
@@ -18130,7 +18413,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Act **as the service account** from your laptop, **without a key**."
  },
  {
   "file": "Q285-company-accounts-groups-iam-domain-policy.md",
@@ -18193,7 +18477,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Only **company accounts**, each **department sees only its own** resources, **low ops**."
  },
  {
   "file": "Q286-cloud-run-to-gke-api-internal-lb-vpc-connector.md",
@@ -18256,7 +18541,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Cloud Run → GKE API, **privately**."
  },
  {
   "file": "Q287-logs-to-saas-sink-pubsub.md",
@@ -18319,7 +18605,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Stream logs to an outside tool **as fast as possible**."
  },
  {
   "file": "Q288-gke-database-statefulset-cluster-autoscaler.md",
@@ -18382,7 +18669,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Database with **no data loss**, and **automatically enough nodes**."
  },
  {
   "file": "Q289-notify-gcs-changes-pubsub-notifications.md",
@@ -18445,7 +18733,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Be **notified of every change** to objects, with little overhead."
  },
  {
   "file": "Q290-invoices-3-years-lifecycle-coldline.md",
@@ -18508,7 +18797,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Frequent for **6 months**, then **audit only** until **3 years**. Cheapest managed option."
  },
  {
   "file": "Q291-gke-ha-no-node-mgmt-autopilot.md",
@@ -18571,7 +18861,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "HA, quick node patching, **pay per workload**, **no node management**."
  },
  {
   "file": "Q292-mixed-data-cloudsql-archive-bigtable.md",
@@ -18634,7 +18925,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Pick the cheapest correct store for each of three data types."
  },
  {
   "file": "Q293-prod-premium-dev-standard-tier.md",
@@ -18697,7 +18989,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Prod: **fastest** network. Dev: **cheapest**."
  },
  {
   "file": "Q294-ssh-team-oslogin-group.md",
@@ -18760,7 +19053,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "SSH for a team; joining/leaving should be **easy**."
  },
  {
   "file": "Q295-dataflow-stuck-data-freshness-alert.md",
@@ -18823,7 +19117,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Know when Dataflow jobs **get stuck**, with **little effort**."
  },
  {
   "file": "Q296-private-microservices-gke-autopilot.md",
@@ -18886,7 +19181,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Containerized microservices, private, **minimal ops**."
  },
  {
   "file": "Q297-vm-bigquery-dataset-custom-sa.md",
@@ -18949,7 +19245,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "**Short-lived credentials** + access to **only one dataset**, low effort."
  },
  {
   "file": "Q298-async-transactions-pubsub-cloud-run.md",
@@ -19012,7 +19309,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "**Serverless**, **asynchronous**, **low management**."
  },
  {
   "file": "Q299-nfs-modernize-filestore.md",
@@ -19075,7 +19373,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Replace an NFS server with a **managed** service, **no app changes**."
  },
  {
   "file": "Q300-vm-logs-ops-agent-log-analytics.md",
@@ -19138,7 +19437,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "VM logs → **SQL** + **charts**, low ops."
  },
  {
   "file": "Q301-gke-pods-gcs-no-keys-workload-identity.md",
@@ -19201,7 +19501,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Pods must call Cloud Storage; **no service account keys allowed**."
  },
  {
   "file": "Q302-linux-account-lifecycle-oslogin-iam.md",
@@ -19264,7 +19565,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Manage developers' Linux accounts on VMs simply and cheaply."
  },
  {
   "file": "Q303-ops-team-custom-role-only-needed.md",
@@ -19327,7 +19629,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Two predefined roles each have **some** of what's needed (plus extras). Least privilege?"
  },
  {
   "file": "Q304-multicloud-iac-terraform.md",
@@ -19390,7 +19693,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "IaC for **three cloud providers**."
  },
  {
   "file": "Q305-events-public-scale-to-zero-cloud-run-eventarc.md",
@@ -19453,7 +19757,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Handle events from Google services, public, **zero cost when idle**, standardized."
  },
  {
   "file": "Q306-lift-shift-hardcoded-ips-same-cidr.md",
@@ -19516,7 +19821,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Apps talk via **hard-coded internal IPs**; migrate fast, no code change. Networks are **not connected**."
  },
  {
   "file": "Q307-nightly-batch-interruptible-spot.md",
@@ -19579,7 +19885,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Nightly batch, **can tolerate interruptions**, **cost-effective**."
  },
  {
   "file": "Q308-growing-postgres-multiregion-spanner.md",
@@ -19642,7 +19949,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Relational, **automatic scaling**, **multi-region**, low latency."
  },
  {
   "file": "Q309-billing-export-bigquery.md",
@@ -19705,7 +20013,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Get detailed billing data into **BigQuery**."
  },
  {
   "file": "Q310-overnight-batch-retry-cloud-run-job.md",
@@ -19768,7 +20077,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Daily batch, **cheapest**, **automatic retry** on failure."
  },
  {
   "file": "Q311-postgres-150tb-performance-alloydb.md",
@@ -19831,7 +20141,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "PostgreSQL → faster, **minimal schema/code changes**, very large."
  },
  {
   "file": "Q312-llm-finetune-gke-accelerators.md",
@@ -19894,7 +20205,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Scalable, flexible platform for **LLM fine-tuning**."
  },
  {
   "file": "Q313-gke-rollback-rollout-undo.md",
@@ -19957,7 +20269,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Revert a bad rolling update."
  },
  {
   "file": "Q314-gke-vendor-allowlist-cloud-nat-static.md",
@@ -20020,7 +20333,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Vendor needs a **fixed list of IPs** that never changes."
  },
  {
   "file": "Q315-static-site-and-http-job-cloud-run.md",
@@ -20083,7 +20397,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Static site + HTTP-started job; multiple locations, autoscaling, **no idle costs**."
  },
  {
   "file": "Q316-sandbox-folder-budget-alert.md",
@@ -20146,7 +20461,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Total sandbox budget $1,000; **notify** near the limit; **automate**."
  },
  {
   "file": "Q317-landing-zone-shared-vpc-hierarchical-fw.md",
@@ -20209,7 +20525,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Prod VMs talk privately; **all VMs in the org** accept certain TCP ports; low ops."
  },
  {
   "file": "Q318-compliant-terraform-modules.md",
@@ -20272,7 +20589,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Teams deploy on their own **without knowing every detail** of company practices."
  },
  {
   "file": "Q319-cloud-run-revision-min-instances.md",
@@ -20335,7 +20653,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "New version must have **2 warm instances** before traffic moves."
  },
  {
   "file": "Q320-single-replica-more-cpu-vpa.md",
@@ -20398,7 +20717,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Only **one replica** allowed; needs **more CPU** at peaks."
  },
  {
   "file": "Q321-cost-analysis-billing-export-looker-studio.md",
@@ -20461,7 +20781,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "**Detailed** cost analysis + **many chart types on one dashboard**."
  },
  {
   "file": "Q322-migrate-150tb-video-storage-transfer-service.md",
@@ -20524,7 +20845,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Move selected old videos (large total) to Cloud Storage; **minimize cost** and **control bandwidth**."
  },
  {
   "file": "Q323-company-ssh-standard-oslogin-org-policy.md",
@@ -20587,7 +20909,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Company-wide SSH standard, auditable, minimal manual steps."
  },
  {
   "file": "Q324-iot-submillisecond-bigtable.md",
@@ -20650,7 +20973,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "IoT sensor data, **sub-millisecond latency**."
  },
  {
   "file": "Q325-pubsub-pull-auto-ack.md",
@@ -20713,7 +21037,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "**Fetch** and **acknowledge** messages from `email-updates`."
  },
  {
   "file": "Q326-service-account-best-practices-two.md",
@@ -20782,7 +21107,8 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C",
    "D"
-  ]
+  ],
+  "plain": "Pick **two** Google best practices for service accounts."
  },
  {
   "file": "Q327-global-relational-scale-spanner.md",
@@ -20845,7 +21171,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Relational, **global scale**, minimal admin."
  },
  {
   "file": "Q328-troubleshoot-review-error-first.md",
@@ -20908,7 +21235,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "User A gets an error, User B doesn't. **What first?**"
  },
  {
   "file": "Q329-subnet-full-expand-range.md",
@@ -20971,7 +21299,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Subnet almost full; double VMs soon; **no downtime**."
  },
  {
   "file": "Q330-unpredictable-web-cloud-run-service.md",
@@ -21034,7 +21363,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Containerized **web app**, **unpredictable traffic**, minimize cost."
  },
  {
   "file": "Q331-global-website-multiregion-global-alb.md",
@@ -21103,7 +21433,8 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B",
    "D"
-  ]
+  ],
+  "plain": "Users worldwide; **low latency**; growth in **many regions**. Pick two."
  },
  {
   "file": "Q332-local-script-sa-impersonation.md",
@@ -21166,7 +21497,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Run a script locally **as a service account**, most securely."
  },
  {
   "file": "Q333-eea-resource-locations-org-allowed.md",
@@ -21229,7 +21561,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "All resources in the **EEA**; projects are in many folders."
  },
  {
   "file": "Q334-three-tier-one-vpc-three-subnets.md",
@@ -21292,7 +21625,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Three tiers, **>1,000 IPs**, isolated, **least cost/complexity**."
  },
  {
   "file": "Q335-team-cost-alerts-billing-export.md",
@@ -21355,7 +21689,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Teams need **threshold notifications** and **dashboards on detailed billing data**, low engineering."
  },
  {
   "file": "Q336-postgres-demanding-alloydb-dms.md",
@@ -21418,7 +21753,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Demanding PostgreSQL: **fast transactional + analytical**, fully managed, sync replication & optimized storage."
  },
  {
   "file": "Q337-ldap-ou-sync-gcds.md",
@@ -21481,7 +21817,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Create Google identities for **IT and Data OUs** from **LDAP**, auto-updated."
  },
  {
   "file": "Q338-mesh-fixed-instances-gke-standard.md",
@@ -21544,7 +21881,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Multiple containers + **service mesh**; **control how many compute instances run**."
  },
  {
   "file": "Q339-internal-domain-cloud-dns-private-zone.md",
@@ -21607,7 +21945,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Resolve `internal.altostrat.com` from **VPC and on-prem**, **not public**, least overhead."
  },
  {
   "file": "Q340-audit-old-sa-keys-asset-search.md",
@@ -21670,7 +22009,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Audit **service account keys** older than 90 days across hundreds of SAs."
  },
  {
   "file": "Q341-terraform-gcs-backend.md",
@@ -21733,7 +22073,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Many people edit Terraform **concurrently**; **no sensitive values on local machines**."
  },
  {
   "file": "Q342-startups-folders-separate-billing.md",
@@ -21796,7 +22137,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "**One organization**, but **separate invoices** per startup."
  },
  {
   "file": "Q343-cryptic-logs-gemini-explain.md",
@@ -21859,7 +22201,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Understand unfamiliar error logs **as quickly as possible**."
  },
  {
   "file": "Q344-log-view-view-accessor.md",
@@ -21922,7 +22265,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Show the frontend team **only certain logs** from a central bucket; least privilege, cheap."
  },
  {
   "file": "Q345-modify-sa-iam-policy-sa-admin.md",
@@ -21985,7 +22329,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "You need to **modify IAM policies for service accounts**, least privilege."
  },
  {
   "file": "Q346-vendor-read-bucket-object-viewer.md",
@@ -22048,7 +22393,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Vendor reads objects in **one bucket**, nothing else."
  },
  {
   "file": "Q347-ops-start-stop-reset-custom-role.md",
@@ -22111,7 +22457,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Start/stop/reset VMs only. **No delete, no config changes.**"
  },
  {
   "file": "Q348-public-ip-audit-asset-inventory.md",
@@ -22174,7 +22521,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Find **all VMs with a public IP** org-wide; managed, easy to maintain."
  },
  {
   "file": "Q349-project-creator-owner-role.md",
@@ -22237,7 +22585,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Find **who created** old manual projects."
  },
  {
   "file": "Q350-ds-sandbox-folder-orgpolicy-owner.md",
@@ -22300,7 +22649,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Team needs **full admin**, but only in **us-east1** and only **BigQuery + Cloud Storage**."
  },
  {
   "file": "Q351-no-external-ip-internet-cloud-nat.md",
@@ -22363,7 +22713,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "No external IPs allowed, but the VM must **download updates from the internet**."
  },
  {
   "file": "Q352-gke-api-disabled-enable-container.md",
@@ -22426,7 +22777,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Error: **Kubernetes Engine API … disabled**. Fix?"
  },
  {
   "file": "Q353-billing-standard-detailed-export.md",
@@ -22489,7 +22841,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Daily export of all billing data **including resource-level costs** to BigQuery."
  },
  {
   "file": "Q354-gke-nodes-custom-sa-pull-images.md",
@@ -22552,7 +22905,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "SA already has Artifact Registry pull permission. Make GKE use it to pull images."
  },
  {
   "file": "Q355-db-fleet-health-database-center.md",
@@ -22615,7 +22969,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Single view of the **health** of all databases and which are **at risk**."
  },
  {
   "file": "Q356-prefix-access-ubla-iam-condition.md",
@@ -22678,7 +23033,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Read only **`site1-data/`** objects, including **new ones**, minimal work."
  },
  {
   "file": "Q357-vertex-agent-sa-pubsub-roles.md",
@@ -22741,7 +23097,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "App now runs as a **new service account** on Vertex AI; it must still read Pub/Sub."
  },
  {
   "file": "Q358-test-sa-permissions-token-creator.md",
@@ -22804,7 +23161,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Test as SERVICE_ACCOUNT **without handling secrets**."
  },
  {
   "file": "Q359-avro-petabytes-external-table.md",
@@ -22867,7 +23225,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Analyze PBs of Avro in BigQuery; **cheap storage**; **don't load** into BigQuery storage."
  },
  {
   "file": "Q360-gke-monitoring-no-keys-workload-identity.md",
@@ -22930,7 +23289,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "GKE app needs SA access; **no new keys**."
  },
  {
   "file": "Q361-dev-deploy-gke-group-container-developer.md",
@@ -22993,7 +23353,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "New dev deploys to an existing cluster; **not** manage the cluster or other resources."
  },
  {
   "file": "Q362-team-access-security-groups.md",
@@ -23056,7 +23417,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Access by **team membership**, easy join/leave, best security practice."
  },
  {
   "file": "Q363-audit-old-sa-keys-asset-search-2.md",
@@ -23119,7 +23481,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Audit SA keys older than 90 days across the org."
  },
  {
   "file": "Q364-australia-locations-allowed-values.md",
@@ -23182,7 +23545,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Only `australia-southeast1` and `-southeast2`; **minimal configuration**."
  },
  {
   "file": "Q365-all-employees-domain-principal.md",
@@ -23245,7 +23609,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**All employees** (one Cloud Identity domain) get read-only access."
  },
  {
   "file": "Q366-terraform-root-dir-per-app.md",
@@ -23308,7 +23673,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Separate Terraform for each app so they're **managed independently**."
  },
  {
   "file": "Q367-lifecycle-age-90-archive.md",
@@ -23371,7 +23737,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "After **90 days**, move automatically to the **cheapest long-term** class; keep forever."
  },
  {
   "file": "Q368-track-db-connections-log-metric.md",
@@ -23434,7 +23801,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Count **new database connections created by the app** to check reuse."
  },
  {
   "file": "Q369-vm-logs-bucket-object-creator.md",
@@ -23497,7 +23865,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "Write new logs to **one bucket**; **no modify/delete**, no other buckets."
  },
  {
   "file": "Q370-budget-stop-vm-pubsub-function.md",
@@ -23560,7 +23929,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Spending must **automatically stop** if over budget."
  },
  {
   "file": "Q371-mig-cpu-75-alert-policy.md",
@@ -23623,7 +23993,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "C"
-  ]
+  ],
+  "plain": "Notify if **average CPU > 75% for 5 minutes**, scalable."
  },
  {
   "file": "Q372-gke-declarative-config-connector.md",
@@ -23686,7 +24057,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Manage cloud resources **the same way as app deployments** (Kubernetes manifests)."
  },
  {
   "file": "Q373-container-scale-to-zero-cloud-run.md",
@@ -23749,7 +24121,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "D"
-  ]
+  ],
+  "plain": "Container image ready; **scale to zero**; **as quickly as possible**."
  },
  {
   "file": "Q374-budget-slack-pubsub-function.md",
@@ -23812,7 +24185,8 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "B"
-  ]
+  ],
+  "plain": "Post to Slack when a budget threshold is hit; **minimal maintenance**."
  },
  {
   "file": "Q375-sap-hana-hyperdisk-extreme.md",
@@ -23875,6 +24249,7 @@ window.QUIZ_QUESTIONS = [
   "myAnswer": [],
   "correct": [
    "A"
-  ]
+  ],
+  "plain": "**>200,000 IOPS**, data must **persist through restarts**."
  }
 ];

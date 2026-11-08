@@ -20,6 +20,7 @@ FIELD_RE = re.compile(r"^\*\*(Topic|My answer|Correct answer|Result):\*\*\s*(.*)
 TITLE_RE = re.compile(r"^#\s+(Q\d+)\s*[:\-–]\s*(.*)$")
 BREAKDOWN_HEAD_RE = re.compile(r"^(✅|❌)?\s*([A-Z])\b")
 NESTED_EMPHASIS_RE = re.compile(r'\*"\*\*(.+?)\*\*"\*')
+PLAIN_RE = re.compile(r"^(?:\*\*In plain words:\*\*|In (?:plain|simple) (?:terms|words):)\s*(.*)$", re.I)
 WHY_LABEL_RE =re.compile(r"^\*\*Why it'?s (wrong|correct|right)\:?\*\*:?\s*$", re.I)
 
 SECTION_KINDS = [
@@ -93,6 +94,21 @@ def parse_breakdown(lines):
     return result
 
 
+def parse_plain(lines):
+    """The plain-words summary: the "In plain words:" paragraph, up to the next blank line."""
+    out = None
+    for l in lines:
+        m = PLAIN_RE.match(l.strip())
+        if out is None:
+            if m:
+                out = [m.group(1)]
+            continue
+        if not l.strip():
+            break
+        out.append(l.rstrip())
+    return "\n".join(out).strip() if out else ""
+
+
 def parse_file(path):
     lines = path.read_text(encoding="utf-8").splitlines()
     q = {"file": path.name, "sections": [], "explanations": {}}
@@ -126,6 +142,8 @@ def parse_file(path):
         if kind == "breakdown":
             q["explanations"] = parse_breakdown(body)
         else:
+            if kind == "asking":
+                q["plain"] = parse_plain(body)
             q["sections"].append({"kind": kind, "title": title, "md": clean(body)})
 
     problems = [k for k in ("stem", "options", "correct") if not q.get(k)]

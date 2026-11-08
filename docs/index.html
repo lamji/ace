@@ -180,6 +180,10 @@ h2 { font-size: 1.2rem; margin: 0 0 16px; }
 .stem { font-size: 1.18rem; line-height: 1.65; margin: 0 0 28px; }
 .stem p { margin: 0 0 12px; }
 .hint { font-size: .9rem; color: var(--muted); margin: -12px 0 20px; }
+.plain { background: var(--surface-2); border-left: 3px solid var(--accent); border-radius: 10px; padding: 12px 16px; margin: -12px 0 24px; font-size: .97rem; line-height: 1.55; }
+.plain-label { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+.plain .md > :first-child { margin-top: 0; }
+.plain .md > :last-child { margin-bottom: 0; }
 .options { display: grid; gap: 14px; }
 .opt {
   display: flex; gap: 16px; align-items: flex-start; text-align: left; width: 100%;
@@ -303,6 +307,7 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
   .qpane.card { background: none; border: 0; box-shadow: none; padding: 0; border-radius: 0; }
   .meta { margin-bottom: 12px; }
   .stem { font-size: 1.04rem; line-height: 1.55; margin-bottom: 18px; }
+  .plain { margin: -8px 0 18px; padding: 10px 14px; font-size: .94rem; }
   .stem p { margin-bottom: 10px; }
   .hint { margin: -6px 0 14px; }
   .options { gap: 10px; }
@@ -659,6 +664,7 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
     var html = reviewBar + '<div class="qview' + (ans ? " split" : "") + '"><div class="card qpane">' +
       '<div class="meta"><span class="tag">' + q.id + "</span><span>" + esc(shortTopic(q.topic)) + "</span></div>" +
       '<div class="stem">' + stemHtml(q.stem) + "</div>" +
+      (q.plain ? '<div class="plain"><div class="plain-label">In plain words</div><div class="md">' + md(q.plain) + "</div></div>" : "") +
       (multi ? '<p class="hint">Choose ' + q.correct.length + " answers.</p>" : "") +
       '<div class="options">' +
         q.options.map(function (o) {
