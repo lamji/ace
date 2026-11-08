@@ -495,6 +495,8 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
     var topicNames = Object.keys(topics).sort();
     if (store.prefs.topic !== "all" && !topics[store.prefs.topic]) store.prefs.topic = "all";
     if (store.prefs.pool === "missed" && !missed) store.prefs.pool = "all";
+    var guideCount = ALL.filter(function (q) { return q.guide; }).length;
+    if (store.prefs.pool === "guide" && !guideCount) store.prefs.pool = "all";
 
     var p = store.prefs;
     function chip(group, value, label, disabled) {
@@ -516,6 +518,7 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
           chip("pool", "all", "All") +
           chip("pool", "missed", "Only ones I missed (" + missed + ")", !missed) +
           chip("pool", "new", "Not tried yet (" + (ALL.length - answered.length) + ")", ALL.length === answered.length) +
+          (guideCount ? chip("pool", "guide", "📘 Exam guide topics (" + guideCount + ")") : "") +
         '</div></div>' +
         '<div class="field"><div class="label">Order</div><div class="seg">' +
           chip("order", "in-order", "In order") + chip("order", "shuffle", "Shuffle") +
@@ -634,7 +637,10 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
       var r = store.results[q.id];
       if (p.pool === "missed" && !(r && !r.ok)) return false;
       if (p.pool === "new" && r) return false;
+      if (p.pool === "guide" && !q.guide) return false;
       if (p.topic !== "all" && topicsOf(q).indexOf(p.topic) < 0) return false;
+      // Guide questions are numbered G001… on their own, so number ranges apply to them only in the guide pool.
+      if (ranges.length && q.guide && p.pool !== "guide") return false;
       if (ranges.length && !ranges.some(function (range) { return q.num >= range[0] && q.num <= range[1]; })) return false;
       return true;
     });

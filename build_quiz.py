@@ -17,7 +17,7 @@ OUT_FILE = ROOT / "docs" / "questions.js"
 
 OPTION_RE = re.compile(r"^\*\*([A-Z])\.\*\*\s*(.*)$")
 FIELD_RE = re.compile(r"^\*\*(Topic|My answer|Correct answer|Result):\*\*\s*(.*)$")
-TITLE_RE = re.compile(r"^#\s+(Q\d+)\s*[:\-–]\s*(.*)$")
+TITLE_RE = re.compile(r"^#\s+([QG]\d+)\s*[:\-–]\s*(.*)$")
 BREAKDOWN_HEAD_RE = re.compile(r"^(✅|❌)?\s*([A-Z])\b")
 NESTED_EMPHASIS_RE = re.compile(r'\*"\*\*(.+?)\*\*"\*')
 PLAIN_RE = re.compile(r"^(?:\*\*In plain words:\*\*|In (?:plain|simple) (?:terms|words):)\s*(.*)$", re.I)
@@ -117,6 +117,8 @@ def parse_file(path):
     q["id"] = m.group(1) if m else path.stem.split("-")[0]
     q["title"] = m.group(2).strip() if m else path.stem
     q["num"] = int(re.sub(r"\D", "", q["id"]) or 0)
+    # G###: practice questions written from the official exam guide (numbered separately from Q###).
+    q["guide"] = q["id"].startswith("G")
 
     for title, body in split_by_heading(lines, 2):
         if title is None:
@@ -154,9 +156,9 @@ def parse_file(path):
 
 
 def main():
-    files = sorted(QUESTIONS_DIR.glob("Q[0-9]*.md"))
+    files = sorted(QUESTIONS_DIR.glob("Q[0-9]*.md")) + sorted(QUESTIONS_DIR.glob("G[0-9]*.md"))
     questions = [parse_file(p) for p in files]
-    questions.sort(key=lambda q: q["num"])
+    questions.sort(key=lambda q: (q["guide"], q["num"]))
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     data = json.dumps(questions, ensure_ascii=False, indent=1)
     OUT_FILE.write_text(

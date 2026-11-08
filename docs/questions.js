@@ -38,6 +38,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q001",
   "title": "OS Login for SSH Access to Compute Engine",
   "num": 1,
+  "guide": false,
   "topic": "IAM + Compute Engine access (OS Login)",
   "stem": "Every employee of your company has a Google account. Your operational team needs to manage a large number of instances on Compute Engine. Each member of this team needs only administrative access to the servers. Your security team wants to ensure that the deployment of credentials is operationally efficient and must be able to determine who accessed a given instance. What should you do?",
   "options": [
@@ -104,6 +105,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q002",
   "title": "Largest Subnet Range in a Custom VPC",
   "num": 2,
+  "guide": false,
   "topic": "VPC networking (CIDR notation, private IP ranges, RFC 1918)",
   "stem": "You need to create a custom VPC with a single subnet. The subnet's range must be as large as possible. Which range should you use?",
   "options": [
@@ -170,6 +172,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q003",
   "title": "Cost-Effective Relational Database with Point-in-Time Recovery",
   "num": 3,
+  "guide": false,
   "topic": "Databases (Cloud SQL vs Cloud Spanner, backups & point-in-time recovery)",
   "stem": "You want to select and configure a cost-effective solution for relational data on Google Cloud Platform. You are working with a small set of operational data in one geographic location. You need to support point-in-time recovery. What should you do?",
   "options": [
@@ -236,6 +239,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q004",
   "title": "Autohealing with a Managed Instance Group",
   "num": 4,
+  "guide": false,
   "topic": "Compute Engine (Managed Instance Groups, health checks, autohealing vs autoscaling, load balancing)",
   "stem": "You want to configure autohealing for network load balancing for a group of Compute Engine instances that run in multiple zones, using the fewest possible steps. You need to configure re-creation of VMs if they are unresponsive after 3 attempts of 10 seconds each. What should you do?",
   "options": [
@@ -302,6 +306,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q005",
   "title": "Reviewing an Inactive gcloud Configuration",
   "num": 5,
+  "guide": false,
   "topic": "Cloud SDK / gcloud CLI (named configurations, properties) + kubectl contexts",
   "stem": "You are using multiple configurations for gcloud. You want to review the configured Kubernetes Engine cluster of an inactive configuration using the fewest possible steps. What should you do?",
   "options": [
@@ -368,6 +373,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q006",
   "title": "Cloud Storage Class for Disaster Recovery Backups",
   "num": 6,
+  "guide": false,
   "topic": "Cloud Storage (storage classes: Standard / Nearline / Coldline / Archive, location types)",
   "stem": "Your company uses Cloud Storage to store application backup files for disaster recovery purposes. You want to follow Google's recommended practices. Which storage option should you use?",
   "options": [
@@ -434,6 +440,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q007",
   "title": "Centralizing Projects Under One Billing Account",
   "num": 7,
+  "guide": false,
   "topic": "Billing (Cloud Billing accounts, payment methods, linking projects, resource hierarchy)",
   "stem": "Several employees at your company have been creating projects with Cloud Platform and paying for it with their personal credit cards, which the company reimburses. The company wants to centralize all these projects under a single, new billing account. What should you do?",
   "options": [
@@ -500,6 +507,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q008",
   "title": "Reserving a Specific Static Internal IP for a Server",
   "num": 8,
+  "guide": false,
   "topic": "VPC networking / Compute Engine (internal vs external IPs, static vs ephemeral IPs)",
   "stem": "You have an application that looks for its licensing server on the IP 10.0.3.21. You need to deploy the licensing server on Compute Engine. You do not want to change the configuration of the application and want the application to be able to reach the licensing server. What should you do?",
   "options": [
@@ -571,6 +579,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q009",
   "title": "App Engine Scaling Types (Automatic, Basic, Manual)",
   "num": 9,
+  "guide": false,
   "topic": "App Engine (scaling types, `min_idle_instances`, `app.yaml`)",
   "stem": "You are deploying an application to App Engine. You want the number of instances to scale based on request rate. You need at least 3 unoccupied instances at all times. Which scaling type should you use?",
   "options": [
@@ -637,6 +646,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q010",
   "title": "Copying IAM Custom Roles to Another Project",
   "num": 10,
+  "guide": false,
   "topic": "IAM (custom roles, `gcloud iam roles copy`, project vs organization scope)",
   "stem": "You have a development project with appropriate IAM roles defined. You are creating a production project and want to have the same IAM roles on the new project, using the fewest possible steps. What should you do?",
   "options": [
@@ -703,6 +713,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q011",
   "title": "Provisioning VMs from a Configuration File (Infrastructure as Code)",
   "num": 11,
+  "guide": false,
   "topic": "Infrastructure as Code (Deployment Manager / Infrastructure Manager / Terraform) vs Cloud Composer vs instance groups",
   "stem": "You need a dynamic way of provisioning VMs on Compute Engine. The exact specifications will be in a dedicated configuration file. You want to follow Google's recommended practices. Which method should you use?",
   "options": [
@@ -769,6 +780,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q012",
   "title": "Deploying a Dockerfile to Kubernetes Engine (GKE)",
   "num": 12,
+  "guide": false,
   "topic": "GKE / containers (Dockerfile → image → registry → Deployment YAML → kubectl)",
   "stem": "You have a Dockerfile that you need to deploy on Kubernetes Engine. What should you do?",
   "options": [
@@ -835,6 +847,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q013",
   "title": "Deploying a Jenkins Server with the Fewest Steps",
   "num": 13,
+  "guide": false,
   "topic": "Cloud Marketplace (click-to-deploy solutions) vs Compute Engine vs GKE vs App Engine",
   "stem": "Your development team needs a new Jenkins server for their project. You need to deploy the server using the fewest steps possible. What should you do?",
   "options": [
@@ -901,6 +914,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q014",
   "title": "Updating a Deployment Manager Deployment Without Downtime",
   "num": 14,
+  "guide": false,
   "topic": "Infrastructure as Code (Deployment Manager commands: `deployments create` vs `deployments update` vs `resources`)",
   "stem": "You need to update a deployment in Deployment Manager without any resource downtime in the deployment. Which command should you use?",
   "options": [
@@ -972,6 +986,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q015",
   "title": "Estimating BigQuery Query Cost with a Dry Run",
   "num": 15,
+  "guide": false,
   "topic": "BigQuery (on-demand pricing, bytes processed, dry run, Pricing Calculator)",
   "stem": "You need to run an important query in BigQuery but expect it to return a lot of records. You want to find out how much it will cost to run the query. You are using on-demand pricing. What should you do?",
   "options": [
@@ -1038,6 +1053,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q016",
   "title": "Autoscaling a VM-Based Application on CPU Usage",
   "num": 16,
+  "guide": false,
   "topic": "Compute Engine (instance templates, Managed Instance Groups, CPU-based autoscaling vs schedule-based, GKE HPA)",
   "stem": "You have a single binary application that you want to run on Google Cloud Platform. You decided to automatically scale the application based on underlying infrastructure CPU usage. Your organizational policies require you to use virtual machines directly. You need to ensure that the application scaling is operationally efficient and completed as quickly as possible. What should you do?",
   "options": [
@@ -1104,6 +1120,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q017",
   "title": "Analyzing and Forecasting Costs with Billing Export to BigQuery",
   "num": 17,
+  "guide": false,
   "topic": "Billing (Cloud Billing export to BigQuery, SQL cost analysis) vs Cloud Storage / Bigtable / Sheets",
   "stem": "You are analyzing Google Cloud Platform service costs from three separate projects. You want to use this information to create service cost estimates by service type, daily and monthly, for the next six months using standard query syntax. What should you do?",
   "options": [
@@ -1170,6 +1187,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q018",
   "title": "Lifecycle Policy to Move Objects to Coldline, Then Delete Them",
   "num": 18,
+  "guide": false,
   "topic": "Cloud Storage (Object Lifecycle Management, Age condition, SetStorageClass / Delete actions, gsutil rewrite)",
   "stem": "You need to set up a policy so that videos stored in a specific Cloud Storage Regional bucket are moved to Coldline after 90 days, and then deleted after one year from their creation. How should you set up the policy?",
   "options": [
@@ -1241,6 +1259,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q019",
   "title": "Making a VM Use a Specific Service Account (Not the Default)",
   "num": 19,
+  "guide": false,
   "topic": "IAM + Compute Engine (service accounts, \"Identity and API access\", access scopes, why not to use JSON keys)",
   "stem": "You have a Linux VM that must connect to Cloud SQL. You created a service account with the appropriate access rights. You want to make sure that the VM uses this service account instead of the default Compute Engine service account. What should you do?",
   "options": [
@@ -1305,6 +1324,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q020",
   "title": "Connecting to a Windows (SQL Server) VM with RDP in the Fewest Steps",
   "num": 20,
+  "guide": false,
   "topic": "Compute Engine (Windows VMs, RDP, Windows password, firewall port 3389 vs 22)",
   "stem": "You created an instance of SQL Server 2017 on Compute Engine to test features in the new version. You want to connect to this instance using the fewest number of steps. What should you do?",
   "options": [
@@ -1376,6 +1396,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q021",
   "title": "Using Two gcloud Configurations to Work in Two Accounts",
   "num": 21,
+  "guide": false,
   "topic": "Cloud SDK / gcloud CLI (named configurations: create, activate, list; account, project, region and zone per configuration)",
   "stem": "You have one GCP account running in your default region and zone and another account running in a non-default region and zone. You want to start a new Compute Engine instance in these two Google Cloud Platform accounts using the command line interface. What should you do?",
   "options": [
@@ -1440,6 +1461,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q022",
   "title": "Checking a Changed Deployment Manager Template with --preview",
   "num": 22,
+  "guide": false,
   "topic": "Deployment Manager (`--preview`, dependencies between resources, fast feedback before committing)",
   "stem": "You significantly changed a complex Deployment Manager template and want to confirm that the dependencies of all defined resources are properly met before committing it to the project. You want the most rapid feedback on your changes. What should you do?",
   "options": [
@@ -1506,6 +1528,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q023",
   "title": "Time-Series Data Pipeline (Pub/Sub → Dataflow → Bigtable + BigQuery)",
   "num": 23,
+  "guide": false,
   "topic": "Data pipelines (Pub/Sub ingest, Dataflow processing, Bigtable for time-series storage, BigQuery for analytics)",
   "stem": "You are building a pipeline to process time-series data. Which Google Cloud Platform services should you put in boxes 1,2,3, and 4?\n\n(Diagram: Constrained Devices (non-TCP, e.g. BLE) → Standard Devices (HTTPS) with a Gateway → inside Google Cloud Platform: box **1** → box **2** → which splits into **Storage** (box **3**) and **Analytics** (box **4**).)",
   "options": [
@@ -1572,6 +1595,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q024",
   "title": "Creating a Production Project for an App Engine App",
   "num": 24,
+  "guide": false,
   "topic": "App Engine + Resource Manager (`gcloud projects create`, `gcloud app create`, `gcloud app deploy --project`; dev and prod as separate projects)",
   "stem": "You have a project for your App Engine application that serves a development environment. The required testing has succeeded and you want to create a new project to serve as your production environment. What should you do?",
   "options": [
@@ -1643,6 +1667,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q025",
   "title": "Giving External Auditors Access to BigQuery Audit Logs",
   "num": 25,
+  "guide": false,
   "topic": "IAM (Google groups vs individual users, predefined vs custom roles, `roles/logging.viewer`, `roles/bigquery.dataViewer`, audit logs)",
   "stem": "You need to configure IAM access audit logging in BigQuery for external auditors. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -1709,6 +1734,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q026",
   "title": "Letting VMs Write to One Bucket (Service Account + storage.objectCreator)",
   "num": 26,
+  "guide": false,
   "topic": "IAM + Cloud Storage (service accounts, bucket-level IAM roles `storage.objectCreator` vs `storage.objectAdmin`, legacy access scopes)",
   "stem": "You need to set up permissions for a set of Compute Engine instances to enable them to write data into a particular Cloud Storage bucket. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -1775,6 +1801,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q027",
   "title": "Checking Who Viewed Files and Changed Labels (Data Access Logs in Cloud Logging)",
   "num": 27,
+  "guide": false,
   "topic": "Cloud Logging / Audit logs (Data Access vs Admin Activity logs, Console Activity page, Logs Explorer filters, Cloud Trace)",
   "stem": "You have sensitive data stored in three Cloud Storage buckets and have enabled data access logging. You want to verify activities for a particular user for these buckets, using the fewest possible steps. You need to verify the addition of metadata labels and which files have been viewed from those buckets. What should you do?",
   "options": [
@@ -1841,6 +1868,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q028",
   "title": "Letting Colleagues Manage Buckets AND Files (Storage Admin)",
   "num": 28,
+  "guide": false,
   "topic": "IAM + Cloud Storage (`roles/storage.admin` vs `roles/storage.objectAdmin` vs `roles/storage.objectCreator` vs basic `roles/editor`)",
   "stem": "You are the project owner of a GCP project and want to delegate control to colleagues to manage buckets and files in Cloud Storage. You want to follow Google-recommended practices. Which IAM roles should you grant your colleagues?",
   "options": [
@@ -1907,6 +1935,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q029",
   "title": "Sharing a Sensitive File for 4 Hours with a Company That Has No Google Account (Signed URL)",
   "num": 29,
+  "guide": false,
   "topic": "Cloud Storage security (signed URLs vs public objects, lifecycle management, static websites, temporary buckets)",
   "stem": "You have an object in a Cloud Storage bucket that you want to share with an external company. The object contains sensitive data. You want access to the content to be removed after four hours. The external company does not have a Google account to which you can grant specific user-based access privileges. You want to use the most secure method that requires the fewest steps. What should you do?",
   "options": [
@@ -1973,6 +2002,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q030",
   "title": "Running One Monitoring Pod on Every GKE Node (DaemonSet)",
   "num": 30,
+  "guide": false,
   "topic": "GKE / Kubernetes workloads (DaemonSet vs StatefulSet vs Deployment, cluster autoscaler)",
   "stem": "You are creating a Google Kubernetes Engine (GKE) cluster with a cluster autoscaler feature enabled. You need to make sure that each node of the cluster will run a monitoring pod that sends container metrics to a third-party monitoring solution. What should you do?",
   "options": [
@@ -2037,6 +2067,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q031",
   "title": "Turning On the Pub/Sub API Before Your App Can Use It",
   "num": 31,
+  "guide": false,
   "topic": "APIs & Services (enabling APIs in the API Library), Pub/Sub, App Engine service accounts",
   "stem": "You want to send and consume Cloud Pub/Sub messages from your App Engine application. The Cloud Pub/Sub API is currently disabled. You will use a service account to authenticate your application to the API. You want to make sure your application can use Cloud Pub/Sub. What should you do?",
   "options": [
@@ -2103,6 +2134,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q032",
   "title": "One Monitoring Dashboard for Many Projects (Stackdriver Account → Metrics Scope)",
   "num": 32,
+  "guide": false,
   "topic": "Cloud Monitoring (formerly Stackdriver): Workspace / metrics scope, monitored projects, Monitoring groups, Shared VPC",
   "stem": "You need to monitor resources that are distributed over different projects in Google Cloud Platform. You want to consolidate reporting under the same Stackdriver Monitoring dashboard. What should you do?",
   "options": [
@@ -2169,6 +2201,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q033",
   "title": "Exactly One VM, Always Running (MIG Autoscaling Min 1 / Max 1)",
   "num": 33,
+  "guide": false,
   "topic": "Compute Engine managed instance groups (autoscaler min/max, target size, autohealing)",
   "stem": "You are deploying an application to a Compute Engine VM in a managed instance group. The application must be running at all times, but only a single instance of the VM should run per GCP project. How should you configure the instance group?",
   "options": [
@@ -2235,6 +2268,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q034",
   "title": "Checking Who Has Which Role in a Project (IAM Page vs Roles Page)",
   "num": 34,
+  "guide": false,
   "topic": "IAM (allow policy, principals/members, IAM page vs Roles page, `gcloud iam roles list`, `gcloud projects get-iam-policy`)",
   "stem": "You want to verify the IAM users and roles assigned within a GCP project named my-project. What should you do?",
   "options": [
@@ -2301,6 +2335,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q035",
   "title": "Create a New Billing Account and Link an Existing Project",
   "num": 35,
+  "guide": false,
   "topic": "Billing (billing accounts, linking projects, Project Billing Manager vs Billing Account Administrator vs Billing Account Creator)",
   "stem": "You need to create a new billing account and then link it with an existing Google Cloud Platform project. What should you do?",
   "options": [
@@ -2367,6 +2402,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q036",
   "title": "Using a Service Account From Another Project to Snapshot VMs (Cross-Project IAM)",
   "num": 36,
+  "guide": false,
   "topic": "IAM + Compute Engine (cross-project service accounts, `roles/compute.storageAdmin`, snapshots, access scopes, service account keys)",
   "stem": "You have one project called proj-sa where you manage all your service accounts. You want to be able to use a service account from this project to take snapshots of VMs running in another project called proj-vm. What should you do?",
   "options": [
@@ -2433,6 +2469,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q037",
   "title": "Moving an App Engine App to Another Region (New Project Required)",
   "num": 37,
+  "guide": false,
   "topic": "App Engine (region is permanent, one App Engine app per project, `gcloud app create --region`)",
   "stem": "You created a Google Cloud Platform project with an App Engine application inside the project. You initially configured the application to be served from the us-central region. Now you want the application to be served from the asia-northeast1 region. What should you do?",
   "options": [
@@ -2504,6 +2541,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q038",
   "title": "Granting Cloud Spanner Data Access to Three Users",
   "num": 38,
+  "guide": false,
   "topic": "IAM + Cloud Spanner (database access role, groups, least privilege)",
   "stem": "You need to grant access for three users so that they can view and edit table data on a Cloud Spanner instance. What should you do?",
   "options": [
@@ -2575,6 +2613,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q039",
   "title": "Keeping a GKE Cluster on a Supported Kubernetes Version",
   "num": 39,
+  "guide": false,
   "topic": "Google Kubernetes Engine (GKE) (node auto-upgrades, auto-repair, node images)",
   "stem": "You create a new Google Kubernetes Engine (GKE) cluster and want to make sure that it always runs a supported and stable version of Kubernetes. What should you do?",
   "options": [
@@ -2646,6 +2685,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q040",
   "title": "Terminating Client SSL Sessions for a Public Web App",
   "num": 40,
+  "guide": false,
   "topic": "Cloud Load Balancing (HTTPS, TLS termination, external vs internal load balancers)",
   "stem": "You have an instance group that you want to load balance. You want the load balancer to terminate the client SSL session. The instance group is used to serve a public web application over HTTPS. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -2717,6 +2757,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q041",
   "title": "Using Parallel Composite Uploads for a Large File",
   "num": 41,
+  "guide": false,
   "topic": "Cloud Storage (large-file uploads, network throughput, Nearline storage)",
   "stem": "You have 32 GB of data in a single file that you need to upload to a Nearline Storage bucket. The WAN connection you are using is rated at 1 Gbps, and you are the only one on the connection. You want to use as much of the rated 1 Gbps as possible to transfer the file rapidly. How should you upload the file?",
   "options": [
@@ -2786,6 +2827,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q042",
   "title": "Keeping a Database Password Out of a Kubernetes Deployment",
   "num": 42,
+  "guide": false,
   "topic": "GKE / Kubernetes (Secrets vs ConfigMaps, container images, persistent volumes)",
   "stem": "You need to refactor this configuration so that the database password is not stored in plain text. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -2857,6 +2899,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q043",
   "title": "Matching a Managed Instance Group Health-Check Delay to Startup Time",
   "num": 43,
+  "guide": false,
   "topic": "Compute Engine (managed instance groups, autoscaling, health checks, VM startup)",
   "stem": "You are running an application on multiple virtual machines within a managed instance group and have autoscaling enabled. The autoscaling policy is configured so that additional instances are added to the group if the CPU utilization of instances goes above 80%. VMs are added until the instance group reaches its maximum limit of five VMs or until CPU utilization of instances lowers to 80%. The initial delay for HTTP health checks against the instances is set to 30 seconds. The virtual machine instances take around three minutes to become available for users. You observe that when the instance group autoscales, it adds more instances then necessary to support the levels of end-user traffic. You want to properly maintain instance group sizes when autoscaling. What should you do?",
   "options": [
@@ -2928,6 +2971,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q044",
   "title": "Lower-Cost Compute for Nightly Batch Jobs",
   "num": 44,
+  "guide": false,
   "topic": "Compute Engine (Spot / preemptible VMs, batch processing, machine types, GKE cost)",
   "stem": "You need to select and configure compute resources for a set of batch processing jobs. These jobs take around 2 hours to complete and are run nightly. You want to minimize service costs. What should you do?",
   "options": [
@@ -2994,6 +3038,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q045",
   "title": "Roll Back a Buggy App Engine Release (Route 100% Traffic to the Previous Version)",
   "num": 45,
+  "guide": false,
   "topic": "App Engine (versions and traffic splitting)",
   "stem": "You recently deployed a new version of an application to App Engine and then discovered a bug in the release. You need to immediately revert to the prior version of the application. What should you do?",
   "options": [
@@ -3063,6 +3108,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q046",
   "title": "Finding the Project Used by an App Engine Deployment",
   "num": 46,
+  "guide": false,
   "topic": "App Engine + Google Cloud CLI (`gcloud` project configuration)",
   "stem": "You deployed an App Engine application using gcloud app deploy, but it did not deploy to the intended project. You want to find out why this happened and where the application deployed. What should you do?",
   "options": [
@@ -3134,6 +3180,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q047",
   "title": "Compute Engine restart and host maintenance settings",
   "num": 47,
+  "guide": false,
   "topic": "Compute Engine instance templates, restart behavior, and host maintenance",
   "stem": "You want to configure 10 Compute Engine instances for availability when maintenance occurs. Your requirements state that these instances should attempt to automatically restart if they crash. Also, the instances should be highly available including during system maintenance. What should you do?",
   "options": [
@@ -3205,6 +3252,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q048",
   "title": "Displaying Cloud Storage PDFs in a browser",
   "num": 48,
+  "guide": false,
   "topic": "Cloud Storage object metadata (`Content-Type`) and public access",
   "stem": "You host a static website on Cloud Storage. Recently, you began to include links to PDF files on this site. Currently, when users click on the links to these PDF files, their browsers prompt them to save the file onto their local system. Instead, you want the clicked PDF files to be displayed within the browser window directly, without prompting the user to save the file locally. What should you do?",
   "options": [
@@ -3271,6 +3319,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q049",
   "title": "Giving a VM More Memory (Stop → Increase Memory → Start)",
   "num": 49,
+  "guide": false,
   "topic": "Compute Engine (machine types, custom machine types, changing memory, live migration, metadata)",
   "stem": "You have a virtual machine that is currently configured with 2 vCPUs and 4 GB of memory. It is running out of memory. You want to upgrade the virtual machine to have 8 GB of memory. What should you do?",
   "options": [
@@ -3342,6 +3391,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q050",
   "title": "Prod and Test in Different Subnets That Can Still Talk (One VPC, Non-Overlapping CIDR)",
   "num": 50,
+  "guide": false,
   "topic": "VPC networking (global VPC, regional subnets, CIDR ranges must not overlap, automatic subnet routes, separate VPCs)",
   "stem": "You have production and test workloads that you want to deploy on Compute Engine. Production VMs need to be in a different subnet than the test VMs. All the VMs must be able to reach each other over Internal IP without creating additional routes. You need to set up VPC and the 2 subnets. Which configuration meets these requirements?",
   "options": [
@@ -3408,6 +3458,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q051",
   "title": "Recreate Unhealthy VMs in an HTTPS Managed Instance Group (Health Check on Port 443)",
   "num": 51,
+  "guide": false,
   "topic": "Compute Engine (managed instance groups, health checks, autohealing)",
   "stem": "You need to create an autoscaling managed instance group for an HTTPS web application. You want to make sure that unhealthy VMs are recreated. What should you do?",
   "options": [
@@ -3472,6 +3523,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q052",
   "title": "Letting a Changing Data Science Team Run BigQuery Queries (Group + jobUser)",
   "num": 52,
+  "guide": false,
   "topic": "IAM + BigQuery (Google groups in Cloud Identity, `roles/bigquery.jobUser` vs `roles/bigquery.dataViewer`)",
   "stem": "Your company has a Google Cloud Platform project that uses BigQuery for data warehousing. Your data science team changes frequently and has few members. You need to allow members of this team to perform queries. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -3543,6 +3595,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q053",
   "title": "Letting 3 Tiers Talk on Port 8080 (Firewall Rules by Service Account)",
   "num": 53,
+  "guide": false,
   "topic": "VPC firewall rules (ingress vs egress, targets and source filters by service account vs IP range, least privilege on ports)",
   "stem": "Your company has a 3-tier solution running on Compute Engine. The configuration of the current infrastructure is shown below.\n\n(Diagram: one VPC with three subnets. Subnet Tier#1 10.0.1.0/24 contains Instance Tier 1. Subnet Tier#2 10.0.2.0/24 contains Instance Tier 2. Subnet Tier#3 10.0.3.0/24 contains Instance Tier 3. All are Compute Engine instances.)\n\nEach tier has a service account that is associated with all instances within it. You need to enable communication on TCP port 8080 between tiers as follows:\n* Instances in tier #1 must communicate with tier #2.\n* Instances in tier #2 must communicate with tier #3.\n\nWhat should you do?",
   "options": [
@@ -3609,6 +3662,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q054",
   "title": "Adding a VM in Another Region That Can Reach the App (New Subnet in the Same VPC)",
   "num": 54,
+  "guide": false,
   "topic": "VPC networking (global VPC, regional subnets, internal IP between regions, Cloud VPN, VPC Peering, internal load balancer)",
   "stem": "You are given a project with a single Virtual Private Cloud (VPC) and a single subnetwork in the us-central1 region. There is a Compute Engine instance hosting an application in this subnetwork. You need to deploy a new instance in the same project in the europe-west1 region. This new instance needs access to the application. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -3675,6 +3729,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q055",
   "title": "Stopping Expensive Logs From One Dev GKE Container (Logs Ingestion / Exclusion)",
   "num": 55,
+  "guide": false,
   "topic": "Cloud Logging (log ingestion costs, excluding a log source, GKE container vs cluster operations logs, legacy Stackdriver options)",
   "stem": "Your projects incurred more costs than you expected last month. Your research reveals that a development GKE container emitted a huge number of logs, which resulted in higher costs. You want to disable the logs quickly using the minimum number of steps. What should you do?",
   "options": [
@@ -3741,6 +3796,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q056",
   "title": "Showing a New Version to 1% of Users (App Engine Traffic Splitting)",
   "num": 56,
+  "guide": false,
   "topic": "App Engine (versions, traffic splitting with `--splits`, `--migrate`, one App Engine app per project)",
   "stem": "You have a website hosted on App Engine standard environment. You want 1% of your users to see a new test version of the website. You want to minimize complexity. What should you do?",
   "options": [
@@ -3807,6 +3863,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q057",
   "title": "Updating a Live MIG Without Losing Capacity (maxSurge 1, maxUnavailable 0)",
   "num": 57,
+  "guide": false,
   "topic": "Compute Engine MIG (rolling update, maxSurge, maxUnavailable, instance template)",
   "stem": "You have a web application deployed as a managed instance group. You have a new version of the application to gradually deploy. Your web application is currently receiving live web traffic. You want to ensure that the available capacity does not decrease during the deployment. What should you do?",
   "options": [
@@ -3871,6 +3928,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q058",
   "title": "Global Relational Database That Scales With Unknown User Growth (Cloud Spanner)",
   "num": 58,
+  "guide": false,
   "topic": "Databases (Cloud Spanner vs Cloud SQL vs Firestore vs Datastore; relational vs NoSQL; global horizontal scaling)",
   "stem": "You are building an application that stores relational data from users. Users across the globe will use this application. Your CTO is concerned about the scaling requirements because the size of the user base is unknown. You need to implement a database solution that can scale with your user growth with minimum configuration changes. Which storage solution should you use?",
   "options": [
@@ -3937,6 +3995,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q059",
   "title": "Only Finance Can Link Projects to Billing (Billing Account User + Project Billing Manager)",
   "num": 59,
+  "guide": false,
   "topic": "IAM + Billing (Billing Account User, Project Billing Manager, Project Creator, least privilege)",
   "stem": "You are the organization and billing administrator for your company. The engineering team has the Project Creator role on the organization. You do not want the engineering team to be able to link projects to the billing account. Only the finance team should be able to link a project to a billing account, but they should not be able to make any other changes to projects. What should you do?",
   "options": [
@@ -4003,6 +4062,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q060",
   "title": "VM in Another VPC Reaching a GKE App (Internal Load Balancer + VPC Peering)",
   "num": 60,
+  "guide": false,
   "topic": "GKE + Networking (Service type LoadBalancer, internal load balancer annotation, VPC Network Peering, Cloud Armor)",
   "stem": "You have an application running in Google Kubernetes Engine (GKE) with cluster autoscaling enabled. The application exposes a TCP endpoint. There are several replicas of this application. You have a Compute Engine instance in the same region, but in another Virtual Private Cloud (VPC), called gce-network, that has no overlapping IP ranges with the first VPC. This instance needs to connect to the application on GKE. You want to minimize effort. What should you do?",
   "options": [
@@ -4069,6 +4129,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q061",
   "title": "Keeping Audit Logs for 3 Years Cheaply (Log Sink → Coldline Bucket)",
   "num": 61,
+  "guide": false,
   "topic": "Cloud Logging + Cloud Storage (log sinks / exports, aggregated org sink, Coldline vs BigQuery vs Cloud SQL, log retention)",
   "stem": "Your organization is a financial company that needs to store audit log files for 3 years. Your organization has hundreds of Google Cloud projects. You need to implement a cost-effective approach for log file retention. What should you do?",
   "options": [
@@ -4135,6 +4196,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q062",
   "title": "Running a Memory-Heavy Caching Reverse Proxy Cheaply (Memorystore vs Custom Machine Type)",
   "num": 62,
+  "guide": false,
   "topic": "Compute Engine (custom machine types, memory-to-vCPU ratio) vs Memorystore for Redis; choosing the cheapest fit",
   "stem": "You want to run a single caching HTTP reverse proxy on GCP for a latency-sensitive website. This specific reverse proxy consumes almost no CPU. You want to have a 30-GB in-memory cache, and need an additional 2 GB of memory for the rest of the processes. You want to minimize cost. How should you run this reverse proxy?",
   "options": [
@@ -4206,6 +4268,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q063",
   "title": "On-Premises Servers With No Internet Reaching Cloud Storage (Private Google Access for On-Premises)",
   "num": 63,
+  "guide": false,
   "topic": "Hybrid networking (Cloud VPN / Interconnect, Cloud Router custom route advertisement, Private Google Access for on-premises hosts, restricted.googleapis.com, DNS CNAME)",
   "stem": "You are hosting an application on bare-metal servers in your own data center. The application needs access to Cloud Storage. However, security policies prevent the servers hosting the application from having public IP addresses or access to the internet. You want to follow Google-recommended practices to provide the application with access to Cloud Storage. What should you do?",
   "options": [
@@ -4272,6 +4335,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q064",
   "title": "Processing Pub/Sub Messages With Cloud Run (Push Subscription + Invoker Service Account)",
   "num": 64,
+  "guide": false,
   "topic": "Cloud Run + Pub/Sub (push vs pull subscriptions, Cloud Run Invoker role, service accounts, request-driven scaling)",
   "stem": "You want to deploy an application on Cloud Run that processes messages from a Cloud Pub/Sub topic. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -4338,6 +4402,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q065",
   "title": "Cheapest Place to Run a Rarely-Used Container (Cloud Run Scales to Zero)",
   "num": 65,
+  "guide": false,
   "topic": "Choosing compute for containers (Cloud Run vs Cloud Run on GKE vs App Engine Flexible vs GKE; scale to zero; pay per request)",
   "stem": "You need to deploy an application, which is packaged in a container image, in a new project. The application exposes an HTTP endpoint and receives very few requests per day. You want to minimize costs. What should you do?",
   "options": [
@@ -4404,6 +4469,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q066",
   "title": "One Invoice for Two Organizations by Tomorrow (Link Projects to One Billing Account)",
   "num": 66,
+  "guide": false,
   "topic": "Billing (billing account ↔ project link across organizations, single invoice, project migration vs linking, billing export)",
   "stem": "Your company has an existing GCP organization with hundreds of projects and a billing account. Your company recently acquired another company that also has hundreds of projects and its own billing account. You would like to consolidate all GCP costs of both GCP organizations onto a single invoice. You would like to consolidate all costs as of tomorrow. What should you do?",
   "options": [
@@ -4470,6 +4536,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q067",
   "title": "Support Team Can Monitor Spanner but Not Read Table Data (Monitoring Viewer)",
   "num": 67,
+  "guide": false,
   "topic": "IAM (roles/monitoring.viewer vs Spanner data roles vs stackdriver.accounts.viewer; groups; least privilege)",
   "stem": "You built an application on Google Cloud that uses Cloud Spanner. Your support team needs to monitor the environment but should not have access to table data. You need a streamlined solution to grant the correct permissions to your support team, and you want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -4536,6 +4603,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q068",
   "title": "Sending All Compute Engine Logs to BigQuery Cheaply (Filtered Log Sink)",
   "num": 68,
+  "guide": false,
   "topic": "Cloud Logging (log sinks / exports with filters, BigQuery as sink destination, sink writer identity) vs custom pipelines",
   "stem": "For analysis purposes, you need to send all the logs from all of your Compute Engine instances to a BigQuery dataset called platform-logs. You have already installed the Cloud Logging agent on all the instances. You want to minimize cost. What should you do?",
   "options": [
@@ -4602,6 +4670,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q069",
   "title": "Creating a GKE DaemonSet From the Same Deployment Manager Deployment (Type Provider)",
   "num": 69,
+  "guide": false,
   "topic": "Infrastructure as Code (Deployment Manager, Type Providers, Runtime Configurator, GKE DaemonSet in kube-system)",
   "stem": "You are using Deployment Manager to create a Google Kubernetes Engine cluster. Using the same Deployment Manager deployment, you also want to create a DaemonSet in the kube-system namespace of the cluster. You want a solution that uses the fewest possible services. What should you do?",
   "options": [
@@ -4668,6 +4737,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q070",
   "title": "On-Premises App Calling Google APIs (Service Account Key File)",
   "num": 70,
+  "guide": false,
   "topic": "IAM (service accounts, service account key files, authenticating from outside Google Cloud, GOOGLE_APPLICATION_CREDENTIALS; Workload Identity Federation today)",
   "stem": "You are building an application that will run in your data center. The application will use Google Cloud Platform (GCP) services like AutoML. You created a service account that has appropriate access to AutoML. You need to enable authentication to the APIs from your on-premises environment. What should you do?",
   "options": [
@@ -4734,6 +4804,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q071",
   "title": "GKE Pulling Images From Container Registry in Another Project (Storage Object Viewer)",
   "num": 71,
+  "guide": false,
   "topic": "IAM + GKE (Container Registry storage bucket, node service account, Storage Object Viewer, access scopes)",
   "stem": "You are using Container Registry to centrally store your company's container images in a separate project. In another project, you want to create a Google Kubernetes Engine (GKE) cluster. You want to ensure that Kubernetes can download images from Container Registry. What should you do?",
   "options": [
@@ -4798,6 +4869,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q072",
   "title": "Why Is a Pod Stuck in Pending? (Describe the Pod and Read Its Events)",
   "num": 72,
+  "guide": false,
   "topic": "GKE / Kubernetes troubleshooting (Pod status Pending, kubectl describe pod, events, logs vs events)",
   "stem": "You deployed a new application inside your Google Kubernetes Engine cluster using the YAML file specified below.\n\n*(YAML file shown as an image in the original: a Deployment `myapp-deployment` and a Service `myapp-service`.)*\n\nYou check the status of the deployed pods and notice that one of them is still in PENDING status:\n\n*(Pod list shown as an image in the original: `myapp-deployment-58ddbbb995-lp86m` is `Pending`.)*\n\nYou want to find out why the pod is stuck in pending status. What should you do?",
   "options": [
@@ -4862,6 +4934,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q073",
   "title": "Logging Into a Windows VM With RDP (gcloud compute reset-windows-password)",
   "num": 73,
+  "guide": false,
   "topic": "Compute Engine (Windows VMs, RDP, Windows passwords, metadata, service account keys)",
   "stem": "You are setting up a Windows VM on Compute Engine and want to make sure you can log in to the VM via RDP. What should you do?",
   "options": [
@@ -4926,6 +4999,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q074",
   "title": "SSH to Only One Instance for a Group (OS Login + compute.osLogin)",
   "num": 74,
+  "guide": false,
   "topic": "IAM + Compute Engine (OS Login, enable-oslogin metadata, roles/compute.osLogin on one instance, SSH keys)",
   "stem": "You want to configure an SSH connection to a single Compute Engine instance for users in the dev1 group. This instance is the only resource in this particular Google Cloud Platform project that the dev1 users should be able to connect to. What should you do?",
   "options": [
@@ -4990,6 +5064,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q075",
   "title": "Listing the Enabled APIs of a Project (gcloud services list --project)",
   "num": 75,
+  "guide": false,
   "topic": "gcloud CLI (project name vs project ID, gcloud services list, --available, gcloud init/info/describe)",
   "stem": "You need to produce a list of the enabled Google Cloud Platform APIs for a GCP project using the gcloud command line in the Cloud Shell. The project name is my-project. What should you do?",
   "options": [
@@ -5054,6 +5129,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q076",
   "title": "Testing a New App Engine Version With 1% of Users (Split Traffic Between Versions)",
   "num": 76,
+  "guide": false,
   "topic": "App Engine (versions, traffic splitting in the console, one app per project)",
   "stem": "You are building a new version of an application hosted in an App Engine environment. You want to test the new version with 1% of users before you completely switch your application over to the new version. What should you do?",
   "options": [
@@ -5118,6 +5194,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q077",
   "title": "Pricing Calculator for GKE With High IOPS and Snapshots (Local SSD + Persistent Disk + Snapshots)",
   "num": 77,
+  "guide": false,
   "topic": "Billing / cost estimation (Google Cloud pricing calculator, local SSD, persistent disk, snapshot storage, GPUs)",
   "stem": "You need to provide a cost estimate for a Kubernetes cluster using the GCP pricing calculator for Kubernetes. Your workload requires high IOPs, and you will also be using disk snapshots. You start by entering the number of nodes, average hours, and average days. What should you do next?",
   "options": [
@@ -5182,6 +5259,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q078",
   "title": "Exposing a GKE App Publicly Over HTTPS (NodePort Service + Ingress)",
   "num": 78,
+  "guide": false,
   "topic": "GKE networking (Service types ClusterIP / NodePort / LoadBalancer, Ingress, HTTP(S) Cloud Load Balancer)",
   "stem": "You are using Google Kubernetes Engine with autoscaling enabled to host a new application. You want to expose this new application to the public, using HTTPS on a public IP address. What should you do?",
   "options": [
@@ -5246,6 +5324,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q079",
   "title": "Letting VMs in Two Projects Talk (Shared VPC)",
   "num": 79,
+  "guide": false,
   "topic": "VPC networking (Shared VPC, host and service projects, organization requirement, VPCs belong to one project)",
   "stem": "You need to enable traffic between multiple groups of Compute Engine instances that are currently running two different GCP projects. Each group of Compute Engine instances is running in its own VPC. What should you do?",
   "options": [
@@ -5310,6 +5389,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q080",
   "title": "Auditor Who Can Read Everything but Change Nothing (Project Viewer Role)",
   "num": 80,
+  "guide": false,
   "topic": "IAM (basic role Viewer, custom roles, predefined service viewer roles, read-only access)",
   "stem": "You want to add a new auditor to a Google Cloud Platform project. The auditor should be allowed to read, but not modify, all project items.\nHow should you configure the auditor's permissions?",
   "options": [
@@ -5374,6 +5454,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q081",
   "title": "Giving the ML Team GPUs in a Shared GKE Cluster (GPU Node Pool + nodeSelector)",
   "num": 81,
+  "guide": false,
   "topic": "GKE (node pools, GPUs, nodeSelector, cost)",
   "stem": "You are operating a Google Kubernetes Engine (GKE) cluster for your company where different teams can run non-production workloads. Your Machine Learning (ML) team needs access to Nvidia Tesla P100 GPUs to train their models. You want to minimize effort and cost. What should you do?",
   "options": [
@@ -5438,6 +5519,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q082",
   "title": "Subnet Out of IP Addresses (Expand the Subnet's IP Range)",
   "num": 82,
+  "guide": false,
   "topic": "VPC networking (subnet mask, CIDR, expand-ip-range)",
   "stem": "Your VMs are running in a subnet that has a subnet mask of 255.255.255.240. The current subnet has no more free IP addresses and you require an additional 10 IP addresses for new VMs. The existing and new VMs should all be able to reach each other without additional routes. What should you do?",
   "options": [
@@ -5502,6 +5584,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q083",
   "title": "Giving G Suite Users Access to a Project (Grant IAM Roles to Their Email)",
   "num": 83,
+  "guide": false,
   "topic": "IAM (Google Workspace / G Suite accounts, IAM members)",
   "stem": "Your organization uses G Suite for communication and collaboration. All users in your organization have a G Suite account. You want to grant some G Suite users access to your Cloud Platform project. What should you do?",
   "options": [
@@ -5566,6 +5649,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q084",
   "title": "Daily List of VMs in Two Projects (gcloud Configurations + Script)",
   "num": 84,
+  "guide": false,
   "topic": "gcloud CLI (configurations, gcloud compute instances list, gcloud vs gsutil)",
   "stem": "You have a Google Cloud Platform account with access to both production and development projects. You need to create an automated process to list all compute instances in development and production projects on a daily basis. What should you do?",
   "options": [
@@ -5630,6 +5714,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q085",
   "title": "SQL on a 5-TB AVRO File in Cloud Storage (BigQuery External Table)",
   "num": 85,
+  "guide": false,
   "topic": "BigQuery (external tables / federated queries, loading data, Cloud Storage)",
   "stem": "You have a large 5-TB AVRO file stored in a Cloud Storage bucket. Your analysts are proficient only in SQL and need access to the data stored in this file. You want to find a cost-effective way to complete their request as soon as possible. What should you do?",
   "options": [
@@ -5694,6 +5779,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q086",
   "title": "When Was a Service Account Created? (Activity Log, Configuration Category)",
   "num": 86,
+  "guide": false,
   "topic": "Logging (Activity log / Admin Activity audit logs vs Data Access logs, resource type filter)",
   "stem": "You need to verify that a Google Cloud Platform service account was created at a particular time. What should you do?",
   "options": [
@@ -5758,6 +5844,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q087",
   "title": "Letting Clients Reach an LDAP Server on UDP 636 (Network Tag + Ingress Firewall Rule)",
   "num": 87,
+  "guide": false,
   "topic": "VPC networking (firewall rules, ingress vs egress, network tags, routes)",
   "stem": "You deployed an LDAP server on Compute Engine that is reachable via TLS through port 636 using UDP. You want to make sure it is reachable by clients over that port. What should you do?",
   "options": [
@@ -5822,6 +5909,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q088",
   "title": "Budget Alert for Compute Engine in One of Three Projects (Billing Admin + Project-Scoped Budget)",
   "num": 88,
+  "guide": false,
   "topic": "Billing (budgets and alerts, budget scope, billing roles)",
   "stem": "You need to set a budget alert for use of Compute Engineer services on one of the three Google Cloud Platform projects that you manage. All three projects are linked to a single billing account. What should you do?",
   "options": [
@@ -5886,6 +5974,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q089",
   "title": "Migrating an App That Needs 96 vCPUs (Machine Type n1-standard-96)",
   "num": 89,
+  "guide": false,
   "topic": "Compute Engine (machine types, vCPUs, CPU platform, rightsizing)",
   "stem": "You are migrating a production-critical on-premises application that requires 96 vCPUs to perform its task. You want to make sure the application runs in a similar environment on GCP. What should you do?",
   "options": [
@@ -5950,6 +6039,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q090",
   "title": "Archiving Old Object Versions Read Monthly (Lifecycle Rule → Nearline)",
   "num": 90,
+  "guide": false,
   "topic": "Cloud Storage (object versioning, lifecycle rules, Nearline vs Coldline)",
   "stem": "You want to configure a solution for archiving data in a Cloud Storage bucket. The solution must be cost-effective. Data with multiple versions should be archived after 30 days. Previous versions are accessed once a month for reporting. This archive data is also occasionally updated at month-end. What should you do?",
   "options": [
@@ -6014,6 +6104,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q091",
   "title": "Bursting From On-Premises to Google Cloud Over Private IPs (Cloud VPN)",
   "num": 91,
+  "guide": false,
   "topic": "Hybrid networking (Cloud VPN, VPC peering, Shared VPC, bastion hosts)",
   "stem": "Your company's infrastructure is on-premises, but all machines are running at maximum capacity. You want to burst to Google Cloud. The workloads on Google Cloud must be able to directly communicate to the workloads on-premises using a private IP range. What should you do?",
   "options": [
@@ -6078,6 +6169,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q092",
   "title": "One-Location Compliance, Archived After 30 Days, Read Yearly (Regional + Coldline)",
   "num": 92,
+  "guide": false,
   "topic": "Cloud Storage (location types, storage classes, lifecycle rules)",
   "stem": "You want to select and configure a solution for storing and archiving data on Google Cloud Platform. You need to support compliance objectives for data from one geographic location. This data is archived after 30 days and needs to be accessed annually. What should you do?",
   "options": [
@@ -6142,6 +6234,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q093",
   "title": "Finding a Column Across 1000+ BigQuery Datasets (Data Catalog Search)",
   "num": 93,
+  "guide": false,
   "topic": "Data governance (Data Catalog / Dataplex search, BigQuery INFORMATION_SCHEMA)",
   "stem": "Your company uses BigQuery for data warehousing. Over time, many different business units in your company have created 1000+ datasets across hundreds of projects. Your CIO wants you to examine all datasets to find tables that contain an employee_ssn column. You want to minimize effort in performing this task. What should you do?",
   "options": [
@@ -6206,6 +6299,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q094",
   "title": "One of Two Replicas Pending on a Preemptible Node Pool (Node Was Preempted, Pod Being Rescheduled)",
   "num": 94,
+  "guide": false,
   "topic": "GKE (Pod scheduling, Pending status, preemptible nodes)",
   "stem": "You create a Deployment with 2 replicas in a Google Kubernetes Engine cluster that has a single preemptible node pool. After a few minutes, you use kubectl to examine the status of your Pod and observe that one of them is still in Pending status:\n\n```\n$ kubectl get pods -l app=myapp\nNAME                              READY   STATUS    RESTART   AGE\nmyapp-deployment-58ddbbb995-lp86m 0/1     Pending   0         9m\nmyapp-deployment-58ddbbb995-qjpkg 1/1     Running   0         9m\n```\n\nWhat is the most likely cause?",
   "options": [
@@ -6270,6 +6364,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q095",
   "title": "When Were Users Added to Cloud Spanner IAM Roles? (Admin Activity Logs)",
   "num": 95,
+  "guide": false,
   "topic": "Logging (Admin Activity audit logs, IAM policy changes) vs IAM console / Monitoring",
   "stem": "You want to find out when users were added to Cloud Spanner Identity Access Management (IAM) roles on your Google Cloud Platform (GCP) project. What should you do in the GCP Console?",
   "options": [
@@ -6335,6 +6430,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q096",
   "title": "Controlling High BigQuery Query Costs (Custom Quotas + Flat-Rate Slots)",
   "num": 96,
+  "guide": false,
   "topic": "BigQuery cost control (custom query quotas, on-demand vs flat-rate / capacity pricing)",
   "stem": "Your company implemented BigQuery as an enterprise data warehouse. Users from multiple business units run queries on this data warehouse. However, you notice that query costs for BigQuery are very high, and you need to control costs. Which two methods should you use? (Choose two.)",
   "options": [
@@ -6404,6 +6500,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q097",
   "title": "Isolating Customers' Pods That Run Arbitrary Code (GKE Sandbox with gVisor)",
   "num": 97,
+  "guide": false,
   "topic": "GKE security (GKE Sandbox / gVisor, RuntimeClass, Binary Authorization, Container Analysis)",
   "stem": "You are building a product on top of Google Kubernetes Engine (GKE). You have a single GKE cluster. For each of your customers, a Pod is running in that cluster, and your customers can run arbitrary code inside their Pod. You want to maximize the isolation between your customers' Pods. What should you do?",
   "options": [
@@ -6468,6 +6565,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q098",
   "title": "Cloud Spanner Read Latency on One Table (Avoid Monotonically Increasing Primary Keys)",
   "num": 98,
+  "guide": false,
   "topic": "Cloud Spanner (primary key design, hotspots, secondary indexes)",
   "stem": "Your customer has implemented a solution that uses Cloud Spanner and notices some read latency-related performance issues on one table. This table is accessed only by their users using a primary key. The table schema is shown below.\n\n*(schema image not included in the paste; in the original, the table is keyed on `person_id`, an increasing number, and has a `profile_picture` column)*\n\nYou want to resolve the issue. What should you do?",
   "options": [
@@ -6532,6 +6630,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q099",
   "title": "Finance Must See Billing Reports Without Extra Project Permissions (Billing Account Viewer)",
   "num": 99,
+  "guide": false,
   "topic": "Billing / IAM (billing roles: viewer, user, admin, project manager)",
   "stem": "Your finance team wants to view the billing report for your projects. You want to make sure that the finance team does not get additional permissions to the project. What should you do?",
   "options": [
@@ -6596,6 +6695,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q100",
   "title": "Letting SREs Approve Google Support Access Requests (Group + Access Approval Approver)",
   "num": 100,
+  "guide": false,
   "topic": "IAM / security (Access Approval, groups, least privilege)",
   "stem": "Your organization has strict requirements to control access to Google Cloud projects. You need to enable your Site Reliability Engineers (SREs) to approve requests from the Google Cloud support team when an SRE opens a support case. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -6660,6 +6760,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q101",
   "title": "Stopping Other Teams From Accidentally Taking Down Your VM (Deletion Protection)",
   "num": 101,
+  "guide": false,
   "topic": "Compute Engine (deletion protection, Shielded VM, preemptible VM, sole-tenant nodes)",
   "stem": "You need to host an application on a Compute Engine instance in a project shared with other teams. You want to prevent the other teams from accidentally causing downtime on that application. Which feature should you use?",
   "options": [
@@ -6724,6 +6825,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q102",
   "title": "Let Users Query BigQuery but Not Delete Datasets (Custom Role + Group)",
   "num": 102,
+  "guide": false,
   "topic": "IAM / BigQuery (custom roles, groups, predefined BigQuery roles)",
   "stem": "Your organization needs to grant users access to query datasets in BigQuery but prevent them from accidentally deleting the datasets. You want a solution that follows Google-recommended practices. What should you do?",
   "options": [
@@ -6788,6 +6890,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q103",
   "title": "Testing Datastore Locally When the SDK Came From apt (Install the Emulator With apt-get)",
   "num": 103,
+  "guide": false,
   "topic": "Cloud SDK (components, apt-installed SDK, Datastore emulator)",
   "stem": "You have a developer laptop with the Cloud SDK installed on Ubuntu. The Cloud SDK was installed from the Google Cloud Ubuntu package repository. You want to test your application locally on your laptop with Cloud Datastore. What should you do?",
   "options": [
@@ -6852,6 +6955,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q104",
   "title": "Letting a Few People See the Folder/Project Tree (Group + Browser Role)",
   "num": 104,
+  "guide": false,
   "topic": "IAM / Resource Manager (roles/browser, groups, resource hierarchy)",
   "stem": "Your company set up a complex organizational structure on Google Cloud. The structure includes hundreds of folders and projects. Only a few team members should be able to view the hierarchical structure. You need to assign minimum permissions to these team members, and you want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -6916,6 +7020,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q105",
   "title": "Users Sign In With the Company's SAML SSO (Third-Party IdP, Google as Service Provider)",
   "num": 105,
+  "guide": false,
   "topic": "Identity (Cloud Identity, SAML SSO, identity provider vs service provider, OAuth)",
   "stem": "Your company has a single sign-on (SSO) identity provider that supports Security Assertion Markup Language (SAML) integration with service providers. Your company has users in Cloud Identity. You would like users to authenticate using your company's SSO provider. What should you do?",
   "options": [
@@ -6980,6 +7085,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q106",
   "title": "Minimum Role for the Person Who Creates and Manages Service Accounts (Service Account Admin)",
   "num": 106,
+  "guide": false,
   "topic": "IAM (service account roles: admin vs user, securityAdmin, roleAdmin)",
   "stem": "Your organization has a dedicated person who creates and manages all service accounts for Google Cloud projects. You need to assign this person the minimum role for projects. What should you do?",
   "options": [
@@ -7044,6 +7150,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q107",
   "title": "Archive Data Read Once a Quarter (Coldline Storage)",
   "num": 107,
+  "guide": false,
   "topic": "Cloud Storage (storage classes: Nearline, Coldline, location types)",
   "stem": "You are building an archival solution for your data warehouse and have selected Cloud Storage to archive your data. Your users need to be able to access this archived data once a quarter for some regulatory requirements. You want to select a cost-efficient option. Which storage option should you use?",
   "options": [
@@ -7108,6 +7215,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q108",
   "title": "GPUs Needed Only Sometimes, Long Non-Restartable Jobs, Minimum Cost (Node Auto-Provisioning)",
   "num": 108,
+  "guide": false,
   "topic": "GKE (node auto-provisioning, autoscaling, preemptible VMs, GPUs)",
   "stem": "A team of data scientists infrequently needs to use a Google Kubernetes Engine (GKE) cluster that you manage. They require GPUs for some long-running, non- restartable jobs. You want to minimize cost. What should you do?",
   "options": [
@@ -7172,6 +7280,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q109",
   "title": "Active Directory as the Source of Truth for Google Accounts (Google Cloud Directory Sync)",
   "num": 109,
+  "guide": false,
   "topic": "Identity (GCDS, Cloud Identity, Active Directory)",
   "stem": "Your organization has user identities in Active Directory. Your organization wants to use Active Directory as their source of truth for identities. Your organization wants to have full control over the Google accounts used by employees for all Google services, including your Google Cloud Platform (GCP) organization. What should you do?",
   "options": [
@@ -7236,6 +7345,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q110",
   "title": "New Production Environment With No Network Routes to Development (Separate Project)",
   "num": 110,
+  "guide": false,
   "topic": "Resource hierarchy / networking (project per environment, VPC isolation, Shared VPC)",
   "stem": "You have successfully created a development environment in a project for an application. This application uses Compute Engine and Cloud SQL. Now you need to create a production environment for this application. The security team has forbidden the existence of network routes between these 2 environments and has asked you to follow Google-recommended practices. What should you do?",
   "options": [
@@ -7300,6 +7410,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q111",
   "title": "External Auditor When Domain Restricted Sharing Is On (Temporary Cloud Identity Account + Viewer)",
   "num": 111,
+  "guide": false,
   "topic": "IAM / Organization Policy (Domain Restricted Sharing, Cloud Identity, Viewer vs Security Reviewer)",
   "stem": "Your management has asked an external auditor to review all the resources in a specific project. The security team has enabled the Organization Policy called Domain Restricted Sharing on the organization node by specifying only your Cloud Identity domain. You want the auditor to only be able to view, but not modify, the resources in that project. What should you do?",
   "options": [
@@ -7364,6 +7475,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q112",
   "title": "Regular Boot Disk Backups With Fast Restore and Auto-Cleanup (Snapshot Schedule)",
   "num": 112,
+  "guide": false,
   "topic": "Compute Engine (snapshot schedules, retention, images, instance templates)",
   "stem": "You have a workload running on Compute Engine that is critical to your business. You want to ensure that the data on the boot disk of this workload is backed up regularly. You need to be able to restore a backup as quickly as possible in case of disaster. You also want older backups to be cleaned automatically to save on cost. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -7428,6 +7540,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q113",
   "title": "Auditor Must Read Audit Logs Including Data Access Logs (Private Logs Viewer)",
   "num": 113,
+  "guide": false,
   "topic": "Logging / IAM (roles/logging.privateLogViewer, Data Access logs, Admin Activity logs)",
   "stem": "You need to assign a Cloud Identity and Access Management (Cloud IAM) role to an external auditor. The auditor needs to have permissions to review your Google Cloud Platform (GCP) Audit Logs and also to review your Data Access logs. What should you do?",
   "options": [
@@ -7492,6 +7605,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q114",
   "title": "Combined Logs From All Projects for 60 Days, Quick Analysis (Sink to BigQuery + Table Expiration)",
   "num": 114,
+  "guide": false,
   "topic": "Logging (log sinks / exports, BigQuery, table expiration)",
   "stem": "You are managing several Google Cloud Platform (GCP) projects and need access to all logs for the past 60 days. You want to be able to explore and quickly analyze the log contents. You want to follow Google-recommended practices to obtain the combined logs for all projects. What should you do?",
   "options": [
@@ -7556,6 +7670,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q115",
   "title": "Turn Off Everything in a Project in the Fewest Steps (Project Owner + Shut Down)",
   "num": 115,
+  "guide": false,
   "topic": "Resource Manager (shutting down projects, Project Owner)",
   "stem": "You need to reduce GCP service costs for a division of your company using the fewest possible steps. You need to turn off all configured services in an existing GCP project. What should you do?",
   "options": [
@@ -7620,6 +7735,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q116",
   "title": "VMs in One Project Need BigQuery Data in Another (Grant the Service Account Roles in the Data Project)",
   "num": 116,
+  "guide": false,
   "topic": "IAM (cross-project service account access, BigQuery roles)",
   "stem": "You are configuring service accounts for an application that spans multiple projects. Virtual machines (VMs) running in the web-applications project need access to BigQuery datasets in crm-databases-proj. You want to follow Google-recommended practices to give access to the service account in the web-applications project. What should you do?",
   "options": [
@@ -7684,6 +7800,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q117",
   "title": "Did a Terminated Employee Read Sensitive Data? (Data Access Audit Logs by User Email)",
   "num": 117,
+  "guide": false,
   "topic": "Logging (Data Access vs Admin Activity vs System Event logs, principal)",
   "stem": "An employee was terminated, but their access to Google Cloud was not removed until 2 weeks later. You need to find out if this employee accessed any sensitive customer information after their termination. What should you do?",
   "options": [
@@ -7748,6 +7865,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q118",
   "title": "First Version of a Custom Role for Production (Supported Permissions + ALPHA Stage)",
   "num": 118,
+  "guide": false,
   "topic": "IAM (custom roles: permission support levels, role launch stages)",
   "stem": "You need to create a custom IAM role for use with a GCP service. All permissions in the role must be suitable for production use. You also want to clearly share with your organization the status of the custom role. This will be the first version of the custom role. What should you do?",
   "options": [
@@ -7812,6 +7930,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q119",
   "title": "Unstructured Files in Many Formats for a Dataflow ETL Job (Upload to Cloud Storage With gsutil)",
   "num": 119,
+  "guide": false,
   "topic": "Data (Cloud Storage as a data lake, Dataflow, BigQuery, Cloud SQL, Spanner)",
   "stem": "Your company has a large quantity of unstructured data in different file formats. You want to perform ETL transformations on the data. You need to make the data accessible on Google Cloud so it can be processed by a Dataflow job. What should you do?",
   "options": [
@@ -7876,6 +7995,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q120",
   "title": "Managing Multiple Projects in the CLI With the Fewest Steps (One Configuration per Project + Activate)",
   "num": 120,
+  "guide": false,
   "topic": "gcloud CLI (configurations, gcloud config configurations activate, gcloud init)",
   "stem": "You need to manage multiple Google Cloud projects in the fewest steps possible. You want to configure the Google Cloud SDK command line interface (CLI) so that you can easily manage multiple projects. What should you do?",
   "options": [
@@ -7940,6 +8060,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q121",
   "title": "Managed Instance Group Can't Create New Instances (Valid Template, Leftover Disks, autoDelete)",
   "num": 121,
+  "guide": false,
   "topic": "Compute Engine (managed instance groups, instance templates, persistent disk names, autoDelete)",
   "stem": "Your managed instance group raised an alert stating that new instance creation has failed to create new instances. You need to maintain the number of running instances specified by the template to be able to process expected application traffic. What should you do?",
   "options": [
@@ -8004,6 +8125,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q122",
   "title": "Isolated Cassandra Dev Environments, Fast and Low Effort (Cloud Marketplace)",
   "num": 122,
+  "guide": false,
   "topic": "Cloud Marketplace (pre-built solutions), Compute Engine",
   "stem": "Your company is moving from an on-premises environment to Google Cloud. You have multiple development teams that use Cassandra environments as backend databases. They all need a development environment that is isolated from other Cassandra instances. You want to move to Google Cloud quickly and with minimal support effort. What should you do?",
   "options": [
@@ -8068,6 +8190,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q123",
   "title": "Email When CPU Stays Above 90% for 15 Minutes (Cloud Monitoring Alerting Policy)",
   "num": 123,
+  "guide": false,
   "topic": "Cloud Monitoring (workspaces/metrics scope, alerting policies, notification channels)",
   "stem": "You have a Compute Engine instance hosting a production application. You want to receive an email if the instance consumes more than 90% of its CPU resources for more than 15 minutes. You want to use Google services. What should you do?",
   "options": [
@@ -8132,6 +8255,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q124",
   "title": "Automatically Scale Cloud Spanner Nodes Up and Down (Alert → Webhook → Cloud Function)",
   "num": 124,
+  "guide": false,
   "topic": "Cloud Spanner / Monitoring (alerting webhooks, Cloud Functions, autoscaling)",
   "stem": "You have an application that uses Cloud Spanner as a backend database. The application has a very predictable traffic pattern. You want to automatically scale up or down the number of Spanner nodes depending on traffic. What should you do?",
   "options": [
@@ -8196,6 +8320,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q125",
   "title": "Email When One Server's Egress Costs Pass $100 (Billing Export to BigQuery + Scheduled Function)",
   "num": 125,
+  "guide": false,
   "topic": "Billing (billing export to BigQuery, budgets' limits, Cloud Functions, Cloud Scheduler)",
   "stem": "Your company publishes large files on an Apache web server that runs on a Compute Engine instance. The Apache web server is not the only application running in the project. You want to receive an email when the egress network costs for the server exceed 100 dollars for the current month as measured by Google Cloud. What should you do?",
   "options": [
@@ -8260,6 +8385,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q126",
   "title": "Estimating the Monthly Cost of a Multi-Product Solution (Pricing Pages + Pricing Calculator)",
   "num": 126,
+  "guide": false,
   "topic": "Billing (Google Cloud pricing calculator, cost estimation)",
   "stem": "You have designed a solution on Google Cloud that uses multiple Google Cloud products. Your company has asked you to estimate the costs of the solution. You need to provide estimates for the monthly total cost. What should you do?",
   "options": [
@@ -8324,6 +8450,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q127",
   "title": "Global Clients, SSL-Encrypted TCP on 443, Lowest Latency (SSL Proxy Load Balancer)",
   "num": 127,
+  "guide": false,
   "topic": "Load balancing (SSL Proxy, HTTPS LB, Network LB, Internal TCP/UDP LB)",
   "stem": "You have an application that receives SSL-encrypted TCP traffic on port 443. Clients for this application are located all over the world. You want to minimize latency for the clients. Which load balancing option should you use?",
   "options": [
@@ -8388,6 +8515,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q128",
   "title": "Disk Read Throttling on a 350 GB SSD Persistent Disk, Max Throughput at Low Cost (Local SSD)",
   "num": 128,
+  "guide": false,
   "topic": "Compute Engine storage (persistent disk performance scaling, Local SSD, regional PD)",
   "stem": "You have an application on a general-purpose Compute Engine instance that is experiencing excessive disk read throttling on its Zonal SSD Persistent Disk. The application primarily reads large files from disk. The disk size is currently 350 GB. You want to provide the maximum amount of throughput while minimizing costs. What should you do?",
   "options": [
@@ -8452,6 +8580,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q129",
   "title": "No Free IPs in the Dataproc Subnet, Minimum Steps (Expand the Subnet Range)",
   "num": 129,
+  "guide": false,
   "topic": "VPC networking (subnet expansion, CIDR, secondary ranges, peering)",
   "stem": "Your Dataproc cluster runs in a single Virtual Private Cloud (VPC) network in a single subnet with range 172.16.20.128/25. There are no private IP addresses available in the VPC network. You want to add new VMs to communicate with your cluster using the minimum number of steps. What should you do?",
   "options": [
@@ -8516,6 +8645,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q130",
   "title": "App Engine App Reads BigQuery in Another Team's Project (Other Team Grants Data Viewer to Your Service Account)",
   "num": 130,
+  "guide": false,
   "topic": "IAM (cross-project access, App Engine default service account, BigQuery roles)",
   "stem": "You manage an App Engine Service that aggregates and visualizes data from BigQuery. The application is deployed with the default App Engine Service account. The data that needs to be visualized resides in a different project managed by another team. You do not have access to this project, but you want your application to be able to read data from the BigQuery dataset. What should you do?",
   "options": [
@@ -8580,6 +8710,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q131",
   "title": "Copying a Custom VM for More Traffic (Custom Image From a Snapshot, Instances From the Image)",
   "num": 131,
+  "guide": false,
   "topic": "Compute Engine (snapshots, custom images, creating instances)",
   "stem": "You need to create a copy of a custom Compute Engine virtual machine (VM) to facilitate an expected increase in application traffic due to a business acquisition. What should you do?",
   "options": [
@@ -8644,6 +8775,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q132",
   "title": "Diagnosing an App That Writes Logs to Disk (Install the Logging Agent, View in Cloud Logging)",
   "num": 132,
+  "guide": false,
   "topic": "Logging (Ops Agent / Logging agent, serial console, health checks)",
   "stem": "You have deployed an application on a single Compute Engine instance. The application writes logs to disk. Users start reporting errors with the application. You want to diagnose the problem. What should you do?",
   "options": [
@@ -8708,6 +8840,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q133",
   "title": "VM in One Project Writes Reports to a Bucket in Another (Storage Object Creator for the VM's Service Account)",
   "num": 133,
+  "guide": false,
   "topic": "IAM / Cloud Storage (cross-project service account access)",
   "stem": "An application generates daily reports in a Compute Engine virtual machine (VM). The VM is in the project corp-iot-insights. Your team operates only in the project corp-aggregate-reports and needs a copy of the daily exports in the bucket corp-aggregate-reports-storage. You want to configure access so that the daily reports from the VM are available in the bucket corp-aggregate-reports-storage and use as few steps as possible while following Google-recommended practices. What should you do?",
   "options": [
@@ -8772,6 +8905,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q134",
   "title": "App Using Application Default Credentials Moves to a VM (Give the VM's Service Account Access)",
   "num": 134,
+  "guide": false,
   "topic": "IAM / authentication (Application Default Credentials, attached service accounts, keys)",
   "stem": "You built an application on your development laptop that uses Google Cloud services. Your application uses Application Default Credentials for authentication and works fine on your development laptop. You want to migrate this application to a Compute Engine virtual machine (VM) and set up authentication using Google-recommended practices and minimal changes. What should you do?",
   "options": [
@@ -8836,6 +8970,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q135",
   "title": "Create a VM in a Project That Doesn't Exist Yet (Create Project → Enable API → Create Instance)",
   "num": 135,
+  "guide": false,
   "topic": "Resource Manager / Compute Engine (project creation, enabling APIs, gcloud --project)",
   "stem": "You need to create a Compute Engine instance in a new project that doesn't exist yet. What should you do?",
   "options": [
@@ -8900,6 +9035,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q136",
   "title": "Monthly 30-Hour Batch That Must Restart if Interrupted (Regular VM, Start and Stop as Needed)",
   "num": 136,
+  "guide": false,
   "topic": "Compute Engine (preemptible VM 24-hour limit, cost, start/stop)",
   "stem": "Your company runs one batch process in an on-premises server that takes around 30 hours to complete. The task runs monthly, can be performed offline, and must be restarted if interrupted. You want to migrate this workload to the cloud while minimizing cost. What should you do?",
   "options": [
@@ -8964,6 +9100,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q137",
   "title": "Install Jenkins as Quickly and Easily as Possible (Cloud Marketplace)",
   "num": 137,
+  "guide": false,
   "topic": "Cloud Marketplace, CI/CD",
   "stem": "You are developing a new application and are looking for a Jenkins installation to build and deploy your source code. You want to automate the installation as quickly and easily as possible. What should you do?",
   "options": [
@@ -9028,6 +9165,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q138",
   "title": "Stop Typing the Zone on Every gcloud Command (gcloud config set compute/zone)",
   "num": 138,
+  "guide": false,
   "topic": "gcloud CLI (default properties, compute/zone)",
   "stem": "You have downloaded and installed the gcloud command line interface (CLI) and have authenticated with your Google Account. Most of your Compute Engine instances in your project run in the europe-west1-d zone. You want to avoid having to specify this zone with each CLI command when managing these instances. What should you do?",
   "options": [
@@ -9092,6 +9230,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q139",
   "title": "Thousands of Sensor Events per Device, Time-Based Reads, Atomic Rows (Cloud Bigtable)",
   "num": 139,
+  "guide": false,
   "topic": "Databases (Cloud Bigtable for time series, row keys, Datastore, Filestore)",
   "stem": "The core business of your company is to rent out construction equipment at large scale. All the equipment that is being rented out has been equipped with multiple sensors that send event information every few seconds. These signals can vary from engine status, distance traveled, fuel level, and more. Customers are billed based on the consumption monitored by these sensors. You expect high throughput — up to thousands of events per hour per device — and need to retrieve consistent data based on the time of the event. Storing and retrieving individual signals should be atomic. What should you do?",
   "options": [
@@ -9156,6 +9295,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q140",
   "title": "One Monitoring View for Projects A, B and C (Workspace / Metrics Scope With All Three)",
   "num": 140,
+  "guide": false,
   "topic": "Cloud Monitoring (workspace / metrics scope, multiple projects)",
   "stem": "You are asked to set up application performance monitoring on Google Cloud projects A, B, and C as a single pane of glass. You want to monitor CPU, memory, and disk. What should you do?",
   "options": [
@@ -9220,6 +9360,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q141",
   "title": "One Cost View Across Several Billing Accounts, Updated Fast (Billing Export to BigQuery + Data Studio)",
   "num": 141,
+  "guide": false,
   "topic": "Billing (billing export to BigQuery, Looker Studio / Data Studio, billing reports)",
   "stem": "You created several resources in multiple Google Cloud projects. All projects are linked to different billing accounts. To better estimate future charges, you want to have a single visual representation of all costs incurred. You want to include new cost data as soon as possible. What should you do?",
   "options": [
@@ -9284,6 +9425,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q142",
   "title": "New VM Must Not Be Reachable From the Internet (Create It Without a Public IP)",
   "num": 142,
+  "guide": false,
   "topic": "VPC networking (external IPs, Private Google Access, firewall, VPN)",
   "stem": "Your company has workloads running on Compute Engine and on-premises. The Google Cloud Virtual Private Cloud (VPC) is connected to your WAN over a Virtual Private Network (VPN). You need to deploy a new Compute Engine instance and ensure that no public Internet traffic can be routed to it. What should you do?",
   "options": [
@@ -9348,6 +9490,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q143",
   "title": "Sharing Proposed Infrastructure Changes With the Team (Deployment Manager Templates in Cloud Source Repositories)",
   "num": 143,
+  "guide": false,
   "topic": "Infrastructure as Code (Deployment Manager, source control, Cloud Source Repositories)",
   "stem": "Your team maintains the infrastructure for your organization. The current infrastructure requires changes. You need to share your proposed changes with the rest of the team. You want to follow Google's recommended best practices. What should you do?",
   "options": [
@@ -9412,6 +9555,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q144",
   "title": "Daily Backups Kept 30 Days With the Least Overhead (Snapshot Schedule on the Disk)",
   "num": 144,
+  "guide": false,
   "topic": "Compute Engine (snapshot schedules, retention)",
   "stem": "You have a Compute Engine instance hosting an application used between 9 AM and 6 PM on weekdays. You want to back up this instance daily for disaster recovery purposes. You want to keep the backups for 30 days. You want the Google-recommended solution with the least management overhead and the least number of services. What should you do?",
   "options": [
@@ -9476,6 +9620,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q145",
   "title": "New Pods Need Bigger Machines, No Downtime (Add a Node Pool With n2-highmem-16)",
   "num": 145,
+  "guide": false,
   "topic": "GKE (node pools, machine types, no-downtime changes)",
   "stem": "Your existing application running in Google Kubernetes Engine (GKE) consists of multiple pods running on four GKE n1-standard-2 nodes. You need to deploy additional pods requiring n2-highmem-16 nodes without any downtime. What should you do?",
   "options": [
@@ -9540,6 +9685,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q146",
   "title": "Ad Hoc Join of Spanner Backup and Bigtable Data (BigQuery External Tables)",
   "num": 146,
+  "guide": false,
   "topic": "BigQuery (external tables on Cloud Storage and Bigtable), Dataflow, Dataproc",
   "stem": "You have an application that uses Cloud Spanner as a database backend to keep current state information about users. Cloud Bigtable logs all events triggered by users. You export Cloud Spanner data to Cloud Storage during daily backups. One of your analysts asks you to join data from Cloud Spanner and Cloud Bigtable for specific users. You want to complete this ad hoc request as efficiently as possible. What should you do?",
   "options": [
@@ -9604,6 +9750,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q147",
   "title": "Survive a Zone Failure With No Downtime at Low Cost (VMs in Two Zones Behind a Load Balancer)",
   "num": 147,
+  "guide": false,
   "topic": "High availability (multi-zone, load balancing, MIGs)",
   "stem": "You are hosting an application from Compute Engine virtual machines (VMs) in us-central1-a. You want to adjust your design to support the failure of a single Compute Engine zone, eliminate downtime, and minimize cost. What should you do?",
   "options": [
@@ -9668,6 +9815,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q148",
   "title": "Who Has the Project Owner Role? (gcloud projects get-iam-policy)",
   "num": 148,
+  "guide": false,
   "topic": "IAM (viewing IAM policies)",
   "stem": "A colleague handed over a Google Cloud Platform project for you to maintain. As part of a security checkup, you want to review who has been granted the Project Owner role. What should you do?",
   "options": [
@@ -9732,6 +9880,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q149",
   "title": "GKE Nodes Out of IPs in a Shared Subnet (Expand the Subnet's CIDR Range)",
   "num": 149,
+  "guide": false,
   "topic": "VPC / GKE networking (VPC-native clusters, primary vs alias ranges, expand-ip-range)",
   "stem": "You are running multiple VPC-native Google Kubernetes Engine clusters in the same subnet. The IPs available for the nodes are exhausted, and you want to ensure that the clusters can grow in nodes when needed. What should you do?",
   "options": [
@@ -9796,6 +9945,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q150",
   "title": "Fault-Tolerant Nightly Batch on Many VMs Costs Too Much (Test, Then Use Preemptible VMs)",
   "num": 150,
+  "guide": false,
   "topic": "Compute Engine (preemptible / Spot VMs, simulated maintenance events)",
   "stem": "You have a batch workload that runs every night and uses a large number of virtual machines (VMs). It is fault-tolerant and can tolerate some of the VMs being terminated. The current cost of VMs is too high. What should you do?",
   "options": [
@@ -9860,6 +10010,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q151",
   "title": "Fewest Open Egress Ports (Low-Priority Deny-All + High-Priority Allow)",
   "num": 151,
+  "guide": false,
   "topic": "VPC firewall (rule priority, egress rules, implied rules)",
   "stem": "You are working with a user to set up an application in a new VPC behind a firewall. The user is concerned about data egress. You want to configure the fewest open egress ports. What should you do?",
   "options": [
@@ -9924,6 +10075,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q152",
   "title": "Partner Without Google Accounts Must Maintain Linux VMs (Their Public SSH Keys on the VMs)",
   "num": 152,
+  "guide": false,
   "topic": "Compute Engine access (SSH keys in metadata, IAP TCP forwarding, OS Login)",
   "stem": "Your company runs its Linux workloads on Compute Engine instances. Your company will be working with a new operations partner that does not use Google Accounts. You need to grant access to the instances to your operations partner so they can maintain the installed tooling. What should you do?",
   "options": [
@@ -9988,6 +10140,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q153",
   "title": "Run Code Whenever a File Is Uploaded to a Bucket (Cloud Functions With a Storage Trigger)",
   "num": 153,
+  "guide": false,
   "topic": "Serverless (Cloud Functions / Cloud Run functions, event triggers)",
   "stem": "You have created a code snippet that should be triggered whenever a new file is uploaded to a Cloud Storage bucket. You want to deploy this code snippet. What should you do?",
   "options": [
@@ -10052,6 +10205,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q154",
   "title": "Hot for 30 Days, Then Rarely Read, Kept 3 Years (Standard → Archive)",
   "num": 154,
+  "guide": false,
   "topic": "Cloud Storage (lifecycle rules, Standard, Nearline, Coldline, Archive)",
   "stem": "You have been asked to set up Object Lifecycle Management for objects stored in storage buckets. The objects are written once and accessed frequently for 30 days. After 30 days, the objects are not read again unless there is a special need. The objects should be kept for three years, and you need to minimize cost. What should you do?",
   "options": [
@@ -10116,6 +10270,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q155",
   "title": "Record Every Read of Sensitive Bucket Data (Enable Data Access Audit Logs for Cloud Storage)",
   "num": 155,
+  "guide": false,
   "topic": "Logging (Data Access audit logs), DLP, IAP",
   "stem": "You are storing sensitive information in a Cloud Storage bucket. For legal reasons, you need to be able to record all requests that read any of the stored data. You want to make sure you comply with these requirements. What should you do?",
   "options": [
@@ -10180,6 +10335,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q156",
   "title": "Alert if Any Developer's Sandbox Spends Over $500 (One Budget per Project)",
   "num": 156,
+  "guide": false,
   "topic": "Billing (budgets per project, alerts)",
   "stem": "You are the team lead of a group of 10 developers. You provided each developer with an individual Google Cloud Project that they can use as their personal sandbox to experiment with different Google Cloud solutions. You want to be notified if any of the developers are spending above $500 per month on their sandbox environment. What should you do?",
   "options": [
@@ -10244,6 +10400,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q157",
   "title": "Prevent Anyone Destroying the Production VM by Mistake (Delete Protection)",
   "num": 157,
+  "guide": false,
   "topic": "Compute Engine (deletion protection)",
   "stem": "You are deploying a production application on Compute Engine. You want to prevent anyone from accidentally destroying the instance by clicking the wrong button. What should you do?",
   "options": [
@@ -10308,6 +10465,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q158",
   "title": "DevOps Needs Production Access That Won't Grow With New Google Features (Custom Role on the Production Project)",
   "num": 158,
+  "guide": false,
   "topic": "IAM (basic roles change over time, custom roles, scope)",
   "stem": "Your company uses a large number of Google Cloud services centralized in a single project. All teams have specific projects for testing and development. The DevOps team needs access to all of the production services in order to perform their job. You want to prevent Google Cloud product changes from broadening their permissions in the future. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -10373,6 +10531,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q159",
   "title": "Suppliers Upload Their Own Data for 30 Minutes, Auto-Delete After 45 Days (Signed URLs + Lifecycle Rule)",
   "num": 159,
+  "guide": false,
   "topic": "Cloud Storage (signed URLs, lifecycle delete)",
   "stem": "You are building an application that processes data files uploaded from thousands of suppliers. Your primary goals for the application are data security and the expiration of aged data. You need to design the application to: * Restrict access so that suppliers can access only their own data. * Give suppliers write access to data only for 30 minutes. * Delete data that is over 45 days old. You have a very short development cycle, and you need to make sure that the application requires minimal maintenance. Which two strategies should you use? (Choose two.)",
   "options": [
@@ -10442,6 +10601,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q160",
   "title": "Standardize Infrastructure as Code With Little Repetition (Deployment Manager Templates)",
   "num": 160,
+  "guide": false,
   "topic": "Infrastructure as Code (Deployment Manager templates, gcloud scripts, REST)",
   "stem": "Your company wants to standardize the creation and management of multiple Google Cloud resources using Infrastructure as Code. You want to minimize the amount of repetitive code needed to manage the environment. What should you do?",
   "options": [
@@ -10506,6 +10666,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q161",
   "title": "Who Has Access to View Data in the Project? (Review IAM Permissions)",
   "num": 161,
+  "guide": false,
   "topic": "IAM (reviewing access vs audit logs, IAP, DLP)",
   "stem": "You are performing a monthly security check of your Google Cloud environment and want to know who has access to view data stored in your Google Cloud Project. What should you do?",
   "options": [
@@ -10570,6 +10731,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q162",
   "title": "Apps Must Survive the On-Prem Database IP Changing (Cloud DNS Private Zone + DNS Name)",
   "num": 162,
+  "guide": false,
   "topic": "Networking (Cloud DNS private zones, hybrid connectivity)",
   "stem": "Your company has embraced a hybrid cloud strategy where some of the applications are deployed on Google Cloud. A Virtual Private Network (VPN) tunnel connects your Virtual Private Cloud (VPC) in Google Cloud with your company's on-premises network. Multiple applications in Google Cloud need to connect to an on-premises database server, and you want to avoid having to change the IP configuration in all of your applications when the IP of the database changes. What should you do?",
   "options": [
@@ -10634,6 +10796,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q163",
   "title": "Internal Web App Used Only During Business Hours, No Cost Otherwise (Cloud Run, Min Instances 0)",
   "num": 163,
+  "guide": false,
   "topic": "Serverless (Cloud Run scale to zero, App Engine flexible, Cloud Run for Anthos)",
   "stem": "You have developed a containerized web application that will serve internal colleagues during business hours. You want to ensure that no costs are incurred outside of the hours the application is used. You have just created a new Google Cloud project and want to deploy the application. What should you do?",
   "options": [
@@ -10698,6 +10861,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q164",
   "title": "Charge Your Personal-Card Projects to the Company Invoice (Change the Projects' Billing Account)",
   "num": 164,
+  "guide": false,
   "topic": "Billing (linking projects to billing accounts)",
   "stem": "You have experimented with Google Cloud using your own credit card and expensed the costs to your company. Your company wants to streamline the billing process and charge the costs of your projects to their monthly invoice. What should you do?",
   "options": [
@@ -10762,6 +10926,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q165",
   "title": "Partner in Their Own Project Needs Your BigQuery Dataset (Their Service Account, Granted on Your Dataset)",
   "num": 165,
+  "guide": false,
   "topic": "IAM (cross-project / cross-organization access with service accounts)",
   "stem": "You are running a data warehouse on BigQuery. A partner company is offering a recommendation engine based on the data in your data warehouse. The partner company is also running their application on Google Cloud. They manage the resources in their own project, but they need access to the BigQuery dataset in your project. You want to provide the partner company with access to the dataset. What should you do?",
   "options": [
@@ -10826,6 +10991,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q166",
   "title": "Canary on Cloud Run for Anthos (New Revision + Split Traffic)",
   "num": 166,
+  "guide": false,
   "topic": "Cloud Run (revisions, traffic splitting)",
   "stem": "Your web application has been running successfully on Cloud Run for Anthos. You want to evaluate an updated version of the application with a specific percentage of your production users (canary deployment). What should you do?",
   "options": [
@@ -10890,6 +11056,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q167",
   "title": "Mobile Game Sends UDP Over the Internet to Many VMs Behind One IP (External Network Load Balancer)",
   "num": 167,
+  "guide": false,
   "topic": "Load balancing (UDP support, external network LB, SSL proxy, HTTP(S))",
   "stem": "Your company developed a mobile game that is deployed on Google Cloud. Gamers are connecting to the game with their personal phones over the Internet. The game sends UDP packets to update the servers about the gamers' actions while they are playing in multiplayer mode. Your game backend can scale over multiple virtual machines (VMs), and you want to expose the VMs over a single IP address. What should you do?",
   "options": [
@@ -10954,6 +11121,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q168",
   "title": "Automatically Upload New Hospital Images From On-Prem (gsutil rsync Script on a Cron Schedule)",
   "num": 168,
+  "guide": false,
   "topic": "Data transfer (gsutil rsync, cron, Pub/Sub, Dataflow)",
   "stem": "You are working for a hospital that stores its medical images in an on-premises data room. The hospital wants to use Cloud Storage for archival storage of these images. The hospital wants an automated process to upload any new medical images to Cloud Storage. You need to design and implement a solution. What should you do?",
   "options": [
@@ -11018,6 +11186,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q169",
   "title": "Auditor Wants to Know Who Accessed Cloud Storage Data (Turn On Data Access Logs, Filter in Logs Viewer)",
   "num": 169,
+  "guide": false,
   "topic": "Logging (Data Access audit logs, Admin Activity logs)",
   "stem": "Your auditor wants to view your organization's use of data in Google Cloud. The auditor is most interested in auditing who accessed data in Cloud Storage buckets. You need to help the auditor access the data they need. What should you do?",
   "options": [
@@ -11082,6 +11251,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q170",
   "title": "Use a Service Account Key File With gcloud (gcloud auth activate-service-account)",
   "num": 170,
+  "guide": false,
   "topic": "gcloud CLI (authentication with service account keys)",
   "stem": "You received a JSON file that contained a private key of a Service Account in order to get access to several resources in a Google Cloud project. You downloaded and installed the Cloud SDK and want to use this private key for authentication and authorization when performing gcloud commands. What should you do?",
   "options": [
@@ -11146,6 +11316,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q171",
   "title": "Keep a Month-End Copy of a Cloud SQL Database for 3 Years (Export to an Archive Bucket)",
   "num": 171,
+  "guide": false,
   "topic": "Cloud SQL (exports vs backups, Archive storage)",
   "stem": "You are working with a Cloud SQL MySQL database at your company. You need to retain a month-end copy of the database for three years for audit purposes. What should you do?",
   "options": [
@@ -11210,6 +11381,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q172",
   "title": "Get Notified if a Specific Error Comes Back (Log-Based Metric + Alerting Policy)",
   "num": 172,
+  "guide": false,
   "topic": "Monitoring (log-based metrics, alerting policies)",
   "stem": "You are monitoring an application and receive user feedback that a specific error is spiking. You notice that the error is caused by a Service Account having insufficient permissions. You are able to solve the problem but want to be notified if the problem recurs. What should you do?",
   "options": [
@@ -11274,6 +11446,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q173",
   "title": "Global Trading App: Relational, Identical Data Everywhere, Multi-Region (Cloud Spanner)",
   "num": 173,
+  "guide": false,
   "topic": "Databases (Spanner vs Cloud SQL vs Bigtable vs Firestore)",
   "stem": "You are developing a financial trading application that will be used globally. Data is stored and queried using a relational structure, and clients from all over the world should get the exact identical state of the data. The application will be deployed in multiple regions to provide the lowest latency to end users. You need to select a storage option for the application data while minimizing latency. What should you do?",
   "options": [
@@ -11338,6 +11511,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q174",
   "title": "ERP Holds the Whole Database in Memory (M1 Memory-Optimized Machine Type)",
   "num": 174,
+  "guide": false,
   "topic": "Compute Engine (machine families: memory-optimized)",
   "stem": "You are about to deploy a new Enterprise Resource Planning (ERP) system on Google Cloud. The application holds the full database in-memory for fast data access, and you need to configure the most appropriate resources on Google Cloud for this application. What should you do?",
   "options": [
@@ -11402,6 +11576,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q175",
   "title": "Scale Each Microservice Separately on GKE (One Deployment per Microservice)",
   "num": 175,
+  "guide": false,
   "topic": "GKE (Deployments vs Jobs vs CRDs)",
   "stem": "You have developed an application that consists of multiple microservices, with each microservice packaged in its own Docker container image. You want to deploy the entire application on Google Kubernetes Engine so that each microservice can be scaled individually. What should you do?",
   "options": [
@@ -11466,6 +11641,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q176",
   "title": "Choose a Different Service Account per VM (Specify It When Creating the Instance)",
   "num": 176,
+  "guide": false,
   "topic": "Compute Engine (service accounts on VMs)",
   "stem": "You will have several applications running on different Compute Engine instances in the same project. You want to specify at a more granular level the service account each instance uses when calling Google Cloud APIs. What should you do?",
   "options": [
@@ -11530,6 +11706,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q177",
   "title": "Managed MongoDB With a Support SLA (MongoDB Atlas From Marketplace)",
   "num": 177,
+  "guide": false,
   "topic": "Marketplace (partner managed services)",
   "stem": "You are creating an application that will run on Google Kubernetes Engine. You have identified MongoDB as the most suitable database system for your application and want to deploy a managed MongoDB environment that provides a support SLA. What should you do?",
   "options": [
@@ -11594,6 +11771,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q178",
   "title": "BI Team Runs Custom SQL on the Latest Data (BigQuery User Role to a Google Group)",
   "num": 178,
+  "guide": false,
   "topic": "IAM (BigQuery roles, groups)",
   "stem": "You are managing a project for the Business Intelligence (BI) department in your company. A data pipeline ingests data into BigQuery via streaming. You want the users in the BI department to be able to run the custom SQL queries against the latest data in BigQuery. What should you do?",
   "options": [
@@ -11658,6 +11836,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q179",
   "title": "DMZ + LAN on Compute Engine (One VPC, Two Subnets, Firewall Rules, Public Ingress to the DMZ)",
   "num": 179,
+  "guide": false,
   "topic": "Networking (VPC design, firewall ingress vs egress)",
   "stem": "Your company is moving its entire workload to Compute Engine. Some servers should be accessible through the Internet, and other servers should only be accessible over the internal network. All servers need to be able to talk to each other over specific ports and protocols. The current on-premises network relies on a demilitarized zone (DMZ) for the public servers and a Local Area Network (LAN) for the private servers. You need to design the networking infrastructure on Google Cloud to match these requirements. What should you do?",
   "options": [
@@ -11722,6 +11901,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q180",
   "title": "First Step Before Creating a Spanner Instance (Enable the Cloud Spanner API)",
   "num": 180,
+  "guide": false,
   "topic": "APIs (enabling services in a new project)",
   "stem": "You have just created a new project which will be used to deploy a globally distributed application. You will use Cloud Spanner for data storage. You want to create a Cloud Spanner instance. You want to perform the first step in preparation of creating the instance. What should you do?",
   "options": [
@@ -11786,6 +11966,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q181",
   "title": "New Project Made With gcloud: Prerequisite Before Creating a VM (Enable compute.googleapis.com)",
   "num": 181,
+  "guide": false,
   "topic": "APIs (enabling Compute Engine API)",
   "stem": "You have created a new project in Google Cloud through the gcloud command line interface (CLI) and linked a billing account. You need to create a new Compute Engine instance using the CLI. You need to perform the prerequisite steps. What should you do?",
   "options": [
@@ -11850,6 +12031,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q182",
   "title": "Cluster Must Grow as More Apps Are Deployed, No Manual Work (Node Pool Autoscaling With Min/Max)",
   "num": 182,
+  "guide": false,
   "topic": "GKE (cluster autoscaler vs HPA vs VPA)",
   "stem": "Your company has developed a new application that consists of multiple microservices. You want to deploy the application to Google Kubernetes Engine (GKE), and you want to ensure that the cluster can scale as more applications are deployed in the future. You want to avoid manual intervention when each new application is deployed. What should you do?",
   "options": [
@@ -11914,6 +12096,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q183",
   "title": "Only the New VM May Read the Install Files (New Service Account for It + Storage Permissions)",
   "num": 183,
+  "guide": false,
   "topic": "IAM (dedicated service accounts vs default service account)",
   "stem": "You need to manage a third-party application that will run on a Compute Engine instance. Other Compute Engine instances are already running with default configuration. Application installation files are hosted on Cloud Storage. You need to access these files from the new instance without allowing other virtual machines (VMs) to access these files. What should you do?",
   "options": [
@@ -11978,6 +12161,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q184",
   "title": "Mission-Critical Analytics Files Used Continually, Minimal Cost, Users in Boston (Regional Standard)",
   "num": 184,
+  "guide": false,
   "topic": "Cloud Storage (location types and storage classes)",
   "stem": "You need to configure optimal data storage for files stored in Cloud Storage for minimal cost. The files are used in a mission-critical analytics pipeline that is used continually. The users are in Boston, MA (United States). What should you do?",
   "options": [
@@ -12042,6 +12226,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q185",
   "title": "Test Updates on a Small Part of Real Traffic (App Engine New Version + Traffic Splitting)",
   "num": 185,
+  "guide": false,
   "topic": "App Engine (versions, traffic splitting)",
   "stem": "You are developing a new web application that will be deployed on Google Cloud Platform. As part of your release cycle, you want to test updates to your application on a small portion of real user traffic. The majority of the users should still be directed towards a stable version of your application. What should you do?",
   "options": [
@@ -12106,6 +12291,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q186",
   "title": "New Cloud Identity Users Already Have Google Accounts (Invite Them to Transfer Their Account)",
   "num": 186,
+  "guide": false,
   "topic": "Cloud Identity (conflicting / unmanaged accounts)",
   "stem": "You need to add a group of new users to Cloud Identity. Some of the users already have existing Google accounts. You want to follow one of Google's recommended practices and avoid conflicting accounts. What should you do?",
   "options": [
@@ -12170,6 +12356,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q187",
   "title": "Improve Spanner Performance Fast, Single Region (Alert at 65% High-Priority CPU, Add Nodes)",
   "num": 187,
+  "guide": false,
   "topic": "Spanner (CPU utilization recommendations)",
   "stem": "You need to manage a Cloud Spanner instance for best query performance. Your instance in production runs in a single Google Cloud region. You need to improve performance in the shortest amount of time. You want to follow Google best practices for service configuration. What should you do?",
   "options": [
@@ -12234,6 +12421,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q188",
   "title": "Internal Orders App on PostgreSQL, One Location, ACID, Minimal Code Changes (Cloud SQL)",
   "num": 188,
+  "guide": false,
   "topic": "Databases (Cloud SQL vs Spanner vs BigQuery vs Datastore)",
   "stem": "Your company has an internal application for managing transactional orders. The application is used exclusively by employees in a single physical location. The application requires strong consistency, fast queries, and ACID guarantees for multi-table transactional updates. The first version of the application is implemented in PostgreSQL, and you want to deploy it to the cloud with minimal code changes. Which database is most appropriate for this application?",
   "options": [
@@ -12298,6 +12486,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q189",
   "title": "Make Future CLI Commands Target the 'dev' Cluster by Default (gcloud config set container/cluster dev)",
   "num": 189,
+  "guide": false,
   "topic": "gcloud CLI (configuration defaults)",
   "stem": "You are assigned to maintain a Google Kubernetes Engine (GKE) cluster named 'dev' that was deployed on Google Cloud. You want to manage the GKE configuration using the command line interface (CLI). You have just downloaded and installed the Cloud SDK. You want to ensure that future CLI commands by default address this specific cluster What should you do?",
   "options": [
@@ -12362,6 +12551,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q190",
   "title": "Marketing Needs Similar Resources Organized Separately From Sales (New Project acme-marketing-data-digest)",
   "num": 190,
+  "guide": false,
   "topic": "Resource hierarchy (projects, project IDs)",
   "stem": "The sales team has a project named Sales Data Digest that has the ID acme-data-digest. You need to set up similar Google Cloud resources for the marketing team but their resources must be organized independently of the sales team. What should you do?",
   "options": [
@@ -12426,6 +12616,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q191",
   "title": "SSH to Many VMs Over the Internet Without Public IPs or Per-VM Setup (IAP for SSH and TCP)",
   "num": 191,
+  "guide": false,
   "topic": "Security (Identity-Aware Proxy TCP forwarding)",
   "stem": "You have deployed multiple Linux instances on Compute Engine. You plan on adding more instances in the coming weeks. You want to be able to access all of these instances through your SSH client over the internet without having to configure specific access on the existing and new instances. You do not want the Compute Engine instances to have a public IP. What should you do?",
   "options": [
@@ -12490,6 +12681,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q192",
   "title": "Deploy a Docker Image as a GKE Workload (Container Registry + Kubernetes Deployment)",
   "num": 192,
+  "guide": false,
   "topic": "GKE (image registries, Deployments vs Services)",
   "stem": "You have created an application that is packaged into a Docker image. You want to deploy the Docker image as a workload on Google Kubernetes Engine. What should you do?",
   "options": [
@@ -12554,6 +12746,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q193",
   "title": "Data Studio Charts Broke After the Nightly Table Overwrite (Review the Nightly Job in BigQuery)",
   "num": 193,
+  "guide": false,
   "topic": "BigQuery (job history, troubleshooting)",
   "stem": "You are using Data Studio to visualize a table from your data warehouse that is built on top of BigQuery. Data is appended to the data warehouse during the day. At night, the daily summary is recalculated by overwriting the table. You just noticed that the charts in Data Studio are broken, and you want to analyze the problem. What should you do?",
   "options": [
@@ -12618,6 +12811,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q194",
   "title": "Group Resources That Share Common IAM Policies (Folders)",
   "num": 194,
+  "guide": false,
   "topic": "Resource hierarchy (folders, IAM inheritance)",
   "stem": "You have been asked to set up the billing configuration for a new Google Cloud customer. Your customer wants to group resources that share common IAM policies. What should you do?",
   "options": [
@@ -12682,6 +12876,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q195",
   "title": "Robust HA VPN With Dynamic Routing, No Over-Provisioning on Failover (Custom VPC, Cloud Router BGP, Active/Passive)",
   "num": 195,
+  "guide": false,
   "topic": "Networking (HA VPN, Cloud Router, BGP)",
   "stem": "You have been asked to create robust Virtual Private Network (VPN) connectivity between a new Virtual Private Cloud (VPC) and a remote site. Key requirements include dynamic routing, a shared address space of 10.19.0.1/22, and no overprovisioning of tunnels during a failover event. You want to follow Google-recommended practices to set up a high availability Cloud VPN. What should you do?",
   "options": [
@@ -12746,6 +12941,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q196",
   "title": "CPU-Heavy Image Rendering Next to Standard Workloads (Compute-Optimized Node Pool for It)",
   "num": 196,
+  "guide": false,
   "topic": "GKE (node pools by machine family)",
   "stem": "You are running multiple microservices in a Kubernetes Engine cluster. One microservice is rendering images. The microservice responsible for the image rendering requires a large amount of CPU time compared to the memory it requires. The other microservices are workloads that are optimized for n1-standard machine types. You need to optimize your cluster so that all workloads are using resources as efficiently as possible. What should you do?",
   "options": [
@@ -12810,6 +13006,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q197",
   "title": "Bill Marketing Only for Their New Initiative (New Project Linked to a Marketing Billing Account)",
   "num": 197,
+  "guide": false,
   "topic": "Billing (projects and billing accounts)",
   "stem": "Your organization has three existing Google Cloud projects. You need to bill the Marketing department for only their Google Cloud services for a new initiative within their group. What should you do?",
   "options": [
@@ -12874,6 +13071,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q198",
   "title": "Expose TCP Port 389 and Keep the Client's IP (External TCP Network Load Balancer)",
   "num": 198,
+  "guide": false,
   "topic": "Load balancing (pass-through vs proxy)",
   "stem": "You deployed an application on a managed instance group in Compute Engine. The application accepts Transmission Control Protocol (TCP) traffic on port 389 and requires you to preserve the IP address of the client who is making a request. You want to expose the application to the internet by using a load balancer. What should you do?",
   "options": [
@@ -12938,6 +13136,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q199",
   "title": "Consistent Global Game Performance Without More Management (Cloud Spanner)",
   "num": 199,
+  "guide": false,
   "topic": "Databases (Spanner for global apps)",
   "stem": "You are building a multi-player gaming application that will store game information in a database. As the popularity of the application increases, you are concerned about delivering consistent performance. You need to ensure an optimal gaming performance for global users, without increasing the management complexity. What should you do?",
   "options": [
@@ -13002,6 +13201,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q200",
   "title": "Global Relational App With Unknown Growth, Minimal Config Changes (Cloud Spanner)",
   "num": 200,
+  "guide": false,
   "topic": "Databases (Spanner horizontal scaling)",
   "stem": "You are building an application that stores relational data from users. Users across the globe will use this application. Your CTO is concerned about the scaling requirements because the size of the user base is unknown. You need to implement a database solution that can scale with your user growth with minimum configuration changes. Which storage solution should you use?",
   "options": [
@@ -13066,6 +13266,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q201",
   "title": "Automated Cost Visuals With Company-Specific Calculated Metrics (Billing Export to BigQuery + Looker Studio)",
   "num": 201,
+  "guide": false,
   "topic": "Billing (billing export, Looker Studio)",
   "stem": "Your company has multiple projects linked to a single billing account in Google Cloud. You need to visualize the costs with specific metrics that should be dynamically calculated based on company-specific criteria. You want to automate the process. What should you do?",
   "options": [
@@ -13130,6 +13331,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q202",
   "title": "VMs With Only Internal IPs Must Read a Cloud Storage File (Enable Private Google Access on the Subnet)",
   "num": 202,
+  "guide": false,
   "topic": "Networking (Private Google Access)",
   "stem": "You have an application that runs on Compute Engine VM instances in a custom Virtual Private Cloud (VPC). Your company's security policies only allow the use of internal IP addresses on VM instances and do not let VM instances connect to the internet. You need to ensure that the application can access a file hosted in a Cloud Storage bucket within your project. What should you do?",
   "options": [
@@ -13194,6 +13396,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q203",
   "title": "Move an Acquired Startup's Project Into Your Organization and Billing (projects.move + Change Billing Account)",
   "num": 203,
+  "guide": false,
   "topic": "Resource hierarchy (migrating projects between organizations)",
   "stem": "Your company completed the acquisition of a startup and is now merging the IT systems of both companies. The startup had a production Google Cloud project in their organization. You need to move this project into your organization and ensure that the project is billed to your organization. You want to accomplish this task with minimal effort. What should you do?",
   "options": [
@@ -13258,6 +13461,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q204",
   "title": "Dev Teams May Only Create Resources in the US (Folder + Organization Policy on Locations)",
   "num": 204,
+  "guide": false,
   "topic": "Organization Policy (resource locations constraint)",
   "stem": "All development (dev) teams in your organization are located in the United States. Each dev team has its own Google Cloud project. You want to restrict access so that each dev team can only create cloud resources in the United States (US). What should you do?",
   "options": [
@@ -13322,6 +13526,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q205",
   "title": "Point mydomain.com, www and home to the Load Balancer (One A Record + Two CNAMEs)",
   "num": 205,
+  "guide": false,
   "topic": "Networking (Cloud DNS record types)",
   "stem": "You are configuring Cloud DNS. You want to create DNS records to point home.mydomain.com, mydomain.com, and www.mydomain.com to the IP address of your Google Cloud load balancer. What should you do?",
   "options": [
@@ -13386,6 +13591,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q206",
   "title": "Allow Database Traffic Only From App Servers to DB Servers (Ingress Rule: Source SA sa-app → Target SA sa-db)",
   "num": 206,
+  "guide": false,
   "topic": "Networking (firewall rules with service accounts)",
   "stem": "You have two subnets (subnet-a and subnet-b) in the default VPC. Your database servers are running in subnet-a. Your application servers and web servers are running in subnet-b. You want to configure a firewall rule that only allows database traffic from the application servers to the database servers. What should you do?",
   "options": [
@@ -13450,6 +13656,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q207",
   "title": "Quick and Easy CMS Install (Deploy Directly From Cloud Marketplace)",
   "num": 207,
+  "guide": false,
   "topic": "Marketplace",
   "stem": "Your team wants to deploy a specific content management system (CMS) solution to Google Cloud. You need a quick and easy way to deploy and install the solution. What should you do?",
   "options": [
@@ -13514,6 +13721,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q208",
   "title": "Engineers Create Projects Without Their Own Credit Cards (One Billing Account + Billing Account User for Creators)",
   "num": 208,
+  "guide": false,
   "topic": "Billing (billing account permissions)",
   "stem": "You are working for a startup that was officially registered as a business 6 months ago. As your customer base grows, your use of Google Cloud increases. You want to allow all engineers to create new projects without asking them for their credit card information. What should you do?",
   "options": [
@@ -13578,6 +13786,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q209",
   "title": "Check Whether the CI/CD Service Account Has the Right Roles (IAM Roles at the Project + Inherited)",
   "num": 209,
+  "guide": false,
   "topic": "IAM (inherited policies, troubleshooting)",
   "stem": "Your continuous integration and delivery (CI/CD) server can't execute Google Cloud actions in a specific project because of permission issues. You need to validate whether the used service account has the appropriate roles in the specific project. What should you do?",
   "options": [
@@ -13642,6 +13851,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q210",
   "title": "Most Secure and Cost-Efficient SSH Login (gcloud compute ssh --tunnel-through-iap + Allow 35.235.240.0/20)",
   "num": 210,
+  "guide": false,
   "topic": "Security (IAP TCP forwarding)",
   "stem": "Your team is using Linux instances on Google Cloud. You need to ensure that your team logs in to these instances in the most secure and cost efficient way. What should you do?",
   "options": [
@@ -13706,6 +13916,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q211",
   "title": "External Member Needs Only List Access to Images and Disks (Custom Role With Exactly Those Permissions)",
   "num": 211,
+  "guide": false,
   "topic": "IAM (custom roles, least privilege)",
   "stem": "An external member of your team needs list access to compute images and disks in one of your projects. You want to follow Google-recommended practices when you grant the required permissions to this user. What should you do?",
   "options": [
@@ -13770,6 +13981,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q212",
   "title": "First Page Loads Slowly on Cloud Run (Cold Starts: Set Minimum Instances)",
   "num": 212,
+  "guide": false,
   "topic": "Cloud Run (cold starts, min instances)",
   "stem": "You are running a web application on Cloud Run for a few hundred users. Some of your users complain that the initial web page of the application takes much longer to load than the following pages. You want to follow Google's recommendations to mitigate the issue. What should you do?",
   "options": [
@@ -13834,6 +14046,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q213",
   "title": "Highly Available IoT Data Lake for Structured and Unstructured Data (Pub/Sub → Dataflow → Cloud Storage)",
   "num": 213,
+  "guide": false,
   "topic": "Data pipelines (Pub/Sub, Dataflow, Cloud Storage)",
   "stem": "You are building a data lake on Google Cloud for your Internet of Things (IoT) application. The IoT application has millions of sensors that are constantly streaming structured and unstructured data to your backend in the cloud. You want to build a highly available and resilient architecture based on Google-recommended practices. What should you do?",
   "options": [
@@ -13898,6 +14111,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q214",
   "title": "Subnet 10.0.0.0/20 Running Out of VM IPs (Expand It to 10.0.0.0/18)",
   "num": 214,
+  "guide": false,
   "topic": "Networking (expanding subnet ranges)",
   "stem": "You are running out of primary internal IP addresses in a subnet for a custom mode VPC. The subnet has the IP range 10.0.0.0/20, and the IP addresses are primarily used by virtual machines in the project. You need to provide more IP addresses for the virtual machines. What should you do?",
   "options": [
@@ -13962,6 +14176,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q215",
   "title": "Same Developer Permissions in Every Project, Limited to Compute, Functions and SQL (Group + Org-Level Custom Role)",
   "num": 215,
+  "guide": false,
   "topic": "IAM (organization-level custom roles, groups)",
   "stem": "Your company requires all developers to have the same permissions, regardless of the Google Cloud project they are working on. Your company's security policy also restricts developer permissions to Compute Engine, Cloud Functions, and Cloud SQL. You want to implement the security policy with minimal effort. What should you do?",
   "options": [
@@ -14026,6 +14241,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q216",
   "title": "Automatically Upload New Hospital Images From On-Prem (gcloud storage Sync Script on a Cron Schedule)",
   "num": 216,
+  "guide": false,
   "topic": "Data transfer (gcloud storage rsync, cron)",
   "stem": "You are working for a hospital that stores its medical images in an on-premises data room. The hospital wants to use Cloud Storage for archival storage of these images. The hospital wants an automated process to upload any new medical images to Cloud Storage. You need to design and implement a solution. What should you do?",
   "options": [
@@ -14090,6 +14306,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q217",
   "title": "Internal Orders App on PostgreSQL, One Location, ACID, Minimal Code Changes (Cloud SQL)",
   "num": 217,
+  "guide": false,
   "topic": "Databases (Cloud SQL)",
   "stem": "Your company has an internal application for managing transactional orders. The application is used exclusively by employees in a single physical location. The application requires strong consistency, fast queries, and ACID guarantees for multi-table transactional updates. The first version of the application is implemented in PostgreSQL, and you want to deploy it to the cloud with minimal code changes. Which database is most appropriate for this application?",
   "options": [
@@ -14154,6 +14371,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q218",
   "title": "Monthly 30-Hour Batch That Must Restart if Interrupted (Regular VM, Start and Stop as Needed)",
   "num": 218,
+  "guide": false,
   "topic": "Compute Engine (Spot VMs vs regular VMs)",
   "stem": "Your company runs one batch process in an on-premises server that takes around 30 hours to complete. The task runs monthly, can be performed offline, and must be restarted if interrupted. You want to migrate this workload to the cloud while minimizing cost. What should you do?",
   "options": [
@@ -14218,6 +14436,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q219",
   "title": "Migrate MySQL, Kafka and Reporting PostgreSQL With Global Scale and Little Management (Spanner, Pub/Sub, BigQuery)",
   "num": 219,
+  "guide": false,
   "topic": "Migration (choosing managed services)",
   "stem": "You are planning to migrate the following on-premises data management solutions to Google Cloud: • One MySQL cluster for your main database • Apache Kafka for your event streaming platform • One Cloud SQL for PostgreSQL database for your analytical and reporting needs. You want to implement Google-recommended solutions for the migration. You need to ensure that the new solutions provide global scalability and require minimal operational and infrastructure management. What should you do?",
   "options": [
@@ -14282,6 +14501,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q220",
   "title": "Only Share With Your Domain and Remove Outsiders (Domain Restriction Org Policy + Remove Existing Users)",
   "num": 220,
+  "guide": false,
   "topic": "Organization Policy (domain restricted sharing)",
   "stem": "During a recent audit of your existing Google Cloud resources, you discovered several users with email addresses outside of your Google Workspace domain. You want to ensure that your resources are only shared with users whose email addresses match your domain. You need to remove any mismatched users, and you want to avoid having to audit your resources to identify mismatched users. What should you do?",
   "options": [
@@ -14346,6 +14566,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q221",
   "title": "Quickly Replace One Unresponsive VM in a MIG (gcloud compute instance-groups managed recreate-instances)",
   "num": 221,
+  "guide": false,
   "topic": "Compute Engine (managed instance groups)",
   "stem": "Your application is running on Google Cloud in a managed instance group (MIG). You see errors in Cloud Logging for one VM that one of the processes is not responsive. You want to replace this VM in the MIG quickly. What should you do?",
   "options": [
@@ -14410,6 +14631,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q222",
   "title": "Permanently Delete a Pub/Sub Topic Managed by Config Connector (kubectl delete the Resource)",
   "num": 222,
+  "guide": false,
   "topic": "Config Connector (managing Google Cloud via Kubernetes)",
   "stem": "You want to permanently delete a Pub/Sub topic managed by Config Connector in your Google Cloud project. What should you do?",
   "options": [
@@ -14474,6 +14696,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q223",
   "title": "Grow From 100 to 1,000 Employees Simply and Securely (Cloud Identity Groups + Enforce MFA)",
   "num": 223,
+  "guide": false,
   "topic": "Cloud Identity (groups, MFA)",
   "stem": "Your company is using Google Workspace to manage employee accounts. Anticipated growth will increase the number of personnel from 100 employees to 1,000 employees within 2 years. Most employees will need access to your company's Google Cloud account. The systems and processes will need to support 10x growth without performance degradation, unnecessary complexity, or security issues. What should you do?",
   "options": [
@@ -14538,6 +14761,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q224",
   "title": "Highly Available Video Encoding With Automated Scaling (Instance Group + CPU Autoscaling)",
   "num": 224,
+  "guide": false,
   "topic": "Compute Engine (managed instance groups, autoscaling)",
   "stem": "You want to host your video encoding software on Compute Engine. Your user base is growing rapidly, and users need to be able to encode their videos at any time without interruption or CPU limitations. You must ensure that your encoding solution is highly available, and you want to follow Google-recommended practices to automate operations. What should you do?",
   "options": [
@@ -14602,6 +14826,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q225",
   "title": "MIG Fails to Create New Instances (New Valid Template + Delete Disks With Conflicting Names)",
   "num": 225,
+  "guide": false,
   "topic": "Compute Engine (MIG troubleshooting)",
   "stem": "Your managed instance group raised an alert stating that new instance creation has failed to create new instances. You need to solve the instance creation problem. What should you do?",
   "options": [
@@ -14666,6 +14891,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q226",
   "title": "Deploy a Docker Image as a GKE Workload (Artifact Registry + Kubernetes Deployment)",
   "num": 226,
+  "guide": false,
   "topic": "GKE (Artifact Registry, Deployments)",
   "stem": "You have created an application that is packaged into a Docker image. You want to deploy the Docker image as a workload on Google Kubernetes Engine. What should you do?",
   "options": [
@@ -14730,6 +14956,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q227",
   "title": "Looker Studio Charts Broke After the Nightly Table Overwrite (Review the Nightly Job in BigQuery)",
   "num": 227,
+  "guide": false,
   "topic": "BigQuery (job history)",
   "stem": "You are using Looker Studio to visualize a table from your data warehouse that is built on top of BigQuery. Data is appended to the data warehouse during the day. At night, the daily summary is recalculated by overwriting the table. You just noticed that the charts in Looker Studio are broken, and you want to analyze the problem. What should you do?",
   "options": [
@@ -14794,6 +15021,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q228",
   "title": "Fault-Tolerant Nightly Batch Costs Too Much (Test With Simulated Maintenance, Then Use Spot N2 VMs)",
   "num": 228,
+  "guide": false,
   "topic": "Compute Engine (Spot VMs)",
   "stem": "You have a batch workload that runs every night and uses a large number of virtual machines (VMs). It is fault-tolerant and can tolerate some of the VMs being terminated. The current cost of VMs is too high. What should you do?",
   "options": [
@@ -14858,6 +15086,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q229",
   "title": "One Cost View Across Several Billing Accounts, Updated Fast (Billing Export to BigQuery + Looker Studio)",
   "num": 229,
+  "guide": false,
   "topic": "Billing (billing export)",
   "stem": "You created several resources in multiple Google Cloud projects. All projects are linked to different billing accounts. To better estimate future charges, you want to have a single visual representation of all costs incurred. You want to include new cost data as soon as possible. What should you do?",
   "options": [
@@ -14922,6 +15151,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q230",
   "title": "Unstructured Files for a Dataflow ETL Job (Upload to Cloud Storage With gcloud storage)",
   "num": 230,
+  "guide": false,
   "topic": "Cloud Storage (data for Dataflow)",
   "stem": "Your company has a large quantity of unstructured data in different file formats. You want to perform ETL transformations on the data. You need to make the data accessible on Google Cloud so it can be processed by a Dataflow job. What should you do?",
   "options": [
@@ -14986,6 +15216,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q231",
   "title": "Diagnosing an App That Writes Logs to Disk (Install the Ops Agent, View in Cloud Logging)",
   "num": 231,
+  "guide": false,
   "topic": "Logging (Ops Agent)",
   "stem": "You have deployed an application on a single Compute Engine instance. The application writes logs to disk. Users start reporting errors with the application. You want to diagnose the problem. What should you do?",
   "options": [
@@ -15050,6 +15281,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q232",
   "title": "New Project: Create VMs, Firewalls and Store Data (Enable compute and storage APIs With gcloud services enable)",
   "num": 232,
+  "guide": false,
   "topic": "APIs (enabling only needed services)",
   "stem": "You recently received a new Google Cloud project with an attached billing account where you will work. You need to create instances, set firewalls, and store data in Cloud Storage. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -15114,6 +15346,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q233",
   "title": "Docker Images, No Infrastructure to Manage, Automatic Scaling (Artifact Registry + Cloud Run)",
   "num": 233,
+  "guide": false,
   "topic": "Serverless (Cloud Run vs GKE Standard vs MIG)",
   "stem": "Your application development team has created Docker images for an application that will be deployed on Google Cloud. Your team does not want to manage the infrastructure associated with this application. You need to ensure that the application can scale automatically as it gains popularity. What should you do?",
   "options": [
@@ -15178,6 +15411,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q234",
   "title": "Data Immediately Available After a Zone Failure (Regional Persistent Disk, Attach to an Instance in the Other Zone)",
   "num": 234,
+  "guide": false,
   "topic": "Compute Engine (regional persistent disks)",
   "stem": "You are migrating a business critical application from your local data center into Google Cloud. As part of your high-availability strategy, you want to ensure that any data used by the application will be immediately available if a zonal failure occurs. What should you do?",
   "options": [
@@ -15242,6 +15476,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q235",
   "title": "DevOps Needs Full Compute Control, Nothing Else Writable (Viewer + Compute Admin)",
   "num": 235,
+  "guide": false,
   "topic": "IAM (basic vs predefined roles)",
   "stem": "The DevOps group in your organization needs full control of Compute Engine resources in your development project. However, they should not have permission to create or update any other resources in the project. You want to follow Google's recommendations for setting permissions for the DevOps group. What should you do?",
   "options": [
@@ -15306,6 +15541,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q236",
   "title": "Move Dockerized Python Microservices to Serverless (Existing CI/CD, Deploy Images to Cloud Run, Update Config)",
   "num": 236,
+  "guide": false,
   "topic": "Serverless (Cloud Run vs Cloud Functions)",
   "stem": "Your team is running an on-premises ecommerce application. The application contains a complex set of microservices written in Python, and each microservice is running on Docker containers. Configurations are injected by using environment variables. You need to deploy your current application to a serverless Google Cloud cloud solution. What should you do?",
   "options": [
@@ -15370,6 +15606,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q237",
   "title": "CPU-Heavy Image Rendering Next to n2-Standard Workloads (Compute-Optimized Node Pool for It)",
   "num": 237,
+  "guide": false,
   "topic": "GKE (node pools by machine family)",
   "stem": "You are running multiple microservices in a Kubernetes Engine cluster. One microservice is rendering images. The microservice responsible for the image rendering requires a large amount of CPU time compared to the memory it requires. The other microservices are workloads that are optimized for n2-standard machine types. You need to optimize your cluster so that all workloads are using resources as efficiently as possible. What should you do?",
   "options": [
@@ -15434,6 +15671,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q238",
   "title": "Business-Critical Kubernetes Optimized for Reliability (GKE Autopilot + Stable Release Channel)",
   "num": 238,
+  "guide": false,
   "topic": "GKE (Autopilot, release channels)",
   "stem": "You are working in a team that has developed a new application that needs to be deployed on Kubernetes. The production application is business critical and should be optimized for reliability. You need to provision a Kubernetes cluster and want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -15498,6 +15736,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q239",
   "title": "Notify Support if Latency Stays High for 5 Minutes, No Development (Cloud Monitoring Alert Policy)",
   "num": 239,
+  "guide": false,
   "topic": "Monitoring (alerting policies)",
   "stem": "You are responsible for a web application on Compute Engine. You want your support team to be notified automatically if users experience high latency for at least 5 minutes. You need a Google-recommended solution with no development cost. What should you do?",
   "options": [
@@ -15562,6 +15801,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q240",
   "title": "45-Minute Nightly In-Memory Job on 1–16 GB Files, Minimal Effort and Cost (Container + Cloud Scheduler → Cloud Run Job)",
   "num": 240,
+  "guide": false,
   "topic": "Serverless (Cloud Run jobs vs VMs vs Cloud Functions)",
   "stem": "You have an on-premises data analytics set of binaries that processes data files in memory for about 45 minutes every midnight. The sizes of those data files range from 1 gigabyte to 16 gigabytes. You want to migrate this application to Google Cloud with minimal effort and cost. What should you do?",
   "options": [
@@ -15626,6 +15866,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q241",
   "title": "kubectl Only Shows prod-cluster Nodes; Check dev-cluster (gcloud container clusters get-credentials dev-cluster)",
   "num": 241,
+  "guide": false,
   "topic": "GKE (kubectl contexts, get-credentials)",
   "stem": "You used the gcloud container clusters command to create two Google Cloud Kubernetes (GKE) clusters: prod-cluster and dev-cluster. • prod-cluster is a standard cluster. • dev-cluster is an auto-pilot cluster. When you run the kubectl get nodes command, you only see the nodes from prod-cluster. Which commands should you run to check the node status for dev-cluster?",
   "options": [
@@ -15690,6 +15931,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q242",
   "title": "Short-Lived Service Account Keys Only in pj-sa (Org Policies: Key Expiry 24h + Deny Key Creation Except pj-sa)",
   "num": 242,
+  "guide": false,
   "topic": "Organization Policy (service account key constraints)",
   "stem": "You recently discovered that your developers are using many service account keys during their development process. While you work on a long term improvement, you need to quickly implement a process to enforce short-lived service account credentials in your company. You have the following requirements: • All service accounts that require a key should be created in a centralized project called pj-sa. • Service account keys should only be valid for one day. You need a Google-recommended solution that minimizes cost. What should you do?",
   "options": [
@@ -15754,6 +15996,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q243",
   "title": "Estimate the Cost of VMs + Cloud SQL for a Three-Tier App (Pricing Calculator per Resource)",
   "num": 243,
+  "guide": false,
   "topic": "Billing (Pricing Calculator)",
   "stem": "Your company is running a three-tier web application on virtual machines that use a MySQL database. You need to create an estimated total cost of cloud infrastructure to run this application on Google Cloud instances and Cloud SQL. What should you do?",
   "options": [
@@ -15818,6 +16061,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q244",
   "title": "Log All Reads, Writes and Metadata Reads on Bigtable to a SIEM (Data Read/Write + Admin Read Logs, Sink to Pub/Sub)",
   "num": 244,
+  "guide": false,
   "topic": "Logging (audit log types, sinks to Pub/Sub)",
   "stem": "You have a Bigtable instance that consists of three nodes that store personally identifiable information (PII) data. You need to log all read or write operations, including any metadata or configuration reads of this database table, in your company's Security Information and Event Management (SIEM) system. What should you do?",
   "options": [
@@ -15882,6 +16126,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q245",
   "title": "GKE With Verifiable Node Integrity, No Internet Access to Nodes, Low Ops (Private Autopilot Cluster)",
   "num": 245,
+  "guide": false,
   "topic": "GKE (Autopilot, private clusters, Shielded Nodes)",
   "stem": "You want to set up a Google Kubernetes Engine cluster. Verifiable node identity and integrity are required for the cluster, and nodes cannot be accessed from the internet. You want to reduce the operational cost of managing your cluster, and you want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -15946,6 +16191,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q246",
   "title": "Serverless Migration: Flask Web App, Backend API, Long Background Job (App Engine, Cloud Run, Cloud Tasks → Cloud Run)",
   "num": 246,
+  "guide": false,
   "topic": "Serverless (App Engine, Cloud Run, Cloud Tasks)",
   "stem": "Your company wants to migrate their on-premises workloads to Google Cloud. The current on-premises workloads consist of: • A Flask web application • A backend API • A scheduled long-running background job for ETL and reporting. You need to keep operational costs low. You want to follow Google-recommended practices to migrate these workloads to serverless solutions on Google Cloud. What should you do?",
   "options": [
@@ -16010,6 +16256,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q247",
   "title": "CI/CD on VMs Managing All Infrastructure With Least Privilege (One SA per Pipeline, Keys in Secret Manager)",
   "num": 247,
+  "guide": false,
   "topic": "IAM (service accounts for CI/CD)",
   "stem": "Your company is moving its continuous integration and delivery (CI/CD) pipeline to Compute Engine instances. The pipeline will manage the entire cloud infrastructure through code. How can you ensure that the pipeline has appropriate permissions while your system is following security best practices?",
   "options": [
@@ -16074,6 +16321,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q248",
   "title": "Only Files From the Last 30 Days Are Used; Save Cost Automatically (Lifecycle Rule → Archive After 30 Days)",
   "num": 248,
+  "guide": false,
   "topic": "Cloud Storage (Object Lifecycle Management)",
   "stem": "Your application stores files on Cloud Storage by using the Standard Storage class. The application only requires access to files created in the last 30 days. You want to automatically save costs on files that are no longer accessed by the application. What should you do?",
   "options": [
@@ -16138,6 +16386,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q249",
   "title": "Unknown Workload Needs: Stay Available and Get CPU/Memory Suggestions (HPA for Availability, VPA Recommendations for Suggestions)",
   "num": 249,
+  "guide": false,
   "topic": "GKE (HPA, VPA recommendation mode)",
   "stem": "Your manager asks you to deploy a workload to a Kubernetes cluster. You are not sure of the workload's resource requirements or how the requirements might vary depending on usage patterns, external dependencies, or other factors. You need a solution that makes cost-effective recommendations regarding CPU and memory requirements, and allows the workload to function consistently in any situation. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -16202,6 +16451,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q250",
   "title": "Invoices: Keep 5 Years, Up to 5 Revisions, Cheaper After 365 Days (Object Versioning + Lifecycle Rules)",
   "num": 250,
+  "guide": false,
   "topic": "Cloud Storage (versioning, lifecycle)",
   "stem": "You need to migrate invoice documents stored on-premises to Cloud Storage. The documents have the following storage requirements: • Documents must be kept for five years. • Up to five revisions of the same invoice document must be stored, to allow for corrections. • Documents older than 365 days should be moved to lower cost storage tiers. You want to follow Google-recommended practices to minimize your operational and development costs. What should you do?",
   "options": [
@@ -16266,6 +16516,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q251",
   "title": "Keep Proxy Credentials Out of gcloud Logs (Set CLOUDSDK_PROXY_USERNAME/PASSWORD as Environment Variables)",
   "num": 251,
+  "guide": false,
   "topic": "gcloud CLI (proxy configuration)",
   "stem": "You installed the Google Cloud CLI on your workstation and set the proxy configuration. However, you are worried that your proxy credentials will be recorded in the gcloud CLI logs. You want to prevent your proxy credential from being logged. What should you do?",
   "options": [
@@ -16330,6 +16581,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q252",
   "title": "Critical and Fault-Tolerant Parts on GKE, Cost-Optimized (Spot Pool for Fault-Tolerant, Standard Pool for Critical)",
   "num": 252,
+  "guide": false,
   "topic": "GKE (Spot node pools)",
   "stem": "Your company developed an application to deploy on Google Kubernetes Engine. Certain parts of the application are not fault-tolerant and are allowed to have downtime. Other parts of the application are critical and must always be available. You need to configure a Google Kubernetes Engine cluster while optimizing for cost. What should you do?",
   "options": [
@@ -16394,6 +16646,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q253",
   "title": "Serverless App: Test a New Version on a Small % of Traffic (Cloud Run Gradual Rollouts)",
   "num": 253,
+  "guide": false,
   "topic": "Cloud Run (traffic splitting)",
   "stem": "You need to deploy an application in Google Cloud using serverless technology. You want to test a new version of the application with a small percentage of production traffic. What should you do?",
   "options": [
@@ -16458,6 +16711,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q254",
   "title": "Security Member Sees Vulnerabilities and OS Data for One VM (OS Config Agent + roles/osconfig.vulnerabilityReportViewer)",
   "num": 254,
+  "guide": false,
   "topic": "Compute Engine (VM Manager / OS Config)",
   "stem": "Your company's security vulnerability management policy wants a member of the security team to have visibility into vulnerabilities and other OS metadata for a specific Compute Engine instance. This Compute Engine instance hosts a critical application in your Google Cloud project. You need to implement your company's security vulnerability management policy. What should you do?",
   "options": [
@@ -16522,6 +16776,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q255",
   "title": "Deploy New Features Safely, Affect Fewer Customers (Gradual Rollout, Split Traffic Between Revisions)",
   "num": 255,
+  "guide": false,
   "topic": "Cloud Run (revisions, rollback)",
   "stem": "You want to enable your development team to deploy new features to an existing Cloud Run service in production. To minimize the risk associated with a new revision, you want to reduce the number of customers who might be affected by an outage without introducing any development or operational costs to your customers. You want to follow Google-recommended practices for managing revisions to a service. What should you do?",
   "options": [
@@ -16586,6 +16841,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q256",
   "title": "External Consultant on VPN Without a Google Account Needs SSH (Their Public Key Added to the VM)",
   "num": 256,
+  "guide": false,
   "topic": "Compute Engine (SSH keys)",
   "stem": "You have deployed an application on a Compute Engine instance. An external consultant needs to access the Linux-based instance. The consultant is connected to your corporate network through a VPN connection, but the consultant has no Google account. What should you do?",
   "options": [
@@ -16650,6 +16906,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q257",
   "title": "Simply Monitor Unexpected Firewall Changes and Instance Creation (Log-Based Metrics + Alerts)",
   "num": 257,
+  "guide": false,
   "topic": "Monitoring (log-based metrics on audit logs)",
   "stem": "After a recent security incident, your startup company wants better insight into what is happening in the Google Cloud environment. You need to monitor unexpected firewall changes and instance creation. Your company prefers simple solutions. What should you do?",
   "options": [
@@ -16714,6 +16971,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q258",
   "title": "VMs in web-applications Need BigQuery in crm-databases (bigquery.dataViewer on crm-databases)",
   "num": 258,
+  "guide": false,
   "topic": "IAM (cross-project service account access)",
   "stem": "You are configuring service accounts for an application that spans multiple projects. Virtual machines (VMs) running in the web-applications project need access to BigQuery datasets in the crm-databases project. You want to follow Google-recommended practices to grant access to the service account in the web-applications project. What should you do?",
   "options": [
@@ -16778,6 +17036,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q259",
   "title": "Dataproc Subnet 172.16.20.128/25 Is Full; Add VMs With Fewest Steps (Expand the Subnet to 172.16.20.0/24)",
   "num": 259,
+  "guide": false,
   "topic": "Networking (expanding subnet ranges)",
   "stem": "Your Dataproc cluster runs in a single Virtual Private Cloud (VPC) network in a single subnetwork with range 172.16.20.128/25. There are no private IP addresses available in the subnetwork. You want to add new VMs to communicate with your cluster using the minimum number of steps. What should you do?",
   "options": [
@@ -16842,6 +17101,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q260",
   "title": "Global E-Commerce Transactions, SQL Analytics, Highly Available and Scalable (Multi-Region Cloud Spanner)",
   "num": 260,
+  "guide": false,
   "topic": "Databases (Spanner)",
   "stem": "You are building a backend service for an ecommerce platform that will persist transaction data from mobile and web clients. After the platform is launched, you expect a large volume of global transactions. Your business team wants to run SQL queries to analyze the data. You need to build a highly available and scalable data store for the platform. What should you do?",
   "options": [
@@ -16906,6 +17166,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q261",
   "title": "Give SREs the Same Permissions in an Acquired Startup's Organization (gcloud iam roles copy to the Startup's Org ID)",
   "num": 261,
+  "guide": false,
   "topic": "IAM (copying custom roles)",
   "stem": "You are in charge of provisioning access for all Google Cloud users in your organization. Your company recently acquired a startup company that has their own Google Cloud organization. You need to ensure that your Site Reliability Engineers (SREs) have the same project permissions in the startup company's organization as in your own organization. What should you do?",
   "options": [
@@ -16970,6 +17231,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q262",
   "title": "Send Each New Audio File to Speech-to-Text Automatically, Serverless (Cloud Function With a Cloud Storage Trigger)",
   "num": 262,
+  "guide": false,
   "topic": "Serverless (Cloud Functions events)",
   "stem": "You need to extract text from audio files by using the Speech-to-Text API. The audio files are pushed to a Cloud Storage bucket. You need to implement a fully managed, serverless compute solution that requires authentication and aligns with Google-recommended practices. You want to automate the call to the API by submitting each file to the API as the audio file arrives in the bucket. What should you do?",
   "options": [
@@ -17034,6 +17296,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q263",
   "title": "Secure Autoscaling Website With Static Content in Cloud Storage (External HTTPS LB, Managed Cert, URL Map to Bucket Backend)",
   "num": 263,
+  "guide": false,
   "topic": "Load balancing (HTTPS LB, backend buckets)",
   "stem": "Your customer wants you to create a secure website with autoscaling based on the compute instance CPU load. You want to enhance performance by storing static content in Cloud Storage. Which resources are needed to distribute the user traffic?",
   "options": [
@@ -17098,6 +17361,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q264",
   "title": "Construction Equipment Sensors, Thousands of Events per Device, Time-Based Reads (Bigtable, Timestamp Row Key)",
   "num": 264,
+  "guide": false,
   "topic": "Databases (Bigtable)",
   "stem": "The core business of your company is to rent out construction equipment at large scale. All the equipment that is being rented out has been equipped with multiple sensors that send event information every few seconds. These signals can vary from engine status, distance traveled, fuel level, and more. Customers are billed based on the consumption monitored by these sensors. You expect high throughput – up to thousands of events per hour per device – and need to retrieve consistent data based on the time of the event. Storing and retrieving individual signals should be atomic. What should you do?",
   "options": [
@@ -17163,6 +17427,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q265",
   "title": "New Laptop: Before gcloud compute instances list (gcloud auth login + gcloud config set project)",
   "num": 265,
+  "guide": false,
   "topic": "gcloud CLI (initial setup)",
   "stem": "You just installed the Google Cloud CLI on your new corporate laptop. You need to list the existing instances of your company on Google Cloud. What must you do before you run the gcloud compute instances list command? (Choose two.)",
   "options": [
@@ -17232,6 +17497,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q266",
   "title": "200 TB Videos, Redshift Warehouse, 20 GB S3 PNGs, No Code (Transfer Appliance, BigQuery Data Transfer Service, Storage Transfer Service)",
   "num": 266,
+  "guide": false,
   "topic": "Migration (transfer services)",
   "stem": "You are planning to migrate your on-premises data to Google Cloud. The data includes: • 200 TB of video files in SAN storage • Data warehouse data stored on Amazon Redshift • 20 GB of PNG files stored on an S3 bucket. You need to load the video files into a Cloud Storage bucket, transfer the data warehouse data into BigQuery, and load the PNG files into a second Cloud Storage bucket. You want to follow Google-recommended practices and avoid writing any code for the migration. What should you do?",
   "options": [
@@ -17296,6 +17562,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q267",
   "title": "Deploy With a Kubernetes Manifest, Full Control of the Deployment, Minimal Infrastructure Config (GKE Autopilot)",
   "num": 267,
+  "guide": false,
   "topic": "GKE (Autopilot vs Standard vs Cloud Run)",
   "stem": "You want to deploy a new containerized application into Google Cloud by using a Kubernetes manifest. You want to have full control over the Kubernetes deployment, and at the same time, you want to minimize configuring infrastructure. What should you do?",
   "options": [
@@ -17360,6 +17627,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q268",
   "title": "Votes Arriving at Varying Rates From Many Users (Pub/Sub → Cloud Functions)",
   "num": 268,
+  "guide": false,
   "topic": "Serverless (Pub/Sub, Cloud Functions)",
   "stem": "Your team is building a website that handles votes from a large user population. The incoming votes will arrive at various rates. You want to optimize the storage and processing of the votes. What should you do?",
   "options": [
@@ -17424,6 +17692,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q269",
   "title": "Encrypted, Authenticated, IAM-Integrated DB Connection With Little Management (Cloud SQL IAM Auth + Cloud SQL Auth Proxy)",
   "num": 269,
+  "guide": false,
   "topic": "Cloud SQL (Auth Proxy, IAM database authentication)",
   "stem": "You are deploying an application on Google Cloud that requires a relational database for storage. To satisfy your company's security policies, your application must connect to your database through an encrypted and authenticated connection that requires minimal management and integrates with Identity and Access Management (IAM). What should you do?",
   "options": [
@@ -17488,6 +17757,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q270",
   "title": "Frontend in vpc-a, Backend in vpc-b, Different Projects (VPC Network Peering)",
   "num": 270,
+  "guide": false,
   "topic": "Networking (VPC Network Peering)",
   "stem": "You have two Google Cloud projects: project-a with VPC vpc-a (10.0.0.0/16) and project-b with VPC vpc-b (10.8.0.0/16). Your frontend application resides in vpc-a and the backend API services are deployed in vpc-b. You need to efficiently and cost-effectively enable communication between these Google Cloud projects. You also want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -17552,6 +17822,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q271",
   "title": "Back Up the Whole Disk Daily, Keep 7 Days, Minimal Setup (Scheduled Snapshots With 7-Day Retention)",
   "num": 271,
+  "guide": false,
   "topic": "Compute Engine (snapshot schedules)",
   "stem": "Your company is running a critical workload on a single Compute Engine VM instance. Your company's disaster recovery policies require you to back up the entire instance's disk data every day. The backups must be retained for 7 days. You must configure a backup solution that complies with your company's security policies and requires minimal setup and configuration. What should you do?",
   "options": [
@@ -17616,6 +17887,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q272",
   "title": "Engineers Deploy Google Cloud Products Only in an Approved Configuration (Terraform Modules in a Repository)",
   "num": 272,
+  "guide": false,
   "topic": "Infrastructure as Code (Terraform modules)",
   "stem": "Your company requires that Google Cloud products are created with a specific configuration to comply with your company's security policies. You need to implement a mechanism that will allow software engineers at your company to deploy and update Google Cloud products in a preconfigured and approved manner. What should you do?",
   "options": [
@@ -17680,6 +17952,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q273",
   "title": "Department-Specific Org Policies and Log Sinks That Project Owners Can't Remove (Folders per Department, Set Both on Folders)",
   "num": 273,
+  "guide": false,
   "topic": "Resource hierarchy (folders, aggregated sinks, org policies)",
   "stem": "You are a Google Cloud organization administrator. You need to configure organization policies and log sinks on Google Cloud projects that cannot be removed by project users to comply with your company's security policies. The security policies are different for each company department. Each company department has a user with the Project Owner role assigned to their projects. What should you do?",
   "options": [
@@ -17744,6 +18017,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q274",
   "title": "Secure, Highly Available Web App on a MIG (HTTP(S) Load Balancing + A Record in a Public DNS Zone)",
   "num": 274,
+  "guide": false,
   "topic": "Load balancing + Cloud DNS",
   "stem": "You are deploying a web application using Compute Engine. You created a managed instance group (MIG) to host the application. You want to follow Google-recommended practices to implement a secure and highly available solution. What should you do?",
   "options": [
@@ -17808,6 +18082,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q275",
   "title": "Right-Size CPU/Memory Limits for Hundreds of Microservices (Vertical Pod Autoscaler per Microservice)",
   "num": 275,
+  "guide": false,
   "topic": "GKE (Vertical Pod Autoscaler)",
   "stem": "You have several hundred microservice applications running in a Google Kubernetes Engine (GKE) cluster. Each microservice is a deployment with resource limits configured for each container in the deployment. You've observed that the resource limits for memory and CPU are not appropriately set for many of the microservices. You want to ensure that each microservice has right sized limits for memory and CPU. What should you do?",
   "options": [
@@ -17873,6 +18148,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q276",
   "title": "BigQuery quotaExceeded Error: Diagnose It (INFORMATION_SCHEMA Views + Cloud Audit Logs)",
   "num": 276,
+  "guide": false,
   "topic": "BigQuery (troubleshooting quotas)",
   "stem": "Your company uses BigQuery to store and analyze data. Upon submitting your query in BigQuery, the query fails with a quotaExceeded error. You need to diagnose the issue causing the error. What should you do? (Choose two.)",
   "options": [
@@ -17942,6 +18218,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q277",
   "title": "Stateless App That Must Run on VMs and Scale With Traffic (Managed Instance Group + Autoscaling)",
   "num": 277,
+  "guide": false,
   "topic": "Compute Engine (MIG autoscaling)",
   "stem": "Your team has developed a stateless application which requires it to be run directly on virtual machines. The application is expected to receive a fluctuating amount of traffic and needs to scale automatically. You need to deploy the application. What should you do?",
   "options": [
@@ -18006,6 +18283,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q278",
   "title": "Cloud SQL API Quota Errors During Cloud Run Morning Spikes (Lower the Maximum Number of Cloud Run Instances)",
   "num": 278,
+  "guide": false,
   "topic": "Cloud Run (max instances to protect backends)",
   "stem": "Your web application is hosted on Cloud Run and needs to query a Cloud SQL database. Every morning during a traffic spike, you notice API quota errors in Cloud SQL logs. The project has already reached the maximum API quota. You want to make a configuration change to mitigate the issue. What should you do?",
   "options": [
@@ -18070,6 +18348,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q279",
   "title": "Internal-Only Stateless Web App, Frequent Updates, Minimal Infrastructure (Cloud Run With Private Service Connect)",
   "num": 279,
+  "guide": false,
   "topic": "Cloud Run (private access via Private Service Connect)",
   "stem": "You need to deploy a single stateless web application with a web interface and multiple endpoints. For security reasons, the web application must be reachable from an internal IP address from your company's private VPC and on-premises network. You also need to update the web application multiple times per day with minimal effort and want to manage a minimal amount of cloud infrastructure. What should you do?",
   "options": [
@@ -18134,6 +18413,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q280",
   "title": "Analyze Application Logs With SQL (Enable Log Analytics on the Log Bucket + Linked BigQuery Dataset)",
   "num": 280,
+  "guide": false,
   "topic": "Logging (Log Analytics)",
   "stem": "You use Cloud Logging to capture application logs. You now need to use SQL to analyze the application logs in Cloud Logging, and you want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -18198,6 +18478,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q281",
   "title": "Single VM Needs the Fastest Disk and Must Recover on Failure (Hyperdisk Extreme in a Stateful MIG)",
   "num": 281,
+  "guide": false,
   "topic": "Compute Engine (Hyperdisk, stateful MIGs)",
   "stem": "You need to deploy a third-party software application onto a single Compute Engine VM instance. The application requires the highest speed read and write disk access for the internal database. You need to ensure the instance will recover on failure. What should you do?",
   "options": [
@@ -18262,6 +18543,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q282",
   "title": "Give a VM a Fixed Address for Services in the Same VPC, Cheaply (Promote Its IP to a Static Internal IP)",
   "num": 282,
+  "guide": false,
   "topic": "Networking (static internal IPs)",
   "stem": "You have a VM instance running in a VPC with single-stack subnets. You need to ensure that the VM instance has a fixed IP address so that other services hosted in the same VPC can communicate with the VM. You want to follow Google-recommended practices while minimizing cost. What should you do?",
   "options": [
@@ -18326,6 +18608,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q283",
   "title": "From a Single-Zone Preview Cluster to Highly Available Production (Create an Autopilot Cluster)",
   "num": 283,
+  "guide": false,
   "topic": "GKE (regional/Autopilot clusters)",
   "stem": "Your preview application, deployed on a single-zone Google Kubernetes Engine (GKE) cluster in us-central1, has gained popularity. You are now ready to make the application generally available. You need to deploy the application to production while ensuring high availability and resilience. You also want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -18390,6 +18673,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q284",
   "title": "Test a Service Account's BigQuery Access From Your Laptop Securely (gcloud Service Account Impersonation)",
   "num": 284,
+  "guide": false,
   "topic": "IAM (service account impersonation)",
   "stem": "You are developing an application that will be deployed on Google Cloud. The application will use a service account to retrieve data from BigQuery. Before you deploy your application, you want to test the permissions of this service account from your local machine to ensure there will be no authentication issues. You want to ensure that you use the most secure method while following Google-recommended practices. What should you do?",
   "options": [
@@ -18454,6 +18738,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q285",
   "title": "Only Company Accounts, Department-Level Access, Low Ops (Groups + IAM Roles + Org Policy Blocking Other Domains)",
   "num": 285,
+  "guide": false,
   "topic": "IAM + Organization Policy (domain restriction)",
   "stem": "Your organization is migrating to Google Cloud. You want only users with company-issued Google accounts to access your Google Cloud environment. You must ensure that users of the same department can only access resources within their own department. You want to minimize operational costs while following Google-recommended practices. What should you do?",
   "options": [
@@ -18518,6 +18803,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q286",
   "title": "Cloud Run Must Privately Reach an API on GKE (Internal Application LB + Cloud DNS + Serverless VPC Access Connector)",
   "num": 286,
+  "guide": false,
   "topic": "Networking (serverless to VPC)",
   "stem": "You are deploying an application to Cloud Run. Your application requires the use of an API that runs on Google Kubernetes Engine (GKE). You need to ensure that your Cloud Run service can privately reach the API on GKE, and you want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -18582,6 +18868,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q287",
   "title": "Send Cloud Logging Logs to a Third-Party SaaS With the Least Delay (Log Sink to Pub/Sub, SaaS Subscribes)",
   "num": 287,
+  "guide": false,
   "topic": "Logging (sinks to Pub/Sub)",
   "stem": "Your company uses a multi-cloud strategy that includes Google Cloud. You want to centralize application logs in a third-party software-as-a-service (SaaS) tool from all environments. You need to integrate logs originating from Cloud Logging, and you want to ensure the export occurs with the least amount of delay possible. What should you do?",
   "options": [
@@ -18646,6 +18933,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q288",
   "title": "Database + Backend on GKE Standard: No Data Loss, Enough Nodes Automatically (StatefulSet + Cluster Autoscaling)",
   "num": 288,
+  "guide": false,
   "topic": "GKE (StatefulSets, cluster autoscaler)",
   "stem": "You are planning to migrate a database and a backend application to a Standard Google Kubernetes Engine (GKE) cluster. You need to prevent data loss and make sure there are enough nodes available for your backend application based on the demands of your workloads. You want to follow Google-recommended practices and minimize the amount of manual work required. What should you do?",
   "options": [
@@ -18710,6 +18998,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q289",
   "title": "Get Notified of Every File Change in Cloud Storage With Little Overhead (Versioning + Pub/Sub Notifications for Cloud Storage)",
   "num": 289,
+  "guide": false,
   "topic": "Cloud Storage (Pub/Sub notifications)",
   "stem": "You are the Organization Administrator for your company's Google Cloud resources. Your company has strict compliance rules that require you to be notified about any modifications to files and documents hosted on Cloud Storage. In a recent incident, one of your team members was able to modify files and you did not receive any notifications, causing other production jobs to fail. You must ensure that you receive notifications for all changes to files and documents in Cloud Storage while minimizing management overhead. What should you do?",
   "options": [
@@ -18774,6 +19063,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q290",
   "title": "Invoices Kept 3 Years, Frequent Use for 6 Months, Then Audit Only (Cloud Storage Lifecycle → Coldline After 6 Months)",
   "num": 290,
+  "guide": false,
   "topic": "Cloud Storage (storage classes, lifecycle)",
   "stem": "Your company would like to store invoices and other financial documents in Google Cloud. You need to identify a Google-managed solution to store this information for your company. You must ensure that the documents are kept for a duration of three years. Your company's analysts need frequent access to invoices from the past six months. After six months, invoices should be archived for audit purposes only. You want to minimize costs and follow Google-recommended practices. What should you do?",
   "options": [
@@ -18838,6 +19128,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q291",
   "title": "HA GKE, Prompt Node Security Updates, Pay Only for Workloads, No Node Management (Autopilot)",
   "num": 291,
+  "guide": false,
   "topic": "GKE (Autopilot vs Standard)",
   "stem": "You are planning to migrate your containerized workloads to Google Kubernetes Engine (GKE). You need to determine which GKE option to use. Your solution must have high availability, minimal downtime, and the ability to promptly apply security updates to your nodes. You also want to pay only for the compute resources that your workloads use without managing nodes. You want to follow Google-recommended practices and minimize operational costs. What should you do?",
   "options": [
@@ -18902,6 +19193,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q292",
   "title": "Customer Data, Rarely Read Historical Logs, High-Velocity Sensor Data (Cloud SQL, Cloud Storage Archive, Bigtable)",
   "num": 292,
+  "guide": false,
   "topic": "Storage choice (Cloud SQL, Cloud Storage classes, Bigtable)",
   "stem": "Your company stores data from multiple sources that have different data storage requirements. These data include: 1. Customer data that is structured and read with complex queries 2. Historical log data that is large in volume and accessed infrequently 3. Real-time sensor data with high-velocity writes, which needs to be available for analysis but can tolerate some data loss You need to design the most cost-effective storage solution that fulfills all data storage requirements. What should you do?",
   "options": [
@@ -18966,6 +19258,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q293",
   "title": "Lowest Latency for Production, Lower Cost for Development (Premium Tier for Prod, Standard Tier for Dev)",
   "num": 293,
+  "guide": false,
   "topic": "Networking (network service tiers)",
   "stem": "You work for a financial services company that operates as a stock market broker. Your company is planning to migrate to Google Cloud. You need to plan the network design in Google Cloud. Your design must: • Minimize the latency between all production systems. • Minimize costs related to your development environment. What should you do?",
   "options": [
@@ -19030,6 +19323,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q294",
   "title": "SSH for an Engineering Team With Little Overhead When People Join or Leave (OS Login + Google Group)",
   "num": 294,
+  "guide": false,
   "topic": "Compute Engine (OS Login)",
   "stem": "You are managing a fleet of Compute Engine Linux instances in a Google Cloud project. Your company's engineering team requires SSH access to all instances to perform routine maintenance tasks. You need to manage the SSH access for the engineering team, and you want to minimize operational overhead when engineers join or leave the team. What should you do?",
   "options": [
@@ -19094,6 +19388,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q295",
   "title": "Detect Stuck Dataflow Jobs With Minimal Effort (Cloud Monitoring Alert on Data Freshness)",
   "num": 295,
+  "guide": false,
   "topic": "Monitoring (Dataflow metrics)",
   "stem": "Your company was recently impacted by a service disruption that caused multiple Dataflow jobs to get stuck, resulting in significant downtime in downstream applications and revenue loss. You were able to resolve the issue by identifying and fixing an error you found in the code. You need to design a solution with minimal management effort to identify when jobs are stuck in the future to ensure that this issue does not occur again. What should you do?",
   "options": [
@@ -19158,6 +19453,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q296",
   "title": "Platform for Private Containerized Microservices With Minimal Ops (GKE Autopilot)",
   "num": 296,
+  "guide": false,
   "topic": "GKE (Autopilot)",
   "stem": "Your company is modernizing its applications and refactoring them to containerized microservices. You need to deploy the infrastructure on Google Cloud so that teams can deploy their applications. The applications cannot be exposed publicly. You want to minimize management and operational overhead. What should you do?",
   "options": [
@@ -19222,6 +19518,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q297",
   "title": "VM App Needs Short-Lived Credentials and Access to One BigQuery Dataset (Custom SA, Data Viewer on the Dataset)",
   "num": 297,
+  "guide": false,
   "topic": "IAM (attached service accounts, resource-level roles)",
   "stem": "You have an application running inside a Compute Engine instance. You want to provide the application with secure access to a BigQuery dataset. You must ensure that credentials are only valid for a short period of time, and your application will only have access to the intended BigQuery dataset. You want to follow Google-recommended practices and minimize your operational costs. What should you do?",
   "options": [
@@ -19286,6 +19583,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q298",
   "title": "Serverless, Scalable Asynchronous Transaction Processing (Pub/Sub + Cloud Run)",
   "num": 298,
+  "guide": false,
   "topic": "Serverless (Pub/Sub, Cloud Run)",
   "stem": "You have an application that is currently processing transactions by using a group of managed VM instances. You need to migrate the application so that it is serverless and scalable. You want to implement an asynchronous transaction processing system, while minimizing management overhead. What should you do?",
   "options": [
@@ -19350,6 +19648,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q299",
   "title": "Modernize a Shared NFS Server With Least App Change (Filestore)",
   "num": 299,
+  "guide": false,
   "topic": "Storage (Filestore)",
   "stem": "Your company has many legacy third-party applications that rely on a shared NFS server for file sharing between these workloads. You want to modernize the NFS server by using a Google Cloud managed service. You need to select the solution that requires the least amount of change to the application. What should you do?",
   "options": [
@@ -19414,6 +19713,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q300",
   "title": "Retain and Explore Compute Engine App Logs With SQL and Charts (Ops Agent + Log Analytics)",
   "num": 300,
+  "guide": false,
   "topic": "Logging (Ops Agent, Log Analytics)",
   "stem": "Your company is seeking a scalable solution to retain and explore application logs hosted on Compute Engine. You must be able to analyze your logs with SQL queries, and you want to be able to create charts to identify patterns and trends in your logs over time. You want to follow Google-recommended practices and minimize your operational costs. What should you do?",
   "options": [
@@ -19478,6 +19778,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q301",
   "title": "GKE Pods Reach a Private Bucket When SA Keys Are Banned (Workload Identity Federation for GKE)",
   "num": 301,
+  "guide": false,
   "topic": "GKE security (Workload Identity Federation for GKE)",
   "stem": "You are deploying an application to Google Kubernetes Engine (GKE). The application needs to make API calls to a private Cloud Storage bucket. You need to configure your application Pods to authenticate to the Cloud Storage API, but your organization policy prevents the usage of service account keys. You want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -19542,6 +19843,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q302",
   "title": "Manage Linux Account Lifecycle for Developers on VMs (OS Login + IAM Roles)",
   "num": 302,
+  "guide": false,
   "topic": "Compute Engine (OS Login)",
   "stem": "Your company’s developers use an automation that you recently built to provision Linux VMs in Compute Engine within a Google Cloud project to perform various tasks. You need to manage the Linux account lifecycle and access for these users. You want to follow Google-recommended practices to simplify access management while minimizing operational costs. What should you do?",
   "options": [
@@ -19606,6 +19908,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q303",
   "title": "Team Needs Specific Permissions Split Across Two Predefined Roles (Custom Role With Only the Required Permissions)",
   "num": 303,
+  "guide": false,
   "topic": "IAM (custom roles, least privilege)",
   "stem": "You are managing the security configuration of your company’s Google Cloud organization. The Operations team needs specific permissions on both a Google Kubernetes Engine (GKE) cluster and a Cloud SQL instance. Two predefined Identity and Access Management (IAM) roles exist that contain a subset of the permissions needed by the team. You need to configure the necessary IAM permissions for this team while following Google-recommended practices. What should you do?",
   "options": [
@@ -19670,6 +19973,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q304",
   "title": "Infrastructure as Code Across Google Cloud and Two Other Clouds (Terraform)",
   "num": 304,
+  "guide": false,
   "topic": "Infrastructure as Code (Terraform)",
   "stem": "Your organization has decided to deploy all its compute workloads to Kubernetes on Google Cloud and two other cloud providers. You want to build an Infrastructure-as-code solution to automate the provisioning process for all cloud resources. What should you do?",
   "options": [
@@ -19734,6 +20038,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q305",
   "title": "Public App Processing Google Service Events, No Cost When Idle (Cloud Run + Eventarc)",
   "num": 305,
+  "guide": false,
   "topic": "Serverless (Cloud Run, Eventarc)",
   "stem": "You are planning to deploy an application to Google Cloud. Your application processes asynchronous events from Google services and must be accessible from the public Internet. You need to identify how to deploy your application. You want to follow a standardized process while minimizing development costs. You also want to have no costs when your workloads are not in use. What should you do?",
   "options": [
@@ -19798,6 +20103,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q306",
   "title": "Lift and Shift Apps With Hard-Coded Internal IPs, Not Connected to On-Prem (Same CIDR Ranges, Same Static IPs)",
   "num": 306,
+  "guide": false,
   "topic": "Networking (VPC design for migration)",
   "stem": "Your company is migrating its workloads to Google Cloud due to an expiring data center contract. The on-premises environment and Google Cloud are not connected. You have decided to follow a lift-and-shift approach, and you plan to modernize the workloads in a future project. Several old applications connect to each other through hard-coded internal IP addresses. You want to migrate these workloads quickly without modifying the application code. You also want to maintain all functionality. What should you do?",
   "options": [
@@ -19862,6 +20168,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q307",
   "title": "Nightly CPU/Memory-Heavy Batch That Tolerates Interruptions, Cost-Effective (Spot VMs)",
   "num": 307,
+  "guide": false,
   "topic": "Compute Engine (Spot VMs)",
   "stem": "You are migrating your company’s on-premises compute resources to Google Cloud. You need to deploy batch processing jobs that run every night. The jobs require significant CPU and memory for several hours but can tolerate interruptions. You must ensure that the deployment is cost-effective. What should you do?",
   "options": [
@@ -19926,6 +20233,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q308",
   "title": "Social Platform Outgrowing PostgreSQL, Needs Auto Scaling and Multi-Region (Spanner)",
   "num": 308,
+  "guide": false,
   "topic": "Databases (Spanner)",
   "stem": "Your company has a rapidly growing social media platform and a user base primarily located in North America. Due to increasing demand, your current on-premises PostgreSQL database, hosted in your United States headquarters data center, no longer meets your needs. You need to identify a cloud-based database solution that offers automatic scaling, multi-region support for future expansion, and maintains low latency. What should you do?",
   "options": [
@@ -19990,6 +20298,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q309",
   "title": "Make Cloud Billing Data Available in BigQuery for Granular Analysis (Enable Billing Export to BigQuery)",
   "num": 309,
+  "guide": false,
   "topic": "Billing (export to BigQuery)",
   "stem": "You are migrating your on-premises workload to Google Cloud. Your company is implementing its Cloud Billing configuration and requires access to a granular breakdown of its Google Cloud costs. You need to ensure that the Cloud Billing datasets are available in BigQuery so you can conduct a detailed analysis of costs. What should you do?",
   "options": [
@@ -20054,6 +20363,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q310",
   "title": "Daily Overnight Batch, Lowest Cost, Automatic Retries (Cloud Run Job + Cloud Scheduler)",
   "num": 310,
+  "guide": false,
   "topic": "Serverless (Cloud Run jobs, Cloud Scheduler)",
   "stem": "Your company’s accounting department needs to run an overnight batch workload every day. You must implement a solution that minimizes the cost to run this workload and automatically retries the batch if an execution fails. What should you do?",
   "options": [
@@ -20118,6 +20428,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q311",
   "title": "Migrate PostgreSQL With Big Performance Gains, Few Changes, 150+ TB per Region (AlloyDB)",
   "num": 311,
+  "guide": false,
   "topic": "Databases (AlloyDB for PostgreSQL)",
   "stem": "You need to migrate multiple PostgreSQL databases from your on-premises data center to Google Cloud. You want to significantly improve the performance of your databases while minimizing changes to your data schema and application code. You expect to exceed 150 TB of data per geographical region. You want to follow Google-recommended practices and minimize your operational costs. What should you do?",
   "options": [
@@ -20182,6 +20493,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q312",
   "title": "Scalable, Flexible Platform to Fine-Tune LLMs on Large Proprietary Data (GKE + Hardware Accelerators)",
   "num": 312,
+  "guide": false,
   "topic": "AI/ML infrastructure (GKE, GPUs/TPUs)",
   "stem": "Your company's machine learning team requires a scalable and flexible platform to fine-tune large language models utilizing a large volume of proprietary data on Google Cloud. You are tasked with building a solution for this team. What should you do?",
   "options": [
@@ -20246,6 +20558,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q313",
   "title": "Roll Back a GKE Rolling Update (kubectl rollout undo)",
   "num": 313,
+  "guide": false,
   "topic": "GKE (Deployments, rollbacks)",
   "stem": "You recently discovered an issue with your rolling update in Google Kubernetes Engine (GKE). You now need to roll back a rolling update. What should you do?",
   "options": [
@@ -20310,6 +20623,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q314",
   "title": "Give an External Vendor Stable Egress IPs for GKE Traffic (Private Nodes + Cloud NAT With Static IPs)",
   "num": 314,
+  "guide": false,
   "topic": "Networking (Cloud NAT)",
   "stem": "You are deploying an application to Google Kubernetes Engine (GKE) that needs to call an external third-party API. You need to provide the external API vendor with a list of IP addresses for their firewall to allow traffic from your application. You want to follow Google-recommended practices and avoid any risk of interrupting traffic to the API due to IP address changes. What should you do?",
   "options": [
@@ -20374,6 +20688,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q315",
   "title": "Static Website and HTTP-Triggered Monthly Job, Multi-Location, Scale to Zero (Both on Cloud Run)",
   "num": 315,
+  "guide": false,
   "topic": "Serverless (Cloud Run)",
   "stem": "You are planning to move your company's website and a specific asynchronous background job to Google Cloud. Your website contains only static HTML content. The background job is started through an HTTP endpoint and generates monthly invoices for your customers. Your website needs to be available in multiple geographic locations and requires autoscaling. You want to have no costs when your workloads are not in use and follow recommended practices. What should you do?",
   "options": [
@@ -20438,6 +20753,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q316",
   "title": "Notify Engineers as a $1,000 Sandbox Budget Nears, Automated (Folder + Budget Scoped to Folder)",
   "num": 316,
+  "guide": false,
   "topic": "Billing (budgets, folders)",
   "stem": "Your company wants to provide engineers with access to explore Google Cloud freely in a sandbox environment. The total budget for testing across your organization is $1,000. You need to ensure that engineers are notified when the budget is about to be reached. You want to automate your solution as much as possible. What should you do?",
   "options": [
@@ -20502,6 +20818,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q317",
   "title": "Landing Zone: Private Communication for Prod VMs, Org-Wide Allowed TCP Ports (Shared VPC + Hierarchical Firewall Policies)",
   "num": 317,
+  "guide": false,
   "topic": "Networking (Shared VPC, hierarchical firewall policies)",
   "stem": "You are planning to migrate your on-premises VMs to Google Cloud. You need to set up a landing zone in Google Cloud before migrating the VMs. You must ensure that all VM in your production environment can communicate with each other through private IP addresses. You need to allow all VMs in your Google Cloud organization to accept connections on specific TCP ports. You want to follow Google-recommended practices, and you need to minimize your operational costs. What should you do?",
   "options": [
@@ -20566,6 +20883,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q318",
   "title": "Let Teams Deploy Independently While Following Company Practices (Compliant Terraform Modules)",
   "num": 318,
+  "guide": false,
   "topic": "Infrastructure as Code (Terraform modules)",
   "stem": "You assist different engineering teams in deploying their infrastructure on Google Cloud. Your company has defined certain practices required for all workloads. You need to provide the engineering teams with a solution that enables teams to deploy their infrastructure independently without having to know all implementation details of the company’s required practices. What should you do?",
   "options": [
@@ -20630,6 +20948,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q319",
   "title": "Warm Instances for a New Cloud Run Revision Before Shifting Traffic (Revision Min Instances = 2)",
   "num": 319,
+  "guide": false,
   "topic": "Cloud Run (revisions, min instances)",
   "stem": "You ate managing an application deployed on Cloud Run. The development team has released a new version of the application. You want to deploy and redirect traffic to this new version of the application. To ensure traffic to the new version of the application is served with no startup time, you want to ensure that there are two idle instances available for incoming traffic before adjusting the traffic flow. You also want to minimize administrative overhead. What should you do?",
   "options": [
@@ -20694,6 +21013,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q320",
   "title": "One-Replica Stateful App Needs More CPU at Peaks, Cost-Efficient Off-Peak (Vertical Pod Autoscaler)",
   "num": 320,
+  "guide": false,
   "topic": "GKE (VPA)",
   "stem": "You are managing a stateful application deployed on Google Kubernetes Engine (GKE) that can only have one replica. You recently discovered that the application becomes unstable at peak times. You have identified that the application needs more CPU than what has been configured in the manifest at these peak times. You want Kubernetes to allocate the application sufficient CPU resources during these peak times, while ensuring cost efficiency during off-peak periods. What should you do?",
   "options": [
@@ -20758,6 +21078,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q321",
   "title": "Detailed Cost Analysis With Multiple Visualizations on One Dashboard (Billing Export to BigQuery + Looker Studio)",
   "num": 321,
+  "guide": false,
   "topic": "Billing (export, Looker Studio)",
   "stem": "Your company runs a variety of applications and workloads on Google Cloud, and you are responsible for managing cloud costs. You need to identify a solution that enables you to perform detailed cost analysis. You also must be able to visualize the cost data in multiple ways on the same dashboard. What should you do?",
   "options": [
@@ -20822,6 +21143,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q322",
   "title": "Move Old Video Files On-Prem to Cloud Storage While Controlling Bandwidth (Storage Transfer Service)",
   "num": 322,
+  "guide": false,
   "topic": "Data transfer (Storage Transfer Service vs Transfer Appliance)",
   "stem": "Your digital media company stores a large number of video files on-premises. Each video file ranges from 100 MB to 100 GB. You are currently storing 150 TB of video data in your on-premises network, with no room for expansion. You need to migrate all infrequently accessed video files older than one year to Cloud Storage to ensure that on-premises storage remains available for new files. You must also minimize costs and control bandwidth usage. What should you do?",
   "options": [
@@ -20886,6 +21208,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q323",
   "title": "Company-Wide SSH Standard With Audit Compliance and Few Manual Steps (Enforce OS Login via Organization Policy)",
   "num": 323,
+  "guide": false,
   "topic": "Compute Engine (OS Login, org policy)",
   "stem": "You are implementing a company-wide standard to control SSH access for your Google Cloud projects. You want to simplify SSH access management to your Compute Engine instances while maintaining audit compliance and eliminating as many manual steps as possible. What should you do?",
   "options": [
@@ -20950,6 +21273,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q324",
   "title": "Global IoT Sensor Storage With Sub-Millisecond Latency (Bigtable)",
   "num": 324,
+  "guide": false,
   "topic": "Databases (Bigtable)",
   "stem": "You are developing an internet of things (IoT) application that captures sensor data from multiple devices that have already been set up. You need to identify the global data storage product your company should use to store this data. You must ensure that the storage solution you choose meets your requirements of sub-millisecond latency. What should you do?",
   "options": [
@@ -21014,6 +21338,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q325",
   "title": "Fetch and Acknowledge Waiting Messages From a Subscription (gcloud pubsub subscriptions pull --auto-ack)",
   "num": 325,
+  "guide": false,
   "topic": "Pub/Sub (gcloud)",
   "stem": "Your company uses Pub/Sub for event-driven workloads. You have a subscription named email-updates attached to the new-orders topic. You need to fetch and acknowledge waiting messages from this subscription. What should you do?",
   "options": [
@@ -21079,6 +21404,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q326",
   "title": "Service Account Best Practices (Single-Purpose Service Accounts + Manage Them as Resources)",
   "num": 326,
+  "guide": false,
   "topic": "IAM (service account best practices)",
   "stem": "You need to create and manage service accounts for your workloads running on Google Cloud. You want to follow Google-recommended practices. What should you do? (Choose two.)",
   "options": [
@@ -21148,6 +21474,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q327",
   "title": "Relational DB That Scales Globally With Minimal Admin (Spanner)",
   "num": 327,
+  "guide": false,
   "topic": "Databases (Spanner)",
   "stem": "Your company wants to migrate your data from an on-premises relational database to Google Cloud. Your current database can no longer scale with respect to the growth of your users, and you expect the number of users to rapidly grow. You need to choose a relational database that allows you to globally scale while minimizing your management and administration efforts. You also want to follow Google-recommended practices. What should you do?",
   "options": [
@@ -21212,6 +21539,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q328",
   "title": "One User Can't Access Cloud SQL, Another Can — First Step (Review the Error Message)",
   "num": 328,
+  "guide": false,
   "topic": "Troubleshooting (IAM, Cloud SQL)",
   "stem": "You are the Google Cloud systems administrator for your organization. User A reports that they received an error when attempting to access the Cloud SQL database in their Google Cloud project, while User B can access the database. You need to troubleshoot the issue for User A, while following Google-recommended practices. What should you do first?",
   "options": [
@@ -21276,6 +21604,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q329",
   "title": "Subnet Running Out of IPs, No Downtime (Expand the Primary IP Range)",
   "num": 329,
+  "guide": false,
   "topic": "Networking (subnet expansion)",
   "stem": "You manage a VPC network in Google Cloud with a subnet that is rapidly approaching its private IP address capacity. You expect the number of Compute Engine VM instances in the same region to double within a week. You need to implement a Google-recommended solution that minimizes operational costs and does not require downtime. What should you do?",
   "options": [
@@ -21340,6 +21669,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q330",
   "title": "Containerized Web App With Unpredictable Traffic, Lowest Cost (Cloud Run Service)",
   "num": 330,
+  "guide": false,
   "topic": "Serverless (Cloud Run)",
   "stem": "You have developed a web application that serves traffic for a local event and are expecting unpredictable traffic. You have containerized the application, and you now want to deploy the application on Google Cloud. You also want to minimize costs. What should you do?",
   "options": [
@@ -21405,6 +21735,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q331",
   "title": "Global Users, Low Latency, Growth Across Regions (Multi-Region VMs + Global External Application Load Balancer)",
   "num": 331,
+  "guide": false,
   "topic": "Networking (global load balancing)",
   "stem": "You host your website on Compute Engine. The number of global users visiting your website is rapidly expanding. You need to minimize latency and support user growth in multiple geographical regions. You also want to follow Google-recommended practices and minimize operational costs. Which two actions should you take? (Choose two.)",
   "options": [
@@ -21474,6 +21805,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q332",
   "title": "Test a gcloud Script Locally as a Service Account, Most Securely (Impersonation + gcloud config set)",
   "num": 332,
+  "guide": false,
   "topic": "IAM (service account impersonation)",
   "stem": "You are writing a shell script that includes a few gcloud CLI commands to access some Google Cloud resources. You want to test the script in your local development environment with a service account in the most secure way. What should you do?",
   "options": [
@@ -21538,6 +21870,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q333",
   "title": "Ensure All Resources Use EEA Locations (Resource Locations Constraint at Org Level With Allowed Locations)",
   "num": 333,
+  "guide": false,
   "topic": "Organization Policy (resource locations)",
   "stem": "Your company is active in the European Economic Area (EEA), and will adopt Google Cloud for its workloads. Projects are currently structured within different folders. You need to ensure any resources that will be deployed are using Google Cloud locations within the EEA by using the Organization Policy Service resource locations constraint. What should you do?",
   "options": [
@@ -21602,6 +21935,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q334",
   "title": "Isolated 3-Tier App With 1,000+ IPs, Minimal Complexity (One /16 Custom VPC, Three Subnets, Subnet-Based Firewall Rules)",
   "num": 334,
+  "guide": false,
   "topic": "Networking (VPC design, firewall rules)",
   "stem": "You are deploying a large, multi-tiered application with more than 1,000 IP addresses in a Google Cloud project that needs to be securely isolated. The application includes the: 1. web tier with frontend servers for public traffic, 2. application tier with servers running core application logic that only need access from the web tier, and 3. database tier with database servers that only need access from the application tier. You want to minimize cost, complexity, and administrative overhead in the network architecture. What should you do?",
   "options": [
@@ -21666,6 +22000,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q335",
   "title": "Teams Get Spend Notifications and Build Dashboards From Detailed Billing Data (Budget Alerts + Billing Export to BigQuery)",
   "num": 335,
+  "guide": false,
   "topic": "Billing (budgets, export)",
   "stem": "Your company is closely monitoring their cloud spend. You need to allow different teams to monitor their Google Cloud costs. You must ensure that team members receive notifications when their cloud spend reaches certain thresholds and give team members the ability to create dashboards for additional insights with detailed billing data. You want to follow Google-recommended practices and minimize engineering costs. What should you do?",
   "options": [
@@ -21730,6 +22065,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q336",
   "title": "Fully Managed PostgreSQL With Fast Transactions and Analytics, Synchronous Replication (AlloyDB via Database Migration Service)",
   "num": 336,
+  "guide": false,
   "topic": "Databases (AlloyDB, DMS)",
   "stem": "Your company plans to migrate its on-premises PostgreSQL database to Google Cloud. The workloads are demanding, requiring fast transactional and analytical performance. You need to select a fully managed database service on Google Cloud. Your solution must also be able to synchronously replicate and optimize the storage layer. What should you do?",
   "options": [
@@ -21794,6 +22130,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q337",
   "title": "Provision Identities for Certain LDAP OUs, Auto-Updated on Changes (Google Cloud Directory Sync)",
   "num": 337,
+  "guide": false,
   "topic": "Identity (Cloud Identity, GCDS)",
   "stem": "Your company’s management has chosen Google Cloud as its strategic cloud provider. You need to provision Google Cloud identities for all employees in the IT and Data departments but not to other departments. This access should automatically update when employees change departments, join, or leave the company. All employees are managed centrally in an LDAP directory, with one organizational unit (OU) for each department. What should you do?",
   "options": [
@@ -21858,6 +22195,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q338",
   "title": "Micro-Frontend Containers With a Service Mesh, Control the Number of Compute Instances (GKE Standard Fixed Node Pool + Cloud Service Mesh)",
   "num": 338,
+  "guide": false,
   "topic": "GKE (Standard, Cloud Service Mesh)",
   "stem": "You are deploying a new frontend service for an online game. The service was built using a micro-frontend architecture and consists of multiple containers that interact using a service mesh. You need to control the number of compute instances that are running at a given time. What should you do?",
   "options": [
@@ -21922,6 +22260,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q339",
   "title": "Internal Domain Resolvable From VPC and On-Prem, Not Public (Cloud DNS Private Zone)",
   "num": 339,
+  "guide": false,
   "topic": "Networking (Cloud DNS private zones)",
   "stem": "You are deploying a new internal web application behind an internal Application Load Balancer. The application must be accessible from both the VPC network and on-premises network using the domain name internal.altostrat.com. This name must not be resolvable from the public internet. Your on-premises network is connected to the VPC network by using Cloud VPN, and you have configured an inbound server policy. You need to resolve the domain name with the least administrative overhead. What should you do?",
   "options": [
@@ -21986,6 +22325,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q340",
   "title": "Find Service Account Keys Older Than 90 Days Across the Org (gcloud asset search-all-resources for ServiceAccountKey)",
   "num": 340,
+  "guide": false,
   "topic": "Security (Cloud Asset Inventory)",
   "stem": "Your organization has created hundreds of service accounts for different applications hosted on-premises and in other clouds that use Google Cloud APIs. You need to audit the service account keys that have been created and identify the keys that are older than 90 days. What should you do?",
   "options": [
@@ -22050,6 +22390,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q341",
   "title": "Team Terraform Without State Conflicts or Secrets on Laptops (Cloud Storage Backend)",
   "num": 341,
+  "guide": false,
   "topic": "Infrastructure as Code (Terraform remote state)",
   "stem": "You are managing Google Cloud infrastructure with Terraform. The Terraform configuration files are stored in a Git repository. You need to implement a solution that enables multiple team members to work on the Terraform configurations concurrently without conflicts and ensures that sensitive values are not persisted to local machines. What should you do?",
   "options": [
@@ -22114,6 +22455,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q342",
   "title": "Central Management of Acquired Startups With Separate Invoices (One Org, a Folder per Startup, Separate Billing Accounts)",
   "num": 342,
+  "guide": false,
   "topic": "Resource hierarchy & Billing",
   "stem": "You work for a large company that recently acquired three smaller startups. All of the startups’ Google Cloud resources must be centrally managed under a single Google Cloud organization. However, each startup has its own budget and financial reporting structure. You need to ensure that each startup receives a separate monthly invoice for its Google Cloud consumption. What should you do?",
   "options": [
@@ -22178,6 +22520,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q343",
   "title": "Quickly Understand Cryptic Error Logs (Explain This Log Entry with Gemini in Logs Explorer)",
   "num": 343,
+  "guide": false,
   "topic": "Logging (Gemini Cloud Assist)",
   "stem": "You are troubleshooting a complex application failure. You found several cryptic error messages containing no personally identifiable information (PII) in Cloud Logging that you do not recognize. You need to understand the meaning of these logs and determine what actions to take as quickly as possible. What should you do first?",
   "options": [
@@ -22242,6 +22585,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q344",
   "title": "Team Sees All Frontend Logs and Only Error Logs From Backend in a Central Bucket (Log View + logging.viewAccessor)",
   "num": 344,
+  "guide": false,
   "topic": "Logging (log views, least privilege)",
   "stem": "You are managing logging for your organization by aggregating logs into a centralized Google Cloud project. The aggregated logs come from two source projects: one for a frontend application and one for a backend application. You need to grant the frontend development team access to view all logs originating from the frontend project and only error-level logs from the backend project. The team must not be able to view any other logs. You want to follow the principle of least privilege and develop a cost-efficient solution. What should you do?",
   "options": [
@@ -22306,6 +22650,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q345",
   "title": "Gain Permission to Modify IAM Policies for Service Accounts, Least Privilege (roles/iam.serviceAccountAdmin)",
   "num": 345,
+  "guide": false,
   "topic": "IAM (roles)",
   "stem": "You are managing resources in a Google Cloud project. A new service account needs the ability to invoke a Cloud Run service. You need to gain the permissions to modify IAM policies for service accounts while adhering to the principle of least privilege. What should you do?",
   "options": [
@@ -22370,6 +22715,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q346",
   "title": "External Vendor Read-Only Access to One Bucket Only (Storage Object Viewer on the Bucket)",
   "num": 346,
+  "guide": false,
   "topic": "IAM (Cloud Storage roles)",
   "stem": "You manage a Google Cloud project that contains a critical marketing application. You need to grant an external vendor read-only access to the objects stored in a specific Cloud Storage bucket. The vendor must not be able to view any other resources in the project. What should you do?",
   "options": [
@@ -22434,6 +22780,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q347",
   "title": "Ops Team Can Only Start, Stop and Reset VMs (Custom Role With Exactly Those Permissions)",
   "num": 347,
+  "guide": false,
   "topic": "IAM (custom roles)",
   "stem": "You manage IAM policies for your organization’s Google Cloud project. A new operations team needs the capability to start, stop, and reset existing Compute Engine VM instances within this project for basic troubleshooting. Due to strict security requirements, the operations team must be prevented from deleting any instances or modifying any networking or configuration settings. You need to grant the minimum necessary permissions to the team members. What should you do?",
   "options": [
@@ -22498,6 +22845,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q348",
   "title": "Audit All VMs With Public IPs Across the Org, Managed and Low-Maintenance (Cloud Asset Inventory)",
   "num": 348,
+  "guide": false,
   "topic": "Security (Cloud Asset Inventory)",
   "stem": "You are conducting an audit of your Google Cloud organization. You need to identify all Compute Engine instances that have a public IP address. You want to implement a solution that is easy to maintain and uses Google Cloud managed services. What should you do?",
   "options": [
@@ -22562,6 +22910,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q349",
   "title": "Find Who Created Manually Made Projects (Check the Owner Role on the IAM Page)",
   "num": 349,
+  "guide": false,
   "topic": "Resource Manager / IAM",
   "stem": "You are responsible for Google Cloud governance at your company and recently implemented a new, automated process for provisioning Google Cloud projects. You have discovered several projects that were manually created before the implementation of this new process. You need to identify the creators of these projects to inform them of the new process. What should you do?",
   "options": [
@@ -22626,6 +22975,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q350",
   "title": "Isolated Data Science Area: us-east1 Only, Only BigQuery and Cloud Storage, Full Admin (Folder + Org Policy Locations & Services + Owner)",
   "num": 350,
+  "guide": false,
   "topic": "Organization Policy / IAM",
   "stem": "You are creating an isolated Google Cloud environment for a new data science team. The team needs to experiment with machine learning models in short-lived projects and requires full administrative access. All team members belong to the same group. Your solution must restrict resource creation to the us-east1 region and only allow the use of BigQuery and Cloud Storage. What should you do?",
   "options": [
@@ -22690,6 +23040,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q351",
   "title": "VM Without External IP Needs Internet for Updates (Cloud NAT)",
   "num": 351,
+  "guide": false,
   "topic": "Networking (Cloud NAT)",
   "stem": "You are creating a Compute Engine virtual machine (VM) instance for a new application. Your organization’s policy prohibits assigning external IP addresses to VM instances for security reasons. However, the application on the instance needs to access the internet to download necessary software updates and packages. What should you do?",
   "options": [
@@ -22754,6 +23105,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q352",
   "title": "Cluster Creation Fails: Kubernetes Engine API Disabled (gcloud services enable container.googleapis.com)",
   "num": 352,
+  "guide": false,
   "topic": "GKE (APIs)",
   "stem": "You are using the gcloud container clusters create app-cluster command to deploy a Google Kubernetes Engine (GKE) cluster in a new Google Cloud project. The command fails with the following error: ERROR: (gcloud.container.clusters.create) ResponseError: code=403, message=Kubernetes Engine API has not been used in the project before or it is disabled. You need to resolve the issue. What should you do?",
   "options": [
@@ -22818,6 +23170,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q353",
   "title": "Daily Billing Export With Resource-Level Cost Data (Standard + Detailed Usage Cost Export)",
   "num": 353,
+  "guide": false,
   "topic": "Billing (export types)",
   "stem": "You manage your company’s Google Cloud environment. Your company has a budget and wants to centralize cost management by consolidating all projects under a single Cloud Billing account. The finance team requires a daily export of all billing data to a central BigQuery dataset for analysis, including resource-level cost data. You must implement the most cost-effective solution with minimal administrative impact. What should you do?",
   "options": [
@@ -22882,6 +23235,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q354",
   "title": "GKE Must Pull Images From Artifact Registry Using a Prepared Service Account (Create Nodes With That Service Account)",
   "num": 354,
+  "guide": false,
   "topic": "GKE (node service accounts)",
   "stem": "You are storing your team’s container images in Artifact Registry. You need to create a new Google Kubernetes Engine (GKE) cluster and deploy these containers. You have already configured an IAM service account with the necessary permissions to pull images from Artifact Registry. You must ensure the images can be deployed on the GKE cluster. What should you do?",
   "options": [
@@ -22946,6 +23300,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q355",
   "title": "One View of Health and Downtime Risk Across Bigtable, Cloud SQL, Memorystore, Spanner (Database Center)",
   "num": 355,
+  "guide": false,
   "topic": "Databases (Database Center)",
   "stem": "You are managing a fleet of data storage solutions for your company on Google Cloud, including Bigtable, Cloud SQL, Memorystore, and Spanner. You need a single, unified view to monitor the health of all data storage solutions and identify any that are at risk for downtime. What should you do?",
   "options": [
@@ -23010,6 +23365,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q356",
   "title": "Cloud Run Reads Only Objects Under a Prefix in a Shared Bucket, Including New Ones (Uniform Access + IAM Condition on the Prefix)",
   "num": 356,
+  "guide": false,
   "topic": "Cloud Storage (IAM conditions)",
   "stem": "You are managing a web application that needs to read objects from a shared Cloud Storage bucket. You need to grant a Cloud Run service access to objects in the existing bucket that are named with the site1-data/ prefix while ensuring that the Cloud Run service has access to new objects as they are uploaded. Your solution should require minimal work to implement and maintain. What should you do?",
   "options": [
@@ -23074,6 +23430,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q357",
   "title": "App Deployed to Vertex AI Needs Pub/Sub Access via Its New Service Account (Grant Roles to the Agent's Service Account)",
   "num": 357,
+  "guide": false,
   "topic": "IAM (service accounts)",
   "stem": "You have an application that reads data from a Pub/Sub topic. During local development, you authenticated using your personal credentials to test the application. You now want to deploy the application to Vertex AI and have created a new service account to be used as the application's identity. You need to ensure that the deployed application can still access the Pub/Sub topic. What should you do?",
   "options": [
@@ -23138,6 +23495,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q358",
   "title": "Test a Service Account's Permissions From Your Workstation Without Secrets (serviceAccountTokenCreator)",
   "num": 358,
+  "guide": false,
   "topic": "IAM (impersonation)",
   "stem": "You are using your personal workstation to develop an application that will be hosted in Google Cloud. You are authenticated using a Google Account (USER). You need to test whether a specific set of permissions assigned to an existing service account (SERVICE_ACCOUNT) are sufficient for a task without handling sensitive secret information. What should you do?",
   "options": [
@@ -23202,6 +23560,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q359",
   "title": "Petabytes of Avro Data for BigQuery Analysis Without Loading (Cloud Storage + Partitioned External Table)",
   "num": 359,
+  "guide": false,
   "topic": "BigQuery (external tables)",
   "stem": "Your team manages several petabytes of historical, structured transaction data stored in Apache Avro format on-premises. You are migrating this data to Google Cloud for a machine learning project. You must ensure that the data is accessible for large-scale analysis and model training using BigQuery. You must also minimize storage costs and avoid the overhead of loading data into BigQuery’s managed storage. What should you do?",
   "options": [
@@ -23266,6 +23625,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q360",
   "title": "GKE App Needs Service Account Credentials, New Keys Prohibited (Workload Identity Federation)",
   "num": 360,
+  "guide": false,
   "topic": "GKE security (Workload Identity Federation)",
   "stem": "You are developing a monitoring application that runs on a Google Kubernetes Engine (GKE) cluster. The application requires credentials from a service account to collect performance data. However, your organization has a policy that prohibits the creation of new service account keys. You need to grant the application access while following Google-recommended security practices. What should you do?",
   "options": [
@@ -23330,6 +23690,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q361",
   "title": "New Developer Deploys Apps to GKE, Least Privilege (Add to Group With container.developer)",
   "num": 361,
+  "guide": false,
   "topic": "IAM (GKE roles, groups)",
   "stem": "You manage Identity and Access Management (IAM) for your Google Cloud project. A new developer joined the cloud-developer team, and they need to be able to deploy containerized applications to an existing Google Kubernetes Engine (GKE) cluster. They do not need to manage other cloud resources or the GKE cluster itself. You need to grant access following the principle of least privilege. What should you do?",
   "options": [
@@ -23394,6 +23755,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q362",
   "title": "Team-Based Access to Hundreds of Resources, Easy Join/Leave (Google Groups With Security Label)",
   "num": 362,
+  "guide": false,
   "topic": "IAM (Google Groups, security groups)",
   "stem": "You are defining a standard procedure for managing team access to hundreds of Google Cloud resources. Your organization uses Cloud Identity as its primary identity provider, and you want to base access on team membership. You need a solution that simplifies the process of granting and revoking access as individuals join and leave teams. Your solution must minimize administrative effort and follow Google-recommended security practices. What should you do?",
   "options": [
@@ -23458,6 +23820,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q363",
   "title": "Find Service Account Keys Older Than 90 Days (asset search-all-resources for ServiceAccountKey) — repeat of Q340",
   "num": 363,
+  "guide": false,
   "topic": "Security (Cloud Asset Inventory)",
   "stem": "Your organization has created hundreds of service accounts for different applications hosted on-premises and in other clouds that use Google Cloud APIs. You need to audit the service account keys that have been created and identify the keys that are older than 90 days. What should you do?",
   "options": [
@@ -23522,6 +23885,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q364",
   "title": "Restrict New Resources to Australian Regions With Minimal Config (gcp.resourceLocations allowed in:australia-locations)",
   "num": 364,
+  "guide": false,
   "topic": "Organization Policy (resource locations)",
   "stem": "You are a Google Cloud organization policy administrator for your company that operates in a regulated industry. You need to enforce a policy that restricts all new location-based Google Cloud resources to the australia-southeast1 and australia-southeast2 regions only. You want to ensure that this policy requires minimal configuration. What should you do?",
   "options": [
@@ -23586,6 +23950,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q365",
   "title": "All Company Employees Can Read a BigQuery Dataset (domain:terramearth.com Principal)",
   "num": 365,
+  "guide": false,
   "topic": "IAM (principals)",
   "stem": "Your company's Human Resources department publishes a BigQuery dataset with anonymized information about company sales and products. All employees in your company are managed in the terramearth.com Cloud Identity account and must be able to view this dataset as an authenticated user. You need to grant all employees in your company read-only access to this BigQuery dataset. What should you do?",
   "options": [
@@ -23650,6 +24015,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q366",
   "title": "Manage Multiple Applications Independently in Terraform (Root Directory per Application)",
   "num": 366,
+  "guide": false,
   "topic": "Infrastructure as Code (Terraform structure)",
   "stem": "You are planning to manage all of your Google Cloud resources by using Terraform. You have multiple applications that you want to manage independently of each other. You need to structure your Terraform code repository to facilitate this separation. What should you do?",
   "options": [
@@ -23714,6 +24080,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q367",
   "title": "Move Records to the Cheapest Class 90 Days After Creation (Lifecycle Rule age 90 → SetStorageClass Archive)",
   "num": 367,
+  "guide": false,
   "topic": "Cloud Storage (lifecycle)",
   "stem": "You are managing your company's archival records that are stored in a Cloud Storage bucket using the Multi-Regional storage class. These objects are rarely accessed after 90 days but must be retained indefinitely to meet regulatory compliance requirements. You need to implement a cost-effective process that automatically transitions these objects to the lowest-cost storage class suitable for long-term retention immediately after the 90-day period. What should you do?",
   "options": [
@@ -23778,6 +24145,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q368",
   "title": "Track How Many DB Connections a Cloud Run App Creates (Log Each Connection + Log-Based Metric)",
   "num": 368,
+  "guide": false,
   "topic": "Monitoring (log-based metrics)",
   "stem": "You are creating and deploying an application on Cloud Run that uses Cloud SQL for data storage. You need to track the number of database connections created by the application to ensure that database connections are reused. What should you do?",
   "options": [
@@ -23842,6 +24210,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q369",
   "title": "VM App Can Only Create Objects in One Logs Bucket (Dedicated SA + objectCreator on That Bucket)",
   "num": 369,
+  "guide": false,
   "topic": "IAM (Cloud Storage roles, service accounts)",
   "stem": "You are deploying a new application on a Compute Engine VM instance. This application needs to store operational logs in a Cloud Storage bucket named project-logs-us-central1 and have the ability to create new objects (logs) in this bucket. The application must be restricted from modifying or deleting existing objects or accessing any other buckets in the Google Cloud project. You must configure access following the principle of least privilege. What should you do?",
   "options": [
@@ -23906,6 +24275,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q370",
   "title": "Automatically Stop Spending When Over Budget (Budget → Pub/Sub → Cloud Run Function That Stops the VM)",
   "num": 370,
+  "guide": false,
   "topic": "Billing (programmatic budget notifications)",
   "stem": "You are managing a new project for a web application on Google Cloud. The web application is running on a Compute Engine VM, and your team has a strict budget. You have already created a budget in Cloud Billing and set an alert rule to send an email when 90% of the budget is consumed. You must ensure that project spending automatically stops if it exceeds the budgeted amount. What should you do?",
   "options": [
@@ -23970,6 +24340,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q371",
   "title": "Near-Real-Time Alert When MIG Average CPU > 75% for 5 Minutes (Monitoring Alerting Policy on cpu/utilization)",
   "num": 371,
+  "guide": false,
   "topic": "Monitoring (alerting policies)",
   "stem": "You manage a business-critical backend application running on a Compute Engine managed instance group (MIG). The operations team requires a near-real time notification if the average CPU utilization across all instances in the MIG exceeds 75% for a continuous five-minute period. You need to implement a scalable Google Cloud solution to meet this monitoring requirement. What should you do?",
   "options": [
@@ -24034,6 +24405,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q372",
   "title": "Manage Other Google Cloud Resources With the Same Declarative Kubernetes Tooling (Config Connector)",
   "num": 372,
+  "guide": false,
   "topic": "Infrastructure as Code (Config Connector)",
   "stem": "Your company uses Google Kubernetes Engine (GKE) for all application deployments. Your team needs to provision and manage other Google Cloud resources using the same declarative approach and tooling as your application deployments. What should you do?",
   "options": [
@@ -24098,6 +24470,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q373",
   "title": "Ship a Container Image to Production Fast, Must Scale to Zero (Cloud Run)",
   "num": 373,
+  "guide": false,
   "topic": "Serverless (Cloud Run)",
   "stem": "Your development team has packaged and pushed a new container image to Artifact Registry. Due to design requirements, the application must be able to scale to zero. You need to take this image to production as quickly as possible while following the design requirements. What should you do?",
   "options": [
@@ -24162,6 +24535,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q374",
   "title": "Near-Real-Time Budget Threshold Notifications to Slack, Low Maintenance (Budget → Pub/Sub → Cloud Run Function → Slack)",
   "num": 374,
+  "guide": false,
   "topic": "Billing (programmatic budget notifications)",
   "stem": "You are a Cloud Billing administrator for your company. Your company uses numerous Google Cloud projects and needs to implement a cost-control mechanism. Project teams must be notified promptly when their spending approaches its limit. You need to send near real-time notifications to a team’s Slack channel when their project’s spending reaches a predefined budget threshold. Your solution must be easy to support and require minimal maintenance. What should you do?",
   "options": [
@@ -24226,6 +24600,7 @@ window.QUIZ_QUESTIONS = [
   "id": "Q375",
   "title": "SAP HANA Needing 200,000+ IOPS and Persistent Data (Hyperdisk Extreme)",
   "num": 375,
+  "guide": false,
   "topic": "Compute Engine (disk types)",
   "stem": "You want to deploy SAP HANA workloads on Compute Engine. The installation requires high-performance data storage, with input/output operations per second (IOPS) frequently exceeding 200,000. Your solution must also ensure the data persists through instance restarts. What should you do?",
   "options": [
@@ -24251,5 +24626,3255 @@ window.QUIZ_QUESTIONS = [
    "A"
   ],
   "plain": "- **The situation:** You will run SAP HANA (a large in-memory business database) on Compute Engine.\n- **What you must achieve:** Give it very fast storage, often above 200,000 IOPS (disk operations per second).\n- **The limits:** Data must survive VM restarts.\n- **What they're really asking:** Which disk type gives that speed and keeps the data?"
+ },
+ {
+  "file": "G001-workforce-identity-federation.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your company keeps its employee logins in Microsoft Entra ID (Microsoft's company login system, formerly Azure AD). The security team does not want a second copy of those accounts inside Google.\n- **What you must achieve:** Let the data team open the Google Cloud console and use BigQuery while signing in with the Microsoft login they already have.\n- **The limits:** No copying or syncing accounts into Cloud Identity (Google's own user directory). It must follow Google's recommended way.\n- **What they're really asking:** How do you let real people from an outside login system into Google Cloud without creating Google accounts for them?\n\n**Clues in the question:**\n- \"**does not want employee accounts copied or synchronized**\" rules out syncing tools like GCDS.\n- \"**employees … sign in to the Google Cloud console**\" means these are **people** (a workforce), not apps. That points to **Workforce** Identity Federation.\n- \"**existing Entra ID credentials**\" means the outside identity provider stays the place where people sign in.\n\n**Exam topic:** Identity and access (exam guide section 1.1, plus IAM in section 4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Identity provider (IdP)\n- **What it is:** The system that holds a company's user accounts and checks passwords. Examples: Microsoft Entra ID, Okta, Google Cloud Identity.\n- **Looks like:** `login.microsoftonline.com` asking for `ana@shopnow.com` and her password\n- **Not to be confused with:** Google Cloud itself. Google Cloud can trust an outside IdP and does not need to store the password.\n- **Analogy:** 🪪 The HR office that issues staff ID cards.\n- **In the online store:** ShopNow staff already log in to email and HR tools with Entra ID.\n\n### 2. Workforce Identity Federation 🔑\n- **What it is:** A Google Cloud feature that lets **people** sign in to the console and gcloud with an **outside** IdP (Entra ID, Okta, any SAML or OIDC provider) without having Google accounts. You set it up once at the organization level as a **workforce pool** with a **provider**.\n- **Looks like:** `gcloud iam workforce-pools create shopnow-staff --organization=123456 --location=global`\n- **Not to be confused with:** **Workload** Identity Federation, which is for **apps and machines** (for example GitHub Actions or AWS workloads), not for people logging in.\n- **Analogy:** 🏢 A partner building's guard accepts your company badge, so you never get a second badge.\n- **In the online store:** Analysts sign in to BigQuery with their Entra ID login. Nobody creates a Google account for them.\n\n### 3. principalSet identifier\n- **What it is:** How you name a whole group from the outside IdP in an IAM policy, so you can grant roles to it.\n- **Looks like:** `principalSet://iam.googleapis.com/locations/global/workforcePools/shopnow-staff/group/data-team`\n- **Not to be confused with:** A Google Group email like `data-team@shopnow.com`. Federated groups are written as principalSet strings.\n- **Analogy:** 📋 \"Everyone whose company badge says *Data Team*.\"\n- **In the online store:** `roles/bigquery.dataViewer` and `roles/bigquery.jobUser` are granted to the data-team principalSet.\n\n### 4. Google Cloud Directory Sync (GCDS)\n- **What it is:** A tool that **copies** users and groups from Active Directory or LDAP into Cloud Identity.\n- **Looks like:** GCDS runs nightly and creates `ana@shopnow.com` in Cloud Identity\n- **Not to be confused with:** Federation. GCDS duplicates accounts, and federation does not.\n- **Analogy:** 📇 Photocopying the whole staff list into a second filing cabinet.\n- **In the online store:** Not used here, because security refused account copies.\n\n### 🔗 How they fit together\n```\n Employee ──login──► Entra ID (IdP)\n                        │ token (SAML/OIDC)\n                        ▼\n Google Cloud ── workforce pool \"shopnow-staff\" ── provider \"entra\"\n                        │\n                IAM: principalSet …/group/data-team → BigQuery roles\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A retailer standardised on Microsoft Entra ID years ago. When the data team starts using BigQuery, security says: *\"No second copy of our users anywhere.\"* The cloud engineer creates a **workforce pool** at the organization level, adds Entra ID as an OIDC provider, and grants BigQuery roles to the Entra ID group. Analysts open the console, get sent to the Microsoft login page, and land in BigQuery. When someone leaves the company, disabling them in Entra ID removes their Google Cloud access too."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** analysts use Entra ID:\n- Workforce pool `shopnow-staff` → provider `entra-oidc`.\n- IAM on project `shopnow-analytics`: `principalSet://…/group/data-team` gets `roles/bigquery.dataViewer` and `roles/bigquery.jobUser`.\n- An analyst opens `console.cloud.google.com/?workforce_pool=…`, signs in with Microsoft, and queries the `orders` dataset."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **People + outside IdP + no account copy → Workforce Identity Federation.**\n- **Apps or machines outside Google → Workload Identity Federation.** Remember *Work**force** = people, Work**load** = programs*.\n  🧠 **_\"Workforce = people, Workload = programs.\"_**\n- Related: **Q105**, **Q109**, **Q337** (GCDS and third-party IdP); **Q301**, **Q360** (Workload Identity)."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**Workforce Identity Federation with a workforce pool and an Entra ID provider**\" matches \"**sign in … with their existing Entra ID credentials**\": Google trusts Entra ID logins directly.\n- ✔️ \"**grant the BigQuery roles to the data team's group by using its principalSet identifier**\" matches \"**members of the data team**\" and Google-recommended practice: grant to a group, not to individuals.\n- ✔️ Nothing is copied into Cloud Identity, so it matches \"**does not want employee accounts copied or synchronized**\".\n\n📌 **When to use it:** Use it when your staff already have company logins elsewhere and you want them to use those logins for Google Cloud.\n🏢 **Office example:** A partner office accepts your own company badge at its front desk, so no second badge is printed.",
+   "B": "**Wrong words:**\n- ❌ \"**Use Google Cloud Directory Sync to copy the Entra ID users into Cloud Identity**\": this copies the accounts, which the question explicitly forbids (\"does not want employee accounts copied or synchronized\").\n\n📌 **When to use it:** Use it when the company is fine keeping a synced copy of its staff list in Google.\n🏢 **Office example:** Photocopying the staff directory into a second cabinet each night.",
+   "C": "**Wrong words:**\n- ❌ \"**Workload Identity Federation with a workload identity pool**\": workload federation is for **apps and machines**, not for people signing in to the console.\n- ❌ \"**let employees impersonate a service account**\": everyone would act as one shared robot account, and audit logs lose who did what.\n\n📌 **When to use it:** Use it when a program running outside Google (for example in AWS or a CI pipeline) needs to call Google Cloud without a key file.\n🏢 **Office example:** Giving the delivery robot its own access card, not the staff.",
+   "D": "**Wrong words:**\n- ❌ \"**download a JSON key, and share the key with the data team**\": a shared, long-lived secret. Anyone with the file has access, and logs can't tell people apart. This is the opposite of recommended practice.\n\n📌 **When to use it:** Never use this. Give each person their own login, through federation or through Cloud Identity accounts.\n🏢 **Office example:** Never hand the whole team one copied master key to the records room."
+  },
+  "id": "G001",
+  "title": "Employees Sign In With Their Existing Entra ID Accounts, No Account Sync (Workforce Identity Federation)",
+  "num": 1,
+  "guide": true,
+  "topic": "Identity (Workforce Identity Federation)",
+  "stem": "Your company uses Microsoft Entra ID as its identity provider for all employees. The security team does not want employee accounts copied or synchronized into Cloud Identity. Members of the data team must sign in to the Google Cloud console and use BigQuery with their existing Entra ID credentials. You want to follow Google-recommended practices. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Configure Workforce Identity Federation with a workforce pool and an Entra ID provider, and grant the BigQuery roles to the data team's group by using its principalSet identifier."
+   },
+   {
+    "letter": "B",
+    "text": "Use Google Cloud Directory Sync to copy the Entra ID users into Cloud Identity, and grant the BigQuery roles to the synced users."
+   },
+   {
+    "letter": "C",
+    "text": "Configure Workload Identity Federation with a workload identity pool for Entra ID, and let employees impersonate a service account that has the BigQuery roles."
+   },
+   {
+    "letter": "D",
+    "text": "Create a service account with the BigQuery roles, download a JSON key, and share the key with the data team through Secret Manager."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** Your company keeps its employee logins in Microsoft Entra ID (Microsoft's company login system, formerly Azure AD). The security team does not want a second copy of those accounts inside Google.\n- **What you must achieve:** Let the data team open the Google Cloud console and use BigQuery while signing in with the Microsoft login they already have.\n- **The limits:** No copying or syncing accounts into Cloud Identity (Google's own user directory). It must follow Google's recommended way.\n- **What they're really asking:** How do you let real people from an outside login system into Google Cloud without creating Google accounts for them?"
+ },
+ {
+  "file": "G002-ngfw-secure-tags.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You have two groups of VMs (virtual machines: rented computers): web servers and database servers. A firewall rule lets the web servers talk to the database servers on port 5432 (the PostgreSQL database port).\n- **What you must achieve:** Make sure that only the security team decides which VMs count as \"web\" or \"database\" for the firewall.\n- **The limits:** Developers can edit VM settings, including the simple labels (network tags) that normal firewall rules use. Nothing except web → database on TCP 5432 may reach the database tier.\n- **What they're really asking:** What kind of label can only the security team attach to a VM, so a firewall rule can't be bypassed by relabeling a VM?\n\n**Clues in the question:**\n- \"**developer could add a network tag to any VM to bypass**\": plain network tags can be changed by anyone who can edit the VM.\n- \"**only the security team control which VMs a rule applies to**\": you need labels that are **protected by IAM**. These are **secure Tags**.\n- \"**TCP port 5432 … no other traffic**\": one narrow allow rule from source web to target db.\n\n**Exam topic:** Networking: Cloud NGFW firewall policies (exam guide sections 2.3 and 3.3)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Network tag\n- **What it is:** A simple text label on a VM (for example `web`) that VPC firewall rules can target. Anyone who can edit the VM can add or remove it.\n- **Looks like:** `gcloud compute instances add-tags vm-1 --tags=db`\n- **Not to be confused with:** A secure Tag. Network tags have no access control of their own.\n- **Analogy:** 🏷️ A sticky note on a desk saying \"Accounting\". Anyone can move it.\n- **In the online store:** Old ShopNow rules used `web` and `db` network tags.\n\n### 2. Secure Tag (Resource Manager tag) 🔑\n- **What it is:** A key/value tag created in Resource Manager (for example `env-tier=db`) with the **firewall purpose**, then bound to VMs. Attaching it needs a special IAM role (Tag User) on that tag value, so you control **who** can label a VM.\n- **Looks like:** Tag key `shopnow/tier` with values `web` and `db`; bind with `gcloud resource-manager tags bindings create --tag-value=tagValues/123 --parent=//compute.googleapis.com/projects/p/zones/z/instances/vm-1`\n- **Not to be confused with:** A network tag (an unprotected sticker) or a label (used for billing, not firewalls).\n- **Analogy:** 🔐 A badge that only the security office can issue.\n- **In the online store:** Only the security team holds the Tag User role on `tier=db`.\n\n### 3. Cloud NGFW network firewall policy\n- **What it is:** Google Cloud's next-generation firewall. Its rules live in **firewall policies** (global, regional or hierarchical) attached to VPC networks, and they can match secure Tags, service accounts, IP ranges and more.\n- **Looks like:** Policy `shop-fw` → rule priority 1000: ingress, allow tcp:5432, source tag `tier=web`, target tag `tier=db`\n- **Not to be confused with:** Old per-network VPC firewall rules. Those still work, but they can't use secure Tags.\n- **Analogy:** 📜 The building's central security rulebook.\n- **In the online store:** `shop-fw` is attached to `shop-vpc`.\n\n### 🔗 How they fit together\n```\n Security team ──(Tag User role)──► binds tier=web / tier=db to VMs\n Network firewall policy shop-fw:\n   allow tcp:5432  src tag tier=web ──► target tag tier=db\n   (lower-priority deny all ingress to tier=db)\n Developer edits VM → cannot bind tier=db (no IAM permission) ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "At a payments company, auditors found that a developer had added the `db` network tag to a test VM, and it could suddenly reach production databases. The fix is to move these rules to a **Cloud NGFW network firewall policy** that uses **secure Tags**. Developers keep their VM admin rights, but they can't bind the `tier=db` tag because that needs IAM permission on the tag itself."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `shop-vpc`:\n- Secure tag key `shopnow/tier` with values `web`, `api`, `db`.\n- Network firewall policy rule: allow tcp:5432 from `tier=api` to `tier=db`. Everything else to `tier=db` is denied.\n- Only `secops@shopnow.com` has `roles/resourcemanager.tagUser` on `tier=db`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Firewall targeting that only some people may control → secure Tags in a Cloud NGFW firewall policy.**\n- Network tags = unprotected stickers. Secure Tags = IAM-protected badges.\n  🧠 **_\"Sticker vs badge: network tag vs secure Tag.\"_**\n- Related: **Q053**, **Q087**, **Q151**, **Q206** (firewall rules); **Q317** (hierarchical policies)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ✔️ A rule from web to db on port 5432 is the right idea.\n- ❌ \"**network tags web and db**\": anyone who can edit the VM can change network tags, which is exactly the risk in the question.\n- ❌ \"**ask developers not to change network tags**\": a request is not a control.\n\n📌 **When to use it:** Use it when every person who can edit VMs is trusted to manage firewall targeting.\n🏢 **Office example:** A sticky note on the door saying \"Accounting only\", which anyone can move.",
+   "B": "**Wrong words:**\n- ❌ \"**grant them the Owner role**\": Owner gives developers far **more** power, including changing firewall rules themselves. It breaks least privilege.\n\n📌 **When to use it:** Never use this to fix a permissions risk. Give narrower roles and protected tags.\n🏢 **Office example:** Giving someone the master key because you worried about their desk key.",
+   "C": "**Wrong words:**\n- ❌ \"**from 0.0.0.0/0**\": opens the database port to the entire internet.\n- ❌ \"**to all instances in the network**\": every VM becomes a target, not just the database tier.\n\n📌 **When to use it:** Never use this for databases. Allow only specific sources to specific targets.\n🏢 **Office example:** Leaving the records room unlocked for anyone off the street.",
+   "D": "- ✔️ \"**secure Tags … allow only the security team to bind them to VMs through IAM**\" matches \"**only the security team control which VMs a rule applies to**\".\n- ✔️ \"**source and target of a Cloud NGFW network firewall policy rule that allows TCP 5432**\" matches \"**web tier VMs must reach your database tier VMs on TCP port 5432**\".\n- ✔️ Developers can still edit VMs, but binding a secure Tag needs separate IAM permission, so they can't bypass the rule.\n\n📌 **When to use it:** Use it when you want only certain people to decide which machines a firewall rule covers.\n🏢 **Office example:** Only the security office can issue the badge that opens the server room."
+  },
+  "id": "G002",
+  "title": "Only the Security Team Controls Which VMs a Firewall Rule Applies To (Cloud NGFW + Secure Tags)",
+  "num": 2,
+  "guide": true,
+  "topic": "VPC firewall (Cloud NGFW secure Tags)",
+  "stem": "Your web tier VMs must reach your database tier VMs on TCP port 5432, and no other traffic to the database tier is allowed. Developers have permission to edit VM properties, and the security team is concerned that a developer could add a network tag to any VM to bypass firewall rules. You want only the security team to control which VMs a rule applies to. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create VPC firewall rules that use the network tags web and db, and ask developers not to change network tags."
+   },
+   {
+    "letter": "B",
+    "text": "Remove the developers' permission to edit VMs and grant them the Owner role on the project instead."
+   },
+   {
+    "letter": "C",
+    "text": "Create a VPC firewall rule that allows TCP 5432 from 0.0.0.0/0 to all instances in the network."
+   },
+   {
+    "letter": "D",
+    "text": "Create secure Tags for web and db with the firewall purpose, allow only the security team to bind them to VMs through IAM, and use them as the source and target of a Cloud NGFW network firewall policy rule that allows TCP 5432."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** You have two groups of VMs (virtual machines: rented computers): web servers and database servers. A firewall rule lets the web servers talk to the database servers on port 5432 (the PostgreSQL database port).\n- **What you must achieve:** Make sure that only the security team decides which VMs count as \"web\" or \"database\" for the firewall.\n- **The limits:** Developers can edit VM settings, including the simple labels (network tags) that normal firewall rules use. Nothing except web → database on TCP 5432 may reach the database tier.\n- **What they're really asking:** What kind of label can only the security team attach to a VM, so a firewall rule can't be bypassed by relabeling a VM?"
+ },
+ {
+  "file": "G003-cmek-cloud-storage.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A bucket (a storage folder in Cloud Storage) holds customer invoices. A compliance rule says what kind of encryption key must protect them.\n- **What you must achieve:** Your company must own the key: create it, change it on a schedule (rotate), and be able to switch it off at any time.\n- **The limits:** Apps write files normally, so encryption must happen automatically with no extra work per file.\n- **What they're really asking:** Which encryption option gives your company control of the key while Google still encrypts every file automatically?\n\n**Clues in the question:**\n- \"**key that your company creates, rotates, and can disable**\": the default Google-owned keys don't give you this control. You need **customer-managed** keys.\n- \"**must still happen automatically**\": the key should live in **Cloud KMS** and be used by the bucket on every write, without apps sending keys.\n\n**Exam topic:** Storage and data security (exam guide section 3.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Default encryption (Google-managed keys)\n- **What it is:** Google encrypts all data at rest automatically with keys that Google creates and manages. You can't see, rotate or disable them.\n- **Looks like:** Every new bucket → \"Google-managed encryption key\"\n- **Not to be confused with:** No encryption. Data is always encrypted. The question is who controls the key.\n- **Analogy:** 🔒 The bank locks your safe-deposit box with the bank's own key.\n- **In the online store:** ShopNow's product images use the default.\n\n### 2. Cloud KMS\n- **What it is:** Google Cloud's key management service. It stores encryption keys that **you** create in key rings, and it can rotate them on a schedule and disable or destroy them.\n- **Looks like:** `gcloud kms keys create invoices-key --keyring=shop-ring --location=us --purpose=encryption --rotation-period=90d`\n- **Not to be confused with:** Secret Manager, which stores passwords and API keys, not encryption keys for services.\n- **Analogy:** 🗝️ Your own key cabinet, with a log of each use.\n- **In the online store:** Key ring `shop-ring` in `us`.\n\n### 3. CMEK (customer-managed encryption key) 🔑\n- **What it is:** Using a Cloud KMS key that **you** manage to protect a Google service's data (a bucket, a disk, BigQuery, Cloud SQL). The service's **service agent** must be allowed to use the key.\n- **Looks like:** `gcloud storage buckets update gs://shop-invoices --default-encryption-key=projects/p/locations/us/keyRings/shop-ring/cryptoKeys/invoices-key`\n- **Not to be confused with:** CSEK (customer-**supplied** keys), where you send the raw key with every request and Google doesn't store it.\n- **Analogy:** 🔐 The bank uses **your** key for your box, and you can take that key back.\n- **In the online store:** The invoice bucket defaults to `invoices-key`.\n\n### 4. Service agent\n- **What it is:** A Google-managed service account that a Google service uses to act in your project, for example the Cloud Storage service agent.\n- **Looks like:** `service-123456789@gs-project-accounts.iam.gserviceaccount.com`\n- **Not to be confused with:** Your own app's service account.\n- **Analogy:** 🧑‍🔧 The bank's vault clerk who needs permission to use your key.\n- **In the online store:** Gets `roles/cloudkms.cryptoKeyEncrypterDecrypter` on `invoices-key`.\n\n### 🔗 How they fit together\n```\n App ──write──► gs://shop-invoices ──(default key)──► Cloud KMS invoices-key\n                         ▲ Cloud Storage service agent has Encrypter/Decrypter\n Disable key in KMS → objects can't be read ✅ (company control)\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A finance regulator asks a retailer to prove it can make invoice data unreadable on demand. The engineer creates a Cloud KMS key with 90-day rotation, lets the Cloud Storage service agent use it, and sets it as the bucket default. Apps change nothing. If the company ever disables the key, the invoices can't be decrypted."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** invoices:\n- `gs://shopnow-invoices` with a default CMEK `shop-ring/invoices-key` and 90-day rotation.\n- The Cloud SQL `orders` instance can also use CMEK.\n- If the key is disabled, invoice PDFs can't be read until it's enabled again."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **\"Our own key, rotate, disable\" → CMEK in Cloud KMS, and grant the service agent Encrypter/Decrypter.**\n- CSEK = you **supply** the key on every call (rare). CMEK = you **manage** it in KMS (common).\n  🧠 **_\"CMEK = Managed by me in KMS.\"_**\n- Related: **Q061**, **Q107** (Cloud Storage)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**default Google-managed encryption … already meets the requirement**\": data is encrypted, but your company can't create, rotate or disable those keys, so the rule isn't met.\n\n📌 **When to use it:** Use it when you have no rule about who controls the keys. That is most data.\n🏢 **Office example:** Letting the bank use its own lock on your box.",
+   "B": "**Wrong words:**\n- ❌ \"**on an administrator's laptop with a password**\": manual, not automatic, and the password is hard to rotate or disable centrally.\n\n📌 **When to use it:** Never use this for app data. Use CMEK in Cloud KMS.\n🏢 **Office example:** Locking each invoice with a padlock by hand before filing it.",
+   "C": "- ✔️ \"**Create a key in Cloud KMS**\" matches \"**key that your company creates, rotates, and can disable**\": KMS keys are yours to rotate and disable.\n- ✔️ \"**grant the Cloud Storage service agent the … Encrypter/Decrypter role on the key**\" is required so the bucket is allowed to use the key.\n- ✔️ \"**set the key as the bucket's default encryption key**\" matches \"**Encryption must still happen automatically**\".\n\n📌 **When to use it:** Use it when a rule says your company must own and be able to switch off the key that protects stored data.\n🏢 **Office example:** The bank locks your box with your own key, and you can cancel that key whenever you like.",
+   "D": "**Wrong words:**\n- ✔️ CSEK does let the customer own the key.\n- ❌ \"**include the raw key with every upload and download request**\": every app must handle the raw key, which breaks \"**automatically when applications write**\". Google doesn't store the key, so losing it means losing the data.\n\n📌 **When to use it:** Use it when policy says Google must never store your key at all, and you can supply it on every request.\n🏢 **Office example:** Bringing your own key to the bank every single visit."
+  },
+  "id": "G003",
+  "title": "Encrypt a Bucket With a Key Your Company Controls and Can Disable (CMEK With Cloud KMS)",
+  "num": 3,
+  "guide": true,
+  "topic": "Cloud Storage (CMEK encryption)",
+  "stem": "A compliance rule requires that objects in a Cloud Storage bucket containing customer invoices be encrypted with a key that your company creates, rotates, and can disable at any time. Encryption must still happen automatically when applications write objects. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Keep the default Google-managed encryption, because it already meets the requirement."
+   },
+   {
+    "letter": "B",
+    "text": "Encrypt each file on an administrator's laptop with a password before uploading it."
+   },
+   {
+    "letter": "C",
+    "text": "Create a key in Cloud KMS, grant the Cloud Storage service agent the Cloud KMS CryptoKey Encrypter/Decrypter role on the key, and set the key as the bucket's default encryption key."
+   },
+   {
+    "letter": "D",
+    "text": "Use customer-supplied encryption keys, and include the raw key with every upload and download request."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** A bucket (a storage folder in Cloud Storage) holds customer invoices. A compliance rule says what kind of encryption key must protect them.\n- **What you must achieve:** Your company must own the key: create it, change it on a schedule (rotate), and be able to switch it off at any time.\n- **The limits:** Apps write files normally, so encryption must happen automatically with no extra work per file.\n- **What they're really asking:** Which encryption option gives your company control of the key while Google still encrypts every file automatically?"
+ },
+ {
+  "file": "G004-managed-lustre-ai-training.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** An AI team trains big models on hundreds of machines that have GPUs (graphics chips used for AI math).\n- **What you must achieve:** Every machine must read the same very large set of training files at the same time, very fast, as a normal shared folder (a POSIX file system: regular files and folders). They also save progress files (checkpoints) often.\n- **The limits:** Speed matters most: very high throughput (lots of data per second) and low delay, for hundreds of readers at once.\n- **What they're really asking:** Which Google Cloud storage is built for this kind of high-performance, shared file access?\n\n**Clues in the question:**\n- \"**hundreds of GPU nodes … simultaneously**\" + \"**very high throughput and low latency**\": a **parallel file system** for AI and high-performance computing (HPC).\n- \"**POSIX file system mount**\": a real shared file system, not object storage or a database.\n- Managed Lustre is Google's managed parallel file system for exactly this.\n\n**Exam topic:** Storage choice (exam guide section 2.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. POSIX file system\n- **What it is:** Storage that looks like a normal folder tree. Programs open, read and write files by path.\n- **Looks like:** `/mnt/data/train/shard-0001.tfrecord`\n- **Not to be confused with:** Object storage like Cloud Storage, where you fetch whole objects by name over an API.\n- **Analogy:** 🗄️ A shared filing cabinet with drawers and folders.\n- **In the online store:** Training code reads `/mnt/data/...`.\n\n### 2. Google Cloud Managed Lustre 🔑\n- **What it is:** A fully managed **parallel** file system based on Lustre. Data is spread across many servers so hundreds of clients read and write at very high throughput. It's built for AI/ML training and HPC.\n- **Looks like:** Managed Lustre instance, 100+ TiB, mounted on GKE nodes at `/lustre`\n- **Not to be confused with:** Filestore, which is a managed NFS server and is great for general shared files but isn't designed for massive parallel AI throughput.\n- **Analogy:** 🛣️ A 20-lane highway where every car drives at full speed at the same time.\n- **In the online store:** Recommendation-model training reads `/lustre/clicks/`.\n\n### 3. Filestore\n- **What it is:** Managed NFS file shares for VMs and GKE. Tiers range from Basic (HDD/SSD) to Zonal and Regional.\n- **Looks like:** `10.0.0.2:/share1` mounted at `/mnt/share`\n- **Not to be confused with:** Managed Lustre (much higher parallel performance for AI/HPC).\n- **Analogy:** 📁 A shared office drive.\n- **In the online store:** ShopNow's shared CMS uploads folder.\n\n### 4. Cloud Storage FUSE\n- **What it is:** A tool that lets you mount a bucket so it looks like a folder.\n- **Looks like:** `gcsfuse shop-data /mnt/gcs`\n- **Not to be confused with:** A true POSIX file system. Some file operations are limited or slower.\n- **Analogy:** 🪟 A window showing the warehouse as if it were a cabinet.\n- **In the online store:** Used for simple reads of product images.\n\n### 🔗 How they fit together\n```\n GKE GPU node 1 ┐\n GKE GPU node 2 ├──► Managed Lustre (/lustre, parallel, very high throughput) ✅\n …  node 300   ┘     ▲ checkpoints written back often\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "An e-commerce company trains its product-recommendation model nightly on 256 GPUs. With a single NFS server, the GPUs sat idle waiting for data. After switching to **Managed Lustre**, every node reads its shards in parallel and checkpoints save quickly, so the expensive GPUs stay busy."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** recommendation training:\n- Managed Lustre instance `reco-lustre` mounted on a GKE GPU node pool.\n- Training data `/lustre/events/` and checkpoints `/lustre/ckpt/`.\n- Finished models are copied to Cloud Storage for long-term keeping."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **AI/HPC, hundreds of nodes, highest file throughput → Managed Lustre.**\n- General shared NFS folder → Filestore. Windows SMB or NetApp features → NetApp Volumes. Objects → Cloud Storage.\n  🧠 **_\"Lots of nodes, Lustre.\"_**\n- Related: **Q299** (Filestore), **G005** (NetApp Volumes)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Coldline storage class**\": meant for data read about once a quarter, with retrieval fees. It's the wrong fit for constant reads.\n- ❌ \"**Cloud Storage FUSE**\": a convenient mount, but object storage behind it isn't a high-performance parallel POSIX file system for frequent checkpoint writes.\n\n📌 **When to use it:** Use Coldline when files are kept for backup and read only a few times a year.\n🏢 **Office example:** Boxes in the off-site storage room, fetched for an annual audit.",
+   "B": "**Wrong words:**\n- ❌ \"**BigQuery tables**\": a data warehouse for SQL analytics, not a file system that training code mounts.\n\n📌 **When to use it:** Use BigQuery when people ask questions of data with SQL.\n🏢 **Office example:** The reporting department, not the supply closet.",
+   "C": "**Wrong words:**\n- ✔️ It is a shared POSIX file system (NFS).\n- ❌ \"**Basic HDD**\": the slowest Filestore tier. Hundreds of GPU nodes would wait on disk.\n\n📌 **When to use it:** Use it for a modest shared folder used by a few servers, such as a team drive.\n🏢 **Office example:** One shared filing cabinet for a small team.",
+   "D": "- ✔️ \"**Managed Lustre**\" matches \"**hundreds of GPU nodes … simultaneously**\": a parallel file system spreads data across many servers.\n- ✔️ It is a **POSIX** file system mount, which matches \"**through a POSIX file system mount**\".\n- ✔️ It is built for \"**very high throughput and low latency**\" and heavy checkpoint writes in AI/HPC.\n\n📌 **When to use it:** Use it when a very large number of machines must read and write the same huge set of files at top speed at the same time.\n🏢 **Office example:** A giant reading room with hundreds of copies of the same binder, so everyone reads at once."
+  },
+  "id": "G004",
+  "title": "Hundreds of GPU Nodes Read the Same Huge Training Dataset at High Throughput (Google Cloud Managed Lustre)",
+  "num": 4,
+  "guide": true,
+  "topic": "Storage (Managed Lustre vs Filestore vs Cloud Storage)",
+  "stem": "Your machine learning team trains large models on hundreds of GPU nodes in GKE. All nodes must read the same multi-terabyte training dataset simultaneously through a POSIX file system mount, with very high throughput and low latency, and they frequently write checkpoints. Which storage should you use?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "A Cloud Storage bucket in the Coldline storage class, mounted with Cloud Storage FUSE."
+   },
+   {
+    "letter": "B",
+    "text": "BigQuery tables loaded with the training data."
+   },
+   {
+    "letter": "C",
+    "text": "A Filestore Basic HDD instance."
+   },
+   {
+    "letter": "D",
+    "text": "Google Cloud Managed Lustre."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** An AI team trains big models on hundreds of machines that have GPUs (graphics chips used for AI math).\n- **What you must achieve:** Every machine must read the same very large set of training files at the same time, very fast, as a normal shared folder (a POSIX file system: regular files and folders). They also save progress files (checkpoints) often.\n- **The limits:** Speed matters most: very high throughput (lots of data per second) and low delay, for hundreds of readers at once.\n- **What they're really asking:** Which Google Cloud storage is built for this kind of high-performance, shared file access?"
+ },
+ {
+  "file": "G005-netapp-volumes-smb.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Office staff use a Windows file server for shared folders, reached over SMB (the Windows file-sharing protocol, the thing behind mapped drives like `S:\\`). Who can open what is controlled by Active Directory (the company's Windows user directory).\n- **What you must achieve:** Move those shared folders to Google Cloud and keep the same Windows access, plus quick snapshots (point-in-time copies) and clones (instant writable copies).\n- **The limits:** It must be fully managed. You don't want to run and patch your own file-server VMs.\n- **What they're really asking:** Which managed Google Cloud file service speaks SMB, works with Active Directory, and has snapshots and clones?\n\n**Clues in the question:**\n- \"**SMB protocol with Active Directory permissions**\": Windows file sharing. Filestore is NFS only.\n- \"**fast volume snapshots and clones**\": NetApp ONTAP-style features.\n- \"**fully managed … do not want to manage file server VMs**\" rules out a self-run Windows VM.\n\n**Exam topic:** Storage choice (exam guide section 2.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. SMB\n- **What it is:** The file-sharing protocol Windows uses for network drives.\n- **Looks like:** `\\\\files.shopnow.local\\finance` mapped as `S:`\n- **Not to be confused with:** NFS, which is the Linux/Unix file-sharing protocol.\n- **Analogy:** 🚪 The office's Windows-style door to the shared cabinet.\n- **In the online store:** Finance staff open spreadsheets from `S:\\`.\n\n### 2. Google Cloud NetApp Volumes 🔑\n- **What it is:** A fully managed file storage service built on NetApp's technology. It serves **NFS and SMB** volumes, joins Active Directory, and offers instant snapshots, clones and replication.\n- **Looks like:** Storage pool `finance-pool` → volume `finance` (SMB, AD-joined), snapshot policy hourly\n- **Not to be confused with:** Filestore (NFS only) and Managed Lustre (for AI/HPC speed).\n- **Analogy:** 🏬 A professionally managed shared filing room that speaks Windows.\n- **In the online store:** Back-office shares for finance and HR.\n\n### 3. Snapshot / clone\n- **What it is:** A snapshot is a read-only point-in-time copy. A clone is a new writable volume made instantly from a snapshot.\n- **Looks like:** `snap-2026-11-08-0900` → clone `finance-test`\n- **Not to be confused with:** A backup to a different location (which takes longer and is stored separately).\n- **Analogy:** 📸 A photo of the cabinet, and a copy cabinet made from the photo.\n- **In the online store:** Restore a deleted spreadsheet from the 09:00 snapshot.\n\n### 🔗 How they fit together\n```\n Windows PCs ──SMB (AD login)──► NetApp Volumes SMB volume \"finance\" ✅\n                                    ├─ hourly snapshots\n                                    └─ clone for testing\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A company's back office still uses a 10-year-old Windows file server. Moving it to Google Cloud with **NetApp Volumes** keeps the same `S:` drive and AD permissions. Admins stop patching servers, and a deleted file is restored from a snapshot in seconds."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** back office:\n- NetApp Volumes SMB volume `finance`, joined to `corp.shopnow.local`.\n- Hourly snapshots kept 7 days. A clone `finance-uat` is used for testing new accounting software.\n- Storefront containers keep using Cloud Storage for product images."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Windows SMB + AD + snapshots/clones + managed → NetApp Volumes.**\n- Filestore = NFS. Lustre = AI/HPC speed. NetApp = enterprise NFS/SMB features.\n  🧠 **_\"Windows share? NetApp.\"_**\n- Related: **Q299**, **G004**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ✔️ It would speak SMB.\n- ❌ \"**Compute Engine Windows Server VM**\": you'd patch, back up and run the server yourself, which breaks \"**do not want to manage file server VMs**\".\n\n📌 **When to use it:** Use it when you need full control of a Windows server and accept the upkeep.\n🏢 **Office example:** Hiring your own file clerk instead of a managed records service.",
+   "B": "**Wrong words:**\n- ❌ \"**Cloud Storage bucket**\": object storage. Windows users can't map it as an SMB drive with AD permissions.\n\n📌 **When to use it:** Use it for files apps fetch by name, such as images and backups.\n🏢 **Office example:** A warehouse where you order boxes by label, not a shared drawer.",
+   "C": "- ✔️ \"**NetApp Volumes with an SMB volume**\" matches \"**SMB protocol**\".\n- ✔️ \"**joined to Active Directory**\" matches \"**Active Directory permissions**\".\n- ✔️ NetApp Volumes is fully managed and has fast snapshots and clones, matching \"**fully managed**\" and \"**snapshots and clones**\".\n\n📌 **When to use it:** Use it when Windows users need managed shared drives with their usual company logins and quick restore copies.\n🏢 **Office example:** Moving the shared office cabinet into a managed records room that still uses everyone's normal staff badge.",
+   "D": "**Wrong words:**\n- ❌ \"**Filestore Basic**\": Filestore serves **NFS**, not SMB, so Windows AD-permissioned shares don't fit.\n\n📌 **When to use it:** Use it for Linux servers sharing an NFS folder.\n🏢 **Office example:** A shared cabinet whose lock only takes the other kind of key."
+  },
+  "id": "G005",
+  "title": "Move a Windows SMB File Server With AD Permissions, Snapshots and Clones, Fully Managed (Google Cloud NetApp Volumes)",
+  "num": 5,
+  "guide": true,
+  "topic": "Storage (NetApp Volumes)",
+  "stem": "You are migrating an on-premises Windows file server to Google Cloud. Employees access shared folders over the SMB protocol with Active Directory permissions, and administrators rely on fast volume snapshots and clones. You want a fully managed service and do not want to manage file server VMs. What should you use?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "A Compute Engine Windows Server VM with a large Persistent Disk shared as a network folder."
+   },
+   {
+    "letter": "B",
+    "text": "A Cloud Storage bucket with uniform bucket-level access."
+   },
+   {
+    "letter": "C",
+    "text": "Google Cloud NetApp Volumes with an SMB volume joined to Active Directory."
+   },
+   {
+    "letter": "D",
+    "text": "A Filestore Basic instance."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** Office staff use a Windows file server for shared folders, reached over SMB (the Windows file-sharing protocol, the thing behind mapped drives like `S:\\`). Who can open what is controlled by Active Directory (the company's Windows user directory).\n- **What you must achieve:** Move those shared folders to Google Cloud and keep the same Windows access, plus quick snapshots (point-in-time copies) and clones (instant writable copies).\n- **The limits:** It must be fully managed. You don't want to run and patch your own file-server VMs.\n- **What they're really asking:** Which managed Google Cloud file service speaks SMB, works with Active Directory, and has snapshots and clones?"
+ },
+ {
+  "file": "G006-gpu-for-cuda.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A data science team trains an AI model in PyTorch (a popular AI coding library). Part of their code is custom CUDA (NVIDIA's programming system for running math on NVIDIA graphics chips).\n- **What you must achieve:** Make training faster on Compute Engine VMs.\n- **The limits:** The custom CUDA code must keep working.\n- **What they're really asking:** Which kind of accelerator chip can actually run CUDA code?\n\n**Clues in the question:**\n- \"**custom CUDA kernels**\": CUDA runs only on **NVIDIA GPUs**. TPUs don't run CUDA.\n- \"**speed up training**\": you need an accelerator, not just more CPUs or faster disks.\n\n**Exam topic:** Compute choice: GPUs vs TPUs (exam guide sections 2.1 and 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. GPU 🔑\n- **What it is:** A graphics processing unit: a chip with thousands of small cores for parallel math. It's widely used for AI, and it supports CUDA and most frameworks.\n- **Looks like:** `gcloud compute instances create trainer --machine-type=g2-standard-8 --accelerator=type=nvidia-l4,count=1 --maintenance-policy=TERMINATE`\n- **Not to be confused with:** A TPU, which is Google's own AI chip, programmed through XLA, not CUDA.\n- **Analogy:** 🧰 A general toolbox that fits most jobs.\n- **In the online store:** Fine-tuning the product-description model.\n\n### 2. TPU\n- **What it is:** Tensor Processing Unit: Google-designed chips specialised for the large matrix math in neural networks. Best with JAX/TensorFlow (and PyTorch through XLA) at large scale.\n- **Looks like:** TPU slice `v5e-16` in GKE or TPU VMs\n- **Not to be confused with:** A GPU. TPUs can't run CUDA kernels.\n- **Analogy:** 🏭 A factory line built for one product, very fast at it.\n- **In the online store:** Training a huge language model from scratch.\n\n### 3. CUDA kernel\n- **What it is:** A small program written for NVIDIA GPUs using CUDA.\n- **Looks like:** `__global__ void fused_attention(...)`\n- **Not to be confused with:** Generic Python code.\n- **Analogy:** 🔌 A plug that only fits one brand of socket.\n- **In the online store:** The team's custom attention layer.\n\n### 🔗 How they fit together\n```\n PyTorch + custom CUDA kernels ──► needs NVIDIA GPU ✅\n                               ╳──► TPU (no CUDA)\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A retailer's data team wrote a custom CUDA layer to speed up their search-ranking model. Training on CPUs takes days. Attaching **NVIDIA GPUs** cuts it to hours. TPUs would need a rewrite away from CUDA."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** search ranking:\n- Training VM `g2-standard-24` with 2× NVIDIA L4 GPUs, run nightly as a Spot VM to save money.\n- The model is then served on Cloud Run with GPU, or on GKE."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **CUDA or broad framework support → GPU. Huge matrix-heavy training in JAX/TF at scale → TPU.**\n  🧠 **_\"CUDA? GPU. Giant JAX? TPU.\"_**\n- Related: **Q081**, **Q312**, **G007**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**NVIDIA GPUs**\" matches \"**custom CUDA kernels**\": CUDA runs on NVIDIA GPUs.\n- ✔️ GPUs give large parallel speed-ups for PyTorch training, which matches \"**speed up training**\".\n\n📌 **When to use it:** Use it when the AI code needs the common graphics chips that most tools are written for.\n🏢 **Office example:** Renting the standard power tools that every contractor's attachments fit.",
+   "B": "**Wrong words:**\n- ❌ \"**TPUs run every machine learning framework and custom kernel faster**\": false. TPUs don't run CUDA kernels, so the team's code wouldn't work without a rewrite.\n\n📌 **When to use it:** Use TPUs when training very large models in frameworks built for them, without CUDA-specific code.\n🏢 **Office example:** A specialised factory line that only builds one kind of product.",
+   "C": "**Wrong words:**\n- ❌ \"**more vCPUs and no accelerators**\": CPUs are much slower than GPUs for this math, and the CUDA kernels can't run at all without a GPU.\n\n📌 **When to use it:** Use it for CPU-heavy work like batch processing or game servers.\n🏢 **Office example:** Hiring more office clerks to do a job that needs a machine.",
+   "D": "**Wrong words:**\n- ❌ \"**Local SSDs … speed up the model's math**\": disks speed up reading data, not calculations.\n\n📌 **When to use it:** Use it when the job waits on fast temporary disk access.\n🏢 **Office example:** A faster filing cabinet doesn't make the accountant add faster."
+  },
+  "id": "G006",
+  "title": "PyTorch Training That Depends on Custom CUDA Kernels (GPUs, Not TPUs)",
+  "num": 6,
+  "guide": true,
+  "topic": "Compute Engine (GPUs vs TPUs)",
+  "stem": "Your data science team trains a PyTorch model that depends on custom CUDA kernels written by the team. They want to speed up training on Compute Engine. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Attach NVIDIA GPUs to the training VMs."
+   },
+   {
+    "letter": "B",
+    "text": "Attach Cloud TPUs, because TPUs run every machine learning framework and custom kernel faster."
+   },
+   {
+    "letter": "C",
+    "text": "Switch the VMs to a compute-optimized machine type with more vCPUs and no accelerators."
+   },
+   {
+    "letter": "D",
+    "text": "Add Local SSDs to the VMs to speed up the model's math operations."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** A data science team trains an AI model in PyTorch (a popular AI coding library). Part of their code is custom CUDA (NVIDIA's programming system for running math on NVIDIA graphics chips).\n- **What you must achieve:** Make training faster on Compute Engine VMs.\n- **The limits:** The custom CUDA code must keep working.\n- **What they're really asking:** Which kind of accelerator chip can actually run CUDA code?"
+ },
+ {
+  "file": "G007-tpu-large-jax-training.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Researchers train a huge AI language model written in JAX (Google's AI math library). The work is mostly giant grids of numbers multiplied together (matrix math) and runs for weeks.\n- **What you must achieve:** Get the most training done for the money at large scale.\n- **The limits:** The code is already in JAX, so no CUDA requirement. It is a long-running, very large job.\n- **What they're really asking:** Which Google chip is designed for exactly this kind of huge matrix-math training?\n\n**Clues in the question:**\n- \"**very large transformer … JAX**\" + \"**large matrix multiplications**\": the workload TPUs are designed for.\n- \"**best price-performance … at scale**\": TPU slices scale to many chips and are Google's specialised option.\n\n**Exam topic:** Compute choice: GPUs vs TPUs (exam guide sections 2.1 and 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Cloud TPU 🔑\n- **What it is:** Google-designed AI accelerator chips, grouped into **slices** of many chips joined by fast links. Used through TPU VMs or GKE TPU node pools.\n- **Looks like:** `gcloud compute tpus tpu-vm create llm-train --zone=us-central2-b --accelerator-type=v5p-128 --version=tpu-ubuntu2204-base`\n- **Not to be confused with:** A GPU (general-purpose, CUDA).\n- **Analogy:** 🏭 A factory line purpose-built for one product at huge volume.\n- **In the online store:** Training ShopNow's large catalog language model.\n\n### 2. JAX\n- **What it is:** A Python library from Google for fast numerical computing on TPUs and GPUs, compiled with XLA.\n- **Looks like:** `jax.jit(train_step)`\n- **Not to be confused with:** CUDA, which is NVIDIA-only low-level code.\n- **Analogy:** 🧮 A calculator language that many chip types understand.\n- **In the online store:** Research code for the shopping assistant model.\n\n### 🔗 How they fit together\n```\n JAX model ──XLA──► TPU slice (many chips, fast links) ✅ best for huge matrix math\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A retailer's research group pre-trains a shopping-assistant language model. On a **TPU slice** the run finishes in weeks at lower cost than equivalent GPU hours, because JAX compiles straight to TPUs."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** research:\n- A TPU v5p slice in a GKE TPU node pool trains `shop-llm` from checkpoints in Managed Lustre or Cloud Storage.\n- Inference later runs on smaller GPUs or TPUs."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Massive matrix-math training, JAX/TensorFlow, best price-performance at scale → TPU.**\n  🧠 **_\"Tensor-heavy → TPU.\"_**\n- Related: **G006**, **Q312**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Cloud Run service**\": request-based serverless, not weeks-long distributed training.\n\n📌 **When to use it:** Use Cloud Run for web apps and APIs.\n🏢 **Office example:** The front desk isn't where the factory runs.",
+   "B": "**Wrong words:**\n- ❌ \"**single … VM without accelerators**\": CPUs alone would take far too long for weeks of matrix math, and one VM can't scale.\n\n📌 **When to use it:** Use memory-optimized VMs for huge in-memory databases.\n🏢 **Office example:** A single clerk with a calculator for a factory's job.",
+   "C": "**Wrong words:**\n- ✔️ Spot VMs are cheap.\n- ❌ \"**E2 … without accelerators**\": low-power CPUs with no AI chips, so it's far slower and not good value for this job.\n\n📌 **When to use it:** Use E2 Spot VMs for cheap, interruptible, light batch jobs.\n🏢 **Office example:** Many temp clerks for a job that needs a machine.",
+   "D": "- ✔️ \"**Cloud TPUs**\" matches \"**large matrix multiplications**\": TPUs are built for exactly this math.\n- ✔️ \"**TPU slice in GKE or TPU VMs**\" matches \"**at scale**\" and \"**JAX**\": JAX runs natively on TPUs.\n\n📌 **When to use it:** Use it when training a very big AI model on tools that work well with Google's special AI chips.\n🏢 **Office example:** Sending a huge print run to the specialised print shop instead of the office printer."
+  },
+  "id": "G007",
+  "title": "Weeks-Long Training of a Very Large JAX Transformer, Best Price-Performance (Cloud TPU)",
+  "num": 7,
+  "guide": true,
+  "topic": "AI/ML infrastructure (TPUs)",
+  "stem": "A research team trains a very large transformer language model written in JAX. The training is dominated by large matrix multiplications and runs for several weeks. The team wants the best price-performance for this training at scale on Google Cloud. What should you recommend?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Run the training as a Cloud Run service with the maximum memory setting."
+   },
+   {
+    "letter": "B",
+    "text": "Run the training on a single memory-optimized VM without accelerators."
+   },
+   {
+    "letter": "C",
+    "text": "Run the training on many E2 Spot VMs without accelerators."
+   },
+   {
+    "letter": "D",
+    "text": "Run the training on Cloud TPUs, such as a TPU slice in GKE or TPU VMs."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** Researchers train a huge AI language model written in JAX (Google's AI math library). The work is mostly giant grids of numbers multiplied together (matrix math) and runs for weeks.\n- **What you must achieve:** Get the most training done for the money at large scale.\n- **The limits:** The code is already in JAX, so no CUDA requirement. It is a long-running, very large job.\n- **What they're really asking:** Which Google chip is designed for exactly this kind of huge matrix-math training?"
+ },
+ {
+  "file": "G008-agent-runtime-deploy.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your team wrote an AI agent (a program that chats with customers and can take actions) using ADK, Google's Agent Development Kit, a code library for building agents.\n- **What you must achieve:** Put it online so Google runs and scales it, and remembers each customer's conversation (sessions) and long-term facts (memory).\n- **The limits:** You do not want to run servers, build containers, or manage Kubernetes.\n- **What they're really asking:** Which Google Cloud service is built to host AI agents with sessions and memory already handled?\n\n**Clues in the question:**\n- \"**built … with the Agent Development Kit**\" + \"**manage conversation sessions and memory**\": features of **Agent Runtime** (formerly Vertex AI Agent Engine).\n- \"**do not want to manage servers, containers, or Kubernetes clusters**\" rules out GKE and VMs.\n\n**Exam topic:** Compute choice for AI agents (exam guide sections 2.1 and 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. AI agent\n- **What it is:** A program built around an AI model that can hold a conversation, remember context, and call tools (APIs) to do tasks.\n- **Looks like:** \"Where's my order?\" → agent calls `getOrderStatus(1234)` → replies\n- **Not to be confused with:** A plain chatbot script with fixed answers.\n- **Analogy:** 🧑‍💼 A support rep who can look things up and act.\n- **In the online store:** ShopNow's order-help assistant.\n\n### 2. Agent Development Kit (ADK)\n- **What it is:** Google's open-source framework for writing agents in code (Python and others).\n- **Looks like:** `from google.adk.agents import Agent`\n- **Not to be confused with:** The hosting service. ADK is how you **build** an agent, not where it runs.\n- **Analogy:** 📘 The training manual for the support rep.\n- **In the online store:** The `order_helper` agent code.\n\n### 3. Agent Runtime (formerly Vertex AI Agent Engine) 🔑\n- **What it is:** A fully managed service in Gemini Enterprise Agent Platform for **deploying, scaling and running agents**, with managed **sessions** and **memory**. You deploy from code and Google handles the infrastructure.\n- **Looks like:** `agent_engines.create(agent, requirements=[...])` → endpoint `projects/p/locations/us-central1/reasoningEngines/123`\n- **Not to be confused with:** Cloud Run, which can run a container you build. Agent Runtime adds agent-specific sessions and memory and needs no container.\n- **Analogy:** 🏢 A staffing agency office that houses, schedules and supports your reps.\n- **In the online store:** Deployed `order_helper` answering storefront chat.\n\n### 🔗 How they fit together\n```\n ADK code ──deploy──► Agent Runtime (managed scale + sessions + memory) ✅\n Storefront chat ──► agent endpoint ──► tools (Orders API)\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "An online store adds an AI helper that answers order questions. The team writes it in ADK and deploys to **Agent Runtime**. Google keeps each shopper's conversation, scales up during sales, and the team never touches a server."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** support agent:\n- `order_helper` (ADK) is deployed to Agent Runtime in `us-central1`.\n- Its tool calls go to the Orders API on Cloud Run through a service account with least privilege.\n- Sessions keep the cart context during a chat."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Built an agent (ADK etc.) + want managed hosting with sessions and memory → Agent Runtime (formerly Vertex AI Agent Engine).**\n  🧠 **_\"Agent? Agent Runtime.\"_**\n- Related: **G006**, **G007**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**Agent Runtime**\" matches \"**Google to host and scale the agent**\".\n- ✔️ It has built-in sessions and memory, matching \"**manage conversation sessions and memory**\".\n- ✔️ It is fully managed, matching \"**do not want to manage servers, containers, or Kubernetes**\".\n\n📌 **When to use it:** Use it when you've built an AI helper and want Google to run it and remember conversations for you.\n🏢 **Office example:** Placing your trained support staff with an agency that provides the desks, phones and call records.",
+   "B": "**Wrong words:**\n- ❌ \"**GKE Standard cluster**\": you'd manage nodes and Kubernetes, which the question rejects.\n- ❌ \"**build your own session database**\": extra work that Agent Runtime already does.\n\n📌 **When to use it:** Use it when you need full control of a container platform and have a team to run it.\n🏢 **Office example:** Building your own call centre from scratch.",
+   "C": "**Wrong words:**\n- ❌ \"**Compute Engine VM**\": a server to patch and scale yourself, with no built-in agent sessions.\n\n📌 **When to use it:** Use it when software needs a full computer you control.\n🏢 **Office example:** Renting an empty office and hiring IT to run it.",
+   "D": "**Wrong words:**\n- ❌ \"**static website hosting**\": serves fixed files like HTML and images. It can't run agent code.\n\n📌 **When to use it:** Use it for simple fixed web pages.\n🏢 **Office example:** Pinning a printed FAQ on the wall. It can't answer questions."
+  },
+  "id": "G008",
+  "title": "Host an ADK AI Agent With Managed Sessions and Memory, No Servers (Agent Runtime, Formerly Vertex AI Agent Engine)",
+  "num": 8,
+  "guide": true,
+  "topic": "AI agents (Agent Runtime)",
+  "stem": "Your team built a customer-support AI agent with the Agent Development Kit (ADK). You want Google to host and scale the agent and manage conversation sessions and memory. You do not want to manage servers, containers, or Kubernetes clusters. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Deploy the agent to Agent Runtime on Gemini Enterprise Agent Platform (formerly Vertex AI Agent Engine)."
+   },
+   {
+    "letter": "B",
+    "text": "Create a GKE Standard cluster, deploy the agent as a Deployment, and build your own session database."
+   },
+   {
+    "letter": "C",
+    "text": "Run the agent on a Compute Engine VM created from a custom image."
+   },
+   {
+    "letter": "D",
+    "text": "Upload the agent code to a Cloud Storage bucket configured for static website hosting."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** Your team wrote an AI agent (a program that chats with customers and can take actions) using ADK, Google's Agent Development Kit, a code library for building agents.\n- **What you must achieve:** Put it online so Google runs and scales it, and remembers each customer's conversation (sessions) and long-term facts (memory).\n- **The limits:** You do not want to run servers, build containers, or manage Kubernetes.\n- **What they're really asking:** Which Google Cloud service is built to host AI agents with sessions and memory already handled?"
+ },
+ {
+  "file": "G009-workbench-idle-shutdown.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A data scientist explores data with Jupyter notebooks (web pages where you write and run code step by step) and needs a GPU (an AI/graphics chip). The data is in BigQuery (Google's data warehouse).\n- **What you must achieve:** Give them a ready-made notebook environment that doesn't keep charging money when nobody is using it.\n- **The limits:** The notebook is used only a few hours a day, and you want the least setup and upkeep.\n- **What they're really asking:** Which managed notebook option can switch itself off when it's idle?\n\n**Clues in the question:**\n- \"**managed notebook environment**\": Workbench instances are Google-managed JupyterLab.\n- \"**left running overnight**\" + \"**controls this cost with minimal effort**\": Workbench **idle shutdown** stops the instance automatically after a set idle time.\n\n**Exam topic:** Managing compute: notebooks (exam guide section 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. JupyterLab / notebook\n- **What it is:** A browser-based workspace where you write code in cells, run them, and see results and charts inline.\n- **Looks like:** Cell: `%%bigquery\\nSELECT category, SUM(total) FROM orders GROUP BY 1`\n- **Not to be confused with:** A full code editor (IDE) for building apps.\n- **Analogy:** 📓 A lab notebook where each step's result is written right below it.\n- **In the online store:** Analysts explore sales by category.\n\n### 2. Workbench instance 🔑\n- **What it is:** A Google-managed JupyterLab VM in Gemini Enterprise Agent Platform (formerly Vertex AI Workbench), with BigQuery integration, optional GPUs, and an **idle shutdown** setting.\n- **Looks like:** Workbench instance `ds-ana`, `n1-standard-8` + 1× T4 GPU, idle shutdown after 180 min\n- **Not to be confused with:** A raw Compute Engine VM where you install and maintain everything yourself.\n- **Analogy:** 🧪 A lab bench that's set up for you and switches its lights off when you leave.\n- **In the online store:** `ds-ana` explores the `orders` dataset.\n\n### 3. Idle shutdown\n- **What it is:** A Workbench setting that stops the instance after it has been idle for a chosen number of minutes. You pay for compute only while it's running.\n- **Looks like:** `Idle shutdown: on, 60 minutes`\n- **Not to be confused with:** Deleting the instance. Files on its disk stay.\n- **Analogy:** 💡 Motion-sensor lights in the office.\n- **In the online store:** Ana's GPU notebook stops at night automatically.\n\n### 🔗 How they fit together\n```\n Data scientist ──► Workbench instance (JupyterLab + GPU) ──► BigQuery\n                       └─ idle 60 min → auto stop 💰 ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "Finance spotted thousands of dollars in GPU notebook VMs running every weekend. The cloud engineer moves the team to **Workbench instances** with **idle shutdown**, so notebooks stop by themselves when nobody is using them."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** analytics:\n- Workbench instance `ds-ana` with a T4 GPU and idle shutdown after 60 minutes.\n- Ana queries `shopnow_dw.orders` with the `%%bigquery` magic.\n- Simpler SQL-only notebooks can run in BigQuery Studio (Colab Enterprise notebooks)."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Managed Jupyter (+GPU) → Workbench instance. Stop paying when unused → idle shutdown.**\n  🧠 **_\"Workbench naps when idle.\"_**\n- Related: **Q101**, **G010**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**Workbench instance**\" matches \"**managed notebook environment**\".\n- ✔️ \"**with a GPU**\" matches \"**JupyterLab environment with a GPU**\".\n- ✔️ \"**enable idle shutdown**\" matches \"**left running overnight**\" and \"**controls this cost with minimal effort**\".\n\n📌 **When to use it:** Use it when someone needs a ready-made notebook workspace that turns itself off when they walk away.\n🏢 **Office example:** A meeting room whose lights and heating switch off automatically when it's empty.",
+   "B": "**Wrong words:**\n- ❌ \"**install JupyterLab manually**\": not managed, so more effort.\n- ❌ \"**ask the data scientist to stop the VM every evening**\": relies on people remembering, which is exactly what failed before.\n\n📌 **When to use it:** Use it when you need a fully custom machine and accept looking after it yourself.\n🏢 **Office example:** Asking staff to remember to turn the lights off.",
+   "C": "**Wrong words:**\n- ❌ \"**download the BigQuery tables as CSV files**\": copies data onto a laptop, which is slow and a security risk, and a laptop has no cloud GPU.\n\n📌 **When to use it:** Use local notebooks for small personal experiments with tiny public datasets.\n🏢 **Office example:** Photocopying the whole archive to take home.",
+   "D": "**Wrong words:**\n- ❌ \"**GKE Autopilot cluster and deploy JupyterHub**\": a whole platform to build and run for one user. Not minimal effort.\n\n📌 **When to use it:** Use it when a large group needs a shared, customised notebook platform you're ready to run.\n🏢 **Office example:** Building a library to lend out one notebook."
+  },
+  "id": "G009",
+  "title": "Managed Jupyter Notebook With a GPU That Stops Wasting Money Overnight (Workbench Instance + Idle Shutdown)",
+  "num": 9,
+  "guide": true,
+  "topic": "AI/ML notebooks (Workbench)",
+  "stem": "A data scientist needs a JupyterLab environment with a GPU to explore data stored in BigQuery. The notebook is used only a few hours each day, and the finance team has complained about notebook VMs left running overnight. You want a managed notebook environment that controls this cost with minimal effort. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a Workbench instance with a GPU in Gemini Enterprise Agent Platform Workbench, and enable idle shutdown."
+   },
+   {
+    "letter": "B",
+    "text": "Create a Compute Engine VM, install JupyterLab manually, and ask the data scientist to stop the VM every evening."
+   },
+   {
+    "letter": "C",
+    "text": "Have the data scientist run Jupyter on a laptop and download the BigQuery tables as CSV files."
+   },
+   {
+    "letter": "D",
+    "text": "Create a GKE Autopilot cluster and deploy JupyterHub on it."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** A data scientist explores data with Jupyter notebooks (web pages where you write and run code step by step) and needs a GPU (an AI/graphics chip). The data is in BigQuery (Google's data warehouse).\n- **What you must achieve:** Give them a ready-made notebook environment that doesn't keep charging money when nobody is using it.\n- **The limits:** The notebook is used only a few hours a day, and you want the least setup and upkeep.\n- **What they're really asking:** Which managed notebook option can switch itself off when it's idle?"
+ },
+ {
+  "file": "G010-cloud-workstations-contractors.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** 40 outside contractors are joining to write code for the payment system.\n- **What you must achieve:** Give each one a coding setup that's identical for everyone, with the same tools and the same code editor (IDE).\n- **The limits:** Code must never land on their laptops, the setups must run inside your company's private cloud network (VPC), and it should be a managed service.\n- **What they're really asking:** Which Google Cloud service gives developers ready-made, secure coding machines in the cloud?\n\n**Clues in the question:**\n- \"**source code is never stored on contractors' laptops**\": developers must work on remote machines, through the browser or a remote IDE.\n- \"**same preconfigured tools and IDE**\": a **workstation configuration** (one template for everyone).\n- \"**inside your VPC**\" + \"**managed**\": Cloud Workstations runs in your VPC and Google manages it.\n\n**Exam topic:** Developer environments (exam guide section 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Cloud Workstations 🔑\n- **What it is:** A managed service that gives each developer a cloud machine for coding, opened in the browser or from a local IDE. Admins define a **workstation configuration** (container image with tools, machine type, disk, network). It runs in your VPC.\n- **Looks like:** Config `payments-dev`: image `us-docker.pkg.dev/.../code-oss:latest`, `e2-standard-8`, network `corp-vpc`\n- **Not to be confused with:** Cloud Shell, which is a free, small, temporary personal terminal, not a managed team environment in your VPC.\n- **Analogy:** 💻 Company-owned desks in a secure office that look the same for every temp worker.\n- **In the online store:** Payment-service contractors code in the browser.\n\n### 2. Workstation configuration\n- **What it is:** The template for workstations: image, machine size, idle timeout, network, and who can use them.\n- **Looks like:** `gcloud workstations configs create payments-dev --cluster=dev-cluster --region=us-central1 --machine-type=e2-standard-8`\n- **Not to be confused with:** An individual workstation. One config can create many workstations.\n- **Analogy:** 📋 The standard desk setup sheet.\n- **In the online store:** One config for all 40 contractors.\n\n### 3. Cloud Shell\n- **What it is:** A free browser terminal with a small, temporary VM and 5 GB of home storage, tied to your own account.\n- **Looks like:** `ana@cloudshell:~$`\n- **Not to be confused with:** A secure team dev environment in your VPC.\n- **Analogy:** 🖊️ A shared pen at the counter.\n- **In the online store:** Quick `gcloud` commands by admins.\n\n### 🔗 How they fit together\n```\n Contractor browser ──► Cloud Workstations (config payments-dev, in corp-vpc) ──► Git repo\n                         code stays in the cloud ✅  laptop holds nothing\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A fintech company brings in an outside agency. Instead of shipping laptops with code, the platform team creates a **Cloud Workstations** configuration with the company's IDE image in the corporate VPC. Contractors start coding on day one in the browser, and access ends the moment their IAM access is removed."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** payments team:\n- Workstation cluster `dev-cluster` in `corp-vpc`; config `payments-dev` uses a Code OSS image with Node, Python and the payments SDK.\n- Contractors get the `roles/workstations.user` role.\n- The repo is reachable only from inside the VPC."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Standard, secure, managed developer environments, no code on laptops → Cloud Workstations.**\n  🧠 **_\"Code in the cloud desk, not on the laptop.\"_**\n- Related: **G009**, **Q191**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**external IP address**\": exposes dev machines to the internet.\n- ❌ \"**share one SSH key with all of them**\": no individual accountability, and it can't be revoked per person.\n- ❌ No standard tools or IDE are defined.\n\n📌 **When to use it:** Never share one SSH key. Use per-user access, such as Cloud Workstations or OS Login.\n🏢 **Office example:** Handing all temps one copied master key.",
+   "B": "- ✔️ \"**Cloud Workstations**\" matches \"**managed solution**\" and \"**never stored on contractors' laptops**\": the code lives on cloud workstations.\n- ✔️ \"**workstation configuration that defines the container image, machine type**\" matches \"**same preconfigured tools and IDE**\".\n- ✔️ \"**and VPC**\" matches \"**run inside your VPC**\".\n\n📌 **When to use it:** Use it when many developers need identical, secure coding setups that you control centrally.\n🏢 **Office example:** Giving every temp an identical company desk in the secure office instead of letting them work from home.",
+   "C": "**Wrong words:**\n- ❌ \"**install the tools on laptops**\": the code ends up on laptops, which breaks \"**never stored on contractors' laptops**\".\n- ❌ \"**setup script**\": environments drift apart and aren't managed.\n\n📌 **When to use it:** Use it when your own employees work on company-managed laptops and storing code locally is allowed.\n🏢 **Office example:** Sending files home with temps and hoping they lock them up.",
+   "D": "**Wrong words:**\n- ✔️ Code doesn't stay on the laptop.\n- ❌ \"**Cloud Shell**\": a small temporary personal VM, not in your VPC and not centrally configured with your tools.\n\n📌 **When to use it:** Use it for quick command-line tasks in the console.\n🏢 **Office example:** Borrowing the reception desk computer for a minute."
+  },
+  "id": "G010",
+  "title": "Contractors Get Identical Dev Environments Inside Your VPC, No Code on Laptops (Cloud Workstations)",
+  "num": 10,
+  "guide": true,
+  "topic": "Developer environments (Cloud Workstations)",
+  "stem": "Your company is onboarding 40 contractors to work on the payment service. Security requires that source code is never stored on contractors' laptops, every developer uses the same preconfigured tools and IDE, and development environments run inside your VPC. You want a managed solution. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Give each contractor a Compute Engine VM with an external IP address, and share one SSH key with all of them."
+   },
+   {
+    "letter": "B",
+    "text": "Use Cloud Workstations with a workstation configuration that defines the container image, machine type, and VPC, and grant contractors access to their workstations."
+   },
+   {
+    "letter": "C",
+    "text": "Send the contractors a setup script, and require them to install the tools on laptops with full-disk encryption."
+   },
+   {
+    "letter": "D",
+    "text": "Have all contractors use Cloud Shell for development."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** 40 outside contractors are joining to write code for the payment system.\n- **What you must achieve:** Give each one a coding setup that's identical for everyone, with the same tools and the same code editor (IDE).\n- **The limits:** Code must never land on their laptops, the setups must run inside your company's private cloud network (VPC), and it should be a managed service.\n- **What they're really asking:** Which Google Cloud service gives developers ready-made, secure coding machines in the cloud?"
+ },
+ {
+  "file": "G011-vm-manager-patch-deployment.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You look after several hundred VMs (rented computers), some running Linux and some Windows.\n- **What you must achieve:** Install the operating system's security updates (patches) automatically once a month at a set time, and see a report of which VMs updated successfully.\n- **The limits:** It must be automatic and use a Google-managed tool, not something you build.\n- **What they're really asking:** Which Google Cloud tool schedules and reports OS patching across many VMs?\n\n**Clues in the question:**\n- \"**apply operating system security patches automatically every month**\": a **patch deployment** (a scheduled patch job).\n- \"**see which VMs were patched successfully**\": patch job results in VM Manager.\n- \"**Google-managed approach**\": **VM Manager** (OS Config API + agent).\n\n**Exam topic:** Compute Engine management (exam guide section 2.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. VM Manager 🔑\n- **What it is:** A set of Compute Engine tools for managing the operating systems of large VM fleets: **patch management**, **OS inventory**, vulnerability reports and **OS policies**. It needs the OS Config API enabled and the OS Config agent running (it's preinstalled on most Google images).\n- **Looks like:** `gcloud services enable osconfig.googleapis.com`\n- **Not to be confused with:** Cloud Monitoring, which watches health but doesn't install updates.\n- **Analogy:** 🧑‍🔧 The building's maintenance department that services every office on a schedule.\n- **In the online store:** Patches all ShopNow API VMs each month.\n\n### 2. Patch deployment\n- **What it is:** A schedule (one-time or recurring) that runs patch jobs on chosen VMs, picked by labels, zones or name prefixes.\n- **Looks like:** `gcloud compute os-config patch-deployments create monthly --file=monthly.yaml` (monthly, 2nd Sunday 02:00, label env=prod)\n- **Not to be confused with:** A single manual patch job run once.\n- **Analogy:** 📅 \"Service every air conditioner on the 2nd Sunday.\"\n- **In the online store:** `monthly-prod` patches VMs labeled `env=prod`.\n\n### 3. Patch job\n- **What it is:** One run of patching. It shows per-VM status: succeeded, failed or skipped.\n- **Looks like:** Patch job `monthly-2026-11`: 812 succeeded, 3 failed\n- **Not to be confused with:** The schedule itself.\n- **Analogy:** ✅ The checklist from one maintenance visit.\n- **In the online store:** Failed VMs are investigated the next morning.\n\n### 🔗 How they fit together\n```\n Patch deployment (monthly, 2nd Sun 02:00, label env=prod)\n      └─► patch job ─► OS Config agent on each VM ─► apt/yum/Windows Update\n                └─► results per VM (succeeded / failed) ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "After an audit flags unpatched servers, a retailer sets a **VM Manager patch deployment** for all production VMs: every second Sunday at 2 a.m., with a report ready on Monday morning. No one SSHes into anything."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** fleet:\n- VM Manager patch deployment `prod-monthly` (label `env=prod`, 2nd Sunday 02:00 UTC, reboot if required).\n- Vulnerability reports (Q254) show which CVEs remain.\n- Managed instance groups are rolled to new images instead."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **OS patching / inventory / OS policies for many VMs → VM Manager (OS Config). Scheduled patching → patch deployment.**\n  🧠 **_\"VM Manager = the fleet's maintenance crew.\"_**\n- Related: **Q254** (vulnerability reports)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**SSH into each VM every month … manually**\": not automatic, error-prone, and gives no central report for hundreds of VMs.\n\n📌 **When to use it:** Use it for one urgent fix on a single machine.\n🏢 **Office example:** Walking to every office to fix each heater by hand.",
+   "B": "**Wrong words:**\n- ❌ \"**Recreate every VM … without preserving data**\": destroys data and is disruptive. Patching is the safer, simpler way.\n\n📌 **When to use it:** Use rebuilding from fresh images only for stateless VMs in a managed instance group.\n🏢 **Office example:** Rebuilding the office every month to fix the light bulbs.",
+   "C": "- ✔️ \"**Enable VM Manager … OS Config agent**\" matches \"**Google-managed approach**\".\n- ✔️ \"**patch deployment with a monthly schedule**\" matches \"**automatically every month during a maintenance window**\".\n- ✔️ \"**review the patch job results**\" matches \"**see which VMs were patched successfully**\".\n\n📌 **When to use it:** Use it when many machines need regular updates on a schedule with a report afterwards.\n🏢 **Office example:** A maintenance company that services every office monthly and leaves a checklist.",
+   "D": "**Wrong words:**\n- ❌ \"**uptime check**\": tells you if a VM answers. It doesn't install patches.\n\n📌 **When to use it:** Use uptime checks to be alerted when a website stops responding.\n🏢 **Office example:** A guard checking that doors open, not a repair crew."
+  },
+  "id": "G011",
+  "title": "Patch Hundreds of Linux and Windows VMs Monthly and Report Results (VM Manager Patch Deployment)",
+  "num": 11,
+  "guide": true,
+  "topic": "Compute Engine (VM Manager)",
+  "stem": "You manage several hundred Linux and Windows VMs in a project. You must apply operating system security patches automatically every month during a maintenance window and see which VMs were patched successfully. You want to use a Google-managed approach. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "SSH into each VM every month and run the operating system update commands manually."
+   },
+   {
+    "letter": "B",
+    "text": "Recreate every VM each month from the latest public image without preserving data."
+   },
+   {
+    "letter": "C",
+    "text": "Enable VM Manager, make sure the OS Config agent is running on the VMs, create a patch deployment with a monthly schedule, and review the patch job results."
+   },
+   {
+    "letter": "D",
+    "text": "Create a Cloud Monitoring uptime check for each VM."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** You look after several hundred VMs (rented computers), some running Linux and some Windows.\n- **What you must achieve:** Install the operating system's security updates (patches) automatically once a month at a set time, and see a report of which VMs updated successfully.\n- **The limits:** It must be automatic and use a Google-managed tool, not something you build.\n- **What they're really asking:** Which Google Cloud tool schedules and reports OS patching across many VMs?"
+ },
+ {
+  "file": "G012-autopilot-resource-requests.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You run a small background program (a worker) on GKE Autopilot (Google's fully managed Kubernetes mode, where you pay per Pod). Its settings don't say how much CPU and memory each Pod needs (no resource requests).\n- **What you must achieve:** Lower the bill.\n- **The limits:** Keep using Autopilot. Each Pod really uses only about 0.1 vCPU and 200 MiB of memory.\n- **What they're really asking:** On Autopilot, what decides how much you pay for each Pod, and how do you fix it here?\n\n**Clues in the question:**\n- \"**Autopilot**\": you're billed for the CPU and memory your Pods **request**, not for nodes.\n- \"**do not specify resource requests**\": Autopilot then applies **default requests**, which are much larger than 0.1 vCPU / 200 MiB.\n- \"**without changing the cluster mode**\": fix it in the Pod spec, not by switching to Standard.\n\n**Exam topic:** GKE operations (exam guide section 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Resource requests\n- **What it is:** The CPU and memory a container asks Kubernetes to reserve for it. Set in the Pod spec.\n- **Looks like:** `resources: {requests: {cpu: \"250m\", memory: \"256Mi\"}}`\n- **Not to be confused with:** Limits, which are the most a container may use.\n- **Analogy:** 🪑 Reserving 2 desks for a team that needs only 1.\n- **In the online store:** `order-worker` requests 250m CPU.\n\n### 2. GKE Autopilot billing 🔑\n- **What it is:** In Autopilot, Google manages the nodes and you pay for the resources your **Pods request**. If you set no requests, Autopilot applies defaults (for general-purpose Pods, about 0.5 vCPU and 2 GiB of memory per Pod). There are also minimums and CPU-to-memory ratio rules.\n- **Looks like:** No requests set → billed as 0.5 vCPU / 2 GiB per Pod\n- **Not to be confused with:** GKE Standard, where you pay for the node VMs whatever the Pods request.\n- **Analogy:** 🏨 A hotel that charges for the rooms you booked, not the ones you sleep in.\n- **In the online store:** 10 workers × default requests = a surprise bill.\n\n### 3. Node pool (Standard)\n- **What it is:** A group of nodes with one machine type that you manage in GKE Standard. Autopilot manages nodes for you.\n- **Looks like:** `gcloud container node-pools create small --machine-type=e2-small` (Standard only)\n- **Not to be confused with:** Something you edit in Autopilot.\n- **Analogy:** 🏢 Choosing office furniture yourself vs a serviced office.\n- **In the online store:** Not used in Autopilot.\n\n### 🔗 How they fit together\n```\n No requests → Autopilot default ≈ 0.5 vCPU / 2 GiB per Pod 💸\n Set requests ≈ 250m / 256Mi (≥ Autopilot minimums) → pay for what you use ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A team moves its email-sending worker to Autopilot and forgets resource requests. Each tiny Pod is billed at the default size. Adding `resources.requests` close to real usage cuts the worker's cost several times over."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `email-worker` on Autopilot:\n```yaml\nresources:\n  requests: {cpu: \"250m\", memory: \"512Mi\"}\n```\nBefore: 10 Pods billed at the defaults. After: about a quarter of the CPU cost."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Autopilot bills Pod requests. No requests → defaults (≈0.5 vCPU / 2 GiB). Too costly → set right-sized requests.**\n  🧠 **_\"Autopilot: pay what you request.\"_**\n- Related: **Q267**, **Q283**, **Q291**, **Q296** (Autopilot)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Change the machine type of the Autopilot cluster's node pool**\": in Autopilot, Google manages nodes, and you're billed by Pod requests anyway.\n\n📌 **When to use it:** Use it in GKE Standard when you choose node sizes yourself.\n🏢 **Office example:** Trying to pick furniture in a fully serviced office.",
+   "B": "**Wrong words:**\n- ❌ \"**Increase the number of replicas**\": more Pods, each still billed at the default size, so the cost goes **up**.\n\n📌 **When to use it:** Use more replicas when you need more capacity or availability.\n🏢 **Office example:** Hiring more staff to save on payroll.",
+   "C": "- ✔️ \"**Set CPU and memory resource requests in the Pod specification**\" matches \"**containers do not specify resource requests**\": this replaces the large defaults.\n- ✔️ \"**match the actual usage**\" matches \"**about 0.1 vCPU and 200 MiB**\" and \"**reduce cost**\".\n- ✔️ \"**within Autopilot's allowed minimums and ratios**\": Autopilot rounds requests up to its minimums, so you stay valid while paying for much less than the default.\n\n📌 **When to use it:** Use it when you pay for what you reserve, so you reserve only what you actually need.\n🏢 **Office example:** Booking one desk instead of two because the person only needs one.",
+   "D": "**Wrong words:**\n- ❌ \"**Enable the cluster autoscaler on the Autopilot cluster**\": Autopilot already manages scaling, and this doesn't change what each Pod is billed for.\n\n📌 **When to use it:** Use the cluster autoscaler on GKE Standard node pools.\n🏢 **Office example:** Asking a serviced office to add a lift you can't control."
+  },
+  "id": "G012",
+  "title": "Autopilot Bill Too High Because Pods Have No Resource Requests (Set Requests That Match Real Usage)",
+  "num": 12,
+  "guide": true,
+  "topic": "GKE (Autopilot Pod resource requests)",
+  "stem": "You run a small worker Deployment on a GKE Autopilot cluster. The containers do not specify resource requests. Monitoring shows that each Pod uses about 0.1 vCPU and 200 MiB of memory, but the cost is much higher than expected. You want to reduce cost without changing the cluster mode. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Change the machine type of the Autopilot cluster's node pool to a smaller machine type."
+   },
+   {
+    "letter": "B",
+    "text": "Increase the number of replicas so the load is spread across more Pods."
+   },
+   {
+    "letter": "C",
+    "text": "Set CPU and memory resource requests in the Pod specification that match the actual usage, within Autopilot's allowed minimums and ratios."
+   },
+   {
+    "letter": "D",
+    "text": "Enable the cluster autoscaler on the Autopilot cluster."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** You run a small background program (a worker) on GKE Autopilot (Google's fully managed Kubernetes mode, where you pay per Pod). Its settings don't say how much CPU and memory each Pod needs (no resource requests).\n- **What you must achieve:** Lower the bill.\n- **The limits:** Keep using Autopilot. Each Pod really uses only about 0.1 vCPU and 200 MiB of memory.\n- **What they're really asking:** On Autopilot, what decides how much you pay for each Pod, and how do you fix it here?"
+ },
+ {
+  "file": "G013-helm-third-party-gke.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You must install the same outside software (a monitoring tool) on several Kubernetes clusters (GKE: Google's managed Kubernetes). The vendor packages it as a Helm chart, a ready-made bundle of Kubernetes setup files.\n- **What you must achieve:** Install it everywhere with a few different settings per cluster, and be able to update or undo updates easily.\n- **The limits:** Settings differ per cluster, such as how many copies run (replicas) and how much storage it gets.\n- **What they're really asking:** Which tool installs packaged Kubernetes apps with per-cluster settings and versioned upgrades and rollbacks?\n\n**Clues in the question:**\n- \"**publishes the tool as a Helm chart**\": use **Helm**, the Kubernetes package manager.\n- \"**slightly different settings**\": a Helm **values file** per cluster.\n- \"**simple upgrades and rollbacks**\": `helm upgrade` and `helm rollback` keep a release history.\n\n**Exam topic:** Tooling and IaC (exam guide section 2.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Helm 🔑\n- **What it is:** The package manager for Kubernetes. A **chart** is a package of templated Kubernetes YAML. You install it as a **release**, with settings from a **values file**. Helm tracks versions so you can upgrade or roll back.\n- **Looks like:** `helm install mon vendor/monitor -f values-prod.yaml` / `helm rollback mon 3`\n- **Not to be confused with:** kubectl, which applies plain YAML with no packaging or release history.\n- **Analogy:** 📦 An app store installer with a settings screen and an undo button.\n- **In the online store:** Installing the payment-fraud monitor on prod and staging.\n\n### 2. Values file\n- **What it is:** A YAML file holding the settings that fill in a chart's templates.\n- **Looks like:** `replicaCount: 3\\npersistence: {size: 50Gi}`\n- **Not to be confused with:** The chart itself, which stays the same for every cluster.\n- **Analogy:** 📝 The order form you fill out for each branch office.\n- **In the online store:** `values-prod.yaml` vs `values-staging.yaml`.\n\n### 🔗 How they fit together\n```\n vendor/monitor chart ─┬─ values-prod.yaml  ─► helm install → prod cluster\n                       └─ values-stage.yaml ─► helm install → staging cluster\n helm upgrade / helm rollback ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A platform team runs prod, staging and dev GKE clusters. The vendor ships a Helm chart, so the team keeps three small values files in Git and runs `helm upgrade --install` from CI. When a bad upgrade breaks dashboards, `helm rollback` restores the previous release in seconds."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**:\n- `helm upgrade --install fraud-mon vendor/fraud-monitor -f values-prod.yaml -n monitoring` runs in Cloud Build for each cluster.\n- Rollback: `helm rollback fraud-mon 4`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Packaged Kubernetes app + per-environment settings + upgrade/rollback → Helm (chart + values).**\n  🧠 **_\"Helm = app store for Kubernetes.\"_**\n- Related: **Q304**, **Q372**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**edit them by hand for each cluster**\": copies drift apart, and there's no release history for upgrades or rollbacks.\n\n📌 **When to use it:** Use plain YAML for your own small apps when there's only one environment.\n🏢 **Office example:** Retyping the same form for every branch office.",
+   "B": "**Wrong words:**\n- ❌ \"**custom node image**\": the tool runs as Kubernetes workloads, not baked into nodes, and every change would mean rebuilding nodes.\n\n📌 **When to use it:** Use custom images for VM-level software you must preinstall.\n🏢 **Office example:** Rebuilding the office to add a new printer.",
+   "C": "- ✔️ \"**Use Helm**\" matches \"**publishes the tool as a Helm chart**\".\n- ✔️ \"**one values file per cluster**\" matches \"**slightly different settings**\".\n- ✔️ \"**helm upgrade and helm rollback**\" matches \"**simple upgrades and rollbacks**\".\n\n📌 **When to use it:** Use it when you install a packaged app in several places with small differences and want an undo button.\n🏢 **Office example:** A standard order form with a few boxes changed for each branch, and the old forms kept on file.",
+   "D": "**Wrong words:**\n- ❌ \"**Compute Engine VMs for each component**\": abandons Kubernetes and the vendor's chart entirely.\n\n📌 **When to use it:** Use VMs for software that can't run in containers.\n🏢 **Office example:** Renting separate offices for each part of one team."
+  },
+  "id": "G013",
+  "title": "Install a Vendor's App on Several GKE Clusters With Per-Cluster Settings, Easy Upgrade and Rollback (Helm)",
+  "num": 13,
+  "guide": true,
+  "topic": "Infrastructure as Code (Helm)",
+  "stem": "You need to install a third-party monitoring tool on several GKE clusters. The vendor publishes the tool as a Helm chart. Each cluster needs slightly different settings, such as the number of replicas and the storage size. You want simple upgrades and rollbacks. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Copy the vendor's Kubernetes YAML files into each cluster and edit them by hand for each cluster."
+   },
+   {
+    "letter": "B",
+    "text": "Build a custom node image that includes the tool and use it for all GKE nodes."
+   },
+   {
+    "letter": "C",
+    "text": "Use Helm with one values file per cluster, install the chart with helm install, and use helm upgrade and helm rollback to manage versions."
+   },
+   {
+    "letter": "D",
+    "text": "Create Compute Engine VMs for each component of the tool with gcloud compute instances create."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** You must install the same outside software (a monitoring tool) on several Kubernetes clusters (GKE: Google's managed Kubernetes). The vendor packages it as a Helm chart, a ready-made bundle of Kubernetes setup files.\n- **What you must achieve:** Install it everywhere with a few different settings per cluster, and be able to update or undo updates easily.\n- **The limits:** Settings differ per cluster, such as how many copies run (replicas) and how much storage it gets.\n- **What they're really asking:** Which tool installs packaged Kubernetes apps with per-cluster settings and versioned upgrades and rollbacks?"
+ },
+ {
+  "file": "G014-fabric-fast-landing-zone.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A company is starting on Google Cloud and needs the base setup every large company needs (a landing zone): the organization, folders, billing, central logs, shared networking, and security rules.\n- **What you must achieve:** Build that base with Terraform (a tool that creates cloud resources from code files).\n- **The limits:** Don't start from a blank page. Start from a ready-made, opinionated design published by Google.\n- **What they're really asking:** Which Google-published Terraform toolkit sets up a full enterprise foundation?\n\n**Clues in the question:**\n- \"**enterprise foundation … organization setup, folders, billing, centralized logging, Shared VPC**\": a **landing zone**.\n- \"**Terraform**\" + \"**opinionated reference design published by Google**\": **Fabric FAST** (part of Cloud Foundation Fabric on GitHub).\n\n**Exam topic:** Tooling and IaC (exam guide section 2.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Landing zone\n- **What it is:** The foundation of a cloud setup: org structure, identity, billing, networking, logging and security guardrails, all in place before apps arrive.\n- **Looks like:** Org → folders `prod`, `dev`, `shared` → Shared VPC host project, log sink project\n- **Not to be confused with:** A single app project.\n- **Analogy:** 🏗️ The building's foundation, plumbing and wiring before tenants move in.\n- **In the online store:** ShopNow's org, folders and shared network.\n\n### 2. Fabric FAST 🔑\n- **What it is:** A Terraform-based set of **stages** (bootstrap, resource management, security, networking, project factory) from Google's open-source Cloud Foundation Fabric repository. It builds an enterprise landing zone following Google's recommendations.\n- **Looks like:** `git clone github.com/GoogleCloudPlatform/cloud-foundation-fabric` → `fast/stages/0-bootstrap` → `terraform apply`\n- **Not to be confused with:** Helm (Kubernetes app packages) or Config Connector (Kubernetes-style resources).\n- **Analogy:** 📐 An architect's tested blueprint for an office tower.\n- **In the online store:** Stage `2-networking` creates the Shared VPC.\n\n### 🔗 How they fit together\n```\n Fabric FAST stages (Terraform):\n 0-bootstrap → 1-resman (folders) → 2-security / 2-networking (Shared VPC) → 3-project factory ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A retailer moving from on-prem needs a secure foundation in weeks, not months. The platform team forks **Fabric FAST**, fills in its organization ID, billing account and IP ranges, and applies the stages in order. They get folders, a log sink, a Shared VPC and org policies that follow Google's recommendations."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** foundation (Fabric FAST):\n- Folders `storefront`, `data`, `shared`; Shared VPC host `shopnow-net-prod`.\n- Org log sink → `shopnow-audit-logs`; org policies such as `iam.disableServiceAccountKeyCreation`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Enterprise landing zone + Terraform + Google's opinionated reference → Fabric FAST.**\n  🧠 **_\"FAST foundation.\"_**\n- Related: **Q272**, **Q318**, **Q341** (Terraform)."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**Fabric FAST**\" matches \"**opinionated reference design published by Google**\".\n- ✔️ It is Terraform, which matches \"**use Terraform**\".\n- ✔️ Its stages cover \"**organization setup, folders, billing, centralized logging, Shared VPC networking, and security baselines**\".\n\n📌 **When to use it:** Use it when you must set up a company-wide cloud foundation with code and want a proven blueprint to start from.\n🏢 **Office example:** Using a tested architect's blueprint for a new office building instead of sketching one yourself.",
+   "B": "**Wrong words:**\n- ❌ \"**Helm chart**\": installs apps inside Kubernetes, not organizations, folders or billing.\n\n📌 **When to use it:** Use Helm to install packaged apps on Kubernetes clusters.\n🏢 **Office example:** An appliance installer, not a building blueprint.",
+   "C": "**Wrong words:**\n- ❌ \"**Deployment Manager**\": Google's older tool, now deprecated, and not Terraform.\n- ❌ \"**written by your team**\": the opposite of starting from Google's reference design.\n\n📌 **When to use it:** Avoid it for new work. Use Terraform-based tooling.\n🏢 **Office example:** An old drafting kit that's being retired.",
+   "D": "**Wrong words:**\n- ❌ \"**Manual configuration in the Google Cloud console**\": not code, hard to repeat or review, and not Terraform.\n\n📌 **When to use it:** Use the console to explore or for one-off small changes.\n🏢 **Office example:** Building the office by hand with no blueprint."
+  },
+  "id": "G014",
+  "title": "Build an Enterprise Google Cloud Foundation With Terraform From Google's Reference Design (Fabric FAST)",
+  "num": 14,
+  "guide": true,
+  "topic": "Infrastructure as Code (Fabric FAST)",
+  "stem": "Your company is adopting Google Cloud and must build an enterprise foundation that includes the organization setup, folders, billing, centralized logging, Shared VPC networking, and security baselines. The platform team wants to use Terraform and start from an opinionated reference design published by Google instead of writing everything from scratch. What should you use?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Fabric FAST from the Cloud Foundation Fabric repository."
+   },
+   {
+    "letter": "B",
+    "text": "A Helm chart installed on a GKE cluster."
+   },
+   {
+    "letter": "C",
+    "text": "Cloud Deployment Manager templates written by your team."
+   },
+   {
+    "letter": "D",
+    "text": "Manual configuration in the Google Cloud console."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** A company is starting on Google Cloud and needs the base setup every large company needs (a landing zone): the organization, folders, billing, central logs, shared networking, and security rules.\n- **What you must achieve:** Build that base with Terraform (a tool that creates cloud resources from code files).\n- **The limits:** Don't start from a blank page. Start from a ready-made, opinionated design published by Google.\n- **What they're really asking:** Which Google-published Terraform toolkit sets up a full enterprise foundation?"
+ },
+ {
+  "file": "G015-application-design-center.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A platform team (the people who set up shared cloud tools) wants app developers to build new apps on their own, but only from approved building blocks.\n- **What you must achieve:** Let developers pick ready-made architecture templates (for example \"web app + database + load balancer\") on a drag-and-drop canvas in the console and deploy them.\n- **The limits:** The templates must be approved and reusable, and the result must deploy as infrastructure as code (resources defined in code files).\n- **What they're really asking:** Which Google Cloud console tool lets you design apps visually from templates and deploy them as code?\n\n**Clues in the question:**\n- \"**visual canvas**\" + \"**approved, reusable architecture templates**\": **Application Design Center**.\n- \"**deploy as infrastructure as code**\": its designs are backed by Terraform.\n\n**Exam topic:** Tooling (exam guide section 2.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Application Design Center 🔑\n- **What it is:** A Google Cloud console tool for designing application architectures on a canvas from components and shared **templates** that platform teams publish, then deploying them as Terraform-backed infrastructure. Gemini Cloud Assist can help draft designs.\n- **Looks like:** Canvas: [Load balancer] → [Cloud Run] → [Cloud SQL] → Deploy\n- **Not to be confused with:** Cloud Asset Inventory, which lists what already exists. It doesn't design anything.\n- **Analogy:** 🏠 A home builder's catalog of approved floor plans you customise and order.\n- **In the online store:** Developers create the `gift-cards` app from the \"web + SQL\" template.\n\n### 2. Architecture template\n- **What it is:** A pre-approved pattern of connected resources with sensible defaults.\n- **Looks like:** \"Serverless web app\": HTTPS LB + Cloud Run + Cloud SQL + Secret Manager\n- **Not to be confused with:** A single VM image.\n- **Analogy:** 📐 A standard office layout plan.\n- **In the online store:** The platform team publishes `shopnow-web-template`.\n\n### 🔗 How they fit together\n```\n Platform team publishes templates ─► Application Design Center canvas\n Developer drags template, edits ─► deploy (Terraform under the hood) ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "Developers kept asking the platform team for the same \"Cloud Run + database\" setup. The team publishes that pattern as a template in **Application Design Center**, and developers now create and deploy new services themselves, within approved guardrails."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: template `serverless-web` (LB + Cloud Run + Cloud SQL). The loyalty team designs `loyalty-api` from it and deploys it to the dev folder."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Visual app design from approved templates, deployed as code → Application Design Center.**\n  🧠 **_\"Design Center = drawing board for cloud apps.\"_**\n- Related: **G014**, **G016**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**Application Design Center**\" matches \"**visual canvas in the Google Cloud console**\".\n- ✔️ It uses templates from the platform team, matching \"**approved, reusable architecture templates**\".\n- ✔️ It deploys Terraform-based infrastructure, matching \"**deploy as infrastructure as code**\".\n\n📌 **When to use it:** Use it when teams should build new systems by picking from approved designs on a drawing board.\n🏢 **Office example:** Choosing from the builder's approved floor plans instead of designing a house from nothing.",
+   "B": "**Wrong words:**\n- ❌ \"**Cloud Asset Inventory**\": an inventory and search of existing resources. It doesn't design or deploy apps.\n\n📌 **When to use it:** Use it to find and list everything that already exists.\n🏢 **Office example:** The office's furniture inventory list.",
+   "C": "**Wrong words:**\n- ❌ \"**Cloud Shell Editor**\": a code editor in the browser, with no visual architecture canvas or template catalog.\n\n📌 **When to use it:** Use it to edit files and run commands quickly in the browser.\n🏢 **Office example:** A notepad, not a design studio.",
+   "D": "**Wrong words:**\n- ❌ \"**Cloud Billing reports**\": shows spending. It doesn't design or deploy anything.\n\n📌 **When to use it:** Use it to see what you're spending and where.\n🏢 **Office example:** The accounts department's monthly statement."
+  },
+  "id": "G015",
+  "title": "Developers Design and Deploy Apps From Approved Templates on a Visual Canvas (Application Design Center)",
+  "num": 15,
+  "guide": true,
+  "topic": "AI-assisted tooling (Application Design Center)",
+  "stem": "Your platform team wants application developers to design and deploy new applications by selecting approved, reusable architecture templates, such as Cloud Run with Cloud SQL behind a load balancer, on a visual canvas in the Google Cloud console. The designs should deploy as infrastructure as code. What should you use?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Application Design Center"
+   },
+   {
+    "letter": "B",
+    "text": "Cloud Asset Inventory"
+   },
+   {
+    "letter": "C",
+    "text": "Cloud Shell Editor"
+   },
+   {
+    "letter": "D",
+    "text": "Cloud Billing reports"
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** A platform team (the people who set up shared cloud tools) wants app developers to build new apps on their own, but only from approved building blocks.\n- **What you must achieve:** Let developers pick ready-made architecture templates (for example \"web app + database + load balancer\") on a drag-and-drop canvas in the console and deploy them.\n- **The limits:** The templates must be approved and reusable, and the result must deploy as infrastructure as code (resources defined in code files).\n- **What they're really asking:** Which Google Cloud console tool lets you design apps visually from templates and deploy them as code?"
+ },
+ {
+  "file": "G016-gemini-cli-terminal-agent.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A developer works mostly in the terminal (the text window where you type commands).\n- **What you must achieve:** Get an AI helper right there that can read the project's files, change code, and run commands like gcloud (Google Cloud's command-line tool) and git (version control), after asking first.\n- **The limits:** It must run in the terminal, not in a web console.\n- **What they're really asking:** Which Google AI tool is an agent that lives in your terminal?\n\n**Clues in the question:**\n- \"**runs in the terminal**\": a command-line tool.\n- \"**read the project's source files … run commands … after asking for permission**\": an AI **agent** that acts locally. That's **Gemini CLI**.\n\n**Exam topic:** AI-assisted tooling (exam guide section 2.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Gemini CLI 🔑\n- **What it is:** An open-source AI agent from Google that runs in your terminal. It reads and edits files in your project, runs shell commands (gcloud, git, tests) with your approval, and can connect to extra tools through MCP servers.\n- **Looks like:** `$ gemini` → \"add a health check endpoint and deploy it to Cloud Run\"\n- **Not to be confused with:** Gemini Cloud Assist, which is the AI help **inside the Google Cloud console** for your cloud resources.\n- **Analogy:** 🧑‍💻 A helper sitting next to you at your desk who can type for you when you say yes.\n- **In the online store:** Writing a new Cloud Run handler and running `gcloud run deploy`.\n\n### 2. Google Antigravity\n- **What it is:** Google's agent-first code editor (IDE), where AI agents plan and carry out coding tasks across the editor, terminal and browser.\n- **Looks like:** Agent Manager view: \"Build the checkout page tests\" → plan → changes → review\n- **Not to be confused with:** Gemini CLI. Antigravity is a full editor application, while Gemini CLI is a terminal tool.\n- **Analogy:** 🏗️ A whole workshop with robot assistants, vs one helper at your desk.\n- **In the online store:** Larger feature work by the storefront team.\n\n### 🔗 How they fit together\n```\n Terminal ─► Gemini CLI ─► reads repo files\n                          ─► proposes edits / runs gcloud, git (asks first) ✅\n Console  ─► Gemini Cloud Assist (cloud resources, not your local repo)\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A developer on call needs to add a feature flag and redeploy fast. In the terminal, **Gemini CLI** reads the code, edits two files, runs the tests, and after approval runs `gcloud run deploy`."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** dev: `gemini` → \"add a /healthz route to orders-api and redeploy to staging\" → reviews diff → approves `gcloud run deploy orders-api --region=us-central1`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **AI agent in the terminal → Gemini CLI. AI in the console for your cloud → Gemini Cloud Assist. Agent-first IDE → Antigravity.**\n  🧠 **_\"CLI = command line.\"_**\n- Related: **G015**, **G017**, **G023**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**in the Google Cloud console**\": Cloud Assist works with your **cloud resources** in the console, not your local terminal and code files.\n\n📌 **When to use it:** Use it when you want AI help understanding or fixing things in your Google Cloud projects from the console.\n🏢 **Office example:** The help desk inside the building's management office.",
+   "B": "**Wrong words:**\n- ❌ \"**Application Design Center**\": a visual architecture designer in the console, not a terminal coding agent.\n\n📌 **When to use it:** Use it to design new apps from approved templates.\n🏢 **Office example:** The architect's drawing board, not your desk helper.",
+   "C": "- ✔️ \"**Gemini CLI**\" matches \"**runs in the terminal**\".\n- ✔️ It reads and edits project files and runs commands with approval, matching \"**read the project's source files … run commands such as gcloud and git after asking for permission**\".\n\n📌 **When to use it:** Use it when you want an AI helper right in your command window that can read your files and do tasks after you agree.\n🏢 **Office example:** A helper at your desk who reads the file with you and types only when you say \"go ahead\".",
+   "D": "**Wrong words:**\n- ✔️ It's a terminal.\n- ❌ \"**without any AI tools**\": no AI assistant to read or change code.\n\n📌 **When to use it:** Use it for quick commands in the browser.\n🏢 **Office example:** A plain notepad with no assistant."
+  },
+  "id": "G016",
+  "title": "An AI Agent in the Terminal That Reads Code and Runs gcloud/git With Permission (Gemini CLI)",
+  "num": 16,
+  "guide": true,
+  "topic": "AI-assisted tooling (Gemini CLI)",
+  "stem": "A developer wants an AI assistant that runs in the terminal, can read the project's source files, suggest and make code changes, and run commands such as gcloud and git after asking for permission. Which tool should the developer use?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Gemini Cloud Assist in the Google Cloud console"
+   },
+   {
+    "letter": "B",
+    "text": "Application Design Center"
+   },
+   {
+    "letter": "C",
+    "text": "Gemini CLI"
+   },
+   {
+    "letter": "D",
+    "text": "Cloud Shell without any AI tools"
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** A developer works mostly in the terminal (the text window where you type commands).\n- **What you must achieve:** Get an AI helper right there that can read the project's files, change code, and run commands like gcloud (Google Cloud's command-line tool) and git (version control), after asking first.\n- **The limits:** It must run in the terminal, not in a web console.\n- **What they're really asking:** Which Google AI tool is an agent that lives in your terminal?"
+ },
+ {
+  "file": "G017-antigravity-agent-ide.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A development team wants AI to do larger coding jobs, not just suggest single lines.\n- **What you must achieve:** Hand an AI agent a whole task (like \"build the checkout page with tests\") and have it plan, write code across many files, run commands, and check the result in a browser.\n- **The limits:** Developers stay in control by reviewing the agent's plan and changes. It should be a code editor (IDE).\n- **What they're really asking:** Which Google tool is an agent-first code editor?\n\n**Clues in the question:**\n- \"**code editor in which AI agents … plan the work, write code across files, run commands … test the result in a browser**\": an **agent-first IDE**. That's **Google Antigravity**.\n- \"**developers review the agents' plans and changes**\": the developer is a reviewer or manager of agents.\n\n**Exam topic:** AI-assisted tooling (exam guide section 2.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Google Antigravity 🔑\n- **What it is:** Google's agent-first development platform (an IDE). Developers give tasks to AI agents that plan and carry them out across the editor, terminal and a browser, then report back with plans and results to review.\n- **Looks like:** Task: \"Add checkout page + tests\" → agent plan → code diffs → browser test screenshots\n- **Not to be confused with:** Gemini CLI (a terminal agent) or Gemini Cloud Assist (AI help in the Cloud console).\n- **Analogy:** 🏗️ A workshop where robot assistants build a piece while you inspect each step.\n- **In the online store:** Building the new checkout page.\n\n### 2. IDE\n- **What it is:** Integrated development environment: an app for writing, running and debugging code.\n- **Looks like:** VS Code-style editor with file tree, editor, terminal\n- **Not to be confused with:** A plain text editor.\n- **Analogy:** 🛠️ A fully equipped workbench.\n- **In the online store:** Where developers work on the storefront.\n\n### 🔗 How they fit together\n```\n Developer ─task─► Antigravity agent ─► plan → edit files → run terminal → test in browser\n            ◄──── review plan & changes ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A storefront team gives an **Antigravity** agent the task \"add gift-card support to checkout with tests\". The agent proposes a plan, edits the frontend and API, runs the tests, and shows browser screenshots. A developer reviews and merges."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** storefront team: an Antigravity task builds `CheckoutGiftCard.tsx` plus API changes and Playwright tests. A human reviews and merges."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Agent-first IDE → Antigravity. Terminal agent → Gemini CLI. Console cloud helper → Gemini Cloud Assist.**\n  🧠 **_\"Antigravity lifts whole tasks.\"_**\n- Related: **G016**, **G023**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ✔️ It's a code editor.\n- ❌ \"**Cloud Shell Editor**\": a basic browser editor with no agents that plan and carry out multi-step tasks.\n\n📌 **When to use it:** Use it for quick edits in the browser.\n🏢 **Office example:** A notepad on the reception desk.",
+   "B": "**Wrong words:**\n- ❌ \"**Gemini Cloud Assist**\": AI help for your Google Cloud resources in the console, not a code editor where agents build features.\n\n📌 **When to use it:** Use it to understand, troubleshoot or optimize cloud resources.\n🏢 **Office example:** The building manager's help desk, not a workshop.",
+   "C": "**Wrong words:**\n- ✔️ A managed developer environment.\n- ❌ \"**without any AI tools**\": no agents to plan or build anything.\n\n📌 **When to use it:** Use it for secure, standard developer machines.\n🏢 **Office example:** A clean desk, but no assistant.",
+   "D": "- ✔️ \"**Google Antigravity**\" matches \"**code editor in which AI agents**\": an agent-first IDE.\n- ✔️ Its agents plan, edit files, use the terminal and test in a browser, matching \"**plan the work, write code across files, run commands … test the result in a browser**\".\n- ✔️ Developers review the agents' plans and results, matching \"**developers review**\".\n\n📌 **When to use it:** Use it when you want AI assistants to take on whole coding tasks while you check their work.\n🏢 **Office example:** A workshop where assistants build the piece and you inspect it before it ships."
+  },
+  "id": "G017",
+  "title": "An Agent-First Code Editor Where AI Agents Plan and Build Features Across Editor, Terminal and Browser (Google Antigravity)",
+  "num": 17,
+  "guide": true,
+  "topic": "AI-assisted tooling (Google Antigravity)",
+  "stem": "Your development team wants a code editor in which AI agents can take a task such as \"add a checkout page with tests,\" plan the work, write code across files, run commands in the terminal, and test the result in a browser, while developers review the agents' plans and changes. Which tool should the team use?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Cloud Shell Editor"
+   },
+   {
+    "letter": "B",
+    "text": "Gemini Cloud Assist"
+   },
+   {
+    "letter": "C",
+    "text": "Cloud Workstations without any AI tools"
+   },
+   {
+    "letter": "D",
+    "text": "Google Antigravity"
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** A development team wants AI to do larger coding jobs, not just suggest single lines.\n- **What you must achieve:** Hand an AI agent a whole task (like \"build the checkout page with tests\") and have it plan, write code across many files, run commands, and check the result in a browser.\n- **The limits:** Developers stay in control by reviewing the agent's plan and changes. It should be a code editor (IDE).\n- **What they're really asking:** Which Google tool is an agent-first code editor?"
+ },
+ {
+  "file": "G018-managed-prometheus.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your team runs its own Prometheus (a popular open-source metrics collector) inside Kubernetes. It keeps filling its disk and needs constant care.\n- **What you must achieve:** Hand metric storage and scaling to Google.\n- **The limits:** Keep the same PromQL queries (Prometheus's query language) and the same Grafana dashboards (a chart tool).\n- **What they're really asking:** Which Google service is a managed Prometheus that still speaks PromQL?\n\n**Clues in the question:**\n- \"**self-managed Prometheus … constant maintenance**\" + \"**Google manage metric storage and scaling**\": **Managed Service for Prometheus** (data stored in Cloud Monitoring).\n- \"**keep using PromQL … Grafana**\": it supports PromQL and Grafana through a Prometheus-compatible API.\n\n**Exam topic:** Monitoring (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Prometheus / PromQL\n- **What it is:** Prometheus collects (\"scrapes\") metrics from apps. PromQL is its query language.\n- **Looks like:** `rate(http_requests_total{job=\"checkout\"}[5m])`\n- **Not to be confused with:** Cloud Logging (logs, not metrics).\n- **Analogy:** 🌡️ Thermometers in every room, plus the language for asking about them.\n- **In the online store:** Checkout request rate.\n\n### 2. Managed Service for Prometheus 🔑\n- **What it is:** Google Cloud's fully managed Prometheus. **Managed collection** runs collectors in GKE (on by default in newer clusters), you choose what to scrape with **PodMonitoring** resources, data lives in Cloud Monitoring's global store, and you query with PromQL in Cloud Monitoring or Grafana.\n- **Looks like:** `apiVersion: monitoring.googleapis.com/v1\\nkind: PodMonitoring\\nspec: {selector: {matchLabels: {app: checkout}}, endpoints: [{port: metrics}]}`\n- **Not to be confused with:** The Ops Agent, which collects system metrics and logs from VMs.\n- **Analogy:** 🏢 Handing the thermometer records to a professional records office that never runs out of shelves.\n- **In the online store:** Checkout and cart metrics in managed storage.\n\n### 🔗 How they fit together\n```\n Pods (/metrics) ◄─scrape─ managed collectors (GKE) ─► Cloud Monitoring (Monarch store)\n Grafana / Cloud Monitoring ─PromQL─► query ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "An online store's self-run Prometheus crashed during Black Friday when its disk filled up. Moving to **Managed Service for Prometheus** keeps every PromQL dashboard, removes the server to babysit, and keeps metrics for 24 months."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** GKE:\n- PodMonitoring `checkout-metrics` (port `metrics`, every 30s).\n- Grafana data source → Cloud Monitoring Prometheus API.\n- Alert on `rate(checkout_errors_total[5m]) > 1` in Cloud Monitoring."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Prometheus without running it, keep PromQL/Grafana → Managed Service for Prometheus (PodMonitoring).**\n  🧠 **_\"Keep PromQL, drop the server.\"_**\n- Related: **Q300**, **Q231** (Ops Agent)."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**Managed Service for Prometheus with managed collection**\" matches \"**Google manage metric storage and scaling**\".\n- ✔️ \"**PodMonitoring resources for the applications**\" replaces the self-managed scrape config.\n- ✔️ \"**point Grafana at the Prometheus-compatible query endpoint**\" matches \"**keep using PromQL queries and existing Grafana dashboards**\".\n\n📌 **When to use it:** Use it when you like your current metric tool and charts but want someone else to store and scale the data.\n🏢 **Office example:** Keeping your forms but handing the archive to a professional records office.",
+   "B": "**Wrong words:**\n- ❌ \"**every hour**\" and \"**query them with BigQuery**\": not real-time monitoring, and it breaks PromQL and Grafana.\n\n📌 **When to use it:** Use exports to BigQuery for long-term analysis, not live dashboards.\n🏢 **Office example:** Mailing yesterday's readings to accounting.",
+   "C": "**Wrong words:**\n- ❌ \"**Increase the size of the … Persistent Disk**\": a short-term patch. You still run and maintain the server.\n\n📌 **When to use it:** Use it as a quick stopgap while planning the move.\n🏢 **Office example:** Buying a bigger filing cabinet when you need a records office.",
+   "D": "**Wrong words:**\n- ❌ \"**Ops Agent on every GKE node**\": the Ops Agent is for Compute Engine VMs, not GKE app metrics.\n- ❌ \"**rebuild the dashboards without PromQL**\": breaks \"**keep using PromQL queries and existing Grafana dashboards**\".\n\n📌 **When to use it:** Use the Ops Agent on regular VMs to send their system metrics and logs.\n🏢 **Office example:** Throwing away the team's reports and starting new forms."
+  },
+  "id": "G018",
+  "title": "Stop Running Your Own Prometheus Server but Keep PromQL and Grafana (Managed Service for Prometheus)",
+  "num": 18,
+  "guide": true,
+  "topic": "Monitoring (Managed Service for Prometheus)",
+  "stem": "Your team runs a self-managed Prometheus server on a GKE cluster to collect application metrics. The server often runs out of storage and requires constant maintenance. The team wants to keep using PromQL queries and existing Grafana dashboards, but have Google manage metric storage and scaling. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Use Google Cloud Managed Service for Prometheus with managed collection, define PodMonitoring resources for the applications, and point Grafana at the Prometheus-compatible query endpoint."
+   },
+   {
+    "letter": "B",
+    "text": "Export the metrics to a Cloud Storage bucket every hour, and query them with BigQuery."
+   },
+   {
+    "letter": "C",
+    "text": "Increase the size of the Prometheus server's Persistent Disk."
+   },
+   {
+    "letter": "D",
+    "text": "Install the Ops Agent on every GKE node, and rebuild the dashboards without PromQL."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** Your team runs its own Prometheus (a popular open-source metrics collector) inside Kubernetes. It keeps filling its disk and needs constant care.\n- **What you must achieve:** Hand metric storage and scaling to Google.\n- **The limits:** Keep the same PromQL queries (Prometheus's query language) and the same Grafana dashboards (a chart tool).\n- **What they're really asking:** Which Google service is a managed Prometheus that still speaks PromQL?"
+ },
+ {
+  "file": "G019-cloud-sql-query-insights.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A web page that reads order history is slow. Its data lives in Cloud SQL for PostgreSQL (Google's managed relational database).\n- **What you must achieve:** Find which SQL queries put the most load on the database, see how the database runs them (execution plans), and get advice on missing indexes (lookup shortcuts that speed up searches).\n- **The limits:** Do it with minimal setup.\n- **What they're really asking:** Which built-in Cloud SQL feature diagnoses slow queries?\n\n**Clues in the question:**\n- \"**which SQL queries create the most database load**\" + \"**execution plans**\": **Query Insights**.\n- \"**recommendations for missing indexes**\": **index advisor**.\n- \"**minimal setup**\": built into Cloud SQL, you just turn it on.\n\n**Exam topic:** Diagnostics (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Query Insights 🔑\n- **What it is:** A Cloud SQL (and AlloyDB) feature that shows database load by query, user and app tag, with query plans and latency over time.\n- **Looks like:** Console → Cloud SQL → `orders-db` → Query insights → top query: `SELECT … FROM orders WHERE customer_id=$1 ORDER BY created_at`\n- **Not to be confused with:** Cloud Trace (request timing across services) or Cloud Logging.\n- **Analogy:** 🕵️ A dashboard that shows which clerk is causing the queue at the counter.\n- **In the online store:** Finds the slow order-history query.\n\n### 2. Index advisor / index\n- **What it is:** An index is a lookup structure that lets the database find rows without scanning the whole table. Index advisor analyzes your queries and recommends indexes to create.\n- **Looks like:** `CREATE INDEX idx_orders_cust_created ON orders(customer_id, created_at);`\n- **Not to be confused with:** Adding CPU or memory.\n- **Analogy:** 📇 The index at the back of a book.\n- **In the online store:** Recommended index on `orders(customer_id, created_at)`.\n\n### 🔗 How they fit together\n```\n Slow page ─► Cloud SQL Query Insights ─► top query + plan (Seq Scan on orders 🐢)\n           ─► index advisor: CREATE INDEX … ✅ ─► fast lookup\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "After a year of growth, the `orders` table holds 40 million rows. **Query Insights** shows one query doing full table scans. Index advisor suggests a composite index, and the page goes from 4 seconds to 80 milliseconds without a bigger machine."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `orders-db` (Cloud SQL PostgreSQL): Query Insights flags `GET /orders/history`. Index advisor adds `idx_orders_cust_created`. p95 latency drops from 4s to 80ms."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Slow Cloud SQL/AlloyDB queries → Query Insights (top queries, plans) + index advisor.**\n  🧠 **_\"Slow SQL? Ask Query Insights.\"_**\n- Related: **Q269**, **G048** (Profiler)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**largest available size**\": costly guessing. It doesn't tell you which query is slow, and a missing index stays missing.\n\n📌 **When to use it:** Use a bigger machine when you've confirmed the database is truly out of CPU or memory.\n🏢 **Office example:** Hiring more clerks without finding out why the line is slow.",
+   "B": "- ✔️ \"**Enable Query Insights**\" matches \"**minimal setup**\".\n- ✔️ \"**review the top queries and their query plans**\" matches \"**which SQL queries create the most database load, view their execution plans**\".\n- ✔️ \"**index advisor recommendations**\" matches \"**recommendations for missing indexes**\".\n\n📌 **When to use it:** Use it when a database feels slow and you want it to show you which requests are the problem and how to fix them.\n🏢 **Office example:** Watching the counter to see which request holds up the line, then adding a quick-lookup index card.",
+   "C": "**Wrong words:**\n- ❌ \"**Export … every night and analyze the tables**\": analyzes the data, not how live queries perform. No plans and no index advice.\n\n📌 **When to use it:** Use BigQuery exports for business reporting.\n🏢 **Office example:** Analyzing sales reports when the problem is the slow counter.",
+   "D": "**Wrong words:**\n- ✔️ Trace can show the request is slow.\n- ❌ \"**without examining the database**\": you won't learn which SQL query is the problem or get index advice.\n\n📌 **When to use it:** Use Cloud Trace to see which service in a chain slows a request.\n🏢 **Office example:** Timing the whole visit without looking inside the records room."
+  },
+  "id": "G019",
+  "title": "Find the SQL Queries Slowing Cloud SQL and Get Index Suggestions (Query Insights + Index Advisor)",
+  "num": 19,
+  "guide": true,
+  "topic": "Cloud SQL (Query Insights)",
+  "stem": "Users report that the order history page has become slow. The data is stored in Cloud SQL for PostgreSQL. You need to identify which SQL queries create the most database load, view their execution plans, and get recommendations for missing indexes, with minimal setup. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Increase the Cloud SQL instance's machine type to the largest available size."
+   },
+   {
+    "letter": "B",
+    "text": "Enable Query Insights on the Cloud SQL instance, review the top queries and their query plans, and use index advisor recommendations."
+   },
+   {
+    "letter": "C",
+    "text": "Export the database to BigQuery every night and analyze the tables there."
+   },
+   {
+    "letter": "D",
+    "text": "Use Cloud Trace to view request latency without examining the database.\nℹ️ **Note:** Some features, such as index advisor and longer retention, may depend on the Cloud SQL edition (Enterprise Plus has the most)."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** A web page that reads order history is slow. Its data lives in Cloud SQL for PostgreSQL (Google's managed relational database).\n- **What you must achieve:** Find which SQL queries put the most load on the database, see how the database runs them (execution plans), and get advice on missing indexes (lookup shortcuts that speed up searches).\n- **The limits:** Do it with minimal setup.\n- **What they're really asking:** Which built-in Cloud SQL feature diagnoses slow queries?"
+ },
+ {
+  "file": "G020-active-assist-idle-rightsizing.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Finance wants lower costs for VMs (rented computers) across many projects.\n- **What you must achieve:** Find VMs that sit idle and VMs that are much bigger than they need to be.\n- **The limits:** Base it on real usage, and with the least effort, letting Google Cloud do the finding.\n- **What they're really asking:** Which built-in Google Cloud feature recommends idle and oversized VMs to fix?\n\n**Clues in the question:**\n- \"**Google Cloud to identify these VMs based on their actual usage**\": **Active Assist recommenders** (idle VM, machine type).\n- \"**across many projects**\" + \"**least effort**\": the **Recommendation Hub** gathers recommendations across projects.\n\n**Exam topic:** Cost optimization (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Active Assist 🔑\n- **What it is:** Google Cloud's set of **recommenders** that analyze your usage and suggest improvements: idle VMs, idle disks and IPs, rightsizing machine types, IAM permissions to remove, and more. Shown in the Recommendation Hub and on resource pages.\n- **Looks like:** \"VM `old-batch-2` has been idle for 14 days: stop or delete, saves $83/month\"\n- **Not to be confused with:** Billing reports, which show spending but don't analyze usage.\n- **Analogy:** 🧾 An efficiency consultant who walks the office and lists empty desks and oversized rooms.\n- **In the online store:** Flags `test-api-old` as idle.\n\n### 2. Rightsizing (machine type recommendation)\n- **What it is:** A suggestion to change a VM to a smaller (or bigger) machine type based on its real CPU and memory use.\n- **Looks like:** `e2-standard-16` → `e2-standard-4` (saves 74%)\n- **Not to be confused with:** Autoscaling, which changes the number of VMs, not their size.\n- **Analogy:** 📏 Moving a two-person team out of a 20-seat room.\n- **In the online store:** The `reporting` VM is downsized.\n\n### 🔗 How they fit together\n```\n Usage data ─► Active Assist recommenders ─► Recommendation Hub\n   idle VM: stop/delete 💰   rightsizing: smaller type 💰 ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "At quarter end, finance wants 20% savings. In the **Recommendation Hub**, the engineer sees 37 idle VMs and 52 oversized VMs, with estimated savings. Applying the safe ones meets the target in an afternoon."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: the Recommendation Hub shows idle `promo-2025-vm` (stop it) and oversized `catalog-sync` (`n2-standard-16` → `n2-standard-4`). Total savings: $1,240/month."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Find idle or oversized resources automatically → Active Assist (Recommender / Recommendation Hub).**\n  🧠 **_\"Active Assist actively points at waste.\"_**\n- Related: **G021** (IAM recommender), **Q077**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**script … SSH every hour**\": custom work, intrusive, and Google already measures this for you.\n\n📌 **When to use it:** Avoid it. Use built-in monitoring and recommendations.\n🏢 **Office example:** Asking a clerk to check every desk every hour.",
+   "B": "**Wrong words:**\n- ❌ \"**Delete every VM … below 50% right now**\": one moment's CPU doesn't prove a VM is idle. You could delete important servers.\n\n📌 **When to use it:** Never delete based on one snapshot of usage. Review recommendations first.\n🏢 **Office example:** Throwing out every desk that's empty at lunchtime.",
+   "C": "**Wrong words:**\n- ❌ \"**Convert every VM to a Spot VM**\": Spot VMs can be stopped at any time. That's wrong for many workloads, and it doesn't find idle or oversized VMs.\n\n📌 **When to use it:** Use Spot for fault-tolerant batch work.\n🏢 **Office example:** Making every employee a temp who can be sent home any minute.",
+   "D": "- ✔️ \"**Active Assist recommendations**\" matches \"**Google Cloud to identify these VMs based on their actual usage**\".\n- ✔️ \"**idle VM and machine type rightsizing**\" matches \"**some VMs are idle and others are much larger than needed**\".\n- ✔️ \"**Recommendation Hub**\" matches \"**across many projects**\" and \"**least effort**\".\n\n📌 **When to use it:** Use it when you want Google to point out wasted or oversized resources for you.\n🏢 **Office example:** An efficiency consultant's list of empty and oversized offices with the savings for each."
+  },
+  "id": "G020",
+  "title": "Let Google Find Idle and Oversized VMs Across Projects (Active Assist Recommendations)",
+  "num": 20,
+  "guide": true,
+  "topic": "Cost optimization (Active Assist)",
+  "stem": "Your finance team asks you to reduce Compute Engine costs across many projects. You suspect that some VMs are idle and others are much larger than needed. You want Google Cloud to identify these VMs based on their actual usage, with the least effort. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Write a script that connects to each VM over SSH every hour and records CPU usage."
+   },
+   {
+    "letter": "B",
+    "text": "Delete every VM whose CPU utilization is below 50% right now."
+   },
+   {
+    "letter": "C",
+    "text": "Convert every VM to a Spot VM."
+   },
+   {
+    "letter": "D",
+    "text": "Review Active Assist recommendations, such as idle VM and machine type rightsizing recommendations, in the Recommendation Hub."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** Finance wants lower costs for VMs (rented computers) across many projects.\n- **What you must achieve:** Find VMs that sit idle and VMs that are much bigger than they need to be.\n- **The limits:** Base it on real usage, and with the least effort, letting Google Cloud do the finding.\n- **What they're really asking:** Which built-in Google Cloud feature recommends idle and oversized VMs to fix?"
+ },
+ {
+  "file": "G021-iam-recommender-excess-permissions.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Years ago, several service accounts (non-human accounts that apps use) were given Editor, a broad role that can change almost anything in a project.\n- **What you must achieve:** Cut each one down to only the permissions it actually uses (least privilege: give only what's needed).\n- **The limits:** Avoid lots of manual investigation.\n- **What they're really asking:** Which Google Cloud feature looks at real permission usage and suggests smaller roles?\n\n**Clues in the question:**\n- \"**permissions the service accounts actually used**\": usage-based analysis. That's the **IAM recommender** (role recommendations).\n- \"**least privilege**\" + \"**minimal manual analysis**\": apply Google's suggested replacement roles.\n\n**Exam topic:** IAM (exam guide section 4.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. IAM recommender 🔑\n- **What it is:** Part of Active Assist / Policy Intelligence. It looks at about 90 days of permission usage and recommends removing or replacing roles with smaller ones.\n- **Looks like:** \"`sa-orders@` has Editor but used 6 permissions → replace with `roles/cloudsql.client` + `roles/pubsub.publisher`\"\n- **Not to be confused with:** Policy Troubleshooter, which explains why access was allowed or denied but doesn't suggest smaller roles.\n- **Analogy:** 🔑 A locksmith who checks which doors a key actually opened and cuts a smaller key.\n- **In the online store:** Shrinks the order service's account.\n\n### 2. Basic roles (Owner / Editor / Viewer)\n- **What it is:** Very broad project-wide roles from early Google Cloud. They're not recommended for production.\n- **Looks like:** `roles/editor` = change almost everything\n- **Not to be confused with:** Predefined roles, which are narrow and per-service.\n- **Analogy:** 🗝️ A master key.\n- **In the online store:** Being removed from ShopNow service accounts.\n\n### 🔗 How they fit together\n```\n sa-orders@: roles/editor ─(90 days usage)─► IAM recommender\n   → replace with roles/cloudsql.client + roles/pubsub.publisher ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A security review finds 12 service accounts with Editor. The **IAM recommender** shows each account's real usage and suggests narrow roles. The team applies them in a week, with no outages."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: `sa-orders@` (Editor) → recommended `roles/cloudsql.client` + `roles/pubsub.publisher`. `sa-images@` (Editor) → `roles/storage.objectAdmin` on one bucket."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Shrink over-broad roles based on actual use → IAM recommender (role recommendations).**\n  🧠 **_\"Recommender trims keys to doors used.\"_**\n- Related: **G020**, **Q080**, **Q211**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**guess which permissions**\": slow, error-prone manual work, which the question wants to avoid.\n\n📌 **When to use it:** Use code review to double-check a recommendation, not as the main method.\n🏢 **Office example:** Guessing door use from the job description instead of the access logs.",
+   "B": "**Wrong words:**\n- ❌ \"**Remove all roles … wait for applications to fail**\": causes outages, and discovering needs by breaking things isn't a plan.\n\n📌 **When to use it:** Never use this in production. Use usage-based recommendations.\n🏢 **Office example:** Taking away every key and waiting for complaints.",
+   "C": "**Wrong words:**\n- ❌ \"**Grant the Owner role**\": even broader than Editor. The opposite of least privilege.\n\n📌 **When to use it:** Never use this to tidy permissions.\n🏢 **Office example:** Swapping a big key for the master key.",
+   "D": "- ✔️ \"**IAM role recommendations from the IAM recommender**\" matches \"**permissions the service accounts actually used**\".\n- ✔️ \"**apply the suggested replacement roles**\" matches \"**least privilege**\" and \"**minimal manual analysis**\".\n\n📌 **When to use it:** Use it when you want to shrink broad access to what people or apps really use.\n🏢 **Office example:** A locksmith checks which doors each key actually opened and gives smaller keys."
+  },
+  "id": "G021",
+  "title": "Remove Permissions Service Accounts Never Use, Based on Real Usage (IAM Recommender)",
+  "num": 21,
+  "guide": true,
+  "topic": "IAM (IAM recommender / Active Assist)",
+  "stem": "Several service accounts in your project were granted the Editor role years ago. You want to follow the principle of least privilege by replacing these grants with roles that match the permissions the service accounts actually used, with minimal manual analysis. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Read the application source code to guess which permissions are needed."
+   },
+   {
+    "letter": "B",
+    "text": "Remove all roles from the service accounts and wait for applications to fail."
+   },
+   {
+    "letter": "C",
+    "text": "Grant the Owner role instead so that all permissions are visible in one place."
+   },
+   {
+    "letter": "D",
+    "text": "Review IAM role recommendations from the IAM recommender, and apply the suggested replacement roles."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** Years ago, several service accounts (non-human accounts that apps use) were given Editor, a broad role that can change almost anything in a project.\n- **What you must achieve:** Cut each one down to only the permissions it actually uses (least privilege: give only what's needed).\n- **The limits:** Avoid lots of manual investigation.\n- **What they're really asking:** Which Google Cloud feature looks at real permission usage and suggests smaller roles?"
+ },
+ {
+  "file": "G022-cloud-hub-app-health.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your team runs several applications on Google Cloud, and the operations lead wants one overview screen.\n- **What you must achieve:** See each app's deployments, health, any Google Cloud incidents (outages) affecting them, planned maintenance, and suggestions to save money or improve them, all in one place.\n- **The limits:** It must be one place in the console, not many separate tools.\n- **What they're really asking:** Which console experience brings application health, incidents and recommendations together?\n\n**Clues in the question:**\n- \"**single place in the Google Cloud console**\" + \"**applications … deployments, application health, active … incidents, upcoming maintenance, optimization suggestions**\": **Cloud Hub**.\n\n**Exam topic:** Monitoring (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Cloud Hub 🔑\n- **What it is:** A central console view, organized around your applications (as defined in App Hub), that brings together deployments, health and troubleshooting, Google Cloud incidents, maintenance events, quotas and optimization recommendations.\n- **Looks like:** Console → Cloud Hub → app `storefront`: 2 alerts, 1 Google incident in us-east1, upcoming GKE maintenance\n- **Not to be confused with:** Logs Explorer (one tool, raw logs) or Billing reports (cost only).\n- **Analogy:** 🛫 An airport control tower: one screen for every flight's status.\n- **In the online store:** The ShopNow ops lead's morning check.\n\n### 2. App Hub application\n- **What it is:** A logical grouping of the services and workloads that make up one app.\n- **Looks like:** App `storefront` = Cloud Run `web` + `orders-api` + Cloud SQL `orders-db`\n- **Not to be confused with:** A project. One app can span projects.\n- **Analogy:** 📁 A folder grouping one team's paperwork.\n- **In the online store:** `storefront`, `checkout`, `catalog`.\n\n### 🔗 How they fit together\n```\n App Hub apps ─► Cloud Hub ─► deployments | health | incidents | maintenance | optimizations ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "Every morning the ops lead used to open five tools. **Cloud Hub** now shows per application whether anything is unhealthy, whether a Google incident affects it, and what maintenance is coming, on one page."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** ops: Cloud Hub → `checkout` app: Cloud Run error rate alert, Google incident \"Cloud SQL us-east1 degraded\", GKE maintenance window Saturday, 2 rightsizing recommendations."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **One app-centric console view of health, incidents, maintenance, optimizations → Cloud Hub.**\n  🧠 **_\"Hub = everything in the middle.\"_**\n- Related: **G020**, **G025** (Personalized Service Health)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**searching each project's logs one at a time**\": raw logs only, scattered, and no app-level health, incidents or maintenance.\n\n📌 **When to use it:** Use Logs Explorer to dig into specific log messages.\n🏢 **Office example:** Reading every department's diary to get a status update.",
+   "B": "**Wrong words:**\n- ❌ \"**Cloud Billing reports**\": cost only, with no health, incidents or deployments.\n\n📌 **When to use it:** Use it to see where money goes.\n🏢 **Office example:** The accounting summary, not the control tower.",
+   "C": "- ✔️ \"**Cloud Hub**\" matches \"**single place in the Google Cloud console**\".\n- ✔️ It is organized by application and shows deployments, health, incidents, maintenance and optimizations, matching every item the lead listed.\n\n📌 **When to use it:** Use it when you want one screen that tells you how each of your apps is doing.\n🏢 **Office example:** The control tower screen showing every flight's status at once.",
+   "D": "**Wrong words:**\n- ❌ \"**Asset Inventory export to BigQuery**\": a list of resources for analysis. It doesn't show health or incidents.\n\n📌 **When to use it:** Use it to analyze what resources exist across the org.\n🏢 **Office example:** The furniture inventory, not the operations board."
+  },
+  "id": "G022",
+  "title": "One Console Place for Your Apps' Deployments, Health, Incidents, Maintenance and Optimizations (Cloud Hub)",
+  "num": 22,
+  "guide": true,
+  "topic": "Monitoring (Cloud Hub)",
+  "stem": "Your operations lead wants a single place in the Google Cloud console that shows, for the applications your team runs, their deployments, application health, active Google Cloud incidents that affect them, upcoming maintenance, and optimization suggestions. What should you use?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Logs Explorer, searching each project's logs one at a time"
+   },
+   {
+    "letter": "B",
+    "text": "The Cloud Billing reports page"
+   },
+   {
+    "letter": "C",
+    "text": "Cloud Hub"
+   },
+   {
+    "letter": "D",
+    "text": "A Cloud Asset Inventory export to BigQuery"
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** Your team runs several applications on Google Cloud, and the operations lead wants one overview screen.\n- **What you must achieve:** See each app's deployments, health, any Google Cloud incidents (outages) affecting them, planned maintenance, and suggestions to save money or improve them, all in one place.\n- **The limits:** It must be one place in the console, not many separate tools.\n- **What they're really asking:** Which console experience brings application health, incidents and recommendations together?"
+ },
+ {
+  "file": "G023-gemini-cloud-assist-investigation.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Right after a new release, your Cloud Run service (Google's serverless container service) is returning lots of server errors (HTTP 500).\n- **What you must achieve:** Find the likely cause and what to do next, quickly, even though you're new to the team.\n- **The limits:** Use an AI helper inside the Google Cloud console that looks at logs, metrics and recent changes together.\n- **What they're really asking:** Which Google Cloud console AI feature helps troubleshoot an incident?\n\n**Clues in the question:**\n- \"**AI-assisted way, inside the Google Cloud console**\": **Gemini Cloud Assist**.\n- \"**examine related logs, metrics, and recent configuration changes and suggest likely causes**\": a Cloud Assist **investigation**.\n\n**Exam topic:** Troubleshooting with AI (exam guide sections 3.4 and 1.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Gemini Cloud Assist 🔑\n- **What it is:** The AI assistant built into the Google Cloud console. It answers questions about your resources, helps design and deploy, analyzes cost, and runs **investigations** that look across logs, metrics, configuration and changes to suggest root causes and fixes.\n- **Looks like:** Console → Gemini → \"Investigate 500 errors on orders-api since 10:05\" → findings: \"new revision missing env var DB_HOST\"\n- **Not to be confused with:** Gemini CLI, which is a terminal agent for your local code.\n- **Analogy:** 🩺 A senior engineer who reads all the charts with you and points at the likely problem.\n- **In the online store:** Diagnosing checkout 500s after a release.\n\n### 2. HTTP 500\n- **What it is:** A server-side error: the app crashed or failed to handle the request.\n- **Looks like:** `500 Internal Server Error`\n- **Not to be confused with:** 404 (not found) or 403 (forbidden).\n- **Analogy:** 🚫 \"Sorry, the kitchen broke your order.\"\n- **In the online store:** Checkout failures after a deploy.\n\n### 🔗 How they fit together\n```\n 500 errors ─► Gemini Cloud Assist investigation\n     ├─ logs: \"DB_HOST not set\"\n     ├─ metrics: errors rose at 10:05\n     └─ changes: revision orders-api-00042 deployed 10:04 → likely cause ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "During a Monday release, checkout starts failing. A junior engineer opens a **Gemini Cloud Assist** investigation. In minutes it connects the 10:04 revision deployment, the error logs, and a missing environment variable, and suggests rolling traffic back to the previous revision."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: the investigation on `orders-api` finds that revision 42 lacks the `DB_HOST` secret mapping. Fix: `gcloud run services update-traffic orders-api --to-revisions=orders-api-00041=100`, then repair the config."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **AI help in the console to troubleshoot or analyze cloud resources → Gemini Cloud Assist (investigations).**\n  🧠 **_\"Cloud Assist = console copilot.\"_**\n- Related: **G016**, **G024**, **Q343** (Explain log entry)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Delete … redeploy it with a new name**\": destroys the service and its URL without learning the cause. The bug comes back with the same code.\n\n📌 **When to use it:** Never use this as troubleshooting. Roll back traffic or fix the config.\n🏢 **Office example:** Demolishing the shop because the till jammed.",
+   "B": "- ✔️ \"**Gemini Cloud Assist**\" matches \"**AI-assisted way, inside the Google Cloud console**\".\n- ✔️ \"**investigation of the issue**\" matches \"**examine related logs, metrics, and recent configuration changes and suggest likely causes and next steps**\".\n\n📌 **When to use it:** Use it when something breaks and you want an AI helper to look at all the evidence and suggest causes.\n🏢 **Office example:** Asking an experienced colleague to look over the reports with you and point out what changed.",
+   "C": "**Wrong words:**\n- ❌ \"**Application Design Center**\": designs new architectures. It doesn't troubleshoot a live error spike.\n\n📌 **When to use it:** Use it to design and deploy new apps from templates.\n🏢 **Office example:** Redrawing the office plan because a printer jammed.",
+   "D": "**Wrong words:**\n- ❌ \"**Pricing Calculator**\": estimates cost. It has nothing to do with finding the cause of errors.\n\n📌 **When to use it:** Use it to estimate costs before building.\n🏢 **Office example:** Getting a quote when the machine is broken."
+  },
+  "id": "G023",
+  "title": "AI-Assisted Troubleshooting of a Cloud Run Error Spike in the Console (Gemini Cloud Assist Investigation)",
+  "num": 23,
+  "guide": true,
+  "topic": "Troubleshooting (Gemini Cloud Assist)",
+  "stem": "After a new deployment, your Cloud Run service started returning many HTTP 500 errors. You are new to the team and want an AI-assisted way, inside the Google Cloud console, to examine related logs, metrics, and recent configuration changes and suggest likely causes and next steps. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Delete the Cloud Run service and redeploy it with a new name."
+   },
+   {
+    "letter": "B",
+    "text": "Start an investigation of the issue with Gemini Cloud Assist in the Google Cloud console."
+   },
+   {
+    "letter": "C",
+    "text": "Use Application Design Center to redesign the application's architecture."
+   },
+   {
+    "letter": "D",
+    "text": "Use the Pricing Calculator to estimate the cost of a larger service."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** Right after a new release, your Cloud Run service (Google's serverless container service) is returning lots of server errors (HTTP 500).\n- **What you must achieve:** Find the likely cause and what to do next, quickly, even though you're new to the team.\n- **The limits:** Use an AI helper inside the Google Cloud console that looks at logs, metrics and recent changes together.\n- **What they're really asking:** Which Google Cloud console AI feature helps troubleshoot an incident?"
+ },
+ {
+  "file": "G024-gemini-promql-help.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You want an alert (an automatic notification) when more than 2% of checkout requests fail over 5 minutes.\n- **What you must achieve:** Write the PromQL query (the query language for metrics) that measures this, and save it in an alerting policy.\n- **The limits:** You don't know PromQL well. You want to describe it in plain words and still review the query before saving.\n- **What they're really asking:** Which Cloud Monitoring feature turns a plain description into a query?\n\n**Clues in the question:**\n- \"**not familiar with PromQL**\" + \"**from a plain-language description**\": Gemini Cloud Assist in Cloud Monitoring can **generate PromQL**.\n- \"**review it before saving the alerting policy**\": you stay in control.\n\n**Exam topic:** Monitoring (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Alerting policy\n- **What it is:** A Cloud Monitoring rule: a condition (query + threshold + duration) and who to notify.\n- **Looks like:** Condition: error ratio > 0.02 for 5 min → notify #oncall\n- **Not to be confused with:** An uptime check, which tests whether a URL responds.\n- **Analogy:** 🚨 A smoke alarm with a set sensitivity.\n- **In the online store:** `checkout-error-rate`.\n\n### 2. Gemini Cloud Assist in Cloud Monitoring 🔑\n- **What it is:** AI help inside Cloud Monitoring that can write PromQL from natural language, explain charts and help build alerts.\n- **Looks like:** \"Error rate for service checkout over 5 minutes\" → `sum(rate(http_requests_total{service=\"checkout\",code=~\"5..\"}[5m])) / sum(rate(http_requests_total{service=\"checkout\"}[5m]))`\n- **Not to be confused with:** Writing the query yourself from scratch.\n- **Analogy:** 🗣️ A translator who turns your sentence into the form's exact wording.\n- **In the online store:** Creating the checkout error alert.\n\n### 🔗 How they fit together\n```\n \"checkout 5xx rate over 5 min\" ─► Gemini ─► PromQL ─► you review ─► alerting policy > 2% ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A new SRE must add an error-rate alert before a sale. **Gemini Cloud Assist** in Cloud Monitoring drafts the PromQL from a sentence. The SRE checks it in the chart, sets the 2% threshold, and saves the policy."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** alert `checkout-error-rate`: generated PromQL (above) > 0.02 for 5 min → PagerDuty + #oncall."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Need a metric query or alert but don't know PromQL → Gemini Cloud Assist in Cloud Monitoring, then review.**\n  🧠 **_\"Say it, Gemini writes PromQL.\"_**\n- Related: **G018**, **G023**, **Q239**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**watch the dashboard and email you**\": manual and unreliable, with no automatic alert.\n\n📌 **When to use it:** Never rely on people watching charts for alerts.\n🏢 **Office example:** Asking staff to sniff for smoke instead of installing an alarm.",
+   "B": "**Wrong words:**\n- ❌ \"**uptime check on the checkout home page**\": tells you if a page responds, not the share of failing requests.\n\n📌 **When to use it:** Use uptime checks to know when a site stops answering.\n🏢 **Office example:** Checking the door opens, not counting failed orders.",
+   "C": "**Wrong words:**\n- ❌ \"**Export metrics to BigQuery and write SQL**\": not a live alert, and much more work.\n\n📌 **When to use it:** Use BigQuery for long-term analysis.\n🏢 **Office example:** Doing monthly reports when you need a smoke alarm.",
+   "D": "- ✔️ \"**use Gemini Cloud Assist to generate the PromQL query from your description**\" matches \"**not familiar with PromQL**\" and \"**plain-language description**\".\n- ✔️ \"**review it, and use it in the alerting policy**\" matches \"**review it before saving the alerting policy**\".\n\n📌 **When to use it:** Use it when you know what you want to measure but not how to write the query.\n🏢 **Office example:** Telling an assistant what you need and checking the form they fill in before you sign."
+  },
+  "id": "G024",
+  "title": "Write a PromQL Query for an Alert From a Plain-English Description (Gemini Cloud Assist in Cloud Monitoring)",
+  "num": 24,
+  "guide": true,
+  "topic": "Monitoring (Gemini Cloud Assist for Cloud Monitoring)",
+  "stem": "You want to create a Cloud Monitoring alert that fires when the 5-minute error rate of your checkout service exceeds 2% of requests. You are not familiar with PromQL. You want to produce the query quickly from a plain-language description and review it before saving the alerting policy. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Ask each developer to watch the dashboard and email you when errors look high."
+   },
+   {
+    "letter": "B",
+    "text": "Create an uptime check on the checkout home page."
+   },
+   {
+    "letter": "C",
+    "text": "Export metrics to BigQuery and write SQL instead of PromQL."
+   },
+   {
+    "letter": "D",
+    "text": "In Cloud Monitoring, use Gemini Cloud Assist to generate the PromQL query from your description, review it, and use it in the alerting policy."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** You want an alert (an automatic notification) when more than 2% of checkout requests fail over 5 minutes.\n- **What you must achieve:** Write the PromQL query (the query language for metrics) that measures this, and save it in an alerting policy.\n- **The limits:** You don't know PromQL well. You want to describe it in plain words and still review the query before saving.\n- **What they're really asking:** Which Cloud Monitoring feature turns a plain description into a query?"
+ },
+ {
+  "file": "G025-personalized-service-health-alerts.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Google had a problem (an incident) with Cloud SQL in your region, and your team only found out when customers complained.\n- **What you must achieve:** Get notified automatically when Google Cloud incidents affect the services and regions your projects actually use.\n- **The limits:** It must be automatic and only about incidents that matter to your projects.\n- **What they're really asking:** Which Google Cloud feature tells you about incidents that affect you, and can alert you?\n\n**Clues in the question:**\n- \"**incidents that affect the services and locations your projects use**\": **Personalized** Service Health, filtered to your projects.\n- \"**notified automatically**\": configure an **alerting policy** on service health events.\n\n**Exam topic:** Monitoring (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Personalized Service Health 🔑\n- **What it is:** A Google Cloud dashboard and API that shows Google Cloud incidents relevant to **your** projects (by product and location). It can send alerts through Cloud Monitoring alerting policies, and the events can also go to logs.\n- **Looks like:** Console → Personalized Service Health → \"Cloud SQL – us-east1 – degraded performance – affects project shop-prod\"\n- **Not to be confused with:** The public Google Cloud status page, which lists all incidents for everyone and has no alerts set up for your projects.\n- **Analogy:** 📣 A building manager who texts your office when your floor's power is affected.\n- **In the online store:** Alerts #oncall when Cloud SQL in us-east1 is degraded.\n\n### 2. Alerting policy\n- **What it is:** A Cloud Monitoring rule that sends a notification when a condition is met.\n- **Looks like:** Policy \"Google incident affects shop-prod\" → email + Slack\n- **Not to be confused with:** A dashboard you have to check yourself.\n- **Analogy:** 🚨 An automatic alarm.\n- **In the online store:** Pages on-call.\n\n### 🔗 How they fit together\n```\n Google incident (Cloud SQL us-east1) ─► Personalized Service Health (filtered to your projects)\n                                        └─► alerting policy ─► Slack / email ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "After learning about an outage from angry customers, an online store turns on **Personalized Service Health** alerts. Next time, on-call gets a message within minutes saying the Google incident affects `shop-prod`, and they post a status banner before support tickets pile up."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: alerting policy \"PSH: incidents on shop-prod\" → #oncall-shop + email. The status page banner is updated by the on-call engineer."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Google Cloud incidents affecting *your* projects + automatic alerts → Personalized Service Health (+ alerting policy).**\n  🧠 **_\"Personalized = about you.\"_**\n- Related: **G022** (Cloud Hub)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Check the public … status page every morning**\": manual, once a day, and not filtered to your projects.\n\n📌 **When to use it:** Use it to read general Google Cloud status when you're curious.\n🏢 **Office example:** Reading the city's public notice board each morning.",
+   "B": "**Wrong words:**\n- ❌ \"**uptime check that monitors google.com**\": google.com being up says nothing about Cloud SQL in your region.\n\n📌 **When to use it:** Use uptime checks on your own endpoints.\n🏢 **Office example:** Checking the mall entrance to learn if your shop's power is out.",
+   "C": "**Wrong words:**\n- ❌ \"**Open a support case every week**\": slow, manual, and after the fact.\n\n📌 **When to use it:** Use support cases for help with a specific problem.\n🏢 **Office example:** Calling the landlord weekly to ask if anything broke.",
+   "D": "- ✔️ \"**Personalized Service Health**\" matches \"**incidents that affect the services and locations your projects use**\".\n- ✔️ \"**configure an alerting policy for service health events**\" matches \"**notified automatically**\".\n\n📌 **When to use it:** Use it when you want to hear right away when the provider's problems affect your own systems.\n🏢 **Office example:** The building manager texts your office when an outage hits your floor."
+  },
+  "id": "G025",
+  "title": "Get Notified Automatically When a Google Cloud Incident Affects Your Projects (Personalized Service Health)",
+  "num": 25,
+  "guide": true,
+  "topic": "Monitoring (Personalized Service Health)",
+  "stem": "Last month, a Google Cloud incident affected Cloud SQL in the region your application uses, and your team learned about it only from customer complaints. You want to be notified automatically about Google Cloud incidents that affect the services and locations your projects use. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Check the public Google Cloud status page every morning."
+   },
+   {
+    "letter": "B",
+    "text": "Create an uptime check that monitors google.com."
+   },
+   {
+    "letter": "C",
+    "text": "Open a support case every week to ask whether any incidents occurred."
+   },
+   {
+    "letter": "D",
+    "text": "Use Personalized Service Health and configure an alerting policy for service health events that are relevant to your projects."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** Google had a problem (an incident) with Cloud SQL in your region, and your team only found out when customers complained.\n- **What you must achieve:** Get notified automatically when Google Cloud incidents affect the services and regions your projects actually use.\n- **The limits:** It must be automatic and only about incidents that matter to your projects.\n- **What they're really asking:** Which Google Cloud feature tells you about incidents that affect you, and can alert you?"
+ },
+ {
+  "file": "G026-vpc-flow-logs.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** The security team wants a record of network traffic for VMs in one subnet (a slice of the private network) named prod-subnet.\n- **What you must achieve:** Capture a sample of each connection: who talked to whom (IP addresses), which ports, and how much data, then study it later in Cloud Logging and BigQuery.\n- **The limits:** A sample is fine (not every packet). It must cover the VMs in that subnet.\n- **What they're really asking:** Which Google Cloud feature records network connection summaries for a subnet?\n\n**Clues in the question:**\n- \"**sample of the network connections … source and destination IP addresses, ports, and bytes**\": exactly what **VPC Flow Logs** record.\n- \"**prod-subnet subnet**\": flow logs are enabled per subnet.\n\n**Exam topic:** Networking and logging (exam guide sections 3.3 and 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. VPC Flow Logs 🔑\n- **What it is:** Sampled records of network flows (connections) to and from VM interfaces: IPs, ports, protocol, bytes, packets and more. They go to Cloud Logging and can be routed to BigQuery.\n- **Looks like:** `gcloud compute networks subnets update prod-subnet --region=us-central1 --enable-flow-logs --logging-flow-sampling=0.5`\n- **Not to be confused with:** Firewall Rules Logging (which rule allowed or denied traffic) or audit logs (who changed settings).\n- **Analogy:** 📞 The phone company's call records: who called whom and for how long, not the conversation.\n- **In the online store:** Records traffic between the web and DB tiers.\n\n### 2. Data Access audit logs\n- **What it is:** Logs of who read or wrote data through Google Cloud APIs (for example, reading objects).\n- **Looks like:** `storage.objects.get by ana@`\n- **Not to be confused with:** Network traffic logs.\n- **Analogy:** 📖 The library's lending log.\n- **In the online store:** Who read the invoice bucket.\n\n### 🔗 How they fit together\n```\n VMs in prod-subnet ─flows─► VPC Flow Logs (sampled) ─► Cloud Logging ─sink─► BigQuery ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "After a suspicious spike in outbound traffic, security enables **VPC Flow Logs** on `prod-subnet` and sends them to BigQuery. A query shows one VM sending gigabytes to an unknown IP address, and the leak is found."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: flow logs on `prod-subnet` (sampling 0.5, 5-second aggregation) → sink to BigQuery dataset `netlogs`. Query: top destination IPs by bytes from `orders-api` VMs."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Who talked to whom on the network (IPs, ports, bytes) → VPC Flow Logs (per subnet).**\n  🧠 **_\"Flow logs = phone call records.\"_**\n- Related: **G027** (firewall logging), **Q244**, **Q368**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Data Access audit logs**\": record API calls that read or write data, not network connections between VMs.\n\n📌 **When to use it:** Use them to see who read or changed data through Google Cloud APIs.\n🏢 **Office example:** The library lending log, not the phone records.",
+   "B": "**Wrong words:**\n- ❌ \"**packet-capture tool on every VM**\": heavy, manual, captures far more than needed, and isn't integrated with Cloud Logging.\n\n📌 **When to use it:** Use packet capture only for deep, short troubleshooting of one machine.\n🏢 **Office example:** Recording every phone call when you only need the call list.",
+   "C": "- ✔️ \"**VPC Flow Logs**\" matches \"**sample of the network connections … IP addresses, ports, and bytes**\".\n- ✔️ \"**on the prod-subnet subnet**\" matches \"**VMs in the prod-subnet subnet**\".\n- ✔️ Flow logs land in Cloud Logging and can be routed to BigQuery, matching \"**analyze traffic later**\".\n\n📌 **When to use it:** Use it when you need a record of which machines talked to which, and how much.\n🏢 **Office example:** The phone bill's call list showing who called whom.",
+   "D": "**Wrong words:**\n- ❌ \"**Cloud NAT logging**\": records NAT address translations for outbound internet traffic only, not all VM connections in the subnet.\n\n📌 **When to use it:** Use it to see outbound connections that went through Cloud NAT.\n🏢 **Office example:** Only logging calls that went through the switchboard to outside lines."
+  },
+  "id": "G026",
+  "title": "Record Sampled Network Connections From a Subnet for Later Analysis (VPC Flow Logs)",
+  "num": 26,
+  "guide": true,
+  "topic": "Networking logs (VPC Flow Logs)",
+  "stem": "The security team wants to record a sample of the network connections made by VMs in the prod-subnet subnet, including source and destination IP addresses, ports, and bytes transferred, so they can analyze traffic later in Cloud Logging and BigQuery. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Enable Data Access audit logs for Compute Engine."
+   },
+   {
+    "letter": "B",
+    "text": "Install a packet-capture tool on every VM and upload the capture files to Cloud Storage."
+   },
+   {
+    "letter": "C",
+    "text": "Enable VPC Flow Logs on the prod-subnet subnet."
+   },
+   {
+    "letter": "D",
+    "text": "Enable Cloud NAT logging for the VPC network."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** The security team wants a record of network traffic for VMs in one subnet (a slice of the private network) named prod-subnet.\n- **What you must achieve:** Capture a sample of each connection: who talked to whom (IP addresses), which ports, and how much data, then study it later in Cloud Logging and BigQuery.\n- **The limits:** A sample is fine (not every packet). It must cover the VMs in that subnet.\n- **What they're really asking:** Which Google Cloud feature records network connection summaries for a subnet?"
+ },
+ {
+  "file": "G027-firewall-rules-logging.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You made a firewall rule (a network traffic rule) to stop old servers from reaching the database on port 3306 (the MySQL database port).\n- **What you must achieve:** Prove the rule is really blocking those connection attempts, and see which source addresses are being blocked.\n- **The limits:** Check that specific rule without breaking anything.\n- **What they're really asking:** How do you get a record of the connections a particular firewall rule allows or blocks?\n\n**Clues in the question:**\n- \"**confirm that the rule is actually blocking**\" + \"**which source IP addresses**\": **Firewall Rules Logging** records each connection the rule matches.\n- Logging is turned on **per rule**.\n\n**Exam topic:** Networking and logging (exam guide sections 3.3 and 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Firewall Rules Logging 🔑\n- **What it is:** A per-rule setting that writes a log entry for each TCP or UDP connection the rule allows or denies, including the rule name, action (ALLOWED or DENIED), source and destination.\n- **Looks like:** `gcloud compute firewall-rules update deny-legacy-db --enable-logging` → log: `disposition: DENIED, src_ip: 10.8.0.14, dest_port: 3306`\n- **Not to be confused with:** VPC Flow Logs, which record sampled traffic but not which rule decided it.\n- **Analogy:** 📋 The guard's notebook at one specific door: who was turned away and when.\n- **In the online store:** Proves legacy servers can't reach `orders-db`.\n\n### 2. Rule priority\n- **What it is:** A number from 0 to 65535. **Lower numbers win.** 65535 is the lowest priority.\n- **Looks like:** `--priority=900` beats `--priority=1000`\n- **Not to be confused with:** A rule's order in a list.\n- **Analogy:** 🎖️ Rank: the lower the number, the more senior.\n- **In the online store:** The deny rule at 900 beats the general allow at 1000.\n\n### 🔗 How they fit together\n```\n legacy 10.8.0.14 ──tcp:3306──► [deny-legacy-db, logging ON] ✋ DENIED\n                                 └─► Cloud Logging entry (rule, src, port) ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "An auditor asks the team to prove that old servers can't reach customer data. With **Firewall Rules Logging** on, Cloud Logging shows dozens of DENIED entries from `10.8.0.0/24` on port 3306, all matched by `deny-legacy-db`. That's the evidence."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: `deny-legacy-db` (priority 900, ingress, deny tcp:3306 from `10.8.0.0/24` to tag `db`) with logging on. Logs Explorer filter: `jsonPayload.rule_details.reference:\"deny-legacy-db\"`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Is this firewall rule allowing or denying, and for whom? → Firewall Rules Logging on that rule.**\n  🧠 **_\"Rule logs = the door guard's notebook.\"_**\n- Related: **G026**, **Q151**, **Q257**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Data Access audit logs**\": record API data reads and writes, not firewall decisions.\n\n📌 **When to use it:** Use them to see who read or changed data through Google Cloud APIs.\n🏢 **Office example:** The library lending log, not the door guard's notebook.",
+   "B": "- ✔️ \"**Enable Firewall Rules Logging on the deny-legacy-db rule**\" matches \"**confirm that the rule is actually blocking**\".\n- ✔️ \"**view the connection records in Cloud Logging**\" matches \"**see which source IP addresses are affected**\".\n\n📌 **When to use it:** Use it when you need proof of what one particular traffic rule is doing.\n🏢 **Office example:** Asking the guard at one door to log everyone turned away.",
+   "C": "**Wrong words:**\n- ❌ \"**priority to 65535**\": the lowest priority, so other allow rules could win. It changes behavior and proves nothing.\n\n📌 **When to use it:** Use a low priority for catch-all default rules.\n🏢 **Office example:** Making the strict guard the most junior one.",
+   "D": "**Wrong words:**\n- ❌ \"**Delete the rule**\": opens the database to the legacy subnet. Testing by removing security is unsafe.\n\n📌 **When to use it:** Never remove a security rule just to test it.\n🏢 **Office example:** Firing the guard to see if anyone walks in."
+  },
+  "id": "G027",
+  "title": "Verify Whether a Specific Firewall Rule Is Allowing or Blocking Connections (Firewall Rules Logging)",
+  "num": 27,
+  "guide": true,
+  "topic": "VPC firewall (Firewall Rules Logging)",
+  "stem": "You created a firewall rule named deny-legacy-db that should block TCP 3306 traffic from the legacy subnet to your database VMs. You need to confirm that the rule is actually blocking connection attempts and see which source IP addresses are affected. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Enable Data Access audit logs for Compute Engine."
+   },
+   {
+    "letter": "B",
+    "text": "Enable Firewall Rules Logging on the deny-legacy-db rule, and view the connection records in Cloud Logging."
+   },
+   {
+    "letter": "C",
+    "text": "Change the rule's priority to 65535."
+   },
+   {
+    "letter": "D",
+    "text": "Delete the rule and check whether the database receives connections."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** You made a firewall rule (a network traffic rule) to stop old servers from reaching the database on port 3306 (the MySQL database port).\n- **What you must achieve:** Prove the rule is really blocking those connection attempts, and see which source addresses are being blocked.\n- **The limits:** Check that specific rule without breaking anything.\n- **What they're really asking:** How do you get a record of the connections a particular firewall rule allows or blocks?"
+ },
+ {
+  "file": "G028-custom-static-route.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Some VMs carry the label (network tag) `inspect`. Security wants their internet traffic checked by a firewall product running on a VM called fw-appliance.\n- **What you must achieve:** Send all internet-bound traffic from the `inspect` VMs through fw-appliance first.\n- **The limits:** Every other VM must keep going straight to the internet as before.\n- **What they're really asking:** How do you change the path traffic takes for only some VMs?\n\n**Clues in the question:**\n- \"**go through … a VM**\": a route with **next hop instance**.\n- \"**internet-bound**\": destination **0.0.0.0/0**.\n- \"**only VMs with the network tag inspect**\" + \"**others keep the default**\": a **tagged** route with **higher priority** (a lower number) than the default route.\n\n**Exam topic:** Networking (exam guide section 3.3)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Route\n- **What it is:** A VPC rule that says where to send packets for a destination range. The most specific range wins, and among equally specific ranges the lowest priority number wins.\n- **Looks like:** Default route: `0.0.0.0/0 → default-internet-gateway, priority 1000`\n- **Not to be confused with:** A firewall rule. Routes choose the path, firewalls allow or deny.\n- **Analogy:** 🗺️ A road sign: \"Downtown → this way\".\n- **In the online store:** All ShopNow VMs reach the internet via the default route.\n\n### 2. Custom static route 🔑\n- **What it is:** A route you create yourself, with a destination, next hop (instance, IP, VPN tunnel, internal load balancer…), optional network tags and a priority.\n- **Looks like:** `gcloud compute routes create inspect-egress --network=shop-vpc --destination-range=0.0.0.0/0 --next-hop-instance=fw-appliance --next-hop-instance-zone=us-central1-a --tags=inspect --priority=800`\n- **Not to be confused with:** Dynamic routes learned through Cloud Router (BGP).\n- **Analogy:** 🚧 A detour sign just for delivery trucks.\n- **In the online store:** Payment VMs exit through the inspection appliance.\n\n### 🔗 How they fit together\n```\n VM (tag inspect) ─0.0.0.0/0, prio 800─► fw-appliance ─► internet ✅\n Other VMs        ─0.0.0.0/0, prio 1000 (default)─► internet gateway\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A payments company must inspect all outbound traffic from its card-processing VMs. A **custom static route** sends their internet traffic to the inspection appliance VM (which has IP forwarding enabled), while web servers keep the normal fast path."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: route `pci-egress` (0.0.0.0/0 → `fw-appliance`, tags `pci`, priority 800). `fw-appliance` is created with `--can-ip-forward`. Storefront VMs keep the default route."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Change the path for some VMs → custom static route (destination, next hop, tags, priority).** Firewalls allow or deny; routes steer.\n  🧠 **_\"Routes steer, firewalls filter.\"_**\n- Related: **Q063**, **Q195**, **Q314** (NAT)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**firewall rule that allows egress**\": firewalls allow or deny traffic, they don't change the path. Traffic would still go straight to the internet.\n\n📌 **When to use it:** Use egress rules to control which outbound traffic is allowed.\n🏢 **Office example:** A guard that lets trucks leave but doesn't send them through inspection.",
+   "B": "- ✔️ \"**custom static route for destination 0.0.0.0/0**\" matches \"**internet-bound traffic**\".\n- ✔️ \"**next hop instance fw-appliance**\" matches \"**go through … fw-appliance**\".\n- ✔️ \"**apply it only to the inspect tag**\" + \"**higher priority than the default route**\" matches \"**VMs with the network tag inspect**\" and \"**Other VMs must keep using the default**\".\n\n📌 **When to use it:** Use it when some machines' traffic must take a special path, like through an inspection checkpoint.\n🏢 **Office example:** A detour sign that sends only delivery trucks through the inspection gate.",
+   "C": "**Wrong words:**\n- ❌ \"**static external IP**\": gives the appliance a fixed public address but doesn't send other VMs' traffic through it.\n\n📌 **When to use it:** Use it when a server needs a public address that never changes.\n🏢 **Office example:** Giving the inspection booth a street address but no detour signs.",
+   "D": "**Wrong words:**\n- ❌ \"**Delete the VPC's default route**\": cuts internet access for every VM, which breaks \"**Other VMs must keep using the default internet route**\".\n\n📌 **When to use it:** Use it only for fully private networks that need no internet path at all.\n🏢 **Office example:** Closing the main exit for everyone."
+  },
+  "id": "G028",
+  "title": "Send Internet-Bound Traffic From Tagged VMs Through a Proxy Appliance VM (Custom Static Route)",
+  "num": 28,
+  "guide": true,
+  "topic": "VPC networking (custom static routes)",
+  "stem": "Your security policy requires that all internet-bound traffic from VMs with the network tag inspect go through a third-party firewall appliance running on a VM named fw-appliance in the same VPC. Other VMs must keep using the default internet route. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a firewall rule that allows egress to 0.0.0.0/0 from VMs with the inspect tag."
+   },
+   {
+    "letter": "B",
+    "text": "Create a custom static route for destination 0.0.0.0/0 with next hop instance fw-appliance, apply it only to the inspect tag, and give it a higher priority than the default route."
+   },
+   {
+    "letter": "C",
+    "text": "Assign the fw-appliance VM a static external IP address."
+   },
+   {
+    "letter": "D",
+    "text": "Delete the VPC's default route to the internet."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** Some VMs carry the label (network tag) `inspect`. Security wants their internet traffic checked by a firewall product running on a VM called fw-appliance.\n- **What you must achieve:** Send all internet-bound traffic from the `inspect` VMs through fw-appliance first.\n- **The limits:** Every other VM must keep going straight to the internet as before.\n- **What they're really asking:** How do you change the path traffic takes for only some VMs?"
+ },
+ {
+  "file": "G029-ngfw-fqdn-egress.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Some VMs handle payments and must call one outside service: `api.payments-provider.com` over HTTPS (port 443).\n- **What you must achieve:** Allow only that one destination and block every other outbound internet connection.\n- **The limits:** The provider's IP addresses change often and aren't published, so you can't list them.\n- **What they're really asking:** How can a firewall rule allow traffic by domain name instead of by IP address?\n\n**Clues in the question:**\n- \"**IP addresses change frequently and are not published**\": IP-based rules break. You need **domain-name (FQDN)** rules.\n- \"**only to api.payments-provider.com**\" + \"**all other … blocked**\": allow the FQDN, then a lower-priority deny-all egress rule.\n- FQDN objects are a **Cloud NGFW** (network firewall policy) feature.\n\n**Exam topic:** Networking (exam guide sections 2.3 and 3.3)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. FQDN\n- **What it is:** Fully qualified domain name: the full name of a host.\n- **Looks like:** `api.payments-provider.com`\n- **Not to be confused with:** An IP address like `203.0.113.7`.\n- **Analogy:** 🏷️ A company's name instead of its changing street address.\n- **In the online store:** The payment provider's API.\n\n### 2. Cloud NGFW FQDN object 🔑\n- **What it is:** In a network firewall policy rule, you can use domain names as the destination of egress rules. Cloud NGFW resolves the name and keeps the IP addresses up to date. This is a Cloud NGFW Standard feature, alongside geolocation and threat-intelligence objects.\n- **Looks like:** Rule 100: egress allow tcp:443 dest-fqdns `api.payments-provider.com`, target tag `pay`; rule 65000: egress deny all, target tag `pay`\n- **Not to be confused with:** VPC firewall rules, which take IP ranges only.\n- **Analogy:** 📇 A guard list that says \"anyone from Acme Payments\" instead of a list of license plates.\n- **In the online store:** Only checkout VMs reach the provider.\n\n### 🔗 How they fit together\n```\n pay VMs ─tcp:443─► api.payments-provider.com ✅ (FQDN allow, prio 100)\n pay VMs ─anything else─► ✋ (deny all egress, prio 65000)\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A card-processing provider rotates its IPs behind a CDN. The team writes a **Cloud NGFW** egress rule using the provider's **FQDN**, plus a deny-all. Payments keep working when the IPs change, and nothing else can leave those VMs."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `pay` VMs: policy `shop-fw` rule 100 allows tcp:443 to FQDN `api.payments-provider.com`; rule 65000 denies all egress for target tag `pay`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Allow egress by domain name (IPs change) → Cloud NGFW FQDN objects in a network firewall policy.**\n  🧠 **_\"Names, not numbers: FQDN rule.\"_**\n- Related: **G002**, **G030**, **Q151**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**egress rule that allows TCP 443 to the FQDN api.payments-provider.com**\" matches \"**only to api.payments-provider.com**\" and \"**IP addresses change frequently**\".\n- ✔️ \"**lower-priority egress rule that denies all other traffic**\" matches \"**All other outbound internet traffic … must be blocked**\".\n- ✔️ \"**Cloud NGFW network firewall policy**\" is where FQDN objects are supported.\n\n📌 **When to use it:** Use it when you must allow outbound access to a named website whose addresses keep changing.\n🏢 **Office example:** Telling the guard \"only let them visit Acme Payments\", whatever building Acme moves to.",
+   "B": "**Wrong words:**\n- ✔️ Egress allow on TCP 443 is the right shape.\n- ❌ \"**current IP addresses … update it by hand**\": the IPs change often and aren't published, so the rule will break.\n\n📌 **When to use it:** Use IP-based rules when destinations have fixed, known addresses.\n🏢 **Office example:** A guard list of license plates for a company that changes cars daily.",
+   "C": "**Wrong words:**\n- ❌ \"**Allow all egress … ask developers**\": nothing is enforced, which breaks \"**must be blocked**\".\n\n📌 **When to use it:** Never rely on asking people for a security rule. Enforce it.\n🏢 **Office example:** Leaving every exit open and asking staff to behave.",
+   "D": "**Wrong words:**\n- ❌ \"**Cloud DNS private zone**\": controls name lookups inside your VPC. It doesn't allow or block traffic, and overriding the provider's name would break it.\n\n📌 **When to use it:** Use private zones for your own internal names.\n🏢 **Office example:** Changing the phone book doesn't lock any doors."
+  },
+  "id": "G029",
+  "title": "Allow VMs Outbound Access Only to a Payment Provider's Domain Name (Cloud NGFW FQDN Egress Rule)",
+  "num": 29,
+  "guide": true,
+  "topic": "VPC firewall (Cloud NGFW FQDN objects)",
+  "stem": "Your payment VMs must be able to send HTTPS requests only to api.payments-provider.com. The provider's IP addresses change frequently and are not published. All other outbound internet traffic from these VMs must be blocked. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a Cloud NGFW network firewall policy with an egress rule that allows TCP 443 to the FQDN api.payments-provider.com, plus a lower-priority egress rule that denies all other traffic."
+   },
+   {
+    "letter": "B",
+    "text": "Create a VPC firewall egress rule that allows TCP 443 to the provider's current IP addresses, and update it by hand when they change."
+   },
+   {
+    "letter": "C",
+    "text": "Allow all egress traffic, and ask developers to call only the provider's API."
+   },
+   {
+    "letter": "D",
+    "text": "Create a Cloud DNS private zone for api.payments-provider.com."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** Some VMs handle payments and must call one outside service: `api.payments-provider.com` over HTTPS (port 443).\n- **What you must achieve:** Allow only that one destination and block every other outbound internet connection.\n- **The limits:** The provider's IP addresses change often and aren't published, so you can't list them.\n- **What they're really asking:** How can a firewall rule allow traffic by domain name instead of by IP address?"
+ },
+ {
+  "file": "G030-ngfw-enterprise-ips.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Attackers send traffic that tries to exploit known software weaknesses in your web servers.\n- **What you must achieve:** Spot and block that malicious traffic automatically.\n- **The limits:** Rules that only look at IP addresses and ports can't see the attack inside the traffic. You want a Google-managed service.\n- **What they're really asking:** Which Google Cloud firewall option inspects traffic contents to stop known attacks (intrusion prevention)?\n\n**Clues in the question:**\n- \"**detect and block known exploit and malware traffic**\": **intrusion prevention (IPS)**.\n- \"**rules based only on IP addresses and ports are not enough**\": you need deep inspection. That's **Cloud NGFW Enterprise** (firewall endpoint + security profile).\n\n**Exam topic:** Network security (exam guide sections 2.3 and 3.3)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Intrusion prevention service (IPS)\n- **What it is:** Inspects the contents of network traffic and matches it against threat signatures (known exploits, malware) to alert on or block it.\n- **Looks like:** Signature hit: \"Apache Struts RCE attempt\" → action: deny\n- **Not to be confused with:** A normal firewall rule, which only looks at addresses and ports.\n- **Analogy:** 🧳 Airport security X-raying bags, not just checking tickets.\n- **In the online store:** Blocks exploit attempts on storefront VMs.\n\n### 2. Cloud NGFW Enterprise 🔑\n- **What it is:** The Cloud NGFW tier that adds Google-managed intrusion prevention. You create a zonal **firewall endpoint**, associate it with your VPC, define a **security profile** (threat prevention) inside a **security profile group**, and use a firewall policy rule with the action \"apply security profile group\".\n- **Looks like:** Rule 200: ingress tcp:443 to tag `web` → action `apply_security_profile_group: sp-threats`\n- **Not to be confused with:** Cloud Armor, which protects external HTTP(S) load balancers at the edge. NGFW Enterprise inspects traffic to VMs inside the VPC.\n- **Analogy:** 🛂 A customs inspection lane every arriving package passes through.\n- **In the online store:** Inspects traffic to the storefront VMs.\n\n### 🔗 How they fit together\n```\n Traffic ─► VPC ─► firewall policy rule (apply security profile group)\n                    └─► firewall endpoint (IPS signatures) ─✋ exploit blocked / ✅ clean traffic → web VMs\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A new exploit for a popular web framework appears. A retailer using **Cloud NGFW Enterprise** has Google-managed signatures updated automatically. Exploit attempts against its web VMs are blocked and logged before engineers even finish reading the security bulletin."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: firewall endpoint in `us-central1-a`, associated with `shop-vpc`; security profile `sp-threats` (block high/critical); rule: ingress tcp:443 → tag `web` → apply `spg-web`. Cloud Armor still guards the external load balancer."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Inspect traffic contents to stop known exploits/malware → Cloud NGFW Enterprise (IPS via firewall endpoint + security profile).**\n  🧠 **_\"Enterprise = X-ray the packets.\"_**\n- Related: **G002**, **G029**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**deny traffic from IP ranges seen in past attacks**\": attackers change IPs, and IP rules can't see exploit contents.\n\n📌 **When to use it:** Use IP deny lists for a few known bad sources as an extra layer.\n🏢 **Office example:** Banning yesterday's shoplifters' cars while new ones walk in.",
+   "B": "- ✔️ \"**Cloud NGFW Enterprise**\" matches \"**Google Cloud managed solution**\" and \"**detect and block known exploit and malware traffic**\".\n- ✔️ \"**firewall endpoint and a security profile for threat prevention**\" provides the deep inspection that \"**IP addresses and ports are not enough**\" calls for.\n- ✔️ \"**firewall policy rule that applies the security profile group to traffic to the web VMs**\" aims it at exactly the web VMs.\n\n📌 **When to use it:** Use it when you need the firewall to look inside traffic and stop known attacks automatically.\n🏢 **Office example:** An X-ray machine at the entrance that stops dangerous bags, run by a professional security company.",
+   "C": "**Wrong words:**\n- ❌ \"**review them once a week**\": flow logs show connections, not exploit contents, and they don't block anything.\n\n📌 **When to use it:** Use flow logs for traffic analysis and forensics.\n🏢 **Office example:** Reading last week's visitor log instead of screening bags.",
+   "D": "**Wrong words:**\n- ❌ \"**different region**\": attacks reach any region. Moving fixes nothing.\n\n📌 **When to use it:** Use other regions for latency or data-residency needs.\n🏢 **Office example:** Moving the shop across town to avoid shoplifters."
+  },
+  "id": "G030",
+  "title": "Detect and Block Known Exploit Traffic Between VMs (Cloud NGFW Enterprise Intrusion Prevention)",
+  "num": 30,
+  "guide": true,
+  "topic": "VPC firewall (Cloud NGFW Enterprise IPS)",
+  "stem": "Your security team must detect and block known exploit and malware traffic, such as attempts to exploit a vulnerable web framework, in traffic reaching your web VMs. Allow and deny rules based only on IP addresses and ports are not enough. You want a Google Cloud managed solution. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create more VPC firewall rules that deny traffic from IP ranges seen in past attacks."
+   },
+   {
+    "letter": "B",
+    "text": "Use Cloud NGFW Enterprise: create a firewall endpoint and a security profile for threat prevention, associate the endpoint with the VPC, and add a firewall policy rule that applies the security profile group to traffic to the web VMs."
+   },
+   {
+    "letter": "C",
+    "text": "Enable VPC Flow Logs and review them once a week."
+   },
+   {
+    "letter": "D",
+    "text": "Move the web VMs to a different region."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** Attackers send traffic that tries to exploit known software weaknesses in your web servers.\n- **What you must achieve:** Spot and block that malicious traffic automatically.\n- **The limits:** Rules that only look at IP addresses and ports can't see the attack inside the traffic. You want a Google-managed service.\n- **What they're really asking:** Which Google Cloud firewall option inspects traffic contents to stop known attacks (intrusion prevention)?"
+ },
+ {
+  "file": "G031-ha-vpn-9999.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your office data center (on-premises) must connect privately to your Google Cloud network (VPC), using the public internet with encryption.\n- **What you must achieve:** Get a connection with a 99.99% availability guarantee (SLA: the uptime Google promises), where routes (network paths) update automatically.\n- **The limits:** It goes over the internet, so no private fiber line is required.\n- **What they're really asking:** Which Google Cloud VPN option gives 99.99% and automatic routing?\n\n**Clues in the question:**\n- \"**encrypted … over the public internet**\": **Cloud VPN**.\n- \"**99.99% availability SLA**\": **HA VPN** (two interfaces, two tunnels). Classic VPN offers 99.9%.\n- \"**routes should update automatically**\": **Cloud Router with BGP** (dynamic routing).\n\n**Exam topic:** Hybrid connectivity (exam guide section 2.3)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. HA VPN 🔑\n- **What it is:** High-availability Cloud VPN: a gateway with **two interfaces** (two public IPs). With tunnels from both interfaces to your peer devices, Google offers a **99.99%** SLA. It requires BGP via Cloud Router.\n- **Looks like:** `gcloud compute vpn-gateways create shop-havpn --network=shop-vpc --region=us-central1` + 2 tunnels + `gcloud compute routers create shop-router --asn=65001`\n- **Not to be confused with:** Classic VPN (one interface, 99.9% SLA, static routing allowed), or Interconnect (a private physical link).\n- **Analogy:** 🛣️ Two separate roads to the warehouse, so one closure doesn't stop deliveries.\n- **In the online store:** The office ERP talks to cloud orders over HA VPN.\n\n### 2. Cloud Router / BGP\n- **What it is:** A managed router that exchanges routes with your on-prem router using BGP (Border Gateway Protocol), so new subnets are learned automatically.\n- **Looks like:** Cloud Router ASN 65001 ↔ on-prem ASN 65010, advertises `10.10.0.0/16`\n- **Not to be confused with:** Static routes you type by hand.\n- **Analogy:** 📡 Two dispatchers who share road updates automatically.\n- **In the online store:** New ShopNow subnets reach the office with no manual change.\n\n### 🔗 How they fit together\n```\n On-prem router A ═tunnel 1═╗\n                            ╠═ HA VPN (2 interfaces) ─ Cloud Router (BGP) ─ VPC ✅ 99.99%\n On-prem router B ═tunnel 2═╝\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A retailer's warehouse system on-prem must reach cloud order APIs at all times. **HA VPN** with two tunnels and BGP survives a tunnel or device failure, and new cloud subnets appear on-prem automatically."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: HA VPN `shop-havpn` (2 tunnels) ↔ office routers A and B; Cloud Router `shop-router` ASN 65001 advertises `10.10.0.0/16`. The warehouse ERP reaches `orders-api` internally."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **VPN + 99.99% → HA VPN (2 tunnels) + Cloud Router BGP.** Classic = 99.9%.\n  🧠 **_\"HA = two roads, four nines.\"_**\n- Related: **Q091**, **Q195**, **Q063**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**HA VPN gateway with two tunnels**\" matches \"**encrypted … over the public internet**\" and \"**99.99% availability SLA**\".\n- ✔️ \"**Cloud Router with BGP for dynamic routing**\" matches \"**routes should update automatically**\".\n\n📌 **When to use it:** Use it when your office must stay securely connected to the cloud over the internet with very high uptime.\n🏢 **Office example:** Two separate roads to the warehouse, with dispatchers sharing road updates automatically.",
+   "B": "**Wrong words:**\n- ❌ \"**VPC Network Peering … on-premises network**\": peering connects two VPC networks in Google Cloud, not an on-prem data center.\n\n📌 **When to use it:** Use peering to connect two VPCs privately.\n🏢 **Office example:** A connecting door between two offices in the same building.",
+   "C": "**Wrong words:**\n- ❌ \"**Dedicated Interconnect**\": a private physical link, not over the internet, with longer lead time. And \"**single location**\" doesn't meet 99.99%.\n\n📌 **When to use it:** Use Interconnect for high bandwidth over private links.\n🏢 **Office example:** Building your own private road.",
+   "D": "**Wrong words:**\n- ❌ \"**Classic VPN … one tunnel**\": at most 99.9%, with a single point of failure.\n- ❌ \"**static routes**\": routes don't update automatically.\n\n📌 **When to use it:** Use it only for simple, non-critical links (Classic VPN is legacy).\n🏢 **Office example:** One road to the warehouse, with handwritten directions."
+  },
+  "id": "G031",
+  "title": "On-Premises to VPC Over the Internet With a 99.99% Availability SLA (HA VPN + Cloud Router)",
+  "num": 31,
+  "guide": true,
+  "topic": "Hybrid networking (HA VPN)",
+  "stem": "You need encrypted connectivity between your on-premises data center and your VPC over the public internet. The business requires a 99.99% availability SLA, and routes should update automatically when networks change. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create an HA VPN gateway with two tunnels to your on-premises VPN devices, and use Cloud Router with BGP for dynamic routing."
+   },
+   {
+    "letter": "B",
+    "text": "Set up VPC Network Peering between the VPC and the on-premises network."
+   },
+   {
+    "letter": "C",
+    "text": "Order a Dedicated Interconnect connection in a single location."
+   },
+   {
+    "letter": "D",
+    "text": "Create a Classic VPN gateway with one tunnel and static routes."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** Your office data center (on-premises) must connect privately to your Google Cloud network (VPC), using the public internet with encryption.\n- **What you must achieve:** Get a connection with a 99.99% availability guarantee (SLA: the uptime Google promises), where routes (network paths) update automatically.\n- **The limits:** It goes over the internet, so no private fiber line is required.\n- **What they're really asking:** Which Google Cloud VPN option gives 99.99% and automatic routing?"
+ },
+ {
+  "file": "G032-asset-inventory-feed.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your company has many projects, each with its own firewall rules.\n- **What you must achieve:** Find out within moments whenever any firewall rule is created, changed or deleted, anywhere in the organization, and let an automatic function check it.\n- **The limits:** It must cover every project and be near real time.\n- **What they're really asking:** Which Google Cloud feature streams resource changes across the organization?\n\n**Clues in the question:**\n- \"**notified in near real time**\" + \"**any project in your organization**\": a Cloud Asset Inventory **feed** at the org level.\n- \"**automated function can review**\": the feed publishes to **Pub/Sub**, which can trigger a function.\n\n**Exam topic:** Resource management and security (exam guide sections 1.1 and 4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Cloud Asset Inventory 🔑\n- **What it is:** A service that keeps an inventory and history of your Google Cloud resources and IAM policies. You can search it, export it (to Cloud Storage or BigQuery), or create **feeds** that stream changes to Pub/Sub.\n- **Looks like:** `gcloud asset feeds create fw-changes --organization=123456 --asset-types=compute.googleapis.com/Firewall --content-type=resource --pubsub-topic=projects/sec/topics/fw-changes`\n- **Not to be confused with:** Cloud Logging audit logs. Those are related, but feeds give structured resource states across the org.\n- **Analogy:** 📒 The building's master inventory with a bell that rings whenever anything changes.\n- **In the online store:** Alerts on any firewall change in the ShopNow org.\n\n### 2. Pub/Sub topic\n- **What it is:** A message channel. Publishers send messages and subscribers (like a function) receive them.\n- **Looks like:** `projects/sec/topics/fw-changes`\n- **Not to be confused with:** A database.\n- **Analogy:** 📮 A mailbox that triggers a helper when a letter arrives.\n- **In the online store:** Triggers the `review-fw-change` function.\n\n### 🔗 How they fit together\n```\n Any project firewall change ─► Asset Inventory feed (org, Firewall type) ─► Pub/Sub fw-changes\n                                                                              └─► Cloud Run function: review ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A developer once opened SSH to the whole internet by mistake. Now an org-level **Asset Inventory feed** streams every firewall change to Pub/Sub, and a function flags any rule with `0.0.0.0/0` within a minute."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** org: feed `fw-changes` → topic `fw-changes` → Cloud Run function `review-fw` posts to #security if a rule allows `0.0.0.0/0` on 22 or 3389."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Near-real-time resource changes across the org → Cloud Asset Inventory feed → Pub/Sub.**\n  🧠 **_\"Asset feed = change doorbell.\"_**\n- Related: **Q340**, **Q348**, **G033**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**uptime check for each VPC network**\": uptime checks test whether an endpoint responds. They don't track configuration changes.\n\n📌 **When to use it:** Use uptime checks for website availability.\n🏢 **Office example:** Testing that the doors open, not who changed the locks.",
+   "B": "**Wrong words:**\n- ❌ \"**once a month**\": not near real time. A bad rule could stay open for weeks.\n\n📌 **When to use it:** Use BigQuery exports for periodic analysis and reports.\n🏢 **Office example:** Checking the lock inventory once a month.",
+   "C": "**Wrong words:**\n- ❌ \"**Ask each project owner to email**\": manual, unreliable and unenforced.\n\n📌 **When to use it:** Never rely on email for security change tracking.\n🏢 **Office example:** Hoping every office remembers to report lock changes.",
+   "D": "- ✔️ \"**Cloud Asset Inventory feed at the organization level**\" matches \"**any project in your organization**\".\n- ✔️ \"**publishes changes to a Pub/Sub topic**\" matches \"**near real time**\".\n- ✔️ \"**trigger a function from that topic**\" matches \"**automated function can review the change**\".\n\n📌 **When to use it:** Use it when you want to be told right away whenever a certain kind of setting changes anywhere in the company.\n🏢 **Office example:** A bell that rings at the security desk whenever any office changes its door lock."
+  },
+  "id": "G032",
+  "title": "Real-Time Notification When Any Firewall Rule Changes Anywhere in the Organization (Cloud Asset Inventory Feed)",
+  "num": 32,
+  "guide": true,
+  "topic": "Security (Cloud Asset Inventory feeds)",
+  "stem": "Your security team wants to be notified in near real time whenever a firewall rule is created, modified, or deleted in any project in your organization, so that an automated function can review the change. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create an uptime check for each VPC network."
+   },
+   {
+    "letter": "B",
+    "text": "Export Cloud Asset Inventory to BigQuery once a month and compare snapshots."
+   },
+   {
+    "letter": "C",
+    "text": "Ask each project owner to email the security team when they change firewall rules."
+   },
+   {
+    "letter": "D",
+    "text": "Create a Cloud Asset Inventory feed at the organization level for the compute.googleapis.com/Firewall asset type that publishes changes to a Pub/Sub topic, and trigger a function from that topic."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** Your company has many projects, each with its own firewall rules.\n- **What you must achieve:** Find out within moments whenever any firewall rule is created, changed or deleted, anywhere in the organization, and let an automatic function check it.\n- **The limits:** It must cover every project and be near real time.\n- **What they're really asking:** Which Google Cloud feature streams resource changes across the organization?"
+ },
+ {
+  "file": "G033-asset-search-all-iam-policies.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** An auditor wants to know who has Owner (full control) on any of your 300+ projects.\n- **What you must achieve:** Produce a complete list of users, groups and service accounts with the Owner role, across the whole organization.\n- **The limits:** Do it quickly, with a single command.\n- **What they're really asking:** Which command searches IAM policies across an entire organization at once?\n\n**Clues in the question:**\n- \"**every … that has the Owner role on any project in your organization**\": an org-wide search of IAM policies.\n- \"**single command**\": `gcloud asset search-all-iam-policies --scope=organizations/ID --query=\"policy:roles/owner\"`.\n\n**Exam topic:** IAM and inventory (exam guide sections 1.1 and 4.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. search-all-iam-policies 🔑\n- **What it is:** A Cloud Asset Inventory command that searches IAM policies in an org, folder or project scope, with a query such as a role or a member.\n- **Looks like:** `gcloud asset search-all-iam-policies --scope=organizations/123456 --query=\"policy:roles/owner\"`\n- **Not to be confused with:** `get-iam-policy`, which reads one resource's policy at a time.\n- **Analogy:** 🔎 Searching the master key register for everyone holding a master key.\n- **In the online store:** The audit report of ShopNow owners.\n\n### 2. Owner role\n- **What it is:** The broadest basic role: full control of a project, including IAM.\n- **Looks like:** `roles/owner` → `user:ceo@shopnow.com`\n- **Not to be confused with:** Organization Administrator, which applies at the org level.\n- **Analogy:** 🗝️ A master key.\n- **In the online store:** Should be held by very few people.\n\n### 🔗 How they fit together\n```\n Org (300+ projects) ─► Cloud Asset Inventory ─search roles/owner─► list of principals + resources ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A SOC 2 auditor requests the list of project owners by tomorrow. One `search-all-iam-policies` command returns every Owner binding across all projects, and the team removes the stale ones the same day."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** audit: `gcloud asset search-all-iam-policies --scope=organizations/123456 --query=\"policy:roles/owner\" --format=\"table(resource, policy.bindings.members)\"`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Who has role X anywhere in the org → `gcloud asset search-all-iam-policies --scope=organizations/…`.**\n  🧠 **_\"search-ALL for all projects.\"_**\n- Related: **Q148** (get-iam-policy), **Q340**, **G032**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**search-all-iam-policies with the scope set to your organization**\" matches \"**any project in your organization**\".\n- ✔️ \"**query for roles/owner**\" matches \"**has the Owner role**\".\n- ✔️ It's one command, matching \"**quickly with a single command**\".\n\n📌 **When to use it:** Use it when you need to find who has a certain kind of access anywhere in the company.\n🏢 **Office example:** Searching the central key register for every master key at once.",
+   "B": "**Wrong words:**\n- ❌ \"**take screenshots**\" of 300+ pages: slow, error-prone and not a single command.\n\n📌 **When to use it:** Use the IAM page to review one project.\n🏢 **Office example:** Photographing every office's key cabinet.",
+   "C": "**Wrong words:**\n- ✔️ It would work eventually.\n- ❌ \"**for each project in a loop**\": 300+ calls and scripting. Not a single command.\n\n📌 **When to use it:** Use get-iam-policy to read one project's policy.\n🏢 **Office example:** Visiting 300 offices to read each key register.",
+   "D": "**Wrong words:**\n- ❌ \"**Billing reports**\": show spending, not who holds which role.\n\n📌 **When to use it:** Use billing reports for costs.\n🏢 **Office example:** Checking the expense report to find key holders."
+  },
+  "id": "G033",
+  "title": "Find Every Principal With the Owner Role Across the Whole Organization (gcloud asset search-all-iam-policies)",
+  "num": 33,
+  "guide": true,
+  "topic": "IAM (Cloud Asset Inventory IAM search)",
+  "stem": "An auditor asks for a list of every user, group, and service account that has the Owner role on any project in your organization, which contains more than 300 projects. You want to produce the list quickly with a single command. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Run gcloud asset search-all-iam-policies with the scope set to your organization and a query for roles/owner."
+   },
+   {
+    "letter": "B",
+    "text": "Open the IAM page of each project in the Google Cloud console and take screenshots."
+   },
+   {
+    "letter": "C",
+    "text": "Run gcloud projects get-iam-policy for each project in a loop and filter the output."
+   },
+   {
+    "letter": "D",
+    "text": "Check the Billing reports page for Owner role costs."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** An auditor wants to know who has Owner (full control) on any of your 300+ projects.\n- **What you must achieve:** Produce a complete list of users, groups and service accounts with the Owner role, across the whole organization.\n- **The limits:** Do it quickly, with a single command.\n- **What they're really asking:** Which command searches IAM policies across an entire organization at once?"
+ },
+ {
+  "file": "G034-quota-increase-gpus.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your team can't create more VMs with L4 GPUs (graphics chips for AI) in the us-central1 region. The error says a quota (a limit on how much of a resource a project may use) has been reached.\n- **What you must achieve:** Get permission to use more GPUs in time for next week.\n- **The limits:** Fix it properly, without hacks that break the project.\n- **What they're really asking:** Where do you check a quota and ask Google to raise it?\n\n**Clues in the question:**\n- \"**quota error**\" + \"**need more**\": review usage and **request a quota increase**.\n- Quotas are per project, per region (for regional resources). They're managed on the **Quotas & System Limits** page (Cloud Quotas).\n\n**Exam topic:** Project setup (exam guide section 1.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Quota 🔑\n- **What it is:** A limit on how much of a resource a project can use, for example GPUs per region or API requests per minute. Many can be increased on request. They protect you and Google from runaway usage.\n- **Looks like:** `NVIDIA_L4_GPUS` in us-central1: 8 of 8 used\n- **Not to be confused with:** A budget, which is about money, not resource counts.\n- **Analogy:** 🎫 The number of parking spaces your office is allowed in the garage.\n- **In the online store:** GPU quota for ShopNow's training project.\n\n### 2. Quota increase request\n- **What it is:** A request (console or Cloud Quotas API) to raise a quota value. Google reviews it, and some are approved automatically.\n- **Looks like:** Console → IAM & Admin → Quotas & System Limits → filter \"L4\" → Edit → new value 32 → justification\n- **Not to be confused with:** A billing change.\n- **Analogy:** 📝 Asking building management for more parking spaces.\n- **In the online store:** Requested 32 L4 GPUs for next week.\n\n### 🔗 How they fit together\n```\n Quota error ─► Quotas & System Limits ─► L4 GPUs us-central1 (8/8) ─► request 32 ✅ (plan ahead)\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A data team plans a big model-training run. They hit the GPU quota during tests, file a **quota increase request** with a short business justification a week ahead, and it's approved before the run."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** project `shop-ml`: request `NVIDIA_L4_GPUS` us-central1 from 8 to 32, a week before the holiday-recommendation training run."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Quota error → check Quotas & System Limits → request an increase (per project / per region). Plan ahead.**\n  🧠 **_\"Quota = parking spaces; ask management for more.\"_**\n- Related: **G035**, **G036**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**quotas are reset for each billing account**\": quotas belong to projects (and regions), not billing accounts.\n\n📌 **When to use it:** Use new billing accounts for separate payment or invoicing.\n🏢 **Office example:** Opening a new bank account to get more parking spaces.",
+   "B": "**Wrong words:**\n- ❌ \"**Delete and recreate the project**\": destroys everything, and new projects get default (often lower) quotas.\n\n📌 **When to use it:** Never do this to get around a quota.\n🏢 **Office example:** Demolishing the office to get more parking.",
+   "C": "- ✔️ \"**Quotas & System Limits page … find the L4 GPU quota for us-central1**\" matches \"**regional GPU limit has been reached**\".\n- ✔️ \"**review current usage, and submit a quota increase request**\" matches \"**need more GPUs for a planned training run next week**\".\n\n📌 **When to use it:** Use it when your project runs into a resource limit and you need it raised ahead of time.\n🏢 **Office example:** Asking building management for more parking spaces before the big event.",
+   "D": "**Wrong words:**\n- ❌ \"**Owner role … quota limits no longer apply**\": false. Quotas apply no matter what role you have.\n\n📌 **When to use it:** Never grant Owner for this.\n🏢 **Office example:** A master key doesn't create more parking spaces."
+  },
+  "id": "G034",
+  "title": "Project Hits the GPU Quota in a Region: Check Usage and Request an Increase (Cloud Quotas)",
+  "num": 34,
+  "guide": true,
+  "topic": "Quotas (assess and request increases)",
+  "stem": "Your team cannot create more VMs with NVIDIA L4 GPUs in us-central1 because a quota error says the regional GPU limit has been reached. You need more GPUs for a planned training run next week. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a new billing account, because quotas are reset for each billing account."
+   },
+   {
+    "letter": "B",
+    "text": "Delete and recreate the project to reset its quotas."
+   },
+   {
+    "letter": "C",
+    "text": "On the Quotas & System Limits page in the Google Cloud console, find the L4 GPU quota for us-central1, review current usage, and submit a quota increase request."
+   },
+   {
+    "letter": "D",
+    "text": "Add the Owner role to your account so that quota limits no longer apply."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** Your team can't create more VMs with L4 GPUs (graphics chips for AI) in the us-central1 region. The error says a quota (a limit on how much of a resource a project may use) has been reached.\n- **What you must achieve:** Get permission to use more GPUs in time for next week.\n- **The limits:** Fix it properly, without hacks that break the project.\n- **What they're really asking:** Where do you check a quota and ask Google to raise it?"
+ },
+ {
+  "file": "G035-check-gpu-zone-availability.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You want VMs with H100 GPUs (powerful AI chips) in the europe-west4 region. Each region is split into zones (separate data centers), and not every zone has every GPU type.\n- **What you must achieve:** Find out which zones in that region offer H100 GPUs before you deploy.\n- **The limits:** Check first rather than by trial and error.\n- **What they're really asking:** Which command lists GPU types available per zone?\n\n**Clues in the question:**\n- \"**Not every zone offers every GPU type**\" + \"**confirm which zones**\": list the **accelerator types** per zone.\n- `gcloud compute accelerator-types list --filter=\"zone~europe-west4 AND name~h100\"`.\n\n**Exam topic:** Project setup / locations (exam guide sections 1.1 and 2.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Region / zone\n- **What it is:** A region is a geographic area (like `europe-west4`, Netherlands). A zone is one data center area inside it (like `europe-west4-a`).\n- **Looks like:** `europe-west4-a`, `europe-west4-b`, `europe-west4-c`\n- **Not to be confused with:** A multi-region (like `EU`), which is used by storage.\n- **Analogy:** 🏙️ A city (region) and its neighborhoods (zones).\n- **In the online store:** ShopNow's EU training runs in `europe-west4`.\n\n### 2. accelerator-types list 🔑\n- **What it is:** A gcloud command that lists GPU and accelerator types offered in each zone. `machine-types list` does the same for machine types.\n- **Looks like:** `gcloud compute accelerator-types list --filter=\"zone~europe-west4\"` → `nvidia-h100-80gb  europe-west4-b`…\n- **Not to be confused with:** `regions list`, which shows regions and quotas, not GPU types per zone.\n- **Analogy:** 📋 The menu showing which dishes each branch kitchen serves.\n- **In the online store:** Confirms where H100s exist.\n\n### 🔗 How they fit together\n```\n accelerator-types list (filter europe-west4, h100)\n   → europe-west4-b ✅, europe-west4-c ✅ (a ✗) → deploy there\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "An ML team almost scheduled a launch in a zone without H100s. A quick `accelerator-types list` shows the right zones, and the Terraform zone variable is set before deployment."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** ML: `gcloud compute accelerator-types list --filter=\"zone~europe-west4 AND name~h100\"` → deploy training to `europe-west4-b`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Is GPU / machine type X offered in zone Y? → `gcloud compute accelerator-types list` / `machine-types list` with a filter.**\n  🧠 **_\"Check the menu before ordering.\"_**\n- Related: **G034**, **G036**, **Q089**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**gcloud projects list**\": lists projects. Nothing about GPUs or zones.\n\n📌 **When to use it:** Use it to find project IDs.\n🏢 **Office example:** Listing departments when you asked about the menu.",
+   "B": "**Wrong words:**\n- ❌ \"**regions list**\": shows regions and some regional quotas, not which zones offer H100s.\n\n📌 **When to use it:** Use it to see the list of regions.\n🏢 **Office example:** Listing cities without checking the menus.",
+   "C": "**Wrong words:**\n- ❌ \"**Create a VM in each zone … see which ones succeed**\": trial and error that costs money and can fail for other reasons, like quota.\n\n📌 **When to use it:** Avoid it. Check availability first.\n🏢 **Office example:** Ordering the dish at every branch to see which serves it.",
+   "D": "- ✔️ \"**gcloud compute accelerator-types list**\" matches \"**confirm which zones … offer H100 GPUs**\".\n- ✔️ \"**filter … by zones in europe-west4 and the H100 accelerator type**\" matches \"**in europe-west4**\" and \"**H100**\".\n\n📌 **When to use it:** Use it when you need to know where a certain special machine part is offered before you plan.\n🏢 **Office example:** Checking which branch kitchens serve a dish before booking the event."
+  },
+  "id": "G035",
+  "title": "Check Which Zones in a Region Offer a Specific GPU Type Before Deploying (gcloud compute accelerator-types list)",
+  "num": 35,
+  "guide": true,
+  "topic": "Compute Engine (regions and zones availability)",
+  "stem": "You plan to deploy VMs with NVIDIA H100 GPUs in europe-west4. Not every zone offers every GPU type. Before you deploy, you want to confirm which zones in that region offer H100 GPUs. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Run gcloud projects list."
+   },
+   {
+    "letter": "B",
+    "text": "Run gcloud compute regions list."
+   },
+   {
+    "letter": "C",
+    "text": "Create a VM in each zone with an H100 GPU and see which ones succeed."
+   },
+   {
+    "letter": "D",
+    "text": "Run gcloud compute accelerator-types list and filter the results by zones in europe-west4 and the H100 accelerator type."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** You want VMs with H100 GPUs (powerful AI chips) in the europe-west4 region. Each region is split into zones (separate data centers), and not every zone has every GPU type.\n- **What you must achieve:** Find out which zones in that region offer H100 GPUs before you deploy.\n- **The limits:** Check first rather than by trial and error.\n- **What they're really asking:** Which command lists GPU types available per zone?"
+ },
+ {
+  "file": "G036-attach-gpu-maintenance-terminate.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You have a running VM (a rented computer) on the N1 machine family, and you want to add a T4 GPU (a graphics chip for AI) to it.\n- **What you must achieve:** Attach the GPU to this existing VM.\n- **The limits:** The VM is currently set to live migrate, meaning Google moves it to another host during maintenance without stopping it.\n- **What they're really asking:** What steps must you take for a VM to have a GPU?\n\n**Clues in the question:**\n- VMs with GPUs **can't live migrate**, so the host maintenance policy must be **Terminate**.\n- Changing accelerators on an existing VM requires the VM to be **stopped**.\n\n**Exam topic:** Compute Engine operations (exam guide section 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Host maintenance policy 🔑\n- **What it is:** What Compute Engine does when the physical host needs maintenance: **MIGRATE** (live-move the VM, the default) or **TERMINATE** (stop it and optionally restart it). VMs with GPUs must use TERMINATE.\n- **Looks like:** `gcloud compute instances set-scheduling vm-1 --maintenance-policy=TERMINATE --restart-on-failure`\n- **Not to be confused with:** Spot or preemptible settings.\n- **Analogy:** 🚚 \"During building repairs, move my desk\" vs \"close my office for the day\".\n- **In the online store:** GPU VMs restart after host maintenance.\n\n### 2. Attaching a GPU\n- **What it is:** Adding an accelerator to a VM's configuration. On N1 you add a GPU type and count. Some families (A2, A3, G2) come with GPUs built into the machine type.\n- **Looks like:** Console: stop VM → Edit → GPUs: 1× NVIDIA T4 → Save → Start\n- **Not to be confused with:** Attaching a disk.\n- **Analogy:** 🔌 Installing a new graphics card, which needs the computer turned off.\n- **In the online store:** Adding a T4 to the image-tagging VM.\n\n### 🔗 How they fit together\n```\n Running VM (MIGRATE) ─stop─► set TERMINATE ─► add 1× T4 ─► start ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "An image-tagging service runs too slowly on CPUs. The engineer stops the VM in a quiet hour, switches maintenance to **terminate**, adds a T4, and starts it again. Tagging is 10× faster, and the VM now restarts after host maintenance instead of live-migrating."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `img-tagger` (n1-standard-8): stop → `--maintenance-policy=TERMINATE` → add 1× `nvidia-tesla-t4` → start. The NVIDIA driver is installed on first boot."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **GPU VM → stop to change, host maintenance = TERMINATE (no live migration).**\n  🧠 **_\"GPUs don't migrate; they terminate.\"_**\n- Related: **G034**, **G035**, **G006**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**while the VM is running; no other changes**\": GPUs can't be added to a running VM, and GPU VMs can't keep the live-migrate policy.\n\n📌 **When to use it:** Never expected to work. Stop the VM first.\n🏢 **Office example:** Installing a graphics card while the computer is on.",
+   "B": "- ✔️ \"**Stop the VM**\": needed to change its hardware.\n- ✔️ \"**set its host maintenance policy to terminate**\" fixes \"**set to live migrate**\", since GPU VMs can't live migrate.\n- ✔️ \"**add the GPU … and start the VM**\" matches \"**add an NVIDIA T4 GPU to an existing N1 VM**\".\n\n📌 **When to use it:** Use it when an existing machine needs a special chip added.\n🏢 **Office example:** Turning the computer off, installing the card, setting \"close office during repairs\", then turning it back on.",
+   "C": "**Wrong words:**\n- ❌ \"**Keep the live migrate policy**\": not allowed with GPUs.\n- ❌ \"**attach the GPU through a Persistent Disk**\": disks store data. They can't carry a GPU.\n\n📌 **When to use it:** Never expected to work.\n🏢 **Office example:** Trying to plug a graphics card into a filing cabinet.",
+   "D": "**Wrong words:**\n- ❌ \"**attach the snapshot to a Cloud TPU**\": snapshots are disk backups, and a TPU isn't a T4 GPU on your VM.\n\n📌 **When to use it:** Use snapshots to back up or copy disks.\n🏢 **Office example:** Photocopying the hard drive to a different machine."
+  },
+  "id": "G036",
+  "title": "Add a GPU to an Existing VM: Stop It and Set Host Maintenance to Terminate (Attaching GPUs)",
+  "num": 36,
+  "guide": true,
+  "topic": "Compute Engine (attaching GPUs)",
+  "stem": "You want to add an NVIDIA T4 GPU to an existing N1 VM that is currently running. The VM's host maintenance policy is set to live migrate. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Attach the GPU while the VM is running; no other changes are needed."
+   },
+   {
+    "letter": "B",
+    "text": "Stop the VM, set its host maintenance policy to terminate, add the GPU to the VM's configuration, and start the VM."
+   },
+   {
+    "letter": "C",
+    "text": "Keep the live migrate policy, and attach the GPU through a Persistent Disk."
+   },
+   {
+    "letter": "D",
+    "text": "Create a snapshot of the boot disk, and attach the snapshot to a Cloud TPU."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** You have a running VM (a rented computer) on the N1 machine family, and you want to add a T4 GPU (a graphics chip for AI) to it.\n- **What you must achieve:** Attach the GPU to this existing VM.\n- **The limits:** The VM is currently set to live migrate, meaning Google moves it to another host during maintenance without stopping it.\n- **What they're really asking:** What steps must you take for a VM to have a GPU?"
+ },
+ {
+  "file": "G037-eventarc-audit-log-trigger.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Security has a small program on Cloud Run (Google's serverless container service) that checks how a VM (virtual machine) is configured.\n- **What you must achieve:** Make that program run automatically every time someone creates a VM in the project.\n- **The limits:** It should be managed and event-driven (reacting to events as they happen), with little routing code to write.\n- **What they're really asking:** Which Google Cloud service turns \"a VM was created\" into a call to Cloud Run?\n\n**Clues in the question:**\n- \"**every time a Compute Engine VM is created**\": VM creation is recorded in **Admin Activity audit logs**.\n- \"**managed, event-driven**\" + \"**Cloud Run**\": **Eventarc** routes Cloud Audit Logs events to Cloud Run.\n\n**Exam topic:** Serverless and events (exam guide section 2.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Eventarc 🔑\n- **What it is:** A managed event-routing service. It delivers events from Google Cloud sources (Cloud Audit Logs, Cloud Storage, Pub/Sub and more) to destinations like Cloud Run, using **triggers** with filters.\n- **Looks like:** `gcloud eventarc triggers create vm-created --location=us-central1 --destination-run-service=vm-checker --event-filters=type=google.cloud.audit.log.v1.written --event-filters=serviceName=compute.googleapis.com --event-filters=methodName=v1.compute.instances.insert --service-account=eventarc-sa@p.iam.gserviceaccount.com`\n- **Not to be confused with:** Cloud Scheduler, which runs things on a clock, not when events happen.\n- **Analogy:** 🔔 A doorbell wired to ring the security desk whenever a new office is opened.\n- **In the online store:** Triggers `vm-checker` on new VMs.\n\n### 2. Admin Activity audit log\n- **What it is:** An always-on log of configuration changes (create, delete, set IAM) made through Google Cloud APIs.\n- **Looks like:** `methodName: v1.compute.instances.insert`, `principalEmail: dev@shopnow.com`\n- **Not to be confused with:** Data Access logs (data reads and writes, often off by default).\n- **Analogy:** 📒 The building's change register.\n- **In the online store:** Records every VM creation.\n\n### 🔗 How they fit together\n```\n dev creates VM ─► Admin Activity audit log ─► Eventarc trigger (filters) ─► Cloud Run vm-checker ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A company requires every VM to have no public IP and to carry an owner label. An **Eventarc** trigger on `compute.instances.insert` audit events calls `vm-checker`, which posts a warning to Slack within a minute of a bad VM being created."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: Eventarc trigger `vm-created` → Cloud Run `vm-checker` checks for an external IP and the `owner` label, then posts to #security."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **React to Google Cloud events (audit logs, Storage, Pub/Sub) with Cloud Run → Eventarc trigger.**\n  🧠 **_\"Event happens → Eventarc routes it.\"_**\n- Related: **Q305**, **Q262**, **G032**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**every hour**\": a VM could sit misconfigured for an hour. Polling isn't event-driven.\n\n📌 **When to use it:** Use Cloud Scheduler for timed jobs like nightly reports.\n🏢 **Office example:** Walking the building every hour looking for new offices.",
+   "B": "**Wrong words:**\n- ❌ \"**manually**\": people forget, so it isn't automatic or enforced.\n\n📌 **When to use it:** Never rely on manual steps for security checks.\n🏢 **Office example:** Asking people to report themselves.",
+   "C": "- ✔️ \"**Eventarc trigger for Cloud Audit Logs events**\" matches \"**managed, event-driven solution with minimal code for routing events**\".\n- ✔️ \"**serviceName compute.googleapis.com and the VM insert methodName**\" matches \"**every time a Compute Engine VM is created**\".\n- ✔️ \"**Cloud Run service as the destination**\" matches \"**a Cloud Run service to run**\".\n\n📌 **When to use it:** Use it when a program should start automatically the moment a certain thing happens in your cloud.\n🏢 **Office example:** A doorbell that rings the inspection team every time a new office opens.",
+   "D": "**Wrong words:**\n- ✔️ It detects VM creation.\n- ❌ \"**alert that emails the security team**\": it notifies people but doesn't run the Cloud Run service.\n\n📌 **When to use it:** Use log-based alerts when a person just needs to know.\n🏢 **Office example:** A bell rings, but nobody runs the inspection."
+  },
+  "id": "G037",
+  "title": "Run a Cloud Run Service Whenever Someone Creates a VM, Using Audit Log Events (Eventarc Trigger)",
+  "num": 37,
+  "guide": true,
+  "topic": "Serverless (Eventarc audit log triggers)",
+  "stem": "Your security team wants a Cloud Run service to run automatically every time a Compute Engine VM is created in a project, so that it can check the VM's configuration. You want a managed, event-driven solution with minimal code for routing events. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a Cloud Scheduler job that calls the Cloud Run service every hour to list all VMs."
+   },
+   {
+    "letter": "B",
+    "text": "Ask developers to call the Cloud Run service manually after creating a VM."
+   },
+   {
+    "letter": "C",
+    "text": "Create an Eventarc trigger for Cloud Audit Logs events with serviceName compute.googleapis.com and the VM insert methodName, with the Cloud Run service as the destination."
+   },
+   {
+    "letter": "D",
+    "text": "Create a log-based metric for VM creation and an alert that emails the security team."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** Security has a small program on Cloud Run (Google's serverless container service) that checks how a VM (virtual machine) is configured.\n- **What you must achieve:** Make that program run automatically every time someone creates a VM in the project.\n- **The limits:** It should be managed and event-driven (reacting to events as they happen), with little routing code to write.\n- **What they're really asking:** Which Google Cloud service turns \"a VM was created\" into a call to Cloud Run?"
+ },
+ {
+  "file": "G038-gke-regional-cluster.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your production Kubernetes cluster (GKE Standard) runs important apps.\n- **What you must achieve:** Keep both the control plane (the cluster's \"brain\" that manages everything) and the running apps going if a whole zone (one data center area) goes down.\n- **The limits:** It must survive the loss of an entire zone.\n- **What they're really asking:** Which kind of GKE cluster spreads both the brain and the workers across zones?\n\n**Clues in the question:**\n- \"**control plane available … if an entire zone fails**\": the control plane must be in **multiple zones**. That's a **regional cluster**.\n- \"**keep running workloads**\": nodes in multiple zones too.\n\n**Exam topic:** GKE (exam guide section 2.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Regional cluster 🔑\n- **What it is:** A GKE cluster whose **control plane is replicated across three zones** in a region, with nodes spread across multiple zones. It survives a zone outage. Autopilot clusters are always regional.\n- **Looks like:** `gcloud container clusters create shop-prod --region=us-central1 --num-nodes=2` (2 per zone × 3 zones)\n- **Not to be confused with:** A zonal cluster, which has a single control plane in one zone.\n- **Analogy:** 🏢 Three branch offices that each keep a copy of the head office's records.\n- **In the online store:** ShopNow's production cluster.\n\n### 2. Control plane\n- **What it is:** The managed Kubernetes \"brain\" (API server, scheduler) that you talk to with kubectl.\n- **Looks like:** `kubectl get pods` → the API server answers\n- **Not to be confused with:** The nodes, which are the worker VMs that run Pods.\n- **Analogy:** 🧠 The head office.\n- **In the online store:** Upgraded by Google.\n\n### 🔗 How they fit together\n```\n Region us-central1\n  zone a: control plane replica + nodes\n  zone b: control plane replica + nodes   ← zone fails, others keep going ✅\n  zone c: control plane replica + nodes\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "During a zone outage, a retailer's zonal cluster API became unreachable, so they couldn't even scale. After moving to a **regional cluster**, the next zone incident passed without anyone noticing."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `shop-prod`: a regional cluster in us-central1, node pool `web` with 2 nodes per zone (6 total). PodDisruptionBudgets and topology spread keep replicas across zones."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Survive a zone outage (control plane + nodes) → regional GKE cluster.** Zonal = single control plane.\n  🧠 **_\"Regional = three brains.\"_**\n- Related: **Q245**, **Q283** (Autopilot is regional), **Q147**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**zonal cluster … in one zone**\": the control plane and all nodes sit in one zone. A zone outage takes everything down.\n\n📌 **When to use it:** Use zonal clusters for dev or test where a short outage is acceptable.\n🏢 **Office example:** One office, however big. A power cut stops it all.",
+   "B": "- ✔️ \"**control plane is replicated across zones**\" matches \"**keep the Kubernetes control plane available … if an entire zone fails**\".\n- ✔️ \"**nodes run in multiple zones of the region**\" matches \"**keep running workloads**\".\n\n📌 **When to use it:** Use it when the system must keep working even if one data center area goes down.\n🏢 **Office example:** Running from three branch offices so one closure doesn't stop the business.",
+   "C": "**Wrong words:**\n- ✔️ Auto-repair fixes unhealthy nodes.\n- ❌ \"**zonal cluster**\": auto-repair can't help when the whole zone, including the control plane, is down.\n\n📌 **When to use it:** Use auto-repair on any cluster to replace broken nodes.\n🏢 **Office example:** A handyman, but the building has no power.",
+   "D": "**Wrong words:**\n- ❌ \"**two node pools in the same zone**\": still one zone, and the control plane isn't replicated.\n\n📌 **When to use it:** Use multiple node pools for different machine types.\n🏢 **Office example:** Two teams in the same office. A power cut hits both."
+  },
+  "id": "G038",
+  "title": "GKE Control Plane and Nodes Must Survive a Zone Outage (Regional Cluster)",
+  "num": 38,
+  "guide": true,
+  "topic": "GKE (regional clusters)",
+  "stem": "Your production GKE Standard cluster must keep the Kubernetes control plane available and keep running workloads if an entire zone fails. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a zonal cluster with a large node pool in one zone."
+   },
+   {
+    "letter": "B",
+    "text": "Create a regional cluster so that the control plane is replicated across zones and nodes run in multiple zones of the region."
+   },
+   {
+    "letter": "C",
+    "text": "Create a zonal cluster and enable node auto-repair."
+   },
+   {
+    "letter": "D",
+    "text": "Create two node pools in the same zone."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** Your production Kubernetes cluster (GKE Standard) runs important apps.\n- **What you must achieve:** Keep both the control plane (the cluster's \"brain\" that manages everything) and the running apps going if a whole zone (one data center area) goes down.\n- **The limits:** It must survive the loss of an entire zone.\n- **What they're really asking:** Which kind of GKE cluster spreads both the brain and the workers across zones?"
+ },
+ {
+  "file": "G039-gke-gcloud-auth-plugin.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** On a new computer you installed kubectl (the Kubernetes command-line tool) and pointed it at your GKE cluster with `get-credentials`.\n- **What you must achieve:** Make `kubectl get pods` work.\n- **The limits:** The error says a piece called `gke-gcloud-auth-plugin` is missing.\n- **What they're really asking:** What does kubectl need to sign in to GKE, and how do you install it?\n\n**Clues in the question:**\n- \"**gke-gcloud-auth-plugin was not found**\": kubectl uses this plugin to get Google credentials for GKE (required for recent versions).\n- Install the plugin, then refresh the kubeconfig with `get-credentials`.\n\n**Exam topic:** GKE tooling (exam guide section 2.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. kubectl\n- **What it is:** The command-line tool for Kubernetes clusters.\n- **Looks like:** `kubectl get pods -n shop`\n- **Not to be confused with:** gcloud, which manages Google Cloud resources, including creating clusters.\n- **Analogy:** 🎮 The remote control for your cluster.\n- **In the online store:** Developers check ShopNow Pods.\n\n### 2. gke-gcloud-auth-plugin 🔑\n- **What it is:** A small helper that kubectl calls to fetch a short-lived Google access token for GKE. It's required since Kubernetes 1.26.\n- **Looks like:** `gcloud components install gke-gcloud-auth-plugin` (or `sudo apt-get install google-cloud-cli-gke-gcloud-auth-plugin`)\n- **Not to be confused with:** A service account key.\n- **Analogy:** 🪪 The badge reader that lets your remote control talk to the building.\n- **In the online store:** Lets ShopNow devs use kubectl with their Google login.\n\n### 🔗 How they fit together\n```\n kubectl ─needs─► gke-gcloud-auth-plugin ─► gcloud login token ─► GKE API ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A new developer gets the plugin error on day one. They install the plugin, rerun `get-credentials`, and `kubectl get pods` works using their own Google identity. No keys are involved."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** onboarding: `gcloud components install kubectl gke-gcloud-auth-plugin` → `gcloud container clusters get-credentials shop-prod --region=us-central1` → `kubectl get pods -n shop`."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **\"gke-gcloud-auth-plugin not found\" → install the plugin, rerun get-credentials.**\n  🧠 **_\"kubectl needs its badge reader.\"_**\n- Related: **Q241**, **Q189**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**Install gke-gcloud-auth-plugin**\" matches \"**gke-gcloud-auth-plugin was not found**\".\n- ✔️ \"**run … get-credentials again**\" refreshes the kubeconfig to use the plugin.\n\n📌 **When to use it:** Use it when the command tool says a sign-in helper is missing.\n🏢 **Office example:** Installing the missing badge reader so your remote control can open the door.",
+   "B": "**Wrong words:**\n- ❌ \"**service account key … kubeconfig**\": creates a long-lived secret and swaps your identity for a robot's. Bad practice.\n\n📌 **When to use it:** Avoid it. Use the auth plugin with your own identity.\n🏢 **Office example:** Taping a master key to the remote control.",
+   "C": "**Wrong words:**\n- ❌ \"**Disable authentication**\": you can't, and it would be extremely unsafe.\n\n📌 **When to use it:** Never use this.\n🏢 **Office example:** Removing the lock from the front door.",
+   "D": "**Wrong words:**\n- ❌ \"**Reinstall … without kubectl**\": you need kubectl and the plugin. This removes the tool.\n\n📌 **When to use it:** Not expected to help.\n🏢 **Office example:** Throwing away the remote control."
+  },
+  "id": "G039",
+  "title": "kubectl Fails With \"gke-gcloud-auth-plugin not found\" (Install the Plugin, Then Get Credentials)",
+  "num": 39,
+  "guide": true,
+  "topic": "GKE (kubectl install and authentication)",
+  "stem": "You installed kubectl on a new workstation and ran gcloud container clusters get-credentials for your GKE cluster. When you run kubectl get pods, you receive an error saying that gke-gcloud-auth-plugin was not found. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Install gke-gcloud-auth-plugin (for example, with gcloud components install gke-gcloud-auth-plugin), then run gcloud container clusters get-credentials again."
+   },
+   {
+    "letter": "B",
+    "text": "Create a service account key and paste it into the kubeconfig file."
+   },
+   {
+    "letter": "C",
+    "text": "Disable authentication on the GKE cluster's control plane."
+   },
+   {
+    "letter": "D",
+    "text": "Reinstall the Google Cloud CLI without kubectl."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** On a new computer you installed kubectl (the Kubernetes command-line tool) and pointed it at your GKE cluster with `get-credentials`.\n- **What you must achieve:** Make `kubectl get pods` work.\n- **The limits:** The error says a piece called `gke-gcloud-auth-plugin` is missing.\n- **What they're really asking:** What does kubectl need to sign in to GKE, and how do you install it?"
+ },
+ {
+  "file": "G040-cloud-run-no-traffic-tag.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You have a live Cloud Run service (Google's serverless container service). Each deploy creates a new revision (a saved version).\n- **What you must achieve:** Let QA testers try the new version at its own web address.\n- **The limits:** Real users must keep getting 100% of their traffic from the current version.\n- **What they're really asking:** How do you deploy a version that gets no user traffic but still has its own test URL?\n\n**Clues in the question:**\n- \"**100% of users continue to be served by the current revision**\": deploy with **`--no-traffic`**.\n- \"**dedicated URL**\": a revision **tag** creates a URL like `https://qa---service-xyz.run.app`.\n\n**Exam topic:** Cloud Run operations (exam guide section 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Revision\n- **What it is:** An immutable snapshot of a Cloud Run service's code and settings, created on each deploy.\n- **Looks like:** `orders-api-00042-abc`\n- **Not to be confused with:** A separate service.\n- **Analogy:** 📄 A numbered version of a document.\n- **In the online store:** Each orders-api release.\n\n### 2. Revision tag 🔑\n- **What it is:** A name attached to a revision that gives it its own URL, even when it gets 0% of normal traffic.\n- **Looks like:** `gcloud run deploy orders-api --image=…:v43 --no-traffic --tag=qa` → `https://qa---orders-api-xyz-uc.a.run.app`\n- **Not to be confused with:** Traffic splitting, which sends a share of real users.\n- **Analogy:** 🔖 A sticky tab on a draft so reviewers can find it.\n- **In the online store:** QA tests v43 before any customer sees it.\n\n### 🔗 How they fit together\n```\n users ─100%─► revision 42 (current)\n QA ─► https://qa---orders-api… ─► revision 43 (0% traffic, tag qa) ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A store's QA team needs to test checkout changes against production settings. The engineer deploys with `--no-traffic --tag=qa`. QA tests at the tagged URL, and once approved, traffic is shifted gradually."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: `gcloud run deploy orders-api --image=…:v43 --no-traffic --tag=qa` → QA tests → `gcloud run services update-traffic orders-api --to-tags=qa=10` → then 100%."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Test a new Cloud Run revision with 0 user traffic and its own URL → `--no-traffic --tag=NAME`.**\n  🧠 **_\"No traffic, but a tag to find it.\"_**\n- Related: **Q166**, **Q253**, **Q255**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Deploy … normally**\": the new revision gets 100% of users immediately, which breaks \"**100% of users continue to be served by the current revision**\".\n\n📌 **When to use it:** Use a normal deploy for low-risk changes when you trust your tests.\n🏢 **Office example:** Publishing the draft and pulling it back if someone complains.",
+   "B": "- ✔️ \"**--no-traffic**\" matches \"**100% of users continue to be served by the current revision**\".\n- ✔️ \"**--tag=qa**\" plus \"**tagged revision URL**\" matches \"**test it at a dedicated URL**\".\n\n📌 **When to use it:** Use it when testers need to try a new version before any customer sees it.\n🏢 **Office example:** Putting a draft in the review tray with a tab, while the official version stays on the noticeboard.",
+   "C": "**Wrong words:**\n- ❌ \"**new Cloud Run service … for every test**\": different settings and URL, more clutter, and it doesn't test the real service's revisions.\n\n📌 **When to use it:** Use separate services for truly separate apps.\n🏢 **Office example:** Opening a new branch office to test a form.",
+   "D": "**Wrong words:**\n- ❌ \"**50/50**\": half of real users get the untested version.\n\n📌 **When to use it:** Use small percentage splits for gradual rollouts after testing.\n🏢 **Office example:** Giving half the customers the draft."
+  },
+  "id": "G040",
+  "title": "Deploy a New Cloud Run Revision for Testing With Zero User Traffic and Its Own URL (--no-traffic --tag)",
+  "num": 40,
+  "guide": true,
+  "topic": "Cloud Run (revisions and tags)",
+  "stem": "You want to deploy a new revision of your Cloud Run service so that QA can test it at a dedicated URL, while 100% of users continue to be served by the current revision. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Deploy the new revision normally, and immediately roll back if QA finds problems."
+   },
+   {
+    "letter": "B",
+    "text": "Deploy the new revision with gcloud run deploy using the --no-traffic and --tag=qa flags, and give QA the tagged revision URL."
+   },
+   {
+    "letter": "C",
+    "text": "Create a new Cloud Run service with a different name for every test."
+   },
+   {
+    "letter": "D",
+    "text": "Split traffic 50/50 between the current and new revisions."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** You have a live Cloud Run service (Google's serverless container service). Each deploy creates a new revision (a saved version).\n- **What you must achieve:** Let QA testers try the new version at its own web address.\n- **The limits:** Real users must keep getting 100% of their traffic from the current version.\n- **What they're really asking:** How do you deploy a version that gets no user traffic but still has its own test URL?"
+ },
+ {
+  "file": "G041-cloud-sql-cross-region-replica.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your MySQL database on Cloud SQL (Google's managed database) runs in us-east1, with a standby in another zone of the same region.\n- **What you must achieve:** If the whole us-east1 region goes down, be able to run the database in another region within minutes and lose very little data.\n- **The limits:** Recovery must take minutes, not hours, with minimal data loss.\n- **What they're really asking:** How do you keep a near-live copy of a Cloud SQL database in another region?\n\n**Clues in the question:**\n- \"**HA within the region**\" covers zones, not regions.\n- \"**another region within minutes … minimal data loss**\": a **cross-region read replica** (continuously replicated) that you **promote**.\n\n**Exam topic:** Data redundancy (exam guide section 2.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Cloud SQL high availability (HA)\n- **What it is:** A primary plus a standby in **another zone of the same region**, with automatic failover.\n- **Looks like:** Primary `us-east1-b`, standby `us-east1-c`\n- **Not to be confused with:** Cross-region DR.\n- **Analogy:** 🏢 A backup office on another floor of the same building.\n- **In the online store:** ShopNow orders DB today.\n\n### 2. Cross-region read replica 🔑\n- **What it is:** A read-only copy of a Cloud SQL instance in another region, kept up to date by asynchronous replication. You can **promote** it to a standalone primary during a regional disaster. (Enterprise Plus also offers managed DR replica switchover.)\n- **Looks like:** `gcloud sql instances create orders-replica-west --master-instance-name=orders-db --region=us-west1` → disaster: `gcloud sql instances promote-replica orders-replica-west`\n- **Not to be confused with:** A backup or export file, which takes longer to restore and loses more data.\n- **Analogy:** 🏙️ A live copy of the records in another city's office.\n- **In the online store:** Orders DB copy in us-west1.\n\n### 🔗 How they fit together\n```\n us-east1: orders-db (HA primary+standby) ──async replication──► us-west1: orders-replica-west\n Region down → promote replica → apps point to us-west1 ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "After a cloud region outage elsewhere made the news, a store's board asks for regional DR. A **cross-region replica** in us-west1 keeps a near-live copy, and a tested runbook promotes it and switches the app's connection in under 15 minutes."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: `orders-db` (us-east1, HA) → replica `orders-replica-west` (us-west1). Runbook: promote → update the Secret Manager `DB_HOST` → redeploy Cloud Run in us-west1."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Zone failure → Cloud SQL HA. Region failure → cross-region read replica + promote.**\n  🧠 **_\"HA = floors; replica = cities.\"_**\n- Related: **Q003**, **Q188**, **Q217**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**daily export … in us-east1**\": up to a day of data loss, slow restore, and the backup sits in the same failed region.\n\n📌 **When to use it:** Use exports for long-term archives or moving data.\n🏢 **Office example:** Photocopying records daily but keeping the copies in the same building.",
+   "B": "- ✔️ \"**cross-region read replica in another region**\" matches \"**recovered in another region**\" and \"**minimal data loss**\": it's continuously replicated.\n- ✔️ \"**promote it if us-east1 fails**\" matches \"**within minutes**\".\n\n📌 **When to use it:** Use it when the database must survive a whole region going down.\n🏢 **Office example:** Keeping a live copy of the records in another city's office, ready to take over.",
+   "C": "**Wrong words:**\n- ❌ \"**second zone**\": HA already uses zones in one region. A full region outage takes them all.\n\n📌 **When to use it:** Use HA for zone failures.\n🏢 **Office example:** Another floor of the same building.",
+   "D": "**Wrong words:**\n- ❌ \"**machine type and storage**\": more capacity, still one region.\n\n📌 **When to use it:** Use it when the database is too slow or full.\n🏢 **Office example:** A bigger office in the same building."
+  },
+  "id": "G041",
+  "title": "Cloud SQL Must Recover in Another Region if the Primary Region Fails (Cross-Region Read Replica, Promote on Failure)",
+  "num": 41,
+  "guide": true,
+  "topic": "Cloud SQL (cross-region DR)",
+  "stem": "Your Cloud SQL for MySQL instance in us-east1 is configured for high availability within the region. The business now requires that the database can be recovered in another region within minutes if the entire us-east1 region becomes unavailable, with minimal data loss. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Take a daily export of the database to a Cloud Storage bucket in us-east1."
+   },
+   {
+    "letter": "B",
+    "text": "Create a cross-region read replica in another region, such as us-west1, and promote it if us-east1 fails."
+   },
+   {
+    "letter": "C",
+    "text": "Add a second zone to the existing high-availability configuration."
+   },
+   {
+    "letter": "D",
+    "text": "Increase the instance's machine type and storage."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** Your MySQL database on Cloud SQL (Google's managed database) runs in us-east1, with a standby in another zone of the same region.\n- **What you must achieve:** If the whole us-east1 region goes down, be able to run the database in another region within minutes and lose very little data.\n- **The limits:** Recovery must take minutes, not hours, with minimal data loss.\n- **What they're really asking:** How do you keep a near-live copy of a Cloud SQL database in another region?"
+ },
+ {
+  "file": "G042-dual-region-turbo-replication.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Order receipts are saved as files (objects) in Cloud Storage.\n- **What you must achieve:** Make sure every new file is also copied to a second region (a different geographic area) within 15 minutes.\n- **The limits:** Both regions must be in the United States.\n- **What they're really asking:** Which bucket setup guarantees a copy in a second region within 15 minutes?\n\n**Clues in the question:**\n- \"**second region**\" + \"**United States**\": a **dual-region** bucket with two chosen US regions.\n- \"**within 15 minutes**\": **turbo replication** has a 15-minute RPO (recovery point objective) for newly written objects. Default replication can take up to 12 hours for 100% of objects.\n\n**Exam topic:** Storage redundancy (exam guide section 2.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Dual-region bucket\n- **What it is:** A Cloud Storage bucket whose data is stored in two specific regions that you choose.\n- **Looks like:** `gcloud storage buckets create gs://shop-receipts --location=US --placement=us-central1,us-east1 --rpo=ASYNC_TURBO`\n- **Not to be confused with:** A multi-region bucket (a large area like `US`, where Google picks the places).\n- **Analogy:** 🏙️ Keeping records in two named city offices.\n- **In the online store:** Receipts in us-central1 + us-east1.\n\n### 2. Turbo replication 🔑\n- **What it is:** A premium option for dual-region buckets: 100% of newly written objects are replicated to both regions within **15 minutes** (the RPO target).\n- **Looks like:** `--rpo=ASYNC_TURBO`\n- **Not to be confused with:** Default replication (most objects within an hour, all within 12 hours).\n- **Analogy:** 🚚 Express courier between the two offices.\n- **In the online store:** Meets the receipts DR rule.\n\n### 🔗 How they fit together\n```\n write receipt ─► dual-region bucket (us-central1 + us-east1)\n                   └─ turbo replication: copy in other region ≤ 15 min ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "Regulators require that receipts survive a regional outage with at most 15 minutes of loss. The engineer creates a **dual-region** bucket with **turbo replication** across two US regions. No scripts are needed."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `gs://shop-receipts`: dual-region `us-central1` + `us-east1`, `--rpo=ASYNC_TURBO`. Product images stay in a multi-region bucket behind Cloud CDN."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Two chosen regions + copy within 15 minutes → dual-region bucket + turbo replication.**\n  🧠 **_\"Turbo = 15-minute copy.\"_**\n- Related: **Q092**, **Q184**, **G041**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ✔️ It is redundant across US locations.\n- ❌ \"**default replication**\": no 15-minute guarantee (up to 12 hours), and turbo replication applies to dual-region buckets.\n\n📌 **When to use it:** Use multi-region for highly available content served across a large area.\n🏢 **Office example:** Storing records \"somewhere in the country\" with a slow courier.",
+   "B": "**Wrong words:**\n- ❌ \"**regional bucket**\": one region only.\n- ❌ \"**Object Versioning**\": keeps old versions, not copies in another region.\n\n📌 **When to use it:** Use versioning to recover overwritten or deleted files.\n🏢 **Office example:** Keeping old drafts in the same cabinet.",
+   "C": "**Wrong words:**\n- ❌ \"**once a day**\": up to 24 hours of loss, which breaks \"**within 15 minutes**\". It's also a custom script to maintain.\n\n📌 **When to use it:** Use scheduled syncs for non-critical copies.\n🏢 **Office example:** A daily courier when you need express.",
+   "D": "- ✔️ \"**dual-region bucket in two US regions**\" matches \"**second region**\" and \"**both regions must be in the United States**\".\n- ✔️ \"**enable turbo replication**\" matches \"**within 15 minutes**\".\n\n📌 **When to use it:** Use it when files must be copied to a second chosen region very quickly for disaster recovery.\n🏢 **Office example:** Sending every new record by express courier to a second named office."
+  },
+  "id": "G042",
+  "title": "Bucket Data Must Be Copied to a Second Region Within 15 Minutes (Dual-Region Bucket + Turbo Replication)",
+  "num": 42,
+  "guide": true,
+  "topic": "Cloud Storage (dual-region, turbo replication)",
+  "stem": "Your company stores order receipts in Cloud Storage. A disaster recovery requirement states that every newly written object must be copied to a second region within 15 minutes, and both regions must be in the United States. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a multi-region US bucket with default replication."
+   },
+   {
+    "letter": "B",
+    "text": "Create a regional bucket in us-central1 and enable Object Versioning."
+   },
+   {
+    "letter": "C",
+    "text": "Create a regional bucket and run a gcloud storage rsync script to another bucket once a day."
+   },
+   {
+    "letter": "D",
+    "text": "Create a dual-region bucket in two US regions and enable turbo replication."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** Order receipts are saved as files (objects) in Cloud Storage.\n- **What you must achieve:** Make sure every new file is also copied to a second region (a different geographic area) within 15 minutes.\n- **The limits:** Both regions must be in the United States.\n- **What they're really asking:** Which bucket setup guarantees a copy in a second region within 15 minutes?"
+ },
+ {
+  "file": "G043-storage-autoclass.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A bucket (a Cloud Storage folder) holds millions of files uploaded by users. You can't predict which files will be opened often and which almost never.\n- **What you must achieve:** Keep storage costs as low as possible automatically.\n- **The limits:** No hand-written lifecycle rules (age-based move rules), and no retrieval fees (charges for reading from cold storage classes) when an old file is suddenly opened.\n- **What they're really asking:** Which Cloud Storage feature moves each file to the right storage class based on how it's actually used?\n\n**Clues in the question:**\n- \"**access pattern … unpredictable**\" + \"**automatically without writing lifecycle rules**\": **Autoclass**.\n- \"**without paying retrieval fees**\": Autoclass buckets don't charge retrieval or early-deletion fees, and it moves accessed objects back to Standard.\n\n**Exam topic:** Storage cost management (exam guide sections 2.2 and 3.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Storage classes\n- **What it is:** Standard (hot), Nearline (about monthly), Coldline (about quarterly), Archive (about yearly). Colder classes have cheaper storage but retrieval fees and minimum storage durations.\n- **Looks like:** Standard $$ storage / no retrieval fee vs Archive ¢ storage / retrieval fee\n- **Not to be confused with:** Locations (region, multi-region).\n- **Analogy:** 🗄️ Desk drawer → back office → basement → off-site warehouse.\n- **In the online store:** User avatars vs old order exports.\n\n### 2. Autoclass 🔑\n- **What it is:** A bucket setting that automatically moves each object to colder classes when it isn't accessed, and back to Standard when it is, with no retrieval or early-deletion fees.\n- **Looks like:** `gcloud storage buckets update gs://shop-uploads --enable-autoclass`\n- **Not to be confused with:** Lifecycle rules, which follow fixed age or condition rules you write.\n- **Analogy:** 🤖 A filing assistant who moves each folder based on how often it's actually pulled.\n- **In the online store:** User review photos bucket.\n\n### 🔗 How they fit together\n```\n object accessed? ─yes─► Standard\n                  └no (30d)─► Nearline ─► Coldline ─► Archive  (auto, no retrieval fees) ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A marketplace stores 50 million review photos. Most are never viewed again, but some go viral years later. **Autoclass** quietly moves cold photos to cheaper classes and brings viral ones back to Standard. Storage cost drops 40% with no rules to tune."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `gs://shop-review-photos`: Autoclass enabled. Product images stay Standard behind CDN. Tax archives use Archive with lifecycle rules."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Unpredictable access + automatic cost savings + no retrieval fees → Autoclass.** Predictable aging → lifecycle rules.\n  🧠 **_\"Autoclass = auto filing assistant.\"_**\n- Related: **Q018**, **Q090**, **Q248**, **Q367**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Archive**\": cheapest storage, but frequently accessed files get retrieval fees and slower economics, which breaks \"**without paying retrieval fees**\".\n\n📌 **When to use it:** Use Archive for data you almost never read, like 7-year records.\n🏢 **Office example:** Sending everything to the off-site warehouse, including files used daily.",
+   "B": "**Wrong words:**\n- ❌ \"**lifecycle rules**\": the question says without writing them, and Coldline charges retrieval fees when files are read.\n\n📌 **When to use it:** Use lifecycle rules when access drops predictably with age.\n🏢 **Office example:** A fixed rule: \"after 30 days, everything goes to the basement\".",
+   "C": "- ✔️ \"**Autoclass**\" matches \"**access pattern … unpredictable**\" and \"**automatically without writing lifecycle rules**\".\n- ✔️ Autoclass has no retrieval fees and moves accessed objects back to Standard, matching \"**without paying retrieval fees when cold files are suddenly accessed**\".\n\n📌 **When to use it:** Use it when you can't predict which files will be used and want costs handled for you.\n🏢 **Office example:** An assistant who moves each folder to the right room depending on how often it's really used.",
+   "D": "**Wrong words:**\n- ❌ \"**Filestore**\": a file server that costs more per GB, with no automatic tiering for millions of objects.\n\n📌 **When to use it:** Use Filestore when apps need a shared NFS folder.\n🏢 **Office example:** Moving the archive into expensive office space."
+  },
+  "id": "G043",
+  "title": "Unpredictable Access Patterns: Let Cloud Storage Move Objects Between Classes Automatically (Autoclass)",
+  "num": 43,
+  "guide": true,
+  "topic": "Cloud Storage (Autoclass)",
+  "stem": "Your bucket holds millions of user-uploaded files. Some are accessed often, some rarely, and the access pattern for each file is unpredictable. You want to minimize storage cost automatically without writing lifecycle rules and without paying retrieval fees when cold files are suddenly accessed. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Set the bucket's default storage class to Archive."
+   },
+   {
+    "letter": "B",
+    "text": "Create lifecycle rules that move objects to Coldline after 30 days."
+   },
+   {
+    "letter": "C",
+    "text": "Enable Autoclass on the bucket."
+   },
+   {
+    "letter": "D",
+    "text": "Move all files to a Filestore instance."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** A bucket (a Cloud Storage folder) holds millions of files uploaded by users. You can't predict which files will be opened often and which almost never.\n- **What you must achieve:** Keep storage costs as low as possible automatically.\n- **The limits:** No hand-written lifecycle rules (age-based move rules), and no retrieval fees (charges for reading from cold storage classes) when an old file is suddenly opened.\n- **What they're really asking:** Which Cloud Storage feature moves each file to the right storage class based on how it's actually used?"
+ },
+ {
+  "file": "G044-firestore-scheduled-backups.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your app keeps shopping carts and user profiles in Firestore (Google's managed document database).\n- **What you must achieve:** Take a backup every week, keep each one for 8 weeks, and be able to load a backup into a new database to investigate.\n- **The limits:** Use a managed (Google-run) solution, not scripts.\n- **What they're really asking:** Which Firestore feature makes scheduled backups with a retention period?\n\n**Clues in the question:**\n- \"**backup every week … kept for 8 weeks**\": a Firestore **backup schedule** (weekly, retention 8w).\n- \"**restore … into a new database**\": Firestore restores create a new database.\n- Point-in-time recovery only covers up to 7 days.\n\n**Exam topic:** Database backup and restore (exam guide section 3.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Firestore backup schedule 🔑\n- **What it is:** A managed schedule (daily or weekly) that takes backups of a Firestore database and keeps each for a chosen retention (up to 14 weeks). You restore a backup into a **new** database.\n- **Looks like:** `gcloud firestore backups schedules create --database='(default)' --recurrence=weekly --day-of-week=SUN --retention=8w` → `gcloud firestore databases restore --source-backup=… --destination-database=investigate-1`\n- **Not to be confused with:** Point-in-time recovery (PITR), which gives a short window of per-minute versions (up to 7 days).\n- **Analogy:** 📅 A weekly photocopy of the records, each kept for two months.\n- **In the online store:** Weekly backups of carts and profiles.\n\n### 2. Point-in-time recovery (PITR)\n- **What it is:** Keeps versions of data so you can read or recover data as of any minute in the last 7 days.\n- **Looks like:** `gcloud firestore databases update --enable-pitr`\n- **Not to be confused with:** Long-term backups.\n- **Analogy:** ⏪ A 7-day rewind button.\n- **In the online store:** Undoing a bad import from yesterday.\n\n### 🔗 How they fit together\n```\n Firestore (default) ─weekly (Sun)─► backup (kept 8w) ─restore─► new DB investigate-1 ✅\n PITR: only last 7 days\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "After a bug corrupted some profiles, auditors wanted to see the data as it was three weeks earlier. With a weekly **backup schedule** kept 8 weeks, the team restores that week's backup into `investigate-1` and compares, without touching production."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** Firestore `(default)`: PITR on (7 days) + weekly backup schedule on Sunday, retention 8w. Investigations restore into a separate database."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Firestore: last 7 days → PITR. Regular backups kept for weeks → backup schedule (daily/weekly, retention). Restore → new database.**\n  🧠 **_\"PITR = rewind a week; schedule = weekly photocopies.\"_**\n- Related: **Q003**, **G045**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**script … JSON file on a VM**\": custom, slow at scale, not consistent, and not managed.\n\n📌 **When to use it:** Avoid it for backups. Use the built-in schedules.\n🏢 **Office example:** Copying every record by hand each week.",
+   "B": "**Wrong words:**\n- ✔️ PITR is useful for recent mistakes.\n- ❌ \"**rely on it for 8 weeks of history**\": PITR covers at most 7 days.\n\n📌 **When to use it:** Use PITR to undo a mistake from the last few days.\n🏢 **Office example:** A rewind button that only goes back a week.",
+   "C": "- ✔️ \"**backup schedule with weekly recurrence and 8-week retention**\" matches \"**backup every week that is kept for 8 weeks**\".\n- ✔️ \"**restore backups to a new database**\" matches \"**restore a backup into a new database for investigation**\".\n- ✔️ It's built into Firestore, matching \"**managed solution**\".\n\n📌 **When to use it:** Use it when the rules say keep regular copies of the database for a set time.\n🏢 **Office example:** A weekly photocopy of all records, each copy kept for two months.",
+   "D": "**Wrong words:**\n- ❌ \"**Persistent Disk snapshot of the Firestore database**\": Firestore is serverless, so there's no disk you can snapshot.\n\n📌 **When to use it:** Use disk snapshots for VM disks.\n🏢 **Office example:** Photographing a filing cabinet that isn't yours."
+  },
+  "id": "G044",
+  "title": "Keep Weekly Firestore Backups for 8 Weeks and Restore to a New Database (Firestore Backup Schedule)",
+  "num": 44,
+  "guide": true,
+  "topic": "Firestore (backup and restore)",
+  "stem": "Your application stores shopping carts and user profiles in a Firestore database. Compliance requires a backup every week that is kept for 8 weeks, and the ability to restore a backup into a new database for investigation. You want a managed solution. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Write a script that reads every document and saves it to a JSON file on a VM each week."
+   },
+   {
+    "letter": "B",
+    "text": "Enable point-in-time recovery only, and rely on it for 8 weeks of history."
+   },
+   {
+    "letter": "C",
+    "text": "Create a Firestore backup schedule with weekly recurrence and 8-week retention, and restore backups to a new database when needed."
+   },
+   {
+    "letter": "D",
+    "text": "Create a Persistent Disk snapshot of the Firestore database."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "C"
+  ],
+  "plain": "- **The situation:** Your app keeps shopping carts and user profiles in Firestore (Google's managed document database).\n- **What you must achieve:** Take a backup every week, keep each one for 8 weeks, and be able to load a backup into a new database to investigate.\n- **The limits:** Use a managed (Google-run) solution, not scripts.\n- **What they're really asking:** Which Firestore feature makes scheduled backups with a retention period?"
+ },
+ {
+  "file": "G045-alloydb-pitr-restore.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** At 14:32, someone ran a command that deleted every row in the orders table of an AlloyDB database (Google's high-performance PostgreSQL-compatible database).\n- **What you must achieve:** Get the data back exactly as it was at 14:30.\n- **The limits:** Don't overwrite the current cluster. Continuous backup (which keeps a running log of changes) is turned on.\n- **What they're really asking:** Which AlloyDB recovery feature restores to an exact minute, and where does the restored data go?\n\n**Clues in the question:**\n- \"**as it was at 14:30**\": **point-in-time recovery** (PITR) from continuous backup.\n- \"**without overwriting the current cluster**\": AlloyDB restores into a **new cluster**.\n\n**Exam topic:** Database backup and restore (exam guide section 3.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Continuous backup and recovery 🔑\n- **What it is:** AlloyDB keeps continuous backups and logs so you can restore to any point in the retention window (14 days by default, configurable). Restores create a **new cluster**.\n- **Looks like:** `gcloud alloydb clusters restore orders-recovered --region=us-central1 --source-cluster=orders --point-in-time=2026-11-08T14:30:00Z --network=shop-vpc`\n- **Not to be confused with:** Read pools (read-only scaling) or exports.\n- **Analogy:** ⏪ A security camera recording you can rewind to an exact minute.\n- **In the online store:** Recovering deleted orders.\n\n### 2. Read pool\n- **What it is:** Read-only AlloyDB instances that serve read traffic, kept in sync with the primary.\n- **Looks like:** `orders-read-pool` (2 nodes)\n- **Not to be confused with:** A backup. Read pools copy the current state, including the delete.\n- **Analogy:** 📚 Extra reading desks showing the same current book.\n- **In the online store:** Analytics reads.\n\n### 🔗 How they fit together\n```\n 14:30 ✅ data ─ 14:32 DELETE ✗\n PITR to 14:30 ─► new cluster orders-recovered ─► copy rows back to orders ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A rushed hotfix wipes the orders table. Because AlloyDB **continuous backup** is on, the team restores to 14:30 into `orders-recovered`, exports the missing rows, and re-imports them into production within the hour."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: AlloyDB `orders` (continuous backup, 14 days) → restore to `orders-recovered` at 14:30 → `pg_dump -t orders` → reload the missing rows into prod."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **AlloyDB \"undo to an exact minute\" → PITR from continuous backup → new cluster.**\n  🧠 **_\"Rewind to a minute, into a new cluster.\"_**\n- Related: **Q311**, **Q336**, **G044**, **Q003**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**point-in-time recovery to restore the cluster to 14:30**\" matches \"**recover the data as it was at 14:30**\".\n- ✔️ \"**into a new cluster**\" matches \"**without overwriting the current cluster**\".\n- ✔️ \"**copy the needed data back**\" brings the rows back to production.\n\n📌 **When to use it:** Use it when you need the data exactly as it was a few minutes before a mistake.\n🏢 **Office example:** Rewinding the security recording to just before the mistake and copying what you need.",
+   "B": "**Wrong words:**\n- ❌ \"**Ask … Support to undo**\": Support can't undo your SQL. Recovery is self-service with PITR.\n\n📌 **When to use it:** Use Support for platform problems, not your own data mistakes.\n🏢 **Office example:** Asking the landlord to undo shredded files.",
+   "C": "**Wrong words:**\n- ❌ \"**read pool**\": read pools mirror the current data, which already has the delete.\n\n📌 **When to use it:** Use read pools to scale read traffic.\n🏢 **Office example:** Reading the same empty book at another desk.",
+   "D": "**Wrong words:**\n- ❌ \"**most recent daily backup**\": loses everything since the backup ran.\n- ❌ \"**over the current cluster**\": breaks \"**without overwriting the current cluster**\".\n\n📌 **When to use it:** Use a daily backup when you don't have continuous backup.\n🏢 **Office example:** Restoring last night's copy and losing today's work."
+  },
+  "id": "G045",
+  "title": "Recover an AlloyDB Database to Just Before an Accidental DELETE (Point-in-Time Recovery From Continuous Backup)",
+  "num": 45,
+  "guide": true,
+  "topic": "Databases (AlloyDB backup and restore)",
+  "stem": "At 14:32 today, a developer accidentally ran a DELETE statement without a WHERE clause on the orders table in your AlloyDB for PostgreSQL cluster. Continuous backup and recovery is enabled with the default retention. You need to recover the data as it was at 14:30 without overwriting the current cluster. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Use point-in-time recovery to restore the cluster to 14:30 into a new cluster, and copy the needed data back."
+   },
+   {
+    "letter": "B",
+    "text": "Ask Google Cloud Support to undo the DELETE statement."
+   },
+   {
+    "letter": "C",
+    "text": "Create a read pool instance and read the deleted rows from it."
+   },
+   {
+    "letter": "D",
+    "text": "Restore the most recent daily backup over the current cluster."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** At 14:32, someone ran a command that deleted every row in the orders table of an AlloyDB database (Google's high-performance PostgreSQL-compatible database).\n- **What you must achieve:** Get the data back exactly as it was at 14:30.\n- **The limits:** Don't overwrite the current cluster. Continuous backup (which keeps a running log of changes) is turned on.\n- **What they're really asking:** Which AlloyDB recovery feature restores to an exact minute, and where does the restored data go?"
+ },
+ {
+  "file": "G046-dataflow-job-monitoring.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A streaming pipeline in Dataflow (Google's managed data-processing service) takes order events from Pub/Sub (a message queue) and writes them into BigQuery (the data warehouse).\n- **What you must achieve:** Find which step of the pipeline is causing a 30-minute delay.\n- **The limits:** Messages are piling up in the queue (a growing backlog). Find the cause, don't guess.\n- **What they're really asking:** Where do you look to see each pipeline step's status and lag?\n\n**Clues in the question:**\n- \"**identify which step of the pipeline**\": the **Dataflow monitoring interface** shows the job graph with per-stage metrics.\n- \"**30 minutes behind**\" + \"**backlog is growing**\": check **data freshness** and **system lag**.\n\n**Exam topic:** Data operations (exam guide section 3.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Dataflow\n- **What it is:** Google's managed service for batch and streaming data pipelines (Apache Beam).\n- **Looks like:** Pipeline: `ReadFromPubSub → ParseJSON → Enrich → WriteToBigQuery`\n- **Not to be confused with:** Dataproc (managed Spark/Hadoop clusters).\n- **Analogy:** 🏭 A conveyor-belt factory for data.\n- **In the online store:** Order events into BigQuery.\n\n### 2. Dataflow monitoring interface 🔑\n- **What it is:** The console page for a job: the **job graph** (steps), **execution details** (per-stage progress), metrics like **data freshness** and **system lag**, worker logs, and autoscaling history.\n- **Looks like:** Job graph: `Enrich` step: system lag 28 min 🔴\n- **Not to be confused with:** Cloud Monitoring alone, without the stage view.\n- **Analogy:** 🏭 The factory floor display showing which station is jammed.\n- **In the online store:** Finds the slow `Enrich` call.\n\n### 🔗 How they fit together\n```\n Pub/Sub ─► Parse ─► Enrich 🔴 (system lag 28m) ─► WriteToBigQuery\n Dataflow job page → job graph + execution details → slowest stage ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "During a sale, order dashboards fall behind. In the **Dataflow job graph**, the `Enrich` step shows huge system lag because it calls a slow pricing API per record. The team adds caching and batching, and the backlog drains."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `orders-stream`: the job graph shows `EnrichWithPrices` lagging → add a side-input cache → system lag back under 10s."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Dataflow behind / backlog growing → Dataflow monitoring interface: job graph, execution details, data freshness, system lag.**\n  🧠 **_\"Find the jammed station on the job graph.\"_**\n- Related: **Q023**, **Q213**, **Q193** (BigQuery job review)."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**Delete the Pub/Sub subscription**\": unprocessed orders are lost, and you still don't know the cause.\n\n📌 **When to use it:** Never do this to troubleshoot. You'd lose messages.\n🏢 **Office example:** Throwing out the queue of customers instead of fixing the slow till.",
+   "B": "**Wrong words:**\n- ❌ \"**Restart the job every 30 minutes**\": hides the problem, can add more lag, and doesn't find the step.\n\n📌 **When to use it:** Avoid it. Find and fix the slow stage.\n🏢 **Office example:** Turning the conveyor off and on, hoping it helps.",
+   "C": "**Wrong words:**\n- ❌ \"**without checking the pipeline**\": guessing. The bottleneck may be elsewhere, like the enrichment step.\n\n📌 **When to use it:** Use more slots when BigQuery queries themselves are slow.\n🏢 **Office example:** Adding more delivery trucks when the jam is on the factory floor.",
+   "D": "- ✔️ \"**Dataflow monitoring interface … job graph and execution details**\" matches \"**identify which step of the pipeline**\".\n- ✔️ \"**data freshness, system lag, and the slowest stage**\" matches \"**30 minutes behind**\" and \"**backlog is growing**\".\n\n📌 **When to use it:** Use it when a data pipeline is behind and you need to see which step is stuck.\n🏢 **Office example:** Looking at the factory display to find the jammed station."
+  },
+  "id": "G046",
+  "title": "Streaming Pipeline Backlog Is Growing: Find the Slow Step (Dataflow Job Monitoring Interface)",
+  "num": 46,
+  "guide": true,
+  "topic": "Dataflow (reviewing job status)",
+  "stem": "A streaming Dataflow pipeline reads order events from Pub/Sub and writes them to BigQuery. Users report that dashboards are 30 minutes behind, and the Pub/Sub subscription backlog is growing. You need to identify which step of the pipeline is causing the delay. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Delete the Pub/Sub subscription and create a new one."
+   },
+   {
+    "letter": "B",
+    "text": "Restart the job every 30 minutes."
+   },
+   {
+    "letter": "C",
+    "text": "Increase the BigQuery slot reservation without checking the pipeline."
+   },
+   {
+    "letter": "D",
+    "text": "Open the job in the Dataflow monitoring interface, and review the job graph and execution details for data freshness, system lag, and the slowest stage."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "D"
+  ],
+  "plain": "- **The situation:** A streaming pipeline in Dataflow (Google's managed data-processing service) takes order events from Pub/Sub (a message queue) and writes them into BigQuery (the data warehouse).\n- **What you must achieve:** Find which step of the pipeline is causing a 30-minute delay.\n- **The limits:** Messages are piling up in the queue (a growing backlog). Find the cause, don't guess.\n- **What they're really asking:** Where do you look to see each pipeline step's status and lag?"
+ },
+ {
+  "file": "G047-bq-query-cli.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** You want a shell script (a file of terminal commands) to run a query in BigQuery (Google's data warehouse) on the table `shop.orders`.\n- **What you must achieve:** Count today's orders using a GoogleSQL query (BigQuery's standard SQL dialect).\n- **The limits:** It must run from the command line.\n- **What they're really asking:** Which command-line tool and command run a BigQuery query?\n\n**Clues in the question:**\n- \"**BigQuery**\" + \"**from a shell script**\": the **bq** command-line tool.\n- \"**GoogleSQL**\": add `--use_legacy_sql=false` (or put `#standardSQL` in the query).\n\n**Exam topic:** Data querying (exam guide section 3.2)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. bq CLI 🔑\n- **What it is:** BigQuery's command-line tool (part of the Google Cloud CLI) for queries, loads, datasets and jobs.\n- **Looks like:** `bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM shop.orders WHERE DATE(created_at)=CURRENT_DATE()'`\n- **Not to be confused with:** `gcloud sql`, which is for Cloud SQL instances.\n- **Analogy:** ⌨️ A direct phone line to the data warehouse.\n- **In the online store:** Nightly count script.\n\n### 2. GoogleSQL (standard SQL)\n- **What it is:** BigQuery's ANSI-compatible SQL dialect. Legacy SQL is the old dialect.\n- **Looks like:** `` `project.dataset.table` `` naming, `CURRENT_DATE()`\n- **Not to be confused with:** Legacy SQL (`[project:dataset.table]`).\n- **Analogy:** 📘 The modern rulebook vs the old one.\n- **In the online store:** All ShopNow queries.\n\n### 🔗 How they fit together\n```\n script.sh ─► bq query --use_legacy_sql=false 'SELECT COUNT(*) …' ─► BigQuery ─► result ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "A nightly cron job posts the day's order count to Slack. It calls `bq query --use_legacy_sql=false` and parses the output."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** cron: `bq query --use_legacy_sql=false --format=csv 'SELECT COUNT(*) FROM shop.orders WHERE DATE(created_at)=CURRENT_DATE()'` → post to Slack."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **BigQuery from the CLI → `bq query --use_legacy_sql=false`.** Cloud SQL → `gcloud sql connect`.\n  🧠 **_\"bq for BigQuery.\"_**\n- Related: **Q015**, **Q085**, **Q146**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**gcloud sql connect**\": connects to Cloud SQL databases, not BigQuery.\n\n📌 **When to use it:** Use it to open a SQL shell to a Cloud SQL instance.\n🏢 **Office example:** Calling the wrong department.",
+   "B": "- ✔️ \"**bq query**\" matches \"**run a … query against the BigQuery table … from a shell script**\".\n- ✔️ \"**--use_legacy_sql=false**\" matches \"**GoogleSQL query**\".\n\n📌 **When to use it:** Use it when a script needs to ask the data warehouse a question.\n🏢 **Office example:** Calling the warehouse's direct line with a clear question.",
+   "C": "**Wrong words:**\n- ❌ \"**gsutil cat**\": prints Cloud Storage objects. BigQuery tables aren't files in a bucket.\n\n📌 **When to use it:** Use it to view a file stored in Cloud Storage.\n🏢 **Office example:** Reading a file in the storeroom to answer a warehouse question.",
+   "D": "**Wrong words:**\n- ❌ \"**kubectl exec into a BigQuery Pod**\": BigQuery is serverless. There are no Pods of yours to enter.\n\n📌 **When to use it:** Use kubectl exec to debug your own containers in GKE.\n🏢 **Office example:** Knocking on a door that doesn't exist."
+  },
+  "id": "G047",
+  "title": "Run a Standard SQL Query Against BigQuery From the Command Line (bq query --use_legacy_sql=false)",
+  "num": 47,
+  "guide": true,
+  "topic": "BigQuery (executing queries)",
+  "stem": "You need to run a GoogleSQL query against the BigQuery table shop.orders from a shell script to count today's orders. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Run gcloud sql connect, and then type the query."
+   },
+   {
+    "letter": "B",
+    "text": "Run bq query --use_legacy_sql=false with the SQL statement."
+   },
+   {
+    "letter": "C",
+    "text": "Run gsutil cat on the table."
+   },
+   {
+    "letter": "D",
+    "text": "Run kubectl exec into a BigQuery Pod."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** You want a shell script (a file of terminal commands) to run a query in BigQuery (Google's data warehouse) on the table `shop.orders`.\n- **What you must achieve:** Count today's orders using a GoogleSQL query (BigQuery's standard SQL dialect).\n- **The limits:** It must run from the command line.\n- **What they're really asking:** Which command-line tool and command run a BigQuery query?"
+ },
+ {
+  "file": "G048-cloud-profiler.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your Java API on Kubernetes (GKE) uses far more CPU than it should in production, which costs money.\n- **What you must achieve:** Find which parts of the code (functions) use the most CPU and memory, all the time, in production.\n- **The limits:** The overhead must be low, so the measuring itself can't slow production down.\n- **What they're really asking:** Which Google Cloud tool continuously profiles code in production?\n\n**Clues in the question:**\n- \"**which functions in the code consume the most CPU and memory**\": a **profiler**.\n- \"**continuously … low overhead … production**\": **Cloud Profiler** (statistical sampling).\n\n**Exam topic:** Diagnostics (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Cloud Profiler 🔑\n- **What it is:** A low-overhead, continuous profiler for production apps (Java, Go, Node.js, Python). It samples CPU time and heap usage and shows **flame graphs** by function.\n- **Looks like:** Java agent: `-agentpath:/opt/cprof/profiler_java_agent.so=-cprof_service=orders-api` → flame graph: `JsonParser.parse` 38% CPU\n- **Not to be confused with:** Cloud Trace, which shows time spent across requests and services, not per-function CPU inside your code.\n- **Analogy:** ⏱️ A time-and-motion study that quietly samples what each worker is doing.\n- **In the online store:** Finds an expensive JSON parse in orders-api.\n\n### 2. Flame graph\n- **What it is:** A chart where each bar is a function, and wider bars use more resources.\n- **Looks like:** Wide bar: `PriceCalculator.applyDiscounts`\n- **Not to be confused with:** A latency timeline.\n- **Analogy:** 🔥 A bar chart of who's busiest.\n- **In the online store:** Spotting the hottest code path.\n\n### 🔗 How they fit together\n```\n orders-api (Profiler agent, sampled) ─► Cloud Profiler ─► flame graph → hottest functions ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "An API's CPU bill doubled after a release. **Cloud Profiler** shows that 38% of CPU goes to re-parsing the same JSON config on every request. Caching it cuts CPU in half."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `orders-api` (Java on GKE): Profiler agent added to the image. The flame graph shows `ConfigLoader.parse` → cache it → CPU requests lowered."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Which code uses CPU/memory in prod → Cloud Profiler. Which service makes requests slow → Cloud Trace. Which SQL is slow → Query Insights.**\n  🧠 **_\"Profiler = per function; Trace = per request.\"_**\n- Related: **G019**, **Q343**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ✔️ Trace is useful for latency.\n- ❌ \"**request latency between services**\": it doesn't break CPU and memory down by function inside the code.\n\n📌 **When to use it:** Use Cloud Trace to find which service in a chain makes requests slow.\n🏢 **Office example:** Timing deliveries between offices, not who's busy inside one.",
+   "B": "- ✔️ \"**Cloud Profiler**\" matches \"**continuously … low overhead … production**\".\n- ✔️ \"**flame graphs**\" show \"**which functions in the code consume the most CPU and memory**\".\n\n📌 **When to use it:** Use it when you want to know which part of your program is doing the most work, in the live system.\n🏢 **Office example:** A quiet efficiency study that shows which tasks take staff the most time.",
+   "C": "**Wrong words:**\n- ❌ \"**Data Access audit logs**\": record who read or wrote data through APIs. Nothing about code CPU usage.\n\n📌 **When to use it:** Use them for data access auditing.\n🏢 **Office example:** The visitor log, not a work study.",
+   "D": "**Wrong words:**\n- ❌ \"**Add more nodes**\": increases cost and doesn't find the inefficient code.\n\n📌 **When to use it:** Use more nodes when the load really needs more capacity.\n🏢 **Office example:** Hiring more staff instead of fixing a wasteful process."
+  },
+  "id": "G048",
+  "title": "Find Which Functions Use the Most CPU in Production With Low Overhead, Continuously (Cloud Profiler)",
+  "num": 48,
+  "guide": true,
+  "topic": "Diagnostics (Cloud Profiler)",
+  "stem": "Your Java API running on GKE uses much more CPU than expected in production, which increases cost. You want to continuously identify which functions in the code consume the most CPU and memory, with low overhead, in the production environment. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Use Cloud Trace to measure request latency between services."
+   },
+   {
+    "letter": "B",
+    "text": "Enable Cloud Profiler in the application, and review the flame graphs in the Profiler interface."
+   },
+   {
+    "letter": "C",
+    "text": "Enable Data Access audit logs for the GKE cluster."
+   },
+   {
+    "letter": "D",
+    "text": "Add more nodes to the cluster."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** Your Java API on Kubernetes (GKE) uses far more CPU than it should in production, which costs money.\n- **What you must achieve:** Find which parts of the code (functions) use the most CPU and memory, all the time, in production.\n- **The limits:** The overhead must be low, so the measuring itself can't slow production down.\n- **What they're really asking:** Which Google Cloud tool continuously profiles code in production?"
+ },
+ {
+  "file": "G049-cloud-run-concurrency.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** A Cloud Run service (Google's serverless container service) makes PDF invoices. Each one takes a lot of CPU, and the code can only work on one request at a time efficiently.\n- **What you must achieve:** Make Cloud Run start more copies (instances) so each copy works on just one request at a time.\n- **The limits:** Under heavy traffic, many requests currently pile onto the same instance and become slow.\n- **What they're really asking:** Which Cloud Run setting controls how many requests one instance handles at once?\n\n**Clues in the question:**\n- \"**many requests are sent to the same instance**\": the **concurrency** setting (default 80).\n- \"**each instance handles one request at a time**\": set concurrency to **1**, and Cloud Run adds instances to handle the rest.\n\n**Exam topic:** Cloud Run operations (exam guide section 3.1)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Concurrency 🔑\n- **What it is:** The maximum number of requests one Cloud Run instance handles at the same time (default 80, maximum 1000). Lower concurrency means Cloud Run scales out to more instances.\n- **Looks like:** `gcloud run services update invoice-pdf --concurrency=1`\n- **Not to be confused with:** Max instances, which caps the total number of instances.\n- **Analogy:** 🧑‍🍳 How many orders one cook works on at once.\n- **In the online store:** PDF generation, one at a time per instance.\n\n### 2. Min / max instances\n- **What it is:** Min keeps instances warm (avoids cold starts). Max caps how many instances (and how much cost) can exist.\n- **Looks like:** `--min-instances=1 --max-instances=50`\n- **Not to be confused with:** Concurrency.\n- **Analogy:** 🏪 Minimum and maximum staff on the shift.\n- **In the online store:** Peak-time limits.\n\n### 🔗 How they fit together\n```\n Before: 80 requests ─► 1 instance 🐢\n After (--concurrency=1): 80 requests ─► 80 instances (1 each) ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "At month end, invoice generation slows to 40 seconds per PDF because each instance juggles dozens of CPU-heavy requests. Setting **concurrency to 1** makes Cloud Run add instances so each PDF gets its own CPU, and generation drops to 2 seconds."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow** `invoice-pdf`: `--concurrency=1 --cpu=2 --memory=2Gi --max-instances=100`. The storefront API keeps concurrency 80."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **CPU-heavy, one-at-a-time requests on Cloud Run → `--concurrency=1` (scale out per request).**\n  🧠 **_\"Concurrency = orders per cook.\"_**\n- Related: **Q212**, **Q278**, **Q319**."
+   }
+  ],
+  "explanations": {
+   "A": "**Wrong words:**\n- ❌ \"**minimum number of instances to 10**\": keeps instances warm, but each can still take many requests at once.\n\n📌 **When to use it:** Use min instances to avoid cold-start delays.\n🏢 **Office example:** Keeping cooks on standby, but still letting one cook take 80 orders.",
+   "B": "- ✔️ \"**maximum concurrent requests per instance to 1**\" matches \"**each instance handles one request at a time**\".\n- ✔️ With concurrency 1, Cloud Run scales out, matching \"**want Cloud Run to scale out**\" and fixing \"**many requests are sent to the same instance**\".\n\n📌 **When to use it:** Use it when each job is heavy and one worker can only do one at a time well.\n🏢 **Office example:** One order per cook, and more cooks are called in when it's busy.",
+   "C": "**Wrong words:**\n- ❌ \"**request timeout to 60 minutes**\": requests wait longer instead of getting faster.\n\n📌 **When to use it:** Use longer timeouts for legitimately long jobs.\n🏢 **Office example:** Telling customers to wait longer rather than adding cooks.",
+   "D": "**Wrong words:**\n- ❌ \"**maximum number of instances to 1**\": prevents scaling out entirely, so it gets worse.\n\n📌 **When to use it:** Use a low max to cap cost or protect a fragile backend.\n🏢 **Office example:** Allowing only one cook for the whole restaurant."
+  },
+  "id": "G049",
+  "title": "CPU-Heavy, Single-Threaded Cloud Run Container Slows Down Under Load (Set Concurrency to 1)",
+  "num": 49,
+  "guide": true,
+  "topic": "Cloud Run (autoscaling and concurrency)",
+  "stem": "Your Cloud Run service generates PDF invoices. Each request is CPU-intensive, and the code can process only one request at a time efficiently. Under load, response times become very slow because many requests are sent to the same instance. You want Cloud Run to scale out so that each instance handles one request at a time. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Set the minimum number of instances to 10."
+   },
+   {
+    "letter": "B",
+    "text": "Set the service's maximum concurrent requests per instance to 1."
+   },
+   {
+    "letter": "C",
+    "text": "Increase the request timeout to 60 minutes."
+   },
+   {
+    "letter": "D",
+    "text": "Lower the maximum number of instances to 1."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "B"
+  ],
+  "plain": "- **The situation:** A Cloud Run service (Google's serverless container service) makes PDF invoices. Each one takes a lot of CPU, and the code can only work on one request at a time efficiently.\n- **What you must achieve:** Make Cloud Run start more copies (instances) so each copy works on just one request at a time.\n- **The limits:** Under heavy traffic, many requests currently pile onto the same instance and become slow.\n- **What they're really asking:** Which Cloud Run setting controls how many requests one instance handles at once?"
+ },
+ {
+  "file": "G050-uptime-check-alert.md",
+  "sections": [
+   {
+    "kind": "asking",
+    "title": "📖 What the Question Is Asking",
+    "md": "**In plain words:**\n- **The situation:** Your public online store runs at https://shop.example.com.\n- **What you must achieve:** Check every minute, from several places around the world, that the site answers with HTTP 200 (\"OK\"), and alert the on-call engineer if it stops.\n- **The limits:** It must be a managed service, and alert only when several locations see the failure (so one bad network path doesn't wake anyone up).\n- **What they're really asking:** Which Cloud Monitoring feature checks a public URL from many locations?\n\n**Clues in the question:**\n- \"**checked from multiple geographic locations every minute**\": **uptime checks** run from several Google locations.\n- \"**notified**\": an **alerting policy** on the uptime check.\n\n**Exam topic:** Monitoring (exam guide section 3.4)."
+   },
+   {
+    "kind": "terms",
+    "title": "📚 Key Terms Explained",
+    "md": "### 1. Uptime check 🔑\n- **What it is:** A Cloud Monitoring check that calls a URL, IP or service from several Google locations on a schedule and records whether it answered correctly (for example HTTP 200, with optional content match).\n- **Looks like:** Uptime check `storefront`: HTTPS GET shop.example.com/ every 1 min from USA, Europe, Asia-Pacific\n- **Not to be confused with:** A health check for a load balancer (which decides where to send traffic).\n- **Analogy:** 🛎️ Mystery shoppers in several cities checking that your shop is open every minute.\n- **In the online store:** Watches the storefront home page.\n\n### 2. Alerting policy\n- **What it is:** A rule that sends notifications when a condition is met, for example when the uptime check fails from 2 or more locations.\n- **Looks like:** Condition: check failing in ≥ 2 regions for 1 min → PagerDuty\n- **Not to be confused with:** A dashboard.\n- **Analogy:** 🚨 The alarm that calls the manager.\n- **In the online store:** Pages on-call.\n\n### 🔗 How they fit together\n```\n Google locations (US, EU, APAC) ─every 1 min─► https://shop.example.com\n       fail in ≥2 regions ─► alerting policy ─► on-call ✅\n```"
+   },
+   {
+    "kind": "scenario",
+    "title": "🌍 Real-World Scenario",
+    "md": "One Friday the storefront went down and nobody noticed for 40 minutes. Now an **uptime check** from three continents with an **alerting policy** pages on-call within two minutes of a real outage."
+   },
+   {
+    "kind": "ecommerce",
+    "title": "🛒 E-Commerce Full-Stack Example",
+    "md": "**ShopNow**: uptime check `storefront-home` (HTTPS, 60s, content match \"Add to cart\") + alerting policy \"fails in ≥2 regions\" → PagerDuty + #oncall."
+   },
+   {
+    "kind": "takeaways",
+    "title": "🧠 Key Takeaways / Memory Tips",
+    "md": "- **Is my public URL up, from many places? → uptime check + alerting policy.**\n  🧠 **_\"Uptime check = mystery shoppers worldwide.\"_**\n- Related: **Q123**, **Q239**, **G025**."
+   }
+  ],
+  "explanations": {
+   "A": "- ✔️ \"**uptime check for the URL from multiple regions**\" matches \"**checked from multiple geographic locations every minute**\".\n- ✔️ \"**alerting policy on the uptime check that notifies the on-call channel**\" matches \"**on-call engineer must be notified**\".\n- ✔️ It's a built-in Cloud Monitoring feature, matching \"**managed solution**\".\n\n📌 **When to use it:** Use it when you want to know quickly if your public website stops answering.\n🏢 **Office example:** Mystery shoppers in several cities who call the manager if the shop doesn't open.",
+   "B": "**Wrong words:**\n- ❌ \"**script on one VM**\": one location (not \"multiple\"), and it isn't managed. If the VM dies, monitoring dies with it.\n\n📌 **When to use it:** Avoid it. Use built-in uptime checks.\n🏢 **Office example:** One person peeking through the window from across the street.",
+   "C": "**Wrong words:**\n- ❌ \"**VPC Flow Logs**\": record network flows. They don't test whether the site answers correctly.\n\n📌 **When to use it:** Use flow logs for traffic analysis.\n🏢 **Office example:** Counting cars in the car park instead of trying the shop door.",
+   "D": "**Wrong words:**\n- ❌ \"**counts HTTP 200 responses in the web server logs**\": if the site is down, there are no logs, and it doesn't check from outside locations.\n\n📌 **When to use it:** Use log-based metrics to count events that appear in logs.\n🏢 **Office example:** Counting receipts to tell if the shop is open."
+  },
+  "id": "G050",
+  "title": "Know Within Minutes if the Public Storefront Stops Responding, Checked From Several Locations (Uptime Check + Alert)",
+  "num": 50,
+  "guide": true,
+  "topic": "Monitoring (uptime checks)",
+  "stem": "Your public storefront at https://shop.example.com must be checked from multiple geographic locations every minute. If the site stops responding with HTTP 200 from multiple locations, the on-call engineer must be notified. You want a managed solution. What should you do?",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Create a Cloud Monitoring uptime check for the URL from multiple regions, and create an alerting policy on the uptime check that notifies the on-call channel."
+   },
+   {
+    "letter": "B",
+    "text": "Write a script on one VM that calls the URL every minute and sends an email if it fails."
+   },
+   {
+    "letter": "C",
+    "text": "Enable VPC Flow Logs on the web servers' subnet."
+   },
+   {
+    "letter": "D",
+    "text": "Create a log-based metric that counts HTTP 200 responses in the web server logs."
+   }
+  ],
+  "myAnswer": [],
+  "correct": [
+   "A"
+  ],
+  "plain": "- **The situation:** Your public online store runs at https://shop.example.com.\n- **What you must achieve:** Check every minute, from several places around the world, that the site answers with HTTP 200 (\"OK\"), and alert the on-call engineer if it stops.\n- **The limits:** It must be a managed service, and alert only when several locations see the failure (so one bad network path doesn't wake anyone up).\n- **What they're really asking:** Which Cloud Monitoring feature checks a public URL from many locations?"
  }
 ];

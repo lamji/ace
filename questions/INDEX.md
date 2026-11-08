@@ -379,3 +379,60 @@
 | 373 | Serverless (Cloud Run) | — | D | ❓ Didn't know | [Q373-container-scale-to-zero-cloud-run.md](Q373-container-scale-to-zero-cloud-run.md) |
 | 374 | Billing (Budget → Pub/Sub → Cloud Run Function → Slack) | — | B | ❓ Didn't know | [Q374-budget-slack-pubsub-function.md](Q374-budget-slack-pubsub-function.md) |
 | 375 | Compute Engine (Hyperdisk Extreme) | — | A | ❓ Didn't know | [Q375-sap-hana-hyperdisk-extreme.md](Q375-sap-hana-hyperdisk-extreme.md) |
+
+## 📘 Exam guide practice questions (G001–G050)
+
+Written from the official exam guide to cover topics the question site misses. Not counted in the score above. In the quiz, pick **📘 Exam guide topics** to practice only these.
+
+| # | Guide § | Topic | My Answer | Correct | Result | File |
+|---|---|---|---|---|---|---|
+| G001 | 1.1 | Identity (Workforce Identity Federation) | — | A | ⏳ Not tried yet | [G001-workforce-identity-federation.md](G001-workforce-identity-federation.md) |
+| G002 | 2.3 | VPC firewall (Cloud NGFW secure Tags) | — | D | ⏳ Not tried yet | [G002-ngfw-secure-tags.md](G002-ngfw-secure-tags.md) |
+| G003 | 3.2 | Cloud Storage (CMEK encryption) | — | C | ⏳ Not tried yet | [G003-cmek-cloud-storage.md](G003-cmek-cloud-storage.md) |
+| G004 | 2.2 | Storage (Managed Lustre vs Filestore vs Cloud Storage) | — | D | ⏳ Not tried yet | [G004-managed-lustre-ai-training.md](G004-managed-lustre-ai-training.md) |
+| G005 | 2.2 | Storage (NetApp Volumes) | — | C | ⏳ Not tried yet | [G005-netapp-volumes-smb.md](G005-netapp-volumes-smb.md) |
+| G006 | 2.1 | Compute Engine (GPUs vs TPUs) | — | A | ⏳ Not tried yet | [G006-gpu-for-cuda.md](G006-gpu-for-cuda.md) |
+| G007 | 2.1 | AI/ML infrastructure (TPUs) | — | D | ⏳ Not tried yet | [G007-tpu-large-jax-training.md](G007-tpu-large-jax-training.md) |
+| G008 | 2.1 | AI agents (Agent Runtime) | — | A | ⏳ Not tried yet | [G008-agent-runtime-deploy.md](G008-agent-runtime-deploy.md) |
+| G009 | 3.1 | AI/ML notebooks (Workbench) | — | A | ⏳ Not tried yet | [G009-workbench-idle-shutdown.md](G009-workbench-idle-shutdown.md) |
+| G010 | 3.1 | Developer environments (Cloud Workstations) | — | B | ⏳ Not tried yet | [G010-cloud-workstations-contractors.md](G010-cloud-workstations-contractors.md) |
+| G011 | 2.1 | Compute Engine (VM Manager) | — | C | ⏳ Not tried yet | [G011-vm-manager-patch-deployment.md](G011-vm-manager-patch-deployment.md) |
+| G012 | 3.1 | GKE (Autopilot Pod resource requests) | — | C | ⏳ Not tried yet | [G012-autopilot-resource-requests.md](G012-autopilot-resource-requests.md) |
+| G013 | 2.4 | Infrastructure as Code (Helm) | — | C | ⏳ Not tried yet | [G013-helm-third-party-gke.md](G013-helm-third-party-gke.md) |
+| G014 | 2.4 | Infrastructure as Code (Fabric FAST) | — | A | ⏳ Not tried yet | [G014-fabric-fast-landing-zone.md](G014-fabric-fast-landing-zone.md) |
+| G015 | 2.4 | AI-assisted tooling (Application Design Center) | — | A | ⏳ Not tried yet | [G015-application-design-center.md](G015-application-design-center.md) |
+| G016 | 2.4 | AI-assisted tooling (Gemini CLI) | — | C | ⏳ Not tried yet | [G016-gemini-cli-terminal-agent.md](G016-gemini-cli-terminal-agent.md) |
+| G017 | 2.4 | AI-assisted tooling (Google Antigravity) | — | D | ⏳ Not tried yet | [G017-antigravity-agent-ide.md](G017-antigravity-agent-ide.md) |
+| G018 | 3.4 | Monitoring (Managed Service for Prometheus) | — | A | ⏳ Not tried yet | [G018-managed-prometheus.md](G018-managed-prometheus.md) |
+| G019 | 3.4 | Cloud SQL (Query Insights) | — | B | ⏳ Not tried yet | [G019-cloud-sql-query-insights.md](G019-cloud-sql-query-insights.md) |
+| G020 | 3.4 | Cost optimization (Active Assist) | — | D | ⏳ Not tried yet | [G020-active-assist-idle-rightsizing.md](G020-active-assist-idle-rightsizing.md) |
+| G021 | 4.1 | IAM (IAM recommender / Active Assist) | — | D | ⏳ Not tried yet | [G021-iam-recommender-excess-permissions.md](G021-iam-recommender-excess-permissions.md) |
+| G022 | 3.4 | Monitoring (Cloud Hub) | — | C | ⏳ Not tried yet | [G022-cloud-hub-app-health.md](G022-cloud-hub-app-health.md) |
+| G023 | 3.4 | Troubleshooting (Gemini Cloud Assist) | — | B | ⏳ Not tried yet | [G023-gemini-cloud-assist-investigation.md](G023-gemini-cloud-assist-investigation.md) |
+| G024 | 3.4 | Monitoring (Gemini Cloud Assist for Cloud Monitoring) | — | D | ⏳ Not tried yet | [G024-gemini-promql-help.md](G024-gemini-promql-help.md) |
+| G025 | 3.4 | Monitoring (Personalized Service Health) | — | D | ⏳ Not tried yet | [G025-personalized-service-health-alerts.md](G025-personalized-service-health-alerts.md) |
+| G026 | 3.4 | Networking logs (VPC Flow Logs) | — | C | ⏳ Not tried yet | [G026-vpc-flow-logs.md](G026-vpc-flow-logs.md) |
+| G027 | 3.4 | VPC firewall (Firewall Rules Logging) | — | B | ⏳ Not tried yet | [G027-firewall-rules-logging.md](G027-firewall-rules-logging.md) |
+| G028 | 3.3 | VPC networking (custom static routes) | — | B | ⏳ Not tried yet | [G028-custom-static-route.md](G028-custom-static-route.md) |
+| G029 | 2.3 | VPC firewall (Cloud NGFW FQDN objects) | — | A | ⏳ Not tried yet | [G029-ngfw-fqdn-egress.md](G029-ngfw-fqdn-egress.md) |
+| G030 | 2.3 | VPC firewall (Cloud NGFW Enterprise IPS) | — | B | ⏳ Not tried yet | [G030-ngfw-enterprise-ips.md](G030-ngfw-enterprise-ips.md) |
+| G031 | 2.3 | Hybrid networking (HA VPN) | — | A | ⏳ Not tried yet | [G031-ha-vpn-9999.md](G031-ha-vpn-9999.md) |
+| G032 | 1.1 | Security (Cloud Asset Inventory feeds) | — | D | ⏳ Not tried yet | [G032-asset-inventory-feed.md](G032-asset-inventory-feed.md) |
+| G033 | 1.1 | IAM (Cloud Asset Inventory IAM search) | — | A | ⏳ Not tried yet | [G033-asset-search-all-iam-policies.md](G033-asset-search-all-iam-policies.md) |
+| G034 | 1.1 | Quotas (assess and request increases) | — | C | ⏳ Not tried yet | [G034-quota-increase-gpus.md](G034-quota-increase-gpus.md) |
+| G035 | 1.1 | Compute Engine (regions and zones availability) | — | D | ⏳ Not tried yet | [G035-check-gpu-zone-availability.md](G035-check-gpu-zone-availability.md) |
+| G036 | 3.1 | Compute Engine (attaching GPUs) | — | B | ⏳ Not tried yet | [G036-attach-gpu-maintenance-terminate.md](G036-attach-gpu-maintenance-terminate.md) |
+| G037 | 2.1 | Serverless (Eventarc audit log triggers) | — | C | ⏳ Not tried yet | [G037-eventarc-audit-log-trigger.md](G037-eventarc-audit-log-trigger.md) |
+| G038 | 2.1 | GKE (regional clusters) | — | B | ⏳ Not tried yet | [G038-gke-regional-cluster.md](G038-gke-regional-cluster.md) |
+| G039 | 2.1 | GKE (kubectl install and authentication) | — | A | ⏳ Not tried yet | [G039-gke-gcloud-auth-plugin.md](G039-gke-gcloud-auth-plugin.md) |
+| G040 | 3.1 | Cloud Run (revisions and tags) | — | B | ⏳ Not tried yet | [G040-cloud-run-no-traffic-tag.md](G040-cloud-run-no-traffic-tag.md) |
+| G041 | 2.2 | Cloud SQL (cross-region DR) | — | B | ⏳ Not tried yet | [G041-cloud-sql-cross-region-replica.md](G041-cloud-sql-cross-region-replica.md) |
+| G042 | 2.2 | Cloud Storage (dual-region, turbo replication) | — | D | ⏳ Not tried yet | [G042-dual-region-turbo-replication.md](G042-dual-region-turbo-replication.md) |
+| G043 | 3.2 | Cloud Storage (Autoclass) | — | C | ⏳ Not tried yet | [G043-storage-autoclass.md](G043-storage-autoclass.md) |
+| G044 | 3.2 | Firestore (backup and restore) | — | C | ⏳ Not tried yet | [G044-firestore-scheduled-backups.md](G044-firestore-scheduled-backups.md) |
+| G045 | 3.2 | Databases (AlloyDB backup and restore) | — | A | ⏳ Not tried yet | [G045-alloydb-pitr-restore.md](G045-alloydb-pitr-restore.md) |
+| G046 | 3.2 | Dataflow (reviewing job status) | — | D | ⏳ Not tried yet | [G046-dataflow-job-monitoring.md](G046-dataflow-job-monitoring.md) |
+| G047 | 3.2 | BigQuery (executing queries) | — | B | ⏳ Not tried yet | [G047-bq-query-cli.md](G047-bq-query-cli.md) |
+| G048 | 3.4 | Diagnostics (Cloud Profiler) | — | B | ⏳ Not tried yet | [G048-cloud-profiler.md](G048-cloud-profiler.md) |
+| G049 | 3.1 | Cloud Run (autoscaling and concurrency) | — | B | ⏳ Not tried yet | [G049-cloud-run-concurrency.md](G049-cloud-run-concurrency.md) |
+| G050 | 3.4 | Monitoring (uptime checks) | — | A | ⏳ Not tried yet | [G050-uptime-check-alert.md](G050-uptime-check-alert.md) |
