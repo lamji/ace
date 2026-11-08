@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** App now runs as a **new service account** on Vertex AI; it must still read Pub/Sub.
+**In plain words:**
+- **The situation:** An app reads from a Pub/Sub topic. Locally you tested it with your personal login. Now it will run on Vertex AI using a new service account as its identity.
+- **What you must achieve:** Keep the deployed app able to read the topic.
+- **The limits:** None stated.
+- **What they're really asking:** What must you do so the new identity can access Pub/Sub?
 
 **Clues in the question:**
 - New identity → grant **it** the needed roles (e.g., `roles/pubsub.subscriber`). No keys, no personal credentials.

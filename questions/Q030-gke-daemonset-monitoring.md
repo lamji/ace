@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your GKE cluster **adds and removes nodes automatically** (autoscaler). You need **exactly one monitoring pod on every node**, including **new nodes that appear later**. Which Kubernetes object does that by itself?
+**In plain words:**
+- **The situation:** You are creating a GKE cluster (Google Kubernetes Engine) with the cluster autoscaler on (it adds and removes nodes, the machines in the cluster).
+- **What you must achieve:** Every node, including nodes added later, must run one monitoring pod (a small container) that sends metrics to an outside monitoring tool.
+- **The limits:** It must also cover nodes the autoscaler adds later.
+- **What they're really asking:** What Kubernetes setup puts one copy of the monitoring pod on every node automatically?
 
 | Keyword | What it hints at |
 |---|---|

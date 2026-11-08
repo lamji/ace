@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You own the project. You want some colleagues to take care of **Cloud Storage**, both the **buckets** (the containers) and the **files** inside them. Which **one role** gives them exactly that, and nothing else?
+**In plain words:**
+- **The situation:** You own a project and want colleagues to manage buckets and the files in them in Cloud Storage.
+- **What you must achieve:** Give them the right permissions.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** Which IAM roles let them manage buckets and files?
 
 | Keyword | What it hints at |
 |---|---|

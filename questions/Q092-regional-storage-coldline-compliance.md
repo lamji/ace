@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The data must stay in **one geographic location** for compliance. After 30 days it's archived and read **once a year**. Which location type and storage class?
+**In plain words:**
+- **The situation:** Data from one geographic location must be stored and archived to meet compliance rules.
+- **What you must achieve:** Store and archive the data.
+- **The limits:** It is archived after 30 days and read about once a year.
+- **What they're really asking:** Which storage class and location setup fit?
 
 **Clues in the question:**
 - "**compliance objectives for data from one geographic location**": keep it in **one region** → **Regional** storage. Multi-regional spreads data across a large area.

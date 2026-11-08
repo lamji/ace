@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The partner's app (in **their** project) must read **your** dataset.
+**In plain words:**
+- **The situation:** You run a data warehouse in BigQuery. A partner company runs a recommendation app in its own Google Cloud project.
+- **What you must achieve:** Let the partner read your BigQuery dataset.
+- **The limits:** They manage their own project; you only control yours.
+- **What they're really asking:** How do you give the partner access to just that dataset?
 
 **Clues in the question:**
 - "**They manage the resources in their own project**": their app runs as **their own service account**.

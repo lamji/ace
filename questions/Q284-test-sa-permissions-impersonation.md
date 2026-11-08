@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Act **as the service account** from your laptop, **without a key**.
+**In plain words:**
+- **The situation:** Your app will use a service account to read BigQuery data.
+- **What you must achieve:** Test the service account's permissions from your own computer before deploying.
+- **The limits:** Use the most secure method and recommended practice.
+- **What they're really asking:** How do you test as that service account without downloading a key?
 
 **Clues in the question:**
 - "**test the permissions of this service account**" → you must act **as** it.

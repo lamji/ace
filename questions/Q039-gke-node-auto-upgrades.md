@@ -29,7 +29,11 @@ Your answer **D** is incorrect, but it is a reasonable mix-up: Container-Optimiz
 
 ## 2. 📖 What the Question Is Asking
 
-In plain words: after creating a Kubernetes cluster, how do you keep its software version maintained as GKE releases supported updates?
+**In plain words:**
+- **The situation:** You create a new GKE cluster.
+- **What you must achieve:** Make sure it always runs a supported and stable Kubernetes version.
+- **The limits:** It must stay up to date over time, not only on the day you create it.
+- **What they're really asking:** Which cluster setting keeps the Kubernetes version current automatically?
 
 - **“always runs”** means ongoing maintenance, not a one-time selection.
 - **“supported and stable version”** points to GKE’s managed upgrade process.

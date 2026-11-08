@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Relational**, **global**, growth **unknown**, scale with **little config**.
+**In plain words:**
+- **The situation:** Your app stores relational data for users all over the world, and nobody knows how big the user base will become.
+- **What you must achieve:** Use a database that grows along with the users.
+- **The limits:** Users are global, and growth should need very few configuration changes.
+- **What they're really asking:** Which database can scale with unknown worldwide growth easily?
 
 **Clues in the question:**
 - "**relational**" + "**across the globe**" + "**scale with your user growth**" → **Spanner** (horizontal scaling, can autoscale).

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Per-department policies and sinks that **Project Owners can't remove**.
+**In plain words:**
+- **The situation:** You are the organization administrator. Each department has its own security policies, and each department has a Project Owner on its projects.
+- **What you must achieve:** Apply organization policies and log sinks (log export rules) that project users cannot remove.
+- **The limits:** Even Project Owners must not be able to remove them, and rules differ per department.
+- **What they're really asking:** Where should you apply the policies and sinks so project owners can't remove them?
 
 **Clues in the question:**
 - "**cannot be removed by project users**" → set them **above** the project (folder), where Project Owners have no rights.

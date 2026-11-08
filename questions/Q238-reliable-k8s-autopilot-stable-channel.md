@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Production, **business critical**, **reliability** first.
+**In plain words:**
+- **The situation:** Your team built a new app that must run on Kubernetes. Production is business-critical.
+- **What you must achieve:** Create the Kubernetes cluster.
+- **The limits:** Optimize for reliability and follow Google-recommended practices.
+- **What they're really asking:** What kind of GKE cluster should you create?
 
 **Clues in the question:**
 - "**Google-recommended practices**" → **Autopilot** (regional, Google manages nodes and best practices).

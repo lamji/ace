@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Files are read **a lot for 30 days**, then **almost never**, and kept **3 years**. Cheapest plan?
+**In plain words:**
+- **The situation:** Files in a bucket are written once and read often for 30 days. After that they are almost never read, but must be kept for three years.
+- **What you must achieve:** Set up Object Lifecycle Management (automatic rules that change or delete files based on age).
+- **The limits:** Keep costs as low as possible.
+- **What they're really asking:** Which age-based rules should move and then delete these files?
 
 **Clues in the question:**
 - "**accessed frequently for 30 days**" → **Standard** (no read fees).

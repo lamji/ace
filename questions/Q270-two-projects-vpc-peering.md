@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Connect two VPCs in Google Cloud, **cheaply and efficiently**. Ranges don't overlap.
+**In plain words:**
+- **The situation:** project-a has VPC vpc-a (10.0.0.0/16) with the frontend; project-b has vpc-b (10.8.0.0/16) with the backend APIs.
+- **What you must achieve:** Let the frontend talk to the backend.
+- **The limits:** Efficient, low cost, and recommended practice.
+- **What they're really asking:** How do you connect the two networks privately?
 
 **Clues in the question:**
 - Two Google Cloud VPCs with **non-overlapping** ranges → **VPC Network Peering** (private, Google's network, no gateways).

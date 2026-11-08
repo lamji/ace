@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You made **big changes** to a Deployment Manager template, the file that describes your infrastructure. Before you **actually build** anything, you want to check that every resource can find the other resources it **depends on**, like a VM that needs its network. And you want the answer **fast**. How?
+**In plain words:**
+- **The situation:** You made big changes to a complex Deployment Manager template (a file describing the resources to create and how they depend on each other).
+- **What you must achieve:** Check that every resource and its dependencies (what needs what first) are correct before committing the change.
+- **The limits:** You want the fastest feedback.
+- **What they're really asking:** How do you check the template quickly without actually building everything?
 
 | Keyword | What it hints at |
 |---|---|

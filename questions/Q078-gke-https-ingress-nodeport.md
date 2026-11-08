@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app runs in GKE, and nodes come and go (autoscaling). You want people on the internet to reach it at **one public IP** using **HTTPS**. What's the standard way?
+**In plain words:**
+- **The situation:** A new app runs on GKE with autoscaling.
+- **What you must achieve:** Make it public over HTTPS on a public IP address.
+- **The limits:** None stated.
+- **What they're really asking:** Which Kubernetes objects should you create to expose it?
 
 **Clues in the question:**
 - "**expose this new application to the public**": needs a **public** IP, so internal-only options (ClusterIP) are out.

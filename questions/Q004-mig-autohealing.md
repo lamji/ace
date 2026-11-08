@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have a group of VMs spread across several zones. If a VM **stops responding** (it fails a check **3 times in a row**, checked **every 10 seconds**), you want Google Cloud to **automatically delete it and create a fresh one**. What's the **simplest** way to set that up?
+**In plain words:**
+- **The situation:** A group of VMs running in several zones (separate data-center buildings inside one region) sits behind a network load balancer (a traffic distributor).
+- **What you must achieve:** Turn on autohealing: when a VM stops answering, it is automatically deleted and created again.
+- **The limits:** A VM counts as broken after 3 failed checks, 10 seconds apart, and you want the fewest setup steps.
+- **What they're really asking:** What do you set up so broken VMs are replaced automatically after 3 failed 10-second checks?
 
 | Keyword | What it hints at |
 |---|---|

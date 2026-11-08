@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Run **SQL** on logs **in Cloud Logging**.
+**In plain words:**
+- **The situation:** Cloud Logging collects your application logs.
+- **What you must achieve:** Analyze those logs using SQL.
+- **The limits:** Follow Google-recommended practices.
+- **What they're really asking:** Which Cloud Logging feature lets you query logs with SQL?
 
 **Clues in the question:**
 - "**use SQL to analyze the application logs in Cloud Logging**" → **Log Analytics** on the log bucket (no export); optionally a **linked BigQuery dataset**.

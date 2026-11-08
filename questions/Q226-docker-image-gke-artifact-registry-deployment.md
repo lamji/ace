@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Same as Q192, with **Artifact Registry** (the current registry).
+**In plain words:**
+- **The situation:** Your app is packaged as a Docker image.
+- **What you must achieve:** Run it as a workload on GKE.
+- **The limits:** None stated.
+- **What they're really asking:** What steps get the image running on GKE?
 
 **Clues in the question:**
 - Images → **Artifact Registry**. Run them → **Deployment**.

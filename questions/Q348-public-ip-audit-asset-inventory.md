@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Find **all VMs with a public IP** org-wide; managed, easy to maintain.
+**In plain words:**
+- **The situation:** You are auditing your Google Cloud organization.
+- **What you must achieve:** Find every Compute Engine VM that has a public IP address.
+- **The limits:** Easy to maintain and using managed Google Cloud services.
+- **What they're really asking:** Which managed service can list those VMs across the organization?
 
 **Clues in the question:**
 - Org-wide audit + managed → **Cloud Asset Inventory** query.

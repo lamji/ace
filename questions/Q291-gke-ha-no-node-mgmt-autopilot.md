@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** HA, quick node patching, **pay per workload**, **no node management**.
+**In plain words:**
+- **The situation:** You are moving your containerized apps (apps packed as containers) to GKE and must choose which kind of GKE cluster to use.
+- **What you must achieve:** The cluster must be highly available, have very little downtime, and get node security updates quickly.
+- **The limits:** Pay only for the compute your workloads actually use, don't manage nodes (the machines), keep running costs low, and follow Google's recommendations.
+- **What they're really asking:** Which GKE cluster option meets all of these?
 
 **Clues in the question:**
 - "**pay only for the compute resources that your workloads use without managing nodes**" → **Autopilot** (billed per pod resources; Google manages and patches nodes).

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Main DB, event streaming, analytics → **global scale**, **minimal management**.
+**In plain words:**
+- **The situation:** You are moving three systems to Google Cloud: a MySQL cluster (main database), Apache Kafka (event streaming), and a PostgreSQL database used for analytics and reports.
+- **What you must achieve:** Replace each with a Google-recommended service.
+- **The limits:** Global scale and minimal operations and infrastructure work.
+- **What they're really asking:** Which Google services replace each of the three?
 
 **Clues in the question:**
 - Main relational DB + "**global scalability**" → **Spanner**.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Each microservice's **CPU/memory settings** are wrong. Fix the **size** of each pod.
+**In plain words:**
+- **The situation:** Hundreds of microservices run on GKE, each with CPU and memory limits, but many limits are wrong.
+- **What you must achieve:** Get correctly sized CPU and memory limits for each microservice.
+- **The limits:** None stated.
+- **What they're really asking:** Which GKE feature helps set the right CPU and memory for each one?
 
 **Clues in the question:**
 - "**right sized limits for memory and CPU**" → **VPA** adjusts requests/limits per pod.

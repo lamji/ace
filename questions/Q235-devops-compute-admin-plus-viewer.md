@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Full** Compute control, **no** write access elsewhere.
+**In plain words:**
+- **The situation:** The DevOps group needs full control of Compute Engine in the development project.
+- **What you must achieve:** Give them that control.
+- **The limits:** They must not be able to create or change any other kind of resource; follow Google's recommendations.
+- **What they're really asking:** Which role gives full Compute Engine control and nothing else?
 
 **Clues in the question:**
 - "**full control of Compute Engine**" → **roles/compute.admin** (predefined).

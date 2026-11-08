@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Know when Dataflow jobs **get stuck**, with **little effort**.
+**In plain words:**
+- **The situation:** An outage made several Dataflow jobs (data-processing pipelines) get stuck, causing downtime and lost revenue. You fixed the code bug.
+- **What you must achieve:** Find out automatically if jobs get stuck again.
+- **The limits:** Very little management effort.
+- **What they're really asking:** How do you detect stuck Dataflow jobs in the future?
 
 **Clues in the question:**
 - A stuck job stops moving data forward → **data freshness** (and system lag) grows.

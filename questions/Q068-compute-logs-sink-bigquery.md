@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your VMs already send their logs to Cloud Logging (the agent is installed). Now you want a copy of **only the Compute Engine logs** in a BigQuery dataset called `platform-logs`, so you can analyze them with SQL. Do it as **cheaply** as possible.
+**In plain words:**
+- **The situation:** Every VM already has the Cloud Logging agent installed (a program that sends logs to Google).
+- **What you must achieve:** Send all VM logs to a BigQuery dataset named platform-logs.
+- **The limits:** Keep costs low.
+- **What they're really asking:** How do you route the logs into BigQuery?
 
 **Clues in the question:**
 - "**For analysis purposes**" + "**BigQuery dataset**": the destination is BigQuery (a sink can send there directly).

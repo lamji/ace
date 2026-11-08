@@ -22,7 +22,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A new auditor must be able to **look at everything** in the project but **change nothing**. What's the simplest correct role?
+**In plain words:**
+- **The situation:** A new auditor joins a project.
+- **What you must achieve:** Let the auditor read everything in the project.
+- **The limits:** The auditor must not be able to change anything.
+- **What they're really asking:** Which role gives read-only access to all project items?
 
 **Clues in the question:**
 - "**read, but not modify**": a **read-only** role.

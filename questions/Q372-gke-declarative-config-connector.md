@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Manage cloud resources **the same way as app deployments** (Kubernetes manifests).
+**In plain words:**
+- **The situation:** Your company deploys all apps on GKE.
+- **What you must achieve:** Create and manage other Google Cloud resources the same way.
+- **The limits:** Use the same declarative approach and tools as your app deployments.
+- **What they're really asking:** Which tool lets you manage cloud resources with Kubernetes-style files?
 
 **Clues in the question:**
 - "**same declarative approach and tooling as your application deployments**" on GKE → **Config Connector** (Google Cloud resources as Kubernetes custom resources).

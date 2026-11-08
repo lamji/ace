@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** An outside auditor must **see all resources** in one project. But a policy says only accounts from **your own domain** can be granted roles. What do you do?
+**In plain words:**
+- **The situation:** An external auditor must review the resources in one project. The organization uses Domain Restricted Sharing (only accounts from your own domain can be given roles).
+- **What you must achieve:** Let the auditor view but not change anything.
+- **The limits:** The policy blocks outside accounts.
+- **What they're really asking:** How do you give the auditor view access while respecting that policy?
 
 **Clues in the question:**
 - "**Domain Restricted Sharing … only your Cloud Identity domain**": IAM will **reject** the auditor's outside Google account. You must give them an account **in your domain**.

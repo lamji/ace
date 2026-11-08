@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Some new users already made Google accounts with their **work email**. How do you avoid conflicts?
+**In plain words:**
+- **The situation:** You need to add new users to Cloud Identity. Some already have personal Google accounts using their work email.
+- **What you must achieve:** Add them without creating clashing duplicate accounts.
+- **The limits:** Follow a Google-recommended practice.
+- **What they're really asking:** How do you handle users who already have a Google account with that email?
 
 **Clues in the question:**
 - "**avoid conflicting accounts**" + "**Google's recommended practices**" → **invite them to transfer** the unmanaged account into your Cloud Identity.

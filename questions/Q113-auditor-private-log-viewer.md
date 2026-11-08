@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** An auditor must read **audit logs**, including the private **Data Access** logs. Which role, and what else?
+**In plain words:**
+- **The situation:** An external auditor needs to review Audit Logs and also Data Access logs.
+- **What you must achieve:** Give the auditor the right IAM role.
+- **The limits:** None stated.
+- **What they're really asking:** Which role lets them read both kinds of logs?
 
 **Clues in the question:**
 - "**Data Access logs**": these are **private logs**. The normal Logs Viewer can't see them. You need **Private Logs Viewer** (`roles/logging.privateLogViewer`).

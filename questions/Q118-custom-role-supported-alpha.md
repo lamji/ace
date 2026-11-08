@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You're making the **first version** of a custom role. The permissions must be **production-safe**, and you want everyone to see the role's **status**.
+**In plain words:**
+- **The situation:** You are making a custom IAM role.
+- **What you must achieve:** All its permissions are fit for production, and the organization can clearly see the role's status.
+- **The limits:** This is the first version of the role.
+- **What they're really asking:** How do you mark the role's launch stage?
 
 **Clues in the question:**
 - "**suitable for production use**" → permissions with the **SUPPORTED** support level (TESTING ones may change or break).

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** No Google account, but on the VPN. How do they SSH in?
+**In plain words:**
+- **The situation:** An outside consultant needs access to a Linux VM. They connect to your company network through a VPN but have no Google account.
+- **What you must achieve:** Give the consultant access to the VM.
+- **The limits:** They have no Google account.
+- **What they're really asking:** How do you let someone without a Google account log in to the VM?
 
 **Clues in the question:**
 - "**no Google account**" → gcloud/IAP need a Google identity → use plain **SSH keys**.

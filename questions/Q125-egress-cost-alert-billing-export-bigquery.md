@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want an email when **only this one server's egress (outbound network) cost** passes **$100 this month**, **as Google bills it**. Other apps share the project.
+**In plain words:**
+- **The situation:** An Apache web server on a VM publishes large files. Other apps share the same project.
+- **What you must achieve:** Get an email when this server's egress network costs (charges for data leaving Google) go over $100 this month.
+- **The limits:** The cost must be measured by Google Cloud, for this server only.
+- **What they're really asking:** How do you alert on just this server's network costs?
 
 **Clues in the question:**
 - "**not the only application running in the project**": a project budget would include **everything**, not just this server's egress.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** IaC for **three cloud providers**.
+**In plain words:**
+- **The situation:** Your company will run all its workloads on Kubernetes in Google Cloud and two other cloud providers.
+- **What you must achieve:** Build an Infrastructure as Code solution (resources described in code) that creates resources in all three clouds.
+- **The limits:** It must work across all three providers.
+- **What they're really asking:** Which tool can provision resources in all three clouds?
 
 **Clues in the question:**
 - "**two other cloud providers**" + "**Infrastructure-as-code**" → **Terraform** (multi-cloud providers).

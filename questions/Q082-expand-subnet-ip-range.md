@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your subnet is tiny (/28 = 16 addresses) and full. You need 10 more addresses, and the old and new VMs must stay on the same network. What's the simplest fix?
+**In plain words:**
+- **The situation:** VMs are in a subnet with mask 255.255.255.240 (a /28, which holds only 16 addresses). It is full, and you need 10 more addresses.
+- **What you must achieve:** Make room for the new VMs.
+- **The limits:** Old and new VMs must reach each other without extra routes.
+- **What they're really asking:** How do you get more IP addresses?
 
 **Clues in the question:**
 - "**subnet mask of 255.255.255.240**": that's a **/28**, only 16 addresses (Google keeps 4, so 12 usable).

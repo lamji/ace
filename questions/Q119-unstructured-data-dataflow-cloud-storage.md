@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Lots of **unstructured files** in **different formats** must be available to a **Dataflow** job. Where do you put them?
+**In plain words:**
+- **The situation:** You have lots of unstructured data in many file formats.
+- **What you must achieve:** Make it available on Google Cloud so a Dataflow job (a data-processing pipeline) can transform it.
+- **The limits:** None stated.
+- **What they're really asking:** Where should you put the files?
 
 **Clues in the question:**
 - "**unstructured data in different file formats**": files, not tables → **Cloud Storage** (object storage for any file).

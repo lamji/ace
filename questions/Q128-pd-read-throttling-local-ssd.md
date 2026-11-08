@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The app reads big files and the disk is too slow (throttled). You want the **most throughput** for the **least money**.
+**In plain words:**
+- **The situation:** A VM's 350 GB zonal SSD persistent disk is being throttled (slowed down by its speed limit) when reading. The app mostly reads large files.
+- **What you must achieve:** Get the most read speed.
+- **The limits:** Keep costs low.
+- **What they're really asking:** How do you raise the disk's read speed cheaply?
 
 **Clues in the question:**
 - "**excessive disk read throttling**": the disk hits its speed limit. SSD PD speed depends on **size**, so a 350 GB disk has a lowish limit.

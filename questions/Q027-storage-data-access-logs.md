@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You turned on **data access logging** for 3 sensitive buckets. Now you want to see what **one specific person** did: **which files they opened** and **which metadata labels they added**. Where do you look, with the fewest steps?
+**In plain words:**
+- **The situation:** Sensitive data is in three buckets, and data access logging (recording who reads or changes data) is turned on.
+- **What you must achieve:** Check one user's activity: whether they added metadata labels (tags on files) and which files they viewed.
+- **The limits:** Use the fewest steps.
+- **What they're really asking:** Where do you look to see that user's actions on those buckets?
 
 | Keyword | What it hints at |
 |---|---|

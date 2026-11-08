@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Vendor needs a **fixed list of IPs** that never changes.
+**In plain words:**
+- **The situation:** An app on GKE must call an outside company's API, and that company only allows traffic from IP addresses on its list (an allowlist).
+- **What you must achieve:** Give the vendor a list of your outgoing IP addresses.
+- **The limits:** Follow recommended practice, and traffic must never break because your IPs change.
+- **What they're really asking:** How do you make all outgoing traffic come from fixed IPs you can give the vendor?
 
 **Clues in the question:**
 - "**avoid any risk … due to IP address changes**" → **static** IPs on **Cloud NAT**; private nodes send all egress through it.

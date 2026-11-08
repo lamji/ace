@@ -27,7 +27,11 @@ You marked this as **“didn't know.”** The exam's intended answer is **B. Ena
 
 ## 2. 📖 What the Question Is Asking
 
-In plain words: one very large file must travel over a fast, otherwise unused internet connection. Which method can send parts of that one file simultaneously to increase transfer speed?
+**In plain words:**
+- **The situation:** You must upload one 32 GB file to a Nearline Storage bucket over a 1 Gbps connection that only you are using.
+- **What you must achieve:** Use as much of the connection speed as possible so the upload is fast.
+- **The limits:** It is one single large file.
+- **What they're really asking:** How do you upload it to make full use of the connection?
 
 - **“32 GB”** and **“single file”** point to splitting a large file into parts.
 - **“only one on the connection”** means other users are not consuming the stated bandwidth.

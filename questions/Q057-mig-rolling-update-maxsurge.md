@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your website runs on a group of identical VMs (a MIG) and real customers are using it. You want to swap in the new version **a few VMs at a time**, and the number of working VMs must **never go down** while you do it.
+**In plain words:**
+- **The situation:** A web app runs in a managed instance group and is receiving live traffic.
+- **What you must achieve:** Roll out a new version gradually.
+- **The limits:** The serving capacity (number of working VMs) must never drop during the rollout.
+- **What they're really asking:** How should you configure the rolling update?
 
 | Keyword | What it hints at |
 |---|---|

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app runs on App Engine. You want App Engine to **add or remove instances automatically** depending on **how many requests come in**. You **also** want **3 free (idle) instances always waiting**, ready for sudden traffic. Which scaling type and setting does this?
+**In plain words:**
+- **The situation:** You are putting an app on App Engine (Google's platform that runs your code without you managing servers).
+- **What you must achieve:** The number of instances (running copies of your app) should go up and down with the number of incoming requests.
+- **The limits:** At least 3 idle instances must always be waiting, ready for sudden traffic.
+- **What they're really asking:** Which App Engine scaling type scales on requests and can keep 3 idle instances ready?
 
 | Keyword | What it hints at |
 |---|---|

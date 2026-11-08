@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your own data center is full. Extra work will run on Google Cloud, and those cloud machines must talk to your office machines **by private IP**. How do you connect the two places?
+**In plain words:**
+- **The situation:** All your on-premises machines are at full capacity.
+- **What you must achieve:** Burst (send extra work) to Google Cloud.
+- **The limits:** Cloud workloads must talk directly to on-premises workloads using private IP addresses.
+- **What they're really asking:** What network connection should you set up?
 
 **Clues in the question:**
 - "**on-premises**" + "**Google Cloud**": two **different places**, so you need a **link between your building and Google**.

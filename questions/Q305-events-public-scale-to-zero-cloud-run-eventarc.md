@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Handle events from Google services, public, **zero cost when idle**, standardized.
+**In plain words:**
+- **The situation:** Your app processes events from Google services (like a file being uploaded) and must be reachable from the public internet.
+- **What you must achieve:** Choose how to deploy it.
+- **The limits:** Use a standardized process, keep development cost low, and pay nothing when it isn't being used.
+- **What they're really asking:** Where should the app run and how should events be delivered to it?
 
 **Clues in the question:**
 - "**no costs when your workloads are not in use**" → **Cloud Run** (scales to zero).

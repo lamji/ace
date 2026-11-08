@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Keep the app **running in any load** and get **CPU/memory recommendations**.
+**In plain words:**
+- **The situation:** Your manager wants a workload on Kubernetes, but you don't know how much CPU and memory it needs or how that changes with usage.
+- **What you must achieve:** Get cost-effective CPU and memory recommendations and keep the workload running well in any situation.
+- **The limits:** Follow Google-recommended practices.
+- **What they're really asking:** Which GKE feature figures out and adjusts the right CPU and memory for you?
 
 **Clues in the question:**
 - "**function consistently in any situation**" → **HPA** adds pods under load (availability).

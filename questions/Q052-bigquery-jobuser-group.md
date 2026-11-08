@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A small data science team, **whose members change often**, needs to **run queries** in BigQuery. How do you give them access the Google-recommended way?
+**In plain words:**
+- **The situation:** BigQuery is used as the company data warehouse. The data science team is small and its members change often.
+- **What you must achieve:** Let team members run queries.
+- **The limits:** Follow Google's recommended practice, keeping in mind people join and leave often.
+- **What they're really asking:** How should you grant query access so it stays easy to manage as people come and go?
 
 The question tests **two choices at once**, just like Q025:
 

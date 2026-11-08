@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Customers can run **any code** inside their pods, all in one cluster. How do you **wall off** each customer's pod as strongly as possible?
+**In plain words:**
+- **The situation:** You run one GKE cluster. Each customer gets a pod and can run any code they want in it.
+- **What you must achieve:** Keep customers' pods as separated from each other as possible.
+- **The limits:** Maximum isolation.
+- **What they're really asking:** Which GKE feature gives the strongest isolation between pods?
 
 **Clues in the question:**
 - "**customers can run arbitrary code**": untrusted code that might try to break out of its container.

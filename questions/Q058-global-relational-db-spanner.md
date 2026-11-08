@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app stores data in **tables with relationships** (users, orders, ...). Users are **all over the world**, and you don't know how big it will get. Which database grows with you without lots of reconfiguring?
+**In plain words:**
+- **The situation:** Your app stores relational data for users all over the world, and nobody knows how big the user base will become.
+- **What you must achieve:** Use a database that grows along with the users.
+- **The limits:** Users are global, and growth should need very few configuration changes.
+- **What they're really asking:** Which database can scale with unknown worldwide growth easily?
 
 | Question words | What they point to |
 |---|---|

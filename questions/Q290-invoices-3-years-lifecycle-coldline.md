@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Frequent for **6 months**, then **audit only** until **3 years**. Cheapest managed option.
+**In plain words:**
+- **The situation:** Your company will store invoices and financial documents in Google Cloud.
+- **What you must achieve:** Use a Google-managed solution that keeps documents three years.
+- **The limits:** Analysts read invoices from the last six months often; older invoices are kept only for audits; minimize cost.
+- **What they're really asking:** Which storage classes, rules and retention settings fit this?
 
 **Clues in the question:**
 - "**Google-managed**" + documents → **Cloud Storage**.

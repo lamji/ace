@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Data must be **immediately available** if a **zone** fails.
+**In plain words:**
+- **The situation:** You are moving a business-critical app from your data center to Google Cloud.
+- **What you must achieve:** Keep the app's data available immediately if one zone (a data-center building) fails.
+- **The limits:** It is part of a high-availability plan.
+- **What they're really asking:** How should the app's data be stored so a zone failure doesn't make it unavailable?
 
 **Clues in the question:**
 - "**immediately available if a zonal failure occurs**" → **regional persistent disk** (synchronously copied to two zones).

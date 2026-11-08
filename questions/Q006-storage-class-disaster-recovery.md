@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You keep **backup files** in Cloud Storage just in case of a disaster. You **almost never read them**; you only need them if something goes badly wrong. Which **storage class** does Google recommend for this, so you pay as little as possible for data you rarely touch?
+**In plain words:**
+- **The situation:** Your company keeps backup copies of application files in Cloud Storage (Google's file storage), only so it can restore them if a disaster happens.
+- **What you must achieve:** Choose the storage class (price tier) for these backup files.
+- **The limits:** Follow Google's recommended practice for disaster-recovery backups.
+- **What they're really asking:** Which Cloud Storage class does Google recommend for backup files kept for disaster recovery?
 
 | Keyword | What it hints at |
 |---|---|

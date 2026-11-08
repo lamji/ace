@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The subnet `172.16.20.128/25` (128 addresses) is full. You need room for new VMs that talk to Dataproc, in the **fewest steps**.
+**In plain words:**
+- **The situation:** A Dataproc cluster sits in one subnet, 172.16.20.128/25, and there are no free IP addresses left.
+- **What you must achieve:** Add new VMs that can talk to the cluster.
+- **The limits:** Fewest steps.
+- **What they're really asking:** How do you make room for the new VMs?
 
 **Clues in the question:**
 - "**no private IP addresses available**" → make the range **bigger**.

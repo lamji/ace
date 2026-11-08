@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** New project (made with gcloud, billing linked). What must you do before `gcloud compute instances create`?
+**In plain words:**
+- **The situation:** You created a new project with the gcloud CLI and linked a billing account.
+- **What you must achieve:** Create a Compute Engine VM from the command line.
+- **The limits:** Do the required setup steps first.
+- **What they're really asking:** What must you set up before you can create the VM?
 
 **Clues in the question:**
 - "**new project … through the gcloud CLI**": APIs are **not** enabled automatically → **enable `compute.googleapis.com`**.

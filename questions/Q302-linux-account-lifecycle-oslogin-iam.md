@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Manage developers' Linux accounts on VMs simply and cheaply.
+**In plain words:**
+- **The situation:** Developers use your automation to create Linux VMs for their tasks.
+- **What you must achieve:** Manage these users' Linux accounts and access over time (creation, changes, removal).
+- **The limits:** Simple access management, low cost, recommended practice.
+- **What they're really asking:** What is the recommended way to manage Linux logins for the developers?
 
 **Clues in the question:**
 - "**Linux account lifecycle and access**" + "**simplify access management**" → **OS Login** with **IAM roles**.

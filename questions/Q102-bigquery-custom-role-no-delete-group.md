@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Users must **query** BigQuery but must **not be able to delete datasets**. Follow Google best practice.
+**In plain words:**
+- **The situation:** Users need to query BigQuery datasets.
+- **What you must achieve:** Let them run queries.
+- **The limits:** They must not be able to delete datasets; follow Google's recommended practice.
+- **What they're really asking:** Which roles let them query but not delete?
 
 **Clues in the question:**
 - "**query datasets**" + "**prevent … deleting**": you need a role with query permissions but **without `bigquery.datasets.delete`** → a **custom role**.

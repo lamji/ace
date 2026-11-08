@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** An outsider should only **list** images and disks.
+**In plain words:**
+- **The situation:** An external team member needs to list compute images and disks in one of your projects.
+- **What you must achieve:** Grant that permission.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** What is the recommended way to give list-only access to images and disks?
 
 **Clues in the question:**
 - "**list access to compute images and disks**" + "**Google-recommended practices**" (least privilege) → a **custom role with only** `compute.disks.list` and `compute.images.list`.

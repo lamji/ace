@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have a **service account key file** and want **gcloud** to use it.
+**In plain words:**
+- **The situation:** You received a JSON file containing a service account's private key so you can use resources in a project. You installed the Cloud SDK.
+- **What you must achieve:** Use that key to sign in when running gcloud commands.
+- **The limits:** None stated.
+- **What they're really asking:** Which gcloud command signs you in with the key file?
 
 **Clues in the question:**
 - "**use this private key for … gcloud commands**" → `gcloud auth activate-service-account --key-file=key.json`.

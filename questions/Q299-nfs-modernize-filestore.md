@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Replace an NFS server with a **managed** service, **no app changes**.
+**In plain words:**
+- **The situation:** Many older third-party apps share files through one NFS server (a network file share).
+- **What you must achieve:** Replace that NFS server with a managed Google Cloud service.
+- **The limits:** The apps must change as little as possible.
+- **What they're really asking:** Which managed service can replace the NFS server with the fewest app changes?
 
 **Clues in the question:**
 - "**NFS**" + "**managed service**" + "**least amount of change**" → **Filestore** (managed NFS; apps just mount a new path).

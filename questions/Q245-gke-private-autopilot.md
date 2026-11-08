@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Shielded nodes**, **no public node access**, **least management**.
+**In plain words:**
+- **The situation:** You are creating a GKE cluster.
+- **What you must achieve:** Nodes must have verifiable identity and integrity (proof they haven't been tampered with), and nodes must not be reachable from the internet.
+- **The limits:** Reduce operational cost and follow recommended practice.
+- **What they're really asking:** Which cluster type and settings meet these security needs with little management?
 
 **Clues in the question:**
 - "**Verifiable node identity and integrity**" → Shielded GKE Nodes (**always on in Autopilot**).

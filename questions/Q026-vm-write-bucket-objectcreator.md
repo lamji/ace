@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Some VMs need to **put files into one specific bucket**. That's all: **write**, into **that one bucket**. What's the Google-recommended way to give them that permission?
+**In plain words:**
+- **The situation:** A set of VMs must write data into one specific Cloud Storage bucket.
+- **What you must achieve:** Give those VMs permission to write there.
+- **The limits:** Follow Google's recommended practice (give only the access needed).
+- **What they're really asking:** How do you give these VMs write access to just that bucket?
 
 | Keyword | What it hints at |
 |---|---|

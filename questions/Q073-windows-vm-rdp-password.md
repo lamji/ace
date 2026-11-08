@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You made a **Windows** VM. To log in with **RDP** (Remote Desktop), you need a **Windows username and password**. How do you get one?
+**In plain words:**
+- **The situation:** You are setting up a Windows VM on Compute Engine.
+- **What you must achieve:** Log in to it with RDP (Remote Desktop).
+- **The limits:** None stated.
+- **What they're really asking:** What do you need to set up to log in with RDP?
 
 **Clues in the question:**
 - "**Windows VM**": Windows uses a **username + password**, not SSH keys like Linux.

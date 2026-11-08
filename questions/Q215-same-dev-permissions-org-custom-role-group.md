@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Every developer, **every project**, the **same** permissions, only **Compute, Functions, SQL**, with **little effort**.
+**In plain words:**
+- **The situation:** All developers must have the same permissions in every project. Security limits them to Compute Engine, Cloud Functions and Cloud SQL.
+- **What you must achieve:** Apply this policy.
+- **The limits:** Minimal effort.
+- **What they're really asking:** Where and how do you grant the same limited permissions everywhere at once?
 
 **Clues in the question:**
 - "**same permissions, regardless of the … project**" → grant at the **organization level** (inherited everywhere).

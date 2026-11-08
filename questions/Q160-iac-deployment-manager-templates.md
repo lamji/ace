@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Manage resources as **code**, with **as little repeated code** as possible.
+**In plain words:**
+- **The situation:** Your company wants to create and manage many Google Cloud resources using Infrastructure as Code (describing resources in code files instead of clicking).
+- **What you must achieve:** Standardize how resources are created.
+- **The limits:** Write as little repeated code as possible.
+- **What they're really asking:** How do you structure the code so common pieces are written once and reused?
 
 **Clues in the question:**
 - "**Infrastructure as Code**" + "**minimize the amount of repetitive code**" → **templates** with parameters (Deployment Manager, or Terraform modules today).

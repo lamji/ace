@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Huge numbers of sensor events, read back **by time**, and each write and read must be **atomic**. Which database?
+**In plain words:**
+- **The situation:** Rented construction equipment has sensors that send events every few seconds, and customers are billed from these readings.
+- **What you must achieve:** Store events and read them back by time.
+- **The limits:** Up to thousands of events per hour per device, consistent reads by event time, and each signal stored all-or-nothing (atomically).
+- **What they're really asking:** Which database fits huge streams of timestamped readings?
 
 **Clues in the question:**
 - "**high throughput … thousands of events per hour per device**" + sensors = **time-series IoT data** → **Bigtable**.

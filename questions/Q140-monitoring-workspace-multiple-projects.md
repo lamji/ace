@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Watch CPU, memory and disk for **three projects in one place**.
+**In plain words:**
+- **The situation:** You have projects A, B and C.
+- **What you must achieve:** Monitor CPU, memory and disk for all of them in one view.
+- **The limits:** A single pane of glass (one screen).
+- **What they're really asking:** How do you monitor all three projects together?
 
 **Clues in the question:**
 - "**single pane of glass**": one Monitoring view for all three → a **workspace** (now called a **metrics scope**) in project A that **includes** B and C.

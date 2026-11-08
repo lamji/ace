@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** TCP **389** (LDAP), from the **internet**, and the app must see the **real client IP**.
+**In plain words:**
+- **The situation:** An app on a managed instance group accepts TCP traffic on port 389, and it must see each client's real IP address.
+- **What you must achieve:** Expose the app to the internet with a load balancer.
+- **The limits:** The client IP must be preserved.
+- **What they're really asking:** Which load balancer passes traffic through with the client IP intact?
 
 **Clues in the question:**
 - "**preserve the IP address of the client**" → a **pass-through** LB (Network LB). Proxy LBs replace the source IP with their own.

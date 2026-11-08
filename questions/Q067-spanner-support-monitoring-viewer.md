@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The support team must **watch how Spanner is doing** (is it busy? slow? full?), but must **never see the customer data** inside the tables. Which single role gives them exactly that?
+**In plain words:**
+- **The situation:** An app uses Cloud Spanner. The support team must monitor the environment.
+- **What you must achieve:** Give the support team monitoring access.
+- **The limits:** They must not see table data; keep it simple and follow recommended practice.
+- **What they're really asking:** Which role should the support team get?
 
 **Clues in the question:**
 - "**monitor the environment**": they need to see **metrics, charts and dashboards** in Cloud Monitoring.

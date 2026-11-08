@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Players on the **internet** send **UDP**. Many VMs, **one IP**. Which load balancer?
+**In plain words:**
+- **The situation:** A mobile multiplayer game sends UDP packets (a fast, connectionless type of network traffic) from players' phones over the internet. The game servers run on several VMs.
+- **What you must achieve:** Put all the game VMs behind one single IP address.
+- **The limits:** The traffic is UDP.
+- **What they're really asking:** Which load balancer can spread UDP game traffic across VMs behind one IP?
 
 **Clues in the question:**
 - "**UDP packets**": only the **network (pass-through) load balancer** handles UDP. SSL Proxy and HTTP(S) are TCP/HTTP only.

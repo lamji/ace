@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Access by **team membership**, easy join/leave, best security practice.
+**In plain words:**
+- **The situation:** You are defining how teams get access to hundreds of resources. Your identity provider is Cloud Identity, and access should follow team membership.
+- **What you must achieve:** Make granting and removing access easy as people join and leave teams.
+- **The limits:** Minimal admin effort and recommended security practice.
+- **What they're really asking:** How should you represent teams and grant them access?
 
 **Clues in the question:**
 - Use **Google Groups** in IAM.

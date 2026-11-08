@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Team needs **full admin**, but only in **us-east1** and only **BigQuery + Cloud Storage**.
+**In plain words:**
+- **The situation:** You are creating an isolated environment for a data science team that experiments in short-lived projects. All members are in one group.
+- **What you must achieve:** Give the team full administrative access.
+- **The limits:** Resources may only be created in us-east1, and only BigQuery and Cloud Storage may be used.
+- **What they're really asking:** How do you set up the folder, the restrictions and the team's access?
 
 **Clues in the question:**
 - "**restrict … us-east1**" → resource locations constraint.

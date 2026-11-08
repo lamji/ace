@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Two predefined roles each have **some** of what's needed (plus extras). Least privilege?
+**In plain words:**
+- **The situation:** The Operations team needs certain specific permissions on a GKE cluster and a Cloud SQL instance. Two existing predefined roles each contain part of what they need.
+- **What you must achieve:** Give the team the permissions they need.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** How should you build or choose the role for the team?
 
 **Clues in the question:**
 - "**specific permissions**" + "**Google-recommended practices**" (least privilege) → a **custom role with only the required permissions**.

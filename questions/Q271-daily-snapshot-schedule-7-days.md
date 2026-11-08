@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Same idea as Q144: **daily** disk backups, kept **7 days**, **minimal setup**.
+**In plain words:**
+- **The situation:** A critical workload runs on one Compute Engine VM.
+- **What you must achieve:** Back up all the VM's disk data every day and keep backups 7 days.
+- **The limits:** Must meet security policies with minimal setup.
+- **What they're really asking:** What is the simplest way to schedule daily backups kept for 7 days?
 
 **Clues in the question:**
 - "**back up … disk data every day**" + "**retained for 7 days**" + "**minimal setup**" → **snapshot schedule** with 7-day retention.

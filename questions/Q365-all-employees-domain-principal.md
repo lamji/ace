@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **All employees** (one Cloud Identity domain) get read-only access.
+**In plain words:**
+- **The situation:** HR publishes a BigQuery dataset with anonymized sales and product data. Every employee is in the terramearth.com Cloud Identity account.
+- **What you must achieve:** Give all employees read-only access to the dataset.
+- **The limits:** They must be signed in with their company accounts.
+- **What they're really asking:** Which principal (who) should get the read role?
 
 **Clues in the question:**
 - "**All employees … in the terramearth.com Cloud Identity account**" → principal **`domain:terramearth.com`**.

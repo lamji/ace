@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want to **propose** infrastructure changes so teammates can review them. Best practice?
+**In plain words:**
+- **The situation:** Your team maintains the company's infrastructure, and you have proposed changes.
+- **What you must achieve:** Share those changes with the rest of the team.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** How should infrastructure changes be shared?
 
 **Clues in the question:**
 - "**describe the proposed changes**": write infrastructure as **code** (templates).

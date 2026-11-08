@@ -29,7 +29,11 @@ Your answer **C** is incorrect, but the mix-up makes sense: both HTTP and TCP ca
 
 ## 2. 📖 What the Question Is Asking
 
-In simple terms: the group starts new VMs when CPU goes above 80%, but new VMs need about three minutes before people can use them. The health-check delay is only 30 seconds. How should you give starting VMs enough time before judging them?
+**In plain words:**
+- **The situation:** A managed instance group adds VMs when CPU goes above 80%. Health checks start 30 seconds after a VM is created, but each VM needs about 3 minutes before it can serve users. The group keeps adding more VMs than needed.
+- **What you must achieve:** Keep the group at the right size when it scales.
+- **The limits:** None stated.
+- **What they're really asking:** Which setting should you change so new VMs are not judged before they are ready?
 
 - **“30 seconds” vs “three minutes”** is the main clue: the grace period is far shorter than startup time.
 - **“adds more instances than necessary”** suggests the group may be repeatedly reacting while new VMs are still starting or being declared unhealthy too soon.

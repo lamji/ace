@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A big nightly batch that **can survive losing some VMs**. It costs too much. What do you change?
+**In plain words:**
+- **The situation:** A nightly batch job uses many VMs. It is fault-tolerant (it copes if some VMs are stopped). Costs are too high.
+- **What you must achieve:** Lower the cost.
+- **The limits:** Losing some VMs during the run is acceptable.
+- **What they're really asking:** How do you make these VMs cheaper?
 
 **Clues in the question:**
 - "**fault-tolerant and can tolerate some of the VMs being terminated**": exactly what **preemptible (Spot) VMs** need, and they're 60–91% cheaper.

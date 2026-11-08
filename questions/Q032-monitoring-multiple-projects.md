@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your VMs, databases and apps live in **several different projects**. You want to see **all of them on one monitoring dashboard**. How do you set that up?
+**In plain words:**
+- **The situation:** Resources you need to watch are spread over different projects.
+- **What you must achieve:** See them all on one Stackdriver dashboard (Stackdriver is the old name of Cloud Monitoring).
+- **The limits:** None stated.
+- **What they're really asking:** How do you bring monitoring for several projects into one place?
 
 | Keyword | What it hints at |
 |---|---|

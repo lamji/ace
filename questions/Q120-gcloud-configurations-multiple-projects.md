@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You work on several projects. How do you set up gcloud so switching is **easy** and takes the **fewest steps**?
+**In plain words:**
+- **The situation:** You manage several projects with the gcloud CLI.
+- **What you must achieve:** Switch between projects easily.
+- **The limits:** Fewest steps.
+- **What they're really asking:** How do you set up gcloud for quick switching?
 
 **Clues in the question:**
 - "**multiple Google Cloud projects**": make **one configuration per project**.

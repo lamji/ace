@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The **first** page is slow, later pages are fast.
+**In plain words:**
+- **The situation:** A web app on Cloud Run serves a few hundred users. Some say the first page load is much slower than later pages.
+- **What you must achieve:** Fix the slow first load.
+- **The limits:** Follow Google's recommendations.
+- **What they're really asking:** What setting makes the first request fast?
 
 **Clues in the question:**
 - "**initial web page … takes much longer**" → a **cold start** (Cloud Run starting a container from zero).

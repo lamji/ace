@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You're estimating the price of a GKE cluster. The app needs **very fast disk reads/writes** and you'll take **disk snapshots** (backups). After entering nodes and hours, which fields do you fill in next?
+**In plain words:**
+- **The situation:** You are estimating the cost of a Kubernetes cluster in the Google Cloud pricing calculator. The workload needs high IOPS (very fast disk reads and writes), and you will take disk snapshots. You already entered nodes, hours and days.
+- **What you must achieve:** Finish the estimate correctly.
+- **The limits:** None stated.
+- **What they're really asking:** What should you enter next for the disks and snapshots?
 
 **Clues in the question:**
 - "**high IOPs**": fast disk operations → **local SSD**.

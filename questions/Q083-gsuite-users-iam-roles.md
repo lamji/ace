@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Everyone already has a G Suite (now called **Google Workspace**) account. You want a few of them to use your Google Cloud project. What do you do?
+**In plain words:**
+- **The situation:** Everyone in the company has a G Suite account (now called Google Workspace).
+- **What you must achieve:** Give some of those users access to your Google Cloud project.
+- **The limits:** None stated.
+- **What they're really asking:** How do you grant them access?
 
 **Clues in the question:**
 - "**All users in your organization have a G Suite account**": they already have **Google accounts**, so nothing new needs to be created.

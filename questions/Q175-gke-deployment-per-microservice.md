@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Each microservice has its own image and must **scale on its own**.
+**In plain words:**
+- **The situation:** Your app is made of several microservices (small separate services), each in its own Docker container image.
+- **What you must achieve:** Run the whole app on GKE so each microservice can be scaled on its own.
+- **The limits:** Each one must scale separately.
+- **What they're really asking:** How should you deploy the microservices on GKE?
 
 **Clues in the question:**
 - "**each microservice can be scaled individually**" → one **Deployment** per microservice (each has its own `replicas`).

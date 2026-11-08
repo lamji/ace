@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Create Google identities for **IT and Data OUs** from **LDAP**, auto-updated.
+**In plain words:**
+- **The situation:** Employees are managed in an LDAP directory (a company user directory) with one OU (organizational unit, a folder) per department.
+- **What you must achieve:** Create Google Cloud identities for IT and Data department employees only.
+- **The limits:** Access must update automatically when people change departments, join or leave.
+- **What they're really asking:** How do you keep Google accounts in sync with those two OUs automatically?
 
 **Clues in the question:**
 - "**LDAP directory**" + "**automatically update**" + only some OUs → **Google Cloud Directory Sync (GCDS)** with OU filters, scheduled.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** VM logs → **SQL** + **charts**, low ops.
+**In plain words:**
+- **The situation:** Your apps run on Compute Engine and write logs.
+- **What you must achieve:** Keep and explore the logs: analyze them with SQL and build charts of patterns over time.
+- **The limits:** Scalable, recommended practice, and low running cost.
+- **What they're really asking:** How do you collect the VM logs and analyze them with SQL and charts?
 
 **Clues in the question:**
 - Get logs off the VM → **Ops Agent** (Q231).

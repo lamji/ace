@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** After **90 days**, move automatically to the **cheapest long-term** class; keep forever.
+**In plain words:**
+- **The situation:** Archive records are in a Cloud Storage bucket using the Multi-Regional class. They are rarely read after 90 days but must be kept forever for compliance.
+- **What you must achieve:** Automatically move them to the cheapest long-term class right after 90 days.
+- **The limits:** Cost-effective and automatic.
+- **What they're really asking:** Which bucket rule moves files at 90 days, and to which class?
 
 **Clues in the question:**
 - Automatic transition → **Object Lifecycle Management**.

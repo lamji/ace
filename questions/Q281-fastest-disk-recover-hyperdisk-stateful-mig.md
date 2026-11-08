@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Fastest** disk, one VM with a database, **recovers** if it fails.
+**In plain words:**
+- **The situation:** You must run third-party software on one Compute Engine VM. Its internal database needs the fastest possible disk reads and writes.
+- **What you must achieve:** Give it the fastest disk.
+- **The limits:** The VM must recover if it fails.
+- **What they're really asking:** Which disk type and VM settings give top speed and recovery?
 
 **Clues in the question:**
 - "**highest speed read and write disk access**" → **Hyperdisk Extreme** (higher IOPS than SSD PD).

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You need a database for tables (rows and columns). The data is **small**, it lives in **one location**, and you want it **cheap**. You also need to be able to **rewind the database to an exact moment in the past** (point-in-time recovery). Which database do you choose, and which setting do you turn on?
+**In plain words:**
+- **The situation:** You have a small amount of relational data (data kept in tables with rows and columns, read with SQL) that your business uses every day, all in one location.
+- **What you must achieve:** Choose and set up a database for it.
+- **The limits:** It must be cheap, and it must support point-in-time recovery (rolling the database back to exactly how it looked at a chosen moment, like 10:42 yesterday).
+- **What they're really asking:** Which database service and setting give cheap table-style storage that can be rolled back to a past moment?
 
 | Keyword | What it hints at |
 |---|---|

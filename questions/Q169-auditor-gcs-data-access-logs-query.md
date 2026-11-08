@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** "**Who accessed data** in buckets?" Which logs?
+**In plain words:**
+- **The situation:** An auditor wants to review your organization's data use, mainly who accessed data in Cloud Storage buckets.
+- **What you must achieve:** Give the auditor what they need.
+- **The limits:** None stated.
+- **What they're really asking:** Which logs show who accessed bucket data, and how does the auditor see them?
 
 **Clues in the question:**
 - "**who accessed data in Cloud Storage buckets**" → **Data Access** logs (off by default → **turn them on**).

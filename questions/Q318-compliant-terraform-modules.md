@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Teams deploy on their own **without knowing every detail** of company practices.
+**In plain words:**
+- **The situation:** You help many engineering teams deploy infrastructure, and the company requires certain practices for every workload.
+- **What you must achieve:** Let teams deploy on their own.
+- **The limits:** Teams shouldn't need to know every detail of the company's required practices.
+- **What they're really asking:** How can teams build infrastructure that follows the rules without knowing them all?
 
 **Clues in the question:**
 - "**without having to know all implementation details**" → reusable **Terraform modules** that build in the practices.

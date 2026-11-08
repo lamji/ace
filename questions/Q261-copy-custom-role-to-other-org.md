@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Copy your SRE custom role into **another organization**.
+**In plain words:**
+- **The situation:** You manage access for all Google Cloud users. Your company bought a startup with its own Google Cloud organization.
+- **What you must achieve:** Give your SREs the same project permissions in the startup's organization as in yours.
+- **The limits:** None stated.
+- **What they're really asking:** How do you give the same people the same permissions in another organization?
 
 **Clues in the question:**
 - "**same project permissions in the startup company's organization**" → `gcloud iam roles copy` with **`--dest-organization`** = the startup's org ID; then it's usable on all their projects.

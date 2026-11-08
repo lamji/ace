@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Cloud Run → GKE API, **privately**.
+**In plain words:**
+- **The situation:** You are deploying an app to Cloud Run that calls an API running on GKE.
+- **What you must achieve:** Let Cloud Run reach the GKE API privately.
+- **The limits:** Follow Google-recommended practices.
+- **What they're really asking:** How does Cloud Run reach a private service inside your VPC?
 
 **Clues in the question:**
 - "**privately reach the API on GKE**" → expose GKE on an **internal** IP (internal Application LB).

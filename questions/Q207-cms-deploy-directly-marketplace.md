@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Install a CMS (like WordPress) **quickly and easily**.
+**In plain words:**
+- **The situation:** Your team wants to use a specific content management system (CMS, software for running websites).
+- **What you must achieve:** Deploy and install it.
+- **The limits:** Quick and easy.
+- **What they're really asking:** What is the fastest way to deploy a ready-made CMS?
 
 **Clues in the question:**
 - "**quick and easy**" → **Marketplace**, and click **Deploy right there** (no extra tools).

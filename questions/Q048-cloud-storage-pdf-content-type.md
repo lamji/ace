@@ -27,7 +27,11 @@ Your answer **B** is understandable: a website visitor needs permission to acces
 
 ## 2. 📖 What the Question Is Asking
 
-In plain words: the PDF links work, but the browser offers to download the files. Configure the object so the browser recognizes the response as a PDF and can show it inline.
+**In plain words:**
+- **The situation:** A static website (fixed files, no server code) is hosted in Cloud Storage and links to PDF files. Clicking a PDF makes the browser download it instead of showing it.
+- **What you must achieve:** Show the PDFs inside the browser window.
+- **The limits:** None stated.
+- **What they're really asking:** What setting on the PDF files tells the browser to display them?
 
 Clues:
 - **“users click on the links”**: they can reach the object.

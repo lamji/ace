@@ -21,9 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your team needs admin access to many virtual machines (VMs). How do you give them that access so that:
-1. It's **easy to manage**, even across lots of servers, and
-2. Security can **see exactly which person** logged into which server?
+**In plain words:**
+- **The situation:** Every employee has a Google account. An operations team looks after a large number of virtual machines (VMs: computers you rent that run in Google's data centers) on Compute Engine.
+- **What you must achieve:** Give each team member admin-level login access to those VMs.
+- **The limits:** Handing out login credentials must be easy to run at large scale, and the security team must be able to see exactly which person logged in to which VM.
+- **What they're really asking:** What's the best way to give one team admin access to many VMs while keeping it easy to manage and traceable to each person?
 
 | Keyword | What it hints at |
 |---|---|

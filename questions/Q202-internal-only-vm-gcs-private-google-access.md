@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** VMs have **no external IP** and **no internet**, but must reach **Cloud Storage**.
+**In plain words:**
+- **The situation:** An app runs on VMs in a custom VPC. Security rules allow only internal IPs and no internet access.
+- **What you must achieve:** Let the app read a file in a Cloud Storage bucket in your project.
+- **The limits:** No external IPs and no internet.
+- **What they're really asking:** How can VMs reach Cloud Storage without internet access?
 
 **Clues in the question:**
 - "**only allow … internal IP addresses**" + "**do not let VM instances connect to the internet**" + "**access … Cloud Storage**" → **Private Google Access** on the subnet.

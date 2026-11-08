@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Morning spikes create too many Cloud Run instances → too many Cloud SQL connections/API calls.
+**In plain words:**
+- **The situation:** A Cloud Run web app queries a Cloud SQL database. Each morning's traffic spike causes API quota errors in Cloud SQL logs, and the project's API quota is already at its maximum.
+- **What you must achieve:** Stop the errors with a configuration change.
+- **The limits:** The quota can't be raised.
+- **What they're really asking:** What Cloud Run setting reduces the calls hitting the quota?
 
 **Clues in the question:**
 - Each new Cloud Run instance opens connections through the Cloud SQL connector, which calls the Cloud SQL Admin API.

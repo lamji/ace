@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Most secure** and **cheapest** way to SSH.
+**In plain words:**
+- **The situation:** Your team uses Linux VMs on Google Cloud.
+- **What you must achieve:** Have the team log in to them.
+- **The limits:** Most secure and most cost-efficient.
+- **What they're really asking:** What is the most secure, cheap way for the team to log in?
 
 **Clues in the question:**
 - "**most secure**" → no public IPs; identity-checked access → **IAP TCP forwarding**.

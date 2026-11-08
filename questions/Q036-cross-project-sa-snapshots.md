@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your service accounts live in **`proj-sa`**. The VMs live in **`proj-vm`**. You want a service account from `proj-sa` to **take snapshots** of the VMs in `proj-vm`. How do you give it permission?
+**In plain words:**
+- **The situation:** All service accounts are kept in a project called proj-sa. The VMs run in another project called proj-vm.
+- **What you must achieve:** Use a service account from proj-sa to take snapshots (disk backups) of the VMs in proj-vm.
+- **The limits:** None stated.
+- **What they're really asking:** Where must you grant permission so that service account can work in the other project?
 
 | Keyword | What it hints at |
 |---|---|

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Subnet almost full; double VMs soon; **no downtime**.
+**In plain words:**
+- **The situation:** A subnet is almost out of private IP addresses, and the number of VMs in that region will double within a week.
+- **What you must achieve:** Make room for the new VMs.
+- **The limits:** Recommended practice, low operating cost, and no downtime.
+- **What they're really asking:** How do you get more addresses without downtime?
 
 **Clues in the question:**
 - "**does not require downtime**" → **expand-ip-range** (non-disruptive).

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A VM in **project A** must write report files into a bucket in **project B**. Fewest steps, best practice.
+**In plain words:**
+- **The situation:** A VM in project corp-iot-insights creates daily reports. Your team works only in project corp-aggregate-reports and wants the reports in bucket corp-aggregate-reports-storage.
+- **What you must achieve:** Get the daily reports into that bucket.
+- **The limits:** Fewest steps; follow recommended practice.
+- **What they're really asking:** Who gets which permission on the bucket?
 
 **Clues in the question:**
 - "**available in the bucket corp-aggregate-reports-storage**": grant permission **on that bucket**.

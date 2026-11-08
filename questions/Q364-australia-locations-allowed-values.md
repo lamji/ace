@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Only `australia-southeast1` and `-southeast2`; **minimal configuration**.
+**In plain words:**
+- **The situation:** You are the organization policy admin in a regulated industry.
+- **What you must achieve:** Allow new location-based resources only in australia-southeast1 and australia-southeast2.
+- **The limits:** Minimal configuration.
+- **What they're really asking:** How do you set the location policy?
 
 **Clues in the question:**
 - Built-in **`gcp.resourceLocations`** constraint + value group **`in:australia-locations`** in **allowed** values. No custom CEL needed.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Relational, **automatic scaling**, **multi-region**, low latency.
+**In plain words:**
+- **The situation:** A fast-growing social media platform, mostly in North America, has outgrown its on-premises PostgreSQL database.
+- **What you must achieve:** Choose a cloud database.
+- **The limits:** Automatic scaling, support for multiple regions in the future, and low delay.
+- **What they're really asking:** Which database meets all of these?
 
 **Clues in the question:**
 - "**automatic scaling**" + "**multi-region support**" + relational (PostgreSQL) → **Spanner** (supports a PostgreSQL interface).

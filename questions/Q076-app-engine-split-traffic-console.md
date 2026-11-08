@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app runs on App Engine. You made a new version and want **1% of users** to try it before everyone gets it. How?
+**In plain words:**
+- **The situation:** You are building a new version of an App Engine app.
+- **What you must achieve:** Test it with 1% of users before switching everyone over.
+- **The limits:** None stated.
+- **What they're really asking:** How do you send 1% of users to the new version?
 
 **Clues in the question:**
 - "**new version of an application hosted in an App Engine environment**": stay on App Engine; it supports **many versions** in the same app.

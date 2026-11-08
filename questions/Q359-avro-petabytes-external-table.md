@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Analyze PBs of Avro in BigQuery; **cheap storage**; **don't load** into BigQuery storage.
+**In plain words:**
+- **The situation:** You have petabytes of historical transaction data in Avro format (a data file format) on-premises, for a machine learning project.
+- **What you must achieve:** Make it available for large-scale analysis and model training with BigQuery.
+- **The limits:** Keep storage costs low and avoid loading the data into BigQuery's own storage.
+- **What they're really asking:** How do you store the data and let BigQuery query it?
 
 **Clues in the question:**
 - "**avoid the overhead of loading data into BigQuery's managed storage**" → **external table** on Cloud Storage.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Group resources that should have the **same IAM policies**.
+**In plain words:**
+- **The situation:** You are setting up billing for a new Google Cloud customer.
+- **What you must achieve:** Group resources that share the same IAM policies (access rules).
+- **The limits:** None stated.
+- **What they're really asking:** Which part of the Google Cloud hierarchy groups resources that share access rules?
 
 **Clues in the question:**
 - "**group resources that share common IAM policies**" → **folders**. A policy set on a folder is **inherited** by every project inside.

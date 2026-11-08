@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Thousands of datasets in hundreds of projects. Find every table with a column named `employee_ssn`, with the **least effort**.
+**In plain words:**
+- **The situation:** Business units created over 1,000 BigQuery datasets across hundreds of projects. The CIO wants every table that has an employee_ssn column.
+- **What you must achieve:** Find those tables.
+- **The limits:** Minimum effort.
+- **What they're really asking:** How do you search all datasets for that column quickly?
 
 **Clues in the question:**
 - "**1000+ datasets across hundreds of projects**": too many to check one by one.

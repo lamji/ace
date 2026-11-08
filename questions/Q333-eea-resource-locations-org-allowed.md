@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** All resources in the **EEA**; projects are in many folders.
+**In plain words:**
+- **The situation:** Your company works in the European Economic Area (EEA). Projects are in different folders.
+- **What you must achieve:** Make sure every resource is created only in EEA locations, using the resource locations organization policy.
+- **The limits:** It must cover all folders and projects.
+- **What they're really asking:** At which level do you set the policy, and do you list allowed or blocked locations?
 
 **Clues in the question:**
 - "**any resources**" across folders → set at the **organization** level (inherits everywhere).

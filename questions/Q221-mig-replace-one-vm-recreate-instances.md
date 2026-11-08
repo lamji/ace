@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Replace **one** bad VM in a MIG, **fast**.
+**In plain words:**
+- **The situation:** Your app runs in a managed instance group (a group of identical VMs kept running from a template). Cloud Logging shows that a process on one VM is not responding.
+- **What you must achieve:** Replace that one VM in the group.
+- **The limits:** Do it quickly.
+- **What they're really asking:** What is the quickest way to swap out that single broken VM?
 
 **Clues in the question:**
 - "**replace this VM**" (one VM) + "**quickly**" → `recreate-instances --instances=VM` deletes it and creates a fresh one from the template.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Estimate cost **before** moving: VMs + Cloud SQL.
+**In plain words:**
+- **The situation:** A three-tier web app runs on VMs with a MySQL database.
+- **What you must achieve:** Estimate the total cost of running it on Google Cloud VMs and Cloud SQL.
+- **The limits:** None stated.
+- **What they're really asking:** Which tool do you use to build the estimate?
 
 **Clues in the question:**
 - "**estimated total cost**" → **Pricing Calculator**, adding **each resource** you'll use.

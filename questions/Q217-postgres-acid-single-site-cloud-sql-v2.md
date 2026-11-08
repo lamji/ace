@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Same as Q188 with different option letters: PostgreSQL, one site, ACID, minimal changes.
+**In plain words:**
+- **The situation:** An internal orders app is used by employees in one location. It needs strong consistency, fast queries and ACID transactions (all-or-nothing updates across tables). It is built on PostgreSQL.
+- **What you must achieve:** Move it to the cloud.
+- **The limits:** Minimal code changes.
+- **What they're really asking:** Which database fits a single-location PostgreSQL transactional app?
 
 **Clues in the question:**
 - "**implemented in PostgreSQL**" + "**minimal code changes**" → **Cloud SQL for PostgreSQL**.

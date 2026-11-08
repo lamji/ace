@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Logs from **several projects**, kept **60 days**, and you want to **analyze them quickly**. Best practice?
+**In plain words:**
+- **The situation:** You manage several projects.
+- **What you must achieve:** Get all logs from the last 60 days in one place to explore and analyze quickly.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** Where should the combined logs be sent?
 
 **Clues in the question:**
 - "**combined logs for all projects**": send each project's logs (or an aggregated org/folder sink) to **one destination**.

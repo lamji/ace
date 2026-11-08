@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Engineers can create projects, but they must **not** be able to connect projects to the company credit card (billing account). **Only finance** should do that linking, and finance must **not** be able to change anything else in the projects.
+**In plain words:**
+- **The situation:** You are the organization and billing administrator. The engineering team can create projects (Project Creator role).
+- **What you must achieve:** Only the finance team should be able to link projects to the billing account; engineers should not.
+- **The limits:** Finance must not get any other permissions on projects.
+- **What they're really asking:** Which roles do you give or take away?
 
 | Question words | What they point to |
 |---|---|

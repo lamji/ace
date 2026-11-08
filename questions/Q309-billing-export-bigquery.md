@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Get detailed billing data into **BigQuery**.
+**In plain words:**
+- **The situation:** Your company is setting up Cloud Billing and needs a detailed breakdown of its Google Cloud costs.
+- **What you must achieve:** Have the billing data available in BigQuery for detailed analysis.
+- **The limits:** None stated.
+- **What they're really asking:** What must you do so the billing data appears in BigQuery?
 
 **Clues in the question:**
 - "**Cloud Billing datasets are available in BigQuery**" → **Cloud Billing export to BigQuery** must be enabled. Nothing appears automatically.

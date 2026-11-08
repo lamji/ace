@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Serverless** + send a **small %** to the new version.
+**In plain words:**
+- **The situation:** You will run an app with serverless technology.
+- **What you must achieve:** Test a new version with a small percentage of real traffic.
+- **The limits:** None stated.
+- **What they're really asking:** Which serverless service lets you split traffic between versions?
 
 **Clues in the question:**
 - "**serverless**" + "**small percentage of production traffic**" → **Cloud Run** revisions with **traffic splitting / gradual rollout**.

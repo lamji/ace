@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Short-lived credentials** + access to **only one dataset**, low effort.
+**In plain words:**
+- **The situation:** An app runs on a Compute Engine VM and needs to read one BigQuery dataset.
+- **What you must achieve:** Give the app secure access to that dataset.
+- **The limits:** Credentials must be short-lived, the app may reach only that dataset, follow recommended practice and keep costs low.
+- **What they're really asking:** How do you give the VM's app short-lived access to only that one dataset?
 
 **Clues in the question:**
 - An **attached service account** gives the VM **short-lived access tokens** automatically (about 1 hour) from the metadata server — no rotation work.

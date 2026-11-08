@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Fresh gcloud install. What two things are **required** before listing VMs?
+**In plain words:**
+- **The situation:** You just installed the Google Cloud CLI on a new laptop.
+- **What you must achieve:** List your company's VMs with gcloud compute instances list.
+- **The limits:** Choose two steps.
+- **What they're really asking:** What two things must you do before that command works?
 
 **Clues in the question:**
 - You must be **signed in** → `gcloud auth login`.

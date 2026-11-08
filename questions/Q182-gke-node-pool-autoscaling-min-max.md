@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The **cluster** (nodes) must grow automatically as **more apps** are added.
+**In plain words:**
+- **The situation:** A new app is made of several microservices, and you will deploy it to GKE.
+- **What you must achieve:** The cluster must grow as more apps are added later.
+- **The limits:** No manual work each time a new app is deployed.
+- **What they're really asking:** How do you set up the cluster to add machines by itself?
 
 **Clues in the question:**
 - "**the cluster can scale as more applications are deployed**" → more **nodes** → **cluster autoscaler** on the node pool.

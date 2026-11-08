@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** HA VPN with **dynamic routing**, a **specific IP range**, and **no extra tunnel load** when one fails.
+**In plain words:**
+- **The situation:** You need a strong VPN between a new VPC network and a remote site, using dynamic routing and the address space 10.19.0.1/22.
+- **What you must achieve:** Set up high-availability Cloud VPN.
+- **The limits:** No extra tunnels should be added during a failover; follow recommended practice.
+- **What they're really asking:** How do you configure HA VPN and its routing?
 
 **Clues in the question:**
 - "**dynamic routing**" → **Cloud Router + BGP** (static routes are not dynamic).

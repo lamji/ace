@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A fired employee kept access for 2 weeks. Did they **read customer data**? Which logs, and what do you search for?
+**In plain words:**
+- **The situation:** A fired employee kept Google Cloud access for 2 more weeks.
+- **What you must achieve:** Find out whether they read sensitive customer data during that time.
+- **The limits:** None stated.
+- **What they're really asking:** Which logs show what data they accessed?
 
 **Clues in the question:**
 - "**accessed any sensitive customer information**": **reading data** → **Data Access** audit logs.

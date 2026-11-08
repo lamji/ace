@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** An analyst wants a **one-time join** of user data (from the Spanner export in Cloud Storage) with events (in Bigtable). Most efficient way?
+**In plain words:**
+- **The situation:** Spanner holds current user data, Bigtable logs every user event, and Spanner is exported to Cloud Storage daily. An analyst wants Spanner and Bigtable data joined for certain users.
+- **What you must achieve:** Handle this one-time request.
+- **The limits:** As efficiently as possible.
+- **What they're really asking:** Where can you join data from both sources quickly?
 
 **Clues in the question:**
 - "**ad hoc request**" + "**as efficiently as possible**": no pipelines or clusters, just a SQL query.

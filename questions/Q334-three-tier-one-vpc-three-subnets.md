@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Three tiers, **>1,000 IPs**, isolated, **least cost/complexity**.
+**In plain words:**
+- **The situation:** You are deploying a large three-tier app (web, app and database tiers) with more than 1,000 IP addresses, and it must be securely isolated. Web takes public traffic, the app tier only accepts the web tier, and the database only accepts the app tier.
+- **What you must achieve:** Design the network.
+- **The limits:** Minimize cost, complexity and admin work.
+- **What they're really asking:** How should you lay out the network and firewall rules?
 
 **Clues in the question:**
 - "**more than 1,000 IP addresses**" → /24 (256) is too small → **/16**.

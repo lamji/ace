@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** User A gets an error, User B doesn't. **What first?**
+**In plain words:**
+- **The situation:** You administer Google Cloud. User A gets an error when accessing a Cloud SQL database, while User B can access it.
+- **What you must achieve:** Troubleshoot User A's problem.
+- **The limits:** Follow recommended practice and choose the first step.
+- **What they're really asking:** What should you do first?
 
 **Clues in the question:**
 - "**What should you do first**" → start with the **error message**; it tells you if it's permissions, network, or something else.

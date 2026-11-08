@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Prod: **fastest** network. Dev: **cheapest**.
+**In plain words:**
+- **The situation:** A stock-broker company is moving to Google Cloud and planning its network.
+- **What you must achieve:** Production systems must have the lowest possible delay between them.
+- **The limits:** The development environment must cost as little as possible.
+- **What they're really asking:** How do you set up the network so production is fastest and development is cheapest?
 
 **Clues in the question:**
 - **Premium Tier** = Google's global backbone, lowest latency → **production**.

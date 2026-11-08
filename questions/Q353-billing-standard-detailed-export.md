@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Daily export of all billing data **including resource-level costs** to BigQuery.
+**In plain words:**
+- **The situation:** Your company wants all projects under one Cloud Billing account. Finance needs a daily export of all billing data, including per-resource costs, to a central BigQuery dataset.
+- **What you must achieve:** Set this up.
+- **The limits:** Most cost-effective with minimal admin impact.
+- **What they're really asking:** Which export settings provide daily, resource-level billing data in BigQuery?
 
 **Clues in the question:**
 - "**resource-level cost data**" → **detailed usage cost** export (adds resource names/IDs). Enable with standard export.

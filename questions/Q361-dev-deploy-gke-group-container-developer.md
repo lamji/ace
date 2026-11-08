@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** New dev deploys to an existing cluster; **not** manage the cluster or other resources.
+**In plain words:**
+- **The situation:** A new developer joined the cloud-developer team and must deploy containerized apps to an existing GKE cluster.
+- **What you must achieve:** Give them deploy access.
+- **The limits:** They must not manage other resources or the cluster itself; least privilege.
+- **What they're really asking:** How do you give the new developer the right access?
 
 **Clues in the question:**
 - Deploy workloads only → **`roles/container.developer`**.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Encrypted + authenticated + **IAM** + **minimal management**.
+**In plain words:**
+- **The situation:** Your app needs a relational database.
+- **What you must achieve:** Connect the app to the database securely.
+- **The limits:** The connection must be encrypted and authenticated, need little management, and work with IAM.
+- **What they're really asking:** How should the app connect to the database?
 
 **Clues in the question:**
 - "**encrypted and authenticated connection**" + "**minimal management**" → **Cloud SQL Auth Proxy** (TLS automatically, no certs to manage).

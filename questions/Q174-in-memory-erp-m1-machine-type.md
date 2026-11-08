@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The app keeps the **entire database in RAM**. Which VM type?
+**In plain words:**
+- **The situation:** You are deploying a new ERP system (business software for finance, orders, stock). It keeps the whole database in memory (RAM) for speed.
+- **What you must achieve:** Set up the right machine for it.
+- **The limits:** It needs a very large amount of memory.
+- **What they're really asking:** Which kind of VM fits an app that holds its whole database in memory?
 
 **Clues in the question:**
 - "**holds the full database in-memory**" → **memory-optimized** machines (**M1/M2/M3**), with up to terabytes of RAM (used for SAP HANA).

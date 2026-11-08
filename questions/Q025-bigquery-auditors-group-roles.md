@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Outside auditors** need to **look at BigQuery's audit logs and data**, read-only. How should you give them access the way Google recommends?
+**In plain words:**
+- **The situation:** External auditors need to review BigQuery IAM access audit logs (records of who accessed what and when).
+- **What you must achieve:** Set up their access to those logs.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** What is the recommended way to give outside auditors access to these logs?
 
 The question is really testing **two choices at once**:
 

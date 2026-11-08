@@ -25,7 +25,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app runs **in your own building**, not in Google Cloud. It must call Google APIs (AutoML) **as the service account** you already set up. What do you **do** so the app can prove it's that service account?
+**In plain words:**
+- **The situation:** An app runs in your own data center and calls Google services such as AutoML. You created a service account with the right access.
+- **What you must achieve:** Let the on-premises app sign in to Google's APIs.
+- **The limits:** None stated.
+- **What they're really asking:** How does the app in your data center prove it is that service account?
 
 **Clues in the question:**
 - "**run in your data center**" / "**on-premises environment**": outside Google Cloud, the app does **not** get credentials automatically (unlike a VM with an attached service account, Q019).

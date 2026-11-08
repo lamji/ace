@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Let engineers **deploy and update** resources only in **approved** configurations.
+**In plain words:**
+- **The situation:** Company security policy requires Google Cloud products to be created with a specific configuration.
+- **What you must achieve:** Let engineers deploy and update products only in a pre-approved setup.
+- **The limits:** It must be preconfigured and approved.
+- **What they're really asking:** How can engineers deploy products that already follow company settings?
 
 **Clues in the question:**
 - "**deploy and update … in a preconfigured and approved manner**" → reusable **Terraform modules** (declarative, handle updates, reviewable).

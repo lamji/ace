@@ -27,7 +27,11 @@ Your answer **C** is a reasonable thought because autohealing is related to keep
 
 ## 2. 📖 What the Question Is Asking
 
-In simple words: create ten similar VMs that recover automatically from crashes and keep serving through planned maintenance on their physical host.
+**In plain words:**
+- **The situation:** You need 10 Compute Engine VMs.
+- **What you must achieve:** They must restart by themselves if they crash, and keep running while Google does maintenance on the physical servers underneath.
+- **The limits:** They must be highly available.
+- **What they're really asking:** How do you create and configure the VMs to meet both needs?
 
 Clues:
 - **“10 Compute Engine instances”**: use a repeatable template and an instance group to manage multiple VMs.

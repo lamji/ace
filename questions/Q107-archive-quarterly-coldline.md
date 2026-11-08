@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Archived data, read **once every 3 months**. Which storage class is cheapest?
+**In plain words:**
+- **The situation:** You are archiving a data warehouse into Cloud Storage. Users read the archive once a quarter for regulatory reasons.
+- **What you must achieve:** Choose the storage class.
+- **The limits:** Cost-efficient.
+- **What they're really asking:** Which class fits data that is read about four times a year?
 
 **Clues in the question:**
 - "**once a quarter**" → **Coldline** (built for about quarterly access, 90-day minimum). "Cold Storage" in option A means Coldline.

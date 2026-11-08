@@ -31,9 +31,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have a classic 3-tier app (for example **web → API → database**), each tier in its own subnet, and **each tier has its own service account**. You must open **only TCP port 8080**, and **only in two directions**:
-- Tier 1 → Tier 2
-- Tier 2 → Tier 3
+**In plain words:**
+- **The situation:** Three groups (tiers) of VMs are in three subnets of one network. Each tier has its own service account.
+- **What you must achieve:** Allow traffic on TCP port 8080 from tier 1 to tier 2, and from tier 2 to tier 3.
+- **The limits:** Allow only these connections and only on port 8080.
+- **What they're really asking:** How do you write firewall rules for exactly these connections?
 
 Which firewall rules do exactly that, and nothing more?
 

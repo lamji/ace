@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Services **in the same VPC** need a **fixed** address for this VM. Cheapest way?
+**In plain words:**
+- **The situation:** A VM runs in a VPC with single-stack (IPv4-only) subnets.
+- **What you must achieve:** Give the VM a fixed IP address so other services in the same VPC can reach it.
+- **The limits:** Recommended practice and low cost.
+- **What they're really asking:** What kind of fixed IP address should you give it?
 
 **Clues in the question:**
 - "**other services hosted in the same VPC**" → **internal** IP is enough.

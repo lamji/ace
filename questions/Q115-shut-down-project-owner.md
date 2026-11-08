@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Stop **everything** in one project, in as **few steps** as possible.
+**In plain words:**
+- **The situation:** A division wants to cut Google Cloud costs.
+- **What you must achieve:** Turn off every service in one existing project.
+- **The limits:** Fewest steps.
+- **What they're really asking:** What is the fastest way to stop all services in that project?
 
 **Clues in the question:**
 - "**turn off all configured services**" + "**fewest possible steps**": **shut down the project**. One action stops all of it.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Charts broke. The table is rebuilt **every night**. Where do you look?
+**In plain words:**
+- **The situation:** Data Studio (now Looker Studio, a chart tool) shows a BigQuery table. Data is added during the day, and each night the summary table is rebuilt by overwriting it. The charts are now broken.
+- **What you must achieve:** Analyze what went wrong.
+- **The limits:** None stated.
+- **What they're really asking:** Where do you look to understand what happened to the table?
 
 **Clues in the question:**
 - "**At night, the daily summary is recalculated by overwriting the table**" → the likely culprit is the **nightly BigQuery job** → check its **job history** in BigQuery.

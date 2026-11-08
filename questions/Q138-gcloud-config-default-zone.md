@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You keep typing `--zone=europe-west1-d`. How do you make it the **default for the CLI**?
+**In plain words:**
+- **The situation:** Most of your VMs are in the europe-west1-d zone.
+- **What you must achieve:** Stop having to type the zone in every gcloud command.
+- **The limits:** None stated.
+- **What they're really asking:** How do you set a default zone?
 
 **Clues in the question:**
 - "**avoid having to specify this zone with each CLI command**": a **gcloud property**, set with `gcloud config set compute/zone europe-west1-d`.

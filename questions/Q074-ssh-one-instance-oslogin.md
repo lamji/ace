@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The **dev1 group** must be able to SSH into **one VM only**, and nothing else in the project. What's the clean, Google-recommended way?
+**In plain words:**
+- **The situation:** Users in the dev1 group need SSH access (command-line login) to one VM, the only resource in the project they should reach.
+- **What you must achieve:** Give SSH access to just that VM.
+- **The limits:** They must not get access to anything else in the project.
+- **What they're really asking:** How do you give dev1 SSH access to only this VM?
 
 **Clues in the question:**
 - "**users in the dev1 group**": manage access by **group** with IAM, not by handing out keys.

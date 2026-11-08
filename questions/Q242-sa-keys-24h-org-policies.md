@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Keys must **expire after 1 day**, and only **pj-sa** may create keys. Quick and cheap.
+**In plain words:**
+- **The situation:** Developers use many service account keys (downloadable secret files). While a long-term fix is worked on, you need a quick rule.
+- **What you must achieve:** Keep all service accounts that need keys in a central project called pj-sa, and make keys valid for only one day.
+- **The limits:** Google-recommended and low cost.
+- **What they're really asking:** How do you enforce the central project and the one-day key lifetime?
 
 **Clues in the question:**
 - "**valid for one day**" → org policy **`iam.serviceAccountKeyExpiryHours`** = 24h.

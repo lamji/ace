@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Write new logs to **one bucket**; **no modify/delete**, no other buckets.
+**In plain words:**
+- **The situation:** A new app on a VM must write log files to the bucket project-logs-us-central1.
+- **What you must achieve:** Let it create new files in that bucket.
+- **The limits:** It must not change or delete existing files or reach any other bucket; least privilege.
+- **What they're really asking:** Which identity and role give create-only access to that one bucket?
 
 **Clues in the question:**
 - Create-only → **`roles/storage.objectCreator`**.

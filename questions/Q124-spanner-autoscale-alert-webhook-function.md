@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Spanner nodes should go **up and down automatically** with traffic. Which option does it **without a person**?
+**In plain words:**
+- **The situation:** An app uses Cloud Spanner, and its traffic is very predictable.
+- **What you must achieve:** Automatically add or remove Spanner nodes as traffic changes.
+- **The limits:** None stated.
+- **What they're really asking:** How do you automate Spanner node scaling?
 
 **Clues in the question:**
 - "**automatically scale up or down**": no humans in the loop (rules out B and C).

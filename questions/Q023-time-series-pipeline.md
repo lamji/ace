@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Lots of **devices** (sensors, smart lights, speakers) keep sending **readings with a timestamp**, for example "temperature at 10:00:01, 10:00:02, …". That's **time-series data**. The data flows into Google Cloud through 4 boxes:
+**In plain words:**
+- **The situation:** A diagram shows a pipeline for time-series data (readings with timestamps, like sensor values). Devices send data in, then box 1 receives it, box 2 processes it, box 3 stores it and box 4 analyzes it.
+- **What you must achieve:** Put the right Google Cloud service in each box.
+- **The limits:** It must handle lots of timestamped data.
+- **What they're really asking:** Which Google Cloud services belong in boxes 1, 2, 3 and 4?
 
 | Box | Job in the diagram | What it needs |
 |---|---|---|

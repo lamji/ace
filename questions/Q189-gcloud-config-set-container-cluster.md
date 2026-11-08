@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Make **dev** the **default cluster** for future gcloud commands.
+**In plain words:**
+- **The situation:** You maintain a GKE cluster named dev and just installed the Cloud SDK.
+- **What you must achieve:** Future command-line commands should target this cluster by default.
+- **The limits:** None stated.
+- **What they're really asking:** What do you set so gcloud and kubectl use the dev cluster by default?
 
 **Clues in the question:**
 - "**future CLI commands by default address this specific cluster**" → `gcloud config set container/cluster dev` (like `compute/zone` in Q138).

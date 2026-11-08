@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Single view of the **health** of all databases and which are **at risk**.
+**In plain words:**
+- **The situation:** You manage many databases: Bigtable, Cloud SQL, Memorystore and Spanner.
+- **What you must achieve:** One unified view of the health of all of them, showing which are at risk of downtime.
+- **The limits:** None stated.
+- **What they're really asking:** Which console tool shows the health of all your databases in one place?
 
 **Clues in the question:**
 - "**single, unified view**" + "**health**" + "**at risk for downtime**" across many DB products → **Database Center**.

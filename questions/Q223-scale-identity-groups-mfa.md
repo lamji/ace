@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** 10x more users, **no extra complexity**, **secure**.
+**In plain words:**
+- **The situation:** Your company manages employee accounts in Google Workspace and will grow from 100 to 1,000 employees in 2 years. Most will need Google Cloud access.
+- **What you must achieve:** Set up access that handles 10 times more people.
+- **The limits:** No slowdowns, no unnecessary complexity, no security problems.
+- **What they're really asking:** How should you organize access so it scales easily as staff grows?
 
 **Clues in the question:**
 - "**without … unnecessary complexity**" → keep the existing Google identity; organize with **groups** (grant roles to groups, not people).

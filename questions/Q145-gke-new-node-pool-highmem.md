@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** New pods need **big-memory nodes**. Existing pods must keep running (**no downtime**).
+**In plain words:**
+- **The situation:** An app runs as pods on four n1-standard-2 GKE nodes.
+- **What you must achieve:** Deploy new pods that need bigger n2-highmem-16 nodes.
+- **The limits:** No downtime.
+- **What they're really asking:** How do you add the bigger machines without disrupting the current pods?
 
 **Clues in the question:**
 - "**additional pods requiring n2-highmem-16 nodes**": add a **node pool** of that machine type to the **same cluster**.

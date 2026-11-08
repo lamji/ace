@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** PostgreSQL → faster, **minimal schema/code changes**, very large.
+**In plain words:**
+- **The situation:** You are moving several PostgreSQL databases from your data center to Google Cloud, with over 150 TB per region expected.
+- **What you must achieve:** Make the databases much faster.
+- **The limits:** Change the data schema and app code as little as possible, follow recommended practice and keep running costs low.
+- **What they're really asking:** Which Google database gives big speed gains while staying PostgreSQL-compatible?
 
 **Clues in the question:**
 - "**PostgreSQL**" + "**significantly improve the performance**" + "**minimizing changes**" → **AlloyDB** (fully PostgreSQL-compatible, much faster than standard PostgreSQL).

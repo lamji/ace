@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have several saved **gcloud profiles** (configurations), for example one for dev and one for prod. You're currently using one of them. You want to **peek at the settings of a different one** (the inactive one), specifically which GKE cluster it points to, **without switching to it** and with **as few commands as possible**.
+**In plain words:**
+- **The situation:** You have several named gcloud configurations (saved settings bundles for the gcloud command-line tool, for example one for dev and one for prod). Only one is active at a time.
+- **What you must achieve:** Look at which Kubernetes Engine cluster is set in a configuration that is not active right now.
+- **The limits:** Use the fewest steps.
+- **What they're really asking:** What is the quickest way to read the cluster setting stored in an inactive gcloud configuration?
 
 | Keyword | What it hints at |
 |---|---|

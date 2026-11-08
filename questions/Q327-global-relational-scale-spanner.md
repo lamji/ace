@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Relational, **global scale**, minimal admin.
+**In plain words:**
+- **The situation:** Your on-premises relational database can no longer keep up as users grow fast.
+- **What you must achieve:** Move to a relational database that can scale globally.
+- **The limits:** Minimal management work and recommended practice.
+- **What they're really asking:** Which relational database scales worldwide with little management?
 
 **Clues in the question:**
 - "**relational**" + "**globally scale**" → **Spanner**.

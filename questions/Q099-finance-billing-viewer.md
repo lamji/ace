@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Finance should **look at** the billing reports, and get **nothing else**. Which role?
+**In plain words:**
+- **The situation:** The finance team wants to see billing reports for your projects.
+- **What you must achieve:** Let them see those reports.
+- **The limits:** They must not get any extra permissions on the projects.
+- **What they're really asking:** Which role lets them see billing without being able to touch projects?
 
 **Clues in the question:**
 - "**view the billing report**": read-only billing → **Billing Account Viewer** (`roles/billing.viewer`).

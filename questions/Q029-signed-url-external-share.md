@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You need to give an outside company **one sensitive file**. They **don't have a Google account**, so you can't add them in IAM. Their access must **stop after 4 hours**. What's the **safest** way with the **fewest steps**?
+**In plain words:**
+- **The situation:** A file in a bucket contains sensitive data and must be shared with an outside company that has no Google account.
+- **What you must achieve:** Let them download the file.
+- **The limits:** Access must end automatically after 4 hours, and the method must be the most secure one with the fewest steps.
+- **What they're really asking:** How do you share the file so the access stops working after 4 hours?
 
 | Keyword | What it hints at |
 |---|---|

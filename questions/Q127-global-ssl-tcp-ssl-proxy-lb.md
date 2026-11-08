@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app receives **SSL-encrypted TCP** (not HTTP) on port 443, from users **all over the world**. Which load balancer gives them the **lowest latency**?
+**In plain words:**
+- **The situation:** An app receives SSL-encrypted TCP traffic on port 443 from clients all over the world.
+- **What you must achieve:** Keep delay (latency) low for all clients.
+- **The limits:** The traffic is encrypted TCP.
+- **What they're really asking:** Which load balancer fits?
 
 **Clues in the question:**
 - "**SSL-encrypted TCP traffic**": it's TCP with SSL, **not HTTP(S)** → the HTTPS LB doesn't fit.

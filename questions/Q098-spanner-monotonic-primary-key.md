@@ -27,7 +27,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** One Spanner table is slow to read. Users always look rows up **by primary key**. What fixes it?
+**In plain words:**
+- **The situation:** A Cloud Spanner table is read by its primary key (its unique ID column), and reads are slow. The key is an increasing number (person_id), and the table has a profile picture column.
+- **What you must achieve:** Fix the slow reads.
+- **The limits:** None stated.
+- **What they're really asking:** What change to the table design fixes the problem?
 
 **Clues in the question:**
 - "**accessed only … using a primary key**": lookups already use the key, so **extra indexes won't help** (rules out B and D).

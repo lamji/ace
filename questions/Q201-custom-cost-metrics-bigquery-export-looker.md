@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Costs with **your own calculated metrics**, updated **automatically**.
+**In plain words:**
+- **The situation:** Several projects share one billing account.
+- **What you must achieve:** Show costs with custom metrics calculated from company-specific rules.
+- **The limits:** It should be automated.
+- **What they're really asking:** How do you get billing data into a place where custom calculations and charts can be built?
 
 **Clues in the question:**
 - "**dynamically calculated based on company-specific criteria**" → you need **SQL** on the raw cost data → **BigQuery export**.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Back up the boot disk **regularly**, restore **fast**, and **delete old backups automatically**. What's the Google way?
+**In plain words:**
+- **The situation:** A business-critical VM's boot disk (the disk holding the operating system) must be backed up regularly.
+- **What you must achieve:** Regular backups that can be restored quickly.
+- **The limits:** Old backups must be deleted automatically; follow recommended practice.
+- **What they're really asking:** How do you schedule boot-disk backups with automatic cleanup?
 
 **Clues in the question:**
 - "**backed up regularly**": a **schedule**.

@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** VMs in `web-applications` use a service account. That account must read BigQuery data in `crm-databases-proj`. Where do you grant the role?
+**In plain words:**
+- **The situation:** VMs in project web-applications need BigQuery data in project crm-databases-proj.
+- **What you must achieve:** Give the VMs' service account access.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** In which project and with which role do you grant access?
 
 **Clues in the question:**
 - "**access to BigQuery datasets in crm-databases-proj**": the permission must be granted **where the data is**, in crm-databases-proj.

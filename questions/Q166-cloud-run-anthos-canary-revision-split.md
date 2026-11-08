@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Send a **percentage** of users to the new version on Cloud Run.
+**In plain words:**
+- **The situation:** A web app runs on Cloud Run for Anthos (Cloud Run on your own Kubernetes clusters).
+- **What you must achieve:** Test an updated version with a set percentage of real users first (a canary deployment).
+- **The limits:** None stated.
+- **What they're really asking:** How do you send a chosen percentage of traffic to the new version?
 
 **Clues in the question:**
 - "**updated version**": on Cloud Run, a new version of the same service is a **revision**.

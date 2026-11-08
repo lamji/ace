@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** SSH for a team; joining/leaving should be **easy**.
+**In plain words:**
+- **The situation:** You manage many Linux VMs, and the engineering team needs SSH (command-line login) access to all of them for maintenance.
+- **What you must achieve:** Give the engineering team SSH access.
+- **The limits:** Adding and removing engineers when they join or leave must take very little work.
+- **What they're really asking:** How do you manage SSH access for the team so joining and leaving is easy?
 
 **Clues in the question:**
 - "**minimize operational overhead when engineers join or leave**" → **OS Login** (SSH tied to IAM) + a **group** (add/remove members).

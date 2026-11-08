@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Today everything is in **one zone**. If that zone fails, the app is down. How do you survive one zone failing, with no downtime and low cost?
+**In plain words:**
+- **The situation:** An app runs on VMs in one zone, us-central1-a.
+- **What you must achieve:** Keep running if that one zone fails.
+- **The limits:** No downtime and lowest cost.
+- **What they're really asking:** How do you change the design to survive a zone outage?
 
 **Clues in the question:**
 - "**support the failure of a single … zone**": run VMs in a **second zone**.

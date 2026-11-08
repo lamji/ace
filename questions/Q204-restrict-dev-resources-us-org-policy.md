@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Dev projects may only create resources **in US locations**.
+**In plain words:**
+- **The situation:** All dev teams are in the United States, and each has its own project.
+- **What you must achieve:** Each team may create resources only in the US.
+- **The limits:** None stated.
+- **What they're really asking:** How do you limit where resources can be created?
 
 **Clues in the question:**
 - "**only create cloud resources in the United States**" → limit **where** resources go → **Organization Policy** `gcp.resourceLocations`.

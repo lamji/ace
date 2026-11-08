@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Several projects on **different billing accounts**. You want **one chart** of all costs, with new data showing up **quickly**.
+**In plain words:**
+- **The situation:** Resources are spread across several projects, each with a different billing account.
+- **What you must achieve:** Get one visual view of all costs to estimate future charges.
+- **The limits:** New cost data should appear as soon as possible.
+- **What they're really asking:** How do you combine cost data from several billing accounts into one dashboard?
 
 **Clues in the question:**
 - "**different billing accounts**": the Billing Reports page shows **one billing account at a time**.

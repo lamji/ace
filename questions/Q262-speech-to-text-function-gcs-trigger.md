@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Each audio file that **arrives** in a bucket → call Speech-to-Text. **Serverless**.
+**In plain words:**
+- **The situation:** Audio files arrive in a Cloud Storage bucket, and you need text from them with the Speech-to-Text API.
+- **What you must achieve:** Send each file to the API automatically as soon as it arrives.
+- **The limits:** Fully managed, serverless, authenticated, and following Google's recommendations.
+- **What they're really asking:** What serverless setup reacts to each new file and calls the API?
 
 **Clues in the question:**
 - "**as the audio file arrives in the bucket**" + "**serverless**" → **Cloud Function** with a **Cloud Storage trigger** (Q153).

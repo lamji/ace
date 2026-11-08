@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Start/stop/reset VMs only. **No delete, no config changes.**
+**In plain words:**
+- **The situation:** A new operations team needs to start, stop and reset existing VMs in one project for basic troubleshooting.
+- **What you must achieve:** Give them only that ability.
+- **The limits:** They must not delete VMs or change networking or settings; minimum permissions.
+- **What they're really asking:** How do you give exactly start, stop and reset and nothing else?
 
 **Clues in the question:**
 - "**minimum necessary permissions**" + no predefined role fits exactly → **custom role** with `start`, `stop`, `reset`.

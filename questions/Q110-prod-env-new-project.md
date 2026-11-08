@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Dev is done. Now build production. Security says dev and prod must **not be connected by network routes**. Best practice?
+**In plain words:**
+- **The situation:** A development environment (Compute Engine plus Cloud SQL) exists in a project.
+- **What you must achieve:** Create the production environment.
+- **The limits:** Security forbids any network route between the two environments; follow recommended practice.
+- **What they're really asking:** How do you set up production so it is completely separate?
 
 **Clues in the question:**
 - "**forbidden the existence of network routes between these 2 environments**": prod needs its **own separate network**. A new project has its own VPC.

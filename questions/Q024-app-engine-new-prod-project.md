@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app runs on App Engine in a **dev project**, and testing passed. Now you want a **separate production project** with the **same app** in it. What are the right steps?
+**In plain words:**
+- **The situation:** An App Engine app runs in a development project, and testing passed.
+- **What you must achieve:** Create a new project to serve as production.
+- **The limits:** None stated.
+- **What they're really asking:** What is the correct way to set up the production App Engine app?
 
 The two steps are **(1) create the project** and **(2) deploy your source code to it**. Nothing in Google Cloud **copies** a running App Engine app from one project to another, and deploying doesn't **create** a project.
 

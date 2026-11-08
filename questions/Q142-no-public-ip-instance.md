@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The new VM must be **unreachable from the internet**, but still reachable from your offices over VPN.
+**In plain words:**
+- **The situation:** Workloads run on Compute Engine and on-premises, connected over a VPN (an encrypted link over the internet).
+- **What you must achieve:** Deploy a new VM that no public internet traffic can reach.
+- **The limits:** None stated.
+- **What they're really asking:** How do you create the VM so the internet can't route to it?
 
 **Clues in the question:**
 - "**no public Internet traffic can be routed to it**": without an **external (public) IP**, the internet has no address to send traffic to.

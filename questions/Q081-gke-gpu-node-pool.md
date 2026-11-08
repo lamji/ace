@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** One shared GKE cluster. Only the ML team needs GPUs. How do you give GPUs to **only them**, with the **least work and cost**?
+**In plain words:**
+- **The situation:** A shared GKE cluster runs non-production work for many teams. The machine learning team needs Nvidia Tesla P100 GPUs (graphics chips used for fast ML training).
+- **What you must achieve:** Give the ML team GPUs.
+- **The limits:** Minimum effort and cost.
+- **What they're really asking:** How should you add GPUs to the cluster for the ML team?
 
 **Clues in the question:**
 - "**Your Machine Learning (ML) team needs**": only **one team** needs GPUs, so don't put GPUs on every node.

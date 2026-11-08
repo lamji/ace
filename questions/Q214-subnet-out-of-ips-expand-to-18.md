@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** VMs need more **primary** IPs in a /20 subnet.
+**In plain words:**
+- **The situation:** A subnet in a custom VPC uses 10.0.0.0/20, and its primary internal IPs are almost used up by VMs.
+- **What you must achieve:** Give the VMs more IP addresses.
+- **The limits:** None stated.
+- **What they're really asking:** How do you get more addresses for the VMs?
 
 **Clues in the question:**
 - "**running out of primary internal IP addresses**" → **expand** the primary range.

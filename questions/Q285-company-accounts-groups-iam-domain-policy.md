@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Only **company accounts**, each **department sees only its own** resources, **low ops**.
+**In plain words:**
+- **The situation:** Your organization is moving to Google Cloud.
+- **What you must achieve:** Only company-issued Google accounts may access the environment, and people may only access their own department's resources.
+- **The limits:** Low operating cost and recommended practice.
+- **What they're really asking:** How do you organize accounts, departments and access?
 
 **Clues in the question:**
 - "**users of the same department can only access … their own department**" → **groups per department** + **IAM roles** on their resources.

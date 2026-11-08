@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The project **doesn't exist yet**. In what order do you get a VM into it?
+**In plain words:**
+- **The situation:** The project you need does not exist yet.
+- **What you must achieve:** Create a Compute Engine VM in a new project.
+- **The limits:** None stated.
+- **What they're really asking:** What steps are needed, and in what order?
 
 **Clues in the question:**
 - "**new project that doesn't exist yet**": step 1 must be **create the project**.

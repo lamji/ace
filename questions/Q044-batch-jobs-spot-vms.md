@@ -29,7 +29,11 @@ Your answer **A** is understandable because one small cluster sounds like a low-
 
 ## 2. 📖 What the Question Is Asking
 
-In plain words: a workload runs for about two hours each night. Which compute option can run that work at the lowest service cost without paying for a large cluster that sits unused?
+**In plain words:**
+- **The situation:** Batch jobs (work that runs on its own with nobody waiting) take about 2 hours and run every night.
+- **What you must achieve:** Choose and set up compute resources for these jobs.
+- **The limits:** Keep costs as low as possible.
+- **What they're really asking:** Which compute option runs these nightly jobs most cheaply?
 
 - **“batch processing jobs”** means work can run as a scheduled task rather than serving every request immediately.
 - **“2 hours” and “run nightly”** means the machines are needed for a limited scheduled period.

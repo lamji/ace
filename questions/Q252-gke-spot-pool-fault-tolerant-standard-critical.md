@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Parts that may go down → cheap **Spot**. Critical parts → **standard** VMs.
+**In plain words:**
+- **The situation:** An app for GKE has parts that can tolerate downtime and parts that are critical and must always be up.
+- **What you must achieve:** Set up a GKE cluster for both kinds of parts.
+- **The limits:** Optimize for cost.
+- **What they're really asking:** How do you set up node pools so the tolerant parts run cheaply and the critical parts stay up?
 
 **Clues in the question:**
 - "**allowed to have downtime**" → **Spot** pool (cheap, can be reclaimed).

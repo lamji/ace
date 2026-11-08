@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Apps connect to an **on-prem DB by IP**. When the IP changes, you don't want to edit every app.
+**In plain words:**
+- **The situation:** A VPN tunnel (an encrypted connection) links your Google Cloud network to your company's own network. Several cloud apps connect to an on-premises database server.
+- **What you must achieve:** Keep the apps connected even when the database's IP address changes.
+- **The limits:** You don't want to update the IP setting in every app each time.
+- **What they're really asking:** How can the apps find the database without hard-coding its IP address?
 
 **Clues in the question:**
 - "**avoid having to change the IP configuration in all of your applications**": use a **name** instead of an IP. Change the IP in **one place** (DNS).

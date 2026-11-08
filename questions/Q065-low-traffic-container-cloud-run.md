@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have an app already packed in a container. It answers web requests, but only **a few times a day**. Where can you run it for the **lowest cost**?
+**In plain words:**
+- **The situation:** An app is packed as a container image and exposes an HTTP endpoint (a web address that receives requests). It receives very few requests per day.
+- **What you must achieve:** Deploy it in a new project.
+- **The limits:** Keep costs as low as possible.
+- **What they're really asking:** Where should you run it so you pay as little as possible?
 
 | Question words | What they point to |
 |---|---|

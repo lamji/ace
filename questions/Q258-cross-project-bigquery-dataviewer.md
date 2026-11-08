@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** VMs in project A must read BigQuery in project B, with least privilege.
+**In plain words:**
+- **The situation:** VMs in project web-applications need BigQuery data in project crm-databases.
+- **What you must achieve:** Give the VMs' service account access.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** In which project and with which role do you grant access?
 
 **Clues in the question:**
 - "**Google-recommended practices**" → least privilege → **BigQuery Data Viewer** in crm-databases, not Owner.

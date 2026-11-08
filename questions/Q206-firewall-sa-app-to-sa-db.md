@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Only **app servers** (not web servers in the same subnet) may reach the **DB servers**.
+**In plain words:**
+- **The situation:** In the default VPC, database servers are in subnet-a; app and web servers are in subnet-b.
+- **What you must achieve:** Allow database traffic only from the app servers to the database servers.
+- **The limits:** Web servers must not reach the database.
+- **What they're really asking:** How do you write a firewall rule that only the app servers match?
 
 **Clues in the question:**
 - App and web servers share subnet-b, so subnet ranges can't tell them apart → identify VMs by **service account** (or tag).

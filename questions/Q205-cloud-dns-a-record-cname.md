@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Three names, one **IP address**. Which record types?
+**In plain words:**
+- **The situation:** You are using Cloud DNS (Google's domain name service).
+- **What you must achieve:** Point home.mydomain.com, mydomain.com and www.mydomain.com to your load balancer's IP.
+- **The limits:** None stated.
+- **What they're really asking:** Which DNS records do you create?
 
 **Clues in the question:**
 - Name → **IP** = **A** record (so `mydomain.com A 34.x.x.x`).

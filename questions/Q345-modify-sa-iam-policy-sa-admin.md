@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You need to **modify IAM policies for service accounts**, least privilege.
+**In plain words:**
+- **The situation:** A new service account must be allowed to invoke (call) a Cloud Run service.
+- **What you must achieve:** Get permission to change IAM policies for service accounts.
+- **The limits:** Least privilege (only what you need).
+- **What they're really asking:** Which role should you request for your own account?
 
 **Clues in the question:**
 - "**modify IAM policies for service accounts**" + "**least privilege**" → **Service Account Admin**, not Editor/Owner.

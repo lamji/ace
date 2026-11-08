@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your servers are in **your own building**. They must read/write Cloud Storage, but they're **not allowed on the internet** and can't have public IPs. What's Google's recommended way to connect them to Cloud Storage **privately**?
+**In plain words:**
+- **The situation:** An app runs on bare-metal servers (physical machines) in your own data center and needs Cloud Storage.
+- **What you must achieve:** Let the app reach Cloud Storage.
+- **The limits:** The servers may not have public IP addresses or internet access; follow Google's recommended practice.
+- **What they're really asking:** How do you connect your own servers to Google's services without using the internet?
 
 | Question words | What they point to |
 |---|---|

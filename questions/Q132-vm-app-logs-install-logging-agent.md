@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The app writes logs to **files on the VM's disk**. Users see errors. How do you look at those logs the Google way?
+**In plain words:**
+- **The situation:** An app on one VM writes its logs to the VM's disk, and users report errors.
+- **What you must achieve:** Diagnose the problem.
+- **The limits:** None stated.
+- **What they're really asking:** How do you get the app's logs somewhere you can examine them?
 
 **Clues in the question:**
 - "**writes logs to disk**": Cloud Logging **doesn't** see files on a VM's disk by itself. You need the **agent** (today: Ops Agent) to send them.

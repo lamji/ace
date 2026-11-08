@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A VM needs to talk to **Cloud SQL**. You made a **special service account** (a robot identity) that has permission to do that. How do you make the VM **use that service account** instead of the **default** one Google gives every VM?
+**In plain words:**
+- **The situation:** A Linux VM needs to connect to Cloud SQL (Google's managed relational database). You made a service account (a non-human Google identity that programs use) with the right access.
+- **What you must achieve:** Make the VM use your service account instead of the default one every VM gets.
+- **The limits:** None stated.
+- **What they're really asking:** How do you switch the VM to your own service account?
 
 | Keyword | What it hints at |
 |---|---|

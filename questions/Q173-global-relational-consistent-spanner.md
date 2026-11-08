@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Global**, **relational**, **same data for everyone** (strong consistency), **multi-region**.
+**In plain words:**
+- **The situation:** You are building a global trading app. Data is relational (tables queried with SQL), and every client worldwide must see exactly the same data. The app runs in several regions.
+- **What you must achieve:** Choose where to store the data.
+- **The limits:** Keep delay (latency) as low as possible for users everywhere.
+- **What they're really asking:** Which database gives one identical, relational view of data worldwide with low delay?
 
 **Clues in the question:**
 - "**relational**" + "**globally**" + "**exact identical state**" + "**multiple regions**" → **Cloud Spanner**.

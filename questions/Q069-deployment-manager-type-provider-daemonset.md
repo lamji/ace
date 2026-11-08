@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** One Deployment Manager config already creates a GKE cluster. You want the **same** config to also create a **DaemonSet** (one pod on every node) inside the cluster, using as **few extra services** as possible.
+**In plain words:**
+- **The situation:** You use Deployment Manager to create a GKE cluster.
+- **What you must achieve:** In the same deployment, also create a DaemonSet (a Kubernetes object that runs one pod on each node) in the kube-system namespace.
+- **The limits:** Use as few services as possible.
+- **What they're really asking:** How can Deployment Manager create Kubernetes objects inside the new cluster?
 
 **Clues in the question:**
 - "**Using the same Deployment Manager deployment**": the DaemonSet must be a resource **inside Deployment Manager**, not something done separately.

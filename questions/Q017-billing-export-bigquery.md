@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want to study your Google Cloud **spending** across **3 projects**, grouped **by service** (Compute Engine, Cloud SQL, BigQuery, ...) and **by day and month**, to **estimate the next 6 months**. You want to do it with **standard query syntax**, meaning **SQL**. Where should the billing data go?
+**In plain words:**
+- **The situation:** You have Google Cloud cost data from three separate projects.
+- **What you must achieve:** Build cost estimates by service type, daily and monthly, for the next six months.
+- **The limits:** You want to use standard query syntax (normal SQL).
+- **What they're really asking:** Where should the cost data go so you can analyze it with SQL queries?
 
 | Keyword | What it hints at |
 |---|---|

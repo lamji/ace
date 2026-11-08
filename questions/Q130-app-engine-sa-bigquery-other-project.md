@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your App Engine app (running as its default service account) must **read** a BigQuery dataset in **another team's project** that you can't manage.
+**In plain words:**
+- **The situation:** An App Engine service runs with the default App Engine service account and shows charts from BigQuery data. That data is in another team's project, and you have no access to it.
+- **What you must achieve:** Let your app read that dataset.
+- **The limits:** You can't change anything in the other project yourself.
+- **What they're really asking:** What should the other team do?
 
 **Clues in the question:**
 - "**read data from the BigQuery dataset**" → **BigQuery Data Viewer**.

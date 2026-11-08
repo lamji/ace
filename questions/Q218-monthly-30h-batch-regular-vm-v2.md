@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Same idea as Q136, with **Spot** VMs in the wrong options.
+**In plain words:**
+- **The situation:** A monthly batch job takes about 30 hours, can run offline, and must start over if it is interrupted.
+- **What you must achieve:** Move it to the cloud.
+- **The limits:** Keep costs as low as possible.
+- **What they're really asking:** Which kind of VM is cheapest without risking the job being interrupted?
 
 **Clues in the question:**
 - "**must be restarted if interrupted**" → Spot VMs can be stopped anytime, and a 30-hour job would likely restart again and again.

@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Keep **one copy per month** of a Cloud SQL database for **3 years**, cheaply.
+**In plain words:**
+- **The situation:** Your company uses a Cloud SQL MySQL database.
+- **What you must achieve:** Keep a month-end copy of the database for three years for audits.
+- **The limits:** Each month-end copy must last three years.
+- **What they're really asking:** How do you create and keep those monthly copies?
 
 **Clues in the question:**
 - "**retain … for three years**" + "**audit**" (rarely opened) → **Archive** class.

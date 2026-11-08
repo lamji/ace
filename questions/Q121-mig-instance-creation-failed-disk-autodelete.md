@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The MIG keeps failing to create VMs. You need it back to the right number of VMs. What fixes the usual causes?
+**In plain words:**
+- **The situation:** A managed instance group alerted that it failed to create new instances.
+- **What you must achieve:** Keep the number of running VMs that the template asks for.
+- **The limits:** None stated.
+- **What they're really asking:** What should you check or fix so new instances can be created?
 
 **Clues in the question:**
 - "**new instance creation has failed**": Google's troubleshooting lists two common causes: **invalid template syntax**, or a **leftover persistent disk with the same name** as the new instance.

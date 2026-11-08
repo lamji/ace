@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Global** players, **consistent** performance as it grows, **no extra management**.
+**In plain words:**
+- **The situation:** You are building a multiplayer game that stores game data in a database, and popularity is growing.
+- **What you must achieve:** Give consistent, fast performance to players worldwide.
+- **The limits:** Don't add management complexity.
+- **What they're really asking:** Which database gives global performance without extra management?
 
 **Clues in the question:**
 - "**global users**" + "**consistent performance**" + "**without increasing the management complexity**" → **Cloud Spanner** (global, scales by adding nodes, fully managed).

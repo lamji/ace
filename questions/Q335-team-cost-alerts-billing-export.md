@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Teams need **threshold notifications** and **dashboards on detailed billing data**, low engineering.
+**In plain words:**
+- **The situation:** Your company watches cloud spending closely.
+- **What you must achieve:** Teams get notified at spending thresholds and can build dashboards from detailed billing data.
+- **The limits:** Recommended practice and low engineering cost.
+- **What they're really asking:** What should you set up for alerts and for detailed data?
 
 **Clues in the question:**
 - Notifications → **budget alerts**.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** GKE app needs SA access; **no new keys**.
+**In plain words:**
+- **The situation:** A monitoring app on GKE needs service account credentials to collect performance data. Organization policy forbids creating new service account keys.
+- **What you must achieve:** Give the app access.
+- **The limits:** Follow Google-recommended security practices.
+- **What they're really asking:** How does the app get credentials without a key?
 
 **Clues in the question:**
 - "**prohibits the creation of new service account keys**" → **Workload Identity Federation for GKE**.

@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your app runs as several pods in GKE (VPC 1). A VM lives in a **different VPC** (`gce-network`, VPC 2), same region, no overlapping IP ranges. The VM must call the app. Do it with the **least effort**.
+**In plain words:**
+- **The situation:** An app on GKE exposes a TCP endpoint (a network port clients connect to) and runs several copies. A VM in another VPC network (gce-network, same region, no overlapping IP ranges) must connect to it.
+- **What you must achieve:** Let that VM reach the app.
+- **The limits:** Minimum effort.
+- **What they're really asking:** How do you expose the GKE app so the VM in the other network can reach it?
 
 | Question words | What they point to |
 |---|---|

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Many teams each need **their own Cassandra** for development. You want it **fast** and with **little support work** from you.
+**In plain words:**
+- **The situation:** Several development teams use Cassandra (a NoSQL database) on-premises. Each team needs its own separate Cassandra dev environment.
+- **What you must achieve:** Move to Google Cloud.
+- **The limits:** Fast, with minimal support effort.
+- **What they're really asking:** What is the quickest, low-effort way to give each team its own Cassandra?
 
 **Clues in the question:**
 - "**quickly**" + "**minimal support effort**": use something **ready-made**. Cloud Marketplace has one-click Cassandra deployments.

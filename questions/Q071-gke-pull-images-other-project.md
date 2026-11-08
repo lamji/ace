@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your container images live in **project A** (the central registry). Your GKE cluster lives in **project B**. The cluster's nodes must be allowed to **download** those images. How?
+**In plain words:**
+- **The situation:** Container images are stored in Container Registry in a separate project. A GKE cluster is in another project.
+- **What you must achieve:** Let Kubernetes download images from that registry.
+- **The limits:** None stated.
+- **What they're really asking:** Which permission do you give, and to which identity?
 
 **Clues in the question:**
 - "**Container Registry … in a separate project**": Container Registry stores images as files in a **Cloud Storage bucket** in that project. Reading them = reading Cloud Storage objects.

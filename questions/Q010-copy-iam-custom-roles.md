@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** In your **dev** project, you created your own **custom IAM roles** (permission bundles). Now you're making a **prod** project and want the **same roles there**. What's the quickest way to copy them over?
+**In plain words:**
+- **The situation:** A development project already has IAM roles defined (IAM roles are named sets of permissions you give to people).
+- **What you must achieve:** Have the same roles in a new production project.
+- **The limits:** Use the fewest steps.
+- **What they're really asking:** What is the quickest way to copy those roles from the dev project to the prod project?
 
 | Keyword | What it hints at |
 |---|---|

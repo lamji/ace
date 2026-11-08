@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your website runs on App Engine. You built a new version and want **only 1% of visitors** to see it while 99% keep the current one. What's the simplest way?
+**In plain words:**
+- **The situation:** A website runs on App Engine standard.
+- **What you must achieve:** Show a new test version to 1% of users.
+- **The limits:** Keep it simple.
+- **What they're really asking:** How do you send 1% of visitors to the new version?
 
 | Keyword | What it hints at |
 |---|---|

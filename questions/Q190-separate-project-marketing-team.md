@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Marketing needs **its own** set of resources, **separate** from Sales.
+**In plain words:**
+- **The situation:** The sales team has a project named Sales Data Digest (ID acme-data-digest).
+- **What you must achieve:** Set up similar resources for the marketing team.
+- **The limits:** Marketing's resources must be organized separately from sales.
+- **What they're really asking:** How do you create marketing's environment?
 
 **Clues in the question:**
 - "**organized independently of the sales team**" → a **new project**.

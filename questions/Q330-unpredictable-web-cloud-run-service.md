@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Containerized **web app**, **unpredictable traffic**, minimize cost.
+**In plain words:**
+- **The situation:** You built a containerized web app for a local event, and traffic will be unpredictable.
+- **What you must achieve:** Deploy it on Google Cloud.
+- **The limits:** Keep costs as low as possible.
+- **What they're really asking:** Where should you run the containerized web app?
 
 **Clues in the question:**
 - Web app → Cloud Run **service** (not job).

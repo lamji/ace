@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Kubernetes manifest**, **full control of the Deployment**, **little infrastructure work**.
+**In plain words:**
+- **The situation:** You will deploy a containerized app using a Kubernetes manifest (a YAML file describing what to run).
+- **What you must achieve:** Have full control over the Kubernetes deployment.
+- **The limits:** Do as little infrastructure setup as possible.
+- **What they're really asking:** Which way of running Kubernetes gives control of deployments with the least infrastructure work?
 
 **Clues in the question:**
 - "**Kubernetes manifest**" + "**full control over the Kubernetes deployment**" → **GKE** (real Kubernetes API).

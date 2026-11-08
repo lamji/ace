@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Stop people from **accidentally deleting** the production VM.
+**In plain words:**
+- **The situation:** You are running a production app on a Compute Engine VM.
+- **What you must achieve:** Stop anyone from destroying the VM by clicking the wrong button.
+- **The limits:** None stated.
+- **What they're really asking:** What setting protects the VM from being destroyed by mistake?
 
 **Clues in the question:**
 - "**prevent anyone from accidentally destroying the instance**" → **deletion protection** (same idea as Q101).

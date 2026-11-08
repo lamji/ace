@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A pipeline that manages **all** infrastructure needs permissions, but **securely**.
+**In plain words:**
+- **The situation:** Your CI/CD pipeline (the system that builds and deploys automatically) will run on Compute Engine and manage all cloud infrastructure through code.
+- **What you must achieve:** Give the pipeline the permissions it needs.
+- **The limits:** Follow security best practices.
+- **What they're really asking:** How should the pipeline get its permissions safely?
 
 **Clues in the question:**
 - "**appropriate permissions**" + "**security best practices**" → **least privilege**: separate service accounts per pipeline, each with only what it needs.

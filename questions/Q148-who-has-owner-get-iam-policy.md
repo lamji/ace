@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** See **who currently has Owner** on the project.
+**In plain words:**
+- **The situation:** A colleague handed you a project.
+- **What you must achieve:** Check who has the Owner role.
+- **The limits:** None stated.
+- **What they're really asking:** Where do you see who has Owner?
 
 **Clues in the question:**
 - "**review who has been granted the Project Owner role**": the current answer is in the project's **IAM policy** → `gcloud projects get-iam-policy` (or the IAM page).

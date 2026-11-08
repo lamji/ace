@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Before building, estimate the **monthly total cost** of a design that uses **several products**.
+**In plain words:**
+- **The situation:** Your design uses several Google Cloud products.
+- **What you must achieve:** Estimate the total monthly cost.
+- **The limits:** None stated.
+- **What they're really asking:** Which tool do you use for the estimate?
 
 **Clues in the question:**
 - "**estimate**": no need to build and pay for it first.

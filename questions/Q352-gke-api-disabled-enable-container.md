@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Error: **Kubernetes Engine API … disabled**. Fix?
+**In plain words:**
+- **The situation:** You ran gcloud container clusters create app-cluster in a new project, and it failed with: Kubernetes Engine API has not been used in the project before or it is disabled.
+- **What you must achieve:** Fix the problem.
+- **The limits:** None stated.
+- **What they're really asking:** What do you do before running the create command again?
 
 **Clues in the question:**
 - The error names the cause: the API isn't enabled → **enable `container.googleapis.com`**.

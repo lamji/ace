@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Stop sharing with outside domains **from now on**, and remove the outsiders **already** there.
+**In plain words:**
+- **The situation:** An audit found users with email addresses outside your Google Workspace domain on your resources.
+- **What you must achieve:** Only users from your domain may get access, and outsiders must be removed.
+- **The limits:** You don't want to keep auditing resources by hand.
+- **What they're really asking:** What setting enforces domain-only sharing automatically?
 
 **Clues in the question:**
 - "**only shared with users whose email addresses match your domain**" + "**avoid having to audit**" → org policy **`iam.allowedPolicyMemberDomains`** (domain restricted sharing).

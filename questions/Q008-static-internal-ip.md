@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** An app is **hard-coded** to look for its licensing server at **10.0.3.21**, and you can't change the app. You're putting the licensing server on a Google Cloud VM. How do you make sure the VM **gets exactly 10.0.3.21** and **keeps it permanently**?
+**In plain words:**
+- **The situation:** An application is set up to look for its licensing server (a server that confirms the app is allowed to run) at the private IP address 10.0.3.21.
+- **What you must achieve:** Run that licensing server on a Compute Engine VM so the app can reach it.
+- **The limits:** You can't change the app's settings, so the server must answer at exactly 10.0.3.21.
+- **What they're really asking:** How do you create the VM so it gets that exact private address?
 
 | Keyword | What it hints at |
 |---|---|

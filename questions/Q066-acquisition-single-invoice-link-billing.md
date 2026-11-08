@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Two companies, two Google Cloud organizations, two billing accounts, hundreds of projects each. Finance wants **one bill** for everything, **starting tomorrow**. What's the quickest way?
+**In plain words:**
+- **The situation:** Your company has an organization with hundreds of projects and one billing account. It bought another company that has its own organization, hundreds of projects and its own billing account.
+- **What you must achieve:** Put all costs from both companies on a single invoice.
+- **The limits:** It must start tomorrow.
+- **What they're really asking:** What is the quickest way to combine both companies' costs onto one bill?
 
 | Question words | What they point to |
 |---|---|

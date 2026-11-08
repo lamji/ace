@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Company-wide SSH standard, auditable, minimal manual steps.
+**In plain words:**
+- **The situation:** You are creating a company-wide standard for SSH access to Compute Engine VMs.
+- **What you must achieve:** Make SSH access simple to manage.
+- **The limits:** Keep audit compliance (records of who logged in) and remove as many manual steps as possible.
+- **What they're really asking:** How do you enforce one SSH standard across all projects?
 
 **Clues in the question:**
 - "**company-wide standard**" + "**eliminating as many manual steps**" → enforce **OS Login** with the **org policy** `compute.requireOsLogin`.

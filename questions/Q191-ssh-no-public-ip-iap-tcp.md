@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** SSH from the internet into VMs that have **no public IP**, without setting up each VM.
+**In plain words:**
+- **The situation:** You run several Linux VMs and will add more soon.
+- **What you must achieve:** SSH into all of them from your own SSH client over the internet.
+- **The limits:** No per-VM setup, and the VMs must not have public IPs.
+- **What they're really asking:** How can you reach VMs without public IPs from the internet?
 
 **Clues in the question:**
 - "**do not want … a public IP**" + "**over the internet**" → **IAP TCP forwarding** tunnels SSH through Google to the VM's internal IP.

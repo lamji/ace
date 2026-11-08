@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Videos in a bucket should **automatically** move to the cheaper **Coldline** class **90 days** after they're uploaded, and be **deleted 1 year after they were uploaded**. How do you set that up, and what numbers do you use?
+**In plain words:**
+- **The situation:** Videos are stored in a regional Cloud Storage bucket (a bucket is a named container for files).
+- **What you must achieve:** After 90 days, move each video to Coldline (a cheaper class for rarely opened files); one year after it was created, delete it.
+- **The limits:** It should happen automatically.
+- **What they're really asking:** How do you set up rules that first move and then delete the videos on schedule?
 
 | Keyword | What it hints at |
 |---|---|

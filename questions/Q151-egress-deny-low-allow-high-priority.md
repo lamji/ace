@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** By default, VPCs **allow all outgoing traffic**. You want **only a few ports** open outbound.
+**In plain words:**
+- **The situation:** You are helping a user set up an app in a new VPC network behind a firewall. The user is worried about data egress (data leaving the network).
+- **What you must achieve:** Set up the firewall for outgoing traffic.
+- **The limits:** Open as few outgoing ports as possible.
+- **What they're really asking:** How should you configure the firewall so only the outgoing ports the app needs are open?
 
 **Clues in the question:**
 - "**fewest open egress ports**": you must **block all egress** (the default implied rule allows it) and then **allow only the needed ports**.

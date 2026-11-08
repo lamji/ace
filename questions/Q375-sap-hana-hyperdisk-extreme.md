@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **>200,000 IOPS**, data must **persist through restarts**.
+**In plain words:**
+- **The situation:** You will run SAP HANA (a large in-memory business database) on Compute Engine.
+- **What you must achieve:** Give it very fast storage, often above 200,000 IOPS (disk operations per second).
+- **The limits:** Data must survive VM restarts.
+- **What they're really asking:** Which disk type gives that speed and keeps the data?
 
 **Clues in the question:**
 - Highest-IOPS **persistent** block storage → **Hyperdisk Extreme** (up to 350,000 IOPS), recommended for SAP HANA.

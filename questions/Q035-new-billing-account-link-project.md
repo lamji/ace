@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Two tasks, in order: **(1) create a NEW billing account**, then **(2) link it to a project that ALREADY exists**. Which option does **both**, with the right permission?
+**In plain words:**
+- **The situation:** You need a new billing account.
+- **What you must achieve:** Create it and link an existing project to it.
+- **The limits:** None stated.
+- **What they're really asking:** What are the steps to create a billing account and link the project?
 
 | Keyword | What it hints at |
 |---|---|

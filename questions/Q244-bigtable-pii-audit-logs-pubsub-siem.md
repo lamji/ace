@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Log **every read/write** and **metadata/config reads**, and send them to the **SIEM**.
+**In plain words:**
+- **The situation:** A three-node Bigtable instance stores personal data (PII). Your company's SIEM (a security tool that collects logs) must receive the logs.
+- **What you must achieve:** Log every read and write, including metadata and configuration reads, and send them to the SIEM.
+- **The limits:** Nothing may be missed.
+- **What they're really asking:** Which logs must be turned on, and how do they reach the SIEM?
 
 **Clues in the question:**
 - "**read or write operations**" → **Data Read** + **Data Write** logs.

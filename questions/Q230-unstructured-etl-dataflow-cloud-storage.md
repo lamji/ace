@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Lots of **unstructured files** must be available to **Dataflow**.
+**In plain words:**
+- **The situation:** You have lots of unstructured data in many file formats.
+- **What you must achieve:** Make it available on Google Cloud so a Dataflow job (a data-processing pipeline) can transform it.
+- **The limits:** None stated.
+- **What they're really asking:** Where should you put the files?
 
 **Clues in the question:**
 - "**unstructured data in different file formats**" → **Cloud Storage** (stores any file).

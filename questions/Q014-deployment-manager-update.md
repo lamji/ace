@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You already built your infrastructure with **Deployment Manager** (review from Q011). Now you changed the config file and want to **apply the changes** to the **existing** deployment, **without taking things down**. Which command does that?
+**In plain words:**
+- **The situation:** You manage infrastructure with Deployment Manager (an older Google tool that creates cloud resources from template files).
+- **What you must achieve:** Apply changes to an existing deployment.
+- **The limits:** The resources must not go down while the update happens.
+- **What they're really asking:** Which command updates the deployment without causing downtime?
 
 | Keyword | What it hints at |
 |---|---|

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** All three must be **serverless** and **cheap**.
+**In plain words:**
+- **The situation:** You are moving three on-premises workloads: a Flask web app, a backend API, and a scheduled long-running job for ETL (extract, transform, load) and reporting.
+- **What you must achieve:** Move them to serverless services on Google Cloud.
+- **The limits:** Keep operating costs low and follow recommended practice.
+- **What they're really asking:** Which serverless service fits each of the three workloads?
 
 **Clues in the question:**
 - "**Flask web application**" (dynamic Python) → **App Engine** (a bucket can only host static files).

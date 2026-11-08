@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You're making a group of identical VMs that grows and shrinks on its own and serves an HTTPS website. If one VM breaks, you want Google to notice and **replace it automatically**. What do you set up?
+**In plain words:**
+- **The situation:** You are building an autoscaling managed instance group for an HTTPS web app.
+- **What you must achieve:** Unhealthy VMs must be recreated automatically.
+- **The limits:** None stated.
+- **What they're really asking:** What do you configure so the group notices unhealthy VMs and replaces them?
 
 **Clues in the question:**
 - "**HTTPS web application**": HTTPS uses **port 443**, so the check should test that port.

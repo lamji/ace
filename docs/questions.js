@@ -6,7 +6,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your team needs admin access to many virtual machines (VMs). How do you give them that access so that:\n1. It's **easy to manage**, even across lots of servers, and\n2. Security can **see exactly which person** logged into which server?\n\n| Keyword | What it hints at |\n|---|---|\n| \"Every employee has a **Google account**\" | Use their existing Google identity |\n| \"**large number** of instances\" | Don't manage keys on each server by hand |\n| \"**administrative** access\" | They need sudo/root, so the *admin* role |\n| \"**operationally efficient**\" | Least manual work |\n| \"**determine who accessed**\" | Every person must have their **own** credentials (auditing) |"
+    "md": "**In plain words:**\n- **The situation:** Every employee has a Google account. An operations team looks after a large number of virtual machines (VMs: computers you rent that run in Google's data centers) on Compute Engine.\n- **What you must achieve:** Give each team member admin-level login access to those VMs.\n- **The limits:** Handing out login credentials must be easy to run at large scale, and the security team must be able to see exactly which person logged in to which VM.\n- **What they're really asking:** What's the best way to give one team admin access to many VMs while keeping it easy to manage and traceable to each person?\n\n| Keyword | What it hints at |\n|---|---|\n| \"Every employee has a **Google account**\" | Use their existing Google identity |\n| \"**large number** of instances\" | Don't manage keys on each server by hand |\n| \"**administrative** access\" | They need sudo/root, so the *admin* role |\n| \"**operationally efficient**\" | Least manual work |\n| \"**determine who accessed**\" | Every person must have their **own** credentials (auditing) |"
    },
    {
     "kind": "terms",
@@ -64,7 +64,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Your team needs admin access to many virtual machines (VMs). How do you give them that access so that:\n1. It's **easy to manage**, even across lots of servers, and\n2. Security can **see exactly which person** logged into which server?"
+  "plain": "- **The situation:** Every employee has a Google account. An operations team looks after a large number of virtual machines (VMs: computers you rent that run in Google's data centers) on Compute Engine.\n- **What you must achieve:** Give each team member admin-level login access to those VMs.\n- **The limits:** Handing out login credentials must be easy to run at large scale, and the security team must be able to see exactly which person logged in to which VM.\n- **What they're really asking:** What's the best way to give one team admin access to many VMs while keeping it easy to manage and traceable to each person?"
  },
  {
   "file": "Q002-vpc-subnet-cidr.md",
@@ -72,7 +72,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You're creating your own private network in Google Cloud (a **custom VPC**) with only **one subnet**. Which IP range gives that subnet the **most IP addresses**, while still being a range you're allowed to use?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**custom VPC**\" | You choose the IP ranges yourself |\n| \"**single subnet**\" | All addresses go into one range |\n| \"**as large as possible**\" | Choose the biggest *valid private* range |"
+    "md": "**In plain words:**\n- **The situation:** You are building your own private network in Google Cloud (a custom VPC) with just one subnet (a block of private IP addresses inside that network).\n- **What you must achieve:** Choose the IP address range for that subnet.\n- **The limits:** The range must hold as many addresses as possible, and it must be a range Google Cloud allows for a private subnet.\n- **What they're really asking:** Which of the listed address ranges gives the subnet the most usable addresses?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**custom VPC**\" | You choose the IP ranges yourself |\n| \"**single subnet**\" | All addresses go into one range |\n| \"**as large as possible**\" | Choose the biggest *valid private* range |"
    },
    {
     "kind": "terms",
@@ -130,7 +130,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You're creating your own private network in Google Cloud (a **custom VPC**) with only **one subnet**. Which IP range gives that subnet the **most IP addresses**, while still being a range you're allowed to use?"
+  "plain": "- **The situation:** You are building your own private network in Google Cloud (a custom VPC) with just one subnet (a block of private IP addresses inside that network).\n- **What you must achieve:** Choose the IP address range for that subnet.\n- **The limits:** The range must hold as many addresses as possible, and it must be a range Google Cloud allows for a private subnet.\n- **What they're really asking:** Which of the listed address ranges gives the subnet the most usable addresses?"
  },
  {
   "file": "Q003-cloud-sql-pitr.md",
@@ -138,7 +138,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You need a database for tables (rows and columns). The data is **small**, it lives in **one location**, and you want it **cheap**. You also need to be able to **rewind the database to an exact moment in the past** (point-in-time recovery). Which database do you choose, and which setting do you turn on?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**relational data**\" | SQL database with tables (Cloud SQL or Spanner) |\n| \"**cost-effective**\" | Choose the cheapest option that works, so not Spanner |\n| \"**small set** of operational data\" | No need for massive scale, so not Spanner |\n| \"**one geographic location**\" | No need for global/multi-region, so not Spanner |\n| \"**point-in-time recovery**\" | Cloud SQL MySQL needs **binary logging** turned on |\n\nThe question has two parts: (1) **which product** (Cloud SQL vs Spanner) and (2) **which setting** (binary logging vs failover replicas)."
+    "md": "**In plain words:**\n- **The situation:** You have a small amount of relational data (data kept in tables with rows and columns, read with SQL) that your business uses every day, all in one location.\n- **What you must achieve:** Choose and set up a database for it.\n- **The limits:** It must be cheap, and it must support point-in-time recovery (rolling the database back to exactly how it looked at a chosen moment, like 10:42 yesterday).\n- **What they're really asking:** Which database service and setting give cheap table-style storage that can be rolled back to a past moment?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**relational data**\" | SQL database with tables (Cloud SQL or Spanner) |\n| \"**cost-effective**\" | Choose the cheapest option that works, so not Spanner |\n| \"**small set** of operational data\" | No need for massive scale, so not Spanner |\n| \"**one geographic location**\" | No need for global/multi-region, so not Spanner |\n| \"**point-in-time recovery**\" | Cloud SQL MySQL needs **binary logging** turned on |\n\nThe question has two parts: (1) **which product** (Cloud SQL vs Spanner) and (2) **which setting** (binary logging vs failover replicas)."
    },
    {
     "kind": "terms",
@@ -196,7 +196,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You need a database for tables (rows and columns). The data is **small**, it lives in **one location**, and you want it **cheap**. You also need to be able to **rewind the database to an exact moment in the past** (point-in-time recovery). Which database do you choose, and which setting do you turn on?"
+  "plain": "- **The situation:** You have a small amount of relational data (data kept in tables with rows and columns, read with SQL) that your business uses every day, all in one location.\n- **What you must achieve:** Choose and set up a database for it.\n- **The limits:** It must be cheap, and it must support point-in-time recovery (rolling the database back to exactly how it looked at a chosen moment, like 10:42 yesterday).\n- **What they're really asking:** Which database service and setting give cheap table-style storage that can be rolled back to a past moment?"
  },
  {
   "file": "Q004-mig-autohealing.md",
@@ -204,7 +204,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have a group of VMs spread across several zones. If a VM **stops responding** (it fails a check **3 times in a row**, checked **every 10 seconds**), you want Google Cloud to **automatically delete it and create a fresh one**. What's the **simplest** way to set that up?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**autohealing**\" | A feature that exists only in **managed instance groups (MIGs)** |\n| \"**re-creation of VMs**\" | Only a MIG can recreate VMs (it has a template to rebuild from) |\n| \"**multiple zones**\" | A **regional** MIG spreads VMs across zones |\n| \"**3 attempts of 10 seconds each**\" | Health check settings: **check interval = 10s**, **unhealthy threshold = 3** |\n| \"**fewest possible steps**\" | Don't add extra things like a new load balancer |\n\n**Exam topic:** Compute Engine, specifically **Managed Instance Groups + health checks + autohealing**."
+    "md": "**In plain words:**\n- **The situation:** A group of VMs running in several zones (separate data-center buildings inside one region) sits behind a network load balancer (a traffic distributor).\n- **What you must achieve:** Turn on autohealing: when a VM stops answering, it is automatically deleted and created again.\n- **The limits:** A VM counts as broken after 3 failed checks, 10 seconds apart, and you want the fewest setup steps.\n- **What they're really asking:** What do you set up so broken VMs are replaced automatically after 3 failed 10-second checks?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**autohealing**\" | A feature that exists only in **managed instance groups (MIGs)** |\n| \"**re-creation of VMs**\" | Only a MIG can recreate VMs (it has a template to rebuild from) |\n| \"**multiple zones**\" | A **regional** MIG spreads VMs across zones |\n| \"**3 attempts of 10 seconds each**\" | Health check settings: **check interval = 10s**, **unhealthy threshold = 3** |\n| \"**fewest possible steps**\" | Don't add extra things like a new load balancer |\n\n**Exam topic:** Compute Engine, specifically **Managed Instance Groups + health checks + autohealing**."
    },
    {
     "kind": "terms",
@@ -262,7 +262,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "You have a group of VMs spread across several zones. If a VM **stops responding** (it fails a check **3 times in a row**, checked **every 10 seconds**), you want Google Cloud to **automatically delete it and create a fresh one**. What's the **simplest** way to set that up?"
+  "plain": "- **The situation:** A group of VMs running in several zones (separate data-center buildings inside one region) sits behind a network load balancer (a traffic distributor).\n- **What you must achieve:** Turn on autohealing: when a VM stops answering, it is automatically deleted and created again.\n- **The limits:** A VM counts as broken after 3 failed checks, 10 seconds apart, and you want the fewest setup steps.\n- **What they're really asking:** What do you set up so broken VMs are replaced automatically after 3 failed 10-second checks?"
  },
  {
   "file": "Q005-gcloud-configurations.md",
@@ -270,7 +270,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have several saved **gcloud profiles** (configurations), for example one for dev and one for prod. You're currently using one of them. You want to **peek at the settings of a different one** (the inactive one), specifically which GKE cluster it points to, **without switching to it** and with **as few commands as possible**.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**multiple configurations for gcloud**\" | The answer is a **gcloud config configurations** command, not kubectl |\n| \"**inactive configuration**\" | Not the one you're currently using |\n| \"**review**\" | Just look, don't change anything |\n| \"**fewest possible steps**\" | **One** command beats two |\n\n**Exam topic:** Cloud SDK / gcloud CLI, specifically **named configurations**."
+    "md": "**In plain words:**\n- **The situation:** You have several named gcloud configurations (saved settings bundles for the gcloud command-line tool, for example one for dev and one for prod). Only one is active at a time.\n- **What you must achieve:** Look at which Kubernetes Engine cluster is set in a configuration that is not active right now.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** What is the quickest way to read the cluster setting stored in an inactive gcloud configuration?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**multiple configurations for gcloud**\" | The answer is a **gcloud config configurations** command, not kubectl |\n| \"**inactive configuration**\" | Not the one you're currently using |\n| \"**review**\" | Just look, don't change anything |\n| \"**fewest possible steps**\" | **One** command beats two |\n\n**Exam topic:** Cloud SDK / gcloud CLI, specifically **named configurations**."
    },
    {
     "kind": "terms",
@@ -328,7 +328,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You have several saved **gcloud profiles** (configurations), for example one for dev and one for prod. You're currently using one of them. You want to **peek at the settings of a different one** (the inactive one), specifically which GKE cluster it points to, **without switching to it** and with **as few commands as possible**."
+  "plain": "- **The situation:** You have several named gcloud configurations (saved settings bundles for the gcloud command-line tool, for example one for dev and one for prod). Only one is active at a time.\n- **What you must achieve:** Look at which Kubernetes Engine cluster is set in a configuration that is not active right now.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** What is the quickest way to read the cluster setting stored in an inactive gcloud configuration?"
  },
  {
   "file": "Q006-storage-class-disaster-recovery.md",
@@ -336,7 +336,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You keep **backup files** in Cloud Storage just in case of a disaster. You **almost never read them**; you only need them if something goes badly wrong. Which **storage class** does Google recommend for this, so you pay as little as possible for data you rarely touch?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**backup files**\" | Data written often, but **rarely read** |\n| \"**disaster recovery**\" | Only accessed in emergencies (maybe once a quarter or less) |\n| \"**Google's recommended practices**\" | Google's docs name **Coldline** for backup / disaster recovery (Archive too, but it isn't an option here) |\n| \"**storage option**\" | Choose a **storage class** |\n\n**Exam topic:** Cloud Storage, specifically **choosing a storage class by access frequency**."
+    "md": "**In plain words:**\n- **The situation:** Your company keeps backup copies of application files in Cloud Storage (Google's file storage), only so it can restore them if a disaster happens.\n- **What you must achieve:** Choose the storage class (price tier) for these backup files.\n- **The limits:** Follow Google's recommended practice for disaster-recovery backups.\n- **What they're really asking:** Which Cloud Storage class does Google recommend for backup files kept for disaster recovery?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**backup files**\" | Data written often, but **rarely read** |\n| \"**disaster recovery**\" | Only accessed in emergencies (maybe once a quarter or less) |\n| \"**Google's recommended practices**\" | Google's docs name **Coldline** for backup / disaster recovery (Archive too, but it isn't an option here) |\n| \"**storage option**\" | Choose a **storage class** |\n\n**Exam topic:** Cloud Storage, specifically **choosing a storage class by access frequency**."
    },
    {
     "kind": "terms",
@@ -394,7 +394,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "You keep **backup files** in Cloud Storage just in case of a disaster. You **almost never read them**; you only need them if something goes badly wrong. Which **storage class** does Google recommend for this, so you pay as little as possible for data you rarely touch?"
+  "plain": "- **The situation:** Your company keeps backup copies of application files in Cloud Storage (Google's file storage), only so it can restore them if a disaster happens.\n- **What you must achieve:** Choose the storage class (price tier) for these backup files.\n- **The limits:** Follow Google's recommended practice for disaster-recovery backups.\n- **What they're really asking:** Which Cloud Storage class does Google recommend for backup files kept for disaster recovery?"
  },
  {
   "file": "Q007-centralize-billing-account.md",
@@ -402,7 +402,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Employees have been paying for their Google Cloud projects with **their own credit cards**, and the company pays them back later. That's messy. The company wants **one company billing account** that pays for **all** these projects. What's the first, correct step?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**personal credit cards**\" | Each project is linked to a different personal billing account |\n| \"**centralize**\" | One place pays for everything |\n| \"**single, new billing account**\" | You must **create** a billing account (then link the projects to it) |\n| \"**What should you do?**\" | The standard, self-service way in the **Cloud Console** |\n\n**Exam topic:** Billing, specifically **creating billing accounts and linking projects**."
+    "md": "**In plain words:**\n- **The situation:** Several employees created Google Cloud projects and paid for them with their personal credit cards; the company pays them back later.\n- **What you must achieve:** Move all these projects under one new company billing account (the account that receives and pays the bill).\n- **The limits:** None stated beyond doing it correctly.\n- **What they're really asking:** What steps move everyone's projects onto one new company billing account?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**personal credit cards**\" | Each project is linked to a different personal billing account |\n| \"**centralize**\" | One place pays for everything |\n| \"**single, new billing account**\" | You must **create** a billing account (then link the projects to it) |\n| \"**What should you do?**\" | The standard, self-service way in the **Cloud Console** |\n\n**Exam topic:** Billing, specifically **creating billing accounts and linking projects**."
    },
    {
     "kind": "terms",
@@ -460,7 +460,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Employees have been paying for their Google Cloud projects with **their own credit cards**, and the company pays them back later. That's messy. The company wants **one company billing account** that pays for **all** these projects. What's the first, correct step?"
+  "plain": "- **The situation:** Several employees created Google Cloud projects and paid for them with their personal credit cards; the company pays them back later.\n- **What you must achieve:** Move all these projects under one new company billing account (the account that receives and pays the bill).\n- **The limits:** None stated beyond doing it correctly.\n- **What they're really asking:** What steps move everyone's projects onto one new company billing account?"
  },
  {
   "file": "Q008-static-internal-ip.md",
@@ -468,7 +468,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** An app is **hard-coded** to look for its licensing server at **10.0.3.21**, and you can't change the app. You're putting the licensing server on a Google Cloud VM. How do you make sure the VM **gets exactly 10.0.3.21** and **keeps it permanently**?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**IP 10.0.3.21**\" | A **private (internal)** address (in the 10.x.x.x range) |\n| \"**do not want to change the configuration**\" | The server **must** have exactly this IP |\n| \"**be able to reach**\" (long term) | The IP must **never change**, so it must be **static** |\n| \"**using gcloud**\" | Reserve the address with `gcloud compute addresses create` |\n\n**Exam topic:** VPC networking, specifically **static internal IP addresses**."
+    "md": "**In plain words:**\n- **The situation:** An application is set up to look for its licensing server (a server that confirms the app is allowed to run) at the private IP address 10.0.3.21.\n- **What you must achieve:** Run that licensing server on a Compute Engine VM so the app can reach it.\n- **The limits:** You can't change the app's settings, so the server must answer at exactly 10.0.3.21.\n- **What they're really asking:** How do you create the VM so it gets that exact private address?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**IP 10.0.3.21**\" | A **private (internal)** address (in the 10.x.x.x range) |\n| \"**do not want to change the configuration**\" | The server **must** have exactly this IP |\n| \"**be able to reach**\" (long term) | The IP must **never change**, so it must be **static** |\n| \"**using gcloud**\" | Reserve the address with `gcloud compute addresses create` |\n\n**Exam topic:** VPC networking, specifically **static internal IP addresses**."
    },
    {
     "kind": "terms",
@@ -526,7 +526,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "An app is **hard-coded** to look for its licensing server at **10.0.3.21**, and you can't change the app. You're putting the licensing server on a Google Cloud VM. How do you make sure the VM **gets exactly 10.0.3.21** and **keeps it permanently**?"
+  "plain": "- **The situation:** An application is set up to look for its licensing server (a server that confirms the app is allowed to run) at the private IP address 10.0.3.21.\n- **What you must achieve:** Run that licensing server on a Compute Engine VM so the app can reach it.\n- **The limits:** You can't change the app's settings, so the server must answer at exactly 10.0.3.21.\n- **What they're really asking:** How do you create the VM so it gets that exact private address?"
  },
  {
   "file": "Q009-app-engine-scaling.md",
@@ -534,7 +534,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app runs on App Engine. You want App Engine to **add or remove instances automatically** depending on **how many requests come in**. You **also** want **3 free (idle) instances always waiting**, ready for sudden traffic. Which scaling type and setting does this?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**scale based on request rate**\" | **Automatic scaling** (the only type that scales on request rate, latency, and CPU) |\n| \"**at least 3 unoccupied instances**\" | **Idle** instances, so the setting is `min_idle_instances: 3` |\n| \"**at all times**\" | Never drop below 3 free instances, even when traffic is low |\n\n**Exam topic:** App Engine, specifically **scaling types and their settings**."
+    "md": "**In plain words:**\n- **The situation:** You are putting an app on App Engine (Google's platform that runs your code without you managing servers).\n- **What you must achieve:** The number of instances (running copies of your app) should go up and down with the number of incoming requests.\n- **The limits:** At least 3 idle instances must always be waiting, ready for sudden traffic.\n- **What they're really asking:** Which App Engine scaling type scales on requests and can keep 3 idle instances ready?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**scale based on request rate**\" | **Automatic scaling** (the only type that scales on request rate, latency, and CPU) |\n| \"**at least 3 unoccupied instances**\" | **Idle** instances, so the setting is `min_idle_instances: 3` |\n| \"**at all times**\" | Never drop below 3 free instances, even when traffic is low |\n\n**Exam topic:** App Engine, specifically **scaling types and their settings**."
    },
    {
     "kind": "terms",
@@ -597,7 +597,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Your app runs on App Engine. You want App Engine to **add or remove instances automatically** depending on **how many requests come in**. You **also** want **3 free (idle) instances always waiting**, ready for sudden traffic. Which scaling type and setting does this?"
+  "plain": "- **The situation:** You are putting an app on App Engine (Google's platform that runs your code without you managing servers).\n- **What you must achieve:** The number of instances (running copies of your app) should go up and down with the number of incoming requests.\n- **The limits:** At least 3 idle instances must always be waiting, ready for sudden traffic.\n- **What they're really asking:** Which App Engine scaling type scales on requests and can keep 3 idle instances ready?"
  },
  {
   "file": "Q010-copy-iam-custom-roles.md",
@@ -605,7 +605,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** In your **dev** project, you created your own **custom IAM roles** (permission bundles). Now you're making a **prod** project and want the **same roles there**. What's the quickest way to copy them over?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**IAM roles defined**\" | **Custom roles** you made (predefined roles already exist in every project) |\n| \"**same IAM roles on the new project**\" | The destination is the **production project**, not the whole organization |\n| \"**fewest possible steps**\" | Use a **copy** command instead of rebuilding roles by hand |\n\n**Exam topic:** IAM, specifically **custom roles and copying them between projects**."
+    "md": "**In plain words:**\n- **The situation:** A development project already has IAM roles defined (IAM roles are named sets of permissions you give to people).\n- **What you must achieve:** Have the same roles in a new production project.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** What is the quickest way to copy those roles from the dev project to the prod project?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**IAM roles defined**\" | **Custom roles** you made (predefined roles already exist in every project) |\n| \"**same IAM roles on the new project**\" | The destination is the **production project**, not the whole organization |\n| \"**fewest possible steps**\" | Use a **copy** command instead of rebuilding roles by hand |\n\n**Exam topic:** IAM, specifically **custom roles and copying them between projects**."
    },
    {
     "kind": "terms",
@@ -663,7 +663,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "In your **dev** project, you created your own **custom IAM roles** (permission bundles). Now you're making a **prod** project and want the **same roles there**. What's the quickest way to copy them over?"
+  "plain": "- **The situation:** A development project already has IAM roles defined (IAM roles are named sets of permissions you give to people).\n- **What you must achieve:** Have the same roles in a new production project.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** What is the quickest way to copy those roles from the dev project to the prod project?"
  },
  {
   "file": "Q011-deployment-manager-iac.md",
@@ -671,7 +671,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want to **create VMs automatically** by writing what you want (machine type, disk, network, and so on) in a **configuration file**, instead of clicking in the Console. Which Google tool reads a config file and builds the VMs for you?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**provisioning VMs**\" | **Creating** infrastructure |\n| \"**dedicated configuration file**\" | **Infrastructure as Code (IaC)**: describe infrastructure in a file |\n| \"**dynamic way**\" | Run the file again anytime to create, update, or recreate |\n| \"**Google's recommended practices**\" | Google's own IaC tool: **Deployment Manager** (in this older question) |\n\n**Exam topic:** Resource deployment, specifically **Infrastructure as Code**.\n\n⚠️ **Update:** This question is older. Google has **deprecated Deployment Manager** (end of support announced for **March 31, 2026**) and now recommends **Infrastructure Manager**, which runs **Terraform**. The idea is the same: infrastructure described in a config file. If a newer exam version offers **Terraform / Infrastructure Manager**, choose that. If it offers only these four options, choose **Deployment Manager**."
+    "md": "**In plain words:**\n- **The situation:** You need to create VMs on Compute Engine automatically. All their details (size, disk, operating system image) are written in a separate configuration file.\n- **What you must achieve:** A repeatable way to create VMs from that file.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which tool or method creates VMs from a configuration file the recommended way?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**provisioning VMs**\" | **Creating** infrastructure |\n| \"**dedicated configuration file**\" | **Infrastructure as Code (IaC)**: describe infrastructure in a file |\n| \"**dynamic way**\" | Run the file again anytime to create, update, or recreate |\n| \"**Google's recommended practices**\" | Google's own IaC tool: **Deployment Manager** (in this older question) |\n\n**Exam topic:** Resource deployment, specifically **Infrastructure as Code**.\n\n⚠️ **Update:** This question is older. Google has **deprecated Deployment Manager** (end of support announced for **March 31, 2026**) and now recommends **Infrastructure Manager**, which runs **Terraform**. The idea is the same: infrastructure described in a config file. If a newer exam version offers **Terraform / Infrastructure Manager**, choose that. If it offers only these four options, choose **Deployment Manager**."
    },
    {
     "kind": "terms",
@@ -729,7 +729,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You want to **create VMs automatically** by writing what you want (machine type, disk, network, and so on) in a **configuration file**, instead of clicking in the Console. Which Google tool reads a config file and builds the VMs for you?"
+  "plain": "- **The situation:** You need to create VMs on Compute Engine automatically. All their details (size, disk, operating system image) are written in a separate configuration file.\n- **What you must achieve:** A repeatable way to create VMs from that file.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which tool or method creates VMs from a configuration file the recommended way?"
  },
  {
   "file": "Q012-deploy-dockerfile-gke.md",
@@ -737,7 +737,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have a **Dockerfile** (a recipe for packaging your app). You want to run the app on **GKE (Kubernetes)**. What are the correct steps?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**Dockerfile**\" | It's only a **recipe**. You must **build an image** from it first |\n| \"**Kubernetes Engine**\" | You deploy with **kubectl** + a **Deployment YAML** (not `gcloud app deploy`, which is App Engine) |\n| (implied) | Kubernetes **pulls images from a container registry**, not from Cloud Storage |\n\n**The 3-step pattern:** **Build** the image → **Push** it to a registry → **Deploy** with kubectl + YAML.\n\n**Exam topic:** GKE, specifically **deploying containerized applications**.\n\n⚠️ **Update:** **Container Registry** (`gcr.io`) is **deprecated and was shut down in 2025**. Its replacement is **Artifact Registry** (`*-docker.pkg.dev`). The steps are exactly the same. On a newer exam, choose the **Artifact Registry** option."
+    "md": "**In plain words:**\n- **The situation:** You have a Dockerfile (a recipe file that describes how to build a container image, which is your app packed with everything it needs to run).\n- **What you must achieve:** Run that app on Kubernetes Engine (Google's managed Kubernetes, a system that runs and manages containers).\n- **The limits:** None stated; you just need the correct steps in the correct order.\n- **What they're really asking:** What steps take you from a Dockerfile to the app running on Kubernetes Engine?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**Dockerfile**\" | It's only a **recipe**. You must **build an image** from it first |\n| \"**Kubernetes Engine**\" | You deploy with **kubectl** + a **Deployment YAML** (not `gcloud app deploy`, which is App Engine) |\n| (implied) | Kubernetes **pulls images from a container registry**, not from Cloud Storage |\n\n**The 3-step pattern:** **Build** the image → **Push** it to a registry → **Deploy** with kubectl + YAML.\n\n**Exam topic:** GKE, specifically **deploying containerized applications**.\n\n⚠️ **Update:** **Container Registry** (`gcr.io`) is **deprecated and was shut down in 2025**. Its replacement is **Artifact Registry** (`*-docker.pkg.dev`). The steps are exactly the same. On a newer exam, choose the **Artifact Registry** option."
    },
    {
     "kind": "terms",
@@ -795,7 +795,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "You have a **Dockerfile** (a recipe for packaging your app). You want to run the app on **GKE (Kubernetes)**. What are the correct steps?"
+  "plain": "- **The situation:** You have a Dockerfile (a recipe file that describes how to build a container image, which is your app packed with everything it needs to run).\n- **What you must achieve:** Run that app on Kubernetes Engine (Google's managed Kubernetes, a system that runs and manages containers).\n- **The limits:** None stated; you just need the correct steps in the correct order.\n- **What they're really asking:** What steps take you from a Dockerfile to the app running on Kubernetes Engine?"
  },
  {
   "file": "Q013-jenkins-marketplace.md",
@@ -803,7 +803,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your developers need **Jenkins** (a popular tool for building and testing code automatically). What's the **quickest, easiest** way to get a working Jenkins server on Google Cloud?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**Jenkins**\" | Popular, well-known software, so it's likely **ready-made in Marketplace** |\n| \"**fewest steps possible**\" | Don't install things by hand. Use a **pre-packaged, click-to-deploy** solution |\n\n**Exam topic:** Deploying solutions, specifically **Google Cloud Marketplace**.\n\n*(GCP Marketplace is now called **Google Cloud Marketplace**. It's the same thing.)*"
+    "md": "**In plain words:**\n- **The situation:** A development team needs a new Jenkins server (a popular tool that automatically builds and tests code).\n- **What you must achieve:** Get Jenkins running on Google Cloud.\n- **The limits:** Use the fewest steps possible.\n- **What they're really asking:** What is the fastest way to get a ready-to-use Jenkins server?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**Jenkins**\" | Popular, well-known software, so it's likely **ready-made in Marketplace** |\n| \"**fewest steps possible**\" | Don't install things by hand. Use a **pre-packaged, click-to-deploy** solution |\n\n**Exam topic:** Deploying solutions, specifically **Google Cloud Marketplace**.\n\n*(GCP Marketplace is now called **Google Cloud Marketplace**. It's the same thing.)*"
    },
    {
     "kind": "terms",
@@ -861,7 +861,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Your developers need **Jenkins** (a popular tool for building and testing code automatically). What's the **quickest, easiest** way to get a working Jenkins server on Google Cloud?"
+  "plain": "- **The situation:** A development team needs a new Jenkins server (a popular tool that automatically builds and tests code).\n- **What you must achieve:** Get Jenkins running on Google Cloud.\n- **The limits:** Use the fewest steps possible.\n- **What they're really asking:** What is the fastest way to get a ready-to-use Jenkins server?"
  },
  {
   "file": "Q014-deployment-manager-update.md",
@@ -869,7 +869,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You already built your infrastructure with **Deployment Manager** (review from Q011). Now you changed the config file and want to **apply the changes** to the **existing** deployment, **without taking things down**. Which command does that?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**update a deployment**\" | The deployment **already exists**, so use `deployments update`, not `create` |\n| \"**without any resource downtime**\" | Change only what's different and leave everything else running |\n| \"**Which command**\" | Know which `gcloud deployment-manager` commands **actually exist** |\n\n**Exam topic:** Infrastructure as Code, specifically **Deployment Manager commands**.\n\n⚠️ **Reminder from Q011:** Deployment Manager is **deprecated**, and Google now recommends **Infrastructure Manager (Terraform)**. The idea is the same in Terraform: `terraform plan` (preview) → `terraform apply` (update only what changed).\n\n*(Note: the real commands also need the **deployment name**, e.g., `deployments update shopnow-infra --config=...`. The question leaves it out.)*"
+    "md": "**In plain words:**\n- **The situation:** You manage infrastructure with Deployment Manager (an older Google tool that creates cloud resources from template files).\n- **What you must achieve:** Apply changes to an existing deployment.\n- **The limits:** The resources must not go down while the update happens.\n- **What they're really asking:** Which command updates the deployment without causing downtime?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**update a deployment**\" | The deployment **already exists**, so use `deployments update`, not `create` |\n| \"**without any resource downtime**\" | Change only what's different and leave everything else running |\n| \"**Which command**\" | Know which `gcloud deployment-manager` commands **actually exist** |\n\n**Exam topic:** Infrastructure as Code, specifically **Deployment Manager commands**.\n\n⚠️ **Reminder from Q011:** Deployment Manager is **deprecated**, and Google now recommends **Infrastructure Manager (Terraform)**. The idea is the same in Terraform: `terraform plan` (preview) → `terraform apply` (update only what changed).\n\n*(Note: the real commands also need the **deployment name**, e.g., `deployments update shopnow-infra --config=...`. The question leaves it out.)*"
    },
    {
     "kind": "terms",
@@ -927,7 +927,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You already built your infrastructure with **Deployment Manager** (review from Q011). Now you changed the config file and want to **apply the changes** to the **existing** deployment, **without taking things down**. Which command does that?"
+  "plain": "- **The situation:** You manage infrastructure with Deployment Manager (an older Google tool that creates cloud resources from template files).\n- **What you must achieve:** Apply changes to an existing deployment.\n- **The limits:** The resources must not go down while the update happens.\n- **What they're really asking:** Which command updates the deployment without causing downtime?"
  },
  {
   "file": "Q015-bigquery-dry-run-cost.md",
@@ -935,7 +935,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Before running a big BigQuery query, you want to know **how much it will cost**. With **on-demand pricing**, BigQuery charges by **how much data the query reads**. How do you get that number **without actually running (and paying for) the query**?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**on-demand pricing**\" | You pay per **bytes processed (read/scanned)** |\n| \"**find out how much it will cost**\" | Estimate **before** running, so use a **dry run** |\n| \"**return a lot of records**\" | ⚠️ **Distractor.** Cost does **not** depend on how much data comes back |\n\n**Exam topic:** BigQuery, specifically **cost estimation**.\n\n⚠️ **Update:** \"Flat-Rate pricing\" has been replaced by **BigQuery editions** (capacity-based pricing using slots). The idea is the same: you pay for **reserved capacity** instead of per query."
+    "md": "**In plain words:**\n- **The situation:** You are about to run a large BigQuery query (BigQuery is Google's data warehouse; with on-demand pricing you pay for how much data each query reads).\n- **What you must achieve:** Know what the query will cost before you run it.\n- **The limits:** You are on on-demand pricing.\n- **What they're really asking:** How do you find out how much data the query will read, so you can work out its cost first?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**on-demand pricing**\" | You pay per **bytes processed (read/scanned)** |\n| \"**find out how much it will cost**\" | Estimate **before** running, so use a **dry run** |\n| \"**return a lot of records**\" | ⚠️ **Distractor.** Cost does **not** depend on how much data comes back |\n\n**Exam topic:** BigQuery, specifically **cost estimation**.\n\n⚠️ **Update:** \"Flat-Rate pricing\" has been replaced by **BigQuery editions** (capacity-based pricing using slots). The idea is the same: you pay for **reserved capacity** instead of per query."
    },
    {
     "kind": "terms",
@@ -998,7 +998,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Before running a big BigQuery query, you want to know **how much it will cost**. With **on-demand pricing**, BigQuery charges by **how much data the query reads**. How do you get that number **without actually running (and paying for) the query**?"
+  "plain": "- **The situation:** You are about to run a large BigQuery query (BigQuery is Google's data warehouse; with on-demand pricing you pay for how much data each query reads).\n- **What you must achieve:** Know what the query will cost before you run it.\n- **The limits:** You are on on-demand pricing.\n- **What they're really asking:** How do you find out how much data the query will read, so you can work out its cost first?"
  },
  {
   "file": "Q016-mig-cpu-autoscaling.md",
@@ -1006,7 +1006,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have **one program** that you want to run on **VMs** (company rule). When the VMs' **CPU gets busy**, more VMs should be added **automatically**, and when it's quiet, they should be removed. You want this to be **easy to manage** and **fast**. What do you use?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**single binary application**\" | One program, easy to put on identical VMs |\n| \"**scale based on ... CPU usage**\" | **Autoscaling on CPU utilization** |\n| \"**use virtual machines directly**\" | **Compute Engine VMs**, not GKE/containers |\n| \"**operationally efficient**\" | Use a **built-in, managed** feature, not homemade tools |\n| \"**as quickly as possible**\" | Google's autoscaler reacts automatically within minutes |\n\n**Exam topic:** Compute Engine, specifically **Managed Instance Groups + autoscaling**.\n\n*(Review: in **Q004**, autoscaling was the **wrong** answer because the question asked about **replacing broken VMs** (autohealing). Here the question is about **adding VMs when CPU is busy**, so autoscaling is **right**.)*"
+    "md": "**In plain words:**\n- **The situation:** You have an app that is a single program file. Company rules say it must run directly on virtual machines.\n- **What you must achieve:** Automatically add or remove machines based on CPU usage (how busy the processors are).\n- **The limits:** Scaling must be efficient and fast, and you must use VMs.\n- **What they're really asking:** How do you set up VMs that grow and shrink automatically with CPU load?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**single binary application**\" | One program, easy to put on identical VMs |\n| \"**scale based on ... CPU usage**\" | **Autoscaling on CPU utilization** |\n| \"**use virtual machines directly**\" | **Compute Engine VMs**, not GKE/containers |\n| \"**operationally efficient**\" | Use a **built-in, managed** feature, not homemade tools |\n| \"**as quickly as possible**\" | Google's autoscaler reacts automatically within minutes |\n\n**Exam topic:** Compute Engine, specifically **Managed Instance Groups + autoscaling**.\n\n*(Review: in **Q004**, autoscaling was the **wrong** answer because the question asked about **replacing broken VMs** (autohealing). Here the question is about **adding VMs when CPU is busy**, so autoscaling is **right**.)*"
    },
    {
     "kind": "terms",
@@ -1064,7 +1064,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You have **one program** that you want to run on **VMs** (company rule). When the VMs' **CPU gets busy**, more VMs should be added **automatically**, and when it's quiet, they should be removed. You want this to be **easy to manage** and **fast**. What do you use?"
+  "plain": "- **The situation:** You have an app that is a single program file. Company rules say it must run directly on virtual machines.\n- **What you must achieve:** Automatically add or remove machines based on CPU usage (how busy the processors are).\n- **The limits:** Scaling must be efficient and fast, and you must use VMs.\n- **What they're really asking:** How do you set up VMs that grow and shrink automatically with CPU load?"
  },
  {
   "file": "Q017-billing-export-bigquery.md",
@@ -1072,7 +1072,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want to study your Google Cloud **spending** across **3 projects**, grouped **by service** (Compute Engine, Cloud SQL, BigQuery, ...) and **by day and month**, to **estimate the next 6 months**. You want to do it with **standard query syntax**, meaning **SQL**. Where should the billing data go?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**service costs from three separate projects**\" | Billing data from one **billing account** (covers all its projects) |\n| \"**by service type, daily and monthly**\" | Grouping and filtering by **time windows** |\n| \"**standard query syntax**\" | **Standard SQL**, which means **BigQuery** |\n| \"**next six months**\" | Lots of history to analyze, plus forecasting |\n\n**Exam topic:** Billing, specifically **exporting Cloud Billing data to BigQuery**."
+    "md": "**In plain words:**\n- **The situation:** You have Google Cloud cost data from three separate projects.\n- **What you must achieve:** Build cost estimates by service type, daily and monthly, for the next six months.\n- **The limits:** You want to use standard query syntax (normal SQL).\n- **What they're really asking:** Where should the cost data go so you can analyze it with SQL queries?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**service costs from three separate projects**\" | Billing data from one **billing account** (covers all its projects) |\n| \"**by service type, daily and monthly**\" | Grouping and filtering by **time windows** |\n| \"**standard query syntax**\" | **Standard SQL**, which means **BigQuery** |\n| \"**next six months**\" | Lots of history to analyze, plus forecasting |\n\n**Exam topic:** Billing, specifically **exporting Cloud Billing data to BigQuery**."
    },
    {
     "kind": "terms",
@@ -1130,7 +1130,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "You want to study your Google Cloud **spending** across **3 projects**, grouped **by service** (Compute Engine, Cloud SQL, BigQuery, ...) and **by day and month**, to **estimate the next 6 months**. You want to do it with **standard query syntax**, meaning **SQL**. Where should the billing data go?"
+  "plain": "- **The situation:** You have Google Cloud cost data from three separate projects.\n- **What you must achieve:** Build cost estimates by service type, daily and monthly, for the next six months.\n- **The limits:** You want to use standard query syntax (normal SQL).\n- **What they're really asking:** Where should the cost data go so you can analyze it with SQL queries?"
  },
  {
   "file": "Q018-storage-lifecycle-age.md",
@@ -1138,7 +1138,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Videos in a bucket should **automatically** move to the cheaper **Coldline** class **90 days** after they're uploaded, and be **deleted 1 year after they were uploaded**. How do you set that up, and what numbers do you use?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**set up a policy**\" | An **automatic rule**, so **Object Lifecycle Management** |\n| \"**moved to Coldline after 90 days**\" | **SetStorageClass** action with **Age = 90** |\n| \"**deleted after one year from their creation**\" | **Delete** action with **Age = 365** |\n| \"**from their creation**\" | 🔑 **Age always counts from the object's creation date**, so there's no subtracting |\n\n**Exam topic:** Cloud Storage, specifically **Object Lifecycle Management**.\n\n🔑 **The key trick:** The **Age** condition counts days **since the object was created**. Moving it to Coldline **does not reset the clock**. So \"delete after one year\" is **Age 365**, not 275."
+    "md": "**In plain words:**\n- **The situation:** Videos are stored in a regional Cloud Storage bucket (a bucket is a named container for files).\n- **What you must achieve:** After 90 days, move each video to Coldline (a cheaper class for rarely opened files); one year after it was created, delete it.\n- **The limits:** It should happen automatically.\n- **What they're really asking:** How do you set up rules that first move and then delete the videos on schedule?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**set up a policy**\" | An **automatic rule**, so **Object Lifecycle Management** |\n| \"**moved to Coldline after 90 days**\" | **SetStorageClass** action with **Age = 90** |\n| \"**deleted after one year from their creation**\" | **Delete** action with **Age = 365** |\n| \"**from their creation**\" | 🔑 **Age always counts from the object's creation date**, so there's no subtracting |\n\n**Exam topic:** Cloud Storage, specifically **Object Lifecycle Management**.\n\n🔑 **The key trick:** The **Age** condition counts days **since the object was created**. Moving it to Coldline **does not reset the clock**. So \"delete after one year\" is **Age 365**, not 275."
    },
    {
     "kind": "terms",
@@ -1196,7 +1196,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Videos in a bucket should **automatically** move to the cheaper **Coldline** class **90 days** after they're uploaded, and be **deleted 1 year after they were uploaded**. How do you set that up, and what numbers do you use?"
+  "plain": "- **The situation:** Videos are stored in a regional Cloud Storage bucket (a bucket is a named container for files).\n- **What you must achieve:** After 90 days, move each video to Coldline (a cheaper class for rarely opened files); one year after it was created, delete it.\n- **The limits:** It should happen automatically.\n- **What they're really asking:** How do you set up rules that first move and then delete the videos on schedule?"
  },
  {
   "file": "Q019-vm-service-account.md",
@@ -1204,7 +1204,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A VM needs to talk to **Cloud SQL**. You made a **special service account** (a robot identity) that has permission to do that. How do you make the VM **use that service account** instead of the **default** one Google gives every VM?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**service account with the appropriate access rights**\" | The identity and its permissions already exist. You just need to **attach** it to the VM |\n| \"**instead of the default Compute Engine service account**\" | Choose the service account in the VM's **Identity and API access** settings |\n| (implied) | Google's best practice is to **attach** service accounts and **avoid downloading key files** |\n\n**Exam topic:** IAM, specifically **service accounts on Compute Engine**."
+    "md": "**In plain words:**\n- **The situation:** A Linux VM needs to connect to Cloud SQL (Google's managed relational database). You made a service account (a non-human Google identity that programs use) with the right access.\n- **What you must achieve:** Make the VM use your service account instead of the default one every VM gets.\n- **The limits:** None stated.\n- **What they're really asking:** How do you switch the VM to your own service account?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**service account with the appropriate access rights**\" | The identity and its permissions already exist. You just need to **attach** it to the VM |\n| \"**instead of the default Compute Engine service account**\" | Choose the service account in the VM's **Identity and API access** settings |\n| (implied) | Google's best practice is to **attach** service accounts and **avoid downloading key files** |\n\n**Exam topic:** IAM, specifically **service accounts on Compute Engine**."
    },
    {
     "kind": "terms",
@@ -1265,7 +1265,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "A VM needs to talk to **Cloud SQL**. You made a **special service account** (a robot identity) that has permission to do that. How do you make the VM **use that service account** instead of the **default** one Google gives every VM?"
+  "plain": "- **The situation:** A Linux VM needs to connect to Cloud SQL (Google's managed relational database). You made a service account (a non-human Google identity that programs use) with the right access.\n- **What you must achieve:** Make the VM use your service account instead of the default one every VM gets.\n- **The limits:** None stated.\n- **What they're really asking:** How do you switch the VM to your own service account?"
  },
  {
   "file": "Q020-rdp-windows-vm.md",
@@ -1273,7 +1273,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You made a **Windows VM** with **SQL Server 2017** on it. You want to **log in to its desktop remotely** (with RDP) in the **fewest steps** that actually **work**. What do you need?\n\nTo log in to **any** Windows VM with RDP, you need **all 3** of these:\n1. 🔑 **A username and password.** A new Windows VM on Google Cloud **has none for you yet**, so you must **set/generate** one.\n2. 🚪 **An open network door.** A firewall rule allowing **port 3389** (the RDP port).\n3. 🖥️ **A way to start RDP.** The Console's **RDP button**, or an RDP client app.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**SQL Server 2017 on Compute Engine**\" | A **Windows** VM, so you connect with **RDP** (not SSH) |\n| \"**connect**\" | You need **credentials + port 3389 + an RDP connection** |\n| \"**fewest number of steps**\" | The fewest steps that **still work**. Skipping a required step doesn't count |\n\n**Exam topic:** Compute Engine, specifically **connecting to Windows VMs**."
+    "md": "**In plain words:**\n- **The situation:** You created a VM running SQL Server 2017 (a Microsoft database on Windows) to try new features.\n- **What you must achieve:** Log in to that VM.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** What is the quickest way to log in to this Windows VM?\n\nTo log in to **any** Windows VM with RDP, you need **all 3** of these:\n1. 🔑 **A username and password.** A new Windows VM on Google Cloud **has none for you yet**, so you must **set/generate** one.\n2. 🚪 **An open network door.** A firewall rule allowing **port 3389** (the RDP port).\n3. 🖥️ **A way to start RDP.** The Console's **RDP button**, or an RDP client app.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**SQL Server 2017 on Compute Engine**\" | A **Windows** VM, so you connect with **RDP** (not SSH) |\n| \"**connect**\" | You need **credentials + port 3389 + an RDP connection** |\n| \"**fewest number of steps**\" | The fewest steps that **still work**. Skipping a required step doesn't count |\n\n**Exam topic:** Compute Engine, specifically **connecting to Windows VMs**."
    },
    {
     "kind": "terms",
@@ -1331,7 +1331,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "You made a **Windows VM** with **SQL Server 2017** on it. You want to **log in to its desktop remotely** (with RDP) in the **fewest steps** that actually **work**. What do you need?"
+  "plain": "- **The situation:** You created a VM running SQL Server 2017 (a Microsoft database on Windows) to try new features.\n- **What you must achieve:** Log in to that VM.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** What is the quickest way to log in to this Windows VM?"
  },
  {
   "file": "Q021-gcloud-multiple-configurations.md",
@@ -1339,7 +1339,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You work in **two different Google Cloud accounts**. Each one uses a **different region and zone**. From your terminal, you want to **create one VM in each account**. How do you switch cleanly between the two setups?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**one GCP account** … **another account**\" | Two sets of login details, so **two gcloud configurations** |\n| \"**default** region and zone\" / \"**non-default** region and zone\" | Each configuration stores its **own region and zone** |\n| \"**start a new Compute Engine instance**\" | You need a real create command (`gcloud compute instances create`), not a \"list\" command |\n| \"**command line interface**\" | The `gcloud` tool |\n\n**Exam topic:** Cloud SDK / gcloud CLI, specifically **named configurations**. (This is the sister question of Q005, which used `describe`.)"
+    "md": "**In plain words:**\n- **The situation:** You use two Google Cloud accounts. One uses your default region and zone (location settings); the other uses a different region and zone.\n- **What you must achieve:** Create a new VM in each account from the command line.\n- **The limits:** Each VM must be created in the right account and the right location.\n- **What they're really asking:** How do you set up the command-line tool so it can work with both accounts and their different locations?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**one GCP account** … **another account**\" | Two sets of login details, so **two gcloud configurations** |\n| \"**default** region and zone\" / \"**non-default** region and zone\" | Each configuration stores its **own region and zone** |\n| \"**start a new Compute Engine instance**\" | You need a real create command (`gcloud compute instances create`), not a \"list\" command |\n| \"**command line interface**\" | The `gcloud` tool |\n\n**Exam topic:** Cloud SDK / gcloud CLI, specifically **named configurations**. (This is the sister question of Q005, which used `describe`.)"
    },
    {
     "kind": "terms",
@@ -1400,7 +1400,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You work in **two different Google Cloud accounts**. Each one uses a **different region and zone**. From your terminal, you want to **create one VM in each account**. How do you switch cleanly between the two setups?"
+  "plain": "- **The situation:** You use two Google Cloud accounts. One uses your default region and zone (location settings); the other uses a different region and zone.\n- **What you must achieve:** Create a new VM in each account from the command line.\n- **The limits:** Each VM must be created in the right account and the right location.\n- **What they're really asking:** How do you set up the command-line tool so it can work with both accounts and their different locations?"
  },
  {
   "file": "Q022-deployment-manager-preview.md",
@@ -1408,7 +1408,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You made **big changes** to a Deployment Manager template, the file that describes your infrastructure. Before you **actually build** anything, you want to check that every resource can find the other resources it **depends on**, like a VM that needs its network. And you want the answer **fast**. How?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**before committing it to the project**\" | Don't create real resources yet, so **preview first** |\n| \"**dependencies of all defined resources are properly met**\" | Deployment Manager has to read the whole template and work out **what depends on what** |\n| \"**most rapid feedback**\" | No new project, no waiting for real resources to build, no digging through logs |\n| \"**Deployment Manager**\" | The answer is a Deployment Manager feature: **`--preview`** |\n\n**Exam topic:** Deployment Manager (infrastructure as code), specifically **previewing changes**. Related to Q011 and Q014."
+    "md": "**In plain words:**\n- **The situation:** You made big changes to a complex Deployment Manager template (a file describing the resources to create and how they depend on each other).\n- **What you must achieve:** Check that every resource and its dependencies (what needs what first) are correct before committing the change.\n- **The limits:** You want the fastest feedback.\n- **What they're really asking:** How do you check the template quickly without actually building everything?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**before committing it to the project**\" | Don't create real resources yet, so **preview first** |\n| \"**dependencies of all defined resources are properly met**\" | Deployment Manager has to read the whole template and work out **what depends on what** |\n| \"**most rapid feedback**\" | No new project, no waiting for real resources to build, no digging through logs |\n| \"**Deployment Manager**\" | The answer is a Deployment Manager feature: **`--preview`** |\n\n**Exam topic:** Deployment Manager (infrastructure as code), specifically **previewing changes**. Related to Q011 and Q014."
    },
    {
     "kind": "terms",
@@ -1466,7 +1466,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "You made **big changes** to a Deployment Manager template, the file that describes your infrastructure. Before you **actually build** anything, you want to check that every resource can find the other resources it **depends on**, like a VM that needs its network. And you want the answer **fast**. How?"
+  "plain": "- **The situation:** You made big changes to a complex Deployment Manager template (a file describing the resources to create and how they depend on each other).\n- **What you must achieve:** Check that every resource and its dependencies (what needs what first) are correct before committing the change.\n- **The limits:** You want the fastest feedback.\n- **What they're really asking:** How do you check the template quickly without actually building everything?"
  },
  {
   "file": "Q023-time-series-pipeline.md",
@@ -1474,7 +1474,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Lots of **devices** (sensors, smart lights, speakers) keep sending **readings with a timestamp**, for example \"temperature at 10:00:01, 10:00:02, …\". That's **time-series data**. The data flows into Google Cloud through 4 boxes:\n\n| Box | Job in the diagram | What it needs |\n|---|---|---|\n| **1** | First stop, where **messages arrive** | A service that **receives a flood of messages**: **Pub/Sub** |\n| **2** | **Processes** the data, then **splits it into two paths** | A service that **cleans and transforms streams**: **Dataflow** |\n| **3** | Under the **\"Storage\"** label | A database for **huge amounts of time-series data with fast reads**: **Bigtable** |\n| **4** | Under the **\"Analytics\"** label | A **SQL analytics** warehouse: **BigQuery** |\n\n| Keyword / clue | What it hints at |\n|---|---|\n| \"**time-series data**\" | Bigtable is Google's go-to for time series |\n| \"**pipeline to process**\" | A processing step: **Dataflow** |\n| Diagram label \"**Storage**\" over box 3 | A database goes in box 3, **not** an analytics tool |\n| Diagram label \"**Analytics**\" over box 4 | **BigQuery** goes in box 4 |\n| Devices + gateway sending messages | **Pub/Sub** first |\n\n**Exam topic:** Data and analytics services: choosing the right service for **ingest → process → store → analyze**."
+    "md": "**In plain words:**\n- **The situation:** A diagram shows a pipeline for time-series data (readings with timestamps, like sensor values). Devices send data in, then box 1 receives it, box 2 processes it, box 3 stores it and box 4 analyzes it.\n- **What you must achieve:** Put the right Google Cloud service in each box.\n- **The limits:** It must handle lots of timestamped data.\n- **What they're really asking:** Which Google Cloud services belong in boxes 1, 2, 3 and 4?\n\n| Box | Job in the diagram | What it needs |\n|---|---|---|\n| **1** | First stop, where **messages arrive** | A service that **receives a flood of messages**: **Pub/Sub** |\n| **2** | **Processes** the data, then **splits it into two paths** | A service that **cleans and transforms streams**: **Dataflow** |\n| **3** | Under the **\"Storage\"** label | A database for **huge amounts of time-series data with fast reads**: **Bigtable** |\n| **4** | Under the **\"Analytics\"** label | A **SQL analytics** warehouse: **BigQuery** |\n\n| Keyword / clue | What it hints at |\n|---|---|\n| \"**time-series data**\" | Bigtable is Google's go-to for time series |\n| \"**pipeline to process**\" | A processing step: **Dataflow** |\n| Diagram label \"**Storage**\" over box 3 | A database goes in box 3, **not** an analytics tool |\n| Diagram label \"**Analytics**\" over box 4 | **BigQuery** goes in box 4 |\n| Devices + gateway sending messages | **Pub/Sub** first |\n\n**Exam topic:** Data and analytics services: choosing the right service for **ingest → process → store → analyze**."
    },
    {
     "kind": "terms",
@@ -1532,7 +1532,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Lots of **devices** (sensors, smart lights, speakers) keep sending **readings with a timestamp**, for example \"temperature at 10:00:01, 10:00:02, …\". That's **time-series data**. The data flows into Google Cloud through 4 boxes:"
+  "plain": "- **The situation:** A diagram shows a pipeline for time-series data (readings with timestamps, like sensor values). Devices send data in, then box 1 receives it, box 2 processes it, box 3 stores it and box 4 analyzes it.\n- **What you must achieve:** Put the right Google Cloud service in each box.\n- **The limits:** It must handle lots of timestamped data.\n- **What they're really asking:** Which Google Cloud services belong in boxes 1, 2, 3 and 4?"
  },
  {
   "file": "Q024-app-engine-new-prod-project.md",
@@ -1540,7 +1540,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app runs on App Engine in a **dev project**, and testing passed. Now you want a **separate production project** with the **same app** in it. What are the right steps?\n\nThe two steps are **(1) create the project** and **(2) deploy your source code to it**. Nothing in Google Cloud **copies** a running App Engine app from one project to another, and deploying doesn't **create** a project.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**create a new project**\" | Step 1: `gcloud projects create` |\n| \"**serve as your production environment**\" | Step 2: deploy the **same code** there with `gcloud app deploy --project=…` |\n| \"**testing has succeeded**\" | The code is ready. You deploy the code you already tested, rather than copying the dev deployment |\n\n**Exam topic:** App Engine deployment and project setup (Resource Manager)."
+    "md": "**In plain words:**\n- **The situation:** An App Engine app runs in a development project, and testing passed.\n- **What you must achieve:** Create a new project to serve as production.\n- **The limits:** None stated.\n- **What they're really asking:** What is the correct way to set up the production App Engine app?\n\nThe two steps are **(1) create the project** and **(2) deploy your source code to it**. Nothing in Google Cloud **copies** a running App Engine app from one project to another, and deploying doesn't **create** a project.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**create a new project**\" | Step 1: `gcloud projects create` |\n| \"**serve as your production environment**\" | Step 2: deploy the **same code** there with `gcloud app deploy --project=…` |\n| \"**testing has succeeded**\" | The code is ready. You deploy the code you already tested, rather than copying the dev deployment |\n\n**Exam topic:** App Engine deployment and project setup (Resource Manager)."
    },
    {
     "kind": "terms",
@@ -1598,7 +1598,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Your app runs on App Engine in a **dev project**, and testing passed. Now you want a **separate production project** with the **same app** in it. What are the right steps?"
+  "plain": "- **The situation:** An App Engine app runs in a development project, and testing passed.\n- **What you must achieve:** Create a new project to serve as production.\n- **The limits:** None stated.\n- **What they're really asking:** What is the correct way to set up the production App Engine app?"
  },
  {
   "file": "Q025-bigquery-auditors-group-roles.md",
@@ -1606,7 +1606,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Outside auditors** need to **look at BigQuery's audit logs and data**, read-only. How should you give them access the way Google recommends?\n\nThe question is really testing **two choices at once**:\n\n| Choice | Option pair | Google's recommendation |\n|---|---|---|\n| **Who** gets the role? | **Group** (A, B) vs **individual users** (C, D) | ✅ **Group** |\n| **Which** role? | **Predefined** (A, C) vs **custom** (B, D) | ✅ **Predefined**, when one fits |\n\n**Group + predefined = A.**\n\n| Keyword | What it hints at |\n|---|---|\n| \"**external auditors**\" | Several people, who change over time, so use a **group** |\n| \"**Google-recommended practices**\" | **Groups over individual users. Predefined roles over custom roles** |\n| \"**audit logging**\" + \"**BigQuery**\" | Read-only: **`logging.viewer`** (to read logs) + **`bigquery.dataViewer`** (to read data) |\n\n**Exam topic:** IAM best practices."
+    "md": "**In plain words:**\n- **The situation:** External auditors need to review BigQuery IAM access audit logs (records of who accessed what and when).\n- **What you must achieve:** Set up their access to those logs.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** What is the recommended way to give outside auditors access to these logs?\n\nThe question is really testing **two choices at once**:\n\n| Choice | Option pair | Google's recommendation |\n|---|---|---|\n| **Who** gets the role? | **Group** (A, B) vs **individual users** (C, D) | ✅ **Group** |\n| **Which** role? | **Predefined** (A, C) vs **custom** (B, D) | ✅ **Predefined**, when one fits |\n\n**Group + predefined = A.**\n\n| Keyword | What it hints at |\n|---|---|\n| \"**external auditors**\" | Several people, who change over time, so use a **group** |\n| \"**Google-recommended practices**\" | **Groups over individual users. Predefined roles over custom roles** |\n| \"**audit logging**\" + \"**BigQuery**\" | Read-only: **`logging.viewer`** (to read logs) + **`bigquery.dataViewer`** (to read data) |\n\n**Exam topic:** IAM best practices."
    },
    {
     "kind": "terms",
@@ -1669,7 +1669,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**Outside auditors** need to **look at BigQuery's audit logs and data**, read-only. How should you give them access the way Google recommends?"
+  "plain": "- **The situation:** External auditors need to review BigQuery IAM access audit logs (records of who accessed what and when).\n- **What you must achieve:** Set up their access to those logs.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** What is the recommended way to give outside auditors access to these logs?"
  },
  {
   "file": "Q026-vm-write-bucket-objectcreator.md",
@@ -1677,7 +1677,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Some VMs need to **put files into one specific bucket**. That's all: **write**, into **that one bucket**. What's the Google-recommended way to give them that permission?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**set of Compute Engine instances**\" | Machines, not people, so use a **service account** attached to the VMs (Q019) |\n| \"**write data**\" | Only **create objects**. They don't need to read, delete or manage anything, so use **`storage.objectCreator`** |\n| \"**a particular Cloud Storage bucket**\" | Grant the role **on that bucket only**, not the whole project |\n| \"**Google-recommended practices**\" | **IAM roles + least privilege**. Access scopes are a legacy method |\n\n**Exam topic:** IAM and Cloud Storage permissions (least privilege for service accounts)."
+    "md": "**In plain words:**\n- **The situation:** A set of VMs must write data into one specific Cloud Storage bucket.\n- **What you must achieve:** Give those VMs permission to write there.\n- **The limits:** Follow Google's recommended practice (give only the access needed).\n- **What they're really asking:** How do you give these VMs write access to just that bucket?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**set of Compute Engine instances**\" | Machines, not people, so use a **service account** attached to the VMs (Q019) |\n| \"**write data**\" | Only **create objects**. They don't need to read, delete or manage anything, so use **`storage.objectCreator`** |\n| \"**a particular Cloud Storage bucket**\" | Grant the role **on that bucket only**, not the whole project |\n| \"**Google-recommended practices**\" | **IAM roles + least privilege**. Access scopes are a legacy method |\n\n**Exam topic:** IAM and Cloud Storage permissions (least privilege for service accounts)."
    },
    {
     "kind": "terms",
@@ -1735,7 +1735,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Some VMs need to **put files into one specific bucket**. That's all: **write**, into **that one bucket**. What's the Google-recommended way to give them that permission?"
+  "plain": "- **The situation:** A set of VMs must write data into one specific Cloud Storage bucket.\n- **What you must achieve:** Give those VMs permission to write there.\n- **The limits:** Follow Google's recommended practice (give only the access needed).\n- **What they're really asking:** How do you give these VMs write access to just that bucket?"
  },
  {
   "file": "Q027-storage-data-access-logs.md",
@@ -1743,7 +1743,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You turned on **data access logging** for 3 sensitive buckets. Now you want to see what **one specific person** did: **which files they opened** and **which metadata labels they added**. Where do you look, with the fewest steps?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**have enabled data access logging**\" | The records you need are **Data Access audit logs**, which live in **Cloud Logging** (formerly Stackdriver Logging) |\n| \"**which files have been viewed**\" | Reading data = a **Data Access** log entry. Only Cloud Logging shows these |\n| \"**a particular user**\" + \"**three buckets**\" | You need to **filter** by user email and by bucket, which Logs Explorer does in one query |\n| \"**fewest possible steps**\" | One filtered query in Logs Explorer, not opening each bucket or building something new |\n\n**Exam topic:** Cloud Logging / Cloud Audit Logs."
+    "md": "**In plain words:**\n- **The situation:** Sensitive data is in three buckets, and data access logging (recording who reads or changes data) is turned on.\n- **What you must achieve:** Check one user's activity: whether they added metadata labels (tags on files) and which files they viewed.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** Where do you look to see that user's actions on those buckets?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**have enabled data access logging**\" | The records you need are **Data Access audit logs**, which live in **Cloud Logging** (formerly Stackdriver Logging) |\n| \"**which files have been viewed**\" | Reading data = a **Data Access** log entry. Only Cloud Logging shows these |\n| \"**a particular user**\" + \"**three buckets**\" | You need to **filter** by user email and by bucket, which Logs Explorer does in one query |\n| \"**fewest possible steps**\" | One filtered query in Logs Explorer, not opening each bucket or building something new |\n\n**Exam topic:** Cloud Logging / Cloud Audit Logs."
    },
    {
     "kind": "terms",
@@ -1801,7 +1801,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You turned on **data access logging** for 3 sensitive buckets. Now you want to see what **one specific person** did: **which files they opened** and **which metadata labels they added**. Where do you look, with the fewest steps?"
+  "plain": "- **The situation:** Sensitive data is in three buckets, and data access logging (recording who reads or changes data) is turned on.\n- **What you must achieve:** Check one user's activity: whether they added metadata labels (tags on files) and which files they viewed.\n- **The limits:** Use the fewest steps.\n- **What they're really asking:** Where do you look to see that user's actions on those buckets?"
  },
  {
   "file": "Q028-storage-admin-buckets-and-files.md",
@@ -1809,7 +1809,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You own the project. You want some colleagues to take care of **Cloud Storage**, both the **buckets** (the containers) and the **files** inside them. Which **one role** gives them exactly that, and nothing else?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**manage buckets**\" | They need to create, delete and configure **buckets**, which only **Storage Admin** covers |\n| \"**and files**\" | They also need full control of the **objects** (files) |\n| \"**in Cloud Storage**\" | Only storage, not VMs, databases or the rest of the project, so **not Project Editor** |\n| \"**Google-recommended practices**\" | **Least privilege** + **predefined roles** over broad **basic roles** (Owner/Editor/Viewer) |\n\n**Exam topic:** IAM roles for Cloud Storage (least privilege)."
+    "md": "**In plain words:**\n- **The situation:** You own a project and want colleagues to manage buckets and the files in them in Cloud Storage.\n- **What you must achieve:** Give them the right permissions.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which IAM roles let them manage buckets and files?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**manage buckets**\" | They need to create, delete and configure **buckets**, which only **Storage Admin** covers |\n| \"**and files**\" | They also need full control of the **objects** (files) |\n| \"**in Cloud Storage**\" | Only storage, not VMs, databases or the rest of the project, so **not Project Editor** |\n| \"**Google-recommended practices**\" | **Least privilege** + **predefined roles** over broad **basic roles** (Owner/Editor/Viewer) |\n\n**Exam topic:** IAM roles for Cloud Storage (least privilege)."
    },
    {
     "kind": "terms",
@@ -1867,7 +1867,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You own the project. You want some colleagues to take care of **Cloud Storage**, both the **buckets** (the containers) and the **files** inside them. Which **one role** gives them exactly that, and nothing else?"
+  "plain": "- **The situation:** You own a project and want colleagues to manage buckets and the files in them in Cloud Storage.\n- **What you must achieve:** Give them the right permissions.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which IAM roles let them manage buckets and files?"
  },
  {
   "file": "Q029-signed-url-external-share.md",
@@ -1875,7 +1875,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You need to give an outside company **one sensitive file**. They **don't have a Google account**, so you can't add them in IAM. Their access must **stop after 4 hours**. What's the **safest** way with the **fewest steps**?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**sensitive data**\" | Never make it **public** |\n| \"**removed after four hours**\" | Access must **expire automatically** at a set time |\n| \"**does not have a Google account**\" | You can't use IAM roles. You need a link that **carries its own permission** |\n| \"**most secure**\" + \"**fewest steps**\" | One command that makes an expiring link: a **signed URL** |\n\n**Exam topic:** Cloud Storage access control (signed URLs)."
+    "md": "**In plain words:**\n- **The situation:** A file in a bucket contains sensitive data and must be shared with an outside company that has no Google account.\n- **What you must achieve:** Let them download the file.\n- **The limits:** Access must end automatically after 4 hours, and the method must be the most secure one with the fewest steps.\n- **What they're really asking:** How do you share the file so the access stops working after 4 hours?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**sensitive data**\" | Never make it **public** |\n| \"**removed after four hours**\" | Access must **expire automatically** at a set time |\n| \"**does not have a Google account**\" | You can't use IAM roles. You need a link that **carries its own permission** |\n| \"**most secure**\" + \"**fewest steps**\" | One command that makes an expiring link: a **signed URL** |\n\n**Exam topic:** Cloud Storage access control (signed URLs)."
    },
    {
     "kind": "terms",
@@ -1933,7 +1933,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You need to give an outside company **one sensitive file**. They **don't have a Google account**, so you can't add them in IAM. Their access must **stop after 4 hours**. What's the **safest** way with the **fewest steps**?"
+  "plain": "- **The situation:** A file in a bucket contains sensitive data and must be shared with an outside company that has no Google account.\n- **What you must achieve:** Let them download the file.\n- **The limits:** Access must end automatically after 4 hours, and the method must be the most secure one with the fewest steps.\n- **What they're really asking:** How do you share the file so the access stops working after 4 hours?"
  },
  {
   "file": "Q030-gke-daemonset-monitoring.md",
@@ -1941,7 +1941,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your GKE cluster **adds and removes nodes automatically** (autoscaler). You need **exactly one monitoring pod on every node**, including **new nodes that appear later**. Which Kubernetes object does that by itself?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**each node**\" | One copy **per node**, which is exactly what a **DaemonSet** does |\n| \"**cluster autoscaler**\" | Nodes come and go, so new nodes must get the pod **automatically** |\n| \"**monitoring pod**\" / \"**container metrics**\" | A classic **node agent** (log/metrics collector), the textbook DaemonSet use |\n\n**Exam topic:** GKE / Kubernetes workloads."
+    "md": "**In plain words:**\n- **The situation:** You are creating a GKE cluster (Google Kubernetes Engine) with the cluster autoscaler on (it adds and removes nodes, the machines in the cluster).\n- **What you must achieve:** Every node, including nodes added later, must run one monitoring pod (a small container) that sends metrics to an outside monitoring tool.\n- **The limits:** It must also cover nodes the autoscaler adds later.\n- **What they're really asking:** What Kubernetes setup puts one copy of the monitoring pod on every node automatically?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**each node**\" | One copy **per node**, which is exactly what a **DaemonSet** does |\n| \"**cluster autoscaler**\" | Nodes come and go, so new nodes must get the pod **automatically** |\n| \"**monitoring pod**\" / \"**container metrics**\" | A classic **node agent** (log/metrics collector), the textbook DaemonSet use |\n\n**Exam topic:** GKE / Kubernetes workloads."
    },
    {
     "kind": "terms",
@@ -1997,7 +1997,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Your GKE cluster **adds and removes nodes automatically** (autoscaler). You need **exactly one monitoring pod on every node**, including **new nodes that appear later**. Which Kubernetes object does that by itself?"
+  "plain": "- **The situation:** You are creating a GKE cluster (Google Kubernetes Engine) with the cluster autoscaler on (it adds and removes nodes, the machines in the cluster).\n- **What you must achieve:** Every node, including nodes added later, must run one monitoring pod (a small container) that sends metrics to an outside monitoring tool.\n- **The limits:** It must also cover nodes the autoscaler adds later.\n- **What they're really asking:** What Kubernetes setup puts one copy of the monitoring pod on every node automatically?"
  },
  {
   "file": "Q031-enable-pubsub-api.md",
@@ -2005,7 +2005,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your App Engine app needs to **send and receive Pub/Sub messages**. The **Pub/Sub API is switched off** in the project. What must you do so the app can actually use Pub/Sub?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**API is currently disabled**\" | Nothing works until **someone turns it on**. Google Cloud **never turns APIs on by itself** |\n| \"**service account to authenticate**\" | Identity is handled. The missing piece is the **switched-off API** |\n| \"**make sure your application can use**\" | The reliable, simple step: **Enable it in the API Library** (or `gcloud services enable`) |\n\n**Exam topic:** Project setup / APIs & Services."
+    "md": "**In plain words:**\n- **The situation:** Your App Engine app must send and receive Pub/Sub messages (Pub/Sub is Google's messaging service). The Pub/Sub API (the project's on-switch for that service) is turned off. The app signs in with a service account.\n- **What you must achieve:** Make Pub/Sub work for the app.\n- **The limits:** None stated.\n- **What they're really asking:** What must you set up so the app can use Pub/Sub?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**API is currently disabled**\" | Nothing works until **someone turns it on**. Google Cloud **never turns APIs on by itself** |\n| \"**service account to authenticate**\" | Identity is handled. The missing piece is the **switched-off API** |\n| \"**make sure your application can use**\" | The reliable, simple step: **Enable it in the API Library** (or `gcloud services enable`) |\n\n**Exam topic:** Project setup / APIs & Services."
    },
    {
     "kind": "terms",
@@ -2063,7 +2063,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Your App Engine app needs to **send and receive Pub/Sub messages**. The **Pub/Sub API is switched off** in the project. What must you do so the app can actually use Pub/Sub?"
+  "plain": "- **The situation:** Your App Engine app must send and receive Pub/Sub messages (Pub/Sub is Google's messaging service). The Pub/Sub API (the project's on-switch for that service) is turned off. The app signs in with a service account.\n- **What you must achieve:** Make Pub/Sub work for the app.\n- **The limits:** None stated.\n- **What they're really asking:** What must you set up so the app can use Pub/Sub?"
  },
  {
   "file": "Q032-monitoring-multiple-projects.md",
@@ -2071,7 +2071,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your VMs, databases and apps live in **several different projects**. You want to see **all of them on one monitoring dashboard**. How do you set that up?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**distributed over different projects**\" | Monitoring normally sees **one project**. You must **connect** the others |\n| \"**consolidate**\" / \"**same dashboard**\" | **One** monitoring home, with every project **linked** into it |\n| \"**Stackdriver account**\" | Old name for a **Monitoring Workspace**, called a **metrics scope** today |\n\n**Exam topic:** Cloud Monitoring (multi-project monitoring)."
+    "md": "**In plain words:**\n- **The situation:** Resources you need to watch are spread over different projects.\n- **What you must achieve:** See them all on one Stackdriver dashboard (Stackdriver is the old name of Cloud Monitoring).\n- **The limits:** None stated.\n- **What they're really asking:** How do you bring monitoring for several projects into one place?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**distributed over different projects**\" | Monitoring normally sees **one project**. You must **connect** the others |\n| \"**consolidate**\" / \"**same dashboard**\" | **One** monitoring home, with every project **linked** into it |\n| \"**Stackdriver account**\" | Old name for a **Monitoring Workspace**, called a **metrics scope** today |\n\n**Exam topic:** Cloud Monitoring (multi-project monitoring)."
    },
    {
     "kind": "terms",
@@ -2129,7 +2129,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Your VMs, databases and apps live in **several different projects**. You want to see **all of them on one monitoring dashboard**. How do you set that up?"
+  "plain": "- **The situation:** Resources you need to watch are spread over different projects.\n- **What you must achieve:** See them all on one Stackdriver dashboard (Stackdriver is the old name of Cloud Monitoring).\n- **The limits:** None stated.\n- **What they're really asking:** How do you bring monitoring for several projects into one place?"
  },
  {
   "file": "Q033-mig-single-instance-always-on.md",
@@ -2137,7 +2137,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You run an app on a VM inside a **managed instance group (MIG)**. Two rules:\n1. **Always running**: if the VM dies, a new one must replace it.\n2. **Never more than one** VM at the same time.\n\nWhich MIG setting guarantees \"**exactly one, always**\"?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**running at all times**\" | At least **1** → **minimum = 1** |\n| \"**only a single instance**\" | Never 2 → **maximum = 1** |\n| \"**minimum / maximum number of instances**\" | These two settings **only exist when autoscaling is On**. That's why A wins over B |\n\n**Exam topic:** Compute Engine / managed instance groups.\n\n> ⚠️ **Honest note:** This is one of the most debated questions (132 comments). Many people pick **B** because \"why autoscale if it never changes?\" The accepted answer is **A**, because in a real MIG **\"min\" and \"max\" are autoscaler settings**. With autoscaling **Off**, those fields don't exist. You set a fixed **target size** instead. So option B describes a setup you can't actually configure."
+    "md": "**In plain words:**\n- **The situation:** An app runs on a VM in a managed instance group (a group that keeps VMs running from a template and replaces broken ones).\n- **What you must achieve:** The app must always be running.\n- **The limits:** Only one VM may run per project.\n- **What they're really asking:** How should you set the group's size and scaling so exactly one VM is always running?\n\nWhich MIG setting guarantees \"**exactly one, always**\"?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**running at all times**\" | At least **1** → **minimum = 1** |\n| \"**only a single instance**\" | Never 2 → **maximum = 1** |\n| \"**minimum / maximum number of instances**\" | These two settings **only exist when autoscaling is On**. That's why A wins over B |\n\n**Exam topic:** Compute Engine / managed instance groups.\n\n> ⚠️ **Honest note:** This is one of the most debated questions (132 comments). Many people pick **B** because \"why autoscale if it never changes?\" The accepted answer is **A**, because in a real MIG **\"min\" and \"max\" are autoscaler settings**. With autoscaling **Off**, those fields don't exist. You set a fixed **target size** instead. So option B describes a setup you can't actually configure."
    },
    {
     "kind": "terms",
@@ -2195,7 +2195,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You run an app on a VM inside a **managed instance group (MIG)**. Two rules:\n1. **Always running**: if the VM dies, a new one must replace it.\n2. **Never more than one** VM at the same time."
+  "plain": "- **The situation:** An app runs on a VM in a managed instance group (a group that keeps VMs running from a template and replaces broken ones).\n- **What you must achieve:** The app must always be running.\n- **The limits:** Only one VM may run per project.\n- **What they're really asking:** How should you set the group's size and scaling so exactly one VM is always running?"
  },
  {
   "file": "Q034-verify-iam-members-roles.md",
@@ -2203,7 +2203,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want to see **who** (users, groups, service accounts) has **which role** in `my-project`. Where do you look?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**users and roles assigned**\" | You need the **pairs**: *person → role*. That's the project's **IAM policy** |\n| \"**within a GCP project**\" | Look at **that project's** IAM page, not a global list of roles |\n| \"**verify**\" | Just look and review, so a read-only view is fine |\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** There is a project named my-project.\n- **What you must achieve:** Check which users have which IAM roles in it.\n- **The limits:** None stated.\n- **What they're really asking:** How do you see the users and roles assigned in that project?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**users and roles assigned**\" | You need the **pairs**: *person → role*. That's the project's **IAM policy** |\n| \"**within a GCP project**\" | Look at **that project's** IAM page, not a global list of roles |\n| \"**verify**\" | Just look and review, so a read-only view is fine |\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -2261,7 +2261,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "You want to see **who** (users, groups, service accounts) has **which role** in `my-project`. Where do you look?"
+  "plain": "- **The situation:** There is a project named my-project.\n- **What you must achieve:** Check which users have which IAM roles in it.\n- **The limits:** None stated.\n- **What they're really asking:** How do you see the users and roles assigned in that project?"
  },
  {
   "file": "Q035-new-billing-account-link-project.md",
@@ -2269,7 +2269,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Two tasks, in order: **(1) create a NEW billing account**, then **(2) link it to a project that ALREADY exists**. Which option does **both**, with the right permission?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**create a new billing account**\" | Any option that uses the **existing** billing account (A, C, D) is out |\n| \"**existing** … project\" | Don't create a new project (C is out) |\n| \"**link it with**\" a project | Changing which billing account a project uses needs permission **on the project**: **Project Billing Manager** (or Owner) |\n\n**Exam topic:** Billing.\n\n> 💡 **Fastest method:** Read the task words and cross out options. Only **B** says *new billing account* **and** *existing project*. The other three get one of those wrong."
+    "md": "**In plain words:**\n- **The situation:** You need a new billing account.\n- **What you must achieve:** Create it and link an existing project to it.\n- **The limits:** None stated.\n- **What they're really asking:** What are the steps to create a billing account and link the project?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**create a new billing account**\" | Any option that uses the **existing** billing account (A, C, D) is out |\n| \"**existing** … project\" | Don't create a new project (C is out) |\n| \"**link it with**\" a project | Changing which billing account a project uses needs permission **on the project**: **Project Billing Manager** (or Owner) |\n\n**Exam topic:** Billing.\n\n> 💡 **Fastest method:** Read the task words and cross out options. Only **B** says *new billing account* **and** *existing project*. The other three get one of those wrong."
    },
    {
     "kind": "terms",
@@ -2327,7 +2327,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Two tasks, in order: **(1) create a NEW billing account**, then **(2) link it to a project that ALREADY exists**. Which option does **both**, with the right permission?"
+  "plain": "- **The situation:** You need a new billing account.\n- **What you must achieve:** Create it and link an existing project to it.\n- **The limits:** None stated.\n- **What they're really asking:** What are the steps to create a billing account and link the project?"
  },
  {
   "file": "Q036-cross-project-sa-snapshots.md",
@@ -2335,7 +2335,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your service accounts live in **`proj-sa`**. The VMs live in **`proj-vm`**. You want a service account from `proj-sa` to **take snapshots** of the VMs in `proj-vm`. How do you give it permission?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**service account from this project**\" … \"**in another project**\" | A service account can be granted roles **in any project**. Add it to **`proj-vm`'s IAM** |\n| \"**take snapshots**\" | Snapshots are a **disk/storage** action in Compute Engine → **Compute Storage Admin** |\n| (no \"create VMs\" anywhere) | Nothing about the VMs themselves needs to change |\n\n**Exam topic:** IAM (cross-project access for service accounts)."
+    "md": "**In plain words:**\n- **The situation:** All service accounts are kept in a project called proj-sa. The VMs run in another project called proj-vm.\n- **What you must achieve:** Use a service account from proj-sa to take snapshots (disk backups) of the VMs in proj-vm.\n- **The limits:** None stated.\n- **What they're really asking:** Where must you grant permission so that service account can work in the other project?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**service account from this project**\" … \"**in another project**\" | A service account can be granted roles **in any project**. Add it to **`proj-vm`'s IAM** |\n| \"**take snapshots**\" | Snapshots are a **disk/storage** action in Compute Engine → **Compute Storage Admin** |\n| (no \"create VMs\" anywhere) | Nothing about the VMs themselves needs to change |\n\n**Exam topic:** IAM (cross-project access for service accounts)."
    },
    {
     "kind": "terms",
@@ -2393,7 +2393,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Your service accounts live in **`proj-sa`**. The VMs live in **`proj-vm`**. You want a service account from `proj-sa` to **take snapshots** of the VMs in `proj-vm`. How do you give it permission?"
+  "plain": "- **The situation:** All service accounts are kept in a project called proj-sa. The VMs run in another project called proj-vm.\n- **What you must achieve:** Use a service account from proj-sa to take snapshots (disk backups) of the VMs in proj-vm.\n- **The limits:** None stated.\n- **What they're really asking:** Where must you grant permission so that service account can work in the other project?"
  },
  {
   "file": "Q037-app-engine-change-region.md",
@@ -2401,7 +2401,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your App Engine app runs in **us-central**. You want it to run in **asia-northeast1 (Tokyo)** instead. How do you move it?\n\nTwo App Engine rules decide the answer:\n1. **The region can't be changed** after the App Engine app is created.\n2. **Each project can have only ONE App Engine app.**\n\nSo the only way is a **new project** with a **new App Engine app** in Tokyo, and then you deploy your code there.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**initially configured** … **us-central**\" | The region was chosen at creation, and **it's permanent** |\n| \"**Now you want** … **asia-northeast1**\" | You can't edit it, so you need a **new App Engine app** |\n| \"**App Engine application inside the project**\" | One per project, so the new app needs a **new project** |\n\n**Exam topic:** App Engine."
+    "md": "**In plain words:**\n- **The situation:** An App Engine app is currently served from the us-central region.\n- **What you must achieve:** Serve the app from the asia-northeast1 region instead.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do to have the app served from the Asia region?\n\nTwo App Engine rules decide the answer:\n1. **The region can't be changed** after the App Engine app is created.\n2. **Each project can have only ONE App Engine app.**\n\nSo the only way is a **new project** with a **new App Engine app** in Tokyo, and then you deploy your code there.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**initially configured** … **us-central**\" | The region was chosen at creation, and **it's permanent** |\n| \"**Now you want** … **asia-northeast1**\" | You can't edit it, so you need a **new App Engine app** |\n| \"**App Engine application inside the project**\" | One per project, so the new app needs a **new project** |\n\n**Exam topic:** App Engine."
    },
    {
     "kind": "terms",
@@ -2459,7 +2459,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Your App Engine app runs in **us-central**. You want it to run in **asia-northeast1 (Tokyo)** instead. How do you move it?"
+  "plain": "- **The situation:** An App Engine app is currently served from the us-central region.\n- **What you must achieve:** Serve the app from the asia-northeast1 region instead.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do to have the app served from the Asia region?"
  },
  {
   "file": "Q038-spanner-databaseuser-group.md",
@@ -2472,7 +2472,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In plain words: three people need permission to both look at and change rows in a Cloud Spanner database. Which role and access-management approach fit?\n\n- **“view and edit”** means read and write data; a view-only role is not enough.\n- **“three users”** points toward giving the same role to a group, then managing people through the group.\n- **Exam topic:** IAM and Cloud Spanner data access."
+    "md": "**In plain words:**\n- **The situation:** Three users need to work with table data in Cloud Spanner (Google's large-scale relational database).\n- **What you must achieve:** Let them view and edit the data.\n- **The limits:** None stated.\n- **What they're really asking:** Which role should they get, and how should you grant it?\n\n- **“view and edit”** means read and write data; a view-only role is not enough.\n- **“three users”** points toward giving the same role to a group, then managing people through the group.\n- **Exam topic:** IAM and Cloud Spanner data access."
    },
    {
     "kind": "terms",
@@ -2530,7 +2530,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "three people need permission to both look at and change rows in a Cloud Spanner database. Which role and access-management approach fit?"
+  "plain": "- **The situation:** Three users need to work with table data in Cloud Spanner (Google's large-scale relational database).\n- **What you must achieve:** Let them view and edit the data.\n- **The limits:** None stated.\n- **What they're really asking:** Which role should they get, and how should you grant it?"
  },
  {
   "file": "Q039-gke-node-auto-upgrades.md",
@@ -2543,7 +2543,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In plain words: after creating a Kubernetes cluster, how do you keep its software version maintained as GKE releases supported updates?\n\n- **“always runs”** means ongoing maintenance, not a one-time selection.\n- **“supported and stable version”** points to GKE’s managed upgrade process.\n- **Exam topic:** GKE cluster lifecycle and node upgrades."
+    "md": "**In plain words:**\n- **The situation:** You create a new GKE cluster.\n- **What you must achieve:** Make sure it always runs a supported and stable Kubernetes version.\n- **The limits:** It must stay up to date over time, not only on the day you create it.\n- **What they're really asking:** Which cluster setting keeps the Kubernetes version current automatically?\n\n- **“always runs”** means ongoing maintenance, not a one-time selection.\n- **“supported and stable version”** points to GKE’s managed upgrade process.\n- **Exam topic:** GKE cluster lifecycle and node upgrades."
    },
    {
     "kind": "terms",
@@ -2601,7 +2601,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "after creating a Kubernetes cluster, how do you keep its software version maintained as GKE releases supported updates?"
+  "plain": "- **The situation:** You create a new GKE cluster.\n- **What you must achieve:** Make sure it always runs a supported and stable Kubernetes version.\n- **The limits:** It must stay up to date over time, not only on the day you create it.\n- **What they're really asking:** Which cluster setting keeps the Kubernetes version current automatically?"
  },
  {
   "file": "Q040-https-load-balancer-tls-termination.md",
@@ -2614,7 +2614,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In simple terms: a public website runs on a group of VM instances. You want the load balancer to handle the secure connection from visitors and spread their web requests across the instances.\n\n- **“public web application over HTTPS”** means internet-facing web traffic.\n- **“terminate the client SSL session”** means the encrypted client connection ends at the load balancer, which then sends a separate request to a backend.\n- **“Google-recommended practices”** points to an Application Load Balancer for HTTP(S) application traffic.\n- **Exam topic:** Cloud Load Balancing and TLS termination."
+    "md": "**In plain words:**\n- **The situation:** A group of VMs serves a public website over HTTPS (encrypted web traffic).\n- **What you must achieve:** Put a load balancer in front, and have the load balancer handle (terminate) the encrypted connection from visitors.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which load balancer type and setup do this?\n\n- **“public web application over HTTPS”** means internet-facing web traffic.\n- **“terminate the client SSL session”** means the encrypted client connection ends at the load balancer, which then sends a separate request to a backend.\n- **“Google-recommended practices”** points to an Application Load Balancer for HTTP(S) application traffic.\n- **Exam topic:** Cloud Load Balancing and TLS termination."
    },
    {
     "kind": "terms",
@@ -2672,7 +2672,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "a public website runs on a group of VM instances. You want the load balancer to handle the secure connection from visitors and spread their web requests across the instances."
+  "plain": "- **The situation:** A group of VMs serves a public website over HTTPS (encrypted web traffic).\n- **What you must achieve:** Put a load balancer in front, and have the load balancer handle (terminate) the encrypted connection from visitors.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which load balancer type and setup do this?"
  },
  {
   "file": "Q041-large-file-parallel-upload.md",
@@ -2685,7 +2685,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In plain words: one very large file must travel over a fast, otherwise unused internet connection. Which method can send parts of that one file simultaneously to increase transfer speed?\n\n- **“32 GB”** and **“single file”** point to splitting a large file into parts.\n- **“only one on the connection”** means other users are not consuming the stated bandwidth.\n- **“use as much of the rated 1 Gbps as possible”** points to sending pieces in parallel.\n- **Exam topic:** Cloud Storage upload performance and network throughput."
+    "md": "**In plain words:**\n- **The situation:** You must upload one 32 GB file to a Nearline Storage bucket over a 1 Gbps connection that only you are using.\n- **What you must achieve:** Use as much of the connection speed as possible so the upload is fast.\n- **The limits:** It is one single large file.\n- **What they're really asking:** How do you upload it to make full use of the connection?\n\n- **“32 GB”** and **“single file”** point to splitting a large file into parts.\n- **“only one on the connection”** means other users are not consuming the stated bandwidth.\n- **“use as much of the rated 1 Gbps as possible”** points to sending pieces in parallel.\n- **Exam topic:** Cloud Storage upload performance and network throughput."
    },
    {
     "kind": "terms",
@@ -2741,7 +2741,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "one very large file must travel over a fast, otherwise unused internet connection. Which method can send parts of that one file simultaneously to increase transfer speed?"
+  "plain": "- **The situation:** You must upload one 32 GB file to a Nearline Storage bucket over a 1 Gbps connection that only you are using.\n- **What you must achieve:** Use as much of the connection speed as possible so the upload is fast.\n- **The limits:** It is one single large file.\n- **What they're really asking:** How do you upload it to make full use of the connection?"
  },
  {
   "file": "Q042-kubernetes-secret-database-password.md",
@@ -2754,7 +2754,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In plain words: the application needs a password to connect to its database, but the password is written directly into a Kubernetes Deployment configuration. Where should the password live, and how should the container receive it?\n\n- **“database password”** is sensitive information.\n- **“not stored in plain text”** means do not leave the literal password in an ordinary Deployment YAML file or image.\n- **“Google-recommended practices”** points to separating credentials from application configuration and using a secret-handling feature.\n- **Exam topic:** Kubernetes configuration and secrets in GKE."
+    "md": "**In plain words:**\n- **The situation:** A Kubernetes Deployment's configuration file has the database password written in plain text (anyone who sees the file can read it).\n- **What you must achieve:** Change the setup so the password is no longer stored in plain text.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Where should the password be stored, and how should the app receive it?\n\n- **“database password”** is sensitive information.\n- **“not stored in plain text”** means do not leave the literal password in an ordinary Deployment YAML file or image.\n- **“Google-recommended practices”** points to separating credentials from application configuration and using a secret-handling feature.\n- **Exam topic:** Kubernetes configuration and secrets in GKE."
    },
    {
     "kind": "terms",
@@ -2812,7 +2812,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "the application needs a password to connect to its database, but the password is written directly into a Kubernetes Deployment configuration. Where should the password live, and how should the container receive it?"
+  "plain": "- **The situation:** A Kubernetes Deployment's configuration file has the database password written in plain text (anyone who sees the file can read it).\n- **What you must achieve:** Change the setup so the password is no longer stored in plain text.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Where should the password be stored, and how should the app receive it?"
  },
  {
   "file": "Q043-mig-autoscaling-startup-delay.md",
@@ -2825,7 +2825,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In simple terms: the group starts new VMs when CPU goes above 80%, but new VMs need about three minutes before people can use them. The health-check delay is only 30 seconds. How should you give starting VMs enough time before judging them?\n\n- **“30 seconds” vs “three minutes”** is the main clue: the grace period is far shorter than startup time.\n- **“adds more instances than necessary”** suggests the group may be repeatedly reacting while new VMs are still starting or being declared unhealthy too soon.\n- **“initial delay”** points to allowing a new VM time to initialize before acting on failed health checks.\n- **Exam topic:** Compute Engine managed instance group autoscaling and autohealing."
+    "md": "**In plain words:**\n- **The situation:** A managed instance group adds VMs when CPU goes above 80%. Health checks start 30 seconds after a VM is created, but each VM needs about 3 minutes before it can serve users. The group keeps adding more VMs than needed.\n- **What you must achieve:** Keep the group at the right size when it scales.\n- **The limits:** None stated.\n- **What they're really asking:** Which setting should you change so new VMs are not judged before they are ready?\n\n- **“30 seconds” vs “three minutes”** is the main clue: the grace period is far shorter than startup time.\n- **“adds more instances than necessary”** suggests the group may be repeatedly reacting while new VMs are still starting or being declared unhealthy too soon.\n- **“initial delay”** points to allowing a new VM time to initialize before acting on failed health checks.\n- **Exam topic:** Compute Engine managed instance group autoscaling and autohealing."
    },
    {
     "kind": "terms",
@@ -2883,7 +2883,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "the group starts new VMs when CPU goes above 80%, but new VMs need about three minutes before people can use them. The health-check delay is only 30 seconds. How should you give starting VMs enough time before judging them?"
+  "plain": "- **The situation:** A managed instance group adds VMs when CPU goes above 80%. Health checks start 30 seconds after a VM is created, but each VM needs about 3 minutes before it can serve users. The group keeps adding more VMs than needed.\n- **What you must achieve:** Keep the group at the right size when it scales.\n- **The limits:** None stated.\n- **What they're really asking:** Which setting should you change so new VMs are not judged before they are ready?"
  },
  {
   "file": "Q044-batch-jobs-spot-vms.md",
@@ -2896,7 +2896,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In plain words: a workload runs for about two hours each night. Which compute option can run that work at the lowest service cost without paying for a large cluster that sits unused?\n\n- **“batch processing jobs”** means work can run as a scheduled task rather than serving every request immediately.\n- **“2 hours” and “run nightly”** means the machines are needed for a limited scheduled period.\n- **“minimize service costs”** points to discounted capacity and avoiding unnecessary cluster overhead.\n- **Exam topic:** Compute Engine machine choices and discounted VMs for fault-tolerant batch work."
+    "md": "**In plain words:**\n- **The situation:** Batch jobs (work that runs on its own with nobody waiting) take about 2 hours and run every night.\n- **What you must achieve:** Choose and set up compute resources for these jobs.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which compute option runs these nightly jobs most cheaply?\n\n- **“batch processing jobs”** means work can run as a scheduled task rather than serving every request immediately.\n- **“2 hours” and “run nightly”** means the machines are needed for a limited scheduled period.\n- **“minimize service costs”** points to discounted capacity and avoiding unnecessary cluster overhead.\n- **Exam topic:** Compute Engine machine choices and discounted VMs for fault-tolerant batch work."
    },
    {
     "kind": "terms",
@@ -2954,7 +2954,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "a workload runs for about two hours each night. Which compute option can run that work at the lowest service cost without paying for a large cluster that sits unused?"
+  "plain": "- **The situation:** Batch jobs (work that runs on its own with nobody waiting) take about 2 hours and run every night.\n- **What you must achieve:** Choose and set up compute resources for these jobs.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which compute option runs these nightly jobs most cheaply?"
  },
  {
   "file": "Q045-app-engine-rollback-traffic.md",
@@ -2962,7 +2962,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You pushed a new release to App Engine and it has a bug. How do you switch back to the old, working release **right now**?\n\n**Clues in the question:**\n- \"**new version**\" + \"**prior version**\": App Engine keeps old **versions** after you deploy a new one, so the old one is still there.\n- \"**immediately revert**\": you want a quick switch, not a rebuild or a redeploy.\n\n**Exam topic:** App Engine (versions, traffic splitting, rollback)."
+    "md": "**In plain words:**\n- **The situation:** You released a new version of an App Engine app and found a bug.\n- **What you must achieve:** Go back to the previous version.\n- **The limits:** It must happen immediately.\n- **What they're really asking:** What is the fastest way to send users back to the old version?\n\n**Clues in the question:**\n- \"**new version**\" + \"**prior version**\": App Engine keeps old **versions** after you deploy a new one, so the old one is still there.\n- \"**immediately revert**\": you want a quick switch, not a rebuild or a redeploy.\n\n**Exam topic:** App Engine (versions, traffic splitting, rollback)."
    },
    {
     "kind": "terms",
@@ -3018,7 +3018,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "You pushed a new release to App Engine and it has a bug. How do you switch back to the old, working release **right now**?"
+  "plain": "- **The situation:** You released a new version of an App Engine app and found a bug.\n- **What you must achieve:** Go back to the previous version.\n- **The limits:** It must happen immediately.\n- **What they're really asking:** What is the fastest way to send users back to the old version?"
  },
  {
   "file": "Q046-app-engine-gcloud-project-config.md",
@@ -3031,7 +3031,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In plain words: an App Engine deployment landed in the wrong Google Cloud project. Which file or setting should you inspect to discover which project `gcloud` was targeting?\n\n- **“did not deploy to the intended project”** points to the selected project, not the application's runtime settings.\n- **“using gcloud app deploy”** points to the Google Cloud CLI's active project configuration or an explicit `--project` override.\n- **“why this happened and where”** means inspect the configuration that selected the target project.\n- **Exam topic:** App Engine deployment and Google Cloud CLI configurations."
+    "md": "**In plain words:**\n- **The situation:** You ran gcloud app deploy, but the app went to the wrong project.\n- **What you must achieve:** Find out why and where it actually went.\n- **The limits:** None stated.\n- **What they're really asking:** What should you check to see which project gcloud was using?\n\n- **“did not deploy to the intended project”** points to the selected project, not the application's runtime settings.\n- **“using gcloud app deploy”** points to the Google Cloud CLI's active project configuration or an explicit `--project` override.\n- **“why this happened and where”** means inspect the configuration that selected the target project.\n- **Exam topic:** App Engine deployment and Google Cloud CLI configurations."
    },
    {
     "kind": "terms",
@@ -3089,7 +3089,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "an App Engine deployment landed in the wrong Google Cloud project. Which file or setting should you inspect to discover which project `gcloud` was targeting?"
+  "plain": "- **The situation:** You ran gcloud app deploy, but the app went to the wrong project.\n- **What you must achieve:** Find out why and where it actually went.\n- **The limits:** None stated.\n- **What they're really asking:** What should you check to see which project gcloud was using?"
  },
  {
   "file": "Q047-compute-engine-maintenance-restart.md",
@@ -3102,7 +3102,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In simple words: create ten similar VMs that recover automatically from crashes and keep serving through planned maintenance on their physical host.\n\nClues:\n- **“10 Compute Engine instances”**: use a repeatable template and an instance group to manage multiple VMs.\n- **“automatically restart if they crash”**: turn **Automatic Restart** on.\n- **“highly available including during system maintenance”**: choose **Migrate VM instance** for host maintenance, where the VM type supports live migration.\n\n**Exam domain:** Compute Engine, instance groups, VM restart scheduling, and host maintenance. “High availability” here means reducing interruption; it does not promise zero interruption for every kind of failure."
+    "md": "**In plain words:**\n- **The situation:** You need 10 Compute Engine VMs.\n- **What you must achieve:** They must restart by themselves if they crash, and keep running while Google does maintenance on the physical servers underneath.\n- **The limits:** They must be highly available.\n- **What they're really asking:** How do you create and configure the VMs to meet both needs?\n\nClues:\n- **“10 Compute Engine instances”**: use a repeatable template and an instance group to manage multiple VMs.\n- **“automatically restart if they crash”**: turn **Automatic Restart** on.\n- **“highly available including during system maintenance”**: choose **Migrate VM instance** for host maintenance, where the VM type supports live migration.\n\n**Exam domain:** Compute Engine, instance groups, VM restart scheduling, and host maintenance. “High availability” here means reducing interruption; it does not promise zero interruption for every kind of failure."
    },
    {
     "kind": "terms",
@@ -3160,7 +3160,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "create ten similar VMs that recover automatically from crashes and keep serving through planned maintenance on their physical host."
+  "plain": "- **The situation:** You need 10 Compute Engine VMs.\n- **What you must achieve:** They must restart by themselves if they crash, and keep running while Google does maintenance on the physical servers underneath.\n- **The limits:** They must be highly available.\n- **What they're really asking:** How do you create and configure the VMs to meet both needs?"
  },
  {
   "file": "Q048-cloud-storage-pdf-content-type.md",
@@ -3173,7 +3173,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "2. 📖 What the Question Is Asking",
-    "md": "In plain words: the PDF links work, but the browser offers to download the files. Configure the object so the browser recognizes the response as a PDF and can show it inline.\n\nClues:\n- **“users click on the links”**: they can reach the object.\n- **“prompt them to save”**: the problem is the browser's handling of the response.\n- **“displayed within the browser window”**: the browser needs the correct content type to identify the file as a PDF.\n\n**Exam domain:** Cloud Storage static website hosting and object metadata."
+    "md": "**In plain words:**\n- **The situation:** A static website (fixed files, no server code) is hosted in Cloud Storage and links to PDF files. Clicking a PDF makes the browser download it instead of showing it.\n- **What you must achieve:** Show the PDFs inside the browser window.\n- **The limits:** None stated.\n- **What they're really asking:** What setting on the PDF files tells the browser to display them?\n\nClues:\n- **“users click on the links”**: they can reach the object.\n- **“prompt them to save”**: the problem is the browser's handling of the response.\n- **“displayed within the browser window”**: the browser needs the correct content type to identify the file as a PDF.\n\n**Exam domain:** Cloud Storage static website hosting and object metadata."
    },
    {
     "kind": "terms",
@@ -3231,7 +3231,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "the PDF links work, but the browser offers to download the files. Configure the object so the browser recognizes the response as a PDF and can show it inline."
+  "plain": "- **The situation:** A static website (fixed files, no server code) is hosted in Cloud Storage and links to PDF files. Clicking a PDF makes the browser download it instead of showing it.\n- **What you must achieve:** Show the PDFs inside the browser window.\n- **The limits:** None stated.\n- **What they're really asking:** What setting on the PDF files tells the browser to display them?"
  },
  {
   "file": "Q049-vm-increase-memory.md",
@@ -3239,7 +3239,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A VM has **2 CPUs and 4 GB of memory (RAM)** and keeps running out of memory. You want **exactly 8 GB**. What's the right way to change it?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**2 vCPUs and 4 GB**\" | Only the **memory** is the problem. The CPUs are fine |\n| \"**upgrade … to have 8 GB**\" | Change the VM's size, which in Compute Engine **requires the VM to be stopped** |\n| \"**8 GB**\" exactly | A **custom** memory size (2 vCPUs + 8 GB) fits exactly. A bigger preset type wastes money |\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A VM has 2 vCPUs (virtual processors) and 4 GB of memory, and it is running out of memory.\n- **What you must achieve:** Give the VM 8 GB of memory.\n- **The limits:** None stated.\n- **What they're really asking:** How do you increase the VM's memory?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**2 vCPUs and 4 GB**\" | Only the **memory** is the problem. The CPUs are fine |\n| \"**upgrade … to have 8 GB**\" | Change the VM's size, which in Compute Engine **requires the VM to be stopped** |\n| \"**8 GB**\" exactly | A **custom** memory size (2 vCPUs + 8 GB) fits exactly. A bigger preset type wastes money |\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -3297,7 +3297,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "A VM has **2 CPUs and 4 GB of memory (RAM)** and keeps running out of memory. You want **exactly 8 GB**. What's the right way to change it?"
+  "plain": "- **The situation:** A VM has 2 vCPUs (virtual processors) and 4 GB of memory, and it is running out of memory.\n- **What you must achieve:** Give the VM 8 GB of memory.\n- **The limits:** None stated.\n- **What they're really asking:** How do you increase the VM's memory?"
  },
  {
   "file": "Q050-vpc-two-subnets-prod-test.md",
@@ -3305,7 +3305,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Prod VMs and test VMs must be in **two different subnets**, but **all VMs must reach each other by private (internal) IP** with **no extra routes**. Which setup works?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**different subnet**\" | 2 subnets |\n| \"**reach each other over Internal IP**\" | They must be in the **same VPC**. Two separate VPCs can't talk privately without peering or VPN |\n| \"**without creating additional routes**\" | Use the routes Google **creates automatically** inside one VPC |\n| \"**same CIDR range**\" in B/D | 🚩 Two subnets in one VPC **can't overlap**. Google rejects it |\n\n**Exam topic:** VPC networking.\n\n> 🎯 **The one-sentence answer to \"why A and not B?\":** In one VPC, **every subnet needs its own, non-overlapping IP range**. B gives both subnets the **same** range, which Google Cloud **won't allow**, and even if it did, an IP like `10.0.1.5` would exist twice, so nobody would know which VM it means. The \"different region\" part of A isn't what makes it right. It's the **different CIDR range**."
+    "md": "**In plain words:**\n- **The situation:** Production and test VMs will run on Compute Engine.\n- **What you must achieve:** Put them in two different subnets, but let every VM reach every other VM by internal (private) IP address.\n- **The limits:** No extra routes may be created.\n- **What they're really asking:** How should you set up the VPC network and the two subnets?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**different subnet**\" | 2 subnets |\n| \"**reach each other over Internal IP**\" | They must be in the **same VPC**. Two separate VPCs can't talk privately without peering or VPN |\n| \"**without creating additional routes**\" | Use the routes Google **creates automatically** inside one VPC |\n| \"**same CIDR range**\" in B/D | 🚩 Two subnets in one VPC **can't overlap**. Google rejects it |\n\n**Exam topic:** VPC networking.\n\n> 🎯 **The one-sentence answer to \"why A and not B?\":** In one VPC, **every subnet needs its own, non-overlapping IP range**. B gives both subnets the **same** range, which Google Cloud **won't allow**, and even if it did, an IP like `10.0.1.5` would exist twice, so nobody would know which VM it means. The \"different region\" part of A isn't what makes it right. It's the **different CIDR range**."
    },
    {
     "kind": "terms",
@@ -3368,7 +3368,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Prod VMs and test VMs must be in **two different subnets**, but **all VMs must reach each other by private (internal) IP** with **no extra routes**. Which setup works?"
+  "plain": "- **The situation:** Production and test VMs will run on Compute Engine.\n- **What you must achieve:** Put them in two different subnets, but let every VM reach every other VM by internal (private) IP address.\n- **The limits:** No extra routes may be created.\n- **What they're really asking:** How should you set up the VPC network and the two subnets?"
  },
  {
   "file": "Q051-mig-https-health-check-autohealing.md",
@@ -3376,7 +3376,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You're making a group of identical VMs that grows and shrinks on its own and serves an HTTPS website. If one VM breaks, you want Google to notice and **replace it automatically**. What do you set up?\n\n**Clues in the question:**\n- \"**HTTPS web application**\": HTTPS uses **port 443**, so the check should test that port.\n- \"**unhealthy VMs are recreated**\": this is **autohealing**, which needs a **health check** attached to the managed instance group.\n- \"**managed instance group**\": only a *managed* group can recreate VMs, because it has a template to rebuild them from.\n\n**Exam topic:** Compute Engine (MIG autohealing). Same idea as **Q004**."
+    "md": "**In plain words:**\n- **The situation:** You are building an autoscaling managed instance group for an HTTPS web app.\n- **What you must achieve:** Unhealthy VMs must be recreated automatically.\n- **The limits:** None stated.\n- **What they're really asking:** What do you configure so the group notices unhealthy VMs and replaces them?\n\n**Clues in the question:**\n- \"**HTTPS web application**\": HTTPS uses **port 443**, so the check should test that port.\n- \"**unhealthy VMs are recreated**\": this is **autohealing**, which needs a **health check** attached to the managed instance group.\n- \"**managed instance group**\": only a *managed* group can recreate VMs, because it has a template to rebuild them from.\n\n**Exam topic:** Compute Engine (MIG autohealing). Same idea as **Q004**."
    },
    {
     "kind": "terms",
@@ -3432,7 +3432,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You're making a group of identical VMs that grows and shrinks on its own and serves an HTTPS website. If one VM breaks, you want Google to notice and **replace it automatically**. What do you set up?"
+  "plain": "- **The situation:** You are building an autoscaling managed instance group for an HTTPS web app.\n- **What you must achieve:** Unhealthy VMs must be recreated automatically.\n- **The limits:** None stated.\n- **What they're really asking:** What do you configure so the group notices unhealthy VMs and replaces them?"
  },
  {
   "file": "Q052-bigquery-jobuser-group.md",
@@ -3440,7 +3440,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A small data science team, **whose members change often**, needs to **run queries** in BigQuery. How do you give them access the Google-recommended way?\n\nThe question tests **two choices at once**, just like Q025:\n\n| Choice | Options | Google's answer |\n|---|---|---|\n| **Who** gets the role? | Individual users (A, B) vs **group** (C, D) | ✅ **Group** |\n| **Which** role? | **jobUser** (A, C) vs **dataViewer** (B, D) | ✅ **jobUser**, because the task is \"**perform queries**\" |\n\n**Group + jobUser = C.**\n\n| Keyword | What it hints at |\n|---|---|\n| \"**changes frequently**\" | Use a **group**, so membership changes don't touch IAM |\n| \"**perform queries**\" | A query in BigQuery is a **job**. Running jobs needs **`bigquery.jobs.create`**, which is in **jobUser**, not dataViewer |\n| \"**Google-recommended practices**\" | Groups over individual users. Least privilege |\n\n**Exam topic:** IAM / BigQuery access.\n\n> 🎯 **The one-sentence answer to \"why C and not D?\":** Both use a group, so the difference is only the role. **dataViewer** lets you **see** datasets and tables, but it **doesn't let you run a query**. Every BigQuery query is a **job**, and only a role with `bigquery.jobs.create` (like **jobUser**) can start one."
+    "md": "**In plain words:**\n- **The situation:** BigQuery is used as the company data warehouse. The data science team is small and its members change often.\n- **What you must achieve:** Let team members run queries.\n- **The limits:** Follow Google's recommended practice, keeping in mind people join and leave often.\n- **What they're really asking:** How should you grant query access so it stays easy to manage as people come and go?\n\nThe question tests **two choices at once**, just like Q025:\n\n| Choice | Options | Google's answer |\n|---|---|---|\n| **Who** gets the role? | Individual users (A, B) vs **group** (C, D) | ✅ **Group** |\n| **Which** role? | **jobUser** (A, C) vs **dataViewer** (B, D) | ✅ **jobUser**, because the task is \"**perform queries**\" |\n\n**Group + jobUser = C.**\n\n| Keyword | What it hints at |\n|---|---|\n| \"**changes frequently**\" | Use a **group**, so membership changes don't touch IAM |\n| \"**perform queries**\" | A query in BigQuery is a **job**. Running jobs needs **`bigquery.jobs.create`**, which is in **jobUser**, not dataViewer |\n| \"**Google-recommended practices**\" | Groups over individual users. Least privilege |\n\n**Exam topic:** IAM / BigQuery access.\n\n> 🎯 **The one-sentence answer to \"why C and not D?\":** Both use a group, so the difference is only the role. **dataViewer** lets you **see** datasets and tables, but it **doesn't let you run a query**. Every BigQuery query is a **job**, and only a role with `bigquery.jobs.create` (like **jobUser**) can start one."
    },
    {
     "kind": "terms",
@@ -3498,7 +3498,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "A small data science team, **whose members change often**, needs to **run queries** in BigQuery. How do you give them access the Google-recommended way?"
+  "plain": "- **The situation:** BigQuery is used as the company data warehouse. The data science team is small and its members change often.\n- **What you must achieve:** Let team members run queries.\n- **The limits:** Follow Google's recommended practice, keeping in mind people join and leave often.\n- **What they're really asking:** How should you grant query access so it stays easy to manage as people come and go?"
  },
  {
   "file": "Q053-firewall-tiers-service-accounts.md",
@@ -3506,7 +3506,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have a classic 3-tier app (for example **web → API → database**), each tier in its own subnet, and **each tier has its own service account**. You must open **only TCP port 8080**, and **only in two directions**:\n- Tier 1 → Tier 2\n- Tier 2 → Tier 3\n\nWhich firewall rules do exactly that, and nothing more?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**Each tier has a service account**\" | Use the service account as the **firewall label** for targets and sources |\n| \"**TCP port 8080**\" | Allow **only TCP:8080**, not \"all\" (least privilege) |\n| \"**tier #1 … with tier #2**\", \"**tier #2 … with tier #3**\" | The **receiver** is the **target** and the **sender** is the **source**. Tier 1 must **not** reach Tier 3 directly |\n| Traffic **arriving** at tier 2 / tier 3 | **Ingress** rules (incoming), on the receiving tier |\n\n**Exam topic:** VPC firewall rules."
+    "md": "**In plain words:**\n- **The situation:** Three groups (tiers) of VMs are in three subnets of one network. Each tier has its own service account.\n- **What you must achieve:** Allow traffic on TCP port 8080 from tier 1 to tier 2, and from tier 2 to tier 3.\n- **The limits:** Allow only these connections and only on port 8080.\n- **What they're really asking:** How do you write firewall rules for exactly these connections?\n\nWhich firewall rules do exactly that, and nothing more?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**Each tier has a service account**\" | Use the service account as the **firewall label** for targets and sources |\n| \"**TCP port 8080**\" | Allow **only TCP:8080**, not \"all\" (least privilege) |\n| \"**tier #1 … with tier #2**\", \"**tier #2 … with tier #3**\" | The **receiver** is the **target** and the **sender** is the **source**. Tier 1 must **not** reach Tier 3 directly |\n| Traffic **arriving** at tier 2 / tier 3 | **Ingress** rules (incoming), on the receiving tier |\n\n**Exam topic:** VPC firewall rules."
    },
    {
     "kind": "terms",
@@ -3569,7 +3569,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You have a classic 3-tier app (for example **web → API → database**), each tier in its own subnet, and **each tier has its own service account**. You must open **only TCP port 8080**, and **only in two directions**:\n- Tier 1 → Tier 2\n- Tier 2 → Tier 3"
+  "plain": "- **The situation:** Three groups (tiers) of VMs are in three subnets of one network. Each tier has its own service account.\n- **What you must achieve:** Allow traffic on TCP port 8080 from tier 1 to tier 2, and from tier 2 to tier 3.\n- **The limits:** Allow only these connections and only on port 8080.\n- **What they're really asking:** How do you write firewall rules for exactly these connections?"
  },
  {
   "file": "Q054-new-region-subnet-same-vpc.md",
@@ -3577,7 +3577,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have one VPC with one subnet in **us-central1**, and an app runs there. You need a new VM in **europe-west1** that can reach the app. What's the simplest Google-recommended setup?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**single VPC**\" | Reuse it. A VPC is **global**, so it can have a subnet in Europe too |\n| \"**europe-west1 region**\" | Subnets are **regional**, so you need a **new subnet** in europe-west1 |\n| \"**needs access to the application**\" | VMs in the **same VPC** reach each other by **private IP** automatically, in any region |\n| \"**Google-recommended practices**\" | The simplest setup that works. No extra VPCs, VPNs or load balancers |\n\n**Exam topic:** VPC networking."
+    "md": "**In plain words:**\n- **The situation:** One VPC network with one subnet in us-central1 hosts an app on a VM.\n- **What you must achieve:** Add a new VM in europe-west1 that can reach that app.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should the network be set up for the new European VM?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**single VPC**\" | Reuse it. A VPC is **global**, so it can have a subnet in Europe too |\n| \"**europe-west1 region**\" | Subnets are **regional**, so you need a **new subnet** in europe-west1 |\n| \"**needs access to the application**\" | VMs in the **same VPC** reach each other by **private IP** automatically, in any region |\n| \"**Google-recommended practices**\" | The simplest setup that works. No extra VPCs, VPNs or load balancers |\n\n**Exam topic:** VPC networking."
    },
    {
     "kind": "terms",
@@ -3635,7 +3635,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You have one VPC with one subnet in **us-central1**, and an app runs there. You need a new VM in **europe-west1** that can reach the app. What's the simplest Google-recommended setup?"
+  "plain": "- **The situation:** One VPC network with one subnet in us-central1 hosts an app on a VM.\n- **What you must achieve:** Add a new VM in europe-west1 that can reach that app.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should the network be set up for the new European VM?"
  },
  {
   "file": "Q055-disable-gke-container-logs.md",
@@ -3643,7 +3643,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** One **development container** in GKE wrote **tons of logs**, and you're paying for storing them. Stop those logs **quickly**, in the **fewest steps**.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**GKE container emitted**\" | The noisy source is the **container** logs (your app's output), not the cluster's own operations |\n| \"**higher costs**\" | Cloud Logging charges for logs **ingested** (stored). Stop them **before** they're stored |\n| \"**quickly**\" + \"**minimum number of steps**\" | One setting in Logging, **not** deleting and rebuilding clusters |\n\n**Exam topic:** Cloud Logging / cost control.\n\n> ⚠️ **Name update:** \"Logs ingestion window in Stackdriver Logging\" is the **old** screen. Today you do the same thing in **Cloud Logging → Log Router**, by adding an **exclusion filter** (for example `resource.type=\"k8s_container\"`) to the `_Default` sink. Same idea: stop the noisy source from being stored."
+    "md": "**In plain words:**\n- **The situation:** Costs were higher than expected because a development container on GKE wrote a huge amount of logs.\n- **What you must achieve:** Stop those logs.\n- **The limits:** Do it quickly, with the fewest steps.\n- **What they're really asking:** What is the quickest way to stop paying for those logs?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**GKE container emitted**\" | The noisy source is the **container** logs (your app's output), not the cluster's own operations |\n| \"**higher costs**\" | Cloud Logging charges for logs **ingested** (stored). Stop them **before** they're stored |\n| \"**quickly**\" + \"**minimum number of steps**\" | One setting in Logging, **not** deleting and rebuilding clusters |\n\n**Exam topic:** Cloud Logging / cost control.\n\n> ⚠️ **Name update:** \"Logs ingestion window in Stackdriver Logging\" is the **old** screen. Today you do the same thing in **Cloud Logging → Log Router**, by adding an **exclusion filter** (for example `resource.type=\"k8s_container\"`) to the `_Default` sink. Same idea: stop the noisy source from being stored."
    },
    {
     "kind": "terms",
@@ -3701,7 +3701,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "One **development container** in GKE wrote **tons of logs**, and you're paying for storing them. Stop those logs **quickly**, in the **fewest steps**."
+  "plain": "- **The situation:** Costs were higher than expected because a development container on GKE wrote a huge amount of logs.\n- **What you must achieve:** Stop those logs.\n- **The limits:** Do it quickly, with the fewest steps.\n- **What they're really asking:** What is the quickest way to stop paying for those logs?"
  },
  {
   "file": "Q056-app-engine-traffic-split.md",
@@ -3709,7 +3709,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your website runs on App Engine. You built a new version and want **only 1% of visitors** to see it while 99% keep the current one. What's the simplest way?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**1% of your users**\" | Send a **share** of traffic to the new version → **traffic splitting** |\n| \"**new test version**\" | App Engine keeps **multiple versions** in the same app |\n| \"**minimize complexity**\" | Use App Engine's **built-in** feature. No new apps, proxies or load balancers |\n\n**Exam topic:** App Engine."
+    "md": "**In plain words:**\n- **The situation:** A website runs on App Engine standard.\n- **What you must achieve:** Show a new test version to 1% of users.\n- **The limits:** Keep it simple.\n- **What they're really asking:** How do you send 1% of visitors to the new version?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**1% of your users**\" | Send a **share** of traffic to the new version → **traffic splitting** |\n| \"**new test version**\" | App Engine keeps **multiple versions** in the same app |\n| \"**minimize complexity**\" | Use App Engine's **built-in** feature. No new apps, proxies or load balancers |\n\n**Exam topic:** App Engine."
    },
    {
     "kind": "terms",
@@ -3767,7 +3767,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Your website runs on App Engine. You built a new version and want **only 1% of visitors** to see it while 99% keep the current one. What's the simplest way?"
+  "plain": "- **The situation:** A website runs on App Engine standard.\n- **What you must achieve:** Show a new test version to 1% of users.\n- **The limits:** Keep it simple.\n- **What they're really asking:** How do you send 1% of visitors to the new version?"
  },
  {
   "file": "Q057-mig-rolling-update-maxsurge.md",
@@ -3775,7 +3775,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your website runs on a group of identical VMs (a MIG) and real customers are using it. You want to swap in the new version **a few VMs at a time**, and the number of working VMs must **never go down** while you do it.\n\n| Keyword | What it hints at |\n|---|---|\n| \"**managed instance group**\" | MIGs have a built-in **rolling update** command |\n| \"**gradually deploy**\" | Replace VMs a few at a time → **rolling update** |\n| \"**live web traffic**\" | You can't take the site down |\n| \"**capacity does not decrease**\" | **maxUnavailable = 0** (never remove a VM before its replacement is ready) |\n\n**Exam topic:** Compute Engine / managed instance groups."
+    "md": "**In plain words:**\n- **The situation:** A web app runs in a managed instance group and is receiving live traffic.\n- **What you must achieve:** Roll out a new version gradually.\n- **The limits:** The serving capacity (number of working VMs) must never drop during the rollout.\n- **What they're really asking:** How should you configure the rolling update?\n\n| Keyword | What it hints at |\n|---|---|\n| \"**managed instance group**\" | MIGs have a built-in **rolling update** command |\n| \"**gradually deploy**\" | Replace VMs a few at a time → **rolling update** |\n| \"**live web traffic**\" | You can't take the site down |\n| \"**capacity does not decrease**\" | **maxUnavailable = 0** (never remove a VM before its replacement is ready) |\n\n**Exam topic:** Compute Engine / managed instance groups."
    },
    {
     "kind": "terms",
@@ -3831,7 +3831,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Your website runs on a group of identical VMs (a MIG) and real customers are using it. You want to swap in the new version **a few VMs at a time**, and the number of working VMs must **never go down** while you do it."
+  "plain": "- **The situation:** A web app runs in a managed instance group and is receiving live traffic.\n- **What you must achieve:** Roll out a new version gradually.\n- **The limits:** The serving capacity (number of working VMs) must never drop during the rollout.\n- **What they're really asking:** How should you configure the rolling update?"
  },
  {
   "file": "Q058-global-relational-db-spanner.md",
@@ -3839,7 +3839,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app stores data in **tables with relationships** (users, orders, ...). Users are **all over the world**, and you don't know how big it will get. Which database grows with you without lots of reconfiguring?\n\n| Question words | What they point to |\n|---|---|\n| \"**relational data**\" | Tables, rows, SQL, joins → only **Cloud SQL** or **Cloud Spanner** qualify. Firestore/Datastore are out |\n| \"**across the globe**\" | Must work across **many regions** → Spanner (Cloud SQL is one region) |\n| \"**size of the user base is unknown**\" + \"**scale with your user growth**\" | Must grow **without limit** by adding capacity → Spanner scales horizontally |\n| \"**minimum configuration changes**\" | Add nodes / turn on autoscaling, no re-architecting → Spanner |\n\n**Exam topic:** Databases / choosing a storage service."
+    "md": "**In plain words:**\n- **The situation:** Your app stores relational data for users all over the world, and nobody knows how big the user base will become.\n- **What you must achieve:** Use a database that grows along with the users.\n- **The limits:** Users are global, and growth should need very few configuration changes.\n- **What they're really asking:** Which database can scale with unknown worldwide growth easily?\n\n| Question words | What they point to |\n|---|---|\n| \"**relational data**\" | Tables, rows, SQL, joins → only **Cloud SQL** or **Cloud Spanner** qualify. Firestore/Datastore are out |\n| \"**across the globe**\" | Must work across **many regions** → Spanner (Cloud SQL is one region) |\n| \"**size of the user base is unknown**\" + \"**scale with your user growth**\" | Must grow **without limit** by adding capacity → Spanner scales horizontally |\n| \"**minimum configuration changes**\" | Add nodes / turn on autoscaling, no re-architecting → Spanner |\n\n**Exam topic:** Databases / choosing a storage service."
    },
    {
     "kind": "terms",
@@ -3897,7 +3897,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Your app stores data in **tables with relationships** (users, orders, ...). Users are **all over the world**, and you don't know how big it will get. Which database grows with you without lots of reconfiguring?"
+  "plain": "- **The situation:** Your app stores relational data for users all over the world, and nobody knows how big the user base will become.\n- **What you must achieve:** Use a database that grows along with the users.\n- **The limits:** Users are global, and growth should need very few configuration changes.\n- **What they're really asking:** Which database can scale with unknown worldwide growth easily?"
  },
  {
   "file": "Q059-finance-link-billing-roles.md",
@@ -3905,7 +3905,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Engineers can create projects, but they must **not** be able to connect projects to the company credit card (billing account). **Only finance** should do that linking, and finance must **not** be able to change anything else in the projects.\n\n| Question words | What they point to |\n|---|---|\n| \"**do not want the engineering team to be able to link**\" | Give engineering **no** billing roles → B and D are out |\n| \"**Only the finance team should be able to link a project to a billing account**\" | Linking needs **two** permissions: one on the **billing account** side, one on the **project** side |\n| \"**should not be able to make any other changes to projects**\" | On the project side use **Project Billing Manager** (billing link only), not Owner/Editor |\n\n**Exam topic:** IAM + Billing."
+    "md": "**In plain words:**\n- **The situation:** You are the organization and billing administrator. The engineering team can create projects (Project Creator role).\n- **What you must achieve:** Only the finance team should be able to link projects to the billing account; engineers should not.\n- **The limits:** Finance must not get any other permissions on projects.\n- **What they're really asking:** Which roles do you give or take away?\n\n| Question words | What they point to |\n|---|---|\n| \"**do not want the engineering team to be able to link**\" | Give engineering **no** billing roles → B and D are out |\n| \"**Only the finance team should be able to link a project to a billing account**\" | Linking needs **two** permissions: one on the **billing account** side, one on the **project** side |\n| \"**should not be able to make any other changes to projects**\" | On the project side use **Project Billing Manager** (billing link only), not Owner/Editor |\n\n**Exam topic:** IAM + Billing."
    },
    {
     "kind": "terms",
@@ -3963,7 +3963,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Engineers can create projects, but they must **not** be able to connect projects to the company credit card (billing account). **Only finance** should do that linking, and finance must **not** be able to change anything else in the projects."
+  "plain": "- **The situation:** You are the organization and billing administrator. The engineering team can create projects (Project Creator role).\n- **What you must achieve:** Only the finance team should be able to link projects to the billing account; engineers should not.\n- **The limits:** Finance must not get any other permissions on projects.\n- **What they're really asking:** Which roles do you give or take away?"
  },
  {
   "file": "Q060-gke-internal-lb-vpc-peering.md",
@@ -3971,7 +3971,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app runs as several pods in GKE (VPC 1). A VM lives in a **different VPC** (`gce-network`, VPC 2), same region, no overlapping IP ranges. The VM must call the app. Do it with the **least effort**.\n\n| Question words | What they point to |\n|---|---|\n| \"**exposes a TCP endpoint**\" + \"**several replicas**\" | Put **one load balancer address** in front of all pods → Service type **LoadBalancer** |\n| \"**another Virtual Private Cloud (VPC)**\" | Two separate networks can't talk privately until you **connect** them → **VPC Peering** |\n| \"**no overlapping IP ranges**\" | The condition peering needs → hint that peering is the answer |\n| \"**same region**\" | An **internal** load balancer is regional, so it works |\n| \"**minimize effort**\" | Built-in features (annotation + peering), not a hand-made proxy VM |\n\n**Exam topic:** GKE + VPC networking."
+    "md": "**In plain words:**\n- **The situation:** An app on GKE exposes a TCP endpoint (a network port clients connect to) and runs several copies. A VM in another VPC network (gce-network, same region, no overlapping IP ranges) must connect to it.\n- **What you must achieve:** Let that VM reach the app.\n- **The limits:** Minimum effort.\n- **What they're really asking:** How do you expose the GKE app so the VM in the other network can reach it?\n\n| Question words | What they point to |\n|---|---|\n| \"**exposes a TCP endpoint**\" + \"**several replicas**\" | Put **one load balancer address** in front of all pods → Service type **LoadBalancer** |\n| \"**another Virtual Private Cloud (VPC)**\" | Two separate networks can't talk privately until you **connect** them → **VPC Peering** |\n| \"**no overlapping IP ranges**\" | The condition peering needs → hint that peering is the answer |\n| \"**same region**\" | An **internal** load balancer is regional, so it works |\n| \"**minimize effort**\" | Built-in features (annotation + peering), not a hand-made proxy VM |\n\n**Exam topic:** GKE + VPC networking."
    },
    {
     "kind": "terms",
@@ -4029,7 +4029,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Your app runs as several pods in GKE (VPC 1). A VM lives in a **different VPC** (`gce-network`, VPC 2), same region, no overlapping IP ranges. The VM must call the app. Do it with the **least effort**."
+  "plain": "- **The situation:** An app on GKE exposes a TCP endpoint (a network port clients connect to) and runs several copies. A VM in another VPC network (gce-network, same region, no overlapping IP ranges) must connect to it.\n- **What you must achieve:** Let that VM reach the app.\n- **The limits:** Minimum effort.\n- **What they're really asking:** How do you expose the GKE app so the VM in the other network can reach it?"
  },
  {
   "file": "Q061-audit-logs-sink-coldline.md",
@@ -4037,7 +4037,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A bank-like company must **keep audit logs for 3 years** (rules require it), across **hundreds of projects**. Nobody will read them unless an auditor or investigator asks. What's the **cheapest** way to keep them?\n\n| Question words | What they point to |\n|---|---|\n| \"**store audit log files for 3 years**\" | Long-term **storage**, rarely opened → cold storage class |\n| \"**financial company**\" | Kept for **compliance/audits**, not daily analysis |\n| \"**hundreds of Google Cloud projects**\" | Use a built-in **sink** (one at the organization level covers all projects), not custom scripts |\n| \"**cost-effective**\" | **Coldline** bucket: very cheap per GB for data opened rarely |\n| \"**log file retention**\" | Just **keep** the files; no querying requirement |\n\n**Exam topic:** Cloud Logging + Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** A financial company with hundreds of Google Cloud projects must keep audit log files for 3 years.\n- **What you must achieve:** Store the logs for 3 years.\n- **The limits:** Keep it cost-effective across all projects.\n- **What they're really asking:** Where and how should logs from all projects be kept cheaply?\n\n| Question words | What they point to |\n|---|---|\n| \"**store audit log files for 3 years**\" | Long-term **storage**, rarely opened → cold storage class |\n| \"**financial company**\" | Kept for **compliance/audits**, not daily analysis |\n| \"**hundreds of Google Cloud projects**\" | Use a built-in **sink** (one at the organization level covers all projects), not custom scripts |\n| \"**cost-effective**\" | **Coldline** bucket: very cheap per GB for data opened rarely |\n| \"**log file retention**\" | Just **keep** the files; no querying requirement |\n\n**Exam topic:** Cloud Logging + Cloud Storage."
    },
    {
     "kind": "terms",
@@ -4095,7 +4095,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "A bank-like company must **keep audit logs for 3 years** (rules require it), across **hundreds of projects**. Nobody will read them unless an auditor or investigator asks. What's the **cheapest** way to keep them?"
+  "plain": "- **The situation:** A financial company with hundreds of Google Cloud projects must keep audit log files for 3 years.\n- **What you must achieve:** Store the logs for 3 years.\n- **The limits:** Keep it cost-effective across all projects.\n- **What they're really asking:** Where and how should logs from all projects be kept cheaply?"
  },
  {
   "file": "Q062-reverse-proxy-memory-custom-vm.md",
@@ -4103,7 +4103,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have a small program (a caching reverse proxy) that needs **lots of memory (32 GB)** but **almost no CPU**. It must respond fast. Where's the **cheapest** place to run it?\n\n| Question words | What they point to |\n|---|---|\n| \"**30-GB in-memory cache**\" + \"**additional 2 GB**\" | Total **32 GB of RAM** needed |\n| \"**consumes almost no CPU**\" | Don't pay for lots of vCPUs → avoid big standard machines (C) |\n| \"**in-memory**\" | RAM, **not disk** → D is out |\n| \"**latency-sensitive**\" | Fast memory access → RAM-based cache |\n| \"**minimize cost**\" | Pay only for what you need: managed cache (A) or a custom machine shape (B) |\n| \"**single**\" | One instance, no cluster → C is overkill |\n\n**Exam topic:** Compute Engine machine types / Memorystore."
+    "md": "**In plain words:**\n- **The situation:** You will run one caching reverse proxy (a server that keeps copies of web pages in memory to serve them fast). It needs almost no CPU, 30 GB of memory for the cache and 2 GB for everything else.\n- **What you must achieve:** Run it on Google Cloud.\n- **The limits:** Lowest cost, and the website is sensitive to delays.\n- **What they're really asking:** Which way of running it gives the memory you need for the least money?\n\n| Question words | What they point to |\n|---|---|\n| \"**30-GB in-memory cache**\" + \"**additional 2 GB**\" | Total **32 GB of RAM** needed |\n| \"**consumes almost no CPU**\" | Don't pay for lots of vCPUs → avoid big standard machines (C) |\n| \"**in-memory**\" | RAM, **not disk** → D is out |\n| \"**latency-sensitive**\" | Fast memory access → RAM-based cache |\n| \"**minimize cost**\" | Pay only for what you need: managed cache (A) or a custom machine shape (B) |\n| \"**single**\" | One instance, no cluster → C is overkill |\n\n**Exam topic:** Compute Engine machine types / Memorystore."
    },
    {
     "kind": "terms",
@@ -4161,7 +4161,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You have a small program (a caching reverse proxy) that needs **lots of memory (32 GB)** but **almost no CPU**. It must respond fast. Where's the **cheapest** place to run it?"
+  "plain": "- **The situation:** You will run one caching reverse proxy (a server that keeps copies of web pages in memory to serve them fast). It needs almost no CPU, 30 GB of memory for the cache and 2 GB for everything else.\n- **What you must achieve:** Run it on Google Cloud.\n- **The limits:** Lowest cost, and the website is sensitive to delays.\n- **What they're really asking:** Which way of running it gives the memory you need for the least money?"
  },
  {
   "file": "Q063-onprem-private-google-access.md",
@@ -4169,7 +4169,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your servers are in **your own building**. They must read/write Cloud Storage, but they're **not allowed on the internet** and can't have public IPs. What's Google's recommended way to connect them to Cloud Storage **privately**?\n\n| Question words | What they point to |\n|---|---|\n| \"**bare-metal servers in your own data center**\" | **On-premises** → you need a private link to Google: **Cloud VPN or Interconnect** |\n| \"**needs access to Cloud Storage**\" | Reach the Google API `storage.googleapis.com` |\n| \"**prevent … public IP addresses or access to the internet**\" | Must go through the **private link**, not the internet → A is out |\n| \"**Google-recommended practices**\" | Use the built-in feature (**Private Google Access for on-premises hosts**), not a hand-built proxy (B) or a migration (C) |\n\n**Exam topic:** Hybrid networking / Private Google Access."
+    "md": "**In plain words:**\n- **The situation:** An app runs on bare-metal servers (physical machines) in your own data center and needs Cloud Storage.\n- **What you must achieve:** Let the app reach Cloud Storage.\n- **The limits:** The servers may not have public IP addresses or internet access; follow Google's recommended practice.\n- **What they're really asking:** How do you connect your own servers to Google's services without using the internet?\n\n| Question words | What they point to |\n|---|---|\n| \"**bare-metal servers in your own data center**\" | **On-premises** → you need a private link to Google: **Cloud VPN or Interconnect** |\n| \"**needs access to Cloud Storage**\" | Reach the Google API `storage.googleapis.com` |\n| \"**prevent … public IP addresses or access to the internet**\" | Must go through the **private link**, not the internet → A is out |\n| \"**Google-recommended practices**\" | Use the built-in feature (**Private Google Access for on-premises hosts**), not a hand-built proxy (B) or a migration (C) |\n\n**Exam topic:** Hybrid networking / Private Google Access."
    },
    {
     "kind": "terms",
@@ -4232,7 +4232,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Your servers are in **your own building**. They must read/write Cloud Storage, but they're **not allowed on the internet** and can't have public IPs. What's Google's recommended way to connect them to Cloud Storage **privately**?"
+  "plain": "- **The situation:** An app runs on bare-metal servers (physical machines) in your own data center and needs Cloud Storage.\n- **What you must achieve:** Let the app reach Cloud Storage.\n- **The limits:** The servers may not have public IP addresses or internet access; follow Google's recommended practice.\n- **What they're really asking:** How do you connect your own servers to Google's services without using the internet?"
  },
  {
   "file": "Q064-pubsub-push-cloud-run.md",
@@ -4240,7 +4240,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Messages arrive in a Pub/Sub topic. Your app on Cloud Run must process each one. What's Google's recommended way to get the messages **into** Cloud Run?\n\n| Question words | What they point to |\n|---|---|\n| \"**Cloud Run**\" | Cloud Run apps wake up **when they receive a request** and can scale to zero → messages should be **pushed** to it as requests |\n| \"**processes messages from a Cloud Pub/Sub topic**\" | You need a **subscription** on the topic |\n| \"**Google-recommended practices**\" | Built-in **push subscription** + a **service account with only the Invoker role** (secure, no extra services) |\n\n**Exam topic:** Cloud Run + Pub/Sub.\n\n**The B vs C difference:** Both use a Cloud Run application and a Pub/Sub subscription. In **B, Cloud Run must ask Pub/Sub for messages**. In **C, Pub/Sub sends each message to Cloud Run as an HTTPS request**. A standard Cloud Run service is designed to handle incoming requests, so C directly starts the app when a message arrives."
+    "md": "**In plain words:**\n- **The situation:** You will run an app on Cloud Run (Google's serverless container service) that processes messages from a Pub/Sub topic (a message channel).\n- **What you must achieve:** Connect the topic to the app.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should Pub/Sub deliver messages to the Cloud Run app?\n\n| Question words | What they point to |\n|---|---|\n| \"**Cloud Run**\" | Cloud Run apps wake up **when they receive a request** and can scale to zero → messages should be **pushed** to it as requests |\n| \"**processes messages from a Cloud Pub/Sub topic**\" | You need a **subscription** on the topic |\n| \"**Google-recommended practices**\" | Built-in **push subscription** + a **service account with only the Invoker role** (secure, no extra services) |\n\n**Exam topic:** Cloud Run + Pub/Sub.\n\n**The B vs C difference:** Both use a Cloud Run application and a Pub/Sub subscription. In **B, Cloud Run must ask Pub/Sub for messages**. In **C, Pub/Sub sends each message to Cloud Run as an HTTPS request**. A standard Cloud Run service is designed to handle incoming requests, so C directly starts the app when a message arrives."
    },
    {
     "kind": "terms",
@@ -4298,7 +4298,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Messages arrive in a Pub/Sub topic. Your app on Cloud Run must process each one. What's Google's recommended way to get the messages **into** Cloud Run?"
+  "plain": "- **The situation:** You will run an app on Cloud Run (Google's serverless container service) that processes messages from a Pub/Sub topic (a message channel).\n- **What you must achieve:** Connect the topic to the app.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should Pub/Sub deliver messages to the Cloud Run app?"
  },
  {
   "file": "Q065-low-traffic-container-cloud-run.md",
@@ -4306,7 +4306,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have an app already packed in a container. It answers web requests, but only **a few times a day**. Where can you run it for the **lowest cost**?\n\n| Question words | What they point to |\n|---|---|\n| \"**packaged in a container image**\" | Any container platform works (Cloud Run, GKE, App Engine Flex). This alone doesn't pick GKE |\n| \"**exposes an HTTP endpoint**\" | Request-driven web app → Cloud Run's sweet spot |\n| \"**very few requests per day**\" | Idle almost all day → you want something that **scales to zero** |\n| \"**minimize costs**\" | Pay only when used → **Cloud Run** (per-request billing) |\n| \"**in a new project**\" | No existing cluster to reuse → don't build one just for this |\n\n**Exam topic:** Choosing a compute service."
+    "md": "**In plain words:**\n- **The situation:** An app is packed as a container image and exposes an HTTP endpoint (a web address that receives requests). It receives very few requests per day.\n- **What you must achieve:** Deploy it in a new project.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Where should you run it so you pay as little as possible?\n\n| Question words | What they point to |\n|---|---|\n| \"**packaged in a container image**\" | Any container platform works (Cloud Run, GKE, App Engine Flex). This alone doesn't pick GKE |\n| \"**exposes an HTTP endpoint**\" | Request-driven web app → Cloud Run's sweet spot |\n| \"**very few requests per day**\" | Idle almost all day → you want something that **scales to zero** |\n| \"**minimize costs**\" | Pay only when used → **Cloud Run** (per-request billing) |\n| \"**in a new project**\" | No existing cluster to reuse → don't build one just for this |\n\n**Exam topic:** Choosing a compute service."
    },
    {
     "kind": "terms",
@@ -4364,7 +4364,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You have an app already packed in a container. It answers web requests, but only **a few times a day**. Where can you run it for the **lowest cost**?"
+  "plain": "- **The situation:** An app is packed as a container image and exposes an HTTP endpoint (a web address that receives requests). It receives very few requests per day.\n- **What you must achieve:** Deploy it in a new project.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Where should you run it so you pay as little as possible?"
  },
  {
   "file": "Q066-acquisition-single-invoice-link-billing.md",
@@ -4372,7 +4372,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Two companies, two Google Cloud organizations, two billing accounts, hundreds of projects each. Finance wants **one bill** for everything, **starting tomorrow**. What's the quickest way?\n\n| Question words | What they point to |\n|---|---|\n| \"**single invoice**\" | One invoice = one **billing account**. All projects must be linked to the same billing account |\n| \"**as of tomorrow**\" | Must be **fast**: no big migrations |\n| \"**both GCP organizations**\" | The projects can **stay in their own org**. A billing account can pay for projects in **any** organization |\n| \"**consolidate all GCP costs**\" | About **billing**, not about reorganizing projects (C, D) or reports (B) |\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Your company has an organization with hundreds of projects and one billing account. It bought another company that has its own organization, hundreds of projects and its own billing account.\n- **What you must achieve:** Put all costs from both companies on a single invoice.\n- **The limits:** It must start tomorrow.\n- **What they're really asking:** What is the quickest way to combine both companies' costs onto one bill?\n\n| Question words | What they point to |\n|---|---|\n| \"**single invoice**\" | One invoice = one **billing account**. All projects must be linked to the same billing account |\n| \"**as of tomorrow**\" | Must be **fast**: no big migrations |\n| \"**both GCP organizations**\" | The projects can **stay in their own org**. A billing account can pay for projects in **any** organization |\n| \"**consolidate all GCP costs**\" | About **billing**, not about reorganizing projects (C, D) or reports (B) |\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -4430,7 +4430,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Two companies, two Google Cloud organizations, two billing accounts, hundreds of projects each. Finance wants **one bill** for everything, **starting tomorrow**. What's the quickest way?"
+  "plain": "- **The situation:** Your company has an organization with hundreds of projects and one billing account. It bought another company that has its own organization, hundreds of projects and its own billing account.\n- **What you must achieve:** Put all costs from both companies on a single invoice.\n- **The limits:** It must start tomorrow.\n- **What they're really asking:** What is the quickest way to combine both companies' costs onto one bill?"
  },
  {
   "file": "Q067-spanner-support-monitoring-viewer.md",
@@ -4438,7 +4438,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The support team must **watch how Spanner is doing** (is it busy? slow? full?), but must **never see the customer data** inside the tables. Which single role gives them exactly that?\n\n**Clues in the question:**\n- \"**monitor the environment**\": they need to see **metrics, charts and dashboards** in Cloud Monitoring.\n- \"**should not have access to table data**\": no Spanner **data** roles (databaseReader, databaseUser).\n- \"**support team group**\": grant the role to the **group**, not to each person (all options do this).\n- \"**streamlined**\" + \"**Google-recommended practices**\": one **predefined** role with the **least privilege** that does the job.\n\n**Exam topic:** IAM / Cloud Monitoring."
+    "md": "**In plain words:**\n- **The situation:** An app uses Cloud Spanner. The support team must monitor the environment.\n- **What you must achieve:** Give the support team monitoring access.\n- **The limits:** They must not see table data; keep it simple and follow recommended practice.\n- **What they're really asking:** Which role should the support team get?\n\n**Clues in the question:**\n- \"**monitor the environment**\": they need to see **metrics, charts and dashboards** in Cloud Monitoring.\n- \"**should not have access to table data**\": no Spanner **data** roles (databaseReader, databaseUser).\n- \"**support team group**\": grant the role to the **group**, not to each person (all options do this).\n- \"**streamlined**\" + \"**Google-recommended practices**\": one **predefined** role with the **least privilege** that does the job.\n\n**Exam topic:** IAM / Cloud Monitoring."
    },
    {
     "kind": "terms",
@@ -4496,7 +4496,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The support team must **watch how Spanner is doing** (is it busy? slow? full?), but must **never see the customer data** inside the tables. Which single role gives them exactly that?"
+  "plain": "- **The situation:** An app uses Cloud Spanner. The support team must monitor the environment.\n- **What you must achieve:** Give the support team monitoring access.\n- **The limits:** They must not see table data; keep it simple and follow recommended practice.\n- **What they're really asking:** Which role should the support team get?"
  },
  {
   "file": "Q068-compute-logs-sink-bigquery.md",
@@ -4504,7 +4504,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your VMs already send their logs to Cloud Logging (the agent is installed). Now you want a copy of **only the Compute Engine logs** in a BigQuery dataset called `platform-logs`, so you can analyze them with SQL. Do it as **cheaply** as possible.\n\n**Clues in the question:**\n- \"**For analysis purposes**\" + \"**BigQuery dataset**\": the destination is BigQuery (a sink can send there directly).\n- \"**all the logs from all of your Compute Engine instances**\": you need a **filter** that keeps only Compute Engine logs.\n- \"**already installed the Cloud Logging agent**\": the logs are **already in Cloud Logging**, so you just route them onward.\n- \"**minimize cost**\": use the **built-in sink** (no charge for routing), not extra Pub/Sub topics, Cloud Functions or schedulers.\n\n**Exam topic:** Cloud Logging."
+    "md": "**In plain words:**\n- **The situation:** Every VM already has the Cloud Logging agent installed (a program that sends logs to Google).\n- **What you must achieve:** Send all VM logs to a BigQuery dataset named platform-logs.\n- **The limits:** Keep costs low.\n- **What they're really asking:** How do you route the logs into BigQuery?\n\n**Clues in the question:**\n- \"**For analysis purposes**\" + \"**BigQuery dataset**\": the destination is BigQuery (a sink can send there directly).\n- \"**all the logs from all of your Compute Engine instances**\": you need a **filter** that keeps only Compute Engine logs.\n- \"**already installed the Cloud Logging agent**\": the logs are **already in Cloud Logging**, so you just route them onward.\n- \"**minimize cost**\": use the **built-in sink** (no charge for routing), not extra Pub/Sub topics, Cloud Functions or schedulers.\n\n**Exam topic:** Cloud Logging."
    },
    {
     "kind": "terms",
@@ -4562,7 +4562,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Your VMs already send their logs to Cloud Logging (the agent is installed). Now you want a copy of **only the Compute Engine logs** in a BigQuery dataset called `platform-logs`, so you can analyze them with SQL. Do it as **cheaply** as possible."
+  "plain": "- **The situation:** Every VM already has the Cloud Logging agent installed (a program that sends logs to Google).\n- **What you must achieve:** Send all VM logs to a BigQuery dataset named platform-logs.\n- **The limits:** Keep costs low.\n- **What they're really asking:** How do you route the logs into BigQuery?"
  },
  {
   "file": "Q069-deployment-manager-type-provider-daemonset.md",
@@ -4570,7 +4570,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** One Deployment Manager config already creates a GKE cluster. You want the **same** config to also create a **DaemonSet** (one pod on every node) inside the cluster, using as **few extra services** as possible.\n\n**Clues in the question:**\n- \"**Using the same Deployment Manager deployment**\": the DaemonSet must be a resource **inside Deployment Manager**, not something done separately.\n- \"**DaemonSet in the kube-system namespace**\": that's a **Kubernetes** object. Deployment Manager only knows Google Cloud resources by default, so it must be taught to talk to the **cluster's Kubernetes API**.\n- \"**fewest possible services**\": no extra VMs or scripts. Use Deployment Manager's own feature for this: a **Type Provider**.\n\n**Exam topic:** Infrastructure as Code / GKE."
+    "md": "**In plain words:**\n- **The situation:** You use Deployment Manager to create a GKE cluster.\n- **What you must achieve:** In the same deployment, also create a DaemonSet (a Kubernetes object that runs one pod on each node) in the kube-system namespace.\n- **The limits:** Use as few services as possible.\n- **What they're really asking:** How can Deployment Manager create Kubernetes objects inside the new cluster?\n\n**Clues in the question:**\n- \"**Using the same Deployment Manager deployment**\": the DaemonSet must be a resource **inside Deployment Manager**, not something done separately.\n- \"**DaemonSet in the kube-system namespace**\": that's a **Kubernetes** object. Deployment Manager only knows Google Cloud resources by default, so it must be taught to talk to the **cluster's Kubernetes API**.\n- \"**fewest possible services**\": no extra VMs or scripts. Use Deployment Manager's own feature for this: a **Type Provider**.\n\n**Exam topic:** Infrastructure as Code / GKE."
    },
    {
     "kind": "terms",
@@ -4628,7 +4628,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "One Deployment Manager config already creates a GKE cluster. You want the **same** config to also create a **DaemonSet** (one pod on every node) inside the cluster, using as **few extra services** as possible."
+  "plain": "- **The situation:** You use Deployment Manager to create a GKE cluster.\n- **What you must achieve:** In the same deployment, also create a DaemonSet (a Kubernetes object that runs one pod on each node) in the kube-system namespace.\n- **The limits:** Use as few services as possible.\n- **What they're really asking:** How can Deployment Manager create Kubernetes objects inside the new cluster?"
  },
  {
   "file": "Q070-onprem-service-account-key-file.md",
@@ -4636,7 +4636,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app runs **in your own building**, not in Google Cloud. It must call Google APIs (AutoML) **as the service account** you already set up. What do you **do** so the app can prove it's that service account?\n\n**Clues in the question:**\n- \"**run in your data center**\" / \"**on-premises environment**\": outside Google Cloud, the app does **not** get credentials automatically (unlike a VM with an attached service account, Q019).\n- \"**You created a service account that has appropriate access**\": permissions are already done. You only need a way for the app to **sign in as** that service account.\n- \"**enable authentication to the APIs**\": you need an actual credential the app can load: a **key file**.\n- \"**What should you do?**\": the answer must be a concrete **action** (B: create the key file), not a general idea (A).\n\n**Exam topic:** IAM / service accounts."
+    "md": "**In plain words:**\n- **The situation:** An app runs in your own data center and calls Google services such as AutoML. You created a service account with the right access.\n- **What you must achieve:** Let the on-premises app sign in to Google's APIs.\n- **The limits:** None stated.\n- **What they're really asking:** How does the app in your data center prove it is that service account?\n\n**Clues in the question:**\n- \"**run in your data center**\" / \"**on-premises environment**\": outside Google Cloud, the app does **not** get credentials automatically (unlike a VM with an attached service account, Q019).\n- \"**You created a service account that has appropriate access**\": permissions are already done. You only need a way for the app to **sign in as** that service account.\n- \"**enable authentication to the APIs**\": you need an actual credential the app can load: a **key file**.\n- \"**What should you do?**\": the answer must be a concrete **action** (B: create the key file), not a general idea (A).\n\n**Exam topic:** IAM / service accounts."
    },
    {
     "kind": "terms",
@@ -4694,7 +4694,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Your app runs **in your own building**, not in Google Cloud. It must call Google APIs (AutoML) **as the service account** you already set up. What do you **do** so the app can prove it's that service account?"
+  "plain": "- **The situation:** An app runs in your own data center and calls Google services such as AutoML. You created a service account with the right access.\n- **What you must achieve:** Let the on-premises app sign in to Google's APIs.\n- **The limits:** None stated.\n- **What they're really asking:** How does the app in your data center prove it is that service account?"
  },
  {
   "file": "Q071-gke-pull-images-other-project.md",
@@ -4702,7 +4702,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your container images live in **project A** (the central registry). Your GKE cluster lives in **project B**. The cluster's nodes must be allowed to **download** those images. How?\n\n**Clues in the question:**\n- \"**Container Registry … in a separate project**\": Container Registry stores images as files in a **Cloud Storage bucket** in that project. Reading them = reading Cloud Storage objects.\n- \"**In another project … GKE cluster**\": the nodes run as a **service account from project B**, which has no access to project A by default.\n- \"**download images**\": read-only access is enough → **Storage Object Viewer**.\n\n**Exam topic:** IAM / GKE."
+    "md": "**In plain words:**\n- **The situation:** Container images are stored in Container Registry in a separate project. A GKE cluster is in another project.\n- **What you must achieve:** Let Kubernetes download images from that registry.\n- **The limits:** None stated.\n- **What they're really asking:** Which permission do you give, and to which identity?\n\n**Clues in the question:**\n- \"**Container Registry … in a separate project**\": Container Registry stores images as files in a **Cloud Storage bucket** in that project. Reading them = reading Cloud Storage objects.\n- \"**In another project … GKE cluster**\": the nodes run as a **service account from project B**, which has no access to project A by default.\n- \"**download images**\": read-only access is enough → **Storage Object Viewer**.\n\n**Exam topic:** IAM / GKE."
    },
    {
     "kind": "terms",
@@ -4758,7 +4758,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Your container images live in **project A** (the central registry). Your GKE cluster lives in **project B**. The cluster's nodes must be allowed to **download** those images. How?"
+  "plain": "- **The situation:** Container images are stored in Container Registry in a separate project. A GKE cluster is in another project.\n- **What you must achieve:** Let Kubernetes download images from that registry.\n- **The limits:** None stated.\n- **What they're really asking:** Which permission do you give, and to which identity?"
  },
  {
   "file": "Q072-gke-pod-pending-describe.md",
@@ -4766,7 +4766,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** One pod won't start; it's stuck at **Pending**. Where do you look to find out **why**?\n\n**Clues in the question:**\n- \"**PENDING status**\": Pending means the pod **hasn't been placed on a node yet** (or its containers haven't started). The container never ran.\n- \"**one of them**\": the problem is about **that specific pod**, so look at that pod.\n- \"**find out why**\": Kubernetes records the reason as **events** on the pod, shown by `kubectl describe pod`.\n\n**Exam topic:** GKE troubleshooting."
+    "md": "**In plain words:**\n- **The situation:** You deployed an app on GKE (a Deployment and a Service from a YAML file). One pod is stuck in Pending (created but not started).\n- **What you must achieve:** Find out why it is stuck.\n- **The limits:** None stated.\n- **What they're really asking:** Which command shows you the reason a pod is pending?\n\n**Clues in the question:**\n- \"**PENDING status**\": Pending means the pod **hasn't been placed on a node yet** (or its containers haven't started). The container never ran.\n- \"**one of them**\": the problem is about **that specific pod**, so look at that pod.\n- \"**find out why**\": Kubernetes records the reason as **events** on the pod, shown by `kubectl describe pod`.\n\n**Exam topic:** GKE troubleshooting."
    },
    {
     "kind": "terms",
@@ -4822,7 +4822,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "One pod won't start; it's stuck at **Pending**. Where do you look to find out **why**?"
+  "plain": "- **The situation:** You deployed an app on GKE (a Deployment and a Service from a YAML file). One pod is stuck in Pending (created but not started).\n- **What you must achieve:** Find out why it is stuck.\n- **The limits:** None stated.\n- **What they're really asking:** Which command shows you the reason a pod is pending?"
  },
  {
   "file": "Q073-windows-vm-rdp-password.md",
@@ -4830,7 +4830,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You made a **Windows** VM. To log in with **RDP** (Remote Desktop), you need a **Windows username and password**. How do you get one?\n\n**Clues in the question:**\n- \"**Windows VM**\": Windows uses a **username + password**, not SSH keys like Linux.\n- \"**log in to the VM via RDP**\": you need Windows login credentials for that VM.\n- Google provides a built-in way: **`gcloud compute reset-windows-password`** (or the \"Set Windows password\" button in the console), which creates a user and gives you its password.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You are setting up a Windows VM on Compute Engine.\n- **What you must achieve:** Log in to it with RDP (Remote Desktop).\n- **The limits:** None stated.\n- **What they're really asking:** What do you need to set up to log in with RDP?\n\n**Clues in the question:**\n- \"**Windows VM**\": Windows uses a **username + password**, not SSH keys like Linux.\n- \"**log in to the VM via RDP**\": you need Windows login credentials for that VM.\n- Google provides a built-in way: **`gcloud compute reset-windows-password`** (or the \"Set Windows password\" button in the console), which creates a user and gives you its password.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -4886,7 +4886,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You made a **Windows** VM. To log in with **RDP** (Remote Desktop), you need a **Windows username and password**. How do you get one?"
+  "plain": "- **The situation:** You are setting up a Windows VM on Compute Engine.\n- **What you must achieve:** Log in to it with RDP (Remote Desktop).\n- **The limits:** None stated.\n- **What they're really asking:** What do you need to set up to log in with RDP?"
  },
  {
   "file": "Q074-ssh-one-instance-oslogin.md",
@@ -4894,7 +4894,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The **dev1 group** must be able to SSH into **one VM only**, and nothing else in the project. What's the clean, Google-recommended way?\n\n**Clues in the question:**\n- \"**users in the dev1 group**\": manage access by **group** with IAM, not by handing out keys.\n- \"**single Compute Engine instance**\" / \"**the only resource**\": grant the role **on that one instance**, not on the whole project.\n- \"**SSH connection**\": **OS Login** ties SSH access to people's Google identities and IAM roles.\n\n**Exam topic:** IAM / Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** Users in the dev1 group need SSH access (command-line login) to one VM, the only resource in the project they should reach.\n- **What you must achieve:** Give SSH access to just that VM.\n- **The limits:** They must not get access to anything else in the project.\n- **What they're really asking:** How do you give dev1 SSH access to only this VM?\n\n**Clues in the question:**\n- \"**users in the dev1 group**\": manage access by **group** with IAM, not by handing out keys.\n- \"**single Compute Engine instance**\" / \"**the only resource**\": grant the role **on that one instance**, not on the whole project.\n- \"**SSH connection**\": **OS Login** ties SSH access to people's Google identities and IAM roles.\n\n**Exam topic:** IAM / Compute Engine."
    },
    {
     "kind": "terms",
@@ -4950,7 +4950,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The **dev1 group** must be able to SSH into **one VM only**, and nothing else in the project. What's the clean, Google-recommended way?"
+  "plain": "- **The situation:** Users in the dev1 group need SSH access (command-line login) to one VM, the only resource in the project they should reach.\n- **What you must achieve:** Give SSH access to just that VM.\n- **The limits:** They must not get access to anything else in the project.\n- **What they're really asking:** How do you give dev1 SSH access to only this VM?"
  },
  {
   "file": "Q075-list-enabled-apis-gcloud.md",
@@ -4958,7 +4958,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You know the project's **name** (`my-project`). You want the list of APIs that are **turned on** in it. Which gcloud commands do that?\n\n**Clues in the question:**\n- \"**The project name is my-project**\": gcloud commands need the **project ID**, which can differ from the name. So first look up the ID.\n- \"**list of the enabled … APIs**\": `gcloud services list` shows **enabled** services by default.\n- Watch out for `--available`: that lists **all APIs you could enable**, not the enabled ones.\n\n**Exam topic:** gcloud / project setup."
+    "md": "**In plain words:**\n- **The situation:** You work in Cloud Shell with a project named my-project.\n- **What you must achieve:** Get a list of the APIs (Google services) that are enabled in that project.\n- **The limits:** Use the gcloud command line.\n- **What they're really asking:** Which gcloud command lists the enabled APIs for my-project?\n\n**Clues in the question:**\n- \"**The project name is my-project**\": gcloud commands need the **project ID**, which can differ from the name. So first look up the ID.\n- \"**list of the enabled … APIs**\": `gcloud services list` shows **enabled** services by default.\n- Watch out for `--available`: that lists **all APIs you could enable**, not the enabled ones.\n\n**Exam topic:** gcloud / project setup."
    },
    {
     "kind": "terms",
@@ -5014,7 +5014,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You know the project's **name** (`my-project`). You want the list of APIs that are **turned on** in it. Which gcloud commands do that?"
+  "plain": "- **The situation:** You work in Cloud Shell with a project named my-project.\n- **What you must achieve:** Get a list of the APIs (Google services) that are enabled in that project.\n- **The limits:** Use the gcloud command line.\n- **What they're really asking:** Which gcloud command lists the enabled APIs for my-project?"
  },
  {
   "file": "Q076-app-engine-split-traffic-console.md",
@@ -5022,7 +5022,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app runs on App Engine. You made a new version and want **1% of users** to try it before everyone gets it. How?\n\n**Clues in the question:**\n- \"**new version of an application hosted in an App Engine environment**\": stay on App Engine; it supports **many versions** in the same app.\n- \"**test the new version with 1% of users**\": **traffic splitting** between versions.\n- \"**before you completely switch**\": later you move 100% (migrate). Today: 99/1.\n\n**Exam topic:** App Engine."
+    "md": "**In plain words:**\n- **The situation:** You are building a new version of an App Engine app.\n- **What you must achieve:** Test it with 1% of users before switching everyone over.\n- **The limits:** None stated.\n- **What they're really asking:** How do you send 1% of users to the new version?\n\n**Clues in the question:**\n- \"**new version of an application hosted in an App Engine environment**\": stay on App Engine; it supports **many versions** in the same app.\n- \"**test the new version with 1% of users**\": **traffic splitting** between versions.\n- \"**before you completely switch**\": later you move 100% (migrate). Today: 99/1.\n\n**Exam topic:** App Engine."
    },
    {
     "kind": "terms",
@@ -5078,7 +5078,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Your app runs on App Engine. You made a new version and want **1% of users** to try it before everyone gets it. How?"
+  "plain": "- **The situation:** You are building a new version of an App Engine app.\n- **What you must achieve:** Test it with 1% of users before switching everyone over.\n- **The limits:** None stated.\n- **What they're really asking:** How do you send 1% of users to the new version?"
  },
  {
   "file": "Q077-gke-pricing-calculator-local-ssd.md",
@@ -5086,7 +5086,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You're estimating the price of a GKE cluster. The app needs **very fast disk reads/writes** and you'll take **disk snapshots** (backups). After entering nodes and hours, which fields do you fill in next?\n\n**Clues in the question:**\n- \"**high IOPs**\": fast disk operations → **local SSD**.\n- \"**disk snapshots**\": snapshots are taken of **persistent disks** and stored as **snapshot storage** → fill in both.\n- GPUs are for **heavy math (ML, graphics)**, not disk speed. The cluster management fee is **added by the calculator itself**, so it's not something you fill in.\n\n**Exam topic:** Billing / planning."
+    "md": "**In plain words:**\n- **The situation:** You are estimating the cost of a Kubernetes cluster in the Google Cloud pricing calculator. The workload needs high IOPS (very fast disk reads and writes), and you will take disk snapshots. You already entered nodes, hours and days.\n- **What you must achieve:** Finish the estimate correctly.\n- **The limits:** None stated.\n- **What they're really asking:** What should you enter next for the disks and snapshots?\n\n**Clues in the question:**\n- \"**high IOPs**\": fast disk operations → **local SSD**.\n- \"**disk snapshots**\": snapshots are taken of **persistent disks** and stored as **snapshot storage** → fill in both.\n- GPUs are for **heavy math (ML, graphics)**, not disk speed. The cluster management fee is **added by the calculator itself**, so it's not something you fill in.\n\n**Exam topic:** Billing / planning."
    },
    {
     "kind": "terms",
@@ -5142,7 +5142,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You're estimating the price of a GKE cluster. The app needs **very fast disk reads/writes** and you'll take **disk snapshots** (backups). After entering nodes and hours, which fields do you fill in next?"
+  "plain": "- **The situation:** You are estimating the cost of a Kubernetes cluster in the Google Cloud pricing calculator. The workload needs high IOPS (very fast disk reads and writes), and you will take disk snapshots. You already entered nodes, hours and days.\n- **What you must achieve:** Finish the estimate correctly.\n- **The limits:** None stated.\n- **What they're really asking:** What should you enter next for the disks and snapshots?"
  },
  {
   "file": "Q078-gke-https-ingress-nodeport.md",
@@ -5150,7 +5150,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app runs in GKE, and nodes come and go (autoscaling). You want people on the internet to reach it at **one public IP** using **HTTPS**. What's the standard way?\n\n**Clues in the question:**\n- \"**expose this new application to the public**\": needs a **public** IP, so internal-only options (ClusterIP) are out.\n- \"**using HTTPS**\": HTTPS (with certificates) is handled by Google's **HTTP(S) load balancer**, which GKE creates from an **Ingress**.\n- \"**autoscaling enabled**\": nodes change, so never point DNS at individual node IPs. Use a managed load balancer that updates itself.\n\n**Exam topic:** GKE networking."
+    "md": "**In plain words:**\n- **The situation:** A new app runs on GKE with autoscaling.\n- **What you must achieve:** Make it public over HTTPS on a public IP address.\n- **The limits:** None stated.\n- **What they're really asking:** Which Kubernetes objects should you create to expose it?\n\n**Clues in the question:**\n- \"**expose this new application to the public**\": needs a **public** IP, so internal-only options (ClusterIP) are out.\n- \"**using HTTPS**\": HTTPS (with certificates) is handled by Google's **HTTP(S) load balancer**, which GKE creates from an **Ingress**.\n- \"**autoscaling enabled**\": nodes change, so never point DNS at individual node IPs. Use a managed load balancer that updates itself.\n\n**Exam topic:** GKE networking."
    },
    {
     "kind": "terms",
@@ -5206,7 +5206,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Your app runs in GKE, and nodes come and go (autoscaling). You want people on the internet to reach it at **one public IP** using **HTTPS**. What's the standard way?"
+  "plain": "- **The situation:** A new app runs on GKE with autoscaling.\n- **What you must achieve:** Make it public over HTTPS on a public IP address.\n- **The limits:** None stated.\n- **What they're really asking:** Which Kubernetes objects should you create to expose it?"
  },
  {
   "file": "Q079-shared-vpc-two-projects.md",
@@ -5214,7 +5214,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Two projects, each with its own VPC and its own VMs. The VMs must talk to each other. Which option connects them correctly?\n\n**Clues in the question:**\n- \"**two different GCP projects**\": a normal VPC belongs to **one project**, so a VM in another project can't simply \"join\" it.\n- \"**enable traffic between**\": the VMs need a shared private network.\n- **Shared VPC** lets one project (the **host**) share its VPC with other projects (**service projects**), and it **requires an Organization**. That's why B starts with \"verify … in a GCP Organization\".\n\n**Exam topic:** VPC networking."
+    "md": "**In plain words:**\n- **The situation:** Groups of VMs run in two different projects, each group in its own VPC network.\n- **What you must achieve:** Let the groups talk to each other.\n- **The limits:** None stated.\n- **What they're really asking:** How do you connect the two networks?\n\n**Clues in the question:**\n- \"**two different GCP projects**\": a normal VPC belongs to **one project**, so a VM in another project can't simply \"join\" it.\n- \"**enable traffic between**\": the VMs need a shared private network.\n- **Shared VPC** lets one project (the **host**) share its VPC with other projects (**service projects**), and it **requires an Organization**. That's why B starts with \"verify … in a GCP Organization\".\n\n**Exam topic:** VPC networking."
    },
    {
     "kind": "terms",
@@ -5270,7 +5270,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Two projects, each with its own VPC and its own VMs. The VMs must talk to each other. Which option connects them correctly?"
+  "plain": "- **The situation:** Groups of VMs run in two different projects, each group in its own VPC network.\n- **What you must achieve:** Let the groups talk to each other.\n- **The limits:** None stated.\n- **What they're really asking:** How do you connect the two networks?"
  },
  {
   "file": "Q080-auditor-project-viewer.md",
@@ -5278,7 +5278,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A new auditor must be able to **look at everything** in the project but **change nothing**. What's the simplest correct role?\n\n**Clues in the question:**\n- \"**read, but not modify**\": a **read-only** role.\n- \"**all project items**\": not one service, **everything** in the project → the project-wide **Viewer** role.\n- \"**built-in**\" (in C): Google already made this role, so there's nothing to build or maintain (custom roles in A/B are extra work).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A new auditor joins a project.\n- **What you must achieve:** Let the auditor read everything in the project.\n- **The limits:** The auditor must not be able to change anything.\n- **What they're really asking:** Which role gives read-only access to all project items?\n\n**Clues in the question:**\n- \"**read, but not modify**\": a **read-only** role.\n- \"**all project items**\": not one service, **everything** in the project → the project-wide **Viewer** role.\n- \"**built-in**\" (in C): Google already made this role, so there's nothing to build or maintain (custom roles in A/B are extra work).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -5334,7 +5334,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "A new auditor must be able to **look at everything** in the project but **change nothing**. What's the simplest correct role?"
+  "plain": "- **The situation:** A new auditor joins a project.\n- **What you must achieve:** Let the auditor read everything in the project.\n- **The limits:** The auditor must not be able to change anything.\n- **What they're really asking:** Which role gives read-only access to all project items?"
  },
  {
   "file": "Q081-gke-gpu-node-pool.md",
@@ -5342,7 +5342,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** One shared GKE cluster. Only the ML team needs GPUs. How do you give GPUs to **only them**, with the **least work and cost**?\n\n**Clues in the question:**\n- \"**Your Machine Learning (ML) team needs**\": only **one team** needs GPUs, so don't put GPUs on every node.\n- \"**Nvidia Tesla P100 GPUs**\": a specific GPU type, so the pods must land on nodes with **that** GPU.\n- \"**minimize effort and cost**\": reuse the existing cluster (no new cluster to run), and pay for GPUs only on the few nodes that need them.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** A shared GKE cluster runs non-production work for many teams. The machine learning team needs Nvidia Tesla P100 GPUs (graphics chips used for fast ML training).\n- **What you must achieve:** Give the ML team GPUs.\n- **The limits:** Minimum effort and cost.\n- **What they're really asking:** How should you add GPUs to the cluster for the ML team?\n\n**Clues in the question:**\n- \"**Your Machine Learning (ML) team needs**\": only **one team** needs GPUs, so don't put GPUs on every node.\n- \"**Nvidia Tesla P100 GPUs**\": a specific GPU type, so the pods must land on nodes with **that** GPU.\n- \"**minimize effort and cost**\": reuse the existing cluster (no new cluster to run), and pay for GPUs only on the few nodes that need them.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -5398,7 +5398,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "One shared GKE cluster. Only the ML team needs GPUs. How do you give GPUs to **only them**, with the **least work and cost**?"
+  "plain": "- **The situation:** A shared GKE cluster runs non-production work for many teams. The machine learning team needs Nvidia Tesla P100 GPUs (graphics chips used for fast ML training).\n- **What you must achieve:** Give the ML team GPUs.\n- **The limits:** Minimum effort and cost.\n- **What they're really asking:** How should you add GPUs to the cluster for the ML team?"
  },
  {
   "file": "Q082-expand-subnet-ip-range.md",
@@ -5406,7 +5406,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your subnet is tiny (/28 = 16 addresses) and full. You need 10 more addresses, and the old and new VMs must stay on the same network. What's the simplest fix?\n\n**Clues in the question:**\n- \"**subnet mask of 255.255.255.240**\": that's a **/28**, only 16 addresses (Google keeps 4, so 12 usable).\n- \"**no more free IP addresses**\" + \"**additional 10 IP addresses**\": the range must get **bigger**.\n- \"**without additional routes**\": keep everyone in the **same subnet**, so no extra network setup is needed.\n- Google Cloud lets you **expand** a subnet's range in place, with no downtime.\n\n**Exam topic:** VPC networking."
+    "md": "**In plain words:**\n- **The situation:** VMs are in a subnet with mask 255.255.255.240 (a /28, which holds only 16 addresses). It is full, and you need 10 more addresses.\n- **What you must achieve:** Make room for the new VMs.\n- **The limits:** Old and new VMs must reach each other without extra routes.\n- **What they're really asking:** How do you get more IP addresses?\n\n**Clues in the question:**\n- \"**subnet mask of 255.255.255.240**\": that's a **/28**, only 16 addresses (Google keeps 4, so 12 usable).\n- \"**no more free IP addresses**\" + \"**additional 10 IP addresses**\": the range must get **bigger**.\n- \"**without additional routes**\": keep everyone in the **same subnet**, so no extra network setup is needed.\n- Google Cloud lets you **expand** a subnet's range in place, with no downtime.\n\n**Exam topic:** VPC networking."
    },
    {
     "kind": "terms",
@@ -5462,7 +5462,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Your subnet is tiny (/28 = 16 addresses) and full. You need 10 more addresses, and the old and new VMs must stay on the same network. What's the simplest fix?"
+  "plain": "- **The situation:** VMs are in a subnet with mask 255.255.255.240 (a /28, which holds only 16 addresses). It is full, and you need 10 more addresses.\n- **What you must achieve:** Make room for the new VMs.\n- **The limits:** Old and new VMs must reach each other without extra routes.\n- **What they're really asking:** How do you get more IP addresses?"
  },
  {
   "file": "Q083-gsuite-users-iam-roles.md",
@@ -5470,7 +5470,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Everyone already has a G Suite (now called **Google Workspace**) account. You want a few of them to use your Google Cloud project. What do you do?\n\n**Clues in the question:**\n- \"**All users in your organization have a G Suite account**\": they already have **Google accounts**, so nothing new needs to be created.\n- \"**grant some G Suite users access**\": in Google Cloud, access = **IAM roles** given to an account's email.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Everyone in the company has a G Suite account (now called Google Workspace).\n- **What you must achieve:** Give some of those users access to your Google Cloud project.\n- **The limits:** None stated.\n- **What they're really asking:** How do you grant them access?\n\n**Clues in the question:**\n- \"**All users in your organization have a G Suite account**\": they already have **Google accounts**, so nothing new needs to be created.\n- \"**grant some G Suite users access**\": in Google Cloud, access = **IAM roles** given to an account's email.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -5526,7 +5526,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Everyone already has a G Suite (now called **Google Workspace**) account. You want a few of them to use your Google Cloud project. What do you do?"
+  "plain": "- **The situation:** Everyone in the company has a G Suite account (now called Google Workspace).\n- **What you must achieve:** Give some of those users access to your Google Cloud project.\n- **The limits:** None stated.\n- **What they're really asking:** How do you grant them access?"
  },
  {
   "file": "Q084-gcloud-configurations-list-instances.md",
@@ -5534,7 +5534,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Every day, a script must list all VMs in **two projects** (dev and prod). How do you set that up?\n\n**Clues in the question:**\n- \"**automated process**\": a **script** that runs by itself, not someone clicking in the console every day.\n- \"**development and production projects**\": two projects, so the script must **switch between them**. gcloud **configurations** save one setup per project.\n- \"**list all compute instances**\": the command is `gcloud compute instances list`. **gsutil** is only for Cloud Storage.\n\n**Exam topic:** gcloud CLI."
+    "md": "**In plain words:**\n- **The situation:** You can see both production and development projects.\n- **What you must achieve:** Automatically list all VMs in both kinds of project every day.\n- **The limits:** It must be automated.\n- **What they're really asking:** How do you set up gcloud to list instances across both projects in a script?\n\n**Clues in the question:**\n- \"**automated process**\": a **script** that runs by itself, not someone clicking in the console every day.\n- \"**development and production projects**\": two projects, so the script must **switch between them**. gcloud **configurations** save one setup per project.\n- \"**list all compute instances**\": the command is `gcloud compute instances list`. **gsutil** is only for Cloud Storage.\n\n**Exam topic:** gcloud CLI."
    },
    {
     "kind": "terms",
@@ -5590,7 +5590,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Every day, a script must list all VMs in **two projects** (dev and prod). How do you set that up?"
+  "plain": "- **The situation:** You can see both production and development projects.\n- **What you must achieve:** Automatically list all VMs in both kinds of project every day.\n- **The limits:** It must be automated.\n- **What they're really asking:** How do you set up gcloud to list instances across both projects in a script?"
  },
  {
   "file": "Q085-avro-bigquery-external-table.md",
@@ -5598,7 +5598,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A huge file sits in Cloud Storage. Analysts only know SQL. What's the **quickest, cheapest** way to let them run SQL on it?\n\n**Clues in the question:**\n- \"**stored in a Cloud Storage bucket**\": the data is already there, so don't move it.\n- \"**proficient only in SQL**\": use **BigQuery** (SQL).\n- \"**cost-effective**\" + \"**as soon as possible**\": no copying 5 TB, no new clusters. An **external table** lets BigQuery read the file directly.\n\n**Exam topic:** BigQuery / data analytics."
+    "md": "**In plain words:**\n- **The situation:** A 5 TB AVRO file (a data file format) is in a Cloud Storage bucket. The analysts only know SQL.\n- **What you must achieve:** Let the analysts query the data.\n- **The limits:** Cheap and as soon as possible.\n- **What they're really asking:** How can the analysts query this file with SQL quickly and cheaply?\n\n**Clues in the question:**\n- \"**stored in a Cloud Storage bucket**\": the data is already there, so don't move it.\n- \"**proficient only in SQL**\": use **BigQuery** (SQL).\n- \"**cost-effective**\" + \"**as soon as possible**\": no copying 5 TB, no new clusters. An **external table** lets BigQuery read the file directly.\n\n**Exam topic:** BigQuery / data analytics."
    },
    {
     "kind": "terms",
@@ -5654,7 +5654,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "A huge file sits in Cloud Storage. Analysts only know SQL. What's the **quickest, cheapest** way to let them run SQL on it?"
+  "plain": "- **The situation:** A 5 TB AVRO file (a data file format) is in a Cloud Storage bucket. The analysts only know SQL.\n- **What you must achieve:** Let the analysts query the data.\n- **The limits:** Cheap and as soon as possible.\n- **What they're really asking:** How can the analysts query this file with SQL quickly and cheaply?"
  },
  {
   "file": "Q086-service-account-created-activity-log.md",
@@ -5662,7 +5662,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want to see **when a service account was created**. Which log category and which resource type do you filter on?\n\n**Clues in the question:**\n- \"**service account was created**\": creating something is a **configuration change** (Admin Activity), not reading data.\n- \"**service account**\": filter the **resource type** to **Service Account**, so you only see service account events.\n\n**Exam topic:** Logging / audit logs."
+    "md": "**In plain words:**\n- **The situation:** You need to confirm when a service account was created.\n- **What you must achieve:** Find its creation time.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look for the record of the service account being created?\n\n**Clues in the question:**\n- \"**service account was created**\": creating something is a **configuration change** (Admin Activity), not reading data.\n- \"**service account**\": filter the **resource type** to **Service Account**, so you only see service account events.\n\n**Exam topic:** Logging / audit logs."
    },
    {
     "kind": "terms",
@@ -5718,7 +5718,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You want to see **when a service account was created**. Which log category and which resource type do you filter on?"
+  "plain": "- **The situation:** You need to confirm when a service account was created.\n- **What you must achieve:** Find its creation time.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look for the record of the service account being created?"
  },
  {
   "file": "Q087-firewall-ingress-udp-636-tag.md",
@@ -5726,7 +5726,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Clients must **connect in** to your VM on **UDP port 636**. How do you open that door?\n\n**Clues in the question:**\n- \"**reachable by clients**\": traffic comes **into** the VM → **ingress**.\n- \"**port 636 using UDP**\": the firewall rule must allow exactly **UDP 636**.\n- By default, Google Cloud **blocks all incoming traffic**, so you need an **ingress allow rule**. A **network tag** picks which VMs the rule applies to.\n\n**Exam topic:** VPC networking / firewall."
+    "md": "**In plain words:**\n- **The situation:** An LDAP server (a directory of users) runs on a VM and is reached over TLS on port 636 using UDP.\n- **What you must achieve:** Let clients reach it on that port.\n- **The limits:** None stated.\n- **What they're really asking:** What firewall rule do you add?\n\n**Clues in the question:**\n- \"**reachable by clients**\": traffic comes **into** the VM → **ingress**.\n- \"**port 636 using UDP**\": the firewall rule must allow exactly **UDP 636**.\n- By default, Google Cloud **blocks all incoming traffic**, so you need an **ingress allow rule**. A **network tag** picks which VMs the rule applies to.\n\n**Exam topic:** VPC networking / firewall."
    },
    {
     "kind": "terms",
@@ -5782,7 +5782,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Clients must **connect in** to your VM on **UDP port 636**. How do you open that door?"
+  "plain": "- **The situation:** An LDAP server (a directory of users) runs on a VM and is reached over TLS on port 636 using UDP.\n- **What you must achieve:** Let clients reach it on that port.\n- **The limits:** None stated.\n- **What they're really asking:** What firewall rule do you add?"
  },
  {
   "file": "Q088-budget-alert-one-project.md",
@@ -5790,7 +5790,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Three projects share one billing account. You want a **budget alert** for **only one** of them. Who can do it, and how?\n\n**Clues in the question:**\n- \"**budget alert**\": budgets are created on the **billing account**, so you need a **billing** role (Billing Account Administrator or Costs Manager), not a project role.\n- \"**one of the three … projects**\" + \"**linked to a single billing account**\": the budget must be **scoped to that one project**, otherwise it would count all three.\n- \"**alert**\": the answer must include **both** a budget **and** an alert.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Three projects share one billing account.\n- **What you must achieve:** Set a budget alert for Compute Engine spending on just one of those projects.\n- **The limits:** None stated.\n- **What they're really asking:** How do you limit the budget alert to that one project and service?\n\n**Clues in the question:**\n- \"**budget alert**\": budgets are created on the **billing account**, so you need a **billing** role (Billing Account Administrator or Costs Manager), not a project role.\n- \"**one of the three … projects**\" + \"**linked to a single billing account**\": the budget must be **scoped to that one project**, otherwise it would count all three.\n- \"**alert**\": the answer must include **both** a budget **and** an alert.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -5846,7 +5846,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Three projects share one billing account. You want a **budget alert** for **only one** of them. Who can do it, and how?"
+  "plain": "- **The situation:** Three projects share one billing account.\n- **What you must achieve:** Set a budget alert for Compute Engine spending on just one of those projects.\n- **The limits:** None stated.\n- **What they're really asking:** How do you limit the budget alert to that one project and service?"
  },
  {
   "file": "Q089-96-vcpu-n1-standard-96.md",
@@ -5854,7 +5854,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The app **needs 96 vCPUs** and is **production-critical**. How do you make sure the new VM has that from day one?\n\n**Clues in the question:**\n- \"**requires 96 vCPUs**\": pick a **machine type with 96 vCPUs**. The number at the end of `n1-standard-96` is the vCPU count.\n- \"**production-critical**\" + \"**similar environment**\": get it right **at creation**. Don't start small and fix it later.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You are moving a critical on-premises app that needs 96 vCPUs.\n- **What you must achieve:** Run it in a similar setup on Google Cloud.\n- **The limits:** The VM must have 96 vCPUs.\n- **What they're really asking:** How do you create a VM with that many CPUs?\n\n**Clues in the question:**\n- \"**requires 96 vCPUs**\": pick a **machine type with 96 vCPUs**. The number at the end of `n1-standard-96` is the vCPU count.\n- \"**production-critical**\" + \"**similar environment**\": get it right **at creation**. Don't start small and fix it later.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -5910,7 +5910,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The app **needs 96 vCPUs** and is **production-critical**. How do you make sure the new VM has that from day one?"
+  "plain": "- **The situation:** You are moving a critical on-premises app that needs 96 vCPUs.\n- **What you must achieve:** Run it in a similar setup on Google Cloud.\n- **The limits:** The VM must have 96 vCPUs.\n- **What they're really asking:** How do you create a VM with that many CPUs?"
  },
  {
   "file": "Q090-lifecycle-noncurrent-versions-nearline.md",
@@ -5918,7 +5918,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Old **versions** of files should move to cheaper storage after 30 days. They're opened **once a month**. Which rule and which storage class?\n\n**Clues in the question:**\n- \"**Data with multiple versions**\": the rule should target **older versions** (objects that have **newer versions**), not \"everything in regional storage\".\n- \"**accessed once a month**\": once a month = **Nearline** (built for about monthly access, 30-day minimum).\n- \"**occasionally updated at month-end**\": Coldline has a **90-day minimum** and higher read costs, so monthly use makes it more expensive.\n- \"**cost-effective**\": the cheapest class **for this access pattern**, which is Nearline.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** Data in a bucket has several versions (versioning keeps older copies of each file).\n- **What you must achieve:** Archive older versions after 30 days.\n- **The limits:** Keep it cost-effective; older versions are read once a month for reports and sometimes updated at month-end.\n- **What they're really asking:** Which storage class and lifecycle rule fit this access pattern?\n\n**Clues in the question:**\n- \"**Data with multiple versions**\": the rule should target **older versions** (objects that have **newer versions**), not \"everything in regional storage\".\n- \"**accessed once a month**\": once a month = **Nearline** (built for about monthly access, 30-day minimum).\n- \"**occasionally updated at month-end**\": Coldline has a **90-day minimum** and higher read costs, so monthly use makes it more expensive.\n- \"**cost-effective**\": the cheapest class **for this access pattern**, which is Nearline.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -5974,7 +5974,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Old **versions** of files should move to cheaper storage after 30 days. They're opened **once a month**. Which rule and which storage class?"
+  "plain": "- **The situation:** Data in a bucket has several versions (versioning keeps older copies of each file).\n- **What you must achieve:** Archive older versions after 30 days.\n- **The limits:** Keep it cost-effective; older versions are read once a month for reports and sometimes updated at month-end.\n- **What they're really asking:** Which storage class and lifecycle rule fit this access pattern?"
  },
  {
   "file": "Q091-burst-onprem-cloud-vpn.md",
@@ -5982,7 +5982,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your own data center is full. Extra work will run on Google Cloud, and those cloud machines must talk to your office machines **by private IP**. How do you connect the two places?\n\n**Clues in the question:**\n- \"**on-premises**\" + \"**Google Cloud**\": two **different places**, so you need a **link between your building and Google**.\n- \"**directly communicate … using a private IP range**\": a private, encrypted tunnel, which is **Cloud VPN** (or Interconnect).\n- Shared VPC and VPC peering only connect **Google Cloud VPCs to each other**, not to your data center.\n\n**Exam topic:** Hybrid networking."
+    "md": "**In plain words:**\n- **The situation:** All your on-premises machines are at full capacity.\n- **What you must achieve:** Burst (send extra work) to Google Cloud.\n- **The limits:** Cloud workloads must talk directly to on-premises workloads using private IP addresses.\n- **What they're really asking:** What network connection should you set up?\n\n**Clues in the question:**\n- \"**on-premises**\" + \"**Google Cloud**\": two **different places**, so you need a **link between your building and Google**.\n- \"**directly communicate … using a private IP range**\": a private, encrypted tunnel, which is **Cloud VPN** (or Interconnect).\n- Shared VPC and VPC peering only connect **Google Cloud VPCs to each other**, not to your data center.\n\n**Exam topic:** Hybrid networking."
    },
    {
     "kind": "terms",
@@ -6038,7 +6038,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Your own data center is full. Extra work will run on Google Cloud, and those cloud machines must talk to your office machines **by private IP**. How do you connect the two places?"
+  "plain": "- **The situation:** All your on-premises machines are at full capacity.\n- **What you must achieve:** Burst (send extra work) to Google Cloud.\n- **The limits:** Cloud workloads must talk directly to on-premises workloads using private IP addresses.\n- **What they're really asking:** What network connection should you set up?"
  },
  {
   "file": "Q092-regional-storage-coldline-compliance.md",
@@ -6046,7 +6046,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The data must stay in **one geographic location** for compliance. After 30 days it's archived and read **once a year**. Which location type and storage class?\n\n**Clues in the question:**\n- \"**compliance objectives for data from one geographic location**\": keep it in **one region** → **Regional** storage. Multi-regional spreads data across a large area.\n- \"**accessed annually**\": very rare access → the coldest class offered → **Coldline**.\n- \"**archived after 30 days**\": a **lifecycle rule** with age 30.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** Data from one geographic location must be stored and archived to meet compliance rules.\n- **What you must achieve:** Store and archive the data.\n- **The limits:** It is archived after 30 days and read about once a year.\n- **What they're really asking:** Which storage class and location setup fit?\n\n**Clues in the question:**\n- \"**compliance objectives for data from one geographic location**\": keep it in **one region** → **Regional** storage. Multi-regional spreads data across a large area.\n- \"**accessed annually**\": very rare access → the coldest class offered → **Coldline**.\n- \"**archived after 30 days**\": a **lifecycle rule** with age 30.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -6102,7 +6102,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "The data must stay in **one geographic location** for compliance. After 30 days it's archived and read **once a year**. Which location type and storage class?"
+  "plain": "- **The situation:** Data from one geographic location must be stored and archived to meet compliance rules.\n- **What you must achieve:** Store and archive the data.\n- **The limits:** It is archived after 30 days and read about once a year.\n- **What they're really asking:** Which storage class and location setup fit?"
  },
  {
   "file": "Q093-data-catalog-find-column.md",
@@ -6110,7 +6110,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Thousands of datasets in hundreds of projects. Find every table with a column named `employee_ssn`, with the **least effort**.\n\n**Clues in the question:**\n- \"**1000+ datasets across hundreds of projects**\": too many to check one by one.\n- \"**minimize effort**\": no scripts to write. **Data Catalog** already indexes every BigQuery table and column, so you just **search**.\n\n**Exam topic:** Data management / BigQuery."
+    "md": "**In plain words:**\n- **The situation:** Business units created over 1,000 BigQuery datasets across hundreds of projects. The CIO wants every table that has an employee_ssn column.\n- **What you must achieve:** Find those tables.\n- **The limits:** Minimum effort.\n- **What they're really asking:** How do you search all datasets for that column quickly?\n\n**Clues in the question:**\n- \"**1000+ datasets across hundreds of projects**\": too many to check one by one.\n- \"**minimize effort**\": no scripts to write. **Data Catalog** already indexes every BigQuery table and column, so you just **search**.\n\n**Exam topic:** Data management / BigQuery."
    },
    {
     "kind": "terms",
@@ -6166,7 +6166,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Thousands of datasets in hundreds of projects. Find every table with a column named `employee_ssn`, with the **least effort**."
+  "plain": "- **The situation:** Business units created over 1,000 BigQuery datasets across hundreds of projects. The CIO wants every table that has an employee_ssn column.\n- **What you must achieve:** Find those tables.\n- **The limits:** Minimum effort.\n- **What they're really asking:** How do you search all datasets for that column quickly?"
  },
  {
   "file": "Q094-pending-pod-preempted-node.md",
@@ -6174,7 +6174,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Two identical pods. One is running, one is **Pending**. The cluster runs **only on preemptible nodes**. What most likely happened?\n\n**Clues in the question:**\n- \"**single preemptible node pool**\": preemptible VMs can be **taken away by Google at any time**. This detail is the main hint.\n- \"**2 replicas**\" + \"**one of them is still in Pending**\": both pods are identical and one runs, so the pod **fits** on a node. That rules out A.\n- \"**Pending**\" (not ImagePullBackOff): this isn't an image permission problem, which rules out C.\n- \"**between the creation of the Deployment and your verification**\": in those few minutes, the node under one pod was preempted. The pod waits for a new node.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** A Deployment with 2 replicas (copies) runs on a GKE cluster with one preemptible node pool (cheap nodes Google can take back at any time). One pod stays Pending.\n- **What you must achieve:** Find the most likely cause.\n- **The limits:** None stated.\n- **What they're really asking:** Why can't the second pod start?\n\n**Clues in the question:**\n- \"**single preemptible node pool**\": preemptible VMs can be **taken away by Google at any time**. This detail is the main hint.\n- \"**2 replicas**\" + \"**one of them is still in Pending**\": both pods are identical and one runs, so the pod **fits** on a node. That rules out A.\n- \"**Pending**\" (not ImagePullBackOff): this isn't an image permission problem, which rules out C.\n- \"**between the creation of the Deployment and your verification**\": in those few minutes, the node under one pod was preempted. The pod waits for a new node.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -6230,7 +6230,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Two identical pods. One is running, one is **Pending**. The cluster runs **only on preemptible nodes**. What most likely happened?"
+  "plain": "- **The situation:** A Deployment with 2 replicas (copies) runs on a GKE cluster with one preemptible node pool (cheap nodes Google can take back at any time). One pod stays Pending.\n- **What you must achieve:** Find the most likely cause.\n- **The limits:** None stated.\n- **What they're really asking:** Why can't the second pod start?"
  },
  {
   "file": "Q095-spanner-iam-admin-activity-logs.md",
@@ -6238,7 +6238,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Not **who** has Spanner roles now, but **when** they were added. Where is that history?\n\n**Clues in the question:**\n- \"**find out when**\": you need **history with timestamps** → **logs**.\n- \"**users were added to … IAM roles**\": changing an IAM policy is an **admin activity** → **Admin Activity audit logs**.\n- The IAM page shows **who has access now**, not **when** it was given.\n\n**Exam topic:** Logging / IAM."
+    "md": "**In plain words:**\n- **The situation:** You use the Google Cloud console.\n- **What you must achieve:** Find out when users were added to Cloud Spanner IAM roles.\n- **The limits:** Do it in the console.\n- **What they're really asking:** Where in the console do you see when roles were granted?\n\n**Clues in the question:**\n- \"**find out when**\": you need **history with timestamps** → **logs**.\n- \"**users were added to … IAM roles**\": changing an IAM policy is an **admin activity** → **Admin Activity audit logs**.\n- The IAM page shows **who has access now**, not **when** it was given.\n\n**Exam topic:** Logging / IAM."
    },
    {
     "kind": "terms",
@@ -6294,7 +6294,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Not **who** has Spanner roles now, but **when** they were added. Where is that history?"
+  "plain": "- **The situation:** You use the Google Cloud console.\n- **What you must achieve:** Find out when users were added to Cloud Spanner IAM roles.\n- **The limits:** Do it in the console.\n- **What they're really asking:** Where in the console do you see when roles were granted?"
  },
  {
   "file": "Q096-bigquery-control-query-costs.md",
@@ -6302,7 +6302,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Many teams query BigQuery and the bill is huge. Pick **two** ways to **limit query costs**.\n\n**Clues in the question:**\n- \"**query costs … very high**\": the cost is from **queries** (on-demand = pay per TB scanned), not storage.\n- \"**control costs**\": either **cap** how much each user/project can scan (**custom quota**) or switch to a **fixed price** (**flat rate / slots**).\n- Splitting or copying data doesn't reduce what queries scan, and copies add storage costs.\n\n**Exam topic:** BigQuery / cost management."
+    "md": "**In plain words:**\n- **The situation:** Many business units query a BigQuery data warehouse, and query costs are very high.\n- **What you must achieve:** Control the cost of queries.\n- **The limits:** Choose two methods.\n- **What they're really asking:** Which two ways reduce or cap BigQuery query spending?\n\n**Clues in the question:**\n- \"**query costs … very high**\": the cost is from **queries** (on-demand = pay per TB scanned), not storage.\n- \"**control costs**\": either **cap** how much each user/project can scan (**custom quota**) or switch to a **fixed price** (**flat rate / slots**).\n- Splitting or copying data doesn't reduce what queries scan, and copies add storage costs.\n\n**Exam topic:** BigQuery / cost management."
    },
    {
     "kind": "terms",
@@ -6364,7 +6364,7 @@ window.QUIZ_QUESTIONS = [
    "B",
    "E"
   ],
-  "plain": "Many teams query BigQuery and the bill is huge. Pick **two** ways to **limit query costs**."
+  "plain": "- **The situation:** Many business units query a BigQuery data warehouse, and query costs are very high.\n- **What you must achieve:** Control the cost of queries.\n- **The limits:** Choose two methods.\n- **What they're really asking:** Which two ways reduce or cap BigQuery query spending?"
  },
  {
   "file": "Q097-gke-sandbox-gvisor-isolation.md",
@@ -6372,7 +6372,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Customers can run **any code** inside their pods, all in one cluster. How do you **wall off** each customer's pod as strongly as possible?\n\n**Clues in the question:**\n- \"**customers can run arbitrary code**\": untrusted code that might try to break out of its container.\n- \"**maximize the isolation between your customers' Pods**\": a **sandbox** around each pod → **GKE Sandbox (gVisor)**.\n- Checking images (A, B) doesn't help, because the danger is the **code customers run**, not the image.\n\n**Exam topic:** GKE security."
+    "md": "**In plain words:**\n- **The situation:** You run one GKE cluster. Each customer gets a pod and can run any code they want in it.\n- **What you must achieve:** Keep customers' pods as separated from each other as possible.\n- **The limits:** Maximum isolation.\n- **What they're really asking:** Which GKE feature gives the strongest isolation between pods?\n\n**Clues in the question:**\n- \"**customers can run arbitrary code**\": untrusted code that might try to break out of its container.\n- \"**maximize the isolation between your customers' Pods**\": a **sandbox** around each pod → **GKE Sandbox (gVisor)**.\n- Checking images (A, B) doesn't help, because the danger is the **code customers run**, not the image.\n\n**Exam topic:** GKE security."
    },
    {
     "kind": "terms",
@@ -6428,7 +6428,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Customers can run **any code** inside their pods, all in one cluster. How do you **wall off** each customer's pod as strongly as possible?"
+  "plain": "- **The situation:** You run one GKE cluster. Each customer gets a pod and can run any code they want in it.\n- **What you must achieve:** Keep customers' pods as separated from each other as possible.\n- **The limits:** Maximum isolation.\n- **What they're really asking:** Which GKE feature gives the strongest isolation between pods?"
  },
  {
   "file": "Q098-spanner-monotonic-primary-key.md",
@@ -6436,7 +6436,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** One Spanner table is slow to read. Users always look rows up **by primary key**. What fixes it?\n\n**Clues in the question:**\n- \"**accessed only … using a primary key**\": lookups already use the key, so **extra indexes won't help** (rules out B and D).\n- The missing schema reportedly shows an increasing `person_id`. For a **busy insert workload**, new IDs like 1001, 1002, 1003 all go to the **last key range**. That server may become overloaded. A read of a row on that server may then wait longer.\n- Fix that particular bottleneck with keys that spread **new writes** among key ranges, such as UUIDv4 values or a hash prefix.\n- **Limit:** If there are few inserts or reads are slow for some other reason, the question does not give enough evidence to prove this is the cause. C is the intended exam answer, not a diagnosis confirmed by the text alone.\n\n**Exam topic:** Cloud Spanner / databases."
+    "md": "**In plain words:**\n- **The situation:** A Cloud Spanner table is read by its primary key (its unique ID column), and reads are slow. The key is an increasing number (person_id), and the table has a profile picture column.\n- **What you must achieve:** Fix the slow reads.\n- **The limits:** None stated.\n- **What they're really asking:** What change to the table design fixes the problem?\n\n**Clues in the question:**\n- \"**accessed only … using a primary key**\": lookups already use the key, so **extra indexes won't help** (rules out B and D).\n- The missing schema reportedly shows an increasing `person_id`. For a **busy insert workload**, new IDs like 1001, 1002, 1003 all go to the **last key range**. That server may become overloaded. A read of a row on that server may then wait longer.\n- Fix that particular bottleneck with keys that spread **new writes** among key ranges, such as UUIDv4 values or a hash prefix.\n- **Limit:** If there are few inserts or reads are slow for some other reason, the question does not give enough evidence to prove this is the cause. C is the intended exam answer, not a diagnosis confirmed by the text alone.\n\n**Exam topic:** Cloud Spanner / databases."
    },
    {
     "kind": "terms",
@@ -6492,7 +6492,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "One Spanner table is slow to read. Users always look rows up **by primary key**. What fixes it?"
+  "plain": "- **The situation:** A Cloud Spanner table is read by its primary key (its unique ID column), and reads are slow. The key is an increasing number (person_id), and the table has a profile picture column.\n- **What you must achieve:** Fix the slow reads.\n- **The limits:** None stated.\n- **What they're really asking:** What change to the table design fixes the problem?"
  },
  {
   "file": "Q099-finance-billing-viewer.md",
@@ -6500,7 +6500,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Finance should **look at** the billing reports, and get **nothing else**. Which role?\n\n**Clues in the question:**\n- \"**view the billing report**\": read-only billing → **Billing Account Viewer** (`roles/billing.viewer`).\n- \"**does not get additional permissions**\": least privilege. No linking projects, no changing billing.\n\n**Exam topic:** Billing / IAM."
+    "md": "**In plain words:**\n- **The situation:** The finance team wants to see billing reports for your projects.\n- **What you must achieve:** Let them see those reports.\n- **The limits:** They must not get any extra permissions on the projects.\n- **What they're really asking:** Which role lets them see billing without being able to touch projects?\n\n**Clues in the question:**\n- \"**view the billing report**\": read-only billing → **Billing Account Viewer** (`roles/billing.viewer`).\n- \"**does not get additional permissions**\": least privilege. No linking projects, no changing billing.\n\n**Exam topic:** Billing / IAM."
    },
    {
     "kind": "terms",
@@ -6556,7 +6556,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Finance should **look at** the billing reports, and get **nothing else**. Which role?"
+  "plain": "- **The situation:** The finance team wants to see billing reports for your projects.\n- **What you must achieve:** Let them see those reports.\n- **The limits:** They must not get any extra permissions on the projects.\n- **What they're really asking:** Which role lets them see billing without being able to touch projects?"
  },
  {
   "file": "Q100-sre-access-approval-group.md",
@@ -6564,7 +6564,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** When Google Support needs to look at your data for a support case, someone in your company must **approve** it. SREs should be the approvers. Which role, and how do you grant it?\n\n**Clues in the question:**\n- \"**approve requests from the Google Cloud support team**\": that's **Access Approval** → role `roles/accessapproval.approver`.\n- \"**Google-recommended practices**\": grant roles to a **group**, not to each person.\n- \"**strict requirements to control access**\": least privilege, so not a role-management role like `iam.roleAdmin`.\n\n**Exam topic:** IAM / security."
+    "md": "**In plain words:**\n- **The situation:** Your organization strictly controls access to projects. When an SRE (site reliability engineer) opens a support case, Google support staff may ask for access.\n- **What you must achieve:** Let SREs approve those access requests from Google support.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which feature and role let SREs approve Google support's access requests?\n\n**Clues in the question:**\n- \"**approve requests from the Google Cloud support team**\": that's **Access Approval** → role `roles/accessapproval.approver`.\n- \"**Google-recommended practices**\": grant roles to a **group**, not to each person.\n- \"**strict requirements to control access**\": least privilege, so not a role-management role like `iam.roleAdmin`.\n\n**Exam topic:** IAM / security."
    },
    {
     "kind": "terms",
@@ -6620,7 +6620,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "When Google Support needs to look at your data for a support case, someone in your company must **approve** it. SREs should be the approvers. Which role, and how do you grant it?"
+  "plain": "- **The situation:** Your organization strictly controls access to projects. When an SRE (site reliability engineer) opens a support case, Google support staff may ask for access.\n- **What you must achieve:** Let SREs approve those access requests from Google support.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Which feature and role let SREs approve Google support's access requests?"
  },
  {
   "file": "Q101-deletion-protection-shared-project.md",
@@ -6628,7 +6628,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Other teams work in the same project. You don't want one of them to delete your VM by mistake. Which setting protects it?\n\n**Clues in the question:**\n- \"**project shared with other teams**\": other people have permissions in this project.\n- \"**accidentally causing downtime**\": the risk is a **mistake**, like someone deleting the wrong VM → **deletion protection** blocks deletes.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You host an app on a VM in a project that other teams also use.\n- **What you must achieve:** Stop other teams from accidentally causing downtime for your app.\n- **The limits:** None stated.\n- **What they're really asking:** Which feature protects the VM from being taken down by mistake?\n\n**Clues in the question:**\n- \"**project shared with other teams**\": other people have permissions in this project.\n- \"**accidentally causing downtime**\": the risk is a **mistake**, like someone deleting the wrong VM → **deletion protection** blocks deletes.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -6684,7 +6684,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Other teams work in the same project. You don't want one of them to delete your VM by mistake. Which setting protects it?"
+  "plain": "- **The situation:** You host an app on a VM in a project that other teams also use.\n- **What you must achieve:** Stop other teams from accidentally causing downtime for your app.\n- **The limits:** None stated.\n- **What they're really asking:** Which feature protects the VM from being taken down by mistake?"
  },
  {
   "file": "Q102-bigquery-custom-role-no-delete-group.md",
@@ -6692,7 +6692,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Users must **query** BigQuery but must **not be able to delete datasets**. Follow Google best practice.\n\n**Clues in the question:**\n- \"**query datasets**\" + \"**prevent … deleting**\": you need a role with query permissions but **without `bigquery.datasets.delete`** → a **custom role**.\n- \"**Google-recommended practices**\": grant roles to a **group**, not to each user.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Users need to query BigQuery datasets.\n- **What you must achieve:** Let them run queries.\n- **The limits:** They must not be able to delete datasets; follow Google's recommended practice.\n- **What they're really asking:** Which roles let them query but not delete?\n\n**Clues in the question:**\n- \"**query datasets**\" + \"**prevent … deleting**\": you need a role with query permissions but **without `bigquery.datasets.delete`** → a **custom role**.\n- \"**Google-recommended practices**\": grant roles to a **group**, not to each user.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -6748,7 +6748,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Users must **query** BigQuery but must **not be able to delete datasets**. Follow Google best practice."
+  "plain": "- **The situation:** Users need to query BigQuery datasets.\n- **What you must achieve:** Let them run queries.\n- **The limits:** They must not be able to delete datasets; follow Google's recommended practice.\n- **What they're really asking:** Which roles let them query but not delete?"
  },
  {
   "file": "Q103-datastore-emulator-apt-install.md",
@@ -6756,7 +6756,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want to run Datastore **on your laptop** for testing. Your gcloud was installed with **apt** (Ubuntu's package manager). How do you add the emulator?\n\n**Clues in the question:**\n- \"**test your application locally**\": you need the **Datastore emulator**, a local fake Datastore.\n- \"**installed from the Google Cloud Ubuntu package repository**\": when gcloud comes from apt, `gcloud components install` is **disabled**. Extra pieces are installed with **apt-get** instead.\n\n**Exam topic:** Cloud SDK."
+    "md": "**In plain words:**\n- **The situation:** Your Ubuntu laptop has the Cloud SDK installed from Google's package repository.\n- **What you must achieve:** Test your app on the laptop against Cloud Datastore (a NoSQL database).\n- **The limits:** It must run locally.\n- **What they're really asking:** How do you run a local stand-in for Datastore on the laptop?\n\n**Clues in the question:**\n- \"**test your application locally**\": you need the **Datastore emulator**, a local fake Datastore.\n- \"**installed from the Google Cloud Ubuntu package repository**\": when gcloud comes from apt, `gcloud components install` is **disabled**. Extra pieces are installed with **apt-get** instead.\n\n**Exam topic:** Cloud SDK."
    },
    {
     "kind": "terms",
@@ -6812,7 +6812,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "You want to run Datastore **on your laptop** for testing. Your gcloud was installed with **apt** (Ubuntu's package manager). How do you add the emulator?"
+  "plain": "- **The situation:** Your Ubuntu laptop has the Cloud SDK installed from Google's package repository.\n- **What you must achieve:** Test your app on the laptop against Cloud Datastore (a NoSQL database).\n- **The limits:** It must run locally.\n- **What they're really asking:** How do you run a local stand-in for Datastore on the laptop?"
  },
  {
   "file": "Q104-view-hierarchy-browser-role-group.md",
@@ -6820,7 +6820,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A few people need to **see the tree** of folders and projects, and nothing more. Which role, granted how?\n\n**Clues in the question:**\n- \"**view the hierarchical structure**\" + \"**minimum permissions**\": `roles/browser` shows folders and projects only, not what's inside them.\n- \"**Google-recommended practices**\": grant roles to a **group**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** The organization has hundreds of folders and projects.\n- **What you must achieve:** Let a few team members view the hierarchy (the tree of folders and projects).\n- **The limits:** Minimum permissions; follow recommended practice.\n- **What they're really asking:** Which role lets them see the structure and nothing more?\n\n**Clues in the question:**\n- \"**view the hierarchical structure**\" + \"**minimum permissions**\": `roles/browser` shows folders and projects only, not what's inside them.\n- \"**Google-recommended practices**\": grant roles to a **group**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -6876,7 +6876,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "A few people need to **see the tree** of folders and projects, and nothing more. Which role, granted how?"
+  "plain": "- **The situation:** The organization has hundreds of folders and projects.\n- **What you must achieve:** Let a few team members view the hierarchy (the tree of folders and projects).\n- **The limits:** Minimum permissions; follow recommended practice.\n- **What they're really asking:** Which role lets them see the structure and nothing more?"
  },
  {
   "file": "Q105-cloud-identity-saml-sso-third-party.md",
@@ -6884,7 +6884,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your company already has a login system (SSO). You want users to sign in to Google with **that** system. How do you set it up?\n\n**Clues in the question:**\n- \"**your company's SSO provider**\" = the **identity provider (IdP)** that checks passwords.\n- \"**users in Cloud Identity**\" + \"**authenticate using your company's SSO**\": Google must **trust** the company IdP. Google becomes the **service provider (SP)**.\n- OAuth 2.0 is for **apps asking permission** to access data, not for company sign-in.\n\n**Exam topic:** Identity / IAM."
+    "md": "**In plain words:**\n- **The situation:** Your company has a single sign-on provider (SSO: one login for all apps) that supports SAML (a standard for sharing logins). Users live in Cloud Identity.\n- **What you must achieve:** Users sign in to Google with the company SSO.\n- **The limits:** None stated.\n- **What they're really asking:** How do you set up Cloud Identity to use your SSO provider?\n\n**Clues in the question:**\n- \"**your company's SSO provider**\" = the **identity provider (IdP)** that checks passwords.\n- \"**users in Cloud Identity**\" + \"**authenticate using your company's SSO**\": Google must **trust** the company IdP. Google becomes the **service provider (SP)**.\n- OAuth 2.0 is for **apps asking permission** to access data, not for company sign-in.\n\n**Exam topic:** Identity / IAM."
    },
    {
     "kind": "terms",
@@ -6940,7 +6940,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Your company already has a login system (SSO). You want users to sign in to Google with **that** system. How do you set it up?"
+  "plain": "- **The situation:** Your company has a single sign-on provider (SSO: one login for all apps) that supports SAML (a standard for sharing logins). Users live in Cloud Identity.\n- **What you must achieve:** Users sign in to Google with the company SSO.\n- **The limits:** None stated.\n- **What they're really asking:** How do you set up Cloud Identity to use your SSO provider?"
  },
  {
   "file": "Q106-service-account-admin-role.md",
@@ -6948,7 +6948,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** One person **creates and manages service accounts**. Which role is the smallest that lets them do that?\n\n**Clues in the question:**\n- \"**creates and manages all service accounts**\" → **Service Account Admin**.\n- \"**minimum role**\": not securityAdmin (much broader) and not roleAdmin (custom roles).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** One person creates and manages all service accounts in your projects.\n- **What you must achieve:** Give that person the smallest role that lets them do this job.\n- **The limits:** Minimum permissions.\n- **What they're really asking:** Which role should they get?\n\n**Clues in the question:**\n- \"**creates and manages all service accounts**\" → **Service Account Admin**.\n- \"**minimum role**\": not securityAdmin (much broader) and not roleAdmin (custom roles).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -7004,7 +7004,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "One person **creates and manages service accounts**. Which role is the smallest that lets them do that?"
+  "plain": "- **The situation:** One person creates and manages all service accounts in your projects.\n- **What you must achieve:** Give that person the smallest role that lets them do this job.\n- **The limits:** Minimum permissions.\n- **What they're really asking:** Which role should they get?"
  },
  {
   "file": "Q107-archive-quarterly-coldline.md",
@@ -7012,7 +7012,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Archived data, read **once every 3 months**. Which storage class is cheapest?\n\n**Clues in the question:**\n- \"**once a quarter**\" → **Coldline** (built for about quarterly access, 90-day minimum). \"Cold Storage\" in option A means Coldline.\n- \"**cost-efficient**\": cheaper than Nearline (monthly) for data read only quarterly.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** You are archiving a data warehouse into Cloud Storage. Users read the archive once a quarter for regulatory reasons.\n- **What you must achieve:** Choose the storage class.\n- **The limits:** Cost-efficient.\n- **What they're really asking:** Which class fits data that is read about four times a year?\n\n**Clues in the question:**\n- \"**once a quarter**\" → **Coldline** (built for about quarterly access, 90-day minimum). \"Cold Storage\" in option A means Coldline.\n- \"**cost-efficient**\": cheaper than Nearline (monthly) for data read only quarterly.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -7068,7 +7068,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Archived data, read **once every 3 months**. Which storage class is cheapest?"
+  "plain": "- **The situation:** You are archiving a data warehouse into Cloud Storage. Users read the archive once a quarter for regulatory reasons.\n- **What you must achieve:** Choose the storage class.\n- **The limits:** Cost-efficient.\n- **What they're really asking:** Which class fits data that is read about four times a year?"
  },
  {
   "file": "Q108-gke-gpu-node-auto-provisioning.md",
@@ -7076,7 +7076,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Data scientists need GPUs **only sometimes**, for long jobs that **can't be interrupted**. How do you keep cost low?\n\n**Clues in the question:**\n- \"**infrequently**\": don't keep GPU nodes running all the time (rules out D's minimum of 1).\n- \"**long-running, non-restartable**\": preemptible VMs can be stopped at any time → rules out C.\n- \"**minimize cost**\": **node auto-provisioning** creates a GPU node pool only when a GPU pod needs it and deletes it afterwards.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Data scientists sometimes use a GKE cluster. They need GPUs for long-running jobs that cannot be restarted.\n- **What you must achieve:** Give them GPUs.\n- **The limits:** Keep costs low, and the jobs must not be interrupted.\n- **What they're really asking:** How should you set up GPU nodes cheaply without risking their jobs?\n\n**Clues in the question:**\n- \"**infrequently**\": don't keep GPU nodes running all the time (rules out D's minimum of 1).\n- \"**long-running, non-restartable**\": preemptible VMs can be stopped at any time → rules out C.\n- \"**minimize cost**\": **node auto-provisioning** creates a GPU node pool only when a GPU pod needs it and deletes it afterwards.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -7132,7 +7132,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Data scientists need GPUs **only sometimes**, for long jobs that **can't be interrupted**. How do you keep cost low?"
+  "plain": "- **The situation:** Data scientists sometimes use a GKE cluster. They need GPUs for long-running jobs that cannot be restarted.\n- **What you must achieve:** Give them GPUs.\n- **The limits:** Keep costs low, and the jobs must not be interrupted.\n- **What they're really asking:** How should you set up GPU nodes cheaply without risking their jobs?"
  },
  {
   "file": "Q109-ad-sync-gcds-cloud-identity.md",
@@ -7140,7 +7140,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Users live in **Active Directory**. AD must stay the master list, and the company must fully control everyone's Google accounts. How?\n\n**Clues in the question:**\n- \"**Active Directory as their source of truth**\": users are created and removed in AD, and Google must follow automatically.\n- \"**full control over the Google accounts**\": accounts must be **managed** in the company's Cloud Identity, not personal sign-ups.\n- Google's ready-made tool for AD → Cloud Identity sync is **GCDS**.\n\n**Exam topic:** Identity."
+    "md": "**In plain words:**\n- **The situation:** Employee identities live in Active Directory (Microsoft's company directory), which stays the source of truth.\n- **What you must achieve:** Have full control over employees' Google accounts for all Google services, including Google Cloud.\n- **The limits:** None stated.\n- **What they're really asking:** How do you connect Active Directory to Google accounts?\n\n**Clues in the question:**\n- \"**Active Directory as their source of truth**\": users are created and removed in AD, and Google must follow automatically.\n- \"**full control over the Google accounts**\": accounts must be **managed** in the company's Cloud Identity, not personal sign-ups.\n- Google's ready-made tool for AD → Cloud Identity sync is **GCDS**.\n\n**Exam topic:** Identity."
    },
    {
     "kind": "terms",
@@ -7196,7 +7196,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Users live in **Active Directory**. AD must stay the master list, and the company must fully control everyone's Google accounts. How?"
+  "plain": "- **The situation:** Employee identities live in Active Directory (Microsoft's company directory), which stays the source of truth.\n- **What you must achieve:** Have full control over employees' Google accounts for all Google services, including Google Cloud.\n- **The limits:** None stated.\n- **What they're really asking:** How do you connect Active Directory to Google accounts?"
  },
  {
   "file": "Q110-prod-env-new-project.md",
@@ -7204,7 +7204,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Dev is done. Now build production. Security says dev and prod must **not be connected by network routes**. Best practice?\n\n**Clues in the question:**\n- \"**forbidden the existence of network routes between these 2 environments**\": prod needs its **own separate network**. A new project has its own VPC.\n- \"**Google-recommended practices**\": **one project per environment** (dev, prod).\n\n**Exam topic:** Resource management / networking."
+    "md": "**In plain words:**\n- **The situation:** A development environment (Compute Engine plus Cloud SQL) exists in a project.\n- **What you must achieve:** Create the production environment.\n- **The limits:** Security forbids any network route between the two environments; follow recommended practice.\n- **What they're really asking:** How do you set up production so it is completely separate?\n\n**Clues in the question:**\n- \"**forbidden the existence of network routes between these 2 environments**\": prod needs its **own separate network**. A new project has its own VPC.\n- \"**Google-recommended practices**\": **one project per environment** (dev, prod).\n\n**Exam topic:** Resource management / networking."
    },
    {
     "kind": "terms",
@@ -7260,7 +7260,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Dev is done. Now build production. Security says dev and prod must **not be connected by network routes**. Best practice?"
+  "plain": "- **The situation:** A development environment (Compute Engine plus Cloud SQL) exists in a project.\n- **What you must achieve:** Create the production environment.\n- **The limits:** Security forbids any network route between the two environments; follow recommended practice.\n- **What they're really asking:** How do you set up production so it is completely separate?"
  },
  {
   "file": "Q111-auditor-domain-restricted-sharing.md",
@@ -7268,7 +7268,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** An outside auditor must **see all resources** in one project. But a policy says only accounts from **your own domain** can be granted roles. What do you do?\n\n**Clues in the question:**\n- \"**Domain Restricted Sharing … only your Cloud Identity domain**\": IAM will **reject** the auditor's outside Google account. You must give them an account **in your domain**.\n- \"**review all the resources**\" + \"**view, but not modify**\" → **Viewer** role (Security Reviewer only sees IAM policies).\n\n**Exam topic:** IAM / Organization Policy."
+    "md": "**In plain words:**\n- **The situation:** An external auditor must review the resources in one project. The organization uses Domain Restricted Sharing (only accounts from your own domain can be given roles).\n- **What you must achieve:** Let the auditor view but not change anything.\n- **The limits:** The policy blocks outside accounts.\n- **What they're really asking:** How do you give the auditor view access while respecting that policy?\n\n**Clues in the question:**\n- \"**Domain Restricted Sharing … only your Cloud Identity domain**\": IAM will **reject** the auditor's outside Google account. You must give them an account **in your domain**.\n- \"**review all the resources**\" + \"**view, but not modify**\" → **Viewer** role (Security Reviewer only sees IAM policies).\n\n**Exam topic:** IAM / Organization Policy."
    },
    {
     "kind": "terms",
@@ -7324,7 +7324,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "An outside auditor must **see all resources** in one project. But a policy says only accounts from **your own domain** can be granted roles. What do you do?"
+  "plain": "- **The situation:** An external auditor must review the resources in one project. The organization uses Domain Restricted Sharing (only accounts from your own domain can be given roles).\n- **What you must achieve:** Let the auditor view but not change anything.\n- **The limits:** The policy blocks outside accounts.\n- **What they're really asking:** How do you give the auditor view access while respecting that policy?"
  },
  {
   "file": "Q112-boot-disk-snapshot-schedule.md",
@@ -7332,7 +7332,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Back up the boot disk **regularly**, restore **fast**, and **delete old backups automatically**. What's the Google way?\n\n**Clues in the question:**\n- \"**backed up regularly**\": a **schedule**.\n- \"**restore … quickly**\": a disk snapshot can be turned into a new disk in minutes.\n- \"**older backups to be cleaned automatically**\": snapshot schedules have a **retention policy** (e.g., keep 14 days).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A business-critical VM's boot disk (the disk holding the operating system) must be backed up regularly.\n- **What you must achieve:** Regular backups that can be restored quickly.\n- **The limits:** Old backups must be deleted automatically; follow recommended practice.\n- **What they're really asking:** How do you schedule boot-disk backups with automatic cleanup?\n\n**Clues in the question:**\n- \"**backed up regularly**\": a **schedule**.\n- \"**restore … quickly**\": a disk snapshot can be turned into a new disk in minutes.\n- \"**older backups to be cleaned automatically**\": snapshot schedules have a **retention policy** (e.g., keep 14 days).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -7388,7 +7388,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Back up the boot disk **regularly**, restore **fast**, and **delete old backups automatically**. What's the Google way?"
+  "plain": "- **The situation:** A business-critical VM's boot disk (the disk holding the operating system) must be backed up regularly.\n- **What you must achieve:** Regular backups that can be restored quickly.\n- **The limits:** Old backups must be deleted automatically; follow recommended practice.\n- **What they're really asking:** How do you schedule boot-disk backups with automatic cleanup?"
  },
  {
   "file": "Q113-auditor-private-log-viewer.md",
@@ -7396,7 +7396,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** An auditor must read **audit logs**, including the private **Data Access** logs. Which role, and what else?\n\n**Clues in the question:**\n- \"**Data Access logs**\": these are **private logs**. The normal Logs Viewer can't see them. You need **Private Logs Viewer** (`roles/logging.privateLogViewer`).\n- \"**review your … Audit Logs**\": Private Logs Viewer includes Logs Viewer, so it covers Admin Activity logs too, which record **IAM policy changes**.\n- No requirement to **export** anything, and a predefined role is better than a custom one.\n\n**Exam topic:** Logging / IAM."
+    "md": "**In plain words:**\n- **The situation:** An external auditor needs to review Audit Logs and also Data Access logs.\n- **What you must achieve:** Give the auditor the right IAM role.\n- **The limits:** None stated.\n- **What they're really asking:** Which role lets them read both kinds of logs?\n\n**Clues in the question:**\n- \"**Data Access logs**\": these are **private logs**. The normal Logs Viewer can't see them. You need **Private Logs Viewer** (`roles/logging.privateLogViewer`).\n- \"**review your … Audit Logs**\": Private Logs Viewer includes Logs Viewer, so it covers Admin Activity logs too, which record **IAM policy changes**.\n- No requirement to **export** anything, and a predefined role is better than a custom one.\n\n**Exam topic:** Logging / IAM."
    },
    {
     "kind": "terms",
@@ -7452,7 +7452,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "An auditor must read **audit logs**, including the private **Data Access** logs. Which role, and what else?"
+  "plain": "- **The situation:** An external auditor needs to review Audit Logs and also Data Access logs.\n- **What you must achieve:** Give the auditor the right IAM role.\n- **The limits:** None stated.\n- **What they're really asking:** Which role lets them read both kinds of logs?"
  },
  {
   "file": "Q114-logs-60-days-sink-bigquery.md",
@@ -7460,7 +7460,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Logs from **several projects**, kept **60 days**, and you want to **analyze them quickly**. Best practice?\n\n**Clues in the question:**\n- \"**combined logs for all projects**\": send each project's logs (or an aggregated org/folder sink) to **one destination**.\n- \"**explore and quickly analyze**\": **BigQuery** lets you run SQL on logs.\n- \"**past 60 days**\": BigQuery **table expiration = 60 days** deletes old data automatically.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** You manage several projects.\n- **What you must achieve:** Get all logs from the last 60 days in one place to explore and analyze quickly.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Where should the combined logs be sent?\n\n**Clues in the question:**\n- \"**combined logs for all projects**\": send each project's logs (or an aggregated org/folder sink) to **one destination**.\n- \"**explore and quickly analyze**\": **BigQuery** lets you run SQL on logs.\n- \"**past 60 days**\": BigQuery **table expiration = 60 days** deletes old data automatically.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -7516,7 +7516,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Logs from **several projects**, kept **60 days**, and you want to **analyze them quickly**. Best practice?"
+  "plain": "- **The situation:** You manage several projects.\n- **What you must achieve:** Get all logs from the last 60 days in one place to explore and analyze quickly.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** Where should the combined logs be sent?"
  },
  {
   "file": "Q115-shut-down-project-owner.md",
@@ -7524,7 +7524,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Stop **everything** in one project, in as **few steps** as possible.\n\n**Clues in the question:**\n- \"**turn off all configured services**\" + \"**fewest possible steps**\": **shut down the project**. One action stops all of it.\n- Shutting down a project needs the **Project Owner** role (`resourcemanager.projects.delete`).\n- In the console you click **Shut down**, then type the project ID to confirm.\n\n**Exam topic:** Resource management / Billing."
+    "md": "**In plain words:**\n- **The situation:** A division wants to cut Google Cloud costs.\n- **What you must achieve:** Turn off every service in one existing project.\n- **The limits:** Fewest steps.\n- **What they're really asking:** What is the fastest way to stop all services in that project?\n\n**Clues in the question:**\n- \"**turn off all configured services**\" + \"**fewest possible steps**\": **shut down the project**. One action stops all of it.\n- Shutting down a project needs the **Project Owner** role (`resourcemanager.projects.delete`).\n- In the console you click **Shut down**, then type the project ID to confirm.\n\n**Exam topic:** Resource management / Billing."
    },
    {
     "kind": "terms",
@@ -7580,7 +7580,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Stop **everything** in one project, in as **few steps** as possible."
+  "plain": "- **The situation:** A division wants to cut Google Cloud costs.\n- **What you must achieve:** Turn off every service in one existing project.\n- **The limits:** Fewest steps.\n- **What they're really asking:** What is the fastest way to stop all services in that project?"
  },
  {
   "file": "Q116-cross-project-bigquery-service-account.md",
@@ -7588,7 +7588,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** VMs in `web-applications` use a service account. That account must read BigQuery data in `crm-databases-proj`. Where do you grant the role?\n\n**Clues in the question:**\n- \"**access to BigQuery datasets in crm-databases-proj**\": the permission must be granted **where the data is**, in crm-databases-proj.\n- \"**give access to the service account in the web-applications project**\": the **member** is that service account.\n- \"**Google-recommended practices**\": least privilege, so **appropriate** roles, never Project Owner.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** VMs in project web-applications need BigQuery data in project crm-databases-proj.\n- **What you must achieve:** Give the VMs' service account access.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** In which project and with which role do you grant access?\n\n**Clues in the question:**\n- \"**access to BigQuery datasets in crm-databases-proj**\": the permission must be granted **where the data is**, in crm-databases-proj.\n- \"**give access to the service account in the web-applications project**\": the **member** is that service account.\n- \"**Google-recommended practices**\": least privilege, so **appropriate** roles, never Project Owner.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -7644,7 +7644,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "VMs in `web-applications` use a service account. That account must read BigQuery data in `crm-databases-proj`. Where do you grant the role?"
+  "plain": "- **The situation:** VMs in project web-applications need BigQuery data in project crm-databases-proj.\n- **What you must achieve:** Give the VMs' service account access.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** In which project and with which role do you grant access?"
  },
  {
   "file": "Q117-terminated-employee-data-access-logs.md",
@@ -7652,7 +7652,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A fired employee kept access for 2 weeks. Did they **read customer data**? Which logs, and what do you search for?\n\n**Clues in the question:**\n- \"**accessed any sensitive customer information**\": **reading data** → **Data Access** audit logs.\n- \"**this employee**\": search by **their email** as the principal (the person who acted), not a service account.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** A fired employee kept Google Cloud access for 2 more weeks.\n- **What you must achieve:** Find out whether they read sensitive customer data during that time.\n- **The limits:** None stated.\n- **What they're really asking:** Which logs show what data they accessed?\n\n**Clues in the question:**\n- \"**accessed any sensitive customer information**\": **reading data** → **Data Access** audit logs.\n- \"**this employee**\": search by **their email** as the principal (the person who acted), not a service account.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -7708,7 +7708,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "A fired employee kept access for 2 weeks. Did they **read customer data**? Which logs, and what do you search for?"
+  "plain": "- **The situation:** A fired employee kept Google Cloud access for 2 more weeks.\n- **What you must achieve:** Find out whether they read sensitive customer data during that time.\n- **The limits:** None stated.\n- **What they're really asking:** Which logs show what data they accessed?"
  },
  {
   "file": "Q118-custom-role-supported-alpha.md",
@@ -7716,7 +7716,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You're making the **first version** of a custom role. The permissions must be **production-safe**, and you want everyone to see the role's **status**.\n\n**Clues in the question:**\n- \"**suitable for production use**\" → permissions with the **SUPPORTED** support level (TESTING ones may change or break).\n- \"**first version**\" + \"**clearly share … the status**\" → set the role's **stage** to **ALPHA** while you test it. Later BETA, then GA.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You are making a custom IAM role.\n- **What you must achieve:** All its permissions are fit for production, and the organization can clearly see the role's status.\n- **The limits:** This is the first version of the role.\n- **What they're really asking:** How do you mark the role's launch stage?\n\n**Clues in the question:**\n- \"**suitable for production use**\" → permissions with the **SUPPORTED** support level (TESTING ones may change or break).\n- \"**first version**\" + \"**clearly share … the status**\" → set the role's **stage** to **ALPHA** while you test it. Later BETA, then GA.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -7772,7 +7772,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You're making the **first version** of a custom role. The permissions must be **production-safe**, and you want everyone to see the role's **status**."
+  "plain": "- **The situation:** You are making a custom IAM role.\n- **What you must achieve:** All its permissions are fit for production, and the organization can clearly see the role's status.\n- **The limits:** This is the first version of the role.\n- **What they're really asking:** How do you mark the role's launch stage?"
  },
  {
   "file": "Q119-unstructured-data-dataflow-cloud-storage.md",
@@ -7780,7 +7780,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Lots of **unstructured files** in **different formats** must be available to a **Dataflow** job. Where do you put them?\n\n**Clues in the question:**\n- \"**unstructured data in different file formats**\": files, not tables → **Cloud Storage** (object storage for any file).\n- \"**processed by a Dataflow job**\": Dataflow reads files from Cloud Storage easily (`gs://…`).\n- BigQuery, Cloud SQL and Spanner need **structured** data with a schema.\n\n**Exam topic:** Data / Storage."
+    "md": "**In plain words:**\n- **The situation:** You have lots of unstructured data in many file formats.\n- **What you must achieve:** Make it available on Google Cloud so a Dataflow job (a data-processing pipeline) can transform it.\n- **The limits:** None stated.\n- **What they're really asking:** Where should you put the files?\n\n**Clues in the question:**\n- \"**unstructured data in different file formats**\": files, not tables → **Cloud Storage** (object storage for any file).\n- \"**processed by a Dataflow job**\": Dataflow reads files from Cloud Storage easily (`gs://…`).\n- BigQuery, Cloud SQL and Spanner need **structured** data with a schema.\n\n**Exam topic:** Data / Storage."
    },
    {
     "kind": "terms",
@@ -7836,7 +7836,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Lots of **unstructured files** in **different formats** must be available to a **Dataflow** job. Where do you put them?"
+  "plain": "- **The situation:** You have lots of unstructured data in many file formats.\n- **What you must achieve:** Make it available on Google Cloud so a Dataflow job (a data-processing pipeline) can transform it.\n- **The limits:** None stated.\n- **What they're really asking:** Where should you put the files?"
  },
  {
   "file": "Q120-gcloud-configurations-multiple-projects.md",
@@ -7844,7 +7844,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You work on several projects. How do you set up gcloud so switching is **easy** and takes the **fewest steps**?\n\n**Clues in the question:**\n- \"**multiple Google Cloud projects**\": make **one configuration per project**.\n- \"**fewest steps**\" + \"**easily manage**\": switching = **one command**: `gcloud config configurations activate <name>`. Running `gcloud init` again each time is more steps.\n\n**Exam topic:** gcloud CLI."
+    "md": "**In plain words:**\n- **The situation:** You manage several projects with the gcloud CLI.\n- **What you must achieve:** Switch between projects easily.\n- **The limits:** Fewest steps.\n- **What they're really asking:** How do you set up gcloud for quick switching?\n\n**Clues in the question:**\n- \"**multiple Google Cloud projects**\": make **one configuration per project**.\n- \"**fewest steps**\" + \"**easily manage**\": switching = **one command**: `gcloud config configurations activate <name>`. Running `gcloud init` again each time is more steps.\n\n**Exam topic:** gcloud CLI."
    },
    {
     "kind": "terms",
@@ -7900,7 +7900,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You work on several projects. How do you set up gcloud so switching is **easy** and takes the **fewest steps**?"
+  "plain": "- **The situation:** You manage several projects with the gcloud CLI.\n- **What you must achieve:** Switch between projects easily.\n- **The limits:** Fewest steps.\n- **What they're really asking:** How do you set up gcloud for quick switching?"
  },
  {
   "file": "Q121-mig-instance-creation-failed-disk-autodelete.md",
@@ -7908,7 +7908,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The MIG keeps failing to create VMs. You need it back to the right number of VMs. What fixes the usual causes?\n\n**Clues in the question:**\n- \"**new instance creation has failed**\": Google's troubleshooting lists two common causes: **invalid template syntax**, or a **leftover persistent disk with the same name** as the new instance.\n- \"**maintain the number of running instances**\": fix the causes now, and stop them coming back with **disks.autoDelete=true** (disks are deleted with their VM, so names don't clash next time).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A managed instance group alerted that it failed to create new instances.\n- **What you must achieve:** Keep the number of running VMs that the template asks for.\n- **The limits:** None stated.\n- **What they're really asking:** What should you check or fix so new instances can be created?\n\n**Clues in the question:**\n- \"**new instance creation has failed**\": Google's troubleshooting lists two common causes: **invalid template syntax**, or a **leftover persistent disk with the same name** as the new instance.\n- \"**maintain the number of running instances**\": fix the causes now, and stop them coming back with **disks.autoDelete=true** (disks are deleted with their VM, so names don't clash next time).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -7964,7 +7964,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "The MIG keeps failing to create VMs. You need it back to the right number of VMs. What fixes the usual causes?"
+  "plain": "- **The situation:** A managed instance group alerted that it failed to create new instances.\n- **What you must achieve:** Keep the number of running VMs that the template asks for.\n- **The limits:** None stated.\n- **What they're really asking:** What should you check or fix so new instances can be created?"
  },
  {
   "file": "Q122-cassandra-dev-marketplace.md",
@@ -7972,7 +7972,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Many teams each need **their own Cassandra** for development. You want it **fast** and with **little support work** from you.\n\n**Clues in the question:**\n- \"**quickly**\" + \"**minimal support effort**\": use something **ready-made**. Cloud Marketplace has one-click Cassandra deployments.\n- \"**isolated from other Cassandra instances**\": each team launches **its own** deployment.\n\n**Exam topic:** Compute Engine / Marketplace."
+    "md": "**In plain words:**\n- **The situation:** Several development teams use Cassandra (a NoSQL database) on-premises. Each team needs its own separate Cassandra dev environment.\n- **What you must achieve:** Move to Google Cloud.\n- **The limits:** Fast, with minimal support effort.\n- **What they're really asking:** What is the quickest, low-effort way to give each team its own Cassandra?\n\n**Clues in the question:**\n- \"**quickly**\" + \"**minimal support effort**\": use something **ready-made**. Cloud Marketplace has one-click Cassandra deployments.\n- \"**isolated from other Cassandra instances**\": each team launches **its own** deployment.\n\n**Exam topic:** Compute Engine / Marketplace."
    },
    {
     "kind": "terms",
@@ -8028,7 +8028,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Many teams each need **their own Cassandra** for development. You want it **fast** and with **little support work** from you."
+  "plain": "- **The situation:** Several development teams use Cassandra (a NoSQL database) on-premises. Each team needs its own separate Cassandra dev environment.\n- **What you must achieve:** Move to Google Cloud.\n- **The limits:** Fast, with minimal support effort.\n- **What they're really asking:** What is the quickest, low-effort way to give each team its own Cassandra?"
  },
  {
   "file": "Q123-cpu-alert-monitoring-policy-email.md",
@@ -8036,7 +8036,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Send an **email** when the VM's **CPU > 90% for 15 minutes**, using Google services.\n\n**Clues in the question:**\n- \"**more than 90% … for more than 15 minutes**\": an **alerting policy** with a threshold condition and a 15-minute duration.\n- \"**receive an email**\": an **email notification channel**.\n- CPU usage is **already collected** by Cloud Monitoring for every VM, so no script is needed.\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** A VM hosts a production app.\n- **What you must achieve:** Get an email if CPU stays above 90% for more than 15 minutes.\n- **The limits:** Use Google's services.\n- **What they're really asking:** How do you set up that alert?\n\n**Clues in the question:**\n- \"**more than 90% … for more than 15 minutes**\": an **alerting policy** with a threshold condition and a 15-minute duration.\n- \"**receive an email**\": an **email notification channel**.\n- CPU usage is **already collected** by Cloud Monitoring for every VM, so no script is needed.\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -8092,7 +8092,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Send an **email** when the VM's **CPU > 90% for 15 minutes**, using Google services."
+  "plain": "- **The situation:** A VM hosts a production app.\n- **What you must achieve:** Get an email if CPU stays above 90% for more than 15 minutes.\n- **The limits:** Use Google's services.\n- **What they're really asking:** How do you set up that alert?"
  },
  {
   "file": "Q124-spanner-autoscale-alert-webhook-function.md",
@@ -8100,7 +8100,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Spanner nodes should go **up and down automatically** with traffic. Which option does it **without a person**?\n\n**Clues in the question:**\n- \"**automatically scale up or down**\": no humans in the loop (rules out B and C).\n- \"**depending on traffic**\": react to the actual load, **CPU over or under** a threshold.\n- Alert → **webhook** → **Cloud Function** that calls the Spanner API to change node count.\n\n**Exam topic:** Cloud Spanner / Monitoring."
+    "md": "**In plain words:**\n- **The situation:** An app uses Cloud Spanner, and its traffic is very predictable.\n- **What you must achieve:** Automatically add or remove Spanner nodes as traffic changes.\n- **The limits:** None stated.\n- **What they're really asking:** How do you automate Spanner node scaling?\n\n**Clues in the question:**\n- \"**automatically scale up or down**\": no humans in the loop (rules out B and C).\n- \"**depending on traffic**\": react to the actual load, **CPU over or under** a threshold.\n- Alert → **webhook** → **Cloud Function** that calls the Spanner API to change node count.\n\n**Exam topic:** Cloud Spanner / Monitoring."
    },
    {
     "kind": "terms",
@@ -8156,7 +8156,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Spanner nodes should go **up and down automatically** with traffic. Which option does it **without a person**?"
+  "plain": "- **The situation:** An app uses Cloud Spanner, and its traffic is very predictable.\n- **What you must achieve:** Automatically add or remove Spanner nodes as traffic changes.\n- **The limits:** None stated.\n- **What they're really asking:** How do you automate Spanner node scaling?"
  },
  {
   "file": "Q125-egress-cost-alert-billing-export-bigquery.md",
@@ -8164,7 +8164,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want an email when **only this one server's egress (outbound network) cost** passes **$100 this month**, **as Google bills it**. Other apps share the project.\n\n**Clues in the question:**\n- \"**not the only application running in the project**\": a project budget would include **everything**, not just this server's egress.\n- \"**egress network costs for the server**\": you need cost **per resource and per SKU**, which the **detailed billing export to BigQuery** has.\n- \"**as measured by Google Cloud**\": use Google's **billing data**, not your own estimate from web logs.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** An Apache web server on a VM publishes large files. Other apps share the same project.\n- **What you must achieve:** Get an email when this server's egress network costs (charges for data leaving Google) go over $100 this month.\n- **The limits:** The cost must be measured by Google Cloud, for this server only.\n- **What they're really asking:** How do you alert on just this server's network costs?\n\n**Clues in the question:**\n- \"**not the only application running in the project**\": a project budget would include **everything**, not just this server's egress.\n- \"**egress network costs for the server**\": you need cost **per resource and per SKU**, which the **detailed billing export to BigQuery** has.\n- \"**as measured by Google Cloud**\": use Google's **billing data**, not your own estimate from web logs.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -8220,7 +8220,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "You want an email when **only this one server's egress (outbound network) cost** passes **$100 this month**, **as Google bills it**. Other apps share the project."
+  "plain": "- **The situation:** An Apache web server on a VM publishes large files. Other apps share the same project.\n- **What you must achieve:** Get an email when this server's egress network costs (charges for data leaving Google) go over $100 this month.\n- **The limits:** The cost must be measured by Google Cloud, for this server only.\n- **What they're really asking:** How do you alert on just this server's network costs?"
  },
  {
   "file": "Q126-estimate-costs-pricing-calculator.md",
@@ -8228,7 +8228,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Before building, estimate the **monthly total cost** of a design that uses **several products**.\n\n**Clues in the question:**\n- \"**estimate**\": no need to build and pay for it first.\n- \"**multiple Google Cloud products**\" + \"**monthly total cost**\": the **pricing calculator** adds up many products into one monthly estimate.\n\n**Exam topic:** Billing / planning."
+    "md": "**In plain words:**\n- **The situation:** Your design uses several Google Cloud products.\n- **What you must achieve:** Estimate the total monthly cost.\n- **The limits:** None stated.\n- **What they're really asking:** Which tool do you use for the estimate?\n\n**Clues in the question:**\n- \"**estimate**\": no need to build and pay for it first.\n- \"**multiple Google Cloud products**\" + \"**monthly total cost**\": the **pricing calculator** adds up many products into one monthly estimate.\n\n**Exam topic:** Billing / planning."
    },
    {
     "kind": "terms",
@@ -8284,7 +8284,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Before building, estimate the **monthly total cost** of a design that uses **several products**."
+  "plain": "- **The situation:** Your design uses several Google Cloud products.\n- **What you must achieve:** Estimate the total monthly cost.\n- **The limits:** None stated.\n- **What they're really asking:** Which tool do you use for the estimate?"
  },
  {
   "file": "Q127-global-ssl-tcp-ssl-proxy-lb.md",
@@ -8292,7 +8292,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your app receives **SSL-encrypted TCP** (not HTTP) on port 443, from users **all over the world**. Which load balancer gives them the **lowest latency**?\n\n**Clues in the question:**\n- \"**SSL-encrypted TCP traffic**\": it's TCP with SSL, **not HTTP(S)** → the HTTPS LB doesn't fit.\n- \"**all over the world**\" + \"**minimize latency**\": a **global** proxy that ends SSL at Google's edge near each user → **SSL Proxy**.\n- Network LB is **regional** and passes traffic through. Internal LB is private only.\n\n**Exam topic:** Networking / load balancing."
+    "md": "**In plain words:**\n- **The situation:** An app receives SSL-encrypted TCP traffic on port 443 from clients all over the world.\n- **What you must achieve:** Keep delay (latency) low for all clients.\n- **The limits:** The traffic is encrypted TCP.\n- **What they're really asking:** Which load balancer fits?\n\n**Clues in the question:**\n- \"**SSL-encrypted TCP traffic**\": it's TCP with SSL, **not HTTP(S)** → the HTTPS LB doesn't fit.\n- \"**all over the world**\" + \"**minimize latency**\": a **global** proxy that ends SSL at Google's edge near each user → **SSL Proxy**.\n- Network LB is **regional** and passes traffic through. Internal LB is private only.\n\n**Exam topic:** Networking / load balancing."
    },
    {
     "kind": "terms",
@@ -8348,7 +8348,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Your app receives **SSL-encrypted TCP** (not HTTP) on port 443, from users **all over the world**. Which load balancer gives them the **lowest latency**?"
+  "plain": "- **The situation:** An app receives SSL-encrypted TCP traffic on port 443 from clients all over the world.\n- **What you must achieve:** Keep delay (latency) low for all clients.\n- **The limits:** The traffic is encrypted TCP.\n- **What they're really asking:** Which load balancer fits?"
  },
  {
   "file": "Q128-pd-read-throttling-local-ssd.md",
@@ -8356,7 +8356,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The app reads big files and the disk is too slow (throttled). You want the **most throughput** for the **least money**.\n\n**Clues in the question:**\n- \"**excessive disk read throttling**\": the disk hits its speed limit. SSD PD speed depends on **size**, so a 350 GB disk has a lowish limit.\n- \"**maximum amount of throughput**\": **Local SSD** is physically attached and much faster than any persistent disk.\n- \"**minimizing costs**\": Local SSD costs less per GB than SSD persistent disk, and a 1 TB SSD PD costs much more.\n\n**Exam topic:** Compute Engine / storage."
+    "md": "**In plain words:**\n- **The situation:** A VM's 350 GB zonal SSD persistent disk is being throttled (slowed down by its speed limit) when reading. The app mostly reads large files.\n- **What you must achieve:** Get the most read speed.\n- **The limits:** Keep costs low.\n- **What they're really asking:** How do you raise the disk's read speed cheaply?\n\n**Clues in the question:**\n- \"**excessive disk read throttling**\": the disk hits its speed limit. SSD PD speed depends on **size**, so a 350 GB disk has a lowish limit.\n- \"**maximum amount of throughput**\": **Local SSD** is physically attached and much faster than any persistent disk.\n- \"**minimizing costs**\": Local SSD costs less per GB than SSD persistent disk, and a 1 TB SSD PD costs much more.\n\n**Exam topic:** Compute Engine / storage."
    },
    {
     "kind": "terms",
@@ -8412,7 +8412,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "The app reads big files and the disk is too slow (throttled). You want the **most throughput** for the **least money**."
+  "plain": "- **The situation:** A VM's 350 GB zonal SSD persistent disk is being throttled (slowed down by its speed limit) when reading. The app mostly reads large files.\n- **What you must achieve:** Get the most read speed.\n- **The limits:** Keep costs low.\n- **What they're really asking:** How do you raise the disk's read speed cheaply?"
  },
  {
   "file": "Q129-expand-subnet-dataproc.md",
@@ -8420,7 +8420,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The subnet `172.16.20.128/25` (128 addresses) is full. You need room for new VMs that talk to Dataproc, in the **fewest steps**.\n\n**Clues in the question:**\n- \"**no private IP addresses available**\" → make the range **bigger**.\n- `172.16.20.0/24` **contains** `172.16.20.128/25` (it's the same block, doubled), so it's a valid **expansion**: one command.\n- \"**minimum number of steps**\": one change, versus new VPCs plus peering plus routes.\n\n**Exam topic:** VPC networking."
+    "md": "**In plain words:**\n- **The situation:** A Dataproc cluster sits in one subnet, 172.16.20.128/25, and there are no free IP addresses left.\n- **What you must achieve:** Add new VMs that can talk to the cluster.\n- **The limits:** Fewest steps.\n- **What they're really asking:** How do you make room for the new VMs?\n\n**Clues in the question:**\n- \"**no private IP addresses available**\" → make the range **bigger**.\n- `172.16.20.0/24` **contains** `172.16.20.128/25` (it's the same block, doubled), so it's a valid **expansion**: one command.\n- \"**minimum number of steps**\": one change, versus new VPCs plus peering plus routes.\n\n**Exam topic:** VPC networking."
    },
    {
     "kind": "terms",
@@ -8476,7 +8476,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The subnet `172.16.20.128/25` (128 addresses) is full. You need room for new VMs that talk to Dataproc, in the **fewest steps**."
+  "plain": "- **The situation:** A Dataproc cluster sits in one subnet, 172.16.20.128/25, and there are no free IP addresses left.\n- **What you must achieve:** Add new VMs that can talk to the cluster.\n- **The limits:** Fewest steps.\n- **What they're really asking:** How do you make room for the new VMs?"
  },
  {
   "file": "Q130-app-engine-sa-bigquery-other-project.md",
@@ -8484,7 +8484,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your App Engine app (running as its default service account) must **read** a BigQuery dataset in **another team's project** that you can't manage.\n\n**Clues in the question:**\n- \"**read data from the BigQuery dataset**\" → **BigQuery Data Viewer**.\n- \"**resides in a different project … You do not have access**\": the role must be granted **in their project**, so you **ask the other team**.\n- \"**default App Engine Service account**\": that's the member to grant.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** An App Engine service runs with the default App Engine service account and shows charts from BigQuery data. That data is in another team's project, and you have no access to it.\n- **What you must achieve:** Let your app read that dataset.\n- **The limits:** You can't change anything in the other project yourself.\n- **What they're really asking:** What should the other team do?\n\n**Clues in the question:**\n- \"**read data from the BigQuery dataset**\" → **BigQuery Data Viewer**.\n- \"**resides in a different project … You do not have access**\": the role must be granted **in their project**, so you **ask the other team**.\n- \"**default App Engine Service account**\": that's the member to grant.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -8540,7 +8540,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Your App Engine app (running as its default service account) must **read** a BigQuery dataset in **another team's project** that you can't manage."
+  "plain": "- **The situation:** An App Engine service runs with the default App Engine service account and shows charts from BigQuery data. That data is in another team's project, and you have no access to it.\n- **What you must achieve:** Let your app read that dataset.\n- **The limits:** You can't change anything in the other project yourself.\n- **What they're really asking:** What should the other team do?"
  },
  {
   "file": "Q131-copy-vm-custom-image-from-snapshot.md",
@@ -8548,7 +8548,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have one carefully set-up VM. More traffic is coming, so you need **copies** of it. What's the right way to make many identical VMs?\n\n**Clues in the question:**\n- \"**create a copy of a custom … VM**\": the goal is **new instances** (VMs), not more images.\n- Google's recommended path is snapshot → **custom image** → **instances** (images are made for creating many VMs, and can go into instance templates).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You have a custom VM, and traffic will increase after an acquisition.\n- **What you must achieve:** Create a copy of that VM.\n- **The limits:** None stated.\n- **What they're really asking:** How do you duplicate the VM?\n\n**Clues in the question:**\n- \"**create a copy of a custom … VM**\": the goal is **new instances** (VMs), not more images.\n- Google's recommended path is snapshot → **custom image** → **instances** (images are made for creating many VMs, and can go into instance templates).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -8604,7 +8604,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "You have one carefully set-up VM. More traffic is coming, so you need **copies** of it. What's the right way to make many identical VMs?"
+  "plain": "- **The situation:** You have a custom VM, and traffic will increase after an acquisition.\n- **What you must achieve:** Create a copy of that VM.\n- **The limits:** None stated.\n- **What they're really asking:** How do you duplicate the VM?"
  },
  {
   "file": "Q132-vm-app-logs-install-logging-agent.md",
@@ -8612,7 +8612,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The app writes logs to **files on the VM's disk**. Users see errors. How do you look at those logs the Google way?\n\n**Clues in the question:**\n- \"**writes logs to disk**\": Cloud Logging **doesn't** see files on a VM's disk by itself. You need the **agent** (today: Ops Agent) to send them.\n- \"**diagnose the problem**\": then you can search the logs in Cloud Logging.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** An app on one VM writes its logs to the VM's disk, and users report errors.\n- **What you must achieve:** Diagnose the problem.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get the app's logs somewhere you can examine them?\n\n**Clues in the question:**\n- \"**writes logs to disk**\": Cloud Logging **doesn't** see files on a VM's disk by itself. You need the **agent** (today: Ops Agent) to send them.\n- \"**diagnose the problem**\": then you can search the logs in Cloud Logging.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -8668,7 +8668,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "The app writes logs to **files on the VM's disk**. Users see errors. How do you look at those logs the Google way?"
+  "plain": "- **The situation:** An app on one VM writes its logs to the VM's disk, and users report errors.\n- **What you must achieve:** Diagnose the problem.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get the app's logs somewhere you can examine them?"
  },
  {
   "file": "Q133-vm-sa-object-creator-other-project-bucket.md",
@@ -8676,7 +8676,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A VM in **project A** must write report files into a bucket in **project B**. Fewest steps, best practice.\n\n**Clues in the question:**\n- \"**available in the bucket corp-aggregate-reports-storage**\": grant permission **on that bucket**.\n- \"**from the VM**\": the member is the **VM's service account**.\n- Writing new files = **Storage Object Creator** (least privilege).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A VM in project corp-iot-insights creates daily reports. Your team works only in project corp-aggregate-reports and wants the reports in bucket corp-aggregate-reports-storage.\n- **What you must achieve:** Get the daily reports into that bucket.\n- **The limits:** Fewest steps; follow recommended practice.\n- **What they're really asking:** Who gets which permission on the bucket?\n\n**Clues in the question:**\n- \"**available in the bucket corp-aggregate-reports-storage**\": grant permission **on that bucket**.\n- \"**from the VM**\": the member is the **VM's service account**.\n- Writing new files = **Storage Object Creator** (least privilege).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -8732,7 +8732,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "A VM in **project A** must write report files into a bucket in **project B**. Fewest steps, best practice."
+  "plain": "- **The situation:** A VM in project corp-iot-insights creates daily reports. Your team works only in project corp-aggregate-reports and wants the reports in bucket corp-aggregate-reports-storage.\n- **What you must achieve:** Get the daily reports into that bucket.\n- **The limits:** Fewest steps; follow recommended practice.\n- **What they're really asking:** Who gets which permission on the bucket?"
  },
  {
   "file": "Q134-adc-on-vm-attached-service-account.md",
@@ -8740,7 +8740,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The app uses **ADC**, which on your laptop uses your own login. On a VM, ADC automatically uses the **VM's service account**. What do you change?\n\n**Clues in the question:**\n- \"**Application Default Credentials**\": ADC looks for credentials automatically. On a VM, it finds the **attached service account** through the metadata server.\n- \"**minimal changes**\": no code changes, just give that service account the right roles.\n- \"**Google-recommended practices**\": no key files.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Your app uses Application Default Credentials (ADC: the client libraries find credentials automatically) and works on your laptop.\n- **What you must achieve:** Move it to a Compute Engine VM with proper authentication.\n- **The limits:** Follow recommended practice with minimal changes.\n- **What they're really asking:** How should the app authenticate once it runs on the VM?\n\n**Clues in the question:**\n- \"**Application Default Credentials**\": ADC looks for credentials automatically. On a VM, it finds the **attached service account** through the metadata server.\n- \"**minimal changes**\": no code changes, just give that service account the right roles.\n- \"**Google-recommended practices**\": no key files.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -8796,7 +8796,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The app uses **ADC**, which on your laptop uses your own login. On a VM, ADC automatically uses the **VM's service account**. What do you change?"
+  "plain": "- **The situation:** Your app uses Application Default Credentials (ADC: the client libraries find credentials automatically) and works on your laptop.\n- **What you must achieve:** Move it to a Compute Engine VM with proper authentication.\n- **The limits:** Follow recommended practice with minimal changes.\n- **What they're really asking:** How should the app authenticate once it runs on the VM?"
  },
  {
   "file": "Q135-new-project-enable-api-create-instance.md",
@@ -8804,7 +8804,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The project **doesn't exist yet**. In what order do you get a VM into it?\n\n**Clues in the question:**\n- \"**new project that doesn't exist yet**\": step 1 must be **create the project**.\n- APIs are enabled **per project**, so enable Compute Engine **in that project**, then create the VM there.\n\n**Exam topic:** Resource management."
+    "md": "**In plain words:**\n- **The situation:** The project you need does not exist yet.\n- **What you must achieve:** Create a Compute Engine VM in a new project.\n- **The limits:** None stated.\n- **What they're really asking:** What steps are needed, and in what order?\n\n**Clues in the question:**\n- \"**new project that doesn't exist yet**\": step 1 must be **create the project**.\n- APIs are enabled **per project**, so enable Compute Engine **in that project**, then create the VM there.\n\n**Exam topic:** Resource management."
    },
    {
     "kind": "terms",
@@ -8860,7 +8860,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The project **doesn't exist yet**. In what order do you get a VM into it?"
+  "plain": "- **The situation:** The project you need does not exist yet.\n- **What you must achieve:** Create a Compute Engine VM in a new project.\n- **The limits:** None stated.\n- **What they're really asking:** What steps are needed, and in what order?"
  },
  {
   "file": "Q136-30-hour-batch-regular-vm-start-stop.md",
@@ -8868,7 +8868,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A **30-hour** job, once a month. If it's interrupted, it must **start over**. Cheapest safe option?\n\n**Clues in the question:**\n- \"**around 30 hours**\": preemptible VMs are **always stopped within 24 hours**, so the job could never finish.\n- \"**must be restarted if interrupted**\": interruptions are very costly → no preemptible.\n- \"**runs monthly**\" + \"**minimizing cost**\": a normal VM that you **start for the job and stop afterwards**, so you pay only while it runs.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A monthly batch job takes about 30 hours, can run offline, and must start over if it is interrupted.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which kind of VM is cheapest without risking the job being interrupted?\n\n**Clues in the question:**\n- \"**around 30 hours**\": preemptible VMs are **always stopped within 24 hours**, so the job could never finish.\n- \"**must be restarted if interrupted**\": interruptions are very costly → no preemptible.\n- \"**runs monthly**\" + \"**minimizing cost**\": a normal VM that you **start for the job and stop afterwards**, so you pay only while it runs.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -8924,7 +8924,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "A **30-hour** job, once a month. If it's interrupted, it must **start over**. Cheapest safe option?"
+  "plain": "- **The situation:** A monthly batch job takes about 30 hours, can run offline, and must start over if it is interrupted.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which kind of VM is cheapest without risking the job being interrupted?"
  },
  {
   "file": "Q137-jenkins-marketplace.md",
@@ -8932,7 +8932,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You need **Jenkins** (a build server), installed **quickly and easily**.\n\n**Clues in the question:**\n- \"**as quickly and easily as possible**\" + \"**automate the installation**\": a **one-click** ready-made deployment → **Cloud Marketplace** (as in Q122).\n\n**Exam topic:** Marketplace."
+    "md": "**In plain words:**\n- **The situation:** You need a Jenkins installation to build and deploy your code.\n- **What you must achieve:** Install Jenkins automatically.\n- **The limits:** As quickly and easily as possible.\n- **What they're really asking:** What is the easiest way to get Jenkins?\n\n**Clues in the question:**\n- \"**as quickly and easily as possible**\" + \"**automate the installation**\": a **one-click** ready-made deployment → **Cloud Marketplace** (as in Q122).\n\n**Exam topic:** Marketplace."
    },
    {
     "kind": "terms",
@@ -8988,7 +8988,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You need **Jenkins** (a build server), installed **quickly and easily**."
+  "plain": "- **The situation:** You need a Jenkins installation to build and deploy your code.\n- **What you must achieve:** Install Jenkins automatically.\n- **The limits:** As quickly and easily as possible.\n- **What they're really asking:** What is the easiest way to get Jenkins?"
  },
  {
   "file": "Q138-gcloud-config-default-zone.md",
@@ -8996,7 +8996,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You keep typing `--zone=europe-west1-d`. How do you make it the **default for the CLI**?\n\n**Clues in the question:**\n- \"**avoid having to specify this zone with each CLI command**\": a **gcloud property**, set with `gcloud config set compute/zone europe-west1-d`.\n\n**Exam topic:** gcloud CLI."
+    "md": "**In plain words:**\n- **The situation:** Most of your VMs are in the europe-west1-d zone.\n- **What you must achieve:** Stop having to type the zone in every gcloud command.\n- **The limits:** None stated.\n- **What they're really asking:** How do you set a default zone?\n\n**Clues in the question:**\n- \"**avoid having to specify this zone with each CLI command**\": a **gcloud property**, set with `gcloud config set compute/zone europe-west1-d`.\n\n**Exam topic:** gcloud CLI."
    },
    {
     "kind": "terms",
@@ -9052,7 +9052,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You keep typing `--zone=europe-west1-d`. How do you make it the **default for the CLI**?"
+  "plain": "- **The situation:** Most of your VMs are in the europe-west1-d zone.\n- **What you must achieve:** Stop having to type the zone in every gcloud command.\n- **The limits:** None stated.\n- **What they're really asking:** How do you set a default zone?"
  },
  {
   "file": "Q139-sensor-events-bigtable.md",
@@ -9060,7 +9060,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Huge numbers of sensor events, read back **by time**, and each write and read must be **atomic**. Which database?\n\n**Clues in the question:**\n- \"**high throughput … thousands of events per hour per device**\" + sensors = **time-series IoT data** → **Bigtable**.\n- \"**retrieve consistent data based on the time of the event**\": the row key includes the **timestamp**, so time-range reads are fast.\n- \"**Storing and retrieving individual signals should be atomic**\": Bigtable writes and reads of a **single row** are atomic.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** Rented construction equipment has sensors that send events every few seconds, and customers are billed from these readings.\n- **What you must achieve:** Store events and read them back by time.\n- **The limits:** Up to thousands of events per hour per device, consistent reads by event time, and each signal stored all-or-nothing (atomically).\n- **What they're really asking:** Which database fits huge streams of timestamped readings?\n\n**Clues in the question:**\n- \"**high throughput … thousands of events per hour per device**\" + sensors = **time-series IoT data** → **Bigtable**.\n- \"**retrieve consistent data based on the time of the event**\": the row key includes the **timestamp**, so time-range reads are fast.\n- \"**Storing and retrieving individual signals should be atomic**\": Bigtable writes and reads of a **single row** are atomic.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -9116,7 +9116,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Huge numbers of sensor events, read back **by time**, and each write and read must be **atomic**. Which database?"
+  "plain": "- **The situation:** Rented construction equipment has sensors that send events every few seconds, and customers are billed from these readings.\n- **What you must achieve:** Store events and read them back by time.\n- **The limits:** Up to thousands of events per hour per device, consistent reads by event time, and each signal stored all-or-nothing (atomically).\n- **What they're really asking:** Which database fits huge streams of timestamped readings?"
  },
  {
   "file": "Q140-monitoring-workspace-multiple-projects.md",
@@ -9124,7 +9124,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Watch CPU, memory and disk for **three projects in one place**.\n\n**Clues in the question:**\n- \"**single pane of glass**\": one Monitoring view for all three → a **workspace** (now called a **metrics scope**) in project A that **includes** B and C.\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** You have projects A, B and C.\n- **What you must achieve:** Monitor CPU, memory and disk for all of them in one view.\n- **The limits:** A single pane of glass (one screen).\n- **What they're really asking:** How do you monitor all three projects together?\n\n**Clues in the question:**\n- \"**single pane of glass**\": one Monitoring view for all three → a **workspace** (now called a **metrics scope**) in project A that **includes** B and C.\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -9180,7 +9180,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Watch CPU, memory and disk for **three projects in one place**."
+  "plain": "- **The situation:** You have projects A, B and C.\n- **What you must achieve:** Monitor CPU, memory and disk for all of them in one view.\n- **The limits:** A single pane of glass (one screen).\n- **What they're really asking:** How do you monitor all three projects together?"
  },
  {
   "file": "Q141-costs-multiple-billing-accounts-bigquery-datastudio.md",
@@ -9188,7 +9188,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Several projects on **different billing accounts**. You want **one chart** of all costs, with new data showing up **quickly**.\n\n**Clues in the question:**\n- \"**different billing accounts**\": the Billing Reports page shows **one billing account at a time**.\n- \"**single visual representation**\": export every account into **BigQuery** and build one **Data Studio (Looker Studio)** dashboard.\n- \"**as soon as possible**\": billing export updates **automatically through the day**, unlike a manual CSV.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Resources are spread across several projects, each with a different billing account.\n- **What you must achieve:** Get one visual view of all costs to estimate future charges.\n- **The limits:** New cost data should appear as soon as possible.\n- **What they're really asking:** How do you combine cost data from several billing accounts into one dashboard?\n\n**Clues in the question:**\n- \"**different billing accounts**\": the Billing Reports page shows **one billing account at a time**.\n- \"**single visual representation**\": export every account into **BigQuery** and build one **Data Studio (Looker Studio)** dashboard.\n- \"**as soon as possible**\": billing export updates **automatically through the day**, unlike a manual CSV.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -9244,7 +9244,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Several projects on **different billing accounts**. You want **one chart** of all costs, with new data showing up **quickly**."
+  "plain": "- **The situation:** Resources are spread across several projects, each with a different billing account.\n- **What you must achieve:** Get one visual view of all costs to estimate future charges.\n- **The limits:** New cost data should appear as soon as possible.\n- **What they're really asking:** How do you combine cost data from several billing accounts into one dashboard?"
  },
  {
   "file": "Q142-no-public-ip-instance.md",
@@ -9252,7 +9252,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The new VM must be **unreachable from the internet**, but still reachable from your offices over VPN.\n\n**Clues in the question:**\n- \"**no public Internet traffic can be routed to it**\": without an **external (public) IP**, the internet has no address to send traffic to.\n- The VPN still reaches its **internal IP**.\n\n**Exam topic:** VPC networking."
+    "md": "**In plain words:**\n- **The situation:** Workloads run on Compute Engine and on-premises, connected over a VPN (an encrypted link over the internet).\n- **What you must achieve:** Deploy a new VM that no public internet traffic can reach.\n- **The limits:** None stated.\n- **What they're really asking:** How do you create the VM so the internet can't route to it?\n\n**Clues in the question:**\n- \"**no public Internet traffic can be routed to it**\": without an **external (public) IP**, the internet has no address to send traffic to.\n- The VPN still reaches its **internal IP**.\n\n**Exam topic:** VPC networking."
    },
    {
     "kind": "terms",
@@ -9308,7 +9308,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The new VM must be **unreachable from the internet**, but still reachable from your offices over VPN."
+  "plain": "- **The situation:** Workloads run on Compute Engine and on-premises, connected over a VPN (an encrypted link over the internet).\n- **What you must achieve:** Deploy a new VM that no public internet traffic can reach.\n- **The limits:** None stated.\n- **What they're really asking:** How do you create the VM so the internet can't route to it?"
  },
  {
   "file": "Q143-iac-templates-cloud-source-repositories.md",
@@ -9316,7 +9316,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want to **propose** infrastructure changes so teammates can review them. Best practice?\n\n**Clues in the question:**\n- \"**describe the proposed changes**\": write infrastructure as **code** (templates).\n- \"**share … with the rest of the team**\": put code in **version control** (a Git repo), so people can review, comment and see the history.\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** Your team maintains the company's infrastructure, and you have proposed changes.\n- **What you must achieve:** Share those changes with the rest of the team.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should infrastructure changes be shared?\n\n**Clues in the question:**\n- \"**describe the proposed changes**\": write infrastructure as **code** (templates).\n- \"**share … with the rest of the team**\": put code in **version control** (a Git repo), so people can review, comment and see the history.\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -9372,7 +9372,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You want to **propose** infrastructure changes so teammates can review them. Best practice?"
+  "plain": "- **The situation:** Your team maintains the company's infrastructure, and you have proposed changes.\n- **What you must achieve:** Share those changes with the rest of the team.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should infrastructure changes be shared?"
  },
  {
   "file": "Q144-daily-snapshot-schedule-30-days-console.md",
@@ -9380,7 +9380,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Daily backups, kept **30 days**, with the **least work** and **fewest services**.\n\n**Clues in the question:**\n- \"**daily**\" + \"**keep … 30 days**\": a **snapshot schedule** with daily frequency and **autodelete after 30 days**.\n- \"**least management overhead … least number of services**\": built into Compute Engine, with no functions or scripts.\n- Start at **1–2 AM**, outside the 9–6 usage hours.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A VM runs an app used from 9 AM to 6 PM on weekdays.\n- **What you must achieve:** Back it up daily for disaster recovery and keep backups for 30 days.\n- **The limits:** Least management work and fewest services.\n- **What they're really asking:** What is the simplest way to schedule daily backups kept for 30 days?\n\n**Clues in the question:**\n- \"**daily**\" + \"**keep … 30 days**\": a **snapshot schedule** with daily frequency and **autodelete after 30 days**.\n- \"**least management overhead … least number of services**\": built into Compute Engine, with no functions or scripts.\n- Start at **1–2 AM**, outside the 9–6 usage hours.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -9436,7 +9436,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Daily backups, kept **30 days**, with the **least work** and **fewest services**."
+  "plain": "- **The situation:** A VM runs an app used from 9 AM to 6 PM on weekdays.\n- **What you must achieve:** Back it up daily for disaster recovery and keep backups for 30 days.\n- **The limits:** Least management work and fewest services.\n- **What they're really asking:** What is the simplest way to schedule daily backups kept for 30 days?"
  },
  {
   "file": "Q145-gke-new-node-pool-highmem.md",
@@ -9444,7 +9444,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** New pods need **big-memory nodes**. Existing pods must keep running (**no downtime**).\n\n**Clues in the question:**\n- \"**additional pods requiring n2-highmem-16 nodes**\": add a **node pool** of that machine type to the **same cluster**.\n- \"**without any downtime**\": don't touch the existing pool or rebuild the cluster.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** An app runs as pods on four n1-standard-2 GKE nodes.\n- **What you must achieve:** Deploy new pods that need bigger n2-highmem-16 nodes.\n- **The limits:** No downtime.\n- **What they're really asking:** How do you add the bigger machines without disrupting the current pods?\n\n**Clues in the question:**\n- \"**additional pods requiring n2-highmem-16 nodes**\": add a **node pool** of that machine type to the **same cluster**.\n- \"**without any downtime**\": don't touch the existing pool or rebuild the cluster.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -9500,7 +9500,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "New pods need **big-memory nodes**. Existing pods must keep running (**no downtime**)."
+  "plain": "- **The situation:** An app runs as pods on four n1-standard-2 GKE nodes.\n- **What you must achieve:** Deploy new pods that need bigger n2-highmem-16 nodes.\n- **The limits:** No downtime.\n- **What they're really asking:** How do you add the bigger machines without disrupting the current pods?"
  },
  {
   "file": "Q146-join-spanner-export-bigtable-bigquery.md",
@@ -9508,7 +9508,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** An analyst wants a **one-time join** of user data (from the Spanner export in Cloud Storage) with events (in Bigtable). Most efficient way?\n\n**Clues in the question:**\n- \"**ad hoc request**\" + \"**as efficiently as possible**\": no pipelines or clusters, just a SQL query.\n- \"**export Cloud Spanner data to Cloud Storage**\" + \"**Cloud Bigtable**\": BigQuery can read **both** through **external tables** and join them with SQL.\n\n**Exam topic:** BigQuery / data."
+    "md": "**In plain words:**\n- **The situation:** Spanner holds current user data, Bigtable logs every user event, and Spanner is exported to Cloud Storage daily. An analyst wants Spanner and Bigtable data joined for certain users.\n- **What you must achieve:** Handle this one-time request.\n- **The limits:** As efficiently as possible.\n- **What they're really asking:** Where can you join data from both sources quickly?\n\n**Clues in the question:**\n- \"**ad hoc request**\" + \"**as efficiently as possible**\": no pipelines or clusters, just a SQL query.\n- \"**export Cloud Spanner data to Cloud Storage**\" + \"**Cloud Bigtable**\": BigQuery can read **both** through **external tables** and join them with SQL.\n\n**Exam topic:** BigQuery / data."
    },
    {
     "kind": "terms",
@@ -9564,7 +9564,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "An analyst wants a **one-time join** of user data (from the Spanner export in Cloud Storage) with events (in Bigtable). Most efficient way?"
+  "plain": "- **The situation:** Spanner holds current user data, Bigtable logs every user event, and Spanner is exported to Cloud Storage daily. An analyst wants Spanner and Bigtable data joined for certain users.\n- **What you must achieve:** Handle this one-time request.\n- **The limits:** As efficiently as possible.\n- **What they're really asking:** Where can you join data from both sources quickly?"
  },
  {
   "file": "Q147-survive-zone-failure-two-zones-lb.md",
@@ -9572,7 +9572,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Today everything is in **one zone**. If that zone fails, the app is down. How do you survive one zone failing, with no downtime and low cost?\n\n**Clues in the question:**\n- \"**support the failure of a single … zone**\": run VMs in a **second zone**.\n- \"**eliminate downtime**\": a **load balancer** sends traffic to whichever zone is healthy.\n- \"**minimize cost**\": a second zone in the **same region** (cheap, simple), not a new region.\n\n**Exam topic:** High availability."
+    "md": "**In plain words:**\n- **The situation:** An app runs on VMs in one zone, us-central1-a.\n- **What you must achieve:** Keep running if that one zone fails.\n- **The limits:** No downtime and lowest cost.\n- **What they're really asking:** How do you change the design to survive a zone outage?\n\n**Clues in the question:**\n- \"**support the failure of a single … zone**\": run VMs in a **second zone**.\n- \"**eliminate downtime**\": a **load balancer** sends traffic to whichever zone is healthy.\n- \"**minimize cost**\": a second zone in the **same region** (cheap, simple), not a new region.\n\n**Exam topic:** High availability."
    },
    {
     "kind": "terms",
@@ -9628,7 +9628,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Today everything is in **one zone**. If that zone fails, the app is down. How do you survive one zone failing, with no downtime and low cost?"
+  "plain": "- **The situation:** An app runs on VMs in one zone, us-central1-a.\n- **What you must achieve:** Keep running if that one zone fails.\n- **The limits:** No downtime and lowest cost.\n- **What they're really asking:** How do you change the design to survive a zone outage?"
  },
  {
   "file": "Q148-who-has-owner-get-iam-policy.md",
@@ -9636,7 +9636,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** See **who currently has Owner** on the project.\n\n**Clues in the question:**\n- \"**review who has been granted the Project Owner role**\": the current answer is in the project's **IAM policy** → `gcloud projects get-iam-policy` (or the IAM page).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A colleague handed you a project.\n- **What you must achieve:** Check who has the Owner role.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you see who has Owner?\n\n**Clues in the question:**\n- \"**review who has been granted the Project Owner role**\": the current answer is in the project's **IAM policy** → `gcloud projects get-iam-policy` (or the IAM page).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -9692,7 +9692,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "See **who currently has Owner** on the project."
+  "plain": "- **The situation:** A colleague handed you a project.\n- **What you must achieve:** Check who has the Owner role.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you see who has Owner?"
  },
  {
   "file": "Q149-gke-nodes-ip-exhausted-expand-subnet.md",
@@ -9700,7 +9700,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Node IPs come from the subnet's **primary range**, and it's full. How do the clusters get room to add nodes?\n\n**Clues in the question:**\n- \"**IPs available for the nodes are exhausted**\": **nodes** use the subnet's **primary** range.\n- \"**clusters can grow in nodes**\": make that range bigger → **expand the subnet** (Q082, Q129). Existing clusters keep working.\n\n**Exam topic:** VPC / GKE."
+    "md": "**In plain words:**\n- **The situation:** Several VPC-native GKE clusters share one subnet, and the IP addresses for nodes are used up.\n- **What you must achieve:** Let the clusters add more nodes when needed.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get more IP addresses for nodes?\n\n**Clues in the question:**\n- \"**IPs available for the nodes are exhausted**\": **nodes** use the subnet's **primary** range.\n- \"**clusters can grow in nodes**\": make that range bigger → **expand the subnet** (Q082, Q129). Existing clusters keep working.\n\n**Exam topic:** VPC / GKE."
    },
    {
     "kind": "terms",
@@ -9756,7 +9756,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Node IPs come from the subnet's **primary range**, and it's full. How do the clusters get room to add nodes?"
+  "plain": "- **The situation:** Several VPC-native GKE clusters share one subnet, and the IP addresses for nodes are used up.\n- **What you must achieve:** Let the clusters add more nodes when needed.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get more IP addresses for nodes?"
  },
  {
   "file": "Q150-fault-tolerant-batch-preemptible.md",
@@ -9764,7 +9764,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A big nightly batch that **can survive losing some VMs**. It costs too much. What do you change?\n\n**Clues in the question:**\n- \"**fault-tolerant and can tolerate some of the VMs being terminated**\": exactly what **preemptible (Spot) VMs** need, and they're 60–91% cheaper.\n- \"**cost … too high**\": switch to preemptible.\n- \"**simulated maintenance events**\": test how the job behaves when VMs are stopped before you rely on it.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A nightly batch job uses many VMs. It is fault-tolerant (it copes if some VMs are stopped). Costs are too high.\n- **What you must achieve:** Lower the cost.\n- **The limits:** Losing some VMs during the run is acceptable.\n- **What they're really asking:** How do you make these VMs cheaper?\n\n**Clues in the question:**\n- \"**fault-tolerant and can tolerate some of the VMs being terminated**\": exactly what **preemptible (Spot) VMs** need, and they're 60–91% cheaper.\n- \"**cost … too high**\": switch to preemptible.\n- \"**simulated maintenance events**\": test how the job behaves when VMs are stopped before you rely on it.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -9820,7 +9820,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "A big nightly batch that **can survive losing some VMs**. It costs too much. What do you change?"
+  "plain": "- **The situation:** A nightly batch job uses many VMs. It is fault-tolerant (it copes if some VMs are stopped). Costs are too high.\n- **What you must achieve:** Lower the cost.\n- **The limits:** Losing some VMs during the run is acceptable.\n- **What they're really asking:** How do you make these VMs cheaper?"
  },
  {
   "file": "Q151-egress-deny-low-allow-high-priority.md",
@@ -9828,7 +9828,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** By default, VPCs **allow all outgoing traffic**. You want **only a few ports** open outbound.\n\n**Clues in the question:**\n- \"**fewest open egress ports**\": you must **block all egress** (the default implied rule allows it) and then **allow only the needed ports**.\n- Firewall priority: **lower number = higher priority**, and it wins. The allow rule needs a **higher priority (1000)** than the deny-all (**65534**).\n\n**Exam topic:** VPC firewall."
+    "md": "**In plain words:**\n- **The situation:** You are helping a user set up an app in a new VPC network behind a firewall. The user is worried about data egress (data leaving the network).\n- **What you must achieve:** Set up the firewall for outgoing traffic.\n- **The limits:** Open as few outgoing ports as possible.\n- **What they're really asking:** How should you configure the firewall so only the outgoing ports the app needs are open?\n\n**Clues in the question:**\n- \"**fewest open egress ports**\": you must **block all egress** (the default implied rule allows it) and then **allow only the needed ports**.\n- Firewall priority: **lower number = higher priority**, and it wins. The allow rule needs a **higher priority (1000)** than the deny-all (**65534**).\n\n**Exam topic:** VPC firewall."
    },
    {
     "kind": "terms",
@@ -9884,7 +9884,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "By default, VPCs **allow all outgoing traffic**. You want **only a few ports** open outbound."
+  "plain": "- **The situation:** You are helping a user set up an app in a new VPC network behind a firewall. The user is worried about data egress (data leaving the network).\n- **What you must achieve:** Set up the firewall for outgoing traffic.\n- **The limits:** Open as few outgoing ports as possible.\n- **What they're really asking:** How should you configure the firewall so only the outgoing ports the app needs are open?"
  },
  {
   "file": "Q152-ops-partner-no-google-accounts-ssh-keys.md",
@@ -9892,7 +9892,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The partner has **no Google accounts** but needs to log in to the Linux VMs.\n\n**Clues in the question:**\n- \"**does not use Google Accounts**\": anything based on Google identity (IAP, OS Login, IAM) won't work for them.\n- \"**grant access to the instances**\" for Linux maintenance → **SSH**. Without Google accounts, use **their own SSH key pairs**, adding the **public keys** to the VMs (metadata).\n\n**Exam topic:** Compute Engine access."
+    "md": "**In plain words:**\n- **The situation:** Your Linux workloads run on Compute Engine VMs. A new operations partner will maintain the installed tools, but they do not use Google accounts.\n- **What you must achieve:** Give the partner login access to the VMs.\n- **The limits:** They have no Google accounts, so Google-account-based login won't work for them.\n- **What they're really asking:** How do you give people without Google accounts access to your Linux VMs?\n\n**Clues in the question:**\n- \"**does not use Google Accounts**\": anything based on Google identity (IAP, OS Login, IAM) won't work for them.\n- \"**grant access to the instances**\" for Linux maintenance → **SSH**. Without Google accounts, use **their own SSH key pairs**, adding the **public keys** to the VMs (metadata).\n\n**Exam topic:** Compute Engine access."
    },
    {
     "kind": "terms",
@@ -9948,7 +9948,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "The partner has **no Google accounts** but needs to log in to the Linux VMs."
+  "plain": "- **The situation:** Your Linux workloads run on Compute Engine VMs. A new operations partner will maintain the installed tools, but they do not use Google accounts.\n- **What you must achieve:** Give the partner login access to the VMs.\n- **The limits:** They have no Google accounts, so Google-account-based login won't work for them.\n- **What they're really asking:** How do you give people without Google accounts access to your Linux VMs?"
  },
  {
   "file": "Q153-gcs-upload-trigger-cloud-functions.md",
@@ -9956,7 +9956,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A small piece of code must run **every time a file lands in a bucket**.\n\n**Clues in the question:**\n- \"**code snippet**\": small code → **Cloud Functions**.\n- \"**triggered whenever a new file is uploaded**\": an **event trigger** on the bucket (object finalize), not a schedule.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** You wrote a small piece of code that should run every time a new file is uploaded to a Cloud Storage bucket.\n- **What you must achieve:** Deploy that code so uploads trigger it automatically.\n- **The limits:** None stated.\n- **What they're really asking:** Where and how do you deploy code so a file upload starts it?\n\n**Clues in the question:**\n- \"**code snippet**\": small code → **Cloud Functions**.\n- \"**triggered whenever a new file is uploaded**\": an **event trigger** on the bucket (object finalize), not a schedule.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -10012,7 +10012,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "A small piece of code must run **every time a file lands in a bucket**."
+  "plain": "- **The situation:** You wrote a small piece of code that should run every time a new file is uploaded to a Cloud Storage bucket.\n- **What you must achieve:** Deploy that code so uploads trigger it automatically.\n- **The limits:** None stated.\n- **What they're really asking:** Where and how do you deploy code so a file upload starts it?"
  },
  {
   "file": "Q154-lifecycle-standard-30-then-archive.md",
@@ -10020,7 +10020,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Files are read **a lot for 30 days**, then **almost never**, and kept **3 years**. Cheapest plan?\n\n**Clues in the question:**\n- \"**accessed frequently for 30 days**\" → **Standard** (no read fees).\n- \"**not read again unless there is a special need**\" + \"**three years**\" + \"**minimize cost**\" → **Archive** right away (cheapest storage, 365-day minimum).\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** Files in a bucket are written once and read often for 30 days. After that they are almost never read, but must be kept for three years.\n- **What you must achieve:** Set up Object Lifecycle Management (automatic rules that change or delete files based on age).\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which age-based rules should move and then delete these files?\n\n**Clues in the question:**\n- \"**accessed frequently for 30 days**\" → **Standard** (no read fees).\n- \"**not read again unless there is a special need**\" + \"**three years**\" + \"**minimize cost**\" → **Archive** right away (cheapest storage, 365-day minimum).\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -10076,7 +10076,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Files are read **a lot for 30 days**, then **almost never**, and kept **3 years**. Cheapest plan?"
+  "plain": "- **The situation:** Files in a bucket are written once and read often for 30 days. After that they are almost never read, but must be kept for three years.\n- **What you must achieve:** Set up Object Lifecycle Management (automatic rules that change or delete files based on age).\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which age-based rules should move and then delete these files?"
  },
  {
   "file": "Q155-record-reads-data-access-logs-gcs.md",
@@ -10084,7 +10084,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Every **read** of the bucket's data must be **recorded**.\n\n**Clues in the question:**\n- \"**record all requests that read any of the stored data**\" → **Data Access audit logs** (DATA_READ).\n- For Cloud Storage they're **off by default**, so you must **enable** them.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** You keep sensitive information in a Cloud Storage bucket.\n- **What you must achieve:** Record every request that reads any of the stored data.\n- **The limits:** It is a legal requirement, so nothing may be missed.\n- **What they're really asking:** What must you turn on so every read of the data is logged?\n\n**Clues in the question:**\n- \"**record all requests that read any of the stored data**\" → **Data Access audit logs** (DATA_READ).\n- For Cloud Storage they're **off by default**, so you must **enable** them.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -10140,7 +10140,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Every **read** of the bucket's data must be **recorded**."
+  "plain": "- **The situation:** You keep sensitive information in a Cloud Storage bucket.\n- **What you must achieve:** Record every request that reads any of the stored data.\n- **The limits:** It is a legal requirement, so nothing may be missed.\n- **What they're really asking:** What must you turn on so every read of the data is logged?"
  },
  {
   "file": "Q156-budget-per-sandbox-project.md",
@@ -10148,7 +10148,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** 10 sandboxes. **Notify** if **any one** spends more than **$500/month**.\n\n**Clues in the question:**\n- \"**any of the developers … above $500**\": the limit is **per project** → **one budget per project**, each at $500.\n- \"**be notified**\": budget **alerts**, not a dashboard you must watch.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** You lead 10 developers, and each has a personal sandbox project for experiments.\n- **What you must achieve:** Get notified if any developer spends more than $500 a month in their sandbox.\n- **The limits:** The limit applies to each developer's project separately.\n- **What they're really asking:** How do you set up a $500-per-month alert for each sandbox?\n\n**Clues in the question:**\n- \"**any of the developers … above $500**\": the limit is **per project** → **one budget per project**, each at $500.\n- \"**be notified**\": budget **alerts**, not a dashboard you must watch.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -10204,7 +10204,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "10 sandboxes. **Notify** if **any one** spends more than **$500/month**."
+  "plain": "- **The situation:** You lead 10 developers, and each has a personal sandbox project for experiments.\n- **What you must achieve:** Get notified if any developer spends more than $500 a month in their sandbox.\n- **The limits:** The limit applies to each developer's project separately.\n- **What they're really asking:** How do you set up a $500-per-month alert for each sandbox?"
  },
  {
   "file": "Q157-deletion-protection-production.md",
@@ -10212,7 +10212,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Stop people from **accidentally deleting** the production VM.\n\n**Clues in the question:**\n- \"**prevent anyone from accidentally destroying the instance**\" → **deletion protection** (same idea as Q101).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You are running a production app on a Compute Engine VM.\n- **What you must achieve:** Stop anyone from destroying the VM by clicking the wrong button.\n- **The limits:** None stated.\n- **What they're really asking:** What setting protects the VM from being destroyed by mistake?\n\n**Clues in the question:**\n- \"**prevent anyone from accidentally destroying the instance**\" → **deletion protection** (same idea as Q101).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -10268,7 +10268,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Stop people from **accidentally deleting** the production VM."
+  "plain": "- **The situation:** You are running a production app on a Compute Engine VM.\n- **What you must achieve:** Stop anyone from destroying the VM by clicking the wrong button.\n- **The limits:** None stated.\n- **What they're really asking:** What setting protects the VM from being destroyed by mistake?"
  },
  {
   "file": "Q158-devops-custom-role-production-project.md",
@@ -10276,7 +10276,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** DevOps needs access to **production** services. Their permissions must **not grow automatically** when Google adds features.\n\n**Clues in the question:**\n- \"**prevent Google Cloud product changes from broadening their permissions**\": basic and predefined roles **gain new permissions** when Google updates them. A **custom role** only changes when **you** change it.\n- \"**production services**\" in a **single project** → grant on the **production project**, not the org (least privilege).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Production services live in one project; teams have separate test and dev projects. The DevOps team needs access to all production services.\n- **What you must achieve:** Give DevOps the access they need in production.\n- **The limits:** Their permissions must not grow on their own when Google adds new product features; follow recommended practice.\n- **What they're really asking:** What kind of role keeps DevOps' permissions fixed even as Google Cloud changes?\n\n**Clues in the question:**\n- \"**prevent Google Cloud product changes from broadening their permissions**\": basic and predefined roles **gain new permissions** when Google updates them. A **custom role** only changes when **you** change it.\n- \"**production services**\" in a **single project** → grant on the **production project**, not the org (least privilege).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -10332,7 +10332,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "DevOps needs access to **production** services. Their permissions must **not grow automatically** when Google adds features."
+  "plain": "- **The situation:** Production services live in one project; teams have separate test and dev projects. The DevOps team needs access to all production services.\n- **What you must achieve:** Give DevOps the access they need in production.\n- **The limits:** Their permissions must not grow on their own when Google adds new product features; follow recommended practice.\n- **What they're really asking:** What kind of role keeps DevOps' permissions fixed even as Google Cloud changes?"
  },
  {
   "file": "Q159-signed-urls-lifecycle-45-days.md",
@@ -10340,7 +10340,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Thousands of suppliers upload files. Each may write **only their own file**, **only for 30 minutes**. Files must vanish after **45 days**, with minimal maintenance.\n\n**Clues in the question:**\n- \"**write access … only for 30 minutes**\" + \"**only their own data**\" → **signed URLs** (a link for one object that expires).\n- \"**Delete data that is over 45 days old**\" + \"**minimal maintenance**\" → a **lifecycle rule** (age 45 → delete).\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** An app receives data files uploaded by thousands of suppliers.\n- **What you must achieve:** Each supplier can reach only their own data, gets write access for only 30 minutes, and data older than 45 days is deleted.\n- **The limits:** Very short development time and minimal maintenance; pick two strategies.\n- **What they're really asking:** Which two built-in features handle time-limited supplier uploads and automatic deletion of old data?\n\n**Clues in the question:**\n- \"**write access … only for 30 minutes**\" + \"**only their own data**\" → **signed URLs** (a link for one object that expires).\n- \"**Delete data that is over 45 days old**\" + \"**minimal maintenance**\" → a **lifecycle rule** (age 45 → delete).\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -10402,7 +10402,7 @@ window.QUIZ_QUESTIONS = [
    "A",
    "B"
   ],
-  "plain": "Thousands of suppliers upload files. Each may write **only their own file**, **only for 30 minutes**. Files must vanish after **45 days**, with minimal maintenance."
+  "plain": "- **The situation:** An app receives data files uploaded by thousands of suppliers.\n- **What you must achieve:** Each supplier can reach only their own data, gets write access for only 30 minutes, and data older than 45 days is deleted.\n- **The limits:** Very short development time and minimal maintenance; pick two strategies.\n- **What they're really asking:** Which two built-in features handle time-limited supplier uploads and automatic deletion of old data?"
  },
  {
   "file": "Q160-iac-deployment-manager-templates.md",
@@ -10410,7 +10410,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Manage resources as **code**, with **as little repeated code** as possible.\n\n**Clues in the question:**\n- \"**Infrastructure as Code**\" + \"**minimize the amount of repetitive code**\" → **templates** with parameters (Deployment Manager, or Terraform modules today).\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** Your company wants to create and manage many Google Cloud resources using Infrastructure as Code (describing resources in code files instead of clicking).\n- **What you must achieve:** Standardize how resources are created.\n- **The limits:** Write as little repeated code as possible.\n- **What they're really asking:** How do you structure the code so common pieces are written once and reused?\n\n**Clues in the question:**\n- \"**Infrastructure as Code**\" + \"**minimize the amount of repetitive code**\" → **templates** with parameters (Deployment Manager, or Terraform modules today).\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -10466,7 +10466,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Manage resources as **code**, with **as little repeated code** as possible."
+  "plain": "- **The situation:** Your company wants to create and manage many Google Cloud resources using Infrastructure as Code (describing resources in code files instead of clicking).\n- **What you must achieve:** Standardize how resources are created.\n- **The limits:** Write as little repeated code as possible.\n- **What they're really asking:** How do you structure the code so common pieces are written once and reused?"
  },
  {
   "file": "Q161-who-can-view-data-review-iam.md",
@@ -10474,7 +10474,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Who **has access** (can view data) right now?\n\n**Clues in the question:**\n- \"**who has access to view data**\": that's about **permissions**, not activity → review **IAM** roles that include data access.\n- Audit logs answer \"who **did** read\", not \"who **can** read\".\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You do a monthly security check of your Google Cloud environment.\n- **What you must achieve:** Find out who can view the data stored in your project.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look to see who has access to view data?\n\n**Clues in the question:**\n- \"**who has access to view data**\": that's about **permissions**, not activity → review **IAM** roles that include data access.\n- Audit logs answer \"who **did** read\", not \"who **can** read\".\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -10530,7 +10530,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Who **has access** (can view data) right now?"
+  "plain": "- **The situation:** You do a monthly security check of your Google Cloud environment.\n- **What you must achieve:** Find out who can view the data stored in your project.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look to see who has access to view data?"
  },
  {
   "file": "Q162-onprem-db-cloud-dns-private-zone.md",
@@ -10538,7 +10538,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Apps connect to an **on-prem DB by IP**. When the IP changes, you don't want to edit every app.\n\n**Clues in the question:**\n- \"**avoid having to change the IP configuration in all of your applications**\": use a **name** instead of an IP. Change the IP in **one place** (DNS).\n- A **Cloud DNS private zone** gives names visible only inside your VPC.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** A VPN tunnel (an encrypted connection) links your Google Cloud network to your company's own network. Several cloud apps connect to an on-premises database server.\n- **What you must achieve:** Keep the apps connected even when the database's IP address changes.\n- **The limits:** You don't want to update the IP setting in every app each time.\n- **What they're really asking:** How can the apps find the database without hard-coding its IP address?\n\n**Clues in the question:**\n- \"**avoid having to change the IP configuration in all of your applications**\": use a **name** instead of an IP. Change the IP in **one place** (DNS).\n- A **Cloud DNS private zone** gives names visible only inside your VPC.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -10594,7 +10594,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Apps connect to an **on-prem DB by IP**. When the IP changes, you don't want to edit every app."
+  "plain": "- **The situation:** A VPN tunnel (an encrypted connection) links your Google Cloud network to your company's own network. Several cloud apps connect to an on-premises database server.\n- **What you must achieve:** Keep the apps connected even when the database's IP address changes.\n- **The limits:** You don't want to update the IP setting in every app each time.\n- **What they're really asking:** How can the apps find the database without hard-coding its IP address?"
  },
  {
   "file": "Q163-cloud-run-min-instances-zero.md",
@@ -10602,7 +10602,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A container app used only in office hours. **Zero cost** when nobody uses it. New project, nothing else set up.\n\n**Clues in the question:**\n- \"**containerized**\" + \"**no costs … outside of the hours**\" → **Cloud Run (fully managed)** scales to **zero** and bills per request.\n- \"**just created a new Google Cloud project**\": no GKE cluster exists, which rules out Cloud Run for Anthos.\n- App Engine **flexible** keeps at least one instance running.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** You built a containerized web app (an app packed as a container) for coworkers to use during business hours, and you have a brand-new project.\n- **What you must achieve:** Deploy the app.\n- **The limits:** No costs at all outside the hours it is used.\n- **What they're really asking:** Where should you run it so it costs nothing when nobody is using it?\n\n**Clues in the question:**\n- \"**containerized**\" + \"**no costs … outside of the hours**\" → **Cloud Run (fully managed)** scales to **zero** and bills per request.\n- \"**just created a new Google Cloud project**\": no GKE cluster exists, which rules out Cloud Run for Anthos.\n- App Engine **flexible** keeps at least one instance running.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -10658,7 +10658,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "A container app used only in office hours. **Zero cost** when nobody uses it. New project, nothing else set up."
+  "plain": "- **The situation:** You built a containerized web app (an app packed as a container) for coworkers to use during business hours, and you have a brand-new project.\n- **What you must achieve:** Deploy the app.\n- **The limits:** No costs at all outside the hours it is used.\n- **What they're really asking:** Where should you run it so it costs nothing when nobody is using it?"
  },
  {
   "file": "Q164-move-projects-company-billing-account.md",
@@ -10666,7 +10666,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Your projects bill **your card**. The company wants them on **its invoice**.\n\n**Clues in the question:**\n- \"**charge the costs of your projects to their monthly invoice**\": link the **projects** to the **company's billing account** (Q066).\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** You tried Google Cloud with your own credit card and claimed the costs back from your company.\n- **What you must achieve:** Have your projects charged to the company's monthly invoice instead.\n- **The limits:** Make billing simpler.\n- **What they're really asking:** How do you move your projects onto the company's billing?\n\n**Clues in the question:**\n- \"**charge the costs of your projects to their monthly invoice**\": link the **projects** to the **company's billing account** (Q066).\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -10722,7 +10722,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Your projects bill **your card**. The company wants them on **its invoice**."
+  "plain": "- **The situation:** You tried Google Cloud with your own credit card and claimed the costs back from your company.\n- **What you must achieve:** Have your projects charged to the company's monthly invoice instead.\n- **The limits:** Make billing simpler.\n- **What they're really asking:** How do you move your projects onto the company's billing?"
  },
  {
   "file": "Q165-partner-sa-access-your-bigquery-dataset.md",
@@ -10730,7 +10730,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The partner's app (in **their** project) must read **your** dataset.\n\n**Clues in the question:**\n- \"**They manage the resources in their own project**\": their app runs as **their own service account**.\n- \"**need access to the BigQuery dataset in your project**\": **you** grant that service account a role **on your dataset** (same pattern as Q116 and Q130).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You run a data warehouse in BigQuery. A partner company runs a recommendation app in its own Google Cloud project.\n- **What you must achieve:** Let the partner read your BigQuery dataset.\n- **The limits:** They manage their own project; you only control yours.\n- **What they're really asking:** How do you give the partner access to just that dataset?\n\n**Clues in the question:**\n- \"**They manage the resources in their own project**\": their app runs as **their own service account**.\n- \"**need access to the BigQuery dataset in your project**\": **you** grant that service account a role **on your dataset** (same pattern as Q116 and Q130).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -10786,7 +10786,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "The partner's app (in **their** project) must read **your** dataset."
+  "plain": "- **The situation:** You run a data warehouse in BigQuery. A partner company runs a recommendation app in its own Google Cloud project.\n- **What you must achieve:** Let the partner read your BigQuery dataset.\n- **The limits:** They manage their own project; you only control yours.\n- **What they're really asking:** How do you give the partner access to just that dataset?"
  },
  {
   "file": "Q166-cloud-run-anthos-canary-revision-split.md",
@@ -10794,7 +10794,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Send a **percentage** of users to the new version on Cloud Run.\n\n**Clues in the question:**\n- \"**updated version**\": on Cloud Run, a new version of the same service is a **revision**.\n- \"**specific percentage of your production users**\": Cloud Run **splits traffic between revisions** natively (like App Engine versions in Q076).\n\n**Exam topic:** Cloud Run."
+    "md": "**In plain words:**\n- **The situation:** A web app runs on Cloud Run for Anthos (Cloud Run on your own Kubernetes clusters).\n- **What you must achieve:** Test an updated version with a set percentage of real users first (a canary deployment).\n- **The limits:** None stated.\n- **What they're really asking:** How do you send a chosen percentage of traffic to the new version?\n\n**Clues in the question:**\n- \"**updated version**\": on Cloud Run, a new version of the same service is a **revision**.\n- \"**specific percentage of your production users**\": Cloud Run **splits traffic between revisions** natively (like App Engine versions in Q076).\n\n**Exam topic:** Cloud Run."
    },
    {
     "kind": "terms",
@@ -10850,7 +10850,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Send a **percentage** of users to the new version on Cloud Run."
+  "plain": "- **The situation:** A web app runs on Cloud Run for Anthos (Cloud Run on your own Kubernetes clusters).\n- **What you must achieve:** Test an updated version with a set percentage of real users first (a canary deployment).\n- **The limits:** None stated.\n- **What they're really asking:** How do you send a chosen percentage of traffic to the new version?"
  },
  {
   "file": "Q167-udp-game-external-network-lb.md",
@@ -10858,7 +10858,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Players on the **internet** send **UDP**. Many VMs, **one IP**. Which load balancer?\n\n**Clues in the question:**\n- \"**UDP packets**\": only the **network (pass-through) load balancer** handles UDP. SSL Proxy and HTTP(S) are TCP/HTTP only.\n- \"**over the Internet**\": **external**, not internal.\n\n**Exam topic:** Load balancing."
+    "md": "**In plain words:**\n- **The situation:** A mobile multiplayer game sends UDP packets (a fast, connectionless type of network traffic) from players' phones over the internet. The game servers run on several VMs.\n- **What you must achieve:** Put all the game VMs behind one single IP address.\n- **The limits:** The traffic is UDP.\n- **What they're really asking:** Which load balancer can spread UDP game traffic across VMs behind one IP?\n\n**Clues in the question:**\n- \"**UDP packets**\": only the **network (pass-through) load balancer** handles UDP. SSL Proxy and HTTP(S) are TCP/HTTP only.\n- \"**over the Internet**\": **external**, not internal.\n\n**Exam topic:** Load balancing."
    },
    {
     "kind": "terms",
@@ -10914,7 +10914,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Players on the **internet** send **UDP**. Many VMs, **one IP**. Which load balancer?"
+  "plain": "- **The situation:** A mobile multiplayer game sends UDP packets (a fast, connectionless type of network traffic) from players' phones over the internet. The game servers run on several VMs.\n- **What you must achieve:** Put all the game VMs behind one single IP address.\n- **The limits:** The traffic is UDP.\n- **What they're really asking:** Which load balancer can spread UDP game traffic across VMs behind one IP?"
  },
  {
   "file": "Q168-onprem-images-gsutil-rsync-cron.md",
@@ -10922,7 +10922,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** New images appear **on-prem**. They must **automatically** be copied to Cloud Storage.\n\n**Clues in the question:**\n- \"**automated process to upload any new medical images**\": `gsutil rsync` copies **only new or changed files**, and **cron** runs it on a schedule.\n- Files are on-prem disks, not in Datastore or Pub/Sub.\n\n**Exam topic:** Data transfer."
+    "md": "**In plain words:**\n- **The situation:** A hospital keeps medical images in its own on-site data room.\n- **What you must achieve:** Automatically upload every new image to Cloud Storage for archiving.\n- **The limits:** It must be automated.\n- **What they're really asking:** What should you set up so new images upload by themselves?\n\n**Clues in the question:**\n- \"**automated process to upload any new medical images**\": `gsutil rsync` copies **only new or changed files**, and **cron** runs it on a schedule.\n- Files are on-prem disks, not in Datastore or Pub/Sub.\n\n**Exam topic:** Data transfer."
    },
    {
     "kind": "terms",
@@ -10978,7 +10978,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "New images appear **on-prem**. They must **automatically** be copied to Cloud Storage."
+  "plain": "- **The situation:** A hospital keeps medical images in its own on-site data room.\n- **What you must achieve:** Automatically upload every new image to Cloud Storage for archiving.\n- **The limits:** It must be automated.\n- **What they're really asking:** What should you set up so new images upload by themselves?"
  },
  {
   "file": "Q169-auditor-gcs-data-access-logs-query.md",
@@ -10986,7 +10986,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** \"**Who accessed data** in buckets?\" Which logs?\n\n**Clues in the question:**\n- \"**who accessed data in Cloud Storage buckets**\" → **Data Access** logs (off by default → **turn them on**).\n- Admin Activity logs show **config changes**, not reads.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** An auditor wants to review your organization's data use, mainly who accessed data in Cloud Storage buckets.\n- **What you must achieve:** Give the auditor what they need.\n- **The limits:** None stated.\n- **What they're really asking:** Which logs show who accessed bucket data, and how does the auditor see them?\n\n**Clues in the question:**\n- \"**who accessed data in Cloud Storage buckets**\" → **Data Access** logs (off by default → **turn them on**).\n- Admin Activity logs show **config changes**, not reads.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -11042,7 +11042,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "\"**Who accessed data** in buckets?\" Which logs?"
+  "plain": "- **The situation:** An auditor wants to review your organization's data use, mainly who accessed data in Cloud Storage buckets.\n- **What you must achieve:** Give the auditor what they need.\n- **The limits:** None stated.\n- **What they're really asking:** Which logs show who accessed bucket data, and how does the auditor see them?"
  },
  {
   "file": "Q170-gcloud-activate-service-account-key.md",
@@ -11050,7 +11050,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You have a **service account key file** and want **gcloud** to use it.\n\n**Clues in the question:**\n- \"**use this private key for … gcloud commands**\" → `gcloud auth activate-service-account --key-file=key.json`.\n- `gcloud auth login` is for **user accounts** in a browser.\n\n**Exam topic:** gcloud CLI."
+    "md": "**In plain words:**\n- **The situation:** You received a JSON file containing a service account's private key so you can use resources in a project. You installed the Cloud SDK.\n- **What you must achieve:** Use that key to sign in when running gcloud commands.\n- **The limits:** None stated.\n- **What they're really asking:** Which gcloud command signs you in with the key file?\n\n**Clues in the question:**\n- \"**use this private key for … gcloud commands**\" → `gcloud auth activate-service-account --key-file=key.json`.\n- `gcloud auth login` is for **user accounts** in a browser.\n\n**Exam topic:** gcloud CLI."
    },
    {
     "kind": "terms",
@@ -11106,7 +11106,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You have a **service account key file** and want **gcloud** to use it."
+  "plain": "- **The situation:** You received a JSON file containing a service account's private key so you can use resources in a project. You installed the Cloud SDK.\n- **What you must achieve:** Use that key to sign in when running gcloud commands.\n- **The limits:** None stated.\n- **What they're really asking:** Which gcloud command signs you in with the key file?"
  },
  {
   "file": "Q171-cloud-sql-month-end-export-archive.md",
@@ -11114,7 +11114,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Keep **one copy per month** of a Cloud SQL database for **3 years**, cheaply.\n\n**Clues in the question:**\n- \"**retain … for three years**\" + \"**audit**\" (rarely opened) → **Archive** class.\n- Cloud SQL **backups live inside Cloud SQL**. You can't write them to your own bucket. An **export** (SQL dump file) can go to any bucket.\n\n**Exam topic:** Cloud SQL."
+    "md": "**In plain words:**\n- **The situation:** Your company uses a Cloud SQL MySQL database.\n- **What you must achieve:** Keep a month-end copy of the database for three years for audits.\n- **The limits:** Each month-end copy must last three years.\n- **What they're really asking:** How do you create and keep those monthly copies?\n\n**Clues in the question:**\n- \"**retain … for three years**\" + \"**audit**\" (rarely opened) → **Archive** class.\n- Cloud SQL **backups live inside Cloud SQL**. You can't write them to your own bucket. An **export** (SQL dump file) can go to any bucket.\n\n**Exam topic:** Cloud SQL."
    },
    {
     "kind": "terms",
@@ -11170,7 +11170,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Keep **one copy per month** of a Cloud SQL database for **3 years**, cheaply."
+  "plain": "- **The situation:** Your company uses a Cloud SQL MySQL database.\n- **What you must achieve:** Keep a month-end copy of the database for three years for audits.\n- **The limits:** Each month-end copy must last three years.\n- **What they're really asking:** How do you create and keep those monthly copies?"
  },
  {
   "file": "Q172-notify-on-error-log-based-metric-alert.md",
@@ -11178,7 +11178,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You fixed an error and want an **automatic notification** if it happens again.\n\n**Clues in the question:**\n- \"**want to be notified if the problem recurs**\" → an **alerting policy**.\n- The error lives in **logs**, so first turn it into a number with a **log-based metric**.\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** Users report a spike in one error. You found it was caused by a service account missing a permission, and you fixed it.\n- **What you must achieve:** Be notified if the same problem happens again.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get an alert when that error shows up again?\n\n**Clues in the question:**\n- \"**want to be notified if the problem recurs**\" → an **alerting policy**.\n- The error lives in **logs**, so first turn it into a number with a **log-based metric**.\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -11234,7 +11234,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "You fixed an error and want an **automatic notification** if it happens again."
+  "plain": "- **The situation:** Users report a spike in one error. You found it was caused by a service account missing a permission, and you fixed it.\n- **What you must achieve:** Be notified if the same problem happens again.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get an alert when that error shows up again?"
  },
  {
   "file": "Q173-global-relational-consistent-spanner.md",
@@ -11242,7 +11242,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Global**, **relational**, **same data for everyone** (strong consistency), **multi-region**.\n\n**Clues in the question:**\n- \"**relational**\" + \"**globally**\" + \"**exact identical state**\" + \"**multiple regions**\" → **Cloud Spanner**.\n- Cloud SQL is relational but **regional**.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** You are building a global trading app. Data is relational (tables queried with SQL), and every client worldwide must see exactly the same data. The app runs in several regions.\n- **What you must achieve:** Choose where to store the data.\n- **The limits:** Keep delay (latency) as low as possible for users everywhere.\n- **What they're really asking:** Which database gives one identical, relational view of data worldwide with low delay?\n\n**Clues in the question:**\n- \"**relational**\" + \"**globally**\" + \"**exact identical state**\" + \"**multiple regions**\" → **Cloud Spanner**.\n- Cloud SQL is relational but **regional**.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -11298,7 +11298,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "**Global**, **relational**, **same data for everyone** (strong consistency), **multi-region**."
+  "plain": "- **The situation:** You are building a global trading app. Data is relational (tables queried with SQL), and every client worldwide must see exactly the same data. The app runs in several regions.\n- **What you must achieve:** Choose where to store the data.\n- **The limits:** Keep delay (latency) as low as possible for users everywhere.\n- **What they're really asking:** Which database gives one identical, relational view of data worldwide with low delay?"
  },
  {
   "file": "Q174-in-memory-erp-m1-machine-type.md",
@@ -11306,7 +11306,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The app keeps the **entire database in RAM**. Which VM type?\n\n**Clues in the question:**\n- \"**holds the full database in-memory**\" → **memory-optimized** machines (**M1/M2/M3**), with up to terabytes of RAM (used for SAP HANA).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You are deploying a new ERP system (business software for finance, orders, stock). It keeps the whole database in memory (RAM) for speed.\n- **What you must achieve:** Set up the right machine for it.\n- **The limits:** It needs a very large amount of memory.\n- **What they're really asking:** Which kind of VM fits an app that holds its whole database in memory?\n\n**Clues in the question:**\n- \"**holds the full database in-memory**\" → **memory-optimized** machines (**M1/M2/M3**), with up to terabytes of RAM (used for SAP HANA).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -11362,7 +11362,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "The app keeps the **entire database in RAM**. Which VM type?"
+  "plain": "- **The situation:** You are deploying a new ERP system (business software for finance, orders, stock). It keeps the whole database in memory (RAM) for speed.\n- **What you must achieve:** Set up the right machine for it.\n- **The limits:** It needs a very large amount of memory.\n- **What they're really asking:** Which kind of VM fits an app that holds its whole database in memory?"
  },
  {
   "file": "Q175-gke-deployment-per-microservice.md",
@@ -11370,7 +11370,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Each microservice has its own image and must **scale on its own**.\n\n**Clues in the question:**\n- \"**each microservice can be scaled individually**\" → one **Deployment** per microservice (each has its own `replicas`).\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Your app is made of several microservices (small separate services), each in its own Docker container image.\n- **What you must achieve:** Run the whole app on GKE so each microservice can be scaled on its own.\n- **The limits:** Each one must scale separately.\n- **What they're really asking:** How should you deploy the microservices on GKE?\n\n**Clues in the question:**\n- \"**each microservice can be scaled individually**\" → one **Deployment** per microservice (each has its own `replicas`).\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -11426,7 +11426,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Each microservice has its own image and must **scale on its own**."
+  "plain": "- **The situation:** Your app is made of several microservices (small separate services), each in its own Docker container image.\n- **What you must achieve:** Run the whole app on GKE so each microservice can be scaled on its own.\n- **The limits:** Each one must scale separately.\n- **What they're really asking:** How should you deploy the microservices on GKE?"
  },
  {
   "file": "Q176-specify-service-account-at-creation.md",
@@ -11434,7 +11434,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Give **each VM its own** service account.\n\n**Clues in the question:**\n- \"**specify … the service account each instance uses**\" → set it **at creation** with `--service-account`.\n- Changing it later requires **stopping** the VM, and `instances update` doesn't do it.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** Several apps run on different VMs in the same project.\n- **What you must achieve:** Choose exactly which service account (the identity it uses for Google APIs) each VM uses.\n- **The limits:** Control it VM by VM.\n- **What they're really asking:** How do you give each VM its own service account?\n\n**Clues in the question:**\n- \"**specify … the service account each instance uses**\" → set it **at creation** with `--service-account`.\n- Changing it later requires **stopping** the VM, and `instances update` doesn't do it.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -11490,7 +11490,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Give **each VM its own** service account."
+  "plain": "- **The situation:** Several apps run on different VMs in the same project.\n- **What you must achieve:** Choose exactly which service account (the identity it uses for Google APIs) each VM uses.\n- **The limits:** Control it VM by VM.\n- **What they're really asking:** How do you give each VM its own service account?"
  },
  {
   "file": "Q177-managed-mongodb-atlas-marketplace.md",
@@ -11498,7 +11498,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You want **MongoDB**, **managed**, with a **support SLA**.\n\n**Clues in the question:**\n- \"**managed MongoDB environment**\" + \"**support SLA**\" → **MongoDB Atlas** (MongoDB Inc.'s managed service) via **Marketplace**.\n\n**Exam topic:** Marketplace."
+    "md": "**In plain words:**\n- **The situation:** Your app will run on GKE and needs MongoDB (a document database).\n- **What you must achieve:** Run a managed MongoDB that comes with a support SLA (a guaranteed support agreement).\n- **The limits:** It must be managed and supported.\n- **What they're really asking:** Where do you get a managed MongoDB with an SLA?\n\n**Clues in the question:**\n- \"**managed MongoDB environment**\" + \"**support SLA**\" → **MongoDB Atlas** (MongoDB Inc.'s managed service) via **Marketplace**.\n\n**Exam topic:** Marketplace."
    },
    {
     "kind": "terms",
@@ -11554,7 +11554,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "You want **MongoDB**, **managed**, with a **support SLA**."
+  "plain": "- **The situation:** Your app will run on GKE and needs MongoDB (a document database).\n- **What you must achieve:** Run a managed MongoDB that comes with a support SLA (a guaranteed support agreement).\n- **The limits:** It must be managed and supported.\n- **What they're really asking:** Where do you get a managed MongoDB with an SLA?"
  },
  {
   "file": "Q178-bi-team-bigquery-user-group.md",
@@ -11562,7 +11562,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** BI users must **run their own SQL** on **live** data in BigQuery.\n\n**Clues in the question:**\n- \"**run the custom SQL queries**\" → they need to **run jobs** → **BigQuery User** (can run queries, create datasets).\n- \"**users in the BI department**\" → grant to a **Google Group**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A data pipeline streams data into BigQuery for the Business Intelligence (BI) department.\n- **What you must achieve:** Let BI users run their own SQL queries on the newest data.\n- **The limits:** None stated.\n- **What they're really asking:** Which permissions let BI users query the dataset?\n\n**Clues in the question:**\n- \"**run the custom SQL queries**\" → they need to **run jobs** → **BigQuery User** (can run queries, create datasets).\n- \"**users in the BI department**\" → grant to a **Google Group**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -11618,7 +11618,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "BI users must **run their own SQL** on **live** data in BigQuery."
+  "plain": "- **The situation:** A data pipeline streams data into BigQuery for the Business Intelligence (BI) department.\n- **What you must achieve:** Let BI users run their own SQL queries on the newest data.\n- **The limits:** None stated.\n- **What they're really asking:** Which permissions let BI users query the dataset?"
  },
  {
   "file": "Q179-dmz-lan-single-vpc-two-subnets.md",
@@ -11626,7 +11626,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Public servers (DMZ) and private servers (LAN) must **talk to each other**. Only the DMZ is reachable **from the internet**.\n\n**Clues in the question:**\n- \"**talk to each other**\" → **one VPC** (subnets in one VPC can route to each other; separate VPCs can't without peering/VPN).\n- \"**accessible through the Internet**\" → incoming traffic → **ingress** rule.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** Your company is moving all servers to Compute Engine. Some servers must be reachable from the internet, others only internally, and all must talk to each other on certain ports. On-premises you used a DMZ (a public zone) and a LAN (the private internal network).\n- **What you must achieve:** Design the Google Cloud network to match.\n- **The limits:** Keep the public/private split, and allow only specific ports between them.\n- **What they're really asking:** How should you lay out the network and firewall rules?\n\n**Clues in the question:**\n- \"**talk to each other**\" → **one VPC** (subnets in one VPC can route to each other; separate VPCs can't without peering/VPN).\n- \"**accessible through the Internet**\" → incoming traffic → **ingress** rule.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -11682,7 +11682,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Public servers (DMZ) and private servers (LAN) must **talk to each other**. Only the DMZ is reachable **from the internet**."
+  "plain": "- **The situation:** Your company is moving all servers to Compute Engine. Some servers must be reachable from the internet, others only internally, and all must talk to each other on certain ports. On-premises you used a DMZ (a public zone) and a LAN (the private internal network).\n- **What you must achieve:** Design the Google Cloud network to match.\n- **The limits:** Keep the public/private split, and allow only specific ports between them.\n- **What they're really asking:** How should you lay out the network and firewall rules?"
  },
  {
   "file": "Q180-first-step-enable-spanner-api.md",
@@ -11690,7 +11690,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** New project. What's the **first step** before making a Spanner instance?\n\n**Clues in the question:**\n- \"**just created a new project**\" + \"**first step**\" → **enable the API** (Q136 pattern).\n- As project creator you're already Owner, so you don't need to grant yourself a role.\n\n**Exam topic:** APIs."
+    "md": "**In plain words:**\n- **The situation:** You just created a project for a globally distributed app that will use Cloud Spanner.\n- **What you must achieve:** Do the very first step before creating the Spanner instance.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do first in a new project before you can create a Spanner instance?\n\n**Clues in the question:**\n- \"**just created a new project**\" + \"**first step**\" → **enable the API** (Q136 pattern).\n- As project creator you're already Owner, so you don't need to grant yourself a role.\n\n**Exam topic:** APIs."
    },
    {
     "kind": "terms",
@@ -11746,7 +11746,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "New project. What's the **first step** before making a Spanner instance?"
+  "plain": "- **The situation:** You just created a project for a globally distributed app that will use Cloud Spanner.\n- **What you must achieve:** Do the very first step before creating the Spanner instance.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do first in a new project before you can create a Spanner instance?"
  },
  {
   "file": "Q181-cli-new-project-enable-compute-api.md",
@@ -11754,7 +11754,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** New project (made with gcloud, billing linked). What must you do before `gcloud compute instances create`?\n\n**Clues in the question:**\n- \"**new project … through the gcloud CLI**\": APIs are **not** enabled automatically → **enable `compute.googleapis.com`**.\n- Enabling the Compute API also creates the **default VPC**, so you don't need to make one.\n\n**Exam topic:** APIs."
+    "md": "**In plain words:**\n- **The situation:** You created a new project with the gcloud CLI and linked a billing account.\n- **What you must achieve:** Create a Compute Engine VM from the command line.\n- **The limits:** Do the required setup steps first.\n- **What they're really asking:** What must you set up before you can create the VM?\n\n**Clues in the question:**\n- \"**new project … through the gcloud CLI**\": APIs are **not** enabled automatically → **enable `compute.googleapis.com`**.\n- Enabling the Compute API also creates the **default VPC**, so you don't need to make one.\n\n**Exam topic:** APIs."
    },
    {
     "kind": "terms",
@@ -11810,7 +11810,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "New project (made with gcloud, billing linked). What must you do before `gcloud compute instances create`?"
+  "plain": "- **The situation:** You created a new project with the gcloud CLI and linked a billing account.\n- **What you must achieve:** Create a Compute Engine VM from the command line.\n- **The limits:** Do the required setup steps first.\n- **What they're really asking:** What must you set up before you can create the VM?"
  },
  {
   "file": "Q182-gke-node-pool-autoscaling-min-max.md",
@@ -11818,7 +11818,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The **cluster** (nodes) must grow automatically as **more apps** are added.\n\n**Clues in the question:**\n- \"**the cluster can scale as more applications are deployed**\" → more **nodes** → **cluster autoscaler** on the node pool.\n- HPA/VPA scale **pods** of one deployment, not the cluster.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** A new app is made of several microservices, and you will deploy it to GKE.\n- **What you must achieve:** The cluster must grow as more apps are added later.\n- **The limits:** No manual work each time a new app is deployed.\n- **What they're really asking:** How do you set up the cluster to add machines by itself?\n\n**Clues in the question:**\n- \"**the cluster can scale as more applications are deployed**\" → more **nodes** → **cluster autoscaler** on the node pool.\n- HPA/VPA scale **pods** of one deployment, not the cluster.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -11874,7 +11874,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "The **cluster** (nodes) must grow automatically as **more apps** are added."
+  "plain": "- **The situation:** A new app is made of several microservices, and you will deploy it to GKE.\n- **What you must achieve:** The cluster must grow as more apps are added later.\n- **The limits:** No manual work each time a new app is deployed.\n- **What they're really asking:** How do you set up the cluster to add machines by itself?"
  },
  {
   "file": "Q183-new-sa-only-this-vm-reads-files.md",
@@ -11882,7 +11882,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Only the **new** VM should read the files. Other VMs use the **default** service account.\n\n**Clues in the question:**\n- \"**Other Compute Engine instances are already running with default configuration**\" → they share the **default SA**. Granting it would give them access too.\n- \"**without allowing other VMs**\" → a **new, dedicated SA** with the storage permission.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You will run a third-party app on a new VM. Other VMs already run with default settings. The install files are in Cloud Storage.\n- **What you must achieve:** Let only the new VM read those files.\n- **The limits:** Other VMs must not be able to read them.\n- **What they're really asking:** How do you give just the new VM access to the files?\n\n**Clues in the question:**\n- \"**Other Compute Engine instances are already running with default configuration**\" → they share the **default SA**. Granting it would give them access too.\n- \"**without allowing other VMs**\" → a **new, dedicated SA** with the storage permission.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -11938,7 +11938,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Only the **new** VM should read the files. Other VMs use the **default** service account."
+  "plain": "- **The situation:** You will run a third-party app on a new VM. Other VMs already run with default settings. The install files are in Cloud Storage.\n- **What you must achieve:** Let only the new VM read those files.\n- **The limits:** Other VMs must not be able to read them.\n- **What they're really asking:** How do you give just the new VM access to the files?"
  },
  {
   "file": "Q184-mission-critical-analytics-storage-class.md",
@@ -11946,7 +11946,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Files used **all the time**, at **lowest cost**, users in **one city**.\n\n**Clues in the question:**\n- \"**used continually**\" → **Standard** (Nearline charges per read and suits monthly access).\n- \"**minimal cost**\" + users in one place → **regional**, the region nearest Boston (e.g. `us-east4`).\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** Files in Cloud Storage feed an important analytics pipeline that runs all the time. The users are in Boston, USA.\n- **What you must achieve:** Store the files in the right place and class.\n- **The limits:** Lowest cost.\n- **What they're really asking:** Which storage class and location fit files used constantly from one area?\n\n**Clues in the question:**\n- \"**used continually**\" → **Standard** (Nearline charges per read and suits monthly access).\n- \"**minimal cost**\" + users in one place → **regional**, the region nearest Boston (e.g. `us-east4`).\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -12002,7 +12002,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Files used **all the time**, at **lowest cost**, users in **one city**."
+  "plain": "- **The situation:** Files in Cloud Storage feed an important analytics pipeline that runs all the time. The users are in Boston, USA.\n- **What you must achieve:** Store the files in the right place and class.\n- **The limits:** Lowest cost.\n- **What they're really asking:** Which storage class and location fit files used constantly from one area?"
  },
  {
   "file": "Q185-app-engine-version-traffic-split.md",
@@ -12010,7 +12010,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Send a **small part** of real users to the update; most stay on the stable version.\n\n**Clues in the question:**\n- \"**small portion of real user traffic**\" + \"**majority … stable version**\" → **App Engine versions + traffic splitting** (Q076).\n\n**Exam topic:** App Engine."
+    "md": "**In plain words:**\n- **The situation:** You are building a new web app on Google Cloud.\n- **What you must achieve:** Test updates on a small part of real traffic while most users stay on the stable version.\n- **The limits:** None stated.\n- **What they're really asking:** Which platform or setup lets you split traffic between versions?\n\n**Clues in the question:**\n- \"**small portion of real user traffic**\" + \"**majority … stable version**\" → **App Engine versions + traffic splitting** (Q076).\n\n**Exam topic:** App Engine."
    },
    {
     "kind": "terms",
@@ -12066,7 +12066,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Send a **small part** of real users to the update; most stay on the stable version."
+  "plain": "- **The situation:** You are building a new web app on Google Cloud.\n- **What you must achieve:** Test updates on a small part of real traffic while most users stay on the stable version.\n- **The limits:** None stated.\n- **What they're really asking:** Which platform or setup lets you split traffic between versions?"
  },
  {
   "file": "Q186-cloud-identity-conflicting-accounts-transfer.md",
@@ -12074,7 +12074,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Some new users already made Google accounts with their **work email**. How do you avoid conflicts?\n\n**Clues in the question:**\n- \"**avoid conflicting accounts**\" + \"**Google's recommended practices**\" → **invite them to transfer** the unmanaged account into your Cloud Identity.\n\n**Exam topic:** Cloud Identity."
+    "md": "**In plain words:**\n- **The situation:** You need to add new users to Cloud Identity. Some already have personal Google accounts using their work email.\n- **What you must achieve:** Add them without creating clashing duplicate accounts.\n- **The limits:** Follow a Google-recommended practice.\n- **What they're really asking:** How do you handle users who already have a Google account with that email?\n\n**Clues in the question:**\n- \"**avoid conflicting accounts**\" + \"**Google's recommended practices**\" → **invite them to transfer** the unmanaged account into your Cloud Identity.\n\n**Exam topic:** Cloud Identity."
    },
    {
     "kind": "terms",
@@ -12130,7 +12130,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Some new users already made Google accounts with their **work email**. How do you avoid conflicts?"
+  "plain": "- **The situation:** You need to add new users to Cloud Identity. Some already have personal Google accounts using their work email.\n- **What you must achieve:** Add them without creating clashing duplicate accounts.\n- **The limits:** Follow a Google-recommended practice.\n- **What they're really asking:** How do you handle users who already have a Google account with that email?"
  },
  {
   "file": "Q187-spanner-cpu-65-add-nodes.md",
@@ -12138,7 +12138,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Single-region** Spanner. Best practice threshold, and the **fastest** fix.\n\n**Clues in the question:**\n- \"**single Google Cloud region**\" → Google recommends keeping high-priority CPU **below 65%** (45% is for **multi-region**).\n- \"**shortest amount of time**\" → **add nodes** (minutes) instead of rewriting queries (days).\n\n**Exam topic:** Spanner."
+    "md": "**In plain words:**\n- **The situation:** A Cloud Spanner instance runs in one region in production.\n- **What you must achieve:** Improve query performance.\n- **The limits:** In the shortest time, following Google's best practices.\n- **What they're really asking:** What is the quickest change that makes Spanner queries faster?\n\n**Clues in the question:**\n- \"**single Google Cloud region**\" → Google recommends keeping high-priority CPU **below 65%** (45% is for **multi-region**).\n- \"**shortest amount of time**\" → **add nodes** (minutes) instead of rewriting queries (days).\n\n**Exam topic:** Spanner."
    },
    {
     "kind": "terms",
@@ -12194,7 +12194,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "**Single-region** Spanner. Best practice threshold, and the **fastest** fix."
+  "plain": "- **The situation:** A Cloud Spanner instance runs in one region in production.\n- **What you must achieve:** Improve query performance.\n- **The limits:** In the shortest time, following Google's best practices.\n- **What they're really asking:** What is the quickest change that makes Spanner queries faster?"
  },
  {
   "file": "Q188-postgres-acid-single-site-cloud-sql.md",
@@ -12202,7 +12202,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Orders app, **one location**, **ACID**, already **PostgreSQL**, **minimal code changes**.\n\n**Clues in the question:**\n- \"**implemented in PostgreSQL**\" + \"**minimal code changes**\" → **Cloud SQL for PostgreSQL**.\n- \"**single physical location**\" → no need for global Spanner.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** An internal orders app is used by employees in one location. It needs strong consistency, fast queries and ACID transactions (all-or-nothing updates across tables). It is built on PostgreSQL.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Minimal code changes.\n- **What they're really asking:** Which database fits a single-location PostgreSQL transactional app?\n\n**Clues in the question:**\n- \"**implemented in PostgreSQL**\" + \"**minimal code changes**\" → **Cloud SQL for PostgreSQL**.\n- \"**single physical location**\" → no need for global Spanner.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -12258,7 +12258,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Orders app, **one location**, **ACID**, already **PostgreSQL**, **minimal code changes**."
+  "plain": "- **The situation:** An internal orders app is used by employees in one location. It needs strong consistency, fast queries and ACID transactions (all-or-nothing updates across tables). It is built on PostgreSQL.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Minimal code changes.\n- **What they're really asking:** Which database fits a single-location PostgreSQL transactional app?"
  },
  {
   "file": "Q189-gcloud-config-set-container-cluster.md",
@@ -12266,7 +12266,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Make **dev** the **default cluster** for future gcloud commands.\n\n**Clues in the question:**\n- \"**future CLI commands by default address this specific cluster**\" → `gcloud config set container/cluster dev` (like `compute/zone` in Q138).\n\n**Exam topic:** gcloud CLI."
+    "md": "**In plain words:**\n- **The situation:** You maintain a GKE cluster named dev and just installed the Cloud SDK.\n- **What you must achieve:** Future command-line commands should target this cluster by default.\n- **The limits:** None stated.\n- **What they're really asking:** What do you set so gcloud and kubectl use the dev cluster by default?\n\n**Clues in the question:**\n- \"**future CLI commands by default address this specific cluster**\" → `gcloud config set container/cluster dev` (like `compute/zone` in Q138).\n\n**Exam topic:** gcloud CLI."
    },
    {
     "kind": "terms",
@@ -12322,7 +12322,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Make **dev** the **default cluster** for future gcloud commands."
+  "plain": "- **The situation:** You maintain a GKE cluster named dev and just installed the Cloud SDK.\n- **What you must achieve:** Future command-line commands should target this cluster by default.\n- **The limits:** None stated.\n- **What they're really asking:** What do you set so gcloud and kubectl use the dev cluster by default?"
  },
  {
   "file": "Q190-separate-project-marketing-team.md",
@@ -12330,7 +12330,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Marketing needs **its own** set of resources, **separate** from Sales.\n\n**Clues in the question:**\n- \"**organized independently of the sales team**\" → a **new project**.\n- Project IDs are **globally unique**, so you can't reuse `acme-data-digest`.\n\n**Exam topic:** Resource hierarchy."
+    "md": "**In plain words:**\n- **The situation:** The sales team has a project named Sales Data Digest (ID acme-data-digest).\n- **What you must achieve:** Set up similar resources for the marketing team.\n- **The limits:** Marketing's resources must be organized separately from sales.\n- **What they're really asking:** How do you create marketing's environment?\n\n**Clues in the question:**\n- \"**organized independently of the sales team**\" → a **new project**.\n- Project IDs are **globally unique**, so you can't reuse `acme-data-digest`.\n\n**Exam topic:** Resource hierarchy."
    },
    {
     "kind": "terms",
@@ -12386,7 +12386,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Marketing needs **its own** set of resources, **separate** from Sales."
+  "plain": "- **The situation:** The sales team has a project named Sales Data Digest (ID acme-data-digest).\n- **What you must achieve:** Set up similar resources for the marketing team.\n- **The limits:** Marketing's resources must be organized separately from sales.\n- **What they're really asking:** How do you create marketing's environment?"
  },
  {
   "file": "Q191-ssh-no-public-ip-iap-tcp.md",
@@ -12394,7 +12394,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** SSH from the internet into VMs that have **no public IP**, without setting up each VM.\n\n**Clues in the question:**\n- \"**do not want … a public IP**\" + \"**over the internet**\" → **IAP TCP forwarding** tunnels SSH through Google to the VM's internal IP.\n- \"**without having to configure specific access on the existing and new instances**\" → one firewall rule + IAM, not per-VM setup.\n\n**Exam topic:** Security."
+    "md": "**In plain words:**\n- **The situation:** You run several Linux VMs and will add more soon.\n- **What you must achieve:** SSH into all of them from your own SSH client over the internet.\n- **The limits:** No per-VM setup, and the VMs must not have public IPs.\n- **What they're really asking:** How can you reach VMs without public IPs from the internet?\n\n**Clues in the question:**\n- \"**do not want … a public IP**\" + \"**over the internet**\" → **IAP TCP forwarding** tunnels SSH through Google to the VM's internal IP.\n- \"**without having to configure specific access on the existing and new instances**\" → one firewall rule + IAM, not per-VM setup.\n\n**Exam topic:** Security."
    },
    {
     "kind": "terms",
@@ -12450,7 +12450,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "SSH from the internet into VMs that have **no public IP**, without setting up each VM."
+  "plain": "- **The situation:** You run several Linux VMs and will add more soon.\n- **What you must achieve:** SSH into all of them from your own SSH client over the internet.\n- **The limits:** No per-VM setup, and the VMs must not have public IPs.\n- **What they're really asking:** How can you reach VMs without public IPs from the internet?"
  },
  {
   "file": "Q192-docker-image-gke-container-registry-deployment.md",
@@ -12458,7 +12458,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Where do you put the image, and which Kubernetes object runs it?\n\n**Clues in the question:**\n- Images go in a **registry** (Container Registry, today **Artifact Registry**), not Cloud Storage.\n- A **workload** that runs containers is a **Deployment**. A Service only gives pods a network address.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Your app is packaged as a Docker image.\n- **What you must achieve:** Run it as a workload on GKE.\n- **The limits:** None stated.\n- **What they're really asking:** What steps get the image running on GKE?\n\n**Clues in the question:**\n- Images go in a **registry** (Container Registry, today **Artifact Registry**), not Cloud Storage.\n- A **workload** that runs containers is a **Deployment**. A Service only gives pods a network address.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -12514,7 +12514,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Where do you put the image, and which Kubernetes object runs it?"
+  "plain": "- **The situation:** Your app is packaged as a Docker image.\n- **What you must achieve:** Run it as a workload on GKE.\n- **The limits:** None stated.\n- **What they're really asking:** What steps get the image running on GKE?"
  },
  {
   "file": "Q193-data-studio-broken-check-bigquery-job.md",
@@ -12522,7 +12522,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Charts broke. The table is rebuilt **every night**. Where do you look?\n\n**Clues in the question:**\n- \"**At night, the daily summary is recalculated by overwriting the table**\" → the likely culprit is the **nightly BigQuery job** → check its **job history** in BigQuery.\n\n**Exam topic:** BigQuery."
+    "md": "**In plain words:**\n- **The situation:** Data Studio (now Looker Studio, a chart tool) shows a BigQuery table. Data is added during the day, and each night the summary table is rebuilt by overwriting it. The charts are now broken.\n- **What you must achieve:** Analyze what went wrong.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look to understand what happened to the table?\n\n**Clues in the question:**\n- \"**At night, the daily summary is recalculated by overwriting the table**\" → the likely culprit is the **nightly BigQuery job** → check its **job history** in BigQuery.\n\n**Exam topic:** BigQuery."
    },
    {
     "kind": "terms",
@@ -12578,7 +12578,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Charts broke. The table is rebuilt **every night**. Where do you look?"
+  "plain": "- **The situation:** Data Studio (now Looker Studio, a chart tool) shows a BigQuery table. Data is added during the day, and each night the summary table is rebuilt by overwriting it. The charts are now broken.\n- **What you must achieve:** Analyze what went wrong.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look to understand what happened to the table?"
  },
  {
   "file": "Q194-group-common-iam-folders.md",
@@ -12586,7 +12586,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Group resources that should have the **same IAM policies**.\n\n**Clues in the question:**\n- \"**group resources that share common IAM policies**\" → **folders**. A policy set on a folder is **inherited** by every project inside.\n\n**Exam topic:** Resource hierarchy."
+    "md": "**In plain words:**\n- **The situation:** You are setting up billing for a new Google Cloud customer.\n- **What you must achieve:** Group resources that share the same IAM policies (access rules).\n- **The limits:** None stated.\n- **What they're really asking:** Which part of the Google Cloud hierarchy groups resources that share access rules?\n\n**Clues in the question:**\n- \"**group resources that share common IAM policies**\" → **folders**. A policy set on a folder is **inherited** by every project inside.\n\n**Exam topic:** Resource hierarchy."
    },
    {
     "kind": "terms",
@@ -12642,7 +12642,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Group resources that should have the **same IAM policies**."
+  "plain": "- **The situation:** You are setting up billing for a new Google Cloud customer.\n- **What you must achieve:** Group resources that share the same IAM policies (access rules).\n- **The limits:** None stated.\n- **What they're really asking:** Which part of the Google Cloud hierarchy groups resources that share access rules?"
  },
  {
   "file": "Q195-ha-vpn-custom-vpc-bgp-active-passive.md",
@@ -12650,7 +12650,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** HA VPN with **dynamic routing**, a **specific IP range**, and **no extra tunnel load** when one fails.\n\n**Clues in the question:**\n- \"**dynamic routing**\" → **Cloud Router + BGP** (static routes are not dynamic).\n- \"**shared address space of 10.19.0.1/22**\" → **custom mode** VPC (auto mode picks its own 10.128.0.0/9 ranges).\n- \"**no overprovisioning of tunnels during a failover**\" → **active/passive** (the standby tunnel takes over, total capacity is the same).\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** You need a strong VPN between a new VPC network and a remote site, using dynamic routing and the address space 10.19.0.1/22.\n- **What you must achieve:** Set up high-availability Cloud VPN.\n- **The limits:** No extra tunnels should be added during a failover; follow recommended practice.\n- **What they're really asking:** How do you configure HA VPN and its routing?\n\n**Clues in the question:**\n- \"**dynamic routing**\" → **Cloud Router + BGP** (static routes are not dynamic).\n- \"**shared address space of 10.19.0.1/22**\" → **custom mode** VPC (auto mode picks its own 10.128.0.0/9 ranges).\n- \"**no overprovisioning of tunnels during a failover**\" → **active/passive** (the standby tunnel takes over, total capacity is the same).\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -12706,7 +12706,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "HA VPN with **dynamic routing**, a **specific IP range**, and **no extra tunnel load** when one fails."
+  "plain": "- **The situation:** You need a strong VPN between a new VPC network and a remote site, using dynamic routing and the address space 10.19.0.1/22.\n- **What you must achieve:** Set up high-availability Cloud VPN.\n- **The limits:** No extra tunnels should be added during a failover; follow recommended practice.\n- **What they're really asking:** How do you configure HA VPN and its routing?"
  },
  {
   "file": "Q196-cpu-heavy-microservice-compute-node-pool.md",
@@ -12714,7 +12714,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** One service needs **lots of CPU**, others are **standard**. Make everything efficient.\n\n**Clues in the question:**\n- \"**large amount of CPU time compared to the memory**\" → **compute-optimized** nodes (C2) for that service.\n- \"**others … optimized for n1-standard**\" → keep them on the **general-purpose** pool.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Several microservices run on a GKE cluster. One renders images and needs lots of CPU but little memory; the others suit n1-standard machines.\n- **What you must achieve:** Make every workload use resources efficiently.\n- **The limits:** None stated.\n- **What they're really asking:** How should you arrange node machine types for the image service and the rest?\n\n**Clues in the question:**\n- \"**large amount of CPU time compared to the memory**\" → **compute-optimized** nodes (C2) for that service.\n- \"**others … optimized for n1-standard**\" → keep them on the **general-purpose** pool.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -12770,7 +12770,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "One service needs **lots of CPU**, others are **standard**. Make everything efficient."
+  "plain": "- **The situation:** Several microservices run on a GKE cluster. One renders images and needs lots of CPU but little memory; the others suit n1-standard machines.\n- **What you must achieve:** Make every workload use resources efficiently.\n- **The limits:** None stated.\n- **What they're really asking:** How should you arrange node machine types for the image service and the rest?"
  },
  {
   "file": "Q197-bill-marketing-new-project-billing-account.md",
@@ -12778,7 +12778,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Marketing must **pay only for** their new initiative.\n\n**Clues in the question:**\n- \"**bill the Marketing department for only their … services**\" → a **new project** linked to a **Marketing billing account**.\n- Labels only **tag** costs; Marketing would still be billed on the shared account.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Your organization has three Google Cloud projects.\n- **What you must achieve:** Bill the Marketing department only for its new initiative.\n- **The limits:** Only Marketing's services for that initiative.\n- **What they're really asking:** How do you set up billing so Marketing pays only for its own work?\n\n**Clues in the question:**\n- \"**bill the Marketing department for only their … services**\" → a **new project** linked to a **Marketing billing account**.\n- Labels only **tag** costs; Marketing would still be billed on the shared account.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -12834,7 +12834,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Marketing must **pay only for** their new initiative."
+  "plain": "- **The situation:** Your organization has three Google Cloud projects.\n- **What you must achieve:** Bill the Marketing department only for its new initiative.\n- **The limits:** Only Marketing's services for that initiative.\n- **What they're really asking:** How do you set up billing so Marketing pays only for its own work?"
  },
  {
   "file": "Q198-tcp-389-preserve-client-ip-network-lb.md",
@@ -12842,7 +12842,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** TCP **389** (LDAP), from the **internet**, and the app must see the **real client IP**.\n\n**Clues in the question:**\n- \"**preserve the IP address of the client**\" → a **pass-through** LB (Network LB). Proxy LBs replace the source IP with their own.\n- \"**to the internet**\" → **external**.\n\n**Exam topic:** Load balancing."
+    "md": "**In plain words:**\n- **The situation:** An app on a managed instance group accepts TCP traffic on port 389, and it must see each client's real IP address.\n- **What you must achieve:** Expose the app to the internet with a load balancer.\n- **The limits:** The client IP must be preserved.\n- **What they're really asking:** Which load balancer passes traffic through with the client IP intact?\n\n**Clues in the question:**\n- \"**preserve the IP address of the client**\" → a **pass-through** LB (Network LB). Proxy LBs replace the source IP with their own.\n- \"**to the internet**\" → **external**.\n\n**Exam topic:** Load balancing."
    },
    {
     "kind": "terms",
@@ -12898,7 +12898,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "TCP **389** (LDAP), from the **internet**, and the app must see the **real client IP**."
+  "plain": "- **The situation:** An app on a managed instance group accepts TCP traffic on port 389, and it must see each client's real IP address.\n- **What you must achieve:** Expose the app to the internet with a load balancer.\n- **The limits:** The client IP must be preserved.\n- **What they're really asking:** Which load balancer passes traffic through with the client IP intact?"
  },
  {
   "file": "Q199-global-game-db-spanner.md",
@@ -12906,7 +12906,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Global** players, **consistent** performance as it grows, **no extra management**.\n\n**Clues in the question:**\n- \"**global users**\" + \"**consistent performance**\" + \"**without increasing the management complexity**\" → **Cloud Spanner** (global, scales by adding nodes, fully managed).\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** You are building a multiplayer game that stores game data in a database, and popularity is growing.\n- **What you must achieve:** Give consistent, fast performance to players worldwide.\n- **The limits:** Don't add management complexity.\n- **What they're really asking:** Which database gives global performance without extra management?\n\n**Clues in the question:**\n- \"**global users**\" + \"**consistent performance**\" + \"**without increasing the management complexity**\" → **Cloud Spanner** (global, scales by adding nodes, fully managed).\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -12962,7 +12962,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "**Global** players, **consistent** performance as it grows, **no extra management**."
+  "plain": "- **The situation:** You are building a multiplayer game that stores game data in a database, and popularity is growing.\n- **What you must achieve:** Give consistent, fast performance to players worldwide.\n- **The limits:** Don't add management complexity.\n- **What they're really asking:** Which database gives global performance without extra management?"
  },
  {
   "file": "Q200-global-relational-unknown-scale-spanner.md",
@@ -12970,7 +12970,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Relational**, **global**, growth **unknown**, scale with **little config**.\n\n**Clues in the question:**\n- \"**relational**\" + \"**across the globe**\" + \"**scale with your user growth**\" → **Spanner** (horizontal scaling, can autoscale).\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** Your app stores relational data for users all over the world, and nobody knows how big the user base will become.\n- **What you must achieve:** Use a database that grows along with the users.\n- **The limits:** Users are global, and growth should need very few configuration changes.\n- **What they're really asking:** Which database can scale with unknown worldwide growth easily?\n\n**Clues in the question:**\n- \"**relational**\" + \"**across the globe**\" + \"**scale with your user growth**\" → **Spanner** (horizontal scaling, can autoscale).\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -13026,7 +13026,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "**Relational**, **global**, growth **unknown**, scale with **little config**."
+  "plain": "- **The situation:** Your app stores relational data for users all over the world, and nobody knows how big the user base will become.\n- **What you must achieve:** Use a database that grows along with the users.\n- **The limits:** Users are global, and growth should need very few configuration changes.\n- **What they're really asking:** Which database can scale with unknown worldwide growth easily?"
  },
  {
   "file": "Q201-custom-cost-metrics-bigquery-export-looker.md",
@@ -13034,7 +13034,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Costs with **your own calculated metrics**, updated **automatically**.\n\n**Clues in the question:**\n- \"**dynamically calculated based on company-specific criteria**\" → you need **SQL** on the raw cost data → **BigQuery export**.\n- \"**automate the process**\" → the export updates by itself; a CSV download doesn't.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Several projects share one billing account.\n- **What you must achieve:** Show costs with custom metrics calculated from company-specific rules.\n- **The limits:** It should be automated.\n- **What they're really asking:** How do you get billing data into a place where custom calculations and charts can be built?\n\n**Clues in the question:**\n- \"**dynamically calculated based on company-specific criteria**\" → you need **SQL** on the raw cost data → **BigQuery export**.\n- \"**automate the process**\" → the export updates by itself; a CSV download doesn't.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -13090,7 +13090,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Costs with **your own calculated metrics**, updated **automatically**."
+  "plain": "- **The situation:** Several projects share one billing account.\n- **What you must achieve:** Show costs with custom metrics calculated from company-specific rules.\n- **The limits:** It should be automated.\n- **What they're really asking:** How do you get billing data into a place where custom calculations and charts can be built?"
  },
  {
   "file": "Q202-internal-only-vm-gcs-private-google-access.md",
@@ -13098,7 +13098,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** VMs have **no external IP** and **no internet**, but must reach **Cloud Storage**.\n\n**Clues in the question:**\n- \"**only allow … internal IP addresses**\" + \"**do not let VM instances connect to the internet**\" + \"**access … Cloud Storage**\" → **Private Google Access** on the subnet.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** An app runs on VMs in a custom VPC. Security rules allow only internal IPs and no internet access.\n- **What you must achieve:** Let the app read a file in a Cloud Storage bucket in your project.\n- **The limits:** No external IPs and no internet.\n- **What they're really asking:** How can VMs reach Cloud Storage without internet access?\n\n**Clues in the question:**\n- \"**only allow … internal IP addresses**\" + \"**do not let VM instances connect to the internet**\" + \"**access … Cloud Storage**\" → **Private Google Access** on the subnet.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -13154,7 +13154,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "VMs have **no external IP** and **no internet**, but must reach **Cloud Storage**."
+  "plain": "- **The situation:** An app runs on VMs in a custom VPC. Security rules allow only internal IPs and no internet access.\n- **What you must achieve:** Let the app read a file in a Cloud Storage bucket in your project.\n- **The limits:** No external IPs and no internet.\n- **What they're really asking:** How can VMs reach Cloud Storage without internet access?"
  },
  {
   "file": "Q203-move-acquired-project-projects-move.md",
@@ -13162,7 +13162,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Move a project from **their org** to **yours** and bill it to **you**, with little effort.\n\n**Clues in the question:**\n- \"**move this project into your organization**\" → **projects.move** (`gcloud beta projects move`).\n- \"**billed to your organization**\" → **change its billing account**.\n- \"**minimal effort**\" → don't rebuild.\n\n**Exam topic:** Resource hierarchy."
+    "md": "**In plain words:**\n- **The situation:** Your company bought a startup that has a production project in its own organization.\n- **What you must achieve:** Move that project into your organization and bill it to your company.\n- **The limits:** Minimal effort.\n- **What they're really asking:** How do you move the project and its billing?\n\n**Clues in the question:**\n- \"**move this project into your organization**\" → **projects.move** (`gcloud beta projects move`).\n- \"**billed to your organization**\" → **change its billing account**.\n- \"**minimal effort**\" → don't rebuild.\n\n**Exam topic:** Resource hierarchy."
    },
    {
     "kind": "terms",
@@ -13218,7 +13218,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Move a project from **their org** to **yours** and bill it to **you**, with little effort."
+  "plain": "- **The situation:** Your company bought a startup that has a production project in its own organization.\n- **What you must achieve:** Move that project into your organization and bill it to your company.\n- **The limits:** Minimal effort.\n- **What they're really asking:** How do you move the project and its billing?"
  },
  {
   "file": "Q204-restrict-dev-resources-us-org-policy.md",
@@ -13226,7 +13226,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Dev projects may only create resources **in US locations**.\n\n**Clues in the question:**\n- \"**only create cloud resources in the United States**\" → limit **where** resources go → **Organization Policy** `gcp.resourceLocations`.\n- IAM controls **who** can do things, not **where**.\n- A **folder** groups the dev projects so the policy applies once.\n\n**Exam topic:** Organization Policy."
+    "md": "**In plain words:**\n- **The situation:** All dev teams are in the United States, and each has its own project.\n- **What you must achieve:** Each team may create resources only in the US.\n- **The limits:** None stated.\n- **What they're really asking:** How do you limit where resources can be created?\n\n**Clues in the question:**\n- \"**only create cloud resources in the United States**\" → limit **where** resources go → **Organization Policy** `gcp.resourceLocations`.\n- IAM controls **who** can do things, not **where**.\n- A **folder** groups the dev projects so the policy applies once.\n\n**Exam topic:** Organization Policy."
    },
    {
     "kind": "terms",
@@ -13282,7 +13282,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Dev projects may only create resources **in US locations**."
+  "plain": "- **The situation:** All dev teams are in the United States, and each has its own project.\n- **What you must achieve:** Each team may create resources only in the US.\n- **The limits:** None stated.\n- **What they're really asking:** How do you limit where resources can be created?"
  },
  {
   "file": "Q205-cloud-dns-a-record-cname.md",
@@ -13290,7 +13290,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Three names, one **IP address**. Which record types?\n\n**Clues in the question:**\n- Name → **IP** = **A** record (so `mydomain.com A 34.x.x.x`).\n- Name → **another name** = **CNAME** (`www` and `home` → `mydomain.com`).\n- A CNAME can't be at the zone apex (`mydomain.com`).\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** You are using Cloud DNS (Google's domain name service).\n- **What you must achieve:** Point home.mydomain.com, mydomain.com and www.mydomain.com to your load balancer's IP.\n- **The limits:** None stated.\n- **What they're really asking:** Which DNS records do you create?\n\n**Clues in the question:**\n- Name → **IP** = **A** record (so `mydomain.com A 34.x.x.x`).\n- Name → **another name** = **CNAME** (`www` and `home` → `mydomain.com`).\n- A CNAME can't be at the zone apex (`mydomain.com`).\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -13346,7 +13346,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Three names, one **IP address**. Which record types?"
+  "plain": "- **The situation:** You are using Cloud DNS (Google's domain name service).\n- **What you must achieve:** Point home.mydomain.com, mydomain.com and www.mydomain.com to your load balancer's IP.\n- **The limits:** None stated.\n- **What they're really asking:** Which DNS records do you create?"
  },
  {
   "file": "Q206-firewall-sa-app-to-sa-db.md",
@@ -13354,7 +13354,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Only **app servers** (not web servers in the same subnet) may reach the **DB servers**.\n\n**Clues in the question:**\n- App and web servers share subnet-b, so subnet ranges can't tell them apart → identify VMs by **service account** (or tag).\n- Traffic **arriving at** the DB = **ingress**. Only ingress rules have a **source** filter by SA/tag.\n- A rule can't mix **tags and service accounts** for source/target.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** In the default VPC, database servers are in subnet-a; app and web servers are in subnet-b.\n- **What you must achieve:** Allow database traffic only from the app servers to the database servers.\n- **The limits:** Web servers must not reach the database.\n- **What they're really asking:** How do you write a firewall rule that only the app servers match?\n\n**Clues in the question:**\n- App and web servers share subnet-b, so subnet ranges can't tell them apart → identify VMs by **service account** (or tag).\n- Traffic **arriving at** the DB = **ingress**. Only ingress rules have a **source** filter by SA/tag.\n- A rule can't mix **tags and service accounts** for source/target.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -13410,7 +13410,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Only **app servers** (not web servers in the same subnet) may reach the **DB servers**."
+  "plain": "- **The situation:** In the default VPC, database servers are in subnet-a; app and web servers are in subnet-b.\n- **What you must achieve:** Allow database traffic only from the app servers to the database servers.\n- **The limits:** Web servers must not reach the database.\n- **What they're really asking:** How do you write a firewall rule that only the app servers match?"
  },
  {
   "file": "Q207-cms-deploy-directly-marketplace.md",
@@ -13418,7 +13418,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Install a CMS (like WordPress) **quickly and easily**.\n\n**Clues in the question:**\n- \"**quick and easy**\" → **Marketplace**, and click **Deploy right there** (no extra tools).\n\n**Exam topic:** Marketplace."
+    "md": "**In plain words:**\n- **The situation:** Your team wants to use a specific content management system (CMS, software for running websites).\n- **What you must achieve:** Deploy and install it.\n- **The limits:** Quick and easy.\n- **What they're really asking:** What is the fastest way to deploy a ready-made CMS?\n\n**Clues in the question:**\n- \"**quick and easy**\" → **Marketplace**, and click **Deploy right there** (no extra tools).\n\n**Exam topic:** Marketplace."
    },
    {
     "kind": "terms",
@@ -13474,7 +13474,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Install a CMS (like WordPress) **quickly and easily**."
+  "plain": "- **The situation:** Your team wants to use a specific content management system (CMS, software for running websites).\n- **What you must achieve:** Deploy and install it.\n- **The limits:** Quick and easy.\n- **What they're really asking:** What is the fastest way to deploy a ready-made CMS?"
  },
  {
   "file": "Q208-engineers-create-projects-shared-billing-account.md",
@@ -13482,7 +13482,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Engineers should create projects **without their own cards**.\n\n**Clues in the question:**\n- \"**without asking them for their credit card**\" → one company **billing account** with a payment method, and give creators **Billing Account User** so they can link projects to it.\n- \"**registered … 6 months ago**\" → too young for **invoiced billing**.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Your startup was registered as a business 6 months ago, and its Google Cloud use is growing.\n- **What you must achieve:** Let all engineers create projects.\n- **The limits:** Engineers should not need to enter their own credit cards.\n- **What they're really asking:** How do you set up company billing so engineers can create projects?\n\n**Clues in the question:**\n- \"**without asking them for their credit card**\" → one company **billing account** with a payment method, and give creators **Billing Account User** so they can link projects to it.\n- \"**registered … 6 months ago**\" → too young for **invoiced billing**.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -13538,7 +13538,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Engineers should create projects **without their own cards**."
+  "plain": "- **The situation:** Your startup was registered as a business 6 months ago, and its Google Cloud use is growing.\n- **What you must achieve:** Let all engineers create projects.\n- **The limits:** Engineers should not need to enter their own credit cards.\n- **What they're really asking:** How do you set up company billing so engineers can create projects?"
  },
  {
   "file": "Q209-cicd-sa-check-iam-roles-inherited.md",
@@ -13546,7 +13546,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Does the service account **have the right roles** in this project?\n\n**Clues in the question:**\n- \"**validate whether the used service account has the appropriate roles in the specific project**\" → look at its **IAM roles**, including those **inherited** from folder/org.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Your CI/CD server (the system that builds and deploys code automatically) can't run Google Cloud actions in one project because of permission errors.\n- **What you must achieve:** Check whether its service account has the right roles in that project.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you check which roles that service account has?\n\n**Clues in the question:**\n- \"**validate whether the used service account has the appropriate roles in the specific project**\" → look at its **IAM roles**, including those **inherited** from folder/org.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -13602,7 +13602,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Does the service account **have the right roles** in this project?"
+  "plain": "- **The situation:** Your CI/CD server (the system that builds and deploys code automatically) can't run Google Cloud actions in one project because of permission errors.\n- **What you must achieve:** Check whether its service account has the right roles in that project.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you check which roles that service account has?"
  },
  {
   "file": "Q210-secure-cheap-ssh-iap-tunnel.md",
@@ -13610,7 +13610,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Most secure** and **cheapest** way to SSH.\n\n**Clues in the question:**\n- \"**most secure**\" → no public IPs; identity-checked access → **IAP TCP forwarding**.\n- \"**cost efficient**\" → no extra bastion VM to pay for.\n\n**Exam topic:** Security."
+    "md": "**In plain words:**\n- **The situation:** Your team uses Linux VMs on Google Cloud.\n- **What you must achieve:** Have the team log in to them.\n- **The limits:** Most secure and most cost-efficient.\n- **What they're really asking:** What is the most secure, cheap way for the team to log in?\n\n**Clues in the question:**\n- \"**most secure**\" → no public IPs; identity-checked access → **IAP TCP forwarding**.\n- \"**cost efficient**\" → no extra bastion VM to pay for.\n\n**Exam topic:** Security."
    },
    {
     "kind": "terms",
@@ -13666,7 +13666,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "**Most secure** and **cheapest** way to SSH."
+  "plain": "- **The situation:** Your team uses Linux VMs on Google Cloud.\n- **What you must achieve:** Have the team log in to them.\n- **The limits:** Most secure and most cost-efficient.\n- **What they're really asking:** What is the most secure, cheap way for the team to log in?"
  },
  {
   "file": "Q211-external-user-list-images-disks-custom-role.md",
@@ -13674,7 +13674,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** An outsider should only **list** images and disks.\n\n**Clues in the question:**\n- \"**list access to compute images and disks**\" + \"**Google-recommended practices**\" (least privilege) → a **custom role with only** `compute.disks.list` and `compute.images.list`.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** An external team member needs to list compute images and disks in one of your projects.\n- **What you must achieve:** Grant that permission.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** What is the recommended way to give list-only access to images and disks?\n\n**Clues in the question:**\n- \"**list access to compute images and disks**\" + \"**Google-recommended practices**\" (least privilege) → a **custom role with only** `compute.disks.list` and `compute.images.list`.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -13730,7 +13730,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "An outsider should only **list** images and disks."
+  "plain": "- **The situation:** An external team member needs to list compute images and disks in one of your projects.\n- **What you must achieve:** Grant that permission.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** What is the recommended way to give list-only access to images and disks?"
  },
  {
   "file": "Q212-cloud-run-cold-start-min-instances.md",
@@ -13738,7 +13738,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The **first** page is slow, later pages are fast.\n\n**Clues in the question:**\n- \"**initial web page … takes much longer**\" → a **cold start** (Cloud Run starting a container from zero).\n- Google's fix: **minimum instances** keep containers warm.\n\n**Exam topic:** Cloud Run."
+    "md": "**In plain words:**\n- **The situation:** A web app on Cloud Run serves a few hundred users. Some say the first page load is much slower than later pages.\n- **What you must achieve:** Fix the slow first load.\n- **The limits:** Follow Google's recommendations.\n- **What they're really asking:** What setting makes the first request fast?\n\n**Clues in the question:**\n- \"**initial web page … takes much longer**\" → a **cold start** (Cloud Run starting a container from zero).\n- Google's fix: **minimum instances** keep containers warm.\n\n**Exam topic:** Cloud Run."
    },
    {
     "kind": "terms",
@@ -13794,7 +13794,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The **first** page is slow, later pages are fast."
+  "plain": "- **The situation:** A web app on Cloud Run serves a few hundred users. Some say the first page load is much slower than later pages.\n- **What you must achieve:** Fix the slow first load.\n- **The limits:** Follow Google's recommendations.\n- **What they're really asking:** What setting makes the first request fast?"
  },
  {
   "file": "Q213-iot-data-lake-pubsub-dataflow-gcs.md",
@@ -13802,7 +13802,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Millions of sensors streaming **mixed data** into a **data lake**, highly available.\n\n**Clues in the question:**\n- \"**constantly streaming**\" → ingest with **Pub/Sub** (buffer, scales, durable).\n- \"**data lake**\" + \"**structured and unstructured**\" → **Cloud Storage**.\n- **Dataflow** moves stream data from Pub/Sub to storage.\n\n**Exam topic:** Data pipelines."
+    "md": "**In plain words:**\n- **The situation:** You are building a data lake (a central store for raw data) for an IoT app with millions of sensors streaming structured and unstructured data.\n- **What you must achieve:** A highly available, resilient design.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** Which services should receive the stream and store the data?\n\n**Clues in the question:**\n- \"**constantly streaming**\" → ingest with **Pub/Sub** (buffer, scales, durable).\n- \"**data lake**\" + \"**structured and unstructured**\" → **Cloud Storage**.\n- **Dataflow** moves stream data from Pub/Sub to storage.\n\n**Exam topic:** Data pipelines."
    },
    {
     "kind": "terms",
@@ -13858,7 +13858,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Millions of sensors streaming **mixed data** into a **data lake**, highly available."
+  "plain": "- **The situation:** You are building a data lake (a central store for raw data) for an IoT app with millions of sensors streaming structured and unstructured data.\n- **What you must achieve:** A highly available, resilient design.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** Which services should receive the stream and store the data?"
  },
  {
   "file": "Q214-subnet-out-of-ips-expand-to-18.md",
@@ -13866,7 +13866,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** VMs need more **primary** IPs in a /20 subnet.\n\n**Clues in the question:**\n- \"**running out of primary internal IP addresses**\" → **expand** the primary range.\n- A **smaller prefix number = bigger range**: /18 (16,384 IPs) > /20 (4,096) > /22 (1,024).\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** A subnet in a custom VPC uses 10.0.0.0/20, and its primary internal IPs are almost used up by VMs.\n- **What you must achieve:** Give the VMs more IP addresses.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get more addresses for the VMs?\n\n**Clues in the question:**\n- \"**running out of primary internal IP addresses**\" → **expand** the primary range.\n- A **smaller prefix number = bigger range**: /18 (16,384 IPs) > /20 (4,096) > /22 (1,024).\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -13922,7 +13922,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "VMs need more **primary** IPs in a /20 subnet."
+  "plain": "- **The situation:** A subnet in a custom VPC uses 10.0.0.0/20, and its primary internal IPs are almost used up by VMs.\n- **What you must achieve:** Give the VMs more IP addresses.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get more addresses for the VMs?"
  },
  {
   "file": "Q215-same-dev-permissions-org-custom-role-group.md",
@@ -13930,7 +13930,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Every developer, **every project**, the **same** permissions, only **Compute, Functions, SQL**, with **little effort**.\n\n**Clues in the question:**\n- \"**same permissions, regardless of the … project**\" → grant at the **organization level** (inherited everywhere).\n- \"**restricts … to Compute Engine, Cloud Functions, and Cloud SQL**\" → one **custom role** combining exactly those.\n- \"**all developers**\" + \"**minimal effort**\" → a **group**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** All developers must have the same permissions in every project. Security limits them to Compute Engine, Cloud Functions and Cloud SQL.\n- **What you must achieve:** Apply this policy.\n- **The limits:** Minimal effort.\n- **What they're really asking:** Where and how do you grant the same limited permissions everywhere at once?\n\n**Clues in the question:**\n- \"**same permissions, regardless of the … project**\" → grant at the **organization level** (inherited everywhere).\n- \"**restricts … to Compute Engine, Cloud Functions, and Cloud SQL**\" → one **custom role** combining exactly those.\n- \"**all developers**\" + \"**minimal effort**\" → a **group**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -13986,7 +13986,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Every developer, **every project**, the **same** permissions, only **Compute, Functions, SQL**, with **little effort**."
+  "plain": "- **The situation:** All developers must have the same permissions in every project. Security limits them to Compute Engine, Cloud Functions and Cloud SQL.\n- **What you must achieve:** Apply this policy.\n- **The limits:** Minimal effort.\n- **What they're really asking:** Where and how do you grant the same limited permissions everywhere at once?"
  },
  {
   "file": "Q216-onprem-images-gcloud-storage-rsync-cron.md",
@@ -13994,7 +13994,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q168, with the newer `gcloud storage` command.\n\n**Clues in the question:**\n- \"**automated process to upload any new medical images**\" → `gcloud storage rsync` (copies only new/changed files) on a **cron** schedule.\n\n**Exam topic:** Data transfer."
+    "md": "**In plain words:**\n- **The situation:** A hospital keeps medical images in its own on-site data room.\n- **What you must achieve:** Automatically upload every new image to Cloud Storage for archiving.\n- **The limits:** It must be automated.\n- **What they're really asking:** What should you set up so new images upload by themselves?\n\n**Clues in the question:**\n- \"**automated process to upload any new medical images**\" → `gcloud storage rsync` (copies only new/changed files) on a **cron** schedule.\n\n**Exam topic:** Data transfer."
    },
    {
     "kind": "terms",
@@ -14050,7 +14050,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Same as Q168, with the newer `gcloud storage` command."
+  "plain": "- **The situation:** A hospital keeps medical images in its own on-site data room.\n- **What you must achieve:** Automatically upload every new image to Cloud Storage for archiving.\n- **The limits:** It must be automated.\n- **What they're really asking:** What should you set up so new images upload by themselves?"
  },
  {
   "file": "Q217-postgres-acid-single-site-cloud-sql-v2.md",
@@ -14058,7 +14058,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q188 with different option letters: PostgreSQL, one site, ACID, minimal changes.\n\n**Clues in the question:**\n- \"**implemented in PostgreSQL**\" + \"**minimal code changes**\" → **Cloud SQL for PostgreSQL**.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** An internal orders app is used by employees in one location. It needs strong consistency, fast queries and ACID transactions (all-or-nothing updates across tables). It is built on PostgreSQL.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Minimal code changes.\n- **What they're really asking:** Which database fits a single-location PostgreSQL transactional app?\n\n**Clues in the question:**\n- \"**implemented in PostgreSQL**\" + \"**minimal code changes**\" → **Cloud SQL for PostgreSQL**.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -14114,7 +14114,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Same as Q188 with different option letters: PostgreSQL, one site, ACID, minimal changes."
+  "plain": "- **The situation:** An internal orders app is used by employees in one location. It needs strong consistency, fast queries and ACID transactions (all-or-nothing updates across tables). It is built on PostgreSQL.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Minimal code changes.\n- **What they're really asking:** Which database fits a single-location PostgreSQL transactional app?"
  },
  {
   "file": "Q218-monthly-30h-batch-regular-vm-v2.md",
@@ -14122,7 +14122,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same idea as Q136, with **Spot** VMs in the wrong options.\n\n**Clues in the question:**\n- \"**must be restarted if interrupted**\" → Spot VMs can be stopped anytime, and a 30-hour job would likely restart again and again.\n- \"**runs monthly**\" + \"**minimizing cost**\" → regular VM, **start and stop** it.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A monthly batch job takes about 30 hours, can run offline, and must start over if it is interrupted.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which kind of VM is cheapest without risking the job being interrupted?\n\n**Clues in the question:**\n- \"**must be restarted if interrupted**\" → Spot VMs can be stopped anytime, and a 30-hour job would likely restart again and again.\n- \"**runs monthly**\" + \"**minimizing cost**\" → regular VM, **start and stop** it.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -14178,7 +14178,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Same idea as Q136, with **Spot** VMs in the wrong options."
+  "plain": "- **The situation:** A monthly batch job takes about 30 hours, can run offline, and must start over if it is interrupted.\n- **What you must achieve:** Move it to the cloud.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Which kind of VM is cheapest without risking the job being interrupted?"
  },
  {
   "file": "Q219-migrate-mysql-kafka-postgres-spanner-pubsub-bq.md",
@@ -14186,7 +14186,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Main DB, event streaming, analytics → **global scale**, **minimal management**.\n\n**Clues in the question:**\n- Main relational DB + \"**global scalability**\" → **Spanner**.\n- Kafka (event streaming) → **Pub/Sub**.\n- \"**analytical and reporting**\" → **BigQuery**.\n\n**Exam topic:** Migration."
+    "md": "**In plain words:**\n- **The situation:** You are moving three systems to Google Cloud: a MySQL cluster (main database), Apache Kafka (event streaming), and a PostgreSQL database used for analytics and reports.\n- **What you must achieve:** Replace each with a Google-recommended service.\n- **The limits:** Global scale and minimal operations and infrastructure work.\n- **What they're really asking:** Which Google services replace each of the three?\n\n**Clues in the question:**\n- Main relational DB + \"**global scalability**\" → **Spanner**.\n- Kafka (event streaming) → **Pub/Sub**.\n- \"**analytical and reporting**\" → **BigQuery**.\n\n**Exam topic:** Migration."
    },
    {
     "kind": "terms",
@@ -14242,7 +14242,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Main DB, event streaming, analytics → **global scale**, **minimal management**."
+  "plain": "- **The situation:** You are moving three systems to Google Cloud: a MySQL cluster (main database), Apache Kafka (event streaming), and a PostgreSQL database used for analytics and reports.\n- **What you must achieve:** Replace each with a Google-recommended service.\n- **The limits:** Global scale and minimal operations and infrastructure work.\n- **What they're really asking:** Which Google services replace each of the three?"
  },
  {
   "file": "Q220-domain-restricted-sharing-remove-existing.md",
@@ -14250,7 +14250,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Stop sharing with outside domains **from now on**, and remove the outsiders **already** there.\n\n**Clues in the question:**\n- \"**only shared with users whose email addresses match your domain**\" + \"**avoid having to audit**\" → org policy **`iam.allowedPolicyMemberDomains`** (domain restricted sharing).\n- The policy **isn't retroactive**: existing outsiders stay until you **remove them yourself**.\n\n**Exam topic:** Organization Policy."
+    "md": "**In plain words:**\n- **The situation:** An audit found users with email addresses outside your Google Workspace domain on your resources.\n- **What you must achieve:** Only users from your domain may get access, and outsiders must be removed.\n- **The limits:** You don't want to keep auditing resources by hand.\n- **What they're really asking:** What setting enforces domain-only sharing automatically?\n\n**Clues in the question:**\n- \"**only shared with users whose email addresses match your domain**\" + \"**avoid having to audit**\" → org policy **`iam.allowedPolicyMemberDomains`** (domain restricted sharing).\n- The policy **isn't retroactive**: existing outsiders stay until you **remove them yourself**.\n\n**Exam topic:** Organization Policy."
    },
    {
     "kind": "terms",
@@ -14306,7 +14306,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Stop sharing with outside domains **from now on**, and remove the outsiders **already** there."
+  "plain": "- **The situation:** An audit found users with email addresses outside your Google Workspace domain on your resources.\n- **What you must achieve:** Only users from your domain may get access, and outsiders must be removed.\n- **The limits:** You don't want to keep auditing resources by hand.\n- **What they're really asking:** What setting enforces domain-only sharing automatically?"
  },
  {
   "file": "Q221-mig-replace-one-vm-recreate-instances.md",
@@ -14314,7 +14314,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Replace **one** bad VM in a MIG, **fast**.\n\n**Clues in the question:**\n- \"**replace this VM**\" (one VM) + \"**quickly**\" → `recreate-instances --instances=VM` deletes it and creates a fresh one from the template.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** Your app runs in a managed instance group (a group of identical VMs kept running from a template). Cloud Logging shows that a process on one VM is not responding.\n- **What you must achieve:** Replace that one VM in the group.\n- **The limits:** Do it quickly.\n- **What they're really asking:** What is the quickest way to swap out that single broken VM?\n\n**Clues in the question:**\n- \"**replace this VM**\" (one VM) + \"**quickly**\" → `recreate-instances --instances=VM` deletes it and creates a fresh one from the template.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -14370,7 +14370,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Replace **one** bad VM in a MIG, **fast**."
+  "plain": "- **The situation:** Your app runs in a managed instance group (a group of identical VMs kept running from a template). Cloud Logging shows that a process on one VM is not responding.\n- **What you must achieve:** Replace that one VM in the group.\n- **The limits:** Do it quickly.\n- **What they're really asking:** What is the quickest way to swap out that single broken VM?"
  },
  {
   "file": "Q222-config-connector-delete-kubectl.md",
@@ -14378,7 +14378,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The topic is **managed by Config Connector**. How do you delete it for good?\n\n**Clues in the question:**\n- Config Connector keeps Google Cloud matching the **Kubernetes resource**. Delete it with **`kubectl delete`**, and Config Connector deletes the topic.\n- If you delete with gcloud, Config Connector **recreates** it.\n\n**Exam topic:** Config Connector."
+    "md": "**In plain words:**\n- **The situation:** A Pub/Sub topic (a message channel) in your project is managed by Config Connector (a tool that manages Google Cloud resources through Kubernetes files).\n- **What you must achieve:** Delete the topic permanently.\n- **The limits:** It must stay deleted, not come back.\n- **What they're really asking:** How do you delete a resource that Config Connector manages?\n\n**Clues in the question:**\n- Config Connector keeps Google Cloud matching the **Kubernetes resource**. Delete it with **`kubectl delete`**, and Config Connector deletes the topic.\n- If you delete with gcloud, Config Connector **recreates** it.\n\n**Exam topic:** Config Connector."
    },
    {
     "kind": "terms",
@@ -14434,7 +14434,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "The topic is **managed by Config Connector**. How do you delete it for good?"
+  "plain": "- **The situation:** A Pub/Sub topic (a message channel) in your project is managed by Config Connector (a tool that manages Google Cloud resources through Kubernetes files).\n- **What you must achieve:** Delete the topic permanently.\n- **The limits:** It must stay deleted, not come back.\n- **What they're really asking:** How do you delete a resource that Config Connector manages?"
  },
  {
   "file": "Q223-scale-identity-groups-mfa.md",
@@ -14442,7 +14442,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** 10x more users, **no extra complexity**, **secure**.\n\n**Clues in the question:**\n- \"**without … unnecessary complexity**\" → keep the existing Google identity; organize with **groups** (grant roles to groups, not people).\n- \"**without … security issues**\" → **enforce MFA**.\n\n**Exam topic:** Cloud Identity."
+    "md": "**In plain words:**\n- **The situation:** Your company manages employee accounts in Google Workspace and will grow from 100 to 1,000 employees in 2 years. Most will need Google Cloud access.\n- **What you must achieve:** Set up access that handles 10 times more people.\n- **The limits:** No slowdowns, no unnecessary complexity, no security problems.\n- **What they're really asking:** How should you organize access so it scales easily as staff grows?\n\n**Clues in the question:**\n- \"**without … unnecessary complexity**\" → keep the existing Google identity; organize with **groups** (grant roles to groups, not people).\n- \"**without … security issues**\" → **enforce MFA**.\n\n**Exam topic:** Cloud Identity."
    },
    {
     "kind": "terms",
@@ -14498,7 +14498,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "10x more users, **no extra complexity**, **secure**."
+  "plain": "- **The situation:** Your company manages employee accounts in Google Workspace and will grow from 100 to 1,000 employees in 2 years. Most will need Google Cloud access.\n- **What you must achieve:** Set up access that handles 10 times more people.\n- **The limits:** No slowdowns, no unnecessary complexity, no security problems.\n- **What they're really asking:** How should you organize access so it scales easily as staff grows?"
  },
  {
   "file": "Q224-video-encoding-mig-cpu-autoscaling.md",
@@ -14506,7 +14506,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Highly available, no CPU limits, **automated**.\n\n**Clues in the question:**\n- \"**highly available**\" → **instance group** (autohealing, multi-zone).\n- \"**automate operations**\" + \"**without … CPU limitations**\" → **autoscaling on CPU**.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You will host video-encoding software (software that converts videos) on Compute Engine. Users are growing fast and must be able to encode at any time.\n- **What you must achieve:** Run the encoding service so it is always available.\n- **The limits:** No interruptions or CPU limits, high availability, and automated operations following Google's recommendations.\n- **What they're really asking:** How do you set up VMs that stay available and grow with demand automatically?\n\n**Clues in the question:**\n- \"**highly available**\" → **instance group** (autohealing, multi-zone).\n- \"**automate operations**\" + \"**without … CPU limitations**\" → **autoscaling on CPU**.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -14562,7 +14562,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Highly available, no CPU limits, **automated**."
+  "plain": "- **The situation:** You will host video-encoding software (software that converts videos) on Compute Engine. Users are growing fast and must be able to encode at any time.\n- **What you must achieve:** Run the encoding service so it is always available.\n- **The limits:** No interruptions or CPU limits, high availability, and automated operations following Google's recommendations.\n- **What they're really asking:** How do you set up VMs that stay available and grow with demand automatically?"
  },
  {
   "file": "Q225-mig-creation-failed-template-disk-names.md",
@@ -14570,7 +14570,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** The MIG can't create VMs. What two things usually fix it?\n\n**Clues in the question:**\n- Templates are **immutable** → **create a new** template with valid syntax.\n- A leftover **persistent disk** named like the new VM blocks creation → **delete it**.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A managed instance group alerted that it failed to create new instances.\n- **What you must achieve:** Fix the problem so new instances can be created.\n- **The limits:** None stated.\n- **What they're really asking:** What should you check or change to fix instance creation?\n\n**Clues in the question:**\n- Templates are **immutable** → **create a new** template with valid syntax.\n- A leftover **persistent disk** named like the new VM blocks creation → **delete it**.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -14626,7 +14626,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "The MIG can't create VMs. What two things usually fix it?"
+  "plain": "- **The situation:** A managed instance group alerted that it failed to create new instances.\n- **What you must achieve:** Fix the problem so new instances can be created.\n- **The limits:** None stated.\n- **What they're really asking:** What should you check or change to fix instance creation?"
  },
  {
   "file": "Q226-docker-image-gke-artifact-registry-deployment.md",
@@ -14634,7 +14634,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q192, with **Artifact Registry** (the current registry).\n\n**Clues in the question:**\n- Images → **Artifact Registry**. Run them → **Deployment**.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Your app is packaged as a Docker image.\n- **What you must achieve:** Run it as a workload on GKE.\n- **The limits:** None stated.\n- **What they're really asking:** What steps get the image running on GKE?\n\n**Clues in the question:**\n- Images → **Artifact Registry**. Run them → **Deployment**.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -14690,7 +14690,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Same as Q192, with **Artifact Registry** (the current registry)."
+  "plain": "- **The situation:** Your app is packaged as a Docker image.\n- **What you must achieve:** Run it as a workload on GKE.\n- **The limits:** None stated.\n- **What they're really asking:** What steps get the image running on GKE?"
  },
  {
   "file": "Q227-looker-studio-broken-check-bigquery-job.md",
@@ -14698,7 +14698,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q193 with new names and letters.\n\n**Clues in the question:**\n- \"**At night … overwriting the table**\" → check the **nightly BigQuery job** in job history.\n\n**Exam topic:** BigQuery."
+    "md": "**In plain words:**\n- **The situation:** Looker Studio (a chart tool) shows a BigQuery table. Data is added during the day, and each night the summary table is rebuilt by overwriting it. The charts are now broken.\n- **What you must achieve:** Analyze what went wrong.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look to understand what happened to the table?\n\n**Clues in the question:**\n- \"**At night … overwriting the table**\" → check the **nightly BigQuery job** in job history.\n\n**Exam topic:** BigQuery."
    },
    {
     "kind": "terms",
@@ -14754,7 +14754,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Same as Q193 with new names and letters."
+  "plain": "- **The situation:** Looker Studio (a chart tool) shows a BigQuery table. Data is added during the day, and each night the summary table is rebuilt by overwriting it. The charts are now broken.\n- **What you must achieve:** Analyze what went wrong.\n- **The limits:** None stated.\n- **What they're really asking:** Where do you look to understand what happened to the table?"
  },
  {
   "file": "Q228-fault-tolerant-batch-spot-n2.md",
@@ -14762,7 +14762,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q150, with **Spot** instead of preemptible.\n\n**Clues in the question:**\n- \"**can tolerate some of the VMs being terminated**\" + \"**cost … too high**\" → **Spot VMs** (up to ~60–91% cheaper).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A nightly batch job uses many VMs. It is fault-tolerant (it copes if some VMs are stopped). Costs are too high.\n- **What you must achieve:** Lower the cost.\n- **The limits:** Losing some VMs during the run is acceptable.\n- **What they're really asking:** How do you make these VMs cheaper?\n\n**Clues in the question:**\n- \"**can tolerate some of the VMs being terminated**\" + \"**cost … too high**\" → **Spot VMs** (up to ~60–91% cheaper).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -14818,7 +14818,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Same as Q150, with **Spot** instead of preemptible."
+  "plain": "- **The situation:** A nightly batch job uses many VMs. It is fault-tolerant (it copes if some VMs are stopped). Costs are too high.\n- **What you must achieve:** Lower the cost.\n- **The limits:** Losing some VMs during the run is acceptable.\n- **What they're really asking:** How do you make these VMs cheaper?"
  },
  {
   "file": "Q229-multi-billing-single-view-bq-export-looker.md",
@@ -14826,7 +14826,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q141, with Looker Studio.\n\n**Clues in the question:**\n- \"**different billing accounts**\" + \"**single visual representation**\" + \"**as soon as possible**\" → export all accounts to **BigQuery**, chart in **Looker Studio**.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Resources are spread across several projects, each with a different billing account.\n- **What you must achieve:** Get one visual view of all costs to estimate future charges.\n- **The limits:** New cost data should appear as soon as possible.\n- **What they're really asking:** How do you combine cost data from several billing accounts into one dashboard?\n\n**Clues in the question:**\n- \"**different billing accounts**\" + \"**single visual representation**\" + \"**as soon as possible**\" → export all accounts to **BigQuery**, chart in **Looker Studio**.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -14882,7 +14882,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Same as Q141, with Looker Studio."
+  "plain": "- **The situation:** Resources are spread across several projects, each with a different billing account.\n- **What you must achieve:** Get one visual view of all costs to estimate future charges.\n- **The limits:** New cost data should appear as soon as possible.\n- **What they're really asking:** How do you combine cost data from several billing accounts into one dashboard?"
  },
  {
   "file": "Q230-unstructured-etl-dataflow-cloud-storage.md",
@@ -14890,7 +14890,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Lots of **unstructured files** must be available to **Dataflow**.\n\n**Clues in the question:**\n- \"**unstructured data in different file formats**\" → **Cloud Storage** (stores any file).\n- Dataflow reads files from Cloud Storage easily.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** You have lots of unstructured data in many file formats.\n- **What you must achieve:** Make it available on Google Cloud so a Dataflow job (a data-processing pipeline) can transform it.\n- **The limits:** None stated.\n- **What they're really asking:** Where should you put the files?\n\n**Clues in the question:**\n- \"**unstructured data in different file formats**\" → **Cloud Storage** (stores any file).\n- Dataflow reads files from Cloud Storage easily.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -14946,7 +14946,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Lots of **unstructured files** must be available to **Dataflow**."
+  "plain": "- **The situation:** You have lots of unstructured data in many file formats.\n- **What you must achieve:** Make it available on Google Cloud so a Dataflow job (a data-processing pipeline) can transform it.\n- **The limits:** None stated.\n- **What they're really asking:** Where should you put the files?"
  },
  {
   "file": "Q231-logs-on-disk-ops-agent.md",
@@ -14954,7 +14954,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q132, with the newer **Ops Agent**.\n\n**Clues in the question:**\n- \"**writes logs to disk**\" → those files aren't in Cloud Logging until an **agent** ships them → **Ops Agent**.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** An app on one VM writes its logs to the VM's disk, and users report errors.\n- **What you must achieve:** Diagnose the problem.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get the app's logs somewhere you can examine them?\n\n**Clues in the question:**\n- \"**writes logs to disk**\" → those files aren't in Cloud Logging until an **agent** ships them → **Ops Agent**.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -15010,7 +15010,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Same as Q132, with the newer **Ops Agent**."
+  "plain": "- **The situation:** An app on one VM writes its logs to the VM's disk, and users report errors.\n- **What you must achieve:** Diagnose the problem.\n- **The limits:** None stated.\n- **What they're really asking:** How do you get the app's logs somewhere you can examine them?"
  },
  {
   "file": "Q232-enable-compute-and-storage-apis.md",
@@ -15018,7 +15018,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Turn on **only** the APIs you need: Compute (VMs + firewalls) and Cloud Storage.\n\n**Clues in the question:**\n- \"**create instances, set firewalls**\" → **compute.googleapis.com** (firewalls are part of Compute).\n- \"**store data in Cloud Storage**\" → **storage-api.googleapis.com**.\n- \"**Google-recommended practices**\" → enable only what you need.\n\n**Exam topic:** APIs."
+    "md": "**In plain words:**\n- **The situation:** You received a new Google Cloud project with billing already attached.\n- **What you must achieve:** Create VMs, set up firewalls and store data in Cloud Storage.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** What do you need to set up so you can do this work the recommended way?\n\n**Clues in the question:**\n- \"**create instances, set firewalls**\" → **compute.googleapis.com** (firewalls are part of Compute).\n- \"**store data in Cloud Storage**\" → **storage-api.googleapis.com**.\n- \"**Google-recommended practices**\" → enable only what you need.\n\n**Exam topic:** APIs."
    },
    {
     "kind": "terms",
@@ -15074,7 +15074,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Turn on **only** the APIs you need: Compute (VMs + firewalls) and Cloud Storage."
+  "plain": "- **The situation:** You received a new Google Cloud project with billing already attached.\n- **What you must achieve:** Create VMs, set up firewalls and store data in Cloud Storage.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** What do you need to set up so you can do this work the recommended way?"
  },
  {
   "file": "Q233-containers-no-infra-autoscale-cloud-run.md",
@@ -15082,7 +15082,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Containers, **no infrastructure to manage**, **auto-scaling**.\n\n**Clues in the question:**\n- \"**does not want to manage the infrastructure**\" → serverless → **Cloud Run**.\n- \"**scale automatically**\" → Cloud Run scales per request.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** Your developers packed their app into Docker images (ready-to-run boxes holding the app and everything it needs).\n- **What you must achieve:** Run the app on Google Cloud so it adds capacity by itself as more people use it.\n- **The limits:** Your team does not want to look after any servers or other infrastructure.\n- **What they're really asking:** Which way of running the app needs no server care and grows on its own?\n\n**Clues in the question:**\n- \"**does not want to manage the infrastructure**\" → serverless → **Cloud Run**.\n- \"**scale automatically**\" → Cloud Run scales per request.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -15138,7 +15138,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Containers, **no infrastructure to manage**, **auto-scaling**."
+  "plain": "- **The situation:** Your developers packed their app into Docker images (ready-to-run boxes holding the app and everything it needs).\n- **What you must achieve:** Run the app on Google Cloud so it adds capacity by itself as more people use it.\n- **The limits:** Your team does not want to look after any servers or other infrastructure.\n- **What they're really asking:** Which way of running the app needs no server care and grows on its own?"
  },
  {
   "file": "Q234-zonal-failure-regional-pd-attach.md",
@@ -15146,7 +15146,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Data must be **immediately available** if a **zone** fails.\n\n**Clues in the question:**\n- \"**immediately available if a zonal failure occurs**\" → **regional persistent disk** (synchronously copied to two zones).\n- Attach that same disk to a VM in the **other zone**: no restore, no data loss.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You are moving a business-critical app from your data center to Google Cloud.\n- **What you must achieve:** Keep the app's data available immediately if one zone (a data-center building) fails.\n- **The limits:** It is part of a high-availability plan.\n- **What they're really asking:** How should the app's data be stored so a zone failure doesn't make it unavailable?\n\n**Clues in the question:**\n- \"**immediately available if a zonal failure occurs**\" → **regional persistent disk** (synchronously copied to two zones).\n- Attach that same disk to a VM in the **other zone**: no restore, no data loss.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -15202,7 +15202,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Data must be **immediately available** if a **zone** fails."
+  "plain": "- **The situation:** You are moving a business-critical app from your data center to Google Cloud.\n- **What you must achieve:** Keep the app's data available immediately if one zone (a data-center building) fails.\n- **The limits:** It is part of a high-availability plan.\n- **What they're really asking:** How should the app's data be stored so a zone failure doesn't make it unavailable?"
  },
  {
   "file": "Q235-devops-compute-admin-plus-viewer.md",
@@ -15210,7 +15210,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Full** Compute control, **no** write access elsewhere.\n\n**Clues in the question:**\n- \"**full control of Compute Engine**\" → **roles/compute.admin** (predefined).\n- \"**should not … create or update any other resources**\" → **viewer** elsewhere is read-only; Editor would be too much.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** The DevOps group needs full control of Compute Engine in the development project.\n- **What you must achieve:** Give them that control.\n- **The limits:** They must not be able to create or change any other kind of resource; follow Google's recommendations.\n- **What they're really asking:** Which role gives full Compute Engine control and nothing else?\n\n**Clues in the question:**\n- \"**full control of Compute Engine**\" → **roles/compute.admin** (predefined).\n- \"**should not … create or update any other resources**\" → **viewer** elsewhere is read-only; Editor would be too much.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -15266,7 +15266,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**Full** Compute control, **no** write access elsewhere."
+  "plain": "- **The situation:** The DevOps group needs full control of Compute Engine in the development project.\n- **What you must achieve:** Give them that control.\n- **The limits:** They must not be able to create or change any other kind of resource; follow Google's recommendations.\n- **What they're really asking:** Which role gives full Compute Engine control and nothing else?"
  },
  {
   "file": "Q236-python-microservices-serverless-cloud-run.md",
@@ -15274,7 +15274,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Dockerized microservices → **serverless**, reusing what you have.\n\n**Clues in the question:**\n- \"**running on Docker containers**\" + \"**serverless**\" → **Cloud Run** runs your images as they are.\n- \"**Configurations are injected by using environment variables**\" → set them on Cloud Run, but **endpoints change** in the cloud, so **update** them.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** An on-premises shop app is made of many Python microservices, each in a Docker container, with settings passed in through environment variables.\n- **What you must achieve:** Move it to a serverless Google Cloud service (one where you don't manage servers).\n- **The limits:** Keep the containers and the environment-variable settings working.\n- **What they're really asking:** Which serverless service can run these containers as they are?\n\n**Clues in the question:**\n- \"**running on Docker containers**\" + \"**serverless**\" → **Cloud Run** runs your images as they are.\n- \"**Configurations are injected by using environment variables**\" → set them on Cloud Run, but **endpoints change** in the cloud, so **update** them.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -15330,7 +15330,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Dockerized microservices → **serverless**, reusing what you have."
+  "plain": "- **The situation:** An on-premises shop app is made of many Python microservices, each in a Docker container, with settings passed in through environment variables.\n- **What you must achieve:** Move it to a serverless Google Cloud service (one where you don't manage servers).\n- **The limits:** Keep the containers and the environment-variable settings working.\n- **What they're really asking:** Which serverless service can run these containers as they are?"
  },
  {
   "file": "Q237-cpu-heavy-microservice-compute-node-pool-n2.md",
@@ -15338,7 +15338,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q196 with n2 instead of n1.\n\n**Clues in the question:**\n- CPU-heavy → **compute-optimized** pool. Others → **general-purpose** pool.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Several microservices run on a GKE cluster. One renders images and needs lots of CPU but little memory; the others suit n2-standard machines.\n- **What you must achieve:** Make every workload use resources efficiently.\n- **The limits:** None stated.\n- **What they're really asking:** How should you arrange node machine types for the image service and the rest?\n\n**Clues in the question:**\n- CPU-heavy → **compute-optimized** pool. Others → **general-purpose** pool.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -15394,7 +15394,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Same as Q196 with n2 instead of n1."
+  "plain": "- **The situation:** Several microservices run on a GKE cluster. One renders images and needs lots of CPU but little memory; the others suit n2-standard machines.\n- **What you must achieve:** Make every workload use resources efficiently.\n- **The limits:** None stated.\n- **What they're really asking:** How should you arrange node machine types for the image service and the rest?"
  },
  {
   "file": "Q238-reliable-k8s-autopilot-stable-channel.md",
@@ -15402,7 +15402,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Production, **business critical**, **reliability** first.\n\n**Clues in the question:**\n- \"**Google-recommended practices**\" → **Autopilot** (regional, Google manages nodes and best practices).\n- \"**optimized for reliability**\" → **stable** release channel (most tested versions).\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Your team built a new app that must run on Kubernetes. Production is business-critical.\n- **What you must achieve:** Create the Kubernetes cluster.\n- **The limits:** Optimize for reliability and follow Google-recommended practices.\n- **What they're really asking:** What kind of GKE cluster should you create?\n\n**Clues in the question:**\n- \"**Google-recommended practices**\" → **Autopilot** (regional, Google manages nodes and best practices).\n- \"**optimized for reliability**\" → **stable** release channel (most tested versions).\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -15458,7 +15458,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Production, **business critical**, **reliability** first."
+  "plain": "- **The situation:** Your team built a new app that must run on Kubernetes. Production is business-critical.\n- **What you must achieve:** Create the Kubernetes cluster.\n- **The limits:** Optimize for reliability and follow Google-recommended practices.\n- **What they're really asking:** What kind of GKE cluster should you create?"
  },
  {
   "file": "Q239-latency-5-min-alert-policy.md",
@@ -15466,7 +15466,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Automatic** notification on high latency for 5 minutes, **no coding**.\n\n**Clues in the question:**\n- \"**notified automatically**\" + \"**for at least 5 minutes**\" → **alert policy** with a duration of 5 min.\n- \"**no development cost**\" → built-in, not a custom app.\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** You run a web app on Compute Engine.\n- **What you must achieve:** Alert the support team automatically when users see high latency (slow responses) for at least 5 minutes.\n- **The limits:** Google-recommended and no development cost.\n- **What they're really asking:** How do you set up the alert without writing code?\n\n**Clues in the question:**\n- \"**notified automatically**\" + \"**for at least 5 minutes**\" → **alert policy** with a duration of 5 min.\n- \"**no development cost**\" → built-in, not a custom app.\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -15522,7 +15522,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "**Automatic** notification on high latency for 5 minutes, **no coding**."
+  "plain": "- **The situation:** You run a web app on Compute Engine.\n- **What you must achieve:** Alert the support team automatically when users see high latency (slow responses) for at least 5 minutes.\n- **The limits:** Google-recommended and no development cost.\n- **What they're really asking:** How do you set up the alert without writing code?"
  },
  {
   "file": "Q240-midnight-binaries-cloud-run-job.md",
@@ -15530,7 +15530,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A **45-minute nightly** job, files up to **16 GB in memory**. Cheapest and easiest.\n\n**Clues in the question:**\n- \"**about 45 minutes every midnight**\" → a scheduled **job** that runs and exits → **Cloud Run job** + **Cloud Scheduler**; pay only for 45 minutes.\n- \"**up to 16 gigabytes**\" in memory → Cloud Run supports up to 32 GiB.\n- Cloud Functions are limited in time and memory for this.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** On-premises programs analyze data files in memory for about 45 minutes every midnight. Files are 1 GB to 16 GB.\n- **What you must achieve:** Move this job to Google Cloud.\n- **The limits:** Minimal effort and cost.\n- **What they're really asking:** How should you run a short nightly job that needs up to 16 GB in memory?\n\n**Clues in the question:**\n- \"**about 45 minutes every midnight**\" → a scheduled **job** that runs and exits → **Cloud Run job** + **Cloud Scheduler**; pay only for 45 minutes.\n- \"**up to 16 gigabytes**\" in memory → Cloud Run supports up to 32 GiB.\n- Cloud Functions are limited in time and memory for this.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -15586,7 +15586,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "A **45-minute nightly** job, files up to **16 GB in memory**. Cheapest and easiest."
+  "plain": "- **The situation:** On-premises programs analyze data files in memory for about 45 minutes every midnight. Files are 1 GB to 16 GB.\n- **What you must achieve:** Move this job to Google Cloud.\n- **The limits:** Minimal effort and cost.\n- **What they're really asking:** How should you run a short nightly job that needs up to 16 GB in memory?"
  },
  {
   "file": "Q241-kubectl-switch-cluster-get-credentials.md",
@@ -15594,7 +15594,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** kubectl is pointed at prod-cluster. How do you point it at **dev-cluster** and see its nodes?\n\n**Clues in the question:**\n- kubectl talks to whichever cluster is in its current **context**. `gcloud container clusters get-credentials dev-cluster` adds dev-cluster's entry to kubeconfig and **switches** to it.\n- Then `kubectl get nodes` shows **node status**.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** You created two GKE clusters with gcloud: prod-cluster (Standard) and dev-cluster (Autopilot). kubectl get nodes only shows prod-cluster's nodes.\n- **What you must achieve:** See the node status for dev-cluster.\n- **The limits:** None stated.\n- **What they're really asking:** Which commands point kubectl at dev-cluster and list its nodes?\n\n**Clues in the question:**\n- kubectl talks to whichever cluster is in its current **context**. `gcloud container clusters get-credentials dev-cluster` adds dev-cluster's entry to kubeconfig and **switches** to it.\n- Then `kubectl get nodes` shows **node status**.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -15650,7 +15650,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "kubectl is pointed at prod-cluster. How do you point it at **dev-cluster** and see its nodes?"
+  "plain": "- **The situation:** You created two GKE clusters with gcloud: prod-cluster (Standard) and dev-cluster (Autopilot). kubectl get nodes only shows prod-cluster's nodes.\n- **What you must achieve:** See the node status for dev-cluster.\n- **The limits:** None stated.\n- **What they're really asking:** Which commands point kubectl at dev-cluster and list its nodes?"
  },
  {
   "file": "Q242-sa-keys-24h-org-policies.md",
@@ -15658,7 +15658,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Keys must **expire after 1 day**, and only **pj-sa** may create keys. Quick and cheap.\n\n**Clues in the question:**\n- \"**valid for one day**\" → org policy **`iam.serviceAccountKeyExpiryHours`** = 24h.\n- \"**should be created in … pj-sa**\" → **`iam.disableServiceAccountKeyCreation`** enforced everywhere **except pj-sa**.\n- \"**minimizes cost**\" → built-in policies, no code to run.\n\n**Exam topic:** Organization Policy."
+    "md": "**In plain words:**\n- **The situation:** Developers use many service account keys (downloadable secret files). While a long-term fix is worked on, you need a quick rule.\n- **What you must achieve:** Keep all service accounts that need keys in a central project called pj-sa, and make keys valid for only one day.\n- **The limits:** Google-recommended and low cost.\n- **What they're really asking:** How do you enforce the central project and the one-day key lifetime?\n\n**Clues in the question:**\n- \"**valid for one day**\" → org policy **`iam.serviceAccountKeyExpiryHours`** = 24h.\n- \"**should be created in … pj-sa**\" → **`iam.disableServiceAccountKeyCreation`** enforced everywhere **except pj-sa**.\n- \"**minimizes cost**\" → built-in policies, no code to run.\n\n**Exam topic:** Organization Policy."
    },
    {
     "kind": "terms",
@@ -15714,7 +15714,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Keys must **expire after 1 day**, and only **pj-sa** may create keys. Quick and cheap."
+  "plain": "- **The situation:** Developers use many service account keys (downloadable secret files). While a long-term fix is worked on, you need a quick rule.\n- **What you must achieve:** Keep all service accounts that need keys in a central project called pj-sa, and make keys valid for only one day.\n- **The limits:** Google-recommended and low cost.\n- **What they're really asking:** How do you enforce the central project and the one-day key lifetime?"
  },
  {
   "file": "Q243-estimate-cost-pricing-calculator.md",
@@ -15722,7 +15722,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Estimate cost **before** moving: VMs + Cloud SQL.\n\n**Clues in the question:**\n- \"**estimated total cost**\" → **Pricing Calculator**, adding **each resource** you'll use.\n- Size them like your current machines.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** A three-tier web app runs on VMs with a MySQL database.\n- **What you must achieve:** Estimate the total cost of running it on Google Cloud VMs and Cloud SQL.\n- **The limits:** None stated.\n- **What they're really asking:** Which tool do you use to build the estimate?\n\n**Clues in the question:**\n- \"**estimated total cost**\" → **Pricing Calculator**, adding **each resource** you'll use.\n- Size them like your current machines.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -15778,7 +15778,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Estimate cost **before** moving: VMs + Cloud SQL."
+  "plain": "- **The situation:** A three-tier web app runs on VMs with a MySQL database.\n- **What you must achieve:** Estimate the total cost of running it on Google Cloud VMs and Cloud SQL.\n- **The limits:** None stated.\n- **What they're really asking:** Which tool do you use to build the estimate?"
  },
  {
   "file": "Q244-bigtable-pii-audit-logs-pubsub-siem.md",
@@ -15786,7 +15786,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Log **every read/write** and **metadata/config reads**, and send them to the **SIEM**.\n\n**Clues in the question:**\n- \"**read or write operations**\" → **Data Read** + **Data Write** logs.\n- \"**metadata or configuration reads**\" → **Admin Read** logs (all three are Data Access logs, off by default).\n- \"**in your company's SIEM**\" → a **log sink to Pub/Sub**, SIEM subscribes.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** A three-node Bigtable instance stores personal data (PII). Your company's SIEM (a security tool that collects logs) must receive the logs.\n- **What you must achieve:** Log every read and write, including metadata and configuration reads, and send them to the SIEM.\n- **The limits:** Nothing may be missed.\n- **What they're really asking:** Which logs must be turned on, and how do they reach the SIEM?\n\n**Clues in the question:**\n- \"**read or write operations**\" → **Data Read** + **Data Write** logs.\n- \"**metadata or configuration reads**\" → **Admin Read** logs (all three are Data Access logs, off by default).\n- \"**in your company's SIEM**\" → a **log sink to Pub/Sub**, SIEM subscribes.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -15842,7 +15842,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Log **every read/write** and **metadata/config reads**, and send them to the **SIEM**."
+  "plain": "- **The situation:** A three-node Bigtable instance stores personal data (PII). Your company's SIEM (a security tool that collects logs) must receive the logs.\n- **What you must achieve:** Log every read and write, including metadata and configuration reads, and send them to the SIEM.\n- **The limits:** Nothing may be missed.\n- **What they're really asking:** Which logs must be turned on, and how do they reach the SIEM?"
  },
  {
   "file": "Q245-gke-private-autopilot.md",
@@ -15850,7 +15850,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Shielded nodes**, **no public node access**, **least management**.\n\n**Clues in the question:**\n- \"**Verifiable node identity and integrity**\" → Shielded GKE Nodes (**always on in Autopilot**).\n- \"**nodes cannot be accessed from the internet**\" → **private** cluster.\n- \"**reduce the operational cost**\" → **Autopilot**.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** You are creating a GKE cluster.\n- **What you must achieve:** Nodes must have verifiable identity and integrity (proof they haven't been tampered with), and nodes must not be reachable from the internet.\n- **The limits:** Reduce operational cost and follow recommended practice.\n- **What they're really asking:** Which cluster type and settings meet these security needs with little management?\n\n**Clues in the question:**\n- \"**Verifiable node identity and integrity**\" → Shielded GKE Nodes (**always on in Autopilot**).\n- \"**nodes cannot be accessed from the internet**\" → **private** cluster.\n- \"**reduce the operational cost**\" → **Autopilot**.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -15906,7 +15906,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**Shielded nodes**, **no public node access**, **least management**."
+  "plain": "- **The situation:** You are creating a GKE cluster.\n- **What you must achieve:** Nodes must have verifiable identity and integrity (proof they haven't been tampered with), and nodes must not be reachable from the internet.\n- **The limits:** Reduce operational cost and follow recommended practice.\n- **What they're really asking:** Which cluster type and settings meet these security needs with little management?"
  },
  {
   "file": "Q246-serverless-flask-api-job-appengine-cloudrun.md",
@@ -15914,7 +15914,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** All three must be **serverless** and **cheap**.\n\n**Clues in the question:**\n- \"**Flask web application**\" (dynamic Python) → **App Engine** (a bucket can only host static files).\n- \"**backend API**\" → **Cloud Run**.\n- \"**serverless**\" → background job on **Cloud Run**, not Compute Engine.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** You are moving three on-premises workloads: a Flask web app, a backend API, and a scheduled long-running job for ETL (extract, transform, load) and reporting.\n- **What you must achieve:** Move them to serverless services on Google Cloud.\n- **The limits:** Keep operating costs low and follow recommended practice.\n- **What they're really asking:** Which serverless service fits each of the three workloads?\n\n**Clues in the question:**\n- \"**Flask web application**\" (dynamic Python) → **App Engine** (a bucket can only host static files).\n- \"**backend API**\" → **Cloud Run**.\n- \"**serverless**\" → background job on **Cloud Run**, not Compute Engine.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -15970,7 +15970,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "All three must be **serverless** and **cheap**."
+  "plain": "- **The situation:** You are moving three on-premises workloads: a Flask web app, a backend API, and a scheduled long-running job for ETL (extract, transform, load) and reporting.\n- **What you must achieve:** Move them to serverless services on Google Cloud.\n- **The limits:** Keep operating costs low and follow recommended practice.\n- **What they're really asking:** Which serverless service fits each of the three workloads?"
  },
  {
   "file": "Q247-cicd-pipeline-per-pipeline-sa-secrets.md",
@@ -15978,7 +15978,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A pipeline that manages **all** infrastructure needs permissions, but **securely**.\n\n**Clues in the question:**\n- \"**appropriate permissions**\" + \"**security best practices**\" → **least privilege**: separate service accounts per pipeline, each with only what it needs.\n- Secrets (keys) stored in **Secret Manager**, not on disk.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Your CI/CD pipeline (the system that builds and deploys automatically) will run on Compute Engine and manage all cloud infrastructure through code.\n- **What you must achieve:** Give the pipeline the permissions it needs.\n- **The limits:** Follow security best practices.\n- **What they're really asking:** How should the pipeline get its permissions safely?\n\n**Clues in the question:**\n- \"**appropriate permissions**\" + \"**security best practices**\" → **least privilege**: separate service accounts per pipeline, each with only what it needs.\n- Secrets (keys) stored in **Secret Manager**, not on disk.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -16034,7 +16034,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "A pipeline that manages **all** infrastructure needs permissions, but **securely**."
+  "plain": "- **The situation:** Your CI/CD pipeline (the system that builds and deploys automatically) will run on Compute Engine and manage all cloud infrastructure through code.\n- **What you must achieve:** Give the pipeline the permissions it needs.\n- **The limits:** Follow security best practices.\n- **What they're really asking:** How should the pipeline get its permissions safely?"
  },
  {
   "file": "Q248-lifecycle-archive-after-30-days.md",
@@ -16042,7 +16042,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** After 30 days files aren't used. **Save cost automatically** (not delete).\n\n**Clues in the question:**\n- \"**save costs on files that are no longer accessed**\" → move them to a cheaper class, **automatically** → **lifecycle rule** `age > 30` → **Archive**.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** Your app stores files in Cloud Storage's Standard class but only needs files from the last 30 days.\n- **What you must achieve:** Automatically save money on files the app no longer reads.\n- **The limits:** It should happen automatically.\n- **What they're really asking:** What do you set up so old files cost less?\n\n**Clues in the question:**\n- \"**save costs on files that are no longer accessed**\" → move them to a cheaper class, **automatically** → **lifecycle rule** `age > 30` → **Archive**.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -16098,7 +16098,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "After 30 days files aren't used. **Save cost automatically** (not delete)."
+  "plain": "- **The situation:** Your app stores files in Cloud Storage's Standard class but only needs files from the last 30 days.\n- **What you must achieve:** Automatically save money on files the app no longer reads.\n- **The limits:** It should happen automatically.\n- **What they're really asking:** What do you set up so old files cost less?"
  },
  {
   "file": "Q249-unknown-resources-hpa-vpa-recommendations.md",
@@ -16106,7 +16106,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Keep the app **running in any load** and get **CPU/memory recommendations**.\n\n**Clues in the question:**\n- \"**function consistently in any situation**\" → **HPA** adds pods under load (availability).\n- \"**recommendations regarding CPU and memory**\" → **VPA in recommendation mode** (`updateMode: Off`) suggests requests without changing pods.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Your manager wants a workload on Kubernetes, but you don't know how much CPU and memory it needs or how that changes with usage.\n- **What you must achieve:** Get cost-effective CPU and memory recommendations and keep the workload running well in any situation.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** Which GKE feature figures out and adjusts the right CPU and memory for you?\n\n**Clues in the question:**\n- \"**function consistently in any situation**\" → **HPA** adds pods under load (availability).\n- \"**recommendations regarding CPU and memory**\" → **VPA in recommendation mode** (`updateMode: Off`) suggests requests without changing pods.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -16162,7 +16162,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Keep the app **running in any load** and get **CPU/memory recommendations**."
+  "plain": "- **The situation:** Your manager wants a workload on Kubernetes, but you don't know how much CPU and memory it needs or how that changes with usage.\n- **What you must achieve:** Get cost-effective CPU and memory recommendations and keep the workload running well in any situation.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** Which GKE feature figures out and adjusts the right CPU and memory for you?"
  },
  {
   "file": "Q250-invoices-versioning-lifecycle.md",
@@ -16170,7 +16170,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Keep **5 revisions**, move to cheaper class after **365 days**, delete after **5 years**, no code.\n\n**Clues in the question:**\n- \"**Up to five revisions**\" → **object versioning** + lifecycle `numNewerVersions`.\n- \"**older than 365 days … lower cost**\" + \"**kept for five years**\" → **lifecycle** SetStorageClass + Delete.\n- \"**minimize … development costs**\" → no functions.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** You are moving invoice documents from on-premises to Cloud Storage.\n- **What you must achieve:** Keep documents five years, keep up to five revisions of each, and move documents older than 365 days to cheaper storage.\n- **The limits:** Follow recommended practice with minimal operations and development work.\n- **What they're really asking:** Which bucket features handle the revisions, the cheaper tier and the five-year retention?\n\n**Clues in the question:**\n- \"**Up to five revisions**\" → **object versioning** + lifecycle `numNewerVersions`.\n- \"**older than 365 days … lower cost**\" + \"**kept for five years**\" → **lifecycle** SetStorageClass + Delete.\n- \"**minimize … development costs**\" → no functions.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -16226,7 +16226,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Keep **5 revisions**, move to cheaper class after **365 days**, delete after **5 years**, no code."
+  "plain": "- **The situation:** You are moving invoice documents from on-premises to Cloud Storage.\n- **What you must achieve:** Keep documents five years, keep up to five revisions of each, and move documents older than 365 days to cheaper storage.\n- **The limits:** Follow recommended practice with minimal operations and development work.\n- **What they're really asking:** Which bucket features handle the revisions, the cheaper tier and the five-year retention?"
  },
  {
   "file": "Q251-gcloud-proxy-credentials-env-vars.md",
@@ -16234,7 +16234,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Use a proxy with gcloud **without** the username/password ending up in logs or config files.\n\n**Clues in the question:**\n- Google's docs: to avoid logging proxy credentials, set them as **environment variables** `CLOUDSDK_PROXY_USERNAME` / `CLOUDSDK_PROXY_PASSWORD` instead of `gcloud config set`.\n\n**Exam topic:** gcloud CLI."
+    "md": "**In plain words:**\n- **The situation:** You installed the Google Cloud CLI and set up a proxy (a middle server your traffic goes through) with credentials.\n- **What you must achieve:** Keep the proxy credentials out of gcloud's logs.\n- **The limits:** None stated.\n- **What they're really asking:** How do you stop your proxy credentials from being written to the logs?\n\n**Clues in the question:**\n- Google's docs: to avoid logging proxy credentials, set them as **environment variables** `CLOUDSDK_PROXY_USERNAME` / `CLOUDSDK_PROXY_PASSWORD` instead of `gcloud config set`.\n\n**Exam topic:** gcloud CLI."
    },
    {
     "kind": "terms",
@@ -16290,7 +16290,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Use a proxy with gcloud **without** the username/password ending up in logs or config files."
+  "plain": "- **The situation:** You installed the Google Cloud CLI and set up a proxy (a middle server your traffic goes through) with credentials.\n- **What you must achieve:** Keep the proxy credentials out of gcloud's logs.\n- **The limits:** None stated.\n- **What they're really asking:** How do you stop your proxy credentials from being written to the logs?"
  },
  {
   "file": "Q252-gke-spot-pool-fault-tolerant-standard-critical.md",
@@ -16298,7 +16298,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Parts that may go down → cheap **Spot**. Critical parts → **standard** VMs.\n\n**Clues in the question:**\n- \"**allowed to have downtime**\" → **Spot** pool (cheap, can be reclaimed).\n- \"**critical and must always be available**\" → **standard** pool.\n- Labels on Deployments don't change what VMs the nodes are.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** An app for GKE has parts that can tolerate downtime and parts that are critical and must always be up.\n- **What you must achieve:** Set up a GKE cluster for both kinds of parts.\n- **The limits:** Optimize for cost.\n- **What they're really asking:** How do you set up node pools so the tolerant parts run cheaply and the critical parts stay up?\n\n**Clues in the question:**\n- \"**allowed to have downtime**\" → **Spot** pool (cheap, can be reclaimed).\n- \"**critical and must always be available**\" → **standard** pool.\n- Labels on Deployments don't change what VMs the nodes are.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -16354,7 +16354,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Parts that may go down → cheap **Spot**. Critical parts → **standard** VMs."
+  "plain": "- **The situation:** An app for GKE has parts that can tolerate downtime and parts that are critical and must always be up.\n- **What you must achieve:** Set up a GKE cluster for both kinds of parts.\n- **The limits:** Optimize for cost.\n- **What they're really asking:** How do you set up node pools so the tolerant parts run cheaply and the critical parts stay up?"
  },
  {
   "file": "Q253-serverless-canary-cloud-run-gradual-rollout.md",
@@ -16362,7 +16362,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Serverless** + send a **small %** to the new version.\n\n**Clues in the question:**\n- \"**serverless**\" + \"**small percentage of production traffic**\" → **Cloud Run** revisions with **traffic splitting / gradual rollout**.\n\n**Exam topic:** Cloud Run."
+    "md": "**In plain words:**\n- **The situation:** You will run an app with serverless technology.\n- **What you must achieve:** Test a new version with a small percentage of real traffic.\n- **The limits:** None stated.\n- **What they're really asking:** Which serverless service lets you split traffic between versions?\n\n**Clues in the question:**\n- \"**serverless**\" + \"**small percentage of production traffic**\" → **Cloud Run** revisions with **traffic splitting / gradual rollout**.\n\n**Exam topic:** Cloud Run."
    },
    {
     "kind": "terms",
@@ -16418,7 +16418,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**Serverless** + send a **small %** to the new version."
+  "plain": "- **The situation:** You will run an app with serverless technology.\n- **What you must achieve:** Test a new version with a small percentage of real traffic.\n- **The limits:** None stated.\n- **What they're really asking:** Which serverless service lets you split traffic between versions?"
  },
  {
   "file": "Q254-vulnerability-report-viewer-os-config.md",
@@ -16426,7 +16426,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Show **vulnerabilities and OS info** for a VM to a security person.\n\n**Clues in the question:**\n- \"**vulnerabilities and other OS metadata**\" → **VM Manager**, which needs the **OS Config agent**.\n- Viewing vulnerability reports → **`roles/osconfig.vulnerabilityReportViewer`**.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** Security policy says a security team member must see vulnerabilities and other OS details for one specific critical VM.\n- **What you must achieve:** Give that person this visibility.\n- **The limits:** Only for that one VM.\n- **What they're really asking:** What do you set up so they can see the VM's vulnerability and OS information?\n\n**Clues in the question:**\n- \"**vulnerabilities and other OS metadata**\" → **VM Manager**, which needs the **OS Config agent**.\n- Viewing vulnerability reports → **`roles/osconfig.vulnerabilityReportViewer`**.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -16482,7 +16482,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Show **vulnerabilities and OS info** for a VM to a security person."
+  "plain": "- **The situation:** Security policy says a security team member must see vulnerabilities and other OS details for one specific critical VM.\n- **What you must achieve:** Give that person this visibility.\n- **The limits:** Only for that one VM.\n- **What they're really asking:** What do you set up so they can see the VM's vulnerability and OS information?"
  },
  {
   "file": "Q255-cloud-run-gradual-rollout-limit-impact.md",
@@ -16490,7 +16490,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Limit how many customers a bad release can hurt, with **no work for customers**.\n\n**Clues in the question:**\n- \"**reduce the number of customers who might be affected**\" → only a **slice** of traffic on the new revision → **gradual rollout + traffic split**.\n- \"**without introducing any … costs to your customers**\" → customers change nothing.\n\n**Exam topic:** Cloud Run."
+    "md": "**In plain words:**\n- **The situation:** A Cloud Run service is in production, and your team deploys new features to it.\n- **What you must achieve:** Reduce how many customers a bad new revision could affect.\n- **The limits:** No extra development or operating cost for customers; follow recommended practice.\n- **What they're really asking:** How do you roll out new revisions so only a few users see them at first?\n\n**Clues in the question:**\n- \"**reduce the number of customers who might be affected**\" → only a **slice** of traffic on the new revision → **gradual rollout + traffic split**.\n- \"**without introducing any … costs to your customers**\" → customers change nothing.\n\n**Exam topic:** Cloud Run."
    },
    {
     "kind": "terms",
@@ -16546,7 +16546,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Limit how many customers a bad release can hurt, with **no work for customers**."
+  "plain": "- **The situation:** A Cloud Run service is in production, and your team deploys new features to it.\n- **What you must achieve:** Reduce how many customers a bad new revision could affect.\n- **The limits:** No extra development or operating cost for customers; follow recommended practice.\n- **What they're really asking:** How do you roll out new revisions so only a few users see them at first?"
  },
  {
   "file": "Q256-consultant-no-google-account-ssh-public-key.md",
@@ -16554,7 +16554,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** No Google account, but on the VPN. How do they SSH in?\n\n**Clues in the question:**\n- \"**no Google account**\" → gcloud/IAP need a Google identity → use plain **SSH keys**.\n- Consultant keeps the **private** key; you add their **public** key to the VM. The VPN gives network reach.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** An outside consultant needs access to a Linux VM. They connect to your company network through a VPN but have no Google account.\n- **What you must achieve:** Give the consultant access to the VM.\n- **The limits:** They have no Google account.\n- **What they're really asking:** How do you let someone without a Google account log in to the VM?\n\n**Clues in the question:**\n- \"**no Google account**\" → gcloud/IAP need a Google identity → use plain **SSH keys**.\n- Consultant keeps the **private** key; you add their **public** key to the VM. The VPN gives network reach.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -16610,7 +16610,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "No Google account, but on the VPN. How do they SSH in?"
+  "plain": "- **The situation:** An outside consultant needs access to a Linux VM. They connect to your company network through a VPN but have no Google account.\n- **What you must achieve:** Give the consultant access to the VM.\n- **The limits:** They have no Google account.\n- **What they're really asking:** How do you let someone without a Google account log in to the VM?"
  },
  {
   "file": "Q257-monitor-firewall-instance-changes-log-metrics.md",
@@ -16618,7 +16618,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Watch for **firewall changes** and **new VMs**, simply.\n\n**Clues in the question:**\n- Firewall changes and VM creation are in **Admin Activity audit logs** (always on).\n- \"**simple**\" → **log-based metrics + alerts**, all built in.\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** After a security incident, your startup wants better visibility of what happens in Google Cloud.\n- **What you must achieve:** Monitor unexpected firewall changes and VM creation.\n- **The limits:** Keep it simple.\n- **What they're really asking:** How do you get alerts for firewall changes and new VMs?\n\n**Clues in the question:**\n- Firewall changes and VM creation are in **Admin Activity audit logs** (always on).\n- \"**simple**\" → **log-based metrics + alerts**, all built in.\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -16674,7 +16674,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Watch for **firewall changes** and **new VMs**, simply."
+  "plain": "- **The situation:** After a security incident, your startup wants better visibility of what happens in Google Cloud.\n- **What you must achieve:** Monitor unexpected firewall changes and VM creation.\n- **The limits:** Keep it simple.\n- **What they're really asking:** How do you get alerts for firewall changes and new VMs?"
  },
  {
   "file": "Q258-cross-project-bigquery-dataviewer.md",
@@ -16682,7 +16682,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** VMs in project A must read BigQuery in project B, with least privilege.\n\n**Clues in the question:**\n- \"**Google-recommended practices**\" → least privilege → **BigQuery Data Viewer** in crm-databases, not Owner.\n- Grant it to the **web-applications VMs' service account**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** VMs in project web-applications need BigQuery data in project crm-databases.\n- **What you must achieve:** Give the VMs' service account access.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** In which project and with which role do you grant access?\n\n**Clues in the question:**\n- \"**Google-recommended practices**\" → least privilege → **BigQuery Data Viewer** in crm-databases, not Owner.\n- Grant it to the **web-applications VMs' service account**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -16738,7 +16738,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "VMs in project A must read BigQuery in project B, with least privilege."
+  "plain": "- **The situation:** VMs in project web-applications need BigQuery data in project crm-databases.\n- **What you must achieve:** Give the VMs' service account access.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** In which project and with which role do you grant access?"
  },
  {
   "file": "Q259-dataproc-subnet-full-expand-24.md",
@@ -16746,7 +16746,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Subnet is full. Add VMs with the **fewest steps**.\n\n**Clues in the question:**\n- \"**no private IP addresses available**\" + \"**minimum number of steps**\" → **expand** the subnet (/25 → /24 covers 172.16.20.0–255, including the old range).\n- One command, no new networks.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** A Dataproc cluster sits in one subnet, 172.16.20.128/25, and there are no free IP addresses left.\n- **What you must achieve:** Add new VMs that can talk to the cluster.\n- **The limits:** Fewest steps.\n- **What they're really asking:** How do you make room for the new VMs?\n\n**Clues in the question:**\n- \"**no private IP addresses available**\" + \"**minimum number of steps**\" → **expand** the subnet (/25 → /24 covers 172.16.20.0–255, including the old range).\n- One command, no new networks.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -16802,7 +16802,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Subnet is full. Add VMs with the **fewest steps**."
+  "plain": "- **The situation:** A Dataproc cluster sits in one subnet, 172.16.20.128/25, and there are no free IP addresses left.\n- **What you must achieve:** Add new VMs that can talk to the cluster.\n- **The limits:** Fewest steps.\n- **What they're really asking:** How do you make room for the new VMs?"
  },
  {
   "file": "Q260-global-transactions-sql-spanner.md",
@@ -16810,7 +16810,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Global transactions**, **SQL**, **highly available**, **scalable**.\n\n**Clues in the question:**\n- \"**persist transaction data**\" + \"**large volume of global transactions**\" + \"**SQL**\" + \"**highly available and scalable**\" → **multi-region Spanner**.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** You are building the backend for a shopping platform that will save transactions from phones and websites, with large global volume expected.\n- **What you must achieve:** Build a highly available, scalable data store, and let the business team run SQL to analyze the data.\n- **The limits:** Global scale and SQL analysis.\n- **What they're really asking:** Which database stores the transactions, and how do analysts query them?\n\n**Clues in the question:**\n- \"**persist transaction data**\" + \"**large volume of global transactions**\" + \"**SQL**\" + \"**highly available and scalable**\" → **multi-region Spanner**.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -16866,7 +16866,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**Global transactions**, **SQL**, **highly available**, **scalable**."
+  "plain": "- **The situation:** You are building the backend for a shopping platform that will save transactions from phones and websites, with large global volume expected.\n- **What you must achieve:** Build a highly available, scalable data store, and let the business team run SQL to analyze the data.\n- **The limits:** Global scale and SQL analysis.\n- **What they're really asking:** Which database stores the transactions, and how do analysts query them?"
  },
  {
   "file": "Q261-copy-custom-role-to-other-org.md",
@@ -16874,7 +16874,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Copy your SRE custom role into **another organization**.\n\n**Clues in the question:**\n- \"**same project permissions in the startup company's organization**\" → `gcloud iam roles copy` with **`--dest-organization`** = the startup's org ID; then it's usable on all their projects.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You manage access for all Google Cloud users. Your company bought a startup with its own Google Cloud organization.\n- **What you must achieve:** Give your SREs the same project permissions in the startup's organization as in yours.\n- **The limits:** None stated.\n- **What they're really asking:** How do you give the same people the same permissions in another organization?\n\n**Clues in the question:**\n- \"**same project permissions in the startup company's organization**\" → `gcloud iam roles copy` with **`--dest-organization`** = the startup's org ID; then it's usable on all their projects.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -16930,7 +16930,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Copy your SRE custom role into **another organization**."
+  "plain": "- **The situation:** You manage access for all Google Cloud users. Your company bought a startup with its own Google Cloud organization.\n- **What you must achieve:** Give your SREs the same project permissions in the startup's organization as in yours.\n- **The limits:** None stated.\n- **What they're really asking:** How do you give the same people the same permissions in another organization?"
  },
  {
   "file": "Q262-speech-to-text-function-gcs-trigger.md",
@@ -16938,7 +16938,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Each audio file that **arrives** in a bucket → call Speech-to-Text. **Serverless**.\n\n**Clues in the question:**\n- \"**as the audio file arrives in the bucket**\" + \"**serverless**\" → **Cloud Function** with a **Cloud Storage trigger** (Q153).\n- App Engine can't be triggered directly by bucket events.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** Audio files arrive in a Cloud Storage bucket, and you need text from them with the Speech-to-Text API.\n- **What you must achieve:** Send each file to the API automatically as soon as it arrives.\n- **The limits:** Fully managed, serverless, authenticated, and following Google's recommendations.\n- **What they're really asking:** What serverless setup reacts to each new file and calls the API?\n\n**Clues in the question:**\n- \"**as the audio file arrives in the bucket**\" + \"**serverless**\" → **Cloud Function** with a **Cloud Storage trigger** (Q153).\n- App Engine can't be triggered directly by bucket events.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -16994,7 +16994,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Each audio file that **arrives** in a bucket → call Speech-to-Text. **Serverless**."
+  "plain": "- **The situation:** Audio files arrive in a Cloud Storage bucket, and you need text from them with the Speech-to-Text API.\n- **What you must achieve:** Send each file to the API automatically as soon as it arrives.\n- **The limits:** Fully managed, serverless, authenticated, and following Google's recommendations.\n- **What they're really asking:** What serverless setup reacts to each new file and calls the API?"
  },
  {
   "file": "Q263-secure-autoscaled-site-https-lb-url-map-bucket.md",
@@ -17002,7 +17002,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Secure (HTTPS) public site, VMs that autoscale, static files from Cloud Storage.\n\n**Clues in the question:**\n- \"**secure website**\" → HTTPS with a **Google-managed SSL certificate** on the LB.\n- \"**static content in Cloud Storage**\" → **URL map** routes `/static/*` to a **backend bucket**.\n- Public → **external** HTTP(S) LB.\n\n**Exam topic:** Load balancing."
+    "md": "**In plain words:**\n- **The situation:** A customer wants a secure website that autoscales on VM CPU load, with static content (images, CSS) served from Cloud Storage.\n- **What you must achieve:** Distribute user traffic correctly.\n- **The limits:** Secure (HTTPS), and both VMs and Cloud Storage serve content.\n- **What they're really asking:** Which load balancer pieces do you need to send traffic to both?\n\n**Clues in the question:**\n- \"**secure website**\" → HTTPS with a **Google-managed SSL certificate** on the LB.\n- \"**static content in Cloud Storage**\" → **URL map** routes `/static/*` to a **backend bucket**.\n- Public → **external** HTTP(S) LB.\n\n**Exam topic:** Load balancing."
    },
    {
     "kind": "terms",
@@ -17058,7 +17058,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Secure (HTTPS) public site, VMs that autoscale, static files from Cloud Storage."
+  "plain": "- **The situation:** A customer wants a secure website that autoscales on VM CPU load, with static content (images, CSS) served from Cloud Storage.\n- **What you must achieve:** Distribute user traffic correctly.\n- **The limits:** Secure (HTTPS), and both VMs and Cloud Storage serve content.\n- **What they're really asking:** Which load balancer pieces do you need to send traffic to both?"
  },
  {
   "file": "Q264-sensor-events-bigtable-timestamp.md",
@@ -17066,7 +17066,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same as Q139: high-throughput sensor events, time-based reads, atomic rows.\n\n**Clues in the question:**\n- \"**high throughput – up to thousands of events per hour per device**\" + \"**time of the event**\" + \"**atomic**\" → **Bigtable** (single-row operations are atomic).\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** Rented construction equipment has sensors that send events every few seconds, and customers are billed from these readings.\n- **What you must achieve:** Store events and read them back by time.\n- **The limits:** Up to thousands of events per hour per device, consistent reads by event time, and each signal stored all-or-nothing (atomically).\n- **What they're really asking:** Which database fits huge streams of timestamped readings?\n\n**Clues in the question:**\n- \"**high throughput – up to thousands of events per hour per device**\" + \"**time of the event**\" + \"**atomic**\" → **Bigtable** (single-row operations are atomic).\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -17122,7 +17122,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Same as Q139: high-throughput sensor events, time-based reads, atomic rows."
+  "plain": "- **The situation:** Rented construction equipment has sensors that send events every few seconds, and customers are billed from these readings.\n- **What you must achieve:** Store events and read them back by time.\n- **The limits:** Up to thousands of events per hour per device, consistent reads by event time, and each signal stored all-or-nothing (atomically).\n- **What they're really asking:** Which database fits huge streams of timestamped readings?"
  },
  {
   "file": "Q265-new-laptop-gcloud-auth-login-set-project.md",
@@ -17130,7 +17130,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Fresh gcloud install. What two things are **required** before listing VMs?\n\n**Clues in the question:**\n- You must be **signed in** → `gcloud auth login`.\n- gcloud must know **which project** → `gcloud config set project`.\n- Zone is optional for `list` (it lists all zones).\n\n**Exam topic:** gcloud CLI."
+    "md": "**In plain words:**\n- **The situation:** You just installed the Google Cloud CLI on a new laptop.\n- **What you must achieve:** List your company's VMs with gcloud compute instances list.\n- **The limits:** Choose two steps.\n- **What they're really asking:** What two things must you do before that command works?\n\n**Clues in the question:**\n- You must be **signed in** → `gcloud auth login`.\n- gcloud must know **which project** → `gcloud config set project`.\n- Zone is optional for `list` (it lists all zones).\n\n**Exam topic:** gcloud CLI."
    },
    {
     "kind": "terms",
@@ -17192,7 +17192,7 @@ window.QUIZ_QUESTIONS = [
    "A",
    "E"
   ],
-  "plain": "Fresh gcloud install. What two things are **required** before listing VMs?"
+  "plain": "- **The situation:** You just installed the Google Cloud CLI on a new laptop.\n- **What you must achieve:** List your company's VMs with gcloud compute instances list.\n- **The limits:** Choose two steps.\n- **What they're really asking:** What two things must you do before that command works?"
  },
  {
   "file": "Q266-migrate-transfer-appliance-bq-dts-sts.md",
@@ -17200,7 +17200,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Pick the right **no-code** transfer tool for each data source.\n\n**Clues in the question:**\n- \"**200 TB … on-premises**\" → **Transfer Appliance** (ship a physical device).\n- \"**Amazon Redshift**\" → **BigQuery Data Transfer Service** (has a Redshift connector).\n- \"**S3 bucket**\" → **Storage Transfer Service**.\n- \"**avoid writing any code**\" → not Dataflow.\n\n**Exam topic:** Migration."
+    "md": "**In plain words:**\n- **The situation:** You are moving 200 TB of video files from SAN storage (on-premises disk storage), a data warehouse on Amazon Redshift, and 20 GB of PNG images from an Amazon S3 bucket.\n- **What you must achieve:** Put the videos in one bucket, the warehouse data in BigQuery, and the PNGs in a second bucket.\n- **The limits:** Follow recommended practice and write no code.\n- **What they're really asking:** Which transfer tool fits each of the three data sets?\n\n**Clues in the question:**\n- \"**200 TB … on-premises**\" → **Transfer Appliance** (ship a physical device).\n- \"**Amazon Redshift**\" → **BigQuery Data Transfer Service** (has a Redshift connector).\n- \"**S3 bucket**\" → **Storage Transfer Service**.\n- \"**avoid writing any code**\" → not Dataflow.\n\n**Exam topic:** Migration."
    },
    {
     "kind": "terms",
@@ -17256,7 +17256,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Pick the right **no-code** transfer tool for each data source."
+  "plain": "- **The situation:** You are moving 200 TB of video files from SAN storage (on-premises disk storage), a data warehouse on Amazon Redshift, and 20 GB of PNG images from an Amazon S3 bucket.\n- **What you must achieve:** Put the videos in one bucket, the warehouse data in BigQuery, and the PNGs in a second bucket.\n- **The limits:** Follow recommended practice and write no code.\n- **What they're really asking:** Which transfer tool fits each of the three data sets?"
  },
  {
   "file": "Q267-k8s-manifest-full-control-autopilot.md",
@@ -17264,7 +17264,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Kubernetes manifest**, **full control of the Deployment**, **little infrastructure work**.\n\n**Clues in the question:**\n- \"**Kubernetes manifest**\" + \"**full control over the Kubernetes deployment**\" → **GKE** (real Kubernetes API).\n- \"**minimize configuring infrastructure**\" → **Autopilot** (Google manages nodes).\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** You will deploy a containerized app using a Kubernetes manifest (a YAML file describing what to run).\n- **What you must achieve:** Have full control over the Kubernetes deployment.\n- **The limits:** Do as little infrastructure setup as possible.\n- **What they're really asking:** Which way of running Kubernetes gives control of deployments with the least infrastructure work?\n\n**Clues in the question:**\n- \"**Kubernetes manifest**\" + \"**full control over the Kubernetes deployment**\" → **GKE** (real Kubernetes API).\n- \"**minimize configuring infrastructure**\" → **Autopilot** (Google manages nodes).\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -17320,7 +17320,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**Kubernetes manifest**, **full control of the Deployment**, **little infrastructure work**."
+  "plain": "- **The situation:** You will deploy a containerized app using a Kubernetes manifest (a YAML file describing what to run).\n- **What you must achieve:** Have full control over the Kubernetes deployment.\n- **The limits:** Do as little infrastructure setup as possible.\n- **What they're really asking:** Which way of running Kubernetes gives control of deployments with the least infrastructure work?"
  },
  {
   "file": "Q268-votes-pubsub-cloud-functions.md",
@@ -17328,7 +17328,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Many votes at **varying rates**. Store and process efficiently.\n\n**Clues in the question:**\n- \"**arrive at various rates**\" → **Pub/Sub** buffers spikes.\n- Process each as it arrives → **Pub/Sub-triggered Cloud Functions** that scale automatically.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** Your team is building a website that receives votes from many users, arriving at changing rates.\n- **What you must achieve:** Store and process the votes efficiently.\n- **The limits:** Vote volume goes up and down unpredictably.\n- **What they're really asking:** How should the votes be received and processed so bursts are handled smoothly?\n\n**Clues in the question:**\n- \"**arrive at various rates**\" → **Pub/Sub** buffers spikes.\n- Process each as it arrives → **Pub/Sub-triggered Cloud Functions** that scale automatically.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -17384,7 +17384,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Many votes at **varying rates**. Store and process efficiently."
+  "plain": "- **The situation:** Your team is building a website that receives votes from many users, arriving at changing rates.\n- **What you must achieve:** Store and process the votes efficiently.\n- **The limits:** Vote volume goes up and down unpredictably.\n- **What they're really asking:** How should the votes be received and processed so bursts are handled smoothly?"
  },
  {
   "file": "Q269-cloud-sql-iam-auth-proxy.md",
@@ -17392,7 +17392,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Encrypted + authenticated + **IAM** + **minimal management**.\n\n**Clues in the question:**\n- \"**encrypted and authenticated connection**\" + \"**minimal management**\" → **Cloud SQL Auth Proxy** (TLS automatically, no certs to manage).\n- \"**integrates with IAM**\" → **IAM database authentication** (no DB passwords).\n\n**Exam topic:** Cloud SQL."
+    "md": "**In plain words:**\n- **The situation:** Your app needs a relational database.\n- **What you must achieve:** Connect the app to the database securely.\n- **The limits:** The connection must be encrypted and authenticated, need little management, and work with IAM.\n- **What they're really asking:** How should the app connect to the database?\n\n**Clues in the question:**\n- \"**encrypted and authenticated connection**\" + \"**minimal management**\" → **Cloud SQL Auth Proxy** (TLS automatically, no certs to manage).\n- \"**integrates with IAM**\" → **IAM database authentication** (no DB passwords).\n\n**Exam topic:** Cloud SQL."
    },
    {
     "kind": "terms",
@@ -17448,7 +17448,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Encrypted + authenticated + **IAM** + **minimal management**."
+  "plain": "- **The situation:** Your app needs a relational database.\n- **What you must achieve:** Connect the app to the database securely.\n- **The limits:** The connection must be encrypted and authenticated, need little management, and work with IAM.\n- **What they're really asking:** How should the app connect to the database?"
  },
  {
   "file": "Q270-two-projects-vpc-peering.md",
@@ -17456,7 +17456,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Connect two VPCs in Google Cloud, **cheaply and efficiently**. Ranges don't overlap.\n\n**Clues in the question:**\n- Two Google Cloud VPCs with **non-overlapping** ranges → **VPC Network Peering** (private, Google's network, no gateways).\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** project-a has VPC vpc-a (10.0.0.0/16) with the frontend; project-b has vpc-b (10.8.0.0/16) with the backend APIs.\n- **What you must achieve:** Let the frontend talk to the backend.\n- **The limits:** Efficient, low cost, and recommended practice.\n- **What they're really asking:** How do you connect the two networks privately?\n\n**Clues in the question:**\n- Two Google Cloud VPCs with **non-overlapping** ranges → **VPC Network Peering** (private, Google's network, no gateways).\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -17512,7 +17512,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Connect two VPCs in Google Cloud, **cheaply and efficiently**. Ranges don't overlap."
+  "plain": "- **The situation:** project-a has VPC vpc-a (10.0.0.0/16) with the frontend; project-b has vpc-b (10.8.0.0/16) with the backend APIs.\n- **What you must achieve:** Let the frontend talk to the backend.\n- **The limits:** Efficient, low cost, and recommended practice.\n- **What they're really asking:** How do you connect the two networks privately?"
  },
  {
   "file": "Q271-daily-snapshot-schedule-7-days.md",
@@ -17520,7 +17520,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Same idea as Q144: **daily** disk backups, kept **7 days**, **minimal setup**.\n\n**Clues in the question:**\n- \"**back up … disk data every day**\" + \"**retained for 7 days**\" + \"**minimal setup**\" → **snapshot schedule** with 7-day retention.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A critical workload runs on one Compute Engine VM.\n- **What you must achieve:** Back up all the VM's disk data every day and keep backups 7 days.\n- **The limits:** Must meet security policies with minimal setup.\n- **What they're really asking:** What is the simplest way to schedule daily backups kept for 7 days?\n\n**Clues in the question:**\n- \"**back up … disk data every day**\" + \"**retained for 7 days**\" + \"**minimal setup**\" → **snapshot schedule** with 7-day retention.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -17576,7 +17576,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Same idea as Q144: **daily** disk backups, kept **7 days**, **minimal setup**."
+  "plain": "- **The situation:** A critical workload runs on one Compute Engine VM.\n- **What you must achieve:** Back up all the VM's disk data every day and keep backups 7 days.\n- **The limits:** Must meet security policies with minimal setup.\n- **What they're really asking:** What is the simplest way to schedule daily backups kept for 7 days?"
  },
  {
   "file": "Q272-approved-config-terraform-modules.md",
@@ -17584,7 +17584,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Let engineers **deploy and update** resources only in **approved** configurations.\n\n**Clues in the question:**\n- \"**deploy and update … in a preconfigured and approved manner**\" → reusable **Terraform modules** (declarative, handle updates, reviewable).\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** Company security policy requires Google Cloud products to be created with a specific configuration.\n- **What you must achieve:** Let engineers deploy and update products only in a pre-approved setup.\n- **The limits:** It must be preconfigured and approved.\n- **What they're really asking:** How can engineers deploy products that already follow company settings?\n\n**Clues in the question:**\n- \"**deploy and update … in a preconfigured and approved manner**\" → reusable **Terraform modules** (declarative, handle updates, reviewable).\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -17640,7 +17640,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Let engineers **deploy and update** resources only in **approved** configurations."
+  "plain": "- **The situation:** Company security policy requires Google Cloud products to be created with a specific configuration.\n- **What you must achieve:** Let engineers deploy and update products only in a pre-approved setup.\n- **The limits:** It must be preconfigured and approved.\n- **What they're really asking:** How can engineers deploy products that already follow company settings?"
  },
  {
   "file": "Q273-dept-folders-org-policies-log-sinks.md",
@@ -17648,7 +17648,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Per-department policies and sinks that **Project Owners can't remove**.\n\n**Clues in the question:**\n- \"**cannot be removed by project users**\" → set them **above** the project (folder), where Project Owners have no rights.\n- \"**different for each company department**\" → **one folder per department**, policies and sinks on each folder.\n\n**Exam topic:** Resource hierarchy."
+    "md": "**In plain words:**\n- **The situation:** You are the organization administrator. Each department has its own security policies, and each department has a Project Owner on its projects.\n- **What you must achieve:** Apply organization policies and log sinks (log export rules) that project users cannot remove.\n- **The limits:** Even Project Owners must not be able to remove them, and rules differ per department.\n- **What they're really asking:** Where should you apply the policies and sinks so project owners can't remove them?\n\n**Clues in the question:**\n- \"**cannot be removed by project users**\" → set them **above** the project (folder), where Project Owners have no rights.\n- \"**different for each company department**\" → **one folder per department**, policies and sinks on each folder.\n\n**Exam topic:** Resource hierarchy."
    },
    {
     "kind": "terms",
@@ -17704,7 +17704,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Per-department policies and sinks that **Project Owners can't remove**."
+  "plain": "- **The situation:** You are the organization administrator. Each department has its own security policies, and each department has a Project Owner on its projects.\n- **What you must achieve:** Apply organization policies and log sinks (log export rules) that project users cannot remove.\n- **The limits:** Even Project Owners must not be able to remove them, and rules differ per department.\n- **What they're really asking:** Where should you apply the policies and sinks so project owners can't remove them?"
  },
  {
   "file": "Q274-mig-secure-ha-https-lb-a-record.md",
@@ -17712,7 +17712,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Public **web** app, secure and HA: which LB and which DNS record?\n\n**Clues in the question:**\n- \"**web application**\" + \"**secure**\" → **HTTP(S) load balancing**.\n- Name → **IP** = **A record** (CNAME points to names).\n- Public users → **public zone**.\n\n**Exam topic:** Load balancing."
+    "md": "**In plain words:**\n- **The situation:** A web app runs in a managed instance group on Compute Engine.\n- **What you must achieve:** Make it secure and highly available.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** What should you put in front of the group and how should the group be spread?\n\n**Clues in the question:**\n- \"**web application**\" + \"**secure**\" → **HTTP(S) load balancing**.\n- Name → **IP** = **A record** (CNAME points to names).\n- Public users → **public zone**.\n\n**Exam topic:** Load balancing."
    },
    {
     "kind": "terms",
@@ -17768,7 +17768,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Public **web** app, secure and HA: which LB and which DNS record?"
+  "plain": "- **The situation:** A web app runs in a managed instance group on Compute Engine.\n- **What you must achieve:** Make it secure and highly available.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** What should you put in front of the group and how should the group be spread?"
  },
  {
   "file": "Q275-right-size-limits-vpa.md",
@@ -17776,7 +17776,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Each microservice's **CPU/memory settings** are wrong. Fix the **size** of each pod.\n\n**Clues in the question:**\n- \"**right sized limits for memory and CPU**\" → **VPA** adjusts requests/limits per pod.\n- HPA changes **number** of pods; cluster autoscaler changes **nodes**.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Hundreds of microservices run on GKE, each with CPU and memory limits, but many limits are wrong.\n- **What you must achieve:** Get correctly sized CPU and memory limits for each microservice.\n- **The limits:** None stated.\n- **What they're really asking:** Which GKE feature helps set the right CPU and memory for each one?\n\n**Clues in the question:**\n- \"**right sized limits for memory and CPU**\" → **VPA** adjusts requests/limits per pod.\n- HPA changes **number** of pods; cluster autoscaler changes **nodes**.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -17832,7 +17832,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Each microservice's **CPU/memory settings** are wrong. Fix the **size** of each pod."
+  "plain": "- **The situation:** Hundreds of microservices run on GKE, each with CPU and memory limits, but many limits are wrong.\n- **What you must achieve:** Get correctly sized CPU and memory limits for each microservice.\n- **The limits:** None stated.\n- **What they're really asking:** Which GKE feature helps set the right CPU and memory for each one?"
  },
  {
   "file": "Q276-bigquery-quota-exceeded-info-schema-audit-logs.md",
@@ -17840,7 +17840,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** A query failed with **quotaExceeded**. Where do you look?\n\n**Clues in the question:**\n- Google's troubleshooting guide for quota errors: query **INFORMATION_SCHEMA** (e.g. `JOBS` views) and search **Cloud Audit Logs** for the error details.\n\n**Exam topic:** BigQuery."
+    "md": "**In plain words:**\n- **The situation:** A BigQuery query fails with a quotaExceeded error.\n- **What you must achieve:** Find out what causes the error.\n- **The limits:** Choose two steps.\n- **What they're really asking:** Which two places help you diagnose a BigQuery quota error?\n\n**Clues in the question:**\n- Google's troubleshooting guide for quota errors: query **INFORMATION_SCHEMA** (e.g. `JOBS` views) and search **Cloud Audit Logs** for the error details.\n\n**Exam topic:** BigQuery."
    },
    {
     "kind": "terms",
@@ -17902,7 +17902,7 @@ window.QUIZ_QUESTIONS = [
    "B",
    "D"
   ],
-  "plain": "A query failed with **quotaExceeded**. Where do you look?"
+  "plain": "- **The situation:** A BigQuery query fails with a quotaExceeded error.\n- **What you must achieve:** Find out what causes the error.\n- **The limits:** Choose two steps.\n- **What they're really asking:** Which two places help you diagnose a BigQuery quota error?"
  },
  {
   "file": "Q277-stateless-vm-app-mig-autoscaling.md",
@@ -17910,7 +17910,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Must run on VMs**, stateless, scale automatically.\n\n**Clues in the question:**\n- \"**run directly on virtual machines**\" → Compute Engine.\n- \"**scale automatically**\" + \"**stateless**\" → **MIG with autoscaling**.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** A stateless app must run directly on VMs, and its traffic goes up and down.\n- **What you must achieve:** Run it so it scales automatically.\n- **The limits:** It must run on virtual machines.\n- **What they're really asking:** How do you deploy VMs that grow and shrink with traffic?\n\n**Clues in the question:**\n- \"**run directly on virtual machines**\" → Compute Engine.\n- \"**scale automatically**\" + \"**stateless**\" → **MIG with autoscaling**.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -17966,7 +17966,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**Must run on VMs**, stateless, scale automatically."
+  "plain": "- **The situation:** A stateless app must run directly on VMs, and its traffic goes up and down.\n- **What you must achieve:** Run it so it scales automatically.\n- **The limits:** It must run on virtual machines.\n- **What they're really asking:** How do you deploy VMs that grow and shrink with traffic?"
  },
  {
   "file": "Q278-cloud-run-cloud-sql-quota-max-instances.md",
@@ -17974,7 +17974,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Morning spikes create too many Cloud Run instances → too many Cloud SQL connections/API calls.\n\n**Clues in the question:**\n- Each new Cloud Run instance opens connections through the Cloud SQL connector, which calls the Cloud SQL Admin API.\n- \"**reached the maximum API quota**\" → **cap** Cloud Run with **max instances**.\n\n**Exam topic:** Cloud Run."
+    "md": "**In plain words:**\n- **The situation:** A Cloud Run web app queries a Cloud SQL database. Each morning's traffic spike causes API quota errors in Cloud SQL logs, and the project's API quota is already at its maximum.\n- **What you must achieve:** Stop the errors with a configuration change.\n- **The limits:** The quota can't be raised.\n- **What they're really asking:** What Cloud Run setting reduces the calls hitting the quota?\n\n**Clues in the question:**\n- Each new Cloud Run instance opens connections through the Cloud SQL connector, which calls the Cloud SQL Admin API.\n- \"**reached the maximum API quota**\" → **cap** Cloud Run with **max instances**.\n\n**Exam topic:** Cloud Run."
    },
    {
     "kind": "terms",
@@ -18030,7 +18030,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Morning spikes create too many Cloud Run instances → too many Cloud SQL connections/API calls."
+  "plain": "- **The situation:** A Cloud Run web app queries a Cloud SQL database. Each morning's traffic spike causes API quota errors in Cloud SQL logs, and the project's API quota is already at its maximum.\n- **What you must achieve:** Stop the errors with a configuration change.\n- **The limits:** The quota can't be raised.\n- **What they're really asking:** What Cloud Run setting reduces the calls hitting the quota?"
  },
  {
   "file": "Q279-internal-web-app-cloud-run-psc.md",
@@ -18038,7 +18038,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Reachable on an **internal IP** from VPC and on-prem; **minimal infrastructure**; frequent updates.\n\n**Clues in the question:**\n- \"**minimal amount of cloud infrastructure**\" + frequent updates → **Cloud Run**.\n- \"**reachable from an internal IP address from your … VPC and on-premises network**\" → **Private Service Connect** endpoint (an internal IP in your VPC).\n- Private Google Access is for VMs **calling out** to Google APIs, not for others **reaching** your app.\n\n**Exam topic:** Cloud Run."
+    "md": "**In plain words:**\n- **The situation:** You will run one stateless web app with a web interface and several endpoints.\n- **What you must achieve:** Make it reachable only through an internal IP from your private VPC and your on-premises network.\n- **The limits:** You update it several times a day with little effort and want to manage as little infrastructure as possible.\n- **What they're really asking:** Where do you run it and how do you make it internal-only?\n\n**Clues in the question:**\n- \"**minimal amount of cloud infrastructure**\" + frequent updates → **Cloud Run**.\n- \"**reachable from an internal IP address from your … VPC and on-premises network**\" → **Private Service Connect** endpoint (an internal IP in your VPC).\n- Private Google Access is for VMs **calling out** to Google APIs, not for others **reaching** your app.\n\n**Exam topic:** Cloud Run."
    },
    {
     "kind": "terms",
@@ -18094,7 +18094,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Reachable on an **internal IP** from VPC and on-prem; **minimal infrastructure**; frequent updates."
+  "plain": "- **The situation:** You will run one stateless web app with a web interface and several endpoints.\n- **What you must achieve:** Make it reachable only through an internal IP from your private VPC and your on-premises network.\n- **The limits:** You update it several times a day with little effort and want to manage as little infrastructure as possible.\n- **What they're really asking:** Where do you run it and how do you make it internal-only?"
  },
  {
   "file": "Q280-sql-on-logs-log-analytics.md",
@@ -18102,7 +18102,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Run **SQL** on logs **in Cloud Logging**.\n\n**Clues in the question:**\n- \"**use SQL to analyze the application logs in Cloud Logging**\" → **Log Analytics** on the log bucket (no export); optionally a **linked BigQuery dataset**.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** Cloud Logging collects your application logs.\n- **What you must achieve:** Analyze those logs using SQL.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** Which Cloud Logging feature lets you query logs with SQL?\n\n**Clues in the question:**\n- \"**use SQL to analyze the application logs in Cloud Logging**\" → **Log Analytics** on the log bucket (no export); optionally a **linked BigQuery dataset**.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -18158,7 +18158,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Run **SQL** on logs **in Cloud Logging**."
+  "plain": "- **The situation:** Cloud Logging collects your application logs.\n- **What you must achieve:** Analyze those logs using SQL.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** Which Cloud Logging feature lets you query logs with SQL?"
  },
  {
   "file": "Q281-fastest-disk-recover-hyperdisk-stateful-mig.md",
@@ -18166,7 +18166,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Fastest** disk, one VM with a database, **recovers** if it fails.\n\n**Clues in the question:**\n- \"**highest speed read and write disk access**\" → **Hyperdisk Extreme** (higher IOPS than SSD PD).\n- \"**internal database**\" + \"**recover on failure**\" → **stateful MIG** (autohealing recreates the VM and **keeps its disk**).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You must run third-party software on one Compute Engine VM. Its internal database needs the fastest possible disk reads and writes.\n- **What you must achieve:** Give it the fastest disk.\n- **The limits:** The VM must recover if it fails.\n- **What they're really asking:** Which disk type and VM settings give top speed and recovery?\n\n**Clues in the question:**\n- \"**highest speed read and write disk access**\" → **Hyperdisk Extreme** (higher IOPS than SSD PD).\n- \"**internal database**\" + \"**recover on failure**\" → **stateful MIG** (autohealing recreates the VM and **keeps its disk**).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -18222,7 +18222,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "**Fastest** disk, one VM with a database, **recovers** if it fails."
+  "plain": "- **The situation:** You must run third-party software on one Compute Engine VM. Its internal database needs the fastest possible disk reads and writes.\n- **What you must achieve:** Give it the fastest disk.\n- **The limits:** The VM must recover if it fails.\n- **What they're really asking:** Which disk type and VM settings give top speed and recovery?"
  },
  {
   "file": "Q282-fixed-internal-ip-promote-static.md",
@@ -18230,7 +18230,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Services **in the same VPC** need a **fixed** address for this VM. Cheapest way?\n\n**Clues in the question:**\n- \"**other services hosted in the same VPC**\" → **internal** IP is enough.\n- \"**fixed**\" → **static**; \"**promote the existing**\" keeps the current address (no reconfiguration).\n- Static internal IPs are free; external IPs cost money.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** A VM runs in a VPC with single-stack (IPv4-only) subnets.\n- **What you must achieve:** Give the VM a fixed IP address so other services in the same VPC can reach it.\n- **The limits:** Recommended practice and low cost.\n- **What they're really asking:** What kind of fixed IP address should you give it?\n\n**Clues in the question:**\n- \"**other services hosted in the same VPC**\" → **internal** IP is enough.\n- \"**fixed**\" → **static**; \"**promote the existing**\" keeps the current address (no reconfiguration).\n- Static internal IPs are free; external IPs cost money.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -18286,7 +18286,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Services **in the same VPC** need a **fixed** address for this VM. Cheapest way?"
+  "plain": "- **The situation:** A VM runs in a VPC with single-stack (IPv4-only) subnets.\n- **What you must achieve:** Give the VM a fixed IP address so other services in the same VPC can reach it.\n- **The limits:** Recommended practice and low cost.\n- **What they're really asking:** What kind of fixed IP address should you give it?"
  },
  {
   "file": "Q283-preview-to-ga-autopilot.md",
@@ -18294,7 +18294,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Move from **one zone** to a **highly available** production cluster.\n\n**Clues in the question:**\n- \"**high availability and resilience**\" → a **regional** cluster; **Autopilot** clusters are always regional and follow Google's best practices.\n- A zonal cluster **can't be converted** to regional with `update --region`.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** A preview app runs on a single-zone GKE cluster in us-central1 and has become popular.\n- **What you must achieve:** Release it for everyone.\n- **The limits:** High availability and resilience, following recommended practice.\n- **What they're really asking:** What kind of cluster should production use?\n\n**Clues in the question:**\n- \"**high availability and resilience**\" → a **regional** cluster; **Autopilot** clusters are always regional and follow Google's best practices.\n- A zonal cluster **can't be converted** to regional with `update --region`.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -18350,7 +18350,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Move from **one zone** to a **highly available** production cluster."
+  "plain": "- **The situation:** A preview app runs on a single-zone GKE cluster in us-central1 and has become popular.\n- **What you must achieve:** Release it for everyone.\n- **The limits:** High availability and resilience, following recommended practice.\n- **What they're really asking:** What kind of cluster should production use?"
  },
  {
   "file": "Q284-test-sa-permissions-impersonation.md",
@@ -18358,7 +18358,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Act **as the service account** from your laptop, **without a key**.\n\n**Clues in the question:**\n- \"**test the permissions of this service account**\" → you must act **as** it.\n- \"**most secure**\" → **impersonation** (short-lived tokens, no key file). You need `roles/iam.serviceAccountTokenCreator` on the SA.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Your app will use a service account to read BigQuery data.\n- **What you must achieve:** Test the service account's permissions from your own computer before deploying.\n- **The limits:** Use the most secure method and recommended practice.\n- **What they're really asking:** How do you test as that service account without downloading a key?\n\n**Clues in the question:**\n- \"**test the permissions of this service account**\" → you must act **as** it.\n- \"**most secure**\" → **impersonation** (short-lived tokens, no key file). You need `roles/iam.serviceAccountTokenCreator` on the SA.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -18414,7 +18414,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Act **as the service account** from your laptop, **without a key**."
+  "plain": "- **The situation:** Your app will use a service account to read BigQuery data.\n- **What you must achieve:** Test the service account's permissions from your own computer before deploying.\n- **The limits:** Use the most secure method and recommended practice.\n- **What they're really asking:** How do you test as that service account without downloading a key?"
  },
  {
   "file": "Q285-company-accounts-groups-iam-domain-policy.md",
@@ -18422,7 +18422,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Only **company accounts**, each **department sees only its own** resources, **low ops**.\n\n**Clues in the question:**\n- \"**users of the same department can only access … their own department**\" → **groups per department** + **IAM roles** on their resources.\n- \"**only … company-issued Google accounts**\" + \"**minimize operational costs**\" → **org policy** (domain restricted sharing) instead of manual audits.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** Your organization is moving to Google Cloud.\n- **What you must achieve:** Only company-issued Google accounts may access the environment, and people may only access their own department's resources.\n- **The limits:** Low operating cost and recommended practice.\n- **What they're really asking:** How do you organize accounts, departments and access?\n\n**Clues in the question:**\n- \"**users of the same department can only access … their own department**\" → **groups per department** + **IAM roles** on their resources.\n- \"**only … company-issued Google accounts**\" + \"**minimize operational costs**\" → **org policy** (domain restricted sharing) instead of manual audits.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -18478,7 +18478,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Only **company accounts**, each **department sees only its own** resources, **low ops**."
+  "plain": "- **The situation:** Your organization is moving to Google Cloud.\n- **What you must achieve:** Only company-issued Google accounts may access the environment, and people may only access their own department's resources.\n- **The limits:** Low operating cost and recommended practice.\n- **What they're really asking:** How do you organize accounts, departments and access?"
  },
  {
   "file": "Q286-cloud-run-to-gke-api-internal-lb-vpc-connector.md",
@@ -18486,7 +18486,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Cloud Run → GKE API, **privately**.\n\n**Clues in the question:**\n- \"**privately reach the API on GKE**\" → expose GKE on an **internal** IP (internal Application LB).\n- Cloud Run isn't in your VPC by default → **Serverless VPC Access connector** (or Direct VPC egress).\n- A DNS name in **Cloud DNS** keeps it stable.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** You are deploying an app to Cloud Run that calls an API running on GKE.\n- **What you must achieve:** Let Cloud Run reach the GKE API privately.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** How does Cloud Run reach a private service inside your VPC?\n\n**Clues in the question:**\n- \"**privately reach the API on GKE**\" → expose GKE on an **internal** IP (internal Application LB).\n- Cloud Run isn't in your VPC by default → **Serverless VPC Access connector** (or Direct VPC egress).\n- A DNS name in **Cloud DNS** keeps it stable.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -18542,7 +18542,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Cloud Run → GKE API, **privately**."
+  "plain": "- **The situation:** You are deploying an app to Cloud Run that calls an API running on GKE.\n- **What you must achieve:** Let Cloud Run reach the GKE API privately.\n- **The limits:** Follow Google-recommended practices.\n- **What they're really asking:** How does Cloud Run reach a private service inside your VPC?"
  },
  {
   "file": "Q287-logs-to-saas-sink-pubsub.md",
@@ -18550,7 +18550,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Stream logs to an outside tool **as fast as possible**.\n\n**Clues in the question:**\n- \"**least amount of delay**\" + \"**third-party**\" → **sink to Pub/Sub** (streaming), tool subscribes.\n- Cloud Storage sinks batch hourly; BigQuery/polling add delay.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** Your company uses several clouds and wants all app logs in a third-party SaaS log tool (an online service).\n- **What you must achieve:** Send logs from Cloud Logging to that tool.\n- **The limits:** With as little delay as possible.\n- **What they're really asking:** How should Cloud Logging push logs to the outside tool quickly?\n\n**Clues in the question:**\n- \"**least amount of delay**\" + \"**third-party**\" → **sink to Pub/Sub** (streaming), tool subscribes.\n- Cloud Storage sinks batch hourly; BigQuery/polling add delay.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -18606,7 +18606,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Stream logs to an outside tool **as fast as possible**."
+  "plain": "- **The situation:** Your company uses several clouds and wants all app logs in a third-party SaaS log tool (an online service).\n- **What you must achieve:** Send logs from Cloud Logging to that tool.\n- **The limits:** With as little delay as possible.\n- **What they're really asking:** How should Cloud Logging push logs to the outside tool quickly?"
  },
  {
   "file": "Q288-gke-database-statefulset-cluster-autoscaler.md",
@@ -18614,7 +18614,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Database with **no data loss**, and **automatically enough nodes**.\n\n**Clues in the question:**\n- \"**prevent data loss**\" for a **database** → **StatefulSet** (stable identity + persistent volume per pod).\n- \"**enough nodes … minimize … manual work**\" → **cluster autoscaling**.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** You will move a database and a backend app to a Standard GKE cluster.\n- **What you must achieve:** Prevent data loss and keep enough nodes for the backend as demand changes.\n- **The limits:** Follow recommended practice with little manual work.\n- **What they're really asking:** How do you store the database's data safely and size the nodes automatically?\n\n**Clues in the question:**\n- \"**prevent data loss**\" for a **database** → **StatefulSet** (stable identity + persistent volume per pod).\n- \"**enough nodes … minimize … manual work**\" → **cluster autoscaling**.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -18670,7 +18670,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Database with **no data loss**, and **automatically enough nodes**."
+  "plain": "- **The situation:** You will move a database and a backend app to a Standard GKE cluster.\n- **What you must achieve:** Prevent data loss and keep enough nodes for the backend as demand changes.\n- **The limits:** Follow recommended practice with little manual work.\n- **What they're really asking:** How do you store the database's data safely and size the nodes automatically?"
  },
  {
   "file": "Q289-notify-gcs-changes-pubsub-notifications.md",
@@ -18678,7 +18678,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Be **notified of every change** to objects, with little overhead.\n\n**Clues in the question:**\n- \"**notified about any modifications to files**\" → **Pub/Sub notifications for Cloud Storage** (events on create/overwrite/delete).\n- Versioning also keeps the old copy so a bad change can be undone.\n- \"**minimizing management overhead**\" → no custom scripts.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** You are the Organization Administrator. Compliance rules say you must be told about any change to files in Cloud Storage. A recent change went unnoticed and broke production jobs.\n- **What you must achieve:** Get notified about every file change in Cloud Storage.\n- **The limits:** Minimal management overhead.\n- **What they're really asking:** What should you turn on so all file changes are recorded and alerted?\n\n**Clues in the question:**\n- \"**notified about any modifications to files**\" → **Pub/Sub notifications for Cloud Storage** (events on create/overwrite/delete).\n- Versioning also keeps the old copy so a bad change can be undone.\n- \"**minimizing management overhead**\" → no custom scripts.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -18734,7 +18734,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Be **notified of every change** to objects, with little overhead."
+  "plain": "- **The situation:** You are the Organization Administrator. Compliance rules say you must be told about any change to files in Cloud Storage. A recent change went unnoticed and broke production jobs.\n- **What you must achieve:** Get notified about every file change in Cloud Storage.\n- **The limits:** Minimal management overhead.\n- **What they're really asking:** What should you turn on so all file changes are recorded and alerted?"
  },
  {
   "file": "Q290-invoices-3-years-lifecycle-coldline.md",
@@ -18742,7 +18742,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Frequent for **6 months**, then **audit only** until **3 years**. Cheapest managed option.\n\n**Clues in the question:**\n- \"**Google-managed**\" + documents → **Cloud Storage**.\n- \"**archived for audit purposes only**\" after six months → cheaper class (**Coldline** is the only cheaper option offered).\n- Moving automatically → **Object Lifecycle Management**.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** Your company will store invoices and financial documents in Google Cloud.\n- **What you must achieve:** Use a Google-managed solution that keeps documents three years.\n- **The limits:** Analysts read invoices from the last six months often; older invoices are kept only for audits; minimize cost.\n- **What they're really asking:** Which storage classes, rules and retention settings fit this?\n\n**Clues in the question:**\n- \"**Google-managed**\" + documents → **Cloud Storage**.\n- \"**archived for audit purposes only**\" after six months → cheaper class (**Coldline** is the only cheaper option offered).\n- Moving automatically → **Object Lifecycle Management**.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -18798,7 +18798,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Frequent for **6 months**, then **audit only** until **3 years**. Cheapest managed option."
+  "plain": "- **The situation:** Your company will store invoices and financial documents in Google Cloud.\n- **What you must achieve:** Use a Google-managed solution that keeps documents three years.\n- **The limits:** Analysts read invoices from the last six months often; older invoices are kept only for audits; minimize cost.\n- **What they're really asking:** Which storage classes, rules and retention settings fit this?"
  },
  {
   "file": "Q291-gke-ha-no-node-mgmt-autopilot.md",
@@ -18806,7 +18806,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** HA, quick node patching, **pay per workload**, **no node management**.\n\n**Clues in the question:**\n- \"**pay only for the compute resources that your workloads use without managing nodes**\" → **Autopilot** (billed per pod resources; Google manages and patches nodes).\n- Autopilot is regional, which gives \"**high availability**\".\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** You are moving your containerized apps (apps packed as containers) to GKE and must choose which kind of GKE cluster to use.\n- **What you must achieve:** The cluster must be highly available, have very little downtime, and get node security updates quickly.\n- **The limits:** Pay only for the compute your workloads actually use, don't manage nodes (the machines), keep running costs low, and follow Google's recommendations.\n- **What they're really asking:** Which GKE cluster option meets all of these?\n\n**Clues in the question:**\n- \"**pay only for the compute resources that your workloads use without managing nodes**\" → **Autopilot** (billed per pod resources; Google manages and patches nodes).\n- Autopilot is regional, which gives \"**high availability**\".\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -18862,7 +18862,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "HA, quick node patching, **pay per workload**, **no node management**."
+  "plain": "- **The situation:** You are moving your containerized apps (apps packed as containers) to GKE and must choose which kind of GKE cluster to use.\n- **What you must achieve:** The cluster must be highly available, have very little downtime, and get node security updates quickly.\n- **The limits:** Pay only for the compute your workloads actually use, don't manage nodes (the machines), keep running costs low, and follow Google's recommendations.\n- **What they're really asking:** Which GKE cluster option meets all of these?"
  },
  {
   "file": "Q292-mixed-data-cloudsql-archive-bigtable.md",
@@ -18870,7 +18870,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Pick the cheapest correct store for each of three data types.\n\n**Clues in the question:**\n- \"**structured and read with complex queries**\" → **Cloud SQL** (relational SQL).\n- \"**large in volume and accessed infrequently**\" + \"**most cost-effective**\" → **Archive** storage.\n- \"**high-velocity writes**\" sensor data → **Bigtable**.\n\n**Exam topic:** Storage choice."
+    "md": "**In plain words:**\n- **The situation:** Your company has three kinds of data: customer data in tables read with complex queries, huge historical logs that are rarely read, and real-time sensor data written very fast (some loss is acceptable).\n- **What you must achieve:** Pick where to store each kind.\n- **The limits:** The whole design must be as cheap as possible while meeting every need.\n- **What they're really asking:** Which storage product fits each of the three kinds of data?\n\n**Clues in the question:**\n- \"**structured and read with complex queries**\" → **Cloud SQL** (relational SQL).\n- \"**large in volume and accessed infrequently**\" + \"**most cost-effective**\" → **Archive** storage.\n- \"**high-velocity writes**\" sensor data → **Bigtable**.\n\n**Exam topic:** Storage choice."
    },
    {
     "kind": "terms",
@@ -18926,7 +18926,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Pick the cheapest correct store for each of three data types."
+  "plain": "- **The situation:** Your company has three kinds of data: customer data in tables read with complex queries, huge historical logs that are rarely read, and real-time sensor data written very fast (some loss is acceptable).\n- **What you must achieve:** Pick where to store each kind.\n- **The limits:** The whole design must be as cheap as possible while meeting every need.\n- **What they're really asking:** Which storage product fits each of the three kinds of data?"
  },
  {
   "file": "Q293-prod-premium-dev-standard-tier.md",
@@ -18934,7 +18934,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Prod: **fastest** network. Dev: **cheapest**.\n\n**Clues in the question:**\n- **Premium Tier** = Google's global backbone, lowest latency → **production**.\n- **Standard Tier** = public internet routing, cheaper → **development**.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** A stock-broker company is moving to Google Cloud and planning its network.\n- **What you must achieve:** Production systems must have the lowest possible delay between them.\n- **The limits:** The development environment must cost as little as possible.\n- **What they're really asking:** How do you set up the network so production is fastest and development is cheapest?\n\n**Clues in the question:**\n- **Premium Tier** = Google's global backbone, lowest latency → **production**.\n- **Standard Tier** = public internet routing, cheaper → **development**.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -18990,7 +18990,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Prod: **fastest** network. Dev: **cheapest**."
+  "plain": "- **The situation:** A stock-broker company is moving to Google Cloud and planning its network.\n- **What you must achieve:** Production systems must have the lowest possible delay between them.\n- **The limits:** The development environment must cost as little as possible.\n- **What they're really asking:** How do you set up the network so production is fastest and development is cheapest?"
  },
  {
   "file": "Q294-ssh-team-oslogin-group.md",
@@ -18998,7 +18998,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** SSH for a team; joining/leaving should be **easy**.\n\n**Clues in the question:**\n- \"**minimize operational overhead when engineers join or leave**\" → **OS Login** (SSH tied to IAM) + a **group** (add/remove members).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You manage many Linux VMs, and the engineering team needs SSH (command-line login) access to all of them for maintenance.\n- **What you must achieve:** Give the engineering team SSH access.\n- **The limits:** Adding and removing engineers when they join or leave must take very little work.\n- **What they're really asking:** How do you manage SSH access for the team so joining and leaving is easy?\n\n**Clues in the question:**\n- \"**minimize operational overhead when engineers join or leave**\" → **OS Login** (SSH tied to IAM) + a **group** (add/remove members).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -19054,7 +19054,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "SSH for a team; joining/leaving should be **easy**."
+  "plain": "- **The situation:** You manage many Linux VMs, and the engineering team needs SSH (command-line login) access to all of them for maintenance.\n- **What you must achieve:** Give the engineering team SSH access.\n- **The limits:** Adding and removing engineers when they join or leave must take very little work.\n- **What they're really asking:** How do you manage SSH access for the team so joining and leaving is easy?"
  },
  {
   "file": "Q295-dataflow-stuck-data-freshness-alert.md",
@@ -19062,7 +19062,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Know when Dataflow jobs **get stuck**, with **little effort**.\n\n**Clues in the question:**\n- A stuck job stops moving data forward → **data freshness** (and system lag) grows.\n- \"**minimal management effort**\" → a built-in **Monitoring alert** on that metric.\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** An outage made several Dataflow jobs (data-processing pipelines) get stuck, causing downtime and lost revenue. You fixed the code bug.\n- **What you must achieve:** Find out automatically if jobs get stuck again.\n- **The limits:** Very little management effort.\n- **What they're really asking:** How do you detect stuck Dataflow jobs in the future?\n\n**Clues in the question:**\n- A stuck job stops moving data forward → **data freshness** (and system lag) grows.\n- \"**minimal management effort**\" → a built-in **Monitoring alert** on that metric.\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -19118,7 +19118,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Know when Dataflow jobs **get stuck**, with **little effort**."
+  "plain": "- **The situation:** An outage made several Dataflow jobs (data-processing pipelines) get stuck, causing downtime and lost revenue. You fixed the code bug.\n- **What you must achieve:** Find out automatically if jobs get stuck again.\n- **The limits:** Very little management effort.\n- **What they're really asking:** How do you detect stuck Dataflow jobs in the future?"
  },
  {
   "file": "Q296-private-microservices-gke-autopilot.md",
@@ -19126,7 +19126,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Containerized microservices, private, **minimal ops**.\n\n**Clues in the question:**\n- \"**minimize management and operational overhead**\" → **Autopilot** (Google manages nodes). Services can stay internal (ClusterIP / internal LB).\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Your company is rebuilding its apps as containerized microservices (small separate services in containers).\n- **What you must achieve:** Give teams a place to deploy their apps.\n- **The limits:** The apps must not be public, and management work must be as low as possible.\n- **What they're really asking:** What platform should you set up for the teams?\n\n**Clues in the question:**\n- \"**minimize management and operational overhead**\" → **Autopilot** (Google manages nodes). Services can stay internal (ClusterIP / internal LB).\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -19182,7 +19182,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Containerized microservices, private, **minimal ops**."
+  "plain": "- **The situation:** Your company is rebuilding its apps as containerized microservices (small separate services in containers).\n- **What you must achieve:** Give teams a place to deploy their apps.\n- **The limits:** The apps must not be public, and management work must be as low as possible.\n- **What they're really asking:** What platform should you set up for the teams?"
  },
  {
   "file": "Q297-vm-bigquery-dataset-custom-sa.md",
@@ -19190,7 +19190,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Short-lived credentials** + access to **only one dataset**, low effort.\n\n**Clues in the question:**\n- An **attached service account** gives the VM **short-lived access tokens** automatically (about 1 hour) from the metadata server — no rotation work.\n- \"**only have access to the intended BigQuery dataset**\" → grant **on the dataset**, not the project.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** An app runs on a Compute Engine VM and needs to read one BigQuery dataset.\n- **What you must achieve:** Give the app secure access to that dataset.\n- **The limits:** Credentials must be short-lived, the app may reach only that dataset, follow recommended practice and keep costs low.\n- **What they're really asking:** How do you give the VM's app short-lived access to only that one dataset?\n\n**Clues in the question:**\n- An **attached service account** gives the VM **short-lived access tokens** automatically (about 1 hour) from the metadata server — no rotation work.\n- \"**only have access to the intended BigQuery dataset**\" → grant **on the dataset**, not the project.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -19246,7 +19246,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "**Short-lived credentials** + access to **only one dataset**, low effort."
+  "plain": "- **The situation:** An app runs on a Compute Engine VM and needs to read one BigQuery dataset.\n- **What you must achieve:** Give the app secure access to that dataset.\n- **The limits:** Credentials must be short-lived, the app may reach only that dataset, follow recommended practice and keep costs low.\n- **What they're really asking:** How do you give the VM's app short-lived access to only that one dataset?"
  },
  {
   "file": "Q298-async-transactions-pubsub-cloud-run.md",
@@ -19254,7 +19254,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Serverless**, **asynchronous**, **low management**.\n\n**Clues in the question:**\n- \"**asynchronous**\" + \"**serverless**\" → **Pub/Sub** queues transactions.\n- Processing → **Cloud Run** (serverless, scales).\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** An app processes transactions on a group of managed VMs.\n- **What you must achieve:** Move it to a serverless setup (no servers to manage) that scales and processes transactions asynchronously (accepted now, handled shortly after).\n- **The limits:** Minimal management effort.\n- **What they're really asking:** Which services should accept the transactions and which should process them?\n\n**Clues in the question:**\n- \"**asynchronous**\" + \"**serverless**\" → **Pub/Sub** queues transactions.\n- Processing → **Cloud Run** (serverless, scales).\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -19310,7 +19310,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "**Serverless**, **asynchronous**, **low management**."
+  "plain": "- **The situation:** An app processes transactions on a group of managed VMs.\n- **What you must achieve:** Move it to a serverless setup (no servers to manage) that scales and processes transactions asynchronously (accepted now, handled shortly after).\n- **The limits:** Minimal management effort.\n- **What they're really asking:** Which services should accept the transactions and which should process them?"
  },
  {
   "file": "Q299-nfs-modernize-filestore.md",
@@ -19318,7 +19318,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Replace an NFS server with a **managed** service, **no app changes**.\n\n**Clues in the question:**\n- \"**NFS**\" + \"**managed service**\" + \"**least amount of change**\" → **Filestore** (managed NFS; apps just mount a new path).\n\n**Exam topic:** Storage."
+    "md": "**In plain words:**\n- **The situation:** Many older third-party apps share files through one NFS server (a network file share).\n- **What you must achieve:** Replace that NFS server with a managed Google Cloud service.\n- **The limits:** The apps must change as little as possible.\n- **What they're really asking:** Which managed service can replace the NFS server with the fewest app changes?\n\n**Clues in the question:**\n- \"**NFS**\" + \"**managed service**\" + \"**least amount of change**\" → **Filestore** (managed NFS; apps just mount a new path).\n\n**Exam topic:** Storage."
    },
    {
     "kind": "terms",
@@ -19374,7 +19374,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Replace an NFS server with a **managed** service, **no app changes**."
+  "plain": "- **The situation:** Many older third-party apps share files through one NFS server (a network file share).\n- **What you must achieve:** Replace that NFS server with a managed Google Cloud service.\n- **The limits:** The apps must change as little as possible.\n- **What they're really asking:** Which managed service can replace the NFS server with the fewest app changes?"
  },
  {
   "file": "Q300-vm-logs-ops-agent-log-analytics.md",
@@ -19382,7 +19382,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** VM logs → **SQL** + **charts**, low ops.\n\n**Clues in the question:**\n- Get logs off the VM → **Ops Agent** (Q231).\n- \"**SQL queries**\" + \"**charts**\" → **Log Analytics** (Q280). Logs Explorer doesn't do SQL.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** Your apps run on Compute Engine and write logs.\n- **What you must achieve:** Keep and explore the logs: analyze them with SQL and build charts of patterns over time.\n- **The limits:** Scalable, recommended practice, and low running cost.\n- **What they're really asking:** How do you collect the VM logs and analyze them with SQL and charts?\n\n**Clues in the question:**\n- Get logs off the VM → **Ops Agent** (Q231).\n- \"**SQL queries**\" + \"**charts**\" → **Log Analytics** (Q280). Logs Explorer doesn't do SQL.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -19438,7 +19438,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "VM logs → **SQL** + **charts**, low ops."
+  "plain": "- **The situation:** Your apps run on Compute Engine and write logs.\n- **What you must achieve:** Keep and explore the logs: analyze them with SQL and build charts of patterns over time.\n- **The limits:** Scalable, recommended practice, and low running cost.\n- **What they're really asking:** How do you collect the VM logs and analyze them with SQL and charts?"
  },
  {
   "file": "Q301-gke-pods-gcs-no-keys-workload-identity.md",
@@ -19446,7 +19446,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Pods must call Cloud Storage; **no service account keys allowed**.\n\n**Clues in the question:**\n- \"**prevents the usage of service account keys**\" + Pods → **Workload Identity Federation for GKE**.\n- Recommended setup: a **dedicated** Kubernetes ServiceAccount (KSA) linked to a **dedicated** Google service account (GSA), not the node SA.\n\n**Exam topic:** GKE / IAM."
+    "md": "**In plain words:**\n- **The situation:** You are deploying an app to GKE whose Pods (running containers) must call a private Cloud Storage bucket.\n- **What you must achieve:** Let the Pods sign in to the Cloud Storage API.\n- **The limits:** An organization policy forbids service account keys (downloadable secret files); follow recommended practice.\n- **What they're really asking:** How do the Pods get access to the bucket without any key file?\n\n**Clues in the question:**\n- \"**prevents the usage of service account keys**\" + Pods → **Workload Identity Federation for GKE**.\n- Recommended setup: a **dedicated** Kubernetes ServiceAccount (KSA) linked to a **dedicated** Google service account (GSA), not the node SA.\n\n**Exam topic:** GKE / IAM."
    },
    {
     "kind": "terms",
@@ -19502,7 +19502,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Pods must call Cloud Storage; **no service account keys allowed**."
+  "plain": "- **The situation:** You are deploying an app to GKE whose Pods (running containers) must call a private Cloud Storage bucket.\n- **What you must achieve:** Let the Pods sign in to the Cloud Storage API.\n- **The limits:** An organization policy forbids service account keys (downloadable secret files); follow recommended practice.\n- **What they're really asking:** How do the Pods get access to the bucket without any key file?"
  },
  {
   "file": "Q302-linux-account-lifecycle-oslogin-iam.md",
@@ -19510,7 +19510,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Manage developers' Linux accounts on VMs simply and cheaply.\n\n**Clues in the question:**\n- \"**Linux account lifecycle and access**\" + \"**simplify access management**\" → **OS Login** with **IAM roles**.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** Developers use your automation to create Linux VMs for their tasks.\n- **What you must achieve:** Manage these users' Linux accounts and access over time (creation, changes, removal).\n- **The limits:** Simple access management, low cost, recommended practice.\n- **What they're really asking:** What is the recommended way to manage Linux logins for the developers?\n\n**Clues in the question:**\n- \"**Linux account lifecycle and access**\" + \"**simplify access management**\" → **OS Login** with **IAM roles**.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -19566,7 +19566,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Manage developers' Linux accounts on VMs simply and cheaply."
+  "plain": "- **The situation:** Developers use your automation to create Linux VMs for their tasks.\n- **What you must achieve:** Manage these users' Linux accounts and access over time (creation, changes, removal).\n- **The limits:** Simple access management, low cost, recommended practice.\n- **What they're really asking:** What is the recommended way to manage Linux logins for the developers?"
  },
  {
   "file": "Q303-ops-team-custom-role-only-needed.md",
@@ -19574,7 +19574,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Two predefined roles each have **some** of what's needed (plus extras). Least privilege?\n\n**Clues in the question:**\n- \"**specific permissions**\" + \"**Google-recommended practices**\" (least privilege) → a **custom role with only the required permissions**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** The Operations team needs certain specific permissions on a GKE cluster and a Cloud SQL instance. Two existing predefined roles each contain part of what they need.\n- **What you must achieve:** Give the team the permissions they need.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should you build or choose the role for the team?\n\n**Clues in the question:**\n- \"**specific permissions**\" + \"**Google-recommended practices**\" (least privilege) → a **custom role with only the required permissions**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -19630,7 +19630,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Two predefined roles each have **some** of what's needed (plus extras). Least privilege?"
+  "plain": "- **The situation:** The Operations team needs certain specific permissions on a GKE cluster and a Cloud SQL instance. Two existing predefined roles each contain part of what they need.\n- **What you must achieve:** Give the team the permissions they need.\n- **The limits:** Follow Google's recommended practice.\n- **What they're really asking:** How should you build or choose the role for the team?"
  },
  {
   "file": "Q304-multicloud-iac-terraform.md",
@@ -19638,7 +19638,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** IaC for **three cloud providers**.\n\n**Clues in the question:**\n- \"**two other cloud providers**\" + \"**Infrastructure-as-code**\" → **Terraform** (multi-cloud providers).\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** Your company will run all its workloads on Kubernetes in Google Cloud and two other cloud providers.\n- **What you must achieve:** Build an Infrastructure as Code solution (resources described in code) that creates resources in all three clouds.\n- **The limits:** It must work across all three providers.\n- **What they're really asking:** Which tool can provision resources in all three clouds?\n\n**Clues in the question:**\n- \"**two other cloud providers**\" + \"**Infrastructure-as-code**\" → **Terraform** (multi-cloud providers).\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -19694,7 +19694,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "IaC for **three cloud providers**."
+  "plain": "- **The situation:** Your company will run all its workloads on Kubernetes in Google Cloud and two other cloud providers.\n- **What you must achieve:** Build an Infrastructure as Code solution (resources described in code) that creates resources in all three clouds.\n- **The limits:** It must work across all three providers.\n- **What they're really asking:** Which tool can provision resources in all three clouds?"
  },
  {
   "file": "Q305-events-public-scale-to-zero-cloud-run-eventarc.md",
@@ -19702,7 +19702,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Handle events from Google services, public, **zero cost when idle**, standardized.\n\n**Clues in the question:**\n- \"**no costs when your workloads are not in use**\" → **Cloud Run** (scales to zero).\n- \"**asynchronous events from Google services**\" + \"**standardized process**\" → **Eventarc** (CloudEvents format).\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** Your app processes events from Google services (like a file being uploaded) and must be reachable from the public internet.\n- **What you must achieve:** Choose how to deploy it.\n- **The limits:** Use a standardized process, keep development cost low, and pay nothing when it isn't being used.\n- **What they're really asking:** Where should the app run and how should events be delivered to it?\n\n**Clues in the question:**\n- \"**no costs when your workloads are not in use**\" → **Cloud Run** (scales to zero).\n- \"**asynchronous events from Google services**\" + \"**standardized process**\" → **Eventarc** (CloudEvents format).\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -19758,7 +19758,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Handle events from Google services, public, **zero cost when idle**, standardized."
+  "plain": "- **The situation:** Your app processes events from Google services (like a file being uploaded) and must be reachable from the public internet.\n- **What you must achieve:** Choose how to deploy it.\n- **The limits:** Use a standardized process, keep development cost low, and pay nothing when it isn't being used.\n- **What they're really asking:** Where should the app run and how should events be delivered to it?"
  },
  {
   "file": "Q306-lift-shift-hardcoded-ips-same-cidr.md",
@@ -19766,7 +19766,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Apps talk via **hard-coded internal IPs**; migrate fast, no code change. Networks are **not connected**.\n\n**Clues in the question:**\n- \"**hard-coded internal IP addresses**\" + \"**without modifying the application code**\" → keep the **same IPs**.\n- \"**not connected**\" → overlapping ranges are OK (no routing conflict).\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** Your data-center contract is ending, so you are moving to Google Cloud fast (lift and shift: move as-is). The cloud and on-premises networks are not connected. Old apps call each other using fixed, hard-coded internal IP addresses.\n- **What you must achieve:** Move the apps quickly and keep everything working.\n- **The limits:** You can't change the app code.\n- **What they're really asking:** How should you set up the cloud network and IPs so the old apps still find each other?\n\n**Clues in the question:**\n- \"**hard-coded internal IP addresses**\" + \"**without modifying the application code**\" → keep the **same IPs**.\n- \"**not connected**\" → overlapping ranges are OK (no routing conflict).\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -19822,7 +19822,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Apps talk via **hard-coded internal IPs**; migrate fast, no code change. Networks are **not connected**."
+  "plain": "- **The situation:** Your data-center contract is ending, so you are moving to Google Cloud fast (lift and shift: move as-is). The cloud and on-premises networks are not connected. Old apps call each other using fixed, hard-coded internal IP addresses.\n- **What you must achieve:** Move the apps quickly and keep everything working.\n- **The limits:** You can't change the app code.\n- **What they're really asking:** How should you set up the cloud network and IPs so the old apps still find each other?"
  },
  {
   "file": "Q307-nightly-batch-interruptible-spot.md",
@@ -19830,7 +19830,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Nightly batch, **can tolerate interruptions**, **cost-effective**.\n\n**Clues in the question:**\n- \"**can tolerate interruptions**\" + \"**cost-effective**\" → **Spot VMs** (60–91% cheaper, can be stopped by Google).\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You are moving nightly batch jobs to Google Cloud. They need lots of CPU and memory for several hours, but they can handle being interrupted.\n- **What you must achieve:** Run the nightly jobs.\n- **The limits:** It must be cost-effective.\n- **What they're really asking:** Which kind of Compute Engine VM fits jobs that can be interrupted, at the lowest price?\n\n**Clues in the question:**\n- \"**can tolerate interruptions**\" + \"**cost-effective**\" → **Spot VMs** (60–91% cheaper, can be stopped by Google).\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -19886,7 +19886,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Nightly batch, **can tolerate interruptions**, **cost-effective**."
+  "plain": "- **The situation:** You are moving nightly batch jobs to Google Cloud. They need lots of CPU and memory for several hours, but they can handle being interrupted.\n- **What you must achieve:** Run the nightly jobs.\n- **The limits:** It must be cost-effective.\n- **What they're really asking:** Which kind of Compute Engine VM fits jobs that can be interrupted, at the lowest price?"
  },
  {
   "file": "Q308-growing-postgres-multiregion-spanner.md",
@@ -19894,7 +19894,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Relational, **automatic scaling**, **multi-region**, low latency.\n\n**Clues in the question:**\n- \"**automatic scaling**\" + \"**multi-region support**\" + relational (PostgreSQL) → **Spanner** (supports a PostgreSQL interface).\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** A fast-growing social media platform, mostly in North America, has outgrown its on-premises PostgreSQL database.\n- **What you must achieve:** Choose a cloud database.\n- **The limits:** Automatic scaling, support for multiple regions in the future, and low delay.\n- **What they're really asking:** Which database meets all of these?\n\n**Clues in the question:**\n- \"**automatic scaling**\" + \"**multi-region support**\" + relational (PostgreSQL) → **Spanner** (supports a PostgreSQL interface).\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -19950,7 +19950,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Relational, **automatic scaling**, **multi-region**, low latency."
+  "plain": "- **The situation:** A fast-growing social media platform, mostly in North America, has outgrown its on-premises PostgreSQL database.\n- **What you must achieve:** Choose a cloud database.\n- **The limits:** Automatic scaling, support for multiple regions in the future, and low delay.\n- **What they're really asking:** Which database meets all of these?"
  },
  {
   "file": "Q309-billing-export-bigquery.md",
@@ -19958,7 +19958,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Get detailed billing data into **BigQuery**.\n\n**Clues in the question:**\n- \"**Cloud Billing datasets are available in BigQuery**\" → **Cloud Billing export to BigQuery** must be enabled. Nothing appears automatically.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Your company is setting up Cloud Billing and needs a detailed breakdown of its Google Cloud costs.\n- **What you must achieve:** Have the billing data available in BigQuery for detailed analysis.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do so the billing data appears in BigQuery?\n\n**Clues in the question:**\n- \"**Cloud Billing datasets are available in BigQuery**\" → **Cloud Billing export to BigQuery** must be enabled. Nothing appears automatically.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -20014,7 +20014,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Get detailed billing data into **BigQuery**."
+  "plain": "- **The situation:** Your company is setting up Cloud Billing and needs a detailed breakdown of its Google Cloud costs.\n- **What you must achieve:** Have the billing data available in BigQuery for detailed analysis.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do so the billing data appears in BigQuery?"
  },
  {
   "file": "Q310-overnight-batch-retry-cloud-run-job.md",
@@ -20022,7 +20022,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Daily batch, **cheapest**, **automatic retry** on failure.\n\n**Clues in the question:**\n- Batch (not a web server) → **Cloud Run job** (has `--max-retries`).\n- Daily → **Cloud Scheduler** triggers it. Pay only while it runs.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** The accounting department must run a batch job every night.\n- **What you must achieve:** Run the nightly job and retry it automatically if a run fails.\n- **The limits:** Keep cost as low as possible.\n- **What they're really asking:** What should the job be built as, and what should start it each night?\n\n**Clues in the question:**\n- Batch (not a web server) → **Cloud Run job** (has `--max-retries`).\n- Daily → **Cloud Scheduler** triggers it. Pay only while it runs.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -20078,7 +20078,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Daily batch, **cheapest**, **automatic retry** on failure."
+  "plain": "- **The situation:** The accounting department must run a batch job every night.\n- **What you must achieve:** Run the nightly job and retry it automatically if a run fails.\n- **The limits:** Keep cost as low as possible.\n- **What they're really asking:** What should the job be built as, and what should start it each night?"
  },
  {
   "file": "Q311-postgres-150tb-performance-alloydb.md",
@@ -20086,7 +20086,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** PostgreSQL → faster, **minimal schema/code changes**, very large.\n\n**Clues in the question:**\n- \"**PostgreSQL**\" + \"**significantly improve the performance**\" + \"**minimizing changes**\" → **AlloyDB** (fully PostgreSQL-compatible, much faster than standard PostgreSQL).\n- \"**150 TB**\" is beyond Cloud SQL's 64 TB limit; AlloyDB handles it.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** You are moving several PostgreSQL databases from your data center to Google Cloud, with over 150 TB per region expected.\n- **What you must achieve:** Make the databases much faster.\n- **The limits:** Change the data schema and app code as little as possible, follow recommended practice and keep running costs low.\n- **What they're really asking:** Which Google database gives big speed gains while staying PostgreSQL-compatible?\n\n**Clues in the question:**\n- \"**PostgreSQL**\" + \"**significantly improve the performance**\" + \"**minimizing changes**\" → **AlloyDB** (fully PostgreSQL-compatible, much faster than standard PostgreSQL).\n- \"**150 TB**\" is beyond Cloud SQL's 64 TB limit; AlloyDB handles it.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -20142,7 +20142,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "PostgreSQL → faster, **minimal schema/code changes**, very large."
+  "plain": "- **The situation:** You are moving several PostgreSQL databases from your data center to Google Cloud, with over 150 TB per region expected.\n- **What you must achieve:** Make the databases much faster.\n- **The limits:** Change the data schema and app code as little as possible, follow recommended practice and keep running costs low.\n- **What they're really asking:** Which Google database gives big speed gains while staying PostgreSQL-compatible?"
  },
  {
   "file": "Q312-llm-finetune-gke-accelerators.md",
@@ -20150,7 +20150,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Scalable, flexible platform for **LLM fine-tuning**.\n\n**Clues in the question:**\n- \"**scalable and flexible**\" + \"**fine-tune large language models**\" → **GKE with GPUs/TPUs** (accelerators).\n\n**Exam topic:** GKE / AI."
+    "md": "**In plain words:**\n- **The situation:** Your machine learning team needs to fine-tune large language models (adjust AI models) on a large amount of company data.\n- **What you must achieve:** Build a platform for this work.\n- **The limits:** It must be scalable and flexible.\n- **What they're really asking:** What platform should you provide for the fine-tuning jobs?\n\n**Clues in the question:**\n- \"**scalable and flexible**\" + \"**fine-tune large language models**\" → **GKE with GPUs/TPUs** (accelerators).\n\n**Exam topic:** GKE / AI."
    },
    {
     "kind": "terms",
@@ -20206,7 +20206,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Scalable, flexible platform for **LLM fine-tuning**."
+  "plain": "- **The situation:** Your machine learning team needs to fine-tune large language models (adjust AI models) on a large amount of company data.\n- **What you must achieve:** Build a platform for this work.\n- **The limits:** It must be scalable and flexible.\n- **What they're really asking:** What platform should you provide for the fine-tuning jobs?"
  },
  {
   "file": "Q313-gke-rollback-rollout-undo.md",
@@ -20214,7 +20214,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Revert a bad rolling update.\n\n**Clues in the question:**\n- Rollback → **`kubectl rollout undo`** returns the Deployment to the previous revision.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** A rolling update (gradual replacement of Pods with a new version) on GKE has a problem.\n- **What you must achieve:** Roll the update back.\n- **The limits:** None stated.\n- **What they're really asking:** Which action returns the Deployment to the previous version?\n\n**Clues in the question:**\n- Rollback → **`kubectl rollout undo`** returns the Deployment to the previous revision.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -20270,7 +20270,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Revert a bad rolling update."
+  "plain": "- **The situation:** A rolling update (gradual replacement of Pods with a new version) on GKE has a problem.\n- **What you must achieve:** Roll the update back.\n- **The limits:** None stated.\n- **What they're really asking:** Which action returns the Deployment to the previous version?"
  },
  {
   "file": "Q314-gke-vendor-allowlist-cloud-nat-static.md",
@@ -20278,7 +20278,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Vendor needs a **fixed list of IPs** that never changes.\n\n**Clues in the question:**\n- \"**avoid any risk … due to IP address changes**\" → **static** IPs on **Cloud NAT**; private nodes send all egress through it.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** An app on GKE must call an outside company's API, and that company only allows traffic from IP addresses on its list (an allowlist).\n- **What you must achieve:** Give the vendor a list of your outgoing IP addresses.\n- **The limits:** Follow recommended practice, and traffic must never break because your IPs change.\n- **What they're really asking:** How do you make all outgoing traffic come from fixed IPs you can give the vendor?\n\n**Clues in the question:**\n- \"**avoid any risk … due to IP address changes**\" → **static** IPs on **Cloud NAT**; private nodes send all egress through it.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -20334,7 +20334,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Vendor needs a **fixed list of IPs** that never changes."
+  "plain": "- **The situation:** An app on GKE must call an outside company's API, and that company only allows traffic from IP addresses on its list (an allowlist).\n- **What you must achieve:** Give the vendor a list of your outgoing IP addresses.\n- **The limits:** Follow recommended practice, and traffic must never break because your IPs change.\n- **What they're really asking:** How do you make all outgoing traffic come from fixed IPs you can give the vendor?"
  },
  {
   "file": "Q315-static-site-and-http-job-cloud-run.md",
@@ -20342,7 +20342,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Static site + HTTP-started job; multiple locations, autoscaling, **no idle costs**.\n\n**Clues in the question:**\n- \"**no costs when your workloads are not in use**\" + \"**autoscaling**\" → **Cloud Run** for both (deploy in multiple regions).\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** You are moving a static HTML website and a monthly invoice job (started by calling an HTTP address) to Google Cloud.\n- **What you must achieve:** Host both.\n- **The limits:** The website must be in several locations and autoscale; pay nothing when idle; follow recommended practice.\n- **What they're really asking:** Where should the website and the job run?\n\n**Clues in the question:**\n- \"**no costs when your workloads are not in use**\" + \"**autoscaling**\" → **Cloud Run** for both (deploy in multiple regions).\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -20398,7 +20398,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Static site + HTTP-started job; multiple locations, autoscaling, **no idle costs**."
+  "plain": "- **The situation:** You are moving a static HTML website and a monthly invoice job (started by calling an HTTP address) to Google Cloud.\n- **What you must achieve:** Host both.\n- **The limits:** The website must be in several locations and autoscale; pay nothing when idle; follow recommended practice.\n- **What they're really asking:** Where should the website and the job run?"
  },
  {
   "file": "Q316-sandbox-folder-budget-alert.md",
@@ -20406,7 +20406,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Total sandbox budget $1,000; **notify** near the limit; **automate**.\n\n**Clues in the question:**\n- \"**notified when the budget is about to be reached**\" → **budget alert** (e.g., 90%).\n- Group all sandbox projects in a **folder** and scope the budget to it.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Engineers get sandbox projects to explore Google Cloud. The total testing budget across the organization is $1,000.\n- **What you must achieve:** Notify engineers when spending is about to reach the budget.\n- **The limits:** Automate as much as possible.\n- **What they're really asking:** How do you set up a shared budget with an automatic warning?\n\n**Clues in the question:**\n- \"**notified when the budget is about to be reached**\" → **budget alert** (e.g., 90%).\n- Group all sandbox projects in a **folder** and scope the budget to it.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -20462,7 +20462,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Total sandbox budget $1,000; **notify** near the limit; **automate**."
+  "plain": "- **The situation:** Engineers get sandbox projects to explore Google Cloud. The total testing budget across the organization is $1,000.\n- **What you must achieve:** Notify engineers when spending is about to reach the budget.\n- **The limits:** Automate as much as possible.\n- **What they're really asking:** How do you set up a shared budget with an automatic warning?"
  },
  {
   "file": "Q317-landing-zone-shared-vpc-hierarchical-fw.md",
@@ -20470,7 +20470,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Prod VMs talk privately; **all VMs in the org** accept certain TCP ports; low ops.\n\n**Clues in the question:**\n- Many projects, private IPs, least ops → **Shared VPC** (host + service projects), not many peerings.\n- \"**all VMs in your Google Cloud organization … specific TCP ports**\" → **hierarchical firewall policy** at the org. (Org policies don't control ports.)\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** You are moving VMs to Google Cloud and must first build a landing zone (the base setup of projects, networks and rules).\n- **What you must achieve:** Production VMs must talk to each other over private IPs, and every VM in the organization must accept connections on certain TCP ports.\n- **The limits:** Follow recommended practice and keep operating costs low.\n- **What they're really asking:** How should you set up the networks and the organization-wide port rules?\n\n**Clues in the question:**\n- Many projects, private IPs, least ops → **Shared VPC** (host + service projects), not many peerings.\n- \"**all VMs in your Google Cloud organization … specific TCP ports**\" → **hierarchical firewall policy** at the org. (Org policies don't control ports.)\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -20526,7 +20526,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Prod VMs talk privately; **all VMs in the org** accept certain TCP ports; low ops."
+  "plain": "- **The situation:** You are moving VMs to Google Cloud and must first build a landing zone (the base setup of projects, networks and rules).\n- **What you must achieve:** Production VMs must talk to each other over private IPs, and every VM in the organization must accept connections on certain TCP ports.\n- **The limits:** Follow recommended practice and keep operating costs low.\n- **What they're really asking:** How should you set up the networks and the organization-wide port rules?"
  },
  {
   "file": "Q318-compliant-terraform-modules.md",
@@ -20534,7 +20534,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Teams deploy on their own **without knowing every detail** of company practices.\n\n**Clues in the question:**\n- \"**without having to know all implementation details**\" → reusable **Terraform modules** that build in the practices.\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** You help many engineering teams deploy infrastructure, and the company requires certain practices for every workload.\n- **What you must achieve:** Let teams deploy on their own.\n- **The limits:** Teams shouldn't need to know every detail of the company's required practices.\n- **What they're really asking:** How can teams build infrastructure that follows the rules without knowing them all?\n\n**Clues in the question:**\n- \"**without having to know all implementation details**\" → reusable **Terraform modules** that build in the practices.\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -20590,7 +20590,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Teams deploy on their own **without knowing every detail** of company practices."
+  "plain": "- **The situation:** You help many engineering teams deploy infrastructure, and the company requires certain practices for every workload.\n- **What you must achieve:** Let teams deploy on their own.\n- **The limits:** Teams shouldn't need to know every detail of the company's required practices.\n- **What they're really asking:** How can teams build infrastructure that follows the rules without knowing them all?"
  },
  {
   "file": "Q319-cloud-run-revision-min-instances.md",
@@ -20598,7 +20598,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** New version must have **2 warm instances** before traffic moves.\n\n**Clues in the question:**\n- \"**two idle instances**\" for the **new** version → **revision min instances = 2** on the **new revision**.\n\n**Exam topic:** Cloud Run."
+    "md": "**In plain words:**\n- **The situation:** An app runs on Cloud Run, and a new version (revision) has been released.\n- **What you must achieve:** Send traffic to the new version.\n- **The limits:** The new version must have two idle instances ready before traffic moves, so there is no startup delay; keep admin work low.\n- **What they're really asking:** How do you make sure the new version has two warm instances before switching traffic?\n\n**Clues in the question:**\n- \"**two idle instances**\" for the **new** version → **revision min instances = 2** on the **new revision**.\n\n**Exam topic:** Cloud Run."
    },
    {
     "kind": "terms",
@@ -20654,7 +20654,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "New version must have **2 warm instances** before traffic moves."
+  "plain": "- **The situation:** An app runs on Cloud Run, and a new version (revision) has been released.\n- **What you must achieve:** Send traffic to the new version.\n- **The limits:** The new version must have two idle instances ready before traffic moves, so there is no startup delay; keep admin work low.\n- **What they're really asking:** How do you make sure the new version has two warm instances before switching traffic?"
  },
  {
   "file": "Q320-single-replica-more-cpu-vpa.md",
@@ -20662,7 +20662,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Only **one replica** allowed; needs **more CPU** at peaks.\n\n**Clues in the question:**\n- \"**can only have one replica**\" rules out HPA.\n- \"**more CPU than what has been configured**\" → **VPA** adjusts requests up/down.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** A stateful app on GKE can only have one replica (one running copy). It becomes unstable at peak times because it needs more CPU than its manifest gives it.\n- **What you must achieve:** Give it enough CPU at peak times.\n- **The limits:** Stay cost-efficient when it's quiet, and it can still only have one copy.\n- **What they're really asking:** Which feature gives the single Pod more CPU when needed?\n\n**Clues in the question:**\n- \"**can only have one replica**\" rules out HPA.\n- \"**more CPU than what has been configured**\" → **VPA** adjusts requests up/down.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -20718,7 +20718,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Only **one replica** allowed; needs **more CPU** at peaks."
+  "plain": "- **The situation:** A stateful app on GKE can only have one replica (one running copy). It becomes unstable at peak times because it needs more CPU than its manifest gives it.\n- **What you must achieve:** Give it enough CPU at peak times.\n- **The limits:** Stay cost-efficient when it's quiet, and it can still only have one copy.\n- **What they're really asking:** Which feature gives the single Pod more CPU when needed?"
  },
  {
   "file": "Q321-cost-analysis-billing-export-looker-studio.md",
@@ -20726,7 +20726,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Detailed** cost analysis + **many chart types on one dashboard**.\n\n**Clues in the question:**\n- \"**detailed cost analysis**\" → **billing export to BigQuery**.\n- \"**visualize … in multiple ways on the same dashboard**\" → **Looker Studio** on that dataset.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Your company runs many apps on Google Cloud, and you manage cloud costs.\n- **What you must achieve:** Do detailed cost analysis.\n- **The limits:** Show the cost data in several different ways on the same dashboard.\n- **What they're really asking:** How do you get detailed cost data and build a flexible dashboard?\n\n**Clues in the question:**\n- \"**detailed cost analysis**\" → **billing export to BigQuery**.\n- \"**visualize … in multiple ways on the same dashboard**\" → **Looker Studio** on that dataset.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -20782,7 +20782,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "**Detailed** cost analysis + **many chart types on one dashboard**."
+  "plain": "- **The situation:** Your company runs many apps on Google Cloud, and you manage cloud costs.\n- **What you must achieve:** Do detailed cost analysis.\n- **The limits:** Show the cost data in several different ways on the same dashboard.\n- **What they're really asking:** How do you get detailed cost data and build a flexible dashboard?"
  },
  {
   "file": "Q322-migrate-150tb-video-storage-transfer-service.md",
@@ -20790,7 +20790,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Move selected old videos (large total) to Cloud Storage; **minimize cost** and **control bandwidth**.\n\n**Clues in the question:**\n- \"**control bandwidth usage**\" → **Storage Transfer Service for on-premises data** (agents, bandwidth limits, filters, scheduling).\n\n**Exam topic:** Data transfer."
+    "md": "**In plain words:**\n- **The situation:** A media company stores 150 TB of video files on-premises (each 100 MB to 100 GB), and local storage is full.\n- **What you must achieve:** Move rarely used videos older than one year to Cloud Storage.\n- **The limits:** Keep costs low and control how much network bandwidth the transfer uses.\n- **What they're really asking:** Which transfer method moves the files while letting you limit bandwidth?\n\n**Clues in the question:**\n- \"**control bandwidth usage**\" → **Storage Transfer Service for on-premises data** (agents, bandwidth limits, filters, scheduling).\n\n**Exam topic:** Data transfer."
    },
    {
     "kind": "terms",
@@ -20846,7 +20846,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Move selected old videos (large total) to Cloud Storage; **minimize cost** and **control bandwidth**."
+  "plain": "- **The situation:** A media company stores 150 TB of video files on-premises (each 100 MB to 100 GB), and local storage is full.\n- **What you must achieve:** Move rarely used videos older than one year to Cloud Storage.\n- **The limits:** Keep costs low and control how much network bandwidth the transfer uses.\n- **What they're really asking:** Which transfer method moves the files while letting you limit bandwidth?"
  },
  {
   "file": "Q323-company-ssh-standard-oslogin-org-policy.md",
@@ -20854,7 +20854,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Company-wide SSH standard, auditable, minimal manual steps.\n\n**Clues in the question:**\n- \"**company-wide standard**\" + \"**eliminating as many manual steps**\" → enforce **OS Login** with the **org policy** `compute.requireOsLogin`.\n- \"**audit compliance**\" → OS Login logs each user's identity.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You are creating a company-wide standard for SSH access to Compute Engine VMs.\n- **What you must achieve:** Make SSH access simple to manage.\n- **The limits:** Keep audit compliance (records of who logged in) and remove as many manual steps as possible.\n- **What they're really asking:** How do you enforce one SSH standard across all projects?\n\n**Clues in the question:**\n- \"**company-wide standard**\" + \"**eliminating as many manual steps**\" → enforce **OS Login** with the **org policy** `compute.requireOsLogin`.\n- \"**audit compliance**\" → OS Login logs each user's identity.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -20910,7 +20910,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Company-wide SSH standard, auditable, minimal manual steps."
+  "plain": "- **The situation:** You are creating a company-wide standard for SSH access to Compute Engine VMs.\n- **What you must achieve:** Make SSH access simple to manage.\n- **The limits:** Keep audit compliance (records of who logged in) and remove as many manual steps as possible.\n- **What they're really asking:** How do you enforce one SSH standard across all projects?"
  },
  {
   "file": "Q324-iot-submillisecond-bigtable.md",
@@ -20918,7 +20918,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** IoT sensor data, **sub-millisecond latency**.\n\n**Clues in the question:**\n- IoT time series + \"**sub-millisecond latency**\" → **Bigtable** (low single-digit ms or better, huge write throughput).\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** You are building an IoT app (internet-connected devices) that captures sensor data from many devices.\n- **What you must achieve:** Choose a global storage product for the sensor data.\n- **The limits:** Sub-millisecond latency (responses faster than one thousandth of a second).\n- **What they're really asking:** Which storage product fits sensor data with very low delay?\n\n**Clues in the question:**\n- IoT time series + \"**sub-millisecond latency**\" → **Bigtable** (low single-digit ms or better, huge write throughput).\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -20974,7 +20974,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "IoT sensor data, **sub-millisecond latency**."
+  "plain": "- **The situation:** You are building an IoT app (internet-connected devices) that captures sensor data from many devices.\n- **What you must achieve:** Choose a global storage product for the sensor data.\n- **The limits:** Sub-millisecond latency (responses faster than one thousandth of a second).\n- **What they're really asking:** Which storage product fits sensor data with very low delay?"
  },
  {
   "file": "Q325-pubsub-pull-auto-ack.md",
@@ -20982,7 +20982,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **Fetch** and **acknowledge** messages from `email-updates`.\n\n**Clues in the question:**\n- Fetch → **pull**. Acknowledge → **--auto-ack**. Messages come from a **subscription**, not a topic.\n\n**Exam topic:** Pub/Sub."
+    "md": "**In plain words:**\n- **The situation:** Your company uses Pub/Sub. A subscription named email-updates is attached to the new-orders topic.\n- **What you must achieve:** Fetch the waiting messages from that subscription and acknowledge them (mark them as handled).\n- **The limits:** None stated.\n- **What they're really asking:** Which gcloud command fetches and acknowledges the messages?\n\n**Clues in the question:**\n- Fetch → **pull**. Acknowledge → **--auto-ack**. Messages come from a **subscription**, not a topic.\n\n**Exam topic:** Pub/Sub."
    },
    {
     "kind": "terms",
@@ -21038,7 +21038,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "**Fetch** and **acknowledge** messages from `email-updates`."
+  "plain": "- **The situation:** Your company uses Pub/Sub. A subscription named email-updates is attached to the new-orders topic.\n- **What you must achieve:** Fetch the waiting messages from that subscription and acknowledge them (mark them as handled).\n- **The limits:** None stated.\n- **What they're really asking:** Which gcloud command fetches and acknowledges the messages?"
  },
  {
   "file": "Q326-service-account-best-practices-two.md",
@@ -21046,7 +21046,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Pick **two** Google best practices for service accounts.\n\n**Clues in the question:**\n- Google's guide: **create single-purpose service accounts** and **manage service accounts as resources** (like VMs — documented, owned, lifecycle-managed).\n- Unused accounts should be **disabled first**, then deleted later — not deleted immediately.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You create and manage service accounts (non-human identities for programs) for your workloads.\n- **What you must achieve:** Follow Google's recommended practices.\n- **The limits:** Choose two.\n- **What they're really asking:** Which two service account practices does Google recommend?\n\n**Clues in the question:**\n- Google's guide: **create single-purpose service accounts** and **manage service accounts as resources** (like VMs — documented, owned, lifecycle-managed).\n- Unused accounts should be **disabled first**, then deleted later — not deleted immediately.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -21108,7 +21108,7 @@ window.QUIZ_QUESTIONS = [
    "C",
    "D"
   ],
-  "plain": "Pick **two** Google best practices for service accounts."
+  "plain": "- **The situation:** You create and manage service accounts (non-human identities for programs) for your workloads.\n- **What you must achieve:** Follow Google's recommended practices.\n- **The limits:** Choose two.\n- **What they're really asking:** Which two service account practices does Google recommend?"
  },
  {
   "file": "Q327-global-relational-scale-spanner.md",
@@ -21116,7 +21116,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Relational, **global scale**, minimal admin.\n\n**Clues in the question:**\n- \"**relational**\" + \"**globally scale**\" → **Spanner**.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** Your on-premises relational database can no longer keep up as users grow fast.\n- **What you must achieve:** Move to a relational database that can scale globally.\n- **The limits:** Minimal management work and recommended practice.\n- **What they're really asking:** Which relational database scales worldwide with little management?\n\n**Clues in the question:**\n- \"**relational**\" + \"**globally scale**\" → **Spanner**.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -21172,7 +21172,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Relational, **global scale**, minimal admin."
+  "plain": "- **The situation:** Your on-premises relational database can no longer keep up as users grow fast.\n- **What you must achieve:** Move to a relational database that can scale globally.\n- **The limits:** Minimal management work and recommended practice.\n- **What they're really asking:** Which relational database scales worldwide with little management?"
  },
  {
   "file": "Q328-troubleshoot-review-error-first.md",
@@ -21180,7 +21180,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** User A gets an error, User B doesn't. **What first?**\n\n**Clues in the question:**\n- \"**What should you do first**\" → start with the **error message**; it tells you if it's permissions, network, or something else.\n\n**Exam topic:** Troubleshooting."
+    "md": "**In plain words:**\n- **The situation:** You administer Google Cloud. User A gets an error when accessing a Cloud SQL database, while User B can access it.\n- **What you must achieve:** Troubleshoot User A's problem.\n- **The limits:** Follow recommended practice and choose the first step.\n- **What they're really asking:** What should you do first?\n\n**Clues in the question:**\n- \"**What should you do first**\" → start with the **error message**; it tells you if it's permissions, network, or something else.\n\n**Exam topic:** Troubleshooting."
    },
    {
     "kind": "terms",
@@ -21236,7 +21236,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "User A gets an error, User B doesn't. **What first?**"
+  "plain": "- **The situation:** You administer Google Cloud. User A gets an error when accessing a Cloud SQL database, while User B can access it.\n- **What you must achieve:** Troubleshoot User A's problem.\n- **The limits:** Follow recommended practice and choose the first step.\n- **What they're really asking:** What should you do first?"
  },
  {
   "file": "Q329-subnet-full-expand-range.md",
@@ -21244,7 +21244,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Subnet almost full; double VMs soon; **no downtime**.\n\n**Clues in the question:**\n- \"**does not require downtime**\" → **expand-ip-range** (non-disruptive).\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** A subnet is almost out of private IP addresses, and the number of VMs in that region will double within a week.\n- **What you must achieve:** Make room for the new VMs.\n- **The limits:** Recommended practice, low operating cost, and no downtime.\n- **What they're really asking:** How do you get more addresses without downtime?\n\n**Clues in the question:**\n- \"**does not require downtime**\" → **expand-ip-range** (non-disruptive).\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -21300,7 +21300,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Subnet almost full; double VMs soon; **no downtime**."
+  "plain": "- **The situation:** A subnet is almost out of private IP addresses, and the number of VMs in that region will double within a week.\n- **What you must achieve:** Make room for the new VMs.\n- **The limits:** Recommended practice, low operating cost, and no downtime.\n- **What they're really asking:** How do you get more addresses without downtime?"
  },
  {
   "file": "Q330-unpredictable-web-cloud-run-service.md",
@@ -21308,7 +21308,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Containerized **web app**, **unpredictable traffic**, minimize cost.\n\n**Clues in the question:**\n- Web app → Cloud Run **service** (not job).\n- Unpredictable + cheap → scale to zero.\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** You built a containerized web app for a local event, and traffic will be unpredictable.\n- **What you must achieve:** Deploy it on Google Cloud.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Where should you run the containerized web app?\n\n**Clues in the question:**\n- Web app → Cloud Run **service** (not job).\n- Unpredictable + cheap → scale to zero.\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -21364,7 +21364,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Containerized **web app**, **unpredictable traffic**, minimize cost."
+  "plain": "- **The situation:** You built a containerized web app for a local event, and traffic will be unpredictable.\n- **What you must achieve:** Deploy it on Google Cloud.\n- **The limits:** Keep costs as low as possible.\n- **What they're really asking:** Where should you run the containerized web app?"
  },
  {
   "file": "Q331-global-website-multiregion-global-alb.md",
@@ -21372,7 +21372,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Users worldwide; **low latency**; growth in **many regions**. Pick two.\n\n**Clues in the question:**\n- \"**multiple geographical regions**\" → **VMs in several regions** near users.\n- One global anycast IP routing to the nearest healthy region → **global external Application Load Balancer**.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** Your website runs on Compute Engine, and visitors from around the world are increasing quickly.\n- **What you must achieve:** Keep delay low and support growth in several parts of the world.\n- **The limits:** Recommended practice and low operating cost; choose two.\n- **What they're really asking:** Which two changes help global users and growth?\n\n**Clues in the question:**\n- \"**multiple geographical regions**\" → **VMs in several regions** near users.\n- One global anycast IP routing to the nearest healthy region → **global external Application Load Balancer**.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -21434,7 +21434,7 @@ window.QUIZ_QUESTIONS = [
    "B",
    "D"
   ],
-  "plain": "Users worldwide; **low latency**; growth in **many regions**. Pick two."
+  "plain": "- **The situation:** Your website runs on Compute Engine, and visitors from around the world are increasing quickly.\n- **What you must achieve:** Keep delay low and support growth in several parts of the world.\n- **The limits:** Recommended practice and low operating cost; choose two.\n- **What they're really asking:** Which two changes help global users and growth?"
  },
  {
   "file": "Q332-local-script-sa-impersonation.md",
@@ -21442,7 +21442,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Run a script locally **as a service account**, most securely.\n\n**Clues in the question:**\n- \"**most secure way**\" → no keys → **impersonation** (`auth/impersonate_service_account`).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You are writing a shell script with gcloud commands.\n- **What you must achieve:** Test the script on your own computer as a service account.\n- **The limits:** In the most secure way.\n- **What they're really asking:** How do you run gcloud as a service account without a key file?\n\n**Clues in the question:**\n- \"**most secure way**\" → no keys → **impersonation** (`auth/impersonate_service_account`).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -21498,7 +21498,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Run a script locally **as a service account**, most securely."
+  "plain": "- **The situation:** You are writing a shell script with gcloud commands.\n- **What you must achieve:** Test the script on your own computer as a service account.\n- **The limits:** In the most secure way.\n- **What they're really asking:** How do you run gcloud as a service account without a key file?"
  },
  {
   "file": "Q333-eea-resource-locations-org-allowed.md",
@@ -21506,7 +21506,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** All resources in the **EEA**; projects are in many folders.\n\n**Clues in the question:**\n- \"**any resources**\" across folders → set at the **organization** level (inherits everywhere).\n- Use an **allowed** list (allowlist) of EEA locations; a deny list could miss new regions.\n\n**Exam topic:** Organization Policy."
+    "md": "**In plain words:**\n- **The situation:** Your company works in the European Economic Area (EEA). Projects are in different folders.\n- **What you must achieve:** Make sure every resource is created only in EEA locations, using the resource locations organization policy.\n- **The limits:** It must cover all folders and projects.\n- **What they're really asking:** At which level do you set the policy, and do you list allowed or blocked locations?\n\n**Clues in the question:**\n- \"**any resources**\" across folders → set at the **organization** level (inherits everywhere).\n- Use an **allowed** list (allowlist) of EEA locations; a deny list could miss new regions.\n\n**Exam topic:** Organization Policy."
    },
    {
     "kind": "terms",
@@ -21562,7 +21562,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "All resources in the **EEA**; projects are in many folders."
+  "plain": "- **The situation:** Your company works in the European Economic Area (EEA). Projects are in different folders.\n- **What you must achieve:** Make sure every resource is created only in EEA locations, using the resource locations organization policy.\n- **The limits:** It must cover all folders and projects.\n- **What they're really asking:** At which level do you set the policy, and do you list allowed or blocked locations?"
  },
  {
   "file": "Q334-three-tier-one-vpc-three-subnets.md",
@@ -21570,7 +21570,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Three tiers, **>1,000 IPs**, isolated, **least cost/complexity**.\n\n**Clues in the question:**\n- \"**more than 1,000 IP addresses**\" → /24 (256) is too small → **/16**.\n- \"**minimize cost, complexity**\" → **one VPC** with a subnet per tier and firewall rules by subnet ranges.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** You are deploying a large three-tier app (web, app and database tiers) with more than 1,000 IP addresses, and it must be securely isolated. Web takes public traffic, the app tier only accepts the web tier, and the database only accepts the app tier.\n- **What you must achieve:** Design the network.\n- **The limits:** Minimize cost, complexity and admin work.\n- **What they're really asking:** How should you lay out the network and firewall rules?\n\n**Clues in the question:**\n- \"**more than 1,000 IP addresses**\" → /24 (256) is too small → **/16**.\n- \"**minimize cost, complexity**\" → **one VPC** with a subnet per tier and firewall rules by subnet ranges.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -21626,7 +21626,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Three tiers, **>1,000 IPs**, isolated, **least cost/complexity**."
+  "plain": "- **The situation:** You are deploying a large three-tier app (web, app and database tiers) with more than 1,000 IP addresses, and it must be securely isolated. Web takes public traffic, the app tier only accepts the web tier, and the database only accepts the app tier.\n- **What you must achieve:** Design the network.\n- **The limits:** Minimize cost, complexity and admin work.\n- **What they're really asking:** How should you lay out the network and firewall rules?"
  },
  {
   "file": "Q335-team-cost-alerts-billing-export.md",
@@ -21634,7 +21634,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Teams need **threshold notifications** and **dashboards on detailed billing data**, low engineering.\n\n**Clues in the question:**\n- Notifications → **budget alerts**.\n- Detailed data for dashboards → **billing export to BigQuery** (no custom scripts).\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Your company watches cloud spending closely.\n- **What you must achieve:** Teams get notified at spending thresholds and can build dashboards from detailed billing data.\n- **The limits:** Recommended practice and low engineering cost.\n- **What they're really asking:** What should you set up for alerts and for detailed data?\n\n**Clues in the question:**\n- Notifications → **budget alerts**.\n- Detailed data for dashboards → **billing export to BigQuery** (no custom scripts).\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -21690,7 +21690,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Teams need **threshold notifications** and **dashboards on detailed billing data**, low engineering."
+  "plain": "- **The situation:** Your company watches cloud spending closely.\n- **What you must achieve:** Teams get notified at spending thresholds and can build dashboards from detailed billing data.\n- **The limits:** Recommended practice and low engineering cost.\n- **What they're really asking:** What should you set up for alerts and for detailed data?"
  },
  {
   "file": "Q336-postgres-demanding-alloydb-dms.md",
@@ -21698,7 +21698,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Demanding PostgreSQL: **fast transactional + analytical**, fully managed, sync replication & optimized storage.\n\n**Clues in the question:**\n- \"**fast transactional and analytical performance**\" + \"**optimize the storage layer**\" → **AlloyDB** (columnar engine, disaggregated storage with sync replication).\n- Migrate with **Database Migration Service**.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** You are moving an on-premises PostgreSQL database with demanding workloads (fast transactions and fast analytics).\n- **What you must achieve:** Choose a fully managed database.\n- **The limits:** It must replicate synchronously (every write copied at once) and optimize the storage layer.\n- **What they're really asking:** Which managed database and migration method fit?\n\n**Clues in the question:**\n- \"**fast transactional and analytical performance**\" + \"**optimize the storage layer**\" → **AlloyDB** (columnar engine, disaggregated storage with sync replication).\n- Migrate with **Database Migration Service**.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -21754,7 +21754,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Demanding PostgreSQL: **fast transactional + analytical**, fully managed, sync replication & optimized storage."
+  "plain": "- **The situation:** You are moving an on-premises PostgreSQL database with demanding workloads (fast transactions and fast analytics).\n- **What you must achieve:** Choose a fully managed database.\n- **The limits:** It must replicate synchronously (every write copied at once) and optimize the storage layer.\n- **What they're really asking:** Which managed database and migration method fit?"
  },
  {
   "file": "Q337-ldap-ou-sync-gcds.md",
@@ -21762,7 +21762,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Create Google identities for **IT and Data OUs** from **LDAP**, auto-updated.\n\n**Clues in the question:**\n- \"**LDAP directory**\" + \"**automatically update**\" + only some OUs → **Google Cloud Directory Sync (GCDS)** with OU filters, scheduled.\n\n**Exam topic:** Identity."
+    "md": "**In plain words:**\n- **The situation:** Employees are managed in an LDAP directory (a company user directory) with one OU (organizational unit, a folder) per department.\n- **What you must achieve:** Create Google Cloud identities for IT and Data department employees only.\n- **The limits:** Access must update automatically when people change departments, join or leave.\n- **What they're really asking:** How do you keep Google accounts in sync with those two OUs automatically?\n\n**Clues in the question:**\n- \"**LDAP directory**\" + \"**automatically update**\" + only some OUs → **Google Cloud Directory Sync (GCDS)** with OU filters, scheduled.\n\n**Exam topic:** Identity."
    },
    {
     "kind": "terms",
@@ -21818,7 +21818,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Create Google identities for **IT and Data OUs** from **LDAP**, auto-updated."
+  "plain": "- **The situation:** Employees are managed in an LDAP directory (a company user directory) with one OU (organizational unit, a folder) per department.\n- **What you must achieve:** Create Google Cloud identities for IT and Data department employees only.\n- **The limits:** Access must update automatically when people change departments, join or leave.\n- **What they're really asking:** How do you keep Google accounts in sync with those two OUs automatically?"
  },
  {
   "file": "Q338-mesh-fixed-instances-gke-standard.md",
@@ -21826,7 +21826,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Multiple containers + **service mesh**; **control how many compute instances run**.\n\n**Clues in the question:**\n- \"**control the number of compute instances**\" → **fixed node pool** (GKE Standard).\n- \"**service mesh**\" → **Cloud Service Mesh** add-on.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** A game's new frontend is built from several containers that talk through a service mesh (a layer that manages traffic between services).\n- **What you must achieve:** Control exactly how many compute instances (machines) are running.\n- **The limits:** None stated.\n- **What they're really asking:** Which platform lets you fix the number of machines and run a service mesh?\n\n**Clues in the question:**\n- \"**control the number of compute instances**\" → **fixed node pool** (GKE Standard).\n- \"**service mesh**\" → **Cloud Service Mesh** add-on.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -21882,7 +21882,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Multiple containers + **service mesh**; **control how many compute instances run**."
+  "plain": "- **The situation:** A game's new frontend is built from several containers that talk through a service mesh (a layer that manages traffic between services).\n- **What you must achieve:** Control exactly how many compute instances (machines) are running.\n- **The limits:** None stated.\n- **What they're really asking:** Which platform lets you fix the number of machines and run a service mesh?"
  },
  {
   "file": "Q339-internal-domain-cloud-dns-private-zone.md",
@@ -21890,7 +21890,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Resolve `internal.altostrat.com` from **VPC and on-prem**, **not public**, least overhead.\n\n**Clues in the question:**\n- \"**must not be resolvable from the public internet**\" → **private zone**.\n- \"**inbound server policy**\" already set → on-prem DNS can forward to Cloud DNS, so one record serves both.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** A new internal web app sits behind an internal load balancer. Your on-premises network connects through Cloud VPN, and an inbound DNS server policy is set up.\n- **What you must achieve:** Make internal.altostrat.com reachable from both the VPC and on-premises.\n- **The limits:** The name must not resolve on the public internet; least admin work.\n- **What they're really asking:** How do you set up DNS for the internal name?\n\n**Clues in the question:**\n- \"**must not be resolvable from the public internet**\" → **private zone**.\n- \"**inbound server policy**\" already set → on-prem DNS can forward to Cloud DNS, so one record serves both.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -21946,7 +21946,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Resolve `internal.altostrat.com` from **VPC and on-prem**, **not public**, least overhead."
+  "plain": "- **The situation:** A new internal web app sits behind an internal load balancer. Your on-premises network connects through Cloud VPN, and an inbound DNS server policy is set up.\n- **What you must achieve:** Make internal.altostrat.com reachable from both the VPC and on-premises.\n- **The limits:** The name must not resolve on the public internet; least admin work.\n- **What they're really asking:** How do you set up DNS for the internal name?"
  },
  {
   "file": "Q340-audit-old-sa-keys-asset-search.md",
@@ -21954,7 +21954,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Audit **service account keys** older than 90 days across hundreds of SAs.\n\n**Clues in the question:**\n- Org-wide search → **Cloud Asset Inventory** `search-all-resources`.\n- Correct asset type: **`iam.googleapis.com/ServiceAccountKey`** (not API keys).\n\n**Exam topic:** Security."
+    "md": "**In plain words:**\n- **The situation:** Your organization has hundreds of service accounts used by apps on-premises and in other clouds.\n- **What you must achieve:** Audit service account keys and find those older than 90 days.\n- **The limits:** Across the whole organization.\n- **What they're really asking:** Which command finds old service account keys organization-wide?\n\n**Clues in the question:**\n- Org-wide search → **Cloud Asset Inventory** `search-all-resources`.\n- Correct asset type: **`iam.googleapis.com/ServiceAccountKey`** (not API keys).\n\n**Exam topic:** Security."
    },
    {
     "kind": "terms",
@@ -22010,7 +22010,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Audit **service account keys** older than 90 days across hundreds of SAs."
+  "plain": "- **The situation:** Your organization has hundreds of service accounts used by apps on-premises and in other clouds.\n- **What you must achieve:** Audit service account keys and find those older than 90 days.\n- **The limits:** Across the whole organization.\n- **What they're really asking:** Which command finds old service account keys organization-wide?"
  },
  {
   "file": "Q341-terraform-gcs-backend.md",
@@ -22018,7 +22018,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Many people edit Terraform **concurrently**; **no sensitive values on local machines**.\n\n**Clues in the question:**\n- Shared state + locking + nothing stored locally → **remote backend in Cloud Storage** (`gcs` backend locks state).\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** You manage Google Cloud with Terraform (an Infrastructure as Code tool), and the files are in a Git repository.\n- **What you must achieve:** Let several people work on the Terraform configuration at the same time without conflicts.\n- **The limits:** Sensitive values must not be saved on anyone's laptop.\n- **What they're really asking:** Where should Terraform keep its state (its record of what it built)?\n\n**Clues in the question:**\n- Shared state + locking + nothing stored locally → **remote backend in Cloud Storage** (`gcs` backend locks state).\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -22074,7 +22074,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Many people edit Terraform **concurrently**; **no sensitive values on local machines**."
+  "plain": "- **The situation:** You manage Google Cloud with Terraform (an Infrastructure as Code tool), and the files are in a Git repository.\n- **What you must achieve:** Let several people work on the Terraform configuration at the same time without conflicts.\n- **The limits:** Sensitive values must not be saved on anyone's laptop.\n- **What they're really asking:** Where should Terraform keep its state (its record of what it built)?"
  },
  {
   "file": "Q342-startups-folders-separate-billing.md",
@@ -22082,7 +22082,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **One organization**, but **separate invoices** per startup.\n\n**Clues in the question:**\n- \"**single Google Cloud organization**\" → one org, folder per startup.\n- \"**separate monthly invoice**\" → a **Cloud Billing account per startup** (each billing account gets its own invoice).\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** A large company bought three startups. All their Google Cloud resources must be managed under one organization.\n- **What you must achieve:** Each startup gets its own monthly invoice.\n- **The limits:** Each has its own budget and finance reporting.\n- **What they're really asking:** How do you organize the startups and their billing?\n\n**Clues in the question:**\n- \"**single Google Cloud organization**\" → one org, folder per startup.\n- \"**separate monthly invoice**\" → a **Cloud Billing account per startup** (each billing account gets its own invoice).\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -22138,7 +22138,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "**One organization**, but **separate invoices** per startup."
+  "plain": "- **The situation:** A large company bought three startups. All their Google Cloud resources must be managed under one organization.\n- **What you must achieve:** Each startup gets its own monthly invoice.\n- **The limits:** Each has its own budget and finance reporting.\n- **What they're really asking:** How do you organize the startups and their billing?"
  },
  {
   "file": "Q343-cryptic-logs-gemini-explain.md",
@@ -22146,7 +22146,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Understand unfamiliar error logs **as quickly as possible**.\n\n**Clues in the question:**\n- \"**understand the meaning of these logs**\" + \"**as quickly as possible**\" + \"**no PII**\" → **Explain this log entry** (Gemini) in Logs Explorer.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** You are troubleshooting a complex failure and found cryptic error messages in Cloud Logging (they contain no personal data).\n- **What you must achieve:** Understand what the errors mean and what to do.\n- **The limits:** As quickly as possible; choose the first step.\n- **What they're really asking:** What is the fastest way to get the errors explained?\n\n**Clues in the question:**\n- \"**understand the meaning of these logs**\" + \"**as quickly as possible**\" + \"**no PII**\" → **Explain this log entry** (Gemini) in Logs Explorer.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -22202,7 +22202,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Understand unfamiliar error logs **as quickly as possible**."
+  "plain": "- **The situation:** You are troubleshooting a complex failure and found cryptic error messages in Cloud Logging (they contain no personal data).\n- **What you must achieve:** Understand what the errors mean and what to do.\n- **The limits:** As quickly as possible; choose the first step.\n- **What they're really asking:** What is the fastest way to get the errors explained?"
  },
  {
   "file": "Q344-log-view-view-accessor.md",
@@ -22210,7 +22210,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Show the frontend team **only certain logs** from a central bucket; least privilege, cheap.\n\n**Clues in the question:**\n- \"**must not be able to view any other logs**\" → **log view** with a filter + **`roles/logging.viewAccessor`** on that view.\n\n**Exam topic:** Logging."
+    "md": "**In plain words:**\n- **The situation:** Logs from a frontend project and a backend project are collected in one central logging project.\n- **What you must achieve:** The frontend team sees all frontend logs and only error-level backend logs.\n- **The limits:** They must not see any other logs; least privilege and low cost.\n- **What they're really asking:** How do you give the team access to exactly those logs?\n\n**Clues in the question:**\n- \"**must not be able to view any other logs**\" → **log view** with a filter + **`roles/logging.viewAccessor`** on that view.\n\n**Exam topic:** Logging."
    },
    {
     "kind": "terms",
@@ -22266,7 +22266,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Show the frontend team **only certain logs** from a central bucket; least privilege, cheap."
+  "plain": "- **The situation:** Logs from a frontend project and a backend project are collected in one central logging project.\n- **What you must achieve:** The frontend team sees all frontend logs and only error-level backend logs.\n- **The limits:** They must not see any other logs; least privilege and low cost.\n- **What they're really asking:** How do you give the team access to exactly those logs?"
  },
  {
   "file": "Q345-modify-sa-iam-policy-sa-admin.md",
@@ -22274,7 +22274,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** You need to **modify IAM policies for service accounts**, least privilege.\n\n**Clues in the question:**\n- \"**modify IAM policies for service accounts**\" + \"**least privilege**\" → **Service Account Admin**, not Editor/Owner.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A new service account must be allowed to invoke (call) a Cloud Run service.\n- **What you must achieve:** Get permission to change IAM policies for service accounts.\n- **The limits:** Least privilege (only what you need).\n- **What they're really asking:** Which role should you request for your own account?\n\n**Clues in the question:**\n- \"**modify IAM policies for service accounts**\" + \"**least privilege**\" → **Service Account Admin**, not Editor/Owner.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -22330,7 +22330,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "You need to **modify IAM policies for service accounts**, least privilege."
+  "plain": "- **The situation:** A new service account must be allowed to invoke (call) a Cloud Run service.\n- **What you must achieve:** Get permission to change IAM policies for service accounts.\n- **The limits:** Least privilege (only what you need).\n- **What they're really asking:** Which role should you request for your own account?"
  },
  {
   "file": "Q346-vendor-read-bucket-object-viewer.md",
@@ -22338,7 +22338,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Vendor reads objects in **one bucket**, nothing else.\n\n**Clues in the question:**\n- \"**read-only**\" → **Storage Object Viewer**.\n- \"**specific … bucket**\" + \"**must not … view any other resources**\" → grant **on the bucket**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A project holds a critical marketing app.\n- **What you must achieve:** Give an outside vendor read-only access to the files in one specific bucket.\n- **The limits:** The vendor must not see any other resources in the project.\n- **What they're really asking:** Which role do you grant, and on what?\n\n**Clues in the question:**\n- \"**read-only**\" → **Storage Object Viewer**.\n- \"**specific … bucket**\" + \"**must not … view any other resources**\" → grant **on the bucket**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -22394,7 +22394,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Vendor reads objects in **one bucket**, nothing else."
+  "plain": "- **The situation:** A project holds a critical marketing app.\n- **What you must achieve:** Give an outside vendor read-only access to the files in one specific bucket.\n- **The limits:** The vendor must not see any other resources in the project.\n- **What they're really asking:** Which role do you grant, and on what?"
  },
  {
   "file": "Q347-ops-start-stop-reset-custom-role.md",
@@ -22402,7 +22402,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Start/stop/reset VMs only. **No delete, no config changes.**\n\n**Clues in the question:**\n- \"**minimum necessary permissions**\" + no predefined role fits exactly → **custom role** with `start`, `stop`, `reset`.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A new operations team needs to start, stop and reset existing VMs in one project for basic troubleshooting.\n- **What you must achieve:** Give them only that ability.\n- **The limits:** They must not delete VMs or change networking or settings; minimum permissions.\n- **What they're really asking:** How do you give exactly start, stop and reset and nothing else?\n\n**Clues in the question:**\n- \"**minimum necessary permissions**\" + no predefined role fits exactly → **custom role** with `start`, `stop`, `reset`.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -22458,7 +22458,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Start/stop/reset VMs only. **No delete, no config changes.**"
+  "plain": "- **The situation:** A new operations team needs to start, stop and reset existing VMs in one project for basic troubleshooting.\n- **What you must achieve:** Give them only that ability.\n- **The limits:** They must not delete VMs or change networking or settings; minimum permissions.\n- **What they're really asking:** How do you give exactly start, stop and reset and nothing else?"
  },
  {
   "file": "Q348-public-ip-audit-asset-inventory.md",
@@ -22466,7 +22466,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Find **all VMs with a public IP** org-wide; managed, easy to maintain.\n\n**Clues in the question:**\n- Org-wide audit + managed → **Cloud Asset Inventory** query.\n\n**Exam topic:** Security."
+    "md": "**In plain words:**\n- **The situation:** You are auditing your Google Cloud organization.\n- **What you must achieve:** Find every Compute Engine VM that has a public IP address.\n- **The limits:** Easy to maintain and using managed Google Cloud services.\n- **What they're really asking:** Which managed service can list those VMs across the organization?\n\n**Clues in the question:**\n- Org-wide audit + managed → **Cloud Asset Inventory** query.\n\n**Exam topic:** Security."
    },
    {
     "kind": "terms",
@@ -22522,7 +22522,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Find **all VMs with a public IP** org-wide; managed, easy to maintain."
+  "plain": "- **The situation:** You are auditing your Google Cloud organization.\n- **What you must achieve:** Find every Compute Engine VM that has a public IP address.\n- **The limits:** Easy to maintain and using managed Google Cloud services.\n- **What they're really asking:** Which managed service can list those VMs across the organization?"
  },
  {
   "file": "Q349-project-creator-owner-role.md",
@@ -22530,7 +22530,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Find **who created** old manual projects.\n\n**Clues in the question:**\n- When a user creates a project, they're automatically granted **Owner** → check the IAM page.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You introduced an automated process for creating projects, but some projects were made by hand before it existed.\n- **What you must achieve:** Find who created those older projects so you can tell them about the new process.\n- **The limits:** None stated.\n- **What they're really asking:** Where can you see who created a project?\n\n**Clues in the question:**\n- When a user creates a project, they're automatically granted **Owner** → check the IAM page.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -22586,7 +22586,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Find **who created** old manual projects."
+  "plain": "- **The situation:** You introduced an automated process for creating projects, but some projects were made by hand before it existed.\n- **What you must achieve:** Find who created those older projects so you can tell them about the new process.\n- **The limits:** None stated.\n- **What they're really asking:** Where can you see who created a project?"
  },
  {
   "file": "Q350-ds-sandbox-folder-orgpolicy-owner.md",
@@ -22594,7 +22594,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Team needs **full admin**, but only in **us-east1** and only **BigQuery + Cloud Storage**.\n\n**Clues in the question:**\n- \"**restrict … us-east1**\" → resource locations constraint.\n- \"**only allow … BigQuery and Cloud Storage**\" → restrict allowed services (`gcp.restrictServiceUsage`).\n- \"**full administrative access**\" → **Owner** on the folder; guardrails limit what Owner can do.\n\n**Exam topic:** Organization Policy."
+    "md": "**In plain words:**\n- **The situation:** You are creating an isolated environment for a data science team that experiments in short-lived projects. All members are in one group.\n- **What you must achieve:** Give the team full administrative access.\n- **The limits:** Resources may only be created in us-east1, and only BigQuery and Cloud Storage may be used.\n- **What they're really asking:** How do you set up the folder, the restrictions and the team's access?\n\n**Clues in the question:**\n- \"**restrict … us-east1**\" → resource locations constraint.\n- \"**only allow … BigQuery and Cloud Storage**\" → restrict allowed services (`gcp.restrictServiceUsage`).\n- \"**full administrative access**\" → **Owner** on the folder; guardrails limit what Owner can do.\n\n**Exam topic:** Organization Policy."
    },
    {
     "kind": "terms",
@@ -22650,7 +22650,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Team needs **full admin**, but only in **us-east1** and only **BigQuery + Cloud Storage**."
+  "plain": "- **The situation:** You are creating an isolated environment for a data science team that experiments in short-lived projects. All members are in one group.\n- **What you must achieve:** Give the team full administrative access.\n- **The limits:** Resources may only be created in us-east1, and only BigQuery and Cloud Storage may be used.\n- **What they're really asking:** How do you set up the folder, the restrictions and the team's access?"
  },
  {
   "file": "Q351-no-external-ip-internet-cloud-nat.md",
@@ -22658,7 +22658,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** No external IPs allowed, but the VM must **download updates from the internet**.\n\n**Clues in the question:**\n- Outbound internet without an external IP → **Cloud NAT**.\n\n**Exam topic:** Networking."
+    "md": "**In plain words:**\n- **The situation:** You are creating a VM for a new app. Organization policy forbids external IP addresses on VMs.\n- **What you must achieve:** The app must still reach the internet to download updates and packages.\n- **The limits:** No external IP on the VM.\n- **What they're really asking:** How can a VM without an external IP reach the internet?\n\n**Clues in the question:**\n- Outbound internet without an external IP → **Cloud NAT**.\n\n**Exam topic:** Networking."
    },
    {
     "kind": "terms",
@@ -22714,7 +22714,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "No external IPs allowed, but the VM must **download updates from the internet**."
+  "plain": "- **The situation:** You are creating a VM for a new app. Organization policy forbids external IP addresses on VMs.\n- **What you must achieve:** The app must still reach the internet to download updates and packages.\n- **The limits:** No external IP on the VM.\n- **What they're really asking:** How can a VM without an external IP reach the internet?"
  },
  {
   "file": "Q352-gke-api-disabled-enable-container.md",
@@ -22722,7 +22722,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Error: **Kubernetes Engine API … disabled**. Fix?\n\n**Clues in the question:**\n- The error names the cause: the API isn't enabled → **enable `container.googleapis.com`**.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** You ran gcloud container clusters create app-cluster in a new project, and it failed with: Kubernetes Engine API has not been used in the project before or it is disabled.\n- **What you must achieve:** Fix the problem.\n- **The limits:** None stated.\n- **What they're really asking:** What do you do before running the create command again?\n\n**Clues in the question:**\n- The error names the cause: the API isn't enabled → **enable `container.googleapis.com`**.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -22778,7 +22778,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Error: **Kubernetes Engine API … disabled**. Fix?"
+  "plain": "- **The situation:** You ran gcloud container clusters create app-cluster in a new project, and it failed with: Kubernetes Engine API has not been used in the project before or it is disabled.\n- **What you must achieve:** Fix the problem.\n- **The limits:** None stated.\n- **What they're really asking:** What do you do before running the create command again?"
  },
  {
   "file": "Q353-billing-standard-detailed-export.md",
@@ -22786,7 +22786,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Daily export of all billing data **including resource-level costs** to BigQuery.\n\n**Clues in the question:**\n- \"**resource-level cost data**\" → **detailed usage cost** export (adds resource names/IDs). Enable with standard export.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** Your company wants all projects under one Cloud Billing account. Finance needs a daily export of all billing data, including per-resource costs, to a central BigQuery dataset.\n- **What you must achieve:** Set this up.\n- **The limits:** Most cost-effective with minimal admin impact.\n- **What they're really asking:** Which export settings provide daily, resource-level billing data in BigQuery?\n\n**Clues in the question:**\n- \"**resource-level cost data**\" → **detailed usage cost** export (adds resource names/IDs). Enable with standard export.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -22842,7 +22842,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Daily export of all billing data **including resource-level costs** to BigQuery."
+  "plain": "- **The situation:** Your company wants all projects under one Cloud Billing account. Finance needs a daily export of all billing data, including per-resource costs, to a central BigQuery dataset.\n- **What you must achieve:** Set this up.\n- **The limits:** Most cost-effective with minimal admin impact.\n- **What they're really asking:** Which export settings provide daily, resource-level billing data in BigQuery?"
  },
  {
   "file": "Q354-gke-nodes-custom-sa-pull-images.md",
@@ -22850,7 +22850,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** SA already has Artifact Registry pull permission. Make GKE use it to pull images.\n\n**Clues in the question:**\n- Image pulls are done by the **node's** (kubelet's) identity → create nodes with **`--service-account`**.\n\n**Exam topic:** GKE."
+    "md": "**In plain words:**\n- **The situation:** Your team's container images are in Artifact Registry, and you already have a service account allowed to pull (download) them.\n- **What you must achieve:** Create a new GKE cluster and deploy those images.\n- **The limits:** Make sure the images can actually be pulled on the cluster.\n- **What they're really asking:** How do you set up the cluster so it can pull images with that service account?\n\n**Clues in the question:**\n- Image pulls are done by the **node's** (kubelet's) identity → create nodes with **`--service-account`**.\n\n**Exam topic:** GKE."
    },
    {
     "kind": "terms",
@@ -22906,7 +22906,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "SA already has Artifact Registry pull permission. Make GKE use it to pull images."
+  "plain": "- **The situation:** Your team's container images are in Artifact Registry, and you already have a service account allowed to pull (download) them.\n- **What you must achieve:** Create a new GKE cluster and deploy those images.\n- **The limits:** Make sure the images can actually be pulled on the cluster.\n- **What they're really asking:** How do you set up the cluster so it can pull images with that service account?"
  },
  {
   "file": "Q355-db-fleet-health-database-center.md",
@@ -22914,7 +22914,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Single view of the **health** of all databases and which are **at risk**.\n\n**Clues in the question:**\n- \"**single, unified view**\" + \"**health**\" + \"**at risk for downtime**\" across many DB products → **Database Center**.\n\n**Exam topic:** Databases."
+    "md": "**In plain words:**\n- **The situation:** You manage many databases: Bigtable, Cloud SQL, Memorystore and Spanner.\n- **What you must achieve:** One unified view of the health of all of them, showing which are at risk of downtime.\n- **The limits:** None stated.\n- **What they're really asking:** Which console tool shows the health of all your databases in one place?\n\n**Clues in the question:**\n- \"**single, unified view**\" + \"**health**\" + \"**at risk for downtime**\" across many DB products → **Database Center**.\n\n**Exam topic:** Databases."
    },
    {
     "kind": "terms",
@@ -22970,7 +22970,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Single view of the **health** of all databases and which are **at risk**."
+  "plain": "- **The situation:** You manage many databases: Bigtable, Cloud SQL, Memorystore and Spanner.\n- **What you must achieve:** One unified view of the health of all of them, showing which are at risk of downtime.\n- **The limits:** None stated.\n- **What they're really asking:** Which console tool shows the health of all your databases in one place?"
  },
  {
   "file": "Q356-prefix-access-ubla-iam-condition.md",
@@ -22978,7 +22978,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Read only **`site1-data/`** objects, including **new ones**, minimal work.\n\n**Clues in the question:**\n- Prefix-scoped access that covers new objects → **IAM condition** `resource.name.startsWith(...)` (needs **uniform bucket-level access**).\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** A Cloud Run web app reads files from a shared bucket.\n- **What you must achieve:** Let it read files whose names start with site1-data/, including new files added later.\n- **The limits:** Minimal work to set up and maintain.\n- **What they're really asking:** How do you grant access to just that prefix in the existing bucket?\n\n**Clues in the question:**\n- Prefix-scoped access that covers new objects → **IAM condition** `resource.name.startsWith(...)` (needs **uniform bucket-level access**).\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -23034,7 +23034,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Read only **`site1-data/`** objects, including **new ones**, minimal work."
+  "plain": "- **The situation:** A Cloud Run web app reads files from a shared bucket.\n- **What you must achieve:** Let it read files whose names start with site1-data/, including new files added later.\n- **The limits:** Minimal work to set up and maintain.\n- **What they're really asking:** How do you grant access to just that prefix in the existing bucket?"
  },
  {
   "file": "Q357-vertex-agent-sa-pubsub-roles.md",
@@ -23042,7 +23042,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** App now runs as a **new service account** on Vertex AI; it must still read Pub/Sub.\n\n**Clues in the question:**\n- New identity → grant **it** the needed roles (e.g., `roles/pubsub.subscriber`). No keys, no personal credentials.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** An app reads from a Pub/Sub topic. Locally you tested it with your personal login. Now it will run on Vertex AI using a new service account as its identity.\n- **What you must achieve:** Keep the deployed app able to read the topic.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do so the new identity can access Pub/Sub?\n\n**Clues in the question:**\n- New identity → grant **it** the needed roles (e.g., `roles/pubsub.subscriber`). No keys, no personal credentials.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -23098,7 +23098,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "App now runs as a **new service account** on Vertex AI; it must still read Pub/Sub."
+  "plain": "- **The situation:** An app reads from a Pub/Sub topic. Locally you tested it with your personal login. Now it will run on Vertex AI using a new service account as its identity.\n- **What you must achieve:** Keep the deployed app able to read the topic.\n- **The limits:** None stated.\n- **What they're really asking:** What must you do so the new identity can access Pub/Sub?"
  },
  {
   "file": "Q358-test-sa-permissions-token-creator.md",
@@ -23106,7 +23106,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Test as SERVICE_ACCOUNT **without handling secrets**.\n\n**Clues in the question:**\n- Impersonation (short-lived tokens) requires **`roles/iam.serviceAccountTokenCreator`**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You develop on your own workstation, signed in with your Google account (USER).\n- **What you must achieve:** Test whether an existing service account's (SERVICE_ACCOUNT) permissions are enough for a task.\n- **The limits:** Don't handle any sensitive secrets like key files.\n- **What they're really asking:** Which role should USER get on the service account?\n\n**Clues in the question:**\n- Impersonation (short-lived tokens) requires **`roles/iam.serviceAccountTokenCreator`**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -23162,7 +23162,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Test as SERVICE_ACCOUNT **without handling secrets**."
+  "plain": "- **The situation:** You develop on your own workstation, signed in with your Google account (USER).\n- **What you must achieve:** Test whether an existing service account's (SERVICE_ACCOUNT) permissions are enough for a task.\n- **The limits:** Don't handle any sensitive secrets like key files.\n- **What they're really asking:** Which role should USER get on the service account?"
  },
  {
   "file": "Q359-avro-petabytes-external-table.md",
@@ -23170,7 +23170,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Analyze PBs of Avro in BigQuery; **cheap storage**; **don't load** into BigQuery storage.\n\n**Clues in the question:**\n- \"**avoid the overhead of loading data into BigQuery's managed storage**\" → **external table** on Cloud Storage.\n- \"**minimize storage costs**\" → Cloud Storage; **partitioned** keeps queries efficient.\n\n**Exam topic:** BigQuery."
+    "md": "**In plain words:**\n- **The situation:** You have petabytes of historical transaction data in Avro format (a data file format) on-premises, for a machine learning project.\n- **What you must achieve:** Make it available for large-scale analysis and model training with BigQuery.\n- **The limits:** Keep storage costs low and avoid loading the data into BigQuery's own storage.\n- **What they're really asking:** How do you store the data and let BigQuery query it?\n\n**Clues in the question:**\n- \"**avoid the overhead of loading data into BigQuery's managed storage**\" → **external table** on Cloud Storage.\n- \"**minimize storage costs**\" → Cloud Storage; **partitioned** keeps queries efficient.\n\n**Exam topic:** BigQuery."
    },
    {
     "kind": "terms",
@@ -23226,7 +23226,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Analyze PBs of Avro in BigQuery; **cheap storage**; **don't load** into BigQuery storage."
+  "plain": "- **The situation:** You have petabytes of historical transaction data in Avro format (a data file format) on-premises, for a machine learning project.\n- **What you must achieve:** Make it available for large-scale analysis and model training with BigQuery.\n- **The limits:** Keep storage costs low and avoid loading the data into BigQuery's own storage.\n- **What they're really asking:** How do you store the data and let BigQuery query it?"
  },
  {
   "file": "Q360-gke-monitoring-no-keys-workload-identity.md",
@@ -23234,7 +23234,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** GKE app needs SA access; **no new keys**.\n\n**Clues in the question:**\n- \"**prohibits the creation of new service account keys**\" → **Workload Identity Federation for GKE**.\n\n**Exam topic:** GKE / IAM."
+    "md": "**In plain words:**\n- **The situation:** A monitoring app on GKE needs service account credentials to collect performance data. Organization policy forbids creating new service account keys.\n- **What you must achieve:** Give the app access.\n- **The limits:** Follow Google-recommended security practices.\n- **What they're really asking:** How does the app get credentials without a key?\n\n**Clues in the question:**\n- \"**prohibits the creation of new service account keys**\" → **Workload Identity Federation for GKE**.\n\n**Exam topic:** GKE / IAM."
    },
    {
     "kind": "terms",
@@ -23290,7 +23290,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "GKE app needs SA access; **no new keys**."
+  "plain": "- **The situation:** A monitoring app on GKE needs service account credentials to collect performance data. Organization policy forbids creating new service account keys.\n- **What you must achieve:** Give the app access.\n- **The limits:** Follow Google-recommended security practices.\n- **What they're really asking:** How does the app get credentials without a key?"
  },
  {
   "file": "Q361-dev-deploy-gke-group-container-developer.md",
@@ -23298,7 +23298,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** New dev deploys to an existing cluster; **not** manage the cluster or other resources.\n\n**Clues in the question:**\n- Deploy workloads only → **`roles/container.developer`**.\n- Team already has a group with it → just **add the developer to the group**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A new developer joined the cloud-developer team and must deploy containerized apps to an existing GKE cluster.\n- **What you must achieve:** Give them deploy access.\n- **The limits:** They must not manage other resources or the cluster itself; least privilege.\n- **What they're really asking:** How do you give the new developer the right access?\n\n**Clues in the question:**\n- Deploy workloads only → **`roles/container.developer`**.\n- Team already has a group with it → just **add the developer to the group**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -23354,7 +23354,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "New dev deploys to an existing cluster; **not** manage the cluster or other resources."
+  "plain": "- **The situation:** A new developer joined the cloud-developer team and must deploy containerized apps to an existing GKE cluster.\n- **What you must achieve:** Give them deploy access.\n- **The limits:** They must not manage other resources or the cluster itself; least privilege.\n- **What they're really asking:** How do you give the new developer the right access?"
  },
  {
   "file": "Q362-team-access-security-groups.md",
@@ -23362,7 +23362,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Access by **team membership**, easy join/leave, best security practice.\n\n**Clues in the question:**\n- Use **Google Groups** in IAM.\n- \"**Google-recommended security practices**\" → label the group as a **security group** (`groups.security`).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** You are defining how teams get access to hundreds of resources. Your identity provider is Cloud Identity, and access should follow team membership.\n- **What you must achieve:** Make granting and removing access easy as people join and leave teams.\n- **The limits:** Minimal admin effort and recommended security practice.\n- **What they're really asking:** How should you represent teams and grant them access?\n\n**Clues in the question:**\n- Use **Google Groups** in IAM.\n- \"**Google-recommended security practices**\" → label the group as a **security group** (`groups.security`).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -23418,7 +23418,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Access by **team membership**, easy join/leave, best security practice."
+  "plain": "- **The situation:** You are defining how teams get access to hundreds of resources. Your identity provider is Cloud Identity, and access should follow team membership.\n- **What you must achieve:** Make granting and removing access easy as people join and leave teams.\n- **The limits:** Minimal admin effort and recommended security practice.\n- **What they're really asking:** How should you represent teams and grant them access?"
  },
  {
   "file": "Q363-audit-old-sa-keys-asset-search-2.md",
@@ -23426,7 +23426,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Audit SA keys older than 90 days across the org.\n\n**Clues in the question:**\n- Org-wide → **asset search**; type **`iam.googleapis.com/ServiceAccountKey`**.\n\n**Exam topic:** Security."
+    "md": "**In plain words:**\n- **The situation:** Your organization has hundreds of service accounts used by apps on-premises and in other clouds.\n- **What you must achieve:** Audit service account keys and find those older than 90 days.\n- **The limits:** Across the whole organization.\n- **What they're really asking:** Which command finds old service account keys organization-wide?\n\n**Clues in the question:**\n- Org-wide → **asset search**; type **`iam.googleapis.com/ServiceAccountKey`**.\n\n**Exam topic:** Security."
    },
    {
     "kind": "terms",
@@ -23482,7 +23482,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Audit SA keys older than 90 days across the org."
+  "plain": "- **The situation:** Your organization has hundreds of service accounts used by apps on-premises and in other clouds.\n- **What you must achieve:** Audit service account keys and find those older than 90 days.\n- **The limits:** Across the whole organization.\n- **What they're really asking:** Which command finds old service account keys organization-wide?"
  },
  {
   "file": "Q364-australia-locations-allowed-values.md",
@@ -23490,7 +23490,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Only `australia-southeast1` and `-southeast2`; **minimal configuration**.\n\n**Clues in the question:**\n- Built-in **`gcp.resourceLocations`** constraint + value group **`in:australia-locations`** in **allowed** values. No custom CEL needed.\n\n**Exam topic:** Organization Policy."
+    "md": "**In plain words:**\n- **The situation:** You are the organization policy admin in a regulated industry.\n- **What you must achieve:** Allow new location-based resources only in australia-southeast1 and australia-southeast2.\n- **The limits:** Minimal configuration.\n- **What they're really asking:** How do you set the location policy?\n\n**Clues in the question:**\n- Built-in **`gcp.resourceLocations`** constraint + value group **`in:australia-locations`** in **allowed** values. No custom CEL needed.\n\n**Exam topic:** Organization Policy."
    },
    {
     "kind": "terms",
@@ -23546,7 +23546,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Only `australia-southeast1` and `-southeast2`; **minimal configuration**."
+  "plain": "- **The situation:** You are the organization policy admin in a regulated industry.\n- **What you must achieve:** Allow new location-based resources only in australia-southeast1 and australia-southeast2.\n- **The limits:** Minimal configuration.\n- **What they're really asking:** How do you set the location policy?"
  },
  {
   "file": "Q365-all-employees-domain-principal.md",
@@ -23554,7 +23554,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **All employees** (one Cloud Identity domain) get read-only access.\n\n**Clues in the question:**\n- \"**All employees … in the terramearth.com Cloud Identity account**\" → principal **`domain:terramearth.com`**.\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** HR publishes a BigQuery dataset with anonymized sales and product data. Every employee is in the terramearth.com Cloud Identity account.\n- **What you must achieve:** Give all employees read-only access to the dataset.\n- **The limits:** They must be signed in with their company accounts.\n- **What they're really asking:** Which principal (who) should get the read role?\n\n**Clues in the question:**\n- \"**All employees … in the terramearth.com Cloud Identity account**\" → principal **`domain:terramearth.com`**.\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -23610,7 +23610,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**All employees** (one Cloud Identity domain) get read-only access."
+  "plain": "- **The situation:** HR publishes a BigQuery dataset with anonymized sales and product data. Every employee is in the terramearth.com Cloud Identity account.\n- **What you must achieve:** Give all employees read-only access to the dataset.\n- **The limits:** They must be signed in with their company accounts.\n- **What they're really asking:** Which principal (who) should get the read role?"
  },
  {
   "file": "Q366-terraform-root-dir-per-app.md",
@@ -23618,7 +23618,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Separate Terraform for each app so they're **managed independently**.\n\n**Clues in the question:**\n- Independent management = separate **state** → a **root directory (root module) per application**.\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** You will manage all Google Cloud resources with Terraform, and you have several apps.\n- **What you must achieve:** Manage each app separately from the others.\n- **The limits:** None stated.\n- **What they're really asking:** How should you structure the Terraform code repository?\n\n**Clues in the question:**\n- Independent management = separate **state** → a **root directory (root module) per application**.\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -23674,7 +23674,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Separate Terraform for each app so they're **managed independently**."
+  "plain": "- **The situation:** You will manage all Google Cloud resources with Terraform, and you have several apps.\n- **What you must achieve:** Manage each app separately from the others.\n- **The limits:** None stated.\n- **What they're really asking:** How should you structure the Terraform code repository?"
  },
  {
   "file": "Q367-lifecycle-age-90-archive.md",
@@ -23682,7 +23682,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** After **90 days**, move automatically to the **cheapest long-term** class; keep forever.\n\n**Clues in the question:**\n- Automatic transition → **Object Lifecycle Management**.\n- \"**lowest-cost … long-term**\" → **Archive**. Condition **age: 90**.\n\n**Exam topic:** Cloud Storage."
+    "md": "**In plain words:**\n- **The situation:** Archive records are in a Cloud Storage bucket using the Multi-Regional class. They are rarely read after 90 days but must be kept forever for compliance.\n- **What you must achieve:** Automatically move them to the cheapest long-term class right after 90 days.\n- **The limits:** Cost-effective and automatic.\n- **What they're really asking:** Which bucket rule moves files at 90 days, and to which class?\n\n**Clues in the question:**\n- Automatic transition → **Object Lifecycle Management**.\n- \"**lowest-cost … long-term**\" → **Archive**. Condition **age: 90**.\n\n**Exam topic:** Cloud Storage."
    },
    {
     "kind": "terms",
@@ -23738,7 +23738,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "After **90 days**, move automatically to the **cheapest long-term** class; keep forever."
+  "plain": "- **The situation:** Archive records are in a Cloud Storage bucket using the Multi-Regional class. They are rarely read after 90 days but must be kept forever for compliance.\n- **What you must achieve:** Automatically move them to the cheapest long-term class right after 90 days.\n- **The limits:** Cost-effective and automatic.\n- **What they're really asking:** Which bucket rule moves files at 90 days, and to which class?"
  },
  {
   "file": "Q368-track-db-connections-log-metric.md",
@@ -23746,7 +23746,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Count **new database connections created by the app** to check reuse.\n\n**Clues in the question:**\n- App-specific event → **log it** in the app, make a **log-based (custom) metric**, chart it.\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** An app on Cloud Run uses Cloud SQL.\n- **What you must achieve:** Track how many database connections the app creates, to check that connections are reused.\n- **The limits:** None stated.\n- **What they're really asking:** How do you measure and chart the number of new connections?\n\n**Clues in the question:**\n- App-specific event → **log it** in the app, make a **log-based (custom) metric**, chart it.\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -23802,7 +23802,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Count **new database connections created by the app** to check reuse."
+  "plain": "- **The situation:** An app on Cloud Run uses Cloud SQL.\n- **What you must achieve:** Track how many database connections the app creates, to check that connections are reused.\n- **The limits:** None stated.\n- **What they're really asking:** How do you measure and chart the number of new connections?"
  },
  {
   "file": "Q369-vm-logs-bucket-object-creator.md",
@@ -23810,7 +23810,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Write new logs to **one bucket**; **no modify/delete**, no other buckets.\n\n**Clues in the question:**\n- Create-only → **`roles/storage.objectCreator`**.\n- One bucket → grant **on the bucket**; dedicated SA, attached (no keys).\n\n**Exam topic:** IAM."
+    "md": "**In plain words:**\n- **The situation:** A new app on a VM must write log files to the bucket project-logs-us-central1.\n- **What you must achieve:** Let it create new files in that bucket.\n- **The limits:** It must not change or delete existing files or reach any other bucket; least privilege.\n- **What they're really asking:** Which identity and role give create-only access to that one bucket?\n\n**Clues in the question:**\n- Create-only → **`roles/storage.objectCreator`**.\n- One bucket → grant **on the bucket**; dedicated SA, attached (no keys).\n\n**Exam topic:** IAM."
    },
    {
     "kind": "terms",
@@ -23866,7 +23866,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "Write new logs to **one bucket**; **no modify/delete**, no other buckets."
+  "plain": "- **The situation:** A new app on a VM must write log files to the bucket project-logs-us-central1.\n- **What you must achieve:** Let it create new files in that bucket.\n- **The limits:** It must not change or delete existing files or reach any other bucket; least privilege.\n- **What they're really asking:** Which identity and role give create-only access to that one bucket?"
  },
  {
   "file": "Q370-budget-stop-vm-pubsub-function.md",
@@ -23874,7 +23874,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Spending must **automatically stop** if over budget.\n\n**Clues in the question:**\n- Budgets **only notify**; they never stop spending.\n- Automation → **Pub/Sub notification** + **function** that stops resources.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** A web app runs on a VM, and the budget is strict. A Cloud Billing budget already emails at 90%.\n- **What you must achieve:** Make spending stop automatically if it goes over budget.\n- **The limits:** It must happen automatically.\n- **What they're really asking:** What do you add so going over budget shuts things down?\n\n**Clues in the question:**\n- Budgets **only notify**; they never stop spending.\n- Automation → **Pub/Sub notification** + **function** that stops resources.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -23930,7 +23930,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Spending must **automatically stop** if over budget."
+  "plain": "- **The situation:** A web app runs on a VM, and the budget is strict. A Cloud Billing budget already emails at 90%.\n- **What you must achieve:** Make spending stop automatically if it goes over budget.\n- **The limits:** It must happen automatically.\n- **What they're really asking:** What do you add so going over budget shuts things down?"
  },
  {
   "file": "Q371-mig-cpu-75-alert-policy.md",
@@ -23938,7 +23938,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Notify if **average CPU > 75% for 5 minutes**, scalable.\n\n**Clues in the question:**\n- Built-in metric **`compute.googleapis.com/instance/cpu/utilization`** + alert policy (threshold 75%, duration 5 min, aggregated across the MIG).\n\n**Exam topic:** Monitoring."
+    "md": "**In plain words:**\n- **The situation:** A critical backend runs on a managed instance group.\n- **What you must achieve:** Notify operations in near real time if average CPU across the group is above 75% for 5 minutes in a row.\n- **The limits:** Scalable Google Cloud solution.\n- **What they're really asking:** How do you set up that notification?\n\n**Clues in the question:**\n- Built-in metric **`compute.googleapis.com/instance/cpu/utilization`** + alert policy (threshold 75%, duration 5 min, aggregated across the MIG).\n\n**Exam topic:** Monitoring."
    },
    {
     "kind": "terms",
@@ -23994,7 +23994,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "C"
   ],
-  "plain": "Notify if **average CPU > 75% for 5 minutes**, scalable."
+  "plain": "- **The situation:** A critical backend runs on a managed instance group.\n- **What you must achieve:** Notify operations in near real time if average CPU across the group is above 75% for 5 minutes in a row.\n- **The limits:** Scalable Google Cloud solution.\n- **What they're really asking:** How do you set up that notification?"
  },
  {
   "file": "Q372-gke-declarative-config-connector.md",
@@ -24002,7 +24002,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Manage cloud resources **the same way as app deployments** (Kubernetes manifests).\n\n**Clues in the question:**\n- \"**same declarative approach and tooling as your application deployments**\" on GKE → **Config Connector** (Google Cloud resources as Kubernetes custom resources).\n\n**Exam topic:** Infrastructure as Code."
+    "md": "**In plain words:**\n- **The situation:** Your company deploys all apps on GKE.\n- **What you must achieve:** Create and manage other Google Cloud resources the same way.\n- **The limits:** Use the same declarative approach and tools as your app deployments.\n- **What they're really asking:** Which tool lets you manage cloud resources with Kubernetes-style files?\n\n**Clues in the question:**\n- \"**same declarative approach and tooling as your application deployments**\" on GKE → **Config Connector** (Google Cloud resources as Kubernetes custom resources).\n\n**Exam topic:** Infrastructure as Code."
    },
    {
     "kind": "terms",
@@ -24058,7 +24058,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Manage cloud resources **the same way as app deployments** (Kubernetes manifests)."
+  "plain": "- **The situation:** Your company deploys all apps on GKE.\n- **What you must achieve:** Create and manage other Google Cloud resources the same way.\n- **The limits:** Use the same declarative approach and tools as your app deployments.\n- **What they're really asking:** Which tool lets you manage cloud resources with Kubernetes-style files?"
  },
  {
   "file": "Q373-container-scale-to-zero-cloud-run.md",
@@ -24066,7 +24066,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Container image ready; **scale to zero**; **as quickly as possible**.\n\n**Clues in the question:**\n- \"**scale to zero**\" + container + fastest → **Cloud Run** (deploy the image directly).\n\n**Exam topic:** Serverless."
+    "md": "**In plain words:**\n- **The situation:** A new container image has been pushed to Artifact Registry.\n- **What you must achieve:** Put it into production.\n- **The limits:** It must scale to zero (cost nothing with no traffic) and go live as quickly as possible.\n- **What they're really asking:** Where should you deploy the image?\n\n**Clues in the question:**\n- \"**scale to zero**\" + container + fastest → **Cloud Run** (deploy the image directly).\n\n**Exam topic:** Serverless."
    },
    {
     "kind": "terms",
@@ -24122,7 +24122,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "D"
   ],
-  "plain": "Container image ready; **scale to zero**; **as quickly as possible**."
+  "plain": "- **The situation:** A new container image has been pushed to Artifact Registry.\n- **What you must achieve:** Put it into production.\n- **The limits:** It must scale to zero (cost nothing with no traffic) and go live as quickly as possible.\n- **What they're really asking:** Where should you deploy the image?"
  },
  {
   "file": "Q374-budget-slack-pubsub-function.md",
@@ -24130,7 +24130,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** Post to Slack when a budget threshold is hit; **minimal maintenance**.\n\n**Clues in the question:**\n- Budget threshold → **programmatic notification to Pub/Sub**.\n- Serverless handler → **Cloud Run function** posts to Slack.\n\n**Exam topic:** Billing."
+    "md": "**In plain words:**\n- **The situation:** You are a billing admin for many projects.\n- **What you must achieve:** Send near real-time Slack messages to a team when their project's spending hits a budget threshold.\n- **The limits:** Easy to support and minimal maintenance.\n- **What they're really asking:** How do you connect budget alerts to Slack?\n\n**Clues in the question:**\n- Budget threshold → **programmatic notification to Pub/Sub**.\n- Serverless handler → **Cloud Run function** posts to Slack.\n\n**Exam topic:** Billing."
    },
    {
     "kind": "terms",
@@ -24186,7 +24186,7 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "B"
   ],
-  "plain": "Post to Slack when a budget threshold is hit; **minimal maintenance**."
+  "plain": "- **The situation:** You are a billing admin for many projects.\n- **What you must achieve:** Send near real-time Slack messages to a team when their project's spending hits a budget threshold.\n- **The limits:** Easy to support and minimal maintenance.\n- **What they're really asking:** How do you connect budget alerts to Slack?"
  },
  {
   "file": "Q375-sap-hana-hyperdisk-extreme.md",
@@ -24194,7 +24194,7 @@ window.QUIZ_QUESTIONS = [
    {
     "kind": "asking",
     "title": "📖 What the Question Is Asking",
-    "md": "**In plain words:** **>200,000 IOPS**, data must **persist through restarts**.\n\n**Clues in the question:**\n- Highest-IOPS **persistent** block storage → **Hyperdisk Extreme** (up to 350,000 IOPS), recommended for SAP HANA.\n\n**Exam topic:** Compute Engine."
+    "md": "**In plain words:**\n- **The situation:** You will run SAP HANA (a large in-memory business database) on Compute Engine.\n- **What you must achieve:** Give it very fast storage, often above 200,000 IOPS (disk operations per second).\n- **The limits:** Data must survive VM restarts.\n- **What they're really asking:** Which disk type gives that speed and keeps the data?\n\n**Clues in the question:**\n- Highest-IOPS **persistent** block storage → **Hyperdisk Extreme** (up to 350,000 IOPS), recommended for SAP HANA.\n\n**Exam topic:** Compute Engine."
    },
    {
     "kind": "terms",
@@ -24250,6 +24250,6 @@ window.QUIZ_QUESTIONS = [
   "correct": [
    "A"
   ],
-  "plain": "**>200,000 IOPS**, data must **persist through restarts**."
+  "plain": "- **The situation:** You will run SAP HANA (a large in-memory business database) on Compute Engine.\n- **What you must achieve:** Give it very fast storage, often above 200,000 IOPS (disk operations per second).\n- **The limits:** Data must survive VM restarts.\n- **What they're really asking:** Which disk type gives that speed and keeps the data?"
  }
 ];

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** 10 sandboxes. **Notify** if **any one** spends more than **$500/month**.
+**In plain words:**
+- **The situation:** You lead 10 developers, and each has a personal sandbox project for experiments.
+- **What you must achieve:** Get notified if any developer spends more than $500 a month in their sandbox.
+- **The limits:** The limit applies to each developer's project separately.
+- **What they're really asking:** How do you set up a $500-per-month alert for each sandbox?
 
 **Clues in the question:**
 - "**any of the developers … above $500**": the limit is **per project** → **one budget per project**, each at $500.

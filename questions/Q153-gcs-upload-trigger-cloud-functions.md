@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A small piece of code must run **every time a file lands in a bucket**.
+**In plain words:**
+- **The situation:** You wrote a small piece of code that should run every time a new file is uploaded to a Cloud Storage bucket.
+- **What you must achieve:** Deploy that code so uploads trigger it automatically.
+- **The limits:** None stated.
+- **What they're really asking:** Where and how do you deploy code so a file upload starts it?
 
 **Clues in the question:**
 - "**code snippet**": small code → **Cloud Functions**.

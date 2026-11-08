@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Clients must **connect in** to your VM on **UDP port 636**. How do you open that door?
+**In plain words:**
+- **The situation:** An LDAP server (a directory of users) runs on a VM and is reached over TLS on port 636 using UDP.
+- **What you must achieve:** Let clients reach it on that port.
+- **The limits:** None stated.
+- **What they're really asking:** What firewall rule do you add?
 
 **Clues in the question:**
 - "**reachable by clients**": traffic comes **into** the VM → **ingress**.

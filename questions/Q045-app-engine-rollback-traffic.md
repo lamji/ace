@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You pushed a new release to App Engine and it has a bug. How do you switch back to the old, working release **right now**?
+**In plain words:**
+- **The situation:** You released a new version of an App Engine app and found a bug.
+- **What you must achieve:** Go back to the previous version.
+- **The limits:** It must happen immediately.
+- **What they're really asking:** What is the fastest way to send users back to the old version?
 
 **Clues in the question:**
 - "**new version**" + "**prior version**": App Engine keeps old **versions** after you deploy a new one, so the old one is still there.

@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A huge file sits in Cloud Storage. Analysts only know SQL. What's the **quickest, cheapest** way to let them run SQL on it?
+**In plain words:**
+- **The situation:** A 5 TB AVRO file (a data file format) is in a Cloud Storage bucket. The analysts only know SQL.
+- **What you must achieve:** Let the analysts query the data.
+- **The limits:** Cheap and as soon as possible.
+- **What they're really asking:** How can the analysts query this file with SQL quickly and cheaply?
 
 **Clues in the question:**
 - "**stored in a Cloud Storage bucket**": the data is already there, so don't move it.

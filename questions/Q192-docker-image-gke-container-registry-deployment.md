@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Where do you put the image, and which Kubernetes object runs it?
+**In plain words:**
+- **The situation:** Your app is packaged as a Docker image.
+- **What you must achieve:** Run it as a workload on GKE.
+- **The limits:** None stated.
+- **What they're really asking:** What steps get the image running on GKE?
 
 **Clues in the question:**
 - Images go in a **registry** (Container Registry, today **Artifact Registry**), not Cloud Storage.

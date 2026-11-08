@@ -25,7 +25,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Many teams query BigQuery and the bill is huge. Pick **two** ways to **limit query costs**.
+**In plain words:**
+- **The situation:** Many business units query a BigQuery data warehouse, and query costs are very high.
+- **What you must achieve:** Control the cost of queries.
+- **The limits:** Choose two methods.
+- **What they're really asking:** Which two ways reduce or cap BigQuery query spending?
 
 **Clues in the question:**
 - "**query costs … very high**": the cost is from **queries** (on-demand = pay per TB scanned), not storage.

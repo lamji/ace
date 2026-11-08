@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You fixed an error and want an **automatic notification** if it happens again.
+**In plain words:**
+- **The situation:** Users report a spike in one error. You found it was caused by a service account missing a permission, and you fixed it.
+- **What you must achieve:** Be notified if the same problem happens again.
+- **The limits:** None stated.
+- **What they're really asking:** How do you get an alert when that error shows up again?
 
 **Clues in the question:**
 - "**want to be notified if the problem recurs**" → an **alerting policy**.

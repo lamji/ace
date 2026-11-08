@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Users worldwide; **low latency**; growth in **many regions**. Pick two.
+**In plain words:**
+- **The situation:** Your website runs on Compute Engine, and visitors from around the world are increasing quickly.
+- **What you must achieve:** Keep delay low and support growth in several parts of the world.
+- **The limits:** Recommended practice and low operating cost; choose two.
+- **What they're really asking:** Which two changes help global users and growth?
 
 **Clues in the question:**
 - "**multiple geographical regions**" → **VMs in several regions** near users.

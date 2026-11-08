@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You work in **two different Google Cloud accounts**. Each one uses a **different region and zone**. From your terminal, you want to **create one VM in each account**. How do you switch cleanly between the two setups?
+**In plain words:**
+- **The situation:** You use two Google Cloud accounts. One uses your default region and zone (location settings); the other uses a different region and zone.
+- **What you must achieve:** Create a new VM in each account from the command line.
+- **The limits:** Each VM must be created in the right account and the right location.
+- **What they're really asking:** How do you set up the command-line tool so it can work with both accounts and their different locations?
 
 | Keyword | What it hints at |
 |---|---|

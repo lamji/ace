@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A query failed with **quotaExceeded**. Where do you look?
+**In plain words:**
+- **The situation:** A BigQuery query fails with a quotaExceeded error.
+- **What you must achieve:** Find out what causes the error.
+- **The limits:** Choose two steps.
+- **What they're really asking:** Which two places help you diagnose a BigQuery quota error?
 
 **Clues in the question:**
 - Google's troubleshooting guide for quota errors: query **INFORMATION_SCHEMA** (e.g. `JOBS` views) and search **Cloud Audit Logs** for the error details.

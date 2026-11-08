@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Containerized microservices, private, **minimal ops**.
+**In plain words:**
+- **The situation:** Your company is rebuilding its apps as containerized microservices (small separate services in containers).
+- **What you must achieve:** Give teams a place to deploy their apps.
+- **The limits:** The apps must not be public, and management work must be as low as possible.
+- **What they're really asking:** What platform should you set up for the teams?
 
 **Clues in the question:**
 - "**minimize management and operational overhead**" → **Autopilot** (Google manages nodes). Services can stay internal (ClusterIP / internal LB).

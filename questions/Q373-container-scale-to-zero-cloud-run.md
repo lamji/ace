@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Container image ready; **scale to zero**; **as quickly as possible**.
+**In plain words:**
+- **The situation:** A new container image has been pushed to Artifact Registry.
+- **What you must achieve:** Put it into production.
+- **The limits:** It must scale to zero (cost nothing with no traffic) and go live as quickly as possible.
+- **What they're really asking:** Where should you deploy the image?
 
 **Clues in the question:**
 - "**scale to zero**" + container + fastest → **Cloud Run** (deploy the image directly).

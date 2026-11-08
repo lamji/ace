@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** One person **creates and manages service accounts**. Which role is the smallest that lets them do that?
+**In plain words:**
+- **The situation:** One person creates and manages all service accounts in your projects.
+- **What you must achieve:** Give that person the smallest role that lets them do this job.
+- **The limits:** Minimum permissions.
+- **What they're really asking:** Which role should they get?
 
 **Clues in the question:**
 - "**creates and manages all service accounts**" → **Service Account Admin**.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Daily batch, **cheapest**, **automatic retry** on failure.
+**In plain words:**
+- **The situation:** The accounting department must run a batch job every night.
+- **What you must achieve:** Run the nightly job and retry it automatically if a run fails.
+- **The limits:** Keep cost as low as possible.
+- **What they're really asking:** What should the job be built as, and what should start it each night?
 
 **Clues in the question:**
 - Batch (not a web server) → **Cloud Run job** (has `--max-retries`).

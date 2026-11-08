@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your projects bill **your card**. The company wants them on **its invoice**.
+**In plain words:**
+- **The situation:** You tried Google Cloud with your own credit card and claimed the costs back from your company.
+- **What you must achieve:** Have your projects charged to the company's monthly invoice instead.
+- **The limits:** Make billing simpler.
+- **What they're really asking:** How do you move your projects onto the company's billing?
 
 **Clues in the question:**
 - "**charge the costs of your projects to their monthly invoice**": link the **projects** to the **company's billing account** (Q066).

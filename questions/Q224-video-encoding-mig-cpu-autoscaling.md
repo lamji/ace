@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Highly available, no CPU limits, **automated**.
+**In plain words:**
+- **The situation:** You will host video-encoding software (software that converts videos) on Compute Engine. Users are growing fast and must be able to encode at any time.
+- **What you must achieve:** Run the encoding service so it is always available.
+- **The limits:** No interruptions or CPU limits, high availability, and automated operations following Google's recommendations.
+- **What they're really asking:** How do you set up VMs that stay available and grow with demand automatically?
 
 **Clues in the question:**
 - "**highly available**" → **instance group** (autohealing, multi-zone).

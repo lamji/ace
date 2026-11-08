@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Vendor reads objects in **one bucket**, nothing else.
+**In plain words:**
+- **The situation:** A project holds a critical marketing app.
+- **What you must achieve:** Give an outside vendor read-only access to the files in one specific bucket.
+- **The limits:** The vendor must not see any other resources in the project.
+- **What they're really asking:** Which role do you grant, and on what?
 
 **Clues in the question:**
 - "**read-only**" → **Storage Object Viewer**.

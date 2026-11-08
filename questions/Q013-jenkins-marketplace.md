@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your developers need **Jenkins** (a popular tool for building and testing code automatically). What's the **quickest, easiest** way to get a working Jenkins server on Google Cloud?
+**In plain words:**
+- **The situation:** A development team needs a new Jenkins server (a popular tool that automatically builds and tests code).
+- **What you must achieve:** Get Jenkins running on Google Cloud.
+- **The limits:** Use the fewest steps possible.
+- **What they're really asking:** What is the fastest way to get a ready-to-use Jenkins server?
 
 | Keyword | What it hints at |
 |---|---|

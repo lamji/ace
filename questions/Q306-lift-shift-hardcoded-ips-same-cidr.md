@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Apps talk via **hard-coded internal IPs**; migrate fast, no code change. Networks are **not connected**.
+**In plain words:**
+- **The situation:** Your data-center contract is ending, so you are moving to Google Cloud fast (lift and shift: move as-is). The cloud and on-premises networks are not connected. Old apps call each other using fixed, hard-coded internal IP addresses.
+- **What you must achieve:** Move the apps quickly and keep everything working.
+- **The limits:** You can't change the app code.
+- **What they're really asking:** How should you set up the cloud network and IPs so the old apps still find each other?
 
 **Clues in the question:**
 - "**hard-coded internal IP addresses**" + "**without modifying the application code**" → keep the **same IPs**.

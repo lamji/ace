@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** IoT sensor data, **sub-millisecond latency**.
+**In plain words:**
+- **The situation:** You are building an IoT app (internet-connected devices) that captures sensor data from many devices.
+- **What you must achieve:** Choose a global storage product for the sensor data.
+- **The limits:** Sub-millisecond latency (responses faster than one thousandth of a second).
+- **What they're really asking:** Which storage product fits sensor data with very low delay?
 
 **Clues in the question:**
 - IoT time series + "**sub-millisecond latency**" → **Bigtable** (low single-digit ms or better, huge write throughput).

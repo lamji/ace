@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Old **versions** of files should move to cheaper storage after 30 days. They're opened **once a month**. Which rule and which storage class?
+**In plain words:**
+- **The situation:** Data in a bucket has several versions (versioning keeps older copies of each file).
+- **What you must achieve:** Archive older versions after 30 days.
+- **The limits:** Keep it cost-effective; older versions are read once a month for reports and sometimes updated at month-end.
+- **What they're really asking:** Which storage class and lifecycle rule fit this access pattern?
 
 **Clues in the question:**
 - "**Data with multiple versions**": the rule should target **older versions** (objects that have **newer versions**), not "everything in regional storage".

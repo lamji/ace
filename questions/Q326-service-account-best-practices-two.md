@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Pick **two** Google best practices for service accounts.
+**In plain words:**
+- **The situation:** You create and manage service accounts (non-human identities for programs) for your workloads.
+- **What you must achieve:** Follow Google's recommended practices.
+- **The limits:** Choose two.
+- **What they're really asking:** Which two service account practices does Google recommend?
 
 **Clues in the question:**
 - Google's guide: **create single-purpose service accounts** and **manage service accounts as resources** (like VMs — documented, owned, lifecycle-managed).

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have **one program** that you want to run on **VMs** (company rule). When the VMs' **CPU gets busy**, more VMs should be added **automatically**, and when it's quiet, they should be removed. You want this to be **easy to manage** and **fast**. What do you use?
+**In plain words:**
+- **The situation:** You have an app that is a single program file. Company rules say it must run directly on virtual machines.
+- **What you must achieve:** Automatically add or remove machines based on CPU usage (how busy the processors are).
+- **The limits:** Scaling must be efficient and fast, and you must use VMs.
+- **What they're really asking:** How do you set up VMs that grow and shrink automatically with CPU load?
 
 | Keyword | What it hints at |
 |---|---|

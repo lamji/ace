@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Other teams work in the same project. You don't want one of them to delete your VM by mistake. Which setting protects it?
+**In plain words:**
+- **The situation:** You host an app on a VM in a project that other teams also use.
+- **What you must achieve:** Stop other teams from accidentally causing downtime for your app.
+- **The limits:** None stated.
+- **What they're really asking:** Which feature protects the VM from being taken down by mistake?
 
 **Clues in the question:**
 - "**project shared with other teams**": other people have permissions in this project.

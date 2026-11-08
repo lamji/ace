@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Read only **`site1-data/`** objects, including **new ones**, minimal work.
+**In plain words:**
+- **The situation:** A Cloud Run web app reads files from a shared bucket.
+- **What you must achieve:** Let it read files whose names start with site1-data/, including new files added later.
+- **The limits:** Minimal work to set up and maintain.
+- **What they're really asking:** How do you grant access to just that prefix in the existing bucket?
 
 **Clues in the question:**
 - Prefix-scoped access that covers new objects → **IAM condition** `resource.name.startsWith(...)` (needs **uniform bucket-level access**).

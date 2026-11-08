@@ -21,9 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You run an app on a VM inside a **managed instance group (MIG)**. Two rules:
-1. **Always running**: if the VM dies, a new one must replace it.
-2. **Never more than one** VM at the same time.
+**In plain words:**
+- **The situation:** An app runs on a VM in a managed instance group (a group that keeps VMs running from a template and replaces broken ones).
+- **What you must achieve:** The app must always be running.
+- **The limits:** Only one VM may run per project.
+- **What they're really asking:** How should you set the group's size and scaling so exactly one VM is always running?
 
 Which MIG setting guarantees "**exactly one, always**"?
 

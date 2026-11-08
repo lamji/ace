@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Files used **all the time**, at **lowest cost**, users in **one city**.
+**In plain words:**
+- **The situation:** Files in Cloud Storage feed an important analytics pipeline that runs all the time. The users are in Boston, USA.
+- **What you must achieve:** Store the files in the right place and class.
+- **The limits:** Lowest cost.
+- **What they're really asking:** Which storage class and location fit files used constantly from one area?
 
 **Clues in the question:**
 - "**used continually**" → **Standard** (Nearline charges per read and suits monthly access).

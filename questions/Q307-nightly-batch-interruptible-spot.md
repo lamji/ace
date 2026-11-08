@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Nightly batch, **can tolerate interruptions**, **cost-effective**.
+**In plain words:**
+- **The situation:** You are moving nightly batch jobs to Google Cloud. They need lots of CPU and memory for several hours, but they can handle being interrupted.
+- **What you must achieve:** Run the nightly jobs.
+- **The limits:** It must be cost-effective.
+- **What they're really asking:** Which kind of Compute Engine VM fits jobs that can be interrupted, at the lowest price?
 
 **Clues in the question:**
 - "**can tolerate interruptions**" + "**cost-effective**" → **Spot VMs** (60–91% cheaper, can be stopped by Google).

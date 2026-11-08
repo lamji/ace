@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Pick the cheapest correct store for each of three data types.
+**In plain words:**
+- **The situation:** Your company has three kinds of data: customer data in tables read with complex queries, huge historical logs that are rarely read, and real-time sensor data written very fast (some loss is acceptable).
+- **What you must achieve:** Pick where to store each kind.
+- **The limits:** The whole design must be as cheap as possible while meeting every need.
+- **What they're really asking:** Which storage product fits each of the three kinds of data?
 
 **Clues in the question:**
 - "**structured and read with complex queries**" → **Cloud SQL** (relational SQL).

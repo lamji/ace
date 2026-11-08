@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Fetch** and **acknowledge** messages from `email-updates`.
+**In plain words:**
+- **The situation:** Your company uses Pub/Sub. A subscription named email-updates is attached to the new-orders topic.
+- **What you must achieve:** Fetch the waiting messages from that subscription and acknowledge them (mark them as handled).
+- **The limits:** None stated.
+- **What they're really asking:** Which gcloud command fetches and acknowledges the messages?
 
 **Clues in the question:**
 - Fetch → **pull**. Acknowledge → **--auto-ack**. Messages come from a **subscription**, not a topic.

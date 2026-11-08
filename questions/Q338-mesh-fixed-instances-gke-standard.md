@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Multiple containers + **service mesh**; **control how many compute instances run**.
+**In plain words:**
+- **The situation:** A game's new frontend is built from several containers that talk through a service mesh (a layer that manages traffic between services).
+- **What you must achieve:** Control exactly how many compute instances (machines) are running.
+- **The limits:** None stated.
+- **What they're really asking:** Which platform lets you fix the number of machines and run a service mesh?
 
 **Clues in the question:**
 - "**control the number of compute instances**" → **fixed node pool** (GKE Standard).

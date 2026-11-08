@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Pods must call Cloud Storage; **no service account keys allowed**.
+**In plain words:**
+- **The situation:** You are deploying an app to GKE whose Pods (running containers) must call a private Cloud Storage bucket.
+- **What you must achieve:** Let the Pods sign in to the Cloud Storage API.
+- **The limits:** An organization policy forbids service account keys (downloadable secret files); follow recommended practice.
+- **What they're really asking:** How do the Pods get access to the bucket without any key file?
 
 **Clues in the question:**
 - "**prevents the usage of service account keys**" + Pods → **Workload Identity Federation for GKE**.

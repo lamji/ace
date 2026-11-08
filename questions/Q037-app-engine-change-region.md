@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your App Engine app runs in **us-central**. You want it to run in **asia-northeast1 (Tokyo)** instead. How do you move it?
+**In plain words:**
+- **The situation:** An App Engine app is currently served from the us-central region.
+- **What you must achieve:** Serve the app from the asia-northeast1 region instead.
+- **The limits:** None stated.
+- **What they're really asking:** What must you do to have the app served from the Asia region?
 
 Two App Engine rules decide the answer:
 1. **The region can't be changed** after the App Engine app is created.

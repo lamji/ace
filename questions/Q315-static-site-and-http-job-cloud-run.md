@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Static site + HTTP-started job; multiple locations, autoscaling, **no idle costs**.
+**In plain words:**
+- **The situation:** You are moving a static HTML website and a monthly invoice job (started by calling an HTTP address) to Google Cloud.
+- **What you must achieve:** Host both.
+- **The limits:** The website must be in several locations and autoscale; pay nothing when idle; follow recommended practice.
+- **What they're really asking:** Where should the website and the job run?
 
 **Clues in the question:**
 - "**no costs when your workloads are not in use**" + "**autoscaling**" → **Cloud Run** for both (deploy in multiple regions).

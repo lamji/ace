@@ -27,7 +27,11 @@ The command wording needs care: `gcloud iam roles describe` only displays role d
 
 ## 2. 📖 What the Question Is Asking
 
-In plain words: three people need permission to both look at and change rows in a Cloud Spanner database. Which role and access-management approach fit?
+**In plain words:**
+- **The situation:** Three users need to work with table data in Cloud Spanner (Google's large-scale relational database).
+- **What you must achieve:** Let them view and edit the data.
+- **The limits:** None stated.
+- **What they're really asking:** Which role should they get, and how should you grant it?
 
 - **“view and edit”** means read and write data; a view-only role is not enough.
 - **“three users”** points toward giving the same role to a group, then managing people through the group.

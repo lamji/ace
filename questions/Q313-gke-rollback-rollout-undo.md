@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Revert a bad rolling update.
+**In plain words:**
+- **The situation:** A rolling update (gradual replacement of Pods with a new version) on GKE has a problem.
+- **What you must achieve:** Roll the update back.
+- **The limits:** None stated.
+- **What they're really asking:** Which action returns the Deployment to the previous version?
 
 **Clues in the question:**
 - Rollback → **`kubectl rollout undo`** returns the Deployment to the previous revision.

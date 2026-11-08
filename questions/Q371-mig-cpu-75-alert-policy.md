@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Notify if **average CPU > 75% for 5 minutes**, scalable.
+**In plain words:**
+- **The situation:** A critical backend runs on a managed instance group.
+- **What you must achieve:** Notify operations in near real time if average CPU across the group is above 75% for 5 minutes in a row.
+- **The limits:** Scalable Google Cloud solution.
+- **What they're really asking:** How do you set up that notification?
 
 **Clues in the question:**
 - Built-in metric **`compute.googleapis.com/instance/cpu/utilization`** + alert policy (threshold 75%, duration 5 min, aggregated across the MIG).

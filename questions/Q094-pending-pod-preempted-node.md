@@ -33,7 +33,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Two identical pods. One is running, one is **Pending**. The cluster runs **only on preemptible nodes**. What most likely happened?
+**In plain words:**
+- **The situation:** A Deployment with 2 replicas (copies) runs on a GKE cluster with one preemptible node pool (cheap nodes Google can take back at any time). One pod stays Pending.
+- **What you must achieve:** Find the most likely cause.
+- **The limits:** None stated.
+- **What they're really asking:** Why can't the second pod start?
 
 **Clues in the question:**
 - "**single preemptible node pool**": preemptible VMs can be **taken away by Google at any time**. This detail is the main hint.

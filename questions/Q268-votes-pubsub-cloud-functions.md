@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Many votes at **varying rates**. Store and process efficiently.
+**In plain words:**
+- **The situation:** Your team is building a website that receives votes from many users, arriving at changing rates.
+- **What you must achieve:** Store and process the votes efficiently.
+- **The limits:** Vote volume goes up and down unpredictably.
+- **What they're really asking:** How should the votes be received and processed so bursts are handled smoothly?
 
 **Clues in the question:**
 - "**arrive at various rates**" → **Pub/Sub** buffers spikes.

@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Find **who created** old manual projects.
+**In plain words:**
+- **The situation:** You introduced an automated process for creating projects, but some projects were made by hand before it existed.
+- **What you must achieve:** Find who created those older projects so you can tell them about the new process.
+- **The limits:** None stated.
+- **What they're really asking:** Where can you see who created a project?
 
 **Clues in the question:**
 - When a user creates a project, they're automatically granted **Owner** → check the IAM page.

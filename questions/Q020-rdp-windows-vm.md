@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You made a **Windows VM** with **SQL Server 2017** on it. You want to **log in to its desktop remotely** (with RDP) in the **fewest steps** that actually **work**. What do you need?
+**In plain words:**
+- **The situation:** You created a VM running SQL Server 2017 (a Microsoft database on Windows) to try new features.
+- **What you must achieve:** Log in to that VM.
+- **The limits:** Use the fewest steps.
+- **What they're really asking:** What is the quickest way to log in to this Windows VM?
 
 To log in to **any** Windows VM with RDP, you need **all 3** of these:
 1. 🔑 **A username and password.** A new Windows VM on Google Cloud **has none for you yet**, so you must **set/generate** one.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Not **who** has Spanner roles now, but **when** they were added. Where is that history?
+**In plain words:**
+- **The situation:** You use the Google Cloud console.
+- **What you must achieve:** Find out when users were added to Cloud Spanner IAM roles.
+- **The limits:** Do it in the console.
+- **What they're really asking:** Where in the console do you see when roles were granted?
 
 **Clues in the question:**
 - "**find out when**": you need **history with timestamps** → **logs**.

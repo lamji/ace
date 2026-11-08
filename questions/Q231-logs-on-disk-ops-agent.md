@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Same as Q132, with the newer **Ops Agent**.
+**In plain words:**
+- **The situation:** An app on one VM writes its logs to the VM's disk, and users report errors.
+- **What you must achieve:** Diagnose the problem.
+- **The limits:** None stated.
+- **What they're really asking:** How do you get the app's logs somewhere you can examine them?
 
 **Clues in the question:**
 - "**writes logs to disk**" → those files aren't in Cloud Logging until an **agent** ships them → **Ops Agent**.

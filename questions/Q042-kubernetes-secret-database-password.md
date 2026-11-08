@@ -40,7 +40,11 @@ A Secret is safer and more manageable than putting the password in a Deployment 
 
 ## 2. 📖 What the Question Is Asking
 
-In plain words: the application needs a password to connect to its database, but the password is written directly into a Kubernetes Deployment configuration. Where should the password live, and how should the container receive it?
+**In plain words:**
+- **The situation:** A Kubernetes Deployment's configuration file has the database password written in plain text (anyone who sees the file can read it).
+- **What you must achieve:** Change the setup so the password is no longer stored in plain text.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** Where should the password be stored, and how should the app receive it?
 
 - **“database password”** is sensitive information.
 - **“not stored in plain text”** means do not leave the literal password in an ordinary Deployment YAML file or image.

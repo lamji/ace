@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Does the service account **have the right roles** in this project?
+**In plain words:**
+- **The situation:** Your CI/CD server (the system that builds and deploys code automatically) can't run Google Cloud actions in one project because of permission errors.
+- **What you must achieve:** Check whether its service account has the right roles in that project.
+- **The limits:** None stated.
+- **What they're really asking:** Where do you check which roles that service account has?
 
 **Clues in the question:**
 - "**validate whether the used service account has the appropriate roles in the specific project**" → look at its **IAM roles**, including those **inherited** from folder/org.

@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Engineers should create projects **without their own cards**.
+**In plain words:**
+- **The situation:** Your startup was registered as a business 6 months ago, and its Google Cloud use is growing.
+- **What you must achieve:** Let all engineers create projects.
+- **The limits:** Engineers should not need to enter their own credit cards.
+- **What they're really asking:** How do you set up company billing so engineers can create projects?
 
 **Clues in the question:**
 - "**without asking them for their credit card**" → one company **billing account** with a payment method, and give creators **Billing Account User** so they can link projects to it.

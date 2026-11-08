@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You know the project's **name** (`my-project`). You want the list of APIs that are **turned on** in it. Which gcloud commands do that?
+**In plain words:**
+- **The situation:** You work in Cloud Shell with a project named my-project.
+- **What you must achieve:** Get a list of the APIs (Google services) that are enabled in that project.
+- **The limits:** Use the gcloud command line.
+- **What they're really asking:** Which gcloud command lists the enabled APIs for my-project?
 
 **Clues in the question:**
 - "**The project name is my-project**": gcloud commands need the **project ID**, which can differ from the name. So first look up the ID.

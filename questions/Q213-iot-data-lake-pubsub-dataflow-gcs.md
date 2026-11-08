@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Millions of sensors streaming **mixed data** into a **data lake**, highly available.
+**In plain words:**
+- **The situation:** You are building a data lake (a central store for raw data) for an IoT app with millions of sensors streaming structured and unstructured data.
+- **What you must achieve:** A highly available, resilient design.
+- **The limits:** Follow Google-recommended practices.
+- **What they're really asking:** Which services should receive the stream and store the data?
 
 **Clues in the question:**
 - "**constantly streaming**" → ingest with **Pub/Sub** (buffer, scales, durable).

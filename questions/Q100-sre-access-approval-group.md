@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** When Google Support needs to look at your data for a support case, someone in your company must **approve** it. SREs should be the approvers. Which role, and how do you grant it?
+**In plain words:**
+- **The situation:** Your organization strictly controls access to projects. When an SRE (site reliability engineer) opens a support case, Google support staff may ask for access.
+- **What you must achieve:** Let SREs approve those access requests from Google support.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** Which feature and role let SREs approve Google support's access requests?
 
 **Clues in the question:**
 - "**approve requests from the Google Cloud support team**": that's **Access Approval** → role `roles/accessapproval.approver`.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Separate Terraform for each app so they're **managed independently**.
+**In plain words:**
+- **The situation:** You will manage all Google Cloud resources with Terraform, and you have several apps.
+- **What you must achieve:** Manage each app separately from the others.
+- **The limits:** None stated.
+- **What they're really asking:** How should you structure the Terraform code repository?
 
 **Clues in the question:**
 - Independent management = separate **state** → a **root directory (root module) per application**.

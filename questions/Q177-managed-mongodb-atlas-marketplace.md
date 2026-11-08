@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want **MongoDB**, **managed**, with a **support SLA**.
+**In plain words:**
+- **The situation:** Your app will run on GKE and needs MongoDB (a document database).
+- **What you must achieve:** Run a managed MongoDB that comes with a support SLA (a guaranteed support agreement).
+- **The limits:** It must be managed and supported.
+- **What they're really asking:** Where do you get a managed MongoDB with an SLA?
 
 **Clues in the question:**
 - "**managed MongoDB environment**" + "**support SLA**" → **MongoDB Atlas** (MongoDB Inc.'s managed service) via **Marketplace**.

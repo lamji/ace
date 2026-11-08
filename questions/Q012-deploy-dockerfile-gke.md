@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have a **Dockerfile** (a recipe for packaging your app). You want to run the app on **GKE (Kubernetes)**. What are the correct steps?
+**In plain words:**
+- **The situation:** You have a Dockerfile (a recipe file that describes how to build a container image, which is your app packed with everything it needs to run).
+- **What you must achieve:** Run that app on Kubernetes Engine (Google's managed Kubernetes, a system that runs and manages containers).
+- **The limits:** None stated; you just need the correct steps in the correct order.
+- **What they're really asking:** What steps take you from a Dockerfile to the app running on Kubernetes Engine?
 
 | Keyword | What it hints at |
 |---|---|

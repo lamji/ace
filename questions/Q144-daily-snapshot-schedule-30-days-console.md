@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Daily backups, kept **30 days**, with the **least work** and **fewest services**.
+**In plain words:**
+- **The situation:** A VM runs an app used from 9 AM to 6 PM on weekdays.
+- **What you must achieve:** Back it up daily for disaster recovery and keep backups for 30 days.
+- **The limits:** Least management work and fewest services.
+- **What they're really asking:** What is the simplest way to schedule daily backups kept for 30 days?
 
 **Clues in the question:**
 - "**daily**" + "**keep … 30 days**": a **snapshot schedule** with daily frequency and **autodelete after 30 days**.

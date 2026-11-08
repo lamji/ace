@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Test as SERVICE_ACCOUNT **without handling secrets**.
+**In plain words:**
+- **The situation:** You develop on your own workstation, signed in with your Google account (USER).
+- **What you must achieve:** Test whether an existing service account's (SERVICE_ACCOUNT) permissions are enough for a task.
+- **The limits:** Don't handle any sensitive secrets like key files.
+- **What they're really asking:** Which role should USER get on the service account?
 
 **Clues in the question:**
 - Impersonation (short-lived tokens) requires **`roles/iam.serviceAccountTokenCreator`**.

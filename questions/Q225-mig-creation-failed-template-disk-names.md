@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The MIG can't create VMs. What two things usually fix it?
+**In plain words:**
+- **The situation:** A managed instance group alerted that it failed to create new instances.
+- **What you must achieve:** Fix the problem so new instances can be created.
+- **The limits:** None stated.
+- **What they're really asking:** What should you check or change to fix instance creation?
 
 **Clues in the question:**
 - Templates are **immutable** → **create a new** template with valid syntax.

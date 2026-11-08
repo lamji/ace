@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your App Engine app needs to **send and receive Pub/Sub messages**. The **Pub/Sub API is switched off** in the project. What must you do so the app can actually use Pub/Sub?
+**In plain words:**
+- **The situation:** Your App Engine app must send and receive Pub/Sub messages (Pub/Sub is Google's messaging service). The Pub/Sub API (the project's on-switch for that service) is turned off. The app signs in with a service account.
+- **What you must achieve:** Make Pub/Sub work for the app.
+- **The limits:** None stated.
+- **What they're really asking:** What must you set up so the app can use Pub/Sub?
 
 | Keyword | What it hints at |
 |---|---|

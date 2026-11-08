@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **One organization**, but **separate invoices** per startup.
+**In plain words:**
+- **The situation:** A large company bought three startups. All their Google Cloud resources must be managed under one organization.
+- **What you must achieve:** Each startup gets its own monthly invoice.
+- **The limits:** Each has its own budget and finance reporting.
+- **What they're really asking:** How do you organize the startups and their billing?
 
 **Clues in the question:**
 - "**single Google Cloud organization**" → one org, folder per startup.

@@ -29,7 +29,11 @@ Your answer **A** is understandable because `app.yaml` is an important App Engin
 
 ## 2. 📖 What the Question Is Asking
 
-In plain words: an App Engine deployment landed in the wrong Google Cloud project. Which file or setting should you inspect to discover which project `gcloud` was targeting?
+**In plain words:**
+- **The situation:** You ran gcloud app deploy, but the app went to the wrong project.
+- **What you must achieve:** Find out why and where it actually went.
+- **The limits:** None stated.
+- **What they're really asking:** What should you check to see which project gcloud was using?
 
 - **“did not deploy to the intended project”** points to the selected project, not the application's runtime settings.
 - **“using gcloud app deploy”** points to the Google Cloud CLI's active project configuration or an explicit `--project` override.

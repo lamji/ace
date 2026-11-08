@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Node IPs come from the subnet's **primary range**, and it's full. How do the clusters get room to add nodes?
+**In plain words:**
+- **The situation:** Several VPC-native GKE clusters share one subnet, and the IP addresses for nodes are used up.
+- **What you must achieve:** Let the clusters add more nodes when needed.
+- **The limits:** None stated.
+- **What they're really asking:** How do you get more IP addresses for nodes?
 
 **Clues in the question:**
 - "**IPs available for the nodes are exhausted**": **nodes** use the subnet's **primary** range.

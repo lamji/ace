@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** New images appear **on-prem**. They must **automatically** be copied to Cloud Storage.
+**In plain words:**
+- **The situation:** A hospital keeps medical images in its own on-site data room.
+- **What you must achieve:** Automatically upload every new image to Cloud Storage for archiving.
+- **The limits:** It must be automated.
+- **What they're really asking:** What should you set up so new images upload by themselves?
 
 **Clues in the question:**
 - "**automated process to upload any new medical images**": `gsutil rsync` copies **only new or changed files**, and **cron** runs it on a schedule.

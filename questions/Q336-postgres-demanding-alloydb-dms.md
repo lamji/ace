@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Demanding PostgreSQL: **fast transactional + analytical**, fully managed, sync replication & optimized storage.
+**In plain words:**
+- **The situation:** You are moving an on-premises PostgreSQL database with demanding workloads (fast transactions and fast analytics).
+- **What you must achieve:** Choose a fully managed database.
+- **The limits:** It must replicate synchronously (every write copied at once) and optimize the storage layer.
+- **What they're really asking:** Which managed database and migration method fit?
 
 **Clues in the question:**
 - "**fast transactional and analytical performance**" + "**optimize the storage layer**" → **AlloyDB** (columnar engine, disaggregated storage with sync replication).

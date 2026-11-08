@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Send an **email** when the VM's **CPU > 90% for 15 minutes**, using Google services.
+**In plain words:**
+- **The situation:** A VM hosts a production app.
+- **What you must achieve:** Get an email if CPU stays above 90% for more than 15 minutes.
+- **The limits:** Use Google's services.
+- **What they're really asking:** How do you set up that alert?
 
 **Clues in the question:**
 - "**more than 90% … for more than 15 minutes**": an **alerting policy** with a threshold condition and a 15-minute duration.

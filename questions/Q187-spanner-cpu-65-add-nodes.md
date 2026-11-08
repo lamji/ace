@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Single-region** Spanner. Best practice threshold, and the **fastest** fix.
+**In plain words:**
+- **The situation:** A Cloud Spanner instance runs in one region in production.
+- **What you must achieve:** Improve query performance.
+- **The limits:** In the shortest time, following Google's best practices.
+- **What they're really asking:** What is the quickest change that makes Spanner queries faster?
 
 **Clues in the question:**
 - "**single Google Cloud region**" → Google recommends keeping high-priority CPU **below 65%** (45% is for **multi-region**).

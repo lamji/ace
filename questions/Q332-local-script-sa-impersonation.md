@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Run a script locally **as a service account**, most securely.
+**In plain words:**
+- **The situation:** You are writing a shell script with gcloud commands.
+- **What you must achieve:** Test the script on your own computer as a service account.
+- **The limits:** In the most secure way.
+- **What they're really asking:** How do you run gcloud as a service account without a key file?
 
 **Clues in the question:**
 - "**most secure way**" → no keys → **impersonation** (`auth/impersonate_service_account`).

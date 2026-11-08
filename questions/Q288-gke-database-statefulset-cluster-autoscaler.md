@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Database with **no data loss**, and **automatically enough nodes**.
+**In plain words:**
+- **The situation:** You will move a database and a backend app to a Standard GKE cluster.
+- **What you must achieve:** Prevent data loss and keep enough nodes for the backend as demand changes.
+- **The limits:** Follow recommended practice with little manual work.
+- **What they're really asking:** How do you store the database's data safely and size the nodes automatically?
 
 **Clues in the question:**
 - "**prevent data loss**" for a **database** → **StatefulSet** (stable identity + persistent volume per pod).

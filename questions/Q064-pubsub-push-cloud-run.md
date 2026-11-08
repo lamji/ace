@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Messages arrive in a Pub/Sub topic. Your app on Cloud Run must process each one. What's Google's recommended way to get the messages **into** Cloud Run?
+**In plain words:**
+- **The situation:** You will run an app on Cloud Run (Google's serverless container service) that processes messages from a Pub/Sub topic (a message channel).
+- **What you must achieve:** Connect the topic to the app.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** How should Pub/Sub deliver messages to the Cloud Run app?
 
 | Question words | What they point to |
 |---|---|

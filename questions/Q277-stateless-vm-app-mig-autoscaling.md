@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Must run on VMs**, stateless, scale automatically.
+**In plain words:**
+- **The situation:** A stateless app must run directly on VMs, and its traffic goes up and down.
+- **What you must achieve:** Run it so it scales automatically.
+- **The limits:** It must run on virtual machines.
+- **What they're really asking:** How do you deploy VMs that grow and shrink with traffic?
 
 **Clues in the question:**
 - "**run directly on virtual machines**" → Compute Engine.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** New project. What's the **first step** before making a Spanner instance?
+**In plain words:**
+- **The situation:** You just created a project for a globally distributed app that will use Cloud Spanner.
+- **What you must achieve:** Do the very first step before creating the Spanner instance.
+- **The limits:** None stated.
+- **What they're really asking:** What must you do first in a new project before you can create a Spanner instance?
 
 **Clues in the question:**
 - "**just created a new project**" + "**first step**" → **enable the API** (Q136 pattern).

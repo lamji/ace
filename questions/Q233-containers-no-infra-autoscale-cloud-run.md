@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Containers, **no infrastructure to manage**, **auto-scaling**.
+**In plain words:**
+- **The situation:** Your developers packed their app into Docker images (ready-to-run boxes holding the app and everything it needs).
+- **What you must achieve:** Run the app on Google Cloud so it adds capacity by itself as more people use it.
+- **The limits:** Your team does not want to look after any servers or other infrastructure.
+- **What they're really asking:** Which way of running the app needs no server care and grows on its own?
 
 **Clues in the question:**
 - "**does not want to manage the infrastructure**" → serverless → **Cloud Run**.

@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Be **notified of every change** to objects, with little overhead.
+**In plain words:**
+- **The situation:** You are the Organization Administrator. Compliance rules say you must be told about any change to files in Cloud Storage. A recent change went unnoticed and broke production jobs.
+- **What you must achieve:** Get notified about every file change in Cloud Storage.
+- **The limits:** Minimal management overhead.
+- **What they're really asking:** What should you turn on so all file changes are recorded and alerted?
 
 **Clues in the question:**
 - "**notified about any modifications to files**" → **Pub/Sub notifications for Cloud Storage** (events on create/overwrite/delete).

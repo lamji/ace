@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** BI users must **run their own SQL** on **live** data in BigQuery.
+**In plain words:**
+- **The situation:** A data pipeline streams data into BigQuery for the Business Intelligence (BI) department.
+- **What you must achieve:** Let BI users run their own SQL queries on the newest data.
+- **The limits:** None stated.
+- **What they're really asking:** Which permissions let BI users query the dataset?
 
 **Clues in the question:**
 - "**run the custom SQL queries**" → they need to **run jobs** → **BigQuery User** (can run queries, create datasets).

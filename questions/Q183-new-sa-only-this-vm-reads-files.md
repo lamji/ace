@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Only the **new** VM should read the files. Other VMs use the **default** service account.
+**In plain words:**
+- **The situation:** You will run a third-party app on a new VM. Other VMs already run with default settings. The install files are in Cloud Storage.
+- **What you must achieve:** Let only the new VM read those files.
+- **The limits:** Other VMs must not be able to read them.
+- **What they're really asking:** How do you give just the new VM access to the files?
 
 **Clues in the question:**
 - "**Other Compute Engine instances are already running with default configuration**" → they share the **default SA**. Granting it would give them access too.

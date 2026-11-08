@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** New version must have **2 warm instances** before traffic moves.
+**In plain words:**
+- **The situation:** An app runs on Cloud Run, and a new version (revision) has been released.
+- **What you must achieve:** Send traffic to the new version.
+- **The limits:** The new version must have two idle instances ready before traffic moves, so there is no startup delay; keep admin work low.
+- **What they're really asking:** How do you make sure the new version has two warm instances before switching traffic?
 
 **Clues in the question:**
 - "**two idle instances**" for the **new** version → **revision min instances = 2** on the **new revision**.

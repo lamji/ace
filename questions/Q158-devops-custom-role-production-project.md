@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** DevOps needs access to **production** services. Their permissions must **not grow automatically** when Google adds features.
+**In plain words:**
+- **The situation:** Production services live in one project; teams have separate test and dev projects. The DevOps team needs access to all production services.
+- **What you must achieve:** Give DevOps the access they need in production.
+- **The limits:** Their permissions must not grow on their own when Google adds new product features; follow recommended practice.
+- **What they're really asking:** What kind of role keeps DevOps' permissions fixed even as Google Cloud changes?
 
 **Clues in the question:**
 - "**prevent Google Cloud product changes from broadening their permissions**": basic and predefined roles **gain new permissions** when Google updates them. A **custom role** only changes when **you** change it.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Spending must **automatically stop** if over budget.
+**In plain words:**
+- **The situation:** A web app runs on a VM, and the budget is strict. A Cloud Billing budget already emails at 90%.
+- **What you must achieve:** Make spending stop automatically if it goes over budget.
+- **The limits:** It must happen automatically.
+- **What they're really asking:** What do you add so going over budget shuts things down?
 
 **Clues in the question:**
 - Budgets **only notify**; they never stop spending.

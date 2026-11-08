@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Serverless**, **asynchronous**, **low management**.
+**In plain words:**
+- **The situation:** An app processes transactions on a group of managed VMs.
+- **What you must achieve:** Move it to a serverless setup (no servers to manage) that scales and processes transactions asynchronously (accepted now, handled shortly after).
+- **The limits:** Minimal management effort.
+- **What they're really asking:** Which services should accept the transactions and which should process them?
 
 **Clues in the question:**
 - "**asynchronous**" + "**serverless**" → **Pub/Sub** queues transactions.

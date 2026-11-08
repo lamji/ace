@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** No external IPs allowed, but the VM must **download updates from the internet**.
+**In plain words:**
+- **The situation:** You are creating a VM for a new app. Organization policy forbids external IP addresses on VMs.
+- **What you must achieve:** The app must still reach the internet to download updates and packages.
+- **The limits:** No external IP on the VM.
+- **What they're really asking:** How can a VM without an external IP reach the internet?
 
 **Clues in the question:**
 - Outbound internet without an external IP → **Cloud NAT**.

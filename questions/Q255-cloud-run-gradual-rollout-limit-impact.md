@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Limit how many customers a bad release can hurt, with **no work for customers**.
+**In plain words:**
+- **The situation:** A Cloud Run service is in production, and your team deploys new features to it.
+- **What you must achieve:** Reduce how many customers a bad new revision could affect.
+- **The limits:** No extra development or operating cost for customers; follow recommended practice.
+- **What they're really asking:** How do you roll out new revisions so only a few users see them at first?
 
 **Clues in the question:**
 - "**reduce the number of customers who might be affected**" → only a **slice** of traffic on the new revision → **gradual rollout + traffic split**.

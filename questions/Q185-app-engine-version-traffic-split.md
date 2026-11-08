@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Send a **small part** of real users to the update; most stay on the stable version.
+**In plain words:**
+- **The situation:** You are building a new web app on Google Cloud.
+- **What you must achieve:** Test updates on a small part of real traffic while most users stay on the stable version.
+- **The limits:** None stated.
+- **What they're really asking:** Which platform or setup lets you split traffic between versions?
 
 **Clues in the question:**
 - "**small portion of real user traffic**" + "**majority … stable version**" → **App Engine versions + traffic splitting** (Q076).

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A **30-hour** job, once a month. If it's interrupted, it must **start over**. Cheapest safe option?
+**In plain words:**
+- **The situation:** A monthly batch job takes about 30 hours, can run offline, and must start over if it is interrupted.
+- **What you must achieve:** Move it to the cloud.
+- **The limits:** Keep costs as low as possible.
+- **What they're really asking:** Which kind of VM is cheapest without risking the job being interrupted?
 
 **Clues in the question:**
 - "**around 30 hours**": preemptible VMs are **always stopped within 24 hours**, so the job could never finish.

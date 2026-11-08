@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Before running a big BigQuery query, you want to know **how much it will cost**. With **on-demand pricing**, BigQuery charges by **how much data the query reads**. How do you get that number **without actually running (and paying for) the query**?
+**In plain words:**
+- **The situation:** You are about to run a large BigQuery query (BigQuery is Google's data warehouse; with on-demand pricing you pay for how much data each query reads).
+- **What you must achieve:** Know what the query will cost before you run it.
+- **The limits:** You are on on-demand pricing.
+- **What they're really asking:** How do you find out how much data the query will read, so you can work out its cost first?
 
 | Keyword | What it hints at |
 |---|---|

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You need **Jenkins** (a build server), installed **quickly and easily**.
+**In plain words:**
+- **The situation:** You need a Jenkins installation to build and deploy your code.
+- **What you must achieve:** Install Jenkins automatically.
+- **The limits:** As quickly and easily as possible.
+- **What they're really asking:** What is the easiest way to get Jenkins?
 
 **Clues in the question:**
 - "**as quickly and easily as possible**" + "**automate the installation**": a **one-click** ready-made deployment → **Cloud Marketplace** (as in Q122).

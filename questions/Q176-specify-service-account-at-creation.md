@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Give **each VM its own** service account.
+**In plain words:**
+- **The situation:** Several apps run on different VMs in the same project.
+- **What you must achieve:** Choose exactly which service account (the identity it uses for Google APIs) each VM uses.
+- **The limits:** Control it VM by VM.
+- **What they're really asking:** How do you give each VM its own service account?
 
 **Clues in the question:**
 - "**specify … the service account each instance uses**" → set it **at creation** with `--service-account`.

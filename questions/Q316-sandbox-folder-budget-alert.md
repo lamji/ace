@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Total sandbox budget $1,000; **notify** near the limit; **automate**.
+**In plain words:**
+- **The situation:** Engineers get sandbox projects to explore Google Cloud. The total testing budget across the organization is $1,000.
+- **What you must achieve:** Notify engineers when spending is about to reach the budget.
+- **The limits:** Automate as much as possible.
+- **What they're really asking:** How do you set up a shared budget with an automatic warning?
 
 **Clues in the question:**
 - "**notified when the budget is about to be reached**" → **budget alert** (e.g., 90%).

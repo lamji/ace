@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Audit **service account keys** older than 90 days across hundreds of SAs.
+**In plain words:**
+- **The situation:** Your organization has hundreds of service accounts used by apps on-premises and in other clouds.
+- **What you must achieve:** Audit service account keys and find those older than 90 days.
+- **The limits:** Across the whole organization.
+- **What they're really asking:** Which command finds old service account keys organization-wide?
 
 **Clues in the question:**
 - Org-wide search → **Cloud Asset Inventory** `search-all-resources`.

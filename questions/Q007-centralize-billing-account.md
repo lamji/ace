@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Employees have been paying for their Google Cloud projects with **their own credit cards**, and the company pays them back later. That's messy. The company wants **one company billing account** that pays for **all** these projects. What's the first, correct step?
+**In plain words:**
+- **The situation:** Several employees created Google Cloud projects and paid for them with their personal credit cards; the company pays them back later.
+- **What you must achieve:** Move all these projects under one new company billing account (the account that receives and pays the bill).
+- **The limits:** None stated beyond doing it correctly.
+- **What they're really asking:** What steps move everyone's projects onto one new company billing account?
 
 | Keyword | What it hints at |
 |---|---|

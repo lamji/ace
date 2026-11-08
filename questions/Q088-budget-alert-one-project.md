@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Three projects share one billing account. You want a **budget alert** for **only one** of them. Who can do it, and how?
+**In plain words:**
+- **The situation:** Three projects share one billing account.
+- **What you must achieve:** Set a budget alert for Compute Engine spending on just one of those projects.
+- **The limits:** None stated.
+- **What they're really asking:** How do you limit the budget alert to that one project and service?
 
 **Clues in the question:**
 - "**budget alert**": budgets are created on the **billing account**, so you need a **billing** role (Billing Account Administrator or Costs Manager), not a project role.

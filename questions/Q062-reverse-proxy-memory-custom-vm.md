@@ -27,7 +27,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have a small program (a caching reverse proxy) that needs **lots of memory (32 GB)** but **almost no CPU**. It must respond fast. Where's the **cheapest** place to run it?
+**In plain words:**
+- **The situation:** You will run one caching reverse proxy (a server that keeps copies of web pages in memory to serve them fast). It needs almost no CPU, 30 GB of memory for the cache and 2 GB for everything else.
+- **What you must achieve:** Run it on Google Cloud.
+- **The limits:** Lowest cost, and the website is sensitive to delays.
+- **What they're really asking:** Which way of running it gives the memory you need for the least money?
 
 | Question words | What they point to |
 |---|---|

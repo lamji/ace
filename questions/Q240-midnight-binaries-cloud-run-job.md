@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A **45-minute nightly** job, files up to **16 GB in memory**. Cheapest and easiest.
+**In plain words:**
+- **The situation:** On-premises programs analyze data files in memory for about 45 minutes every midnight. Files are 1 GB to 16 GB.
+- **What you must achieve:** Move this job to Google Cloud.
+- **The limits:** Minimal effort and cost.
+- **What they're really asking:** How should you run a short nightly job that needs up to 16 GB in memory?
 
 **Clues in the question:**
 - "**about 45 minutes every midnight**" → a scheduled **job** that runs and exits → **Cloud Run job** + **Cloud Scheduler**; pay only for 45 minutes.

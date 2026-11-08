@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The topic is **managed by Config Connector**. How do you delete it for good?
+**In plain words:**
+- **The situation:** A Pub/Sub topic (a message channel) in your project is managed by Config Connector (a tool that manages Google Cloud resources through Kubernetes files).
+- **What you must achieve:** Delete the topic permanently.
+- **The limits:** It must stay deleted, not come back.
+- **What they're really asking:** How do you delete a resource that Config Connector manages?
 
 **Clues in the question:**
 - Config Connector keeps Google Cloud matching the **Kubernetes resource**. Delete it with **`kubectl delete`**, and Config Connector deletes the topic.

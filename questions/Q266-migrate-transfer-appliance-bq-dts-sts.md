@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Pick the right **no-code** transfer tool for each data source.
+**In plain words:**
+- **The situation:** You are moving 200 TB of video files from SAN storage (on-premises disk storage), a data warehouse on Amazon Redshift, and 20 GB of PNG images from an Amazon S3 bucket.
+- **What you must achieve:** Put the videos in one bucket, the warehouse data in BigQuery, and the PNGs in a second bucket.
+- **The limits:** Follow recommended practice and write no code.
+- **What they're really asking:** Which transfer tool fits each of the three data sets?
 
 **Clues in the question:**
 - "**200 TB … on-premises**" → **Transfer Appliance** (ship a physical device).

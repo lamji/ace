@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Same as Q193 with new names and letters.
+**In plain words:**
+- **The situation:** Looker Studio (a chart tool) shows a BigQuery table. Data is added during the day, and each night the summary table is rebuilt by overwriting it. The charts are now broken.
+- **What you must achieve:** Analyze what went wrong.
+- **The limits:** None stated.
+- **What they're really asking:** Where do you look to understand what happened to the table?
 
 **Clues in the question:**
 - "**At night … overwriting the table**" → check the **nightly BigQuery job** in job history.

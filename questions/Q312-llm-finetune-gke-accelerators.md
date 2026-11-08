@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Scalable, flexible platform for **LLM fine-tuning**.
+**In plain words:**
+- **The situation:** Your machine learning team needs to fine-tune large language models (adjust AI models) on a large amount of company data.
+- **What you must achieve:** Build a platform for this work.
+- **The limits:** It must be scalable and flexible.
+- **What they're really asking:** What platform should you provide for the fine-tuning jobs?
 
 **Clues in the question:**
 - "**scalable and flexible**" + "**fine-tune large language models**" → **GKE with GPUs/TPUs** (accelerators).

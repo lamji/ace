@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Post to Slack when a budget threshold is hit; **minimal maintenance**.
+**In plain words:**
+- **The situation:** You are a billing admin for many projects.
+- **What you must achieve:** Send near real-time Slack messages to a team when their project's spending hits a budget threshold.
+- **The limits:** Easy to support and minimal maintenance.
+- **What they're really asking:** How do you connect budget alerts to Slack?
 
 **Clues in the question:**
 - Budget threshold → **programmatic notification to Pub/Sub**.

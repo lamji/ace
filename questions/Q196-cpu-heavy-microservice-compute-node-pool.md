@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** One service needs **lots of CPU**, others are **standard**. Make everything efficient.
+**In plain words:**
+- **The situation:** Several microservices run on a GKE cluster. One renders images and needs lots of CPU but little memory; the others suit n1-standard machines.
+- **What you must achieve:** Make every workload use resources efficiently.
+- **The limits:** None stated.
+- **What they're really asking:** How should you arrange node machine types for the image service and the rest?
 
 **Clues in the question:**
 - "**large amount of CPU time compared to the memory**" → **compute-optimized** nodes (C2) for that service.

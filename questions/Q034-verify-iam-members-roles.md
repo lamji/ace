@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want to see **who** (users, groups, service accounts) has **which role** in `my-project`. Where do you look?
+**In plain words:**
+- **The situation:** There is a project named my-project.
+- **What you must achieve:** Check which users have which IAM roles in it.
+- **The limits:** None stated.
+- **What they're really asking:** How do you see the users and roles assigned in that project?
 
 | Keyword | What it hints at |
 |---|---|

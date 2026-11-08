@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Prod VMs and test VMs must be in **two different subnets**, but **all VMs must reach each other by private (internal) IP** with **no extra routes**. Which setup works?
+**In plain words:**
+- **The situation:** Production and test VMs will run on Compute Engine.
+- **What you must achieve:** Put them in two different subnets, but let every VM reach every other VM by internal (private) IP address.
+- **The limits:** No extra routes may be created.
+- **What they're really asking:** How should you set up the VPC network and the two subnets?
 
 | Keyword | What it hints at |
 |---|---|

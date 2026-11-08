@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have one VPC with one subnet in **us-central1**, and an app runs there. You need a new VM in **europe-west1** that can reach the app. What's the simplest Google-recommended setup?
+**In plain words:**
+- **The situation:** One VPC network with one subnet in us-central1 hosts an app on a VM.
+- **What you must achieve:** Add a new VM in europe-west1 that can reach that app.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** How should the network be set up for the new European VM?
 
 | Keyword | What it hints at |
 |---|---|

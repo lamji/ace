@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** kubectl is pointed at prod-cluster. How do you point it at **dev-cluster** and see its nodes?
+**In plain words:**
+- **The situation:** You created two GKE clusters with gcloud: prod-cluster (Standard) and dev-cluster (Autopilot). kubectl get nodes only shows prod-cluster's nodes.
+- **What you must achieve:** See the node status for dev-cluster.
+- **The limits:** None stated.
+- **What they're really asking:** Which commands point kubectl at dev-cluster and list its nodes?
 
 **Clues in the question:**
 - kubectl talks to whichever cluster is in its current **context**. `gcloud container clusters get-credentials dev-cluster` adds dev-cluster's entry to kubeconfig and **switches** to it.

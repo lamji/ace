@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Automatic** notification on high latency for 5 minutes, **no coding**.
+**In plain words:**
+- **The situation:** You run a web app on Compute Engine.
+- **What you must achieve:** Alert the support team automatically when users see high latency (slow responses) for at least 5 minutes.
+- **The limits:** Google-recommended and no development cost.
+- **What they're really asking:** How do you set up the alert without writing code?
 
 **Clues in the question:**
 - "**notified automatically**" + "**for at least 5 minutes**" → **alert policy** with a duration of 5 min.

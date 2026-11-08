@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Many people edit Terraform **concurrently**; **no sensitive values on local machines**.
+**In plain words:**
+- **The situation:** You manage Google Cloud with Terraform (an Infrastructure as Code tool), and the files are in a Git repository.
+- **What you must achieve:** Let several people work on the Terraform configuration at the same time without conflicts.
+- **The limits:** Sensitive values must not be saved on anyone's laptop.
+- **What they're really asking:** Where should Terraform keep its state (its record of what it built)?
 
 **Clues in the question:**
 - Shared state + locking + nothing stored locally → **remote backend in Cloud Storage** (`gcs` backend locks state).

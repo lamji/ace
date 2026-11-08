@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The app **needs 96 vCPUs** and is **production-critical**. How do you make sure the new VM has that from day one?
+**In plain words:**
+- **The situation:** You are moving a critical on-premises app that needs 96 vCPUs.
+- **What you must achieve:** Run it in a similar setup on Google Cloud.
+- **The limits:** The VM must have 96 vCPUs.
+- **What they're really asking:** How do you create a VM with that many CPUs?
 
 **Clues in the question:**
 - "**requires 96 vCPUs**": pick a **machine type with 96 vCPUs**. The number at the end of `n1-standard-96` is the vCPU count.

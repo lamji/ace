@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Prod VMs talk privately; **all VMs in the org** accept certain TCP ports; low ops.
+**In plain words:**
+- **The situation:** You are moving VMs to Google Cloud and must first build a landing zone (the base setup of projects, networks and rules).
+- **What you must achieve:** Production VMs must talk to each other over private IPs, and every VM in the organization must accept connections on certain TCP ports.
+- **The limits:** Follow recommended practice and keep operating costs low.
+- **What they're really asking:** How should you set up the networks and the organization-wide port rules?
 
 **Clues in the question:**
 - Many projects, private IPs, least ops → **Shared VPC** (host + service projects), not many peerings.

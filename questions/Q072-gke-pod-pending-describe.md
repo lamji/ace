@@ -29,7 +29,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** One pod won't start; it's stuck at **Pending**. Where do you look to find out **why**?
+**In plain words:**
+- **The situation:** You deployed an app on GKE (a Deployment and a Service from a YAML file). One pod is stuck in Pending (created but not started).
+- **What you must achieve:** Find out why it is stuck.
+- **The limits:** None stated.
+- **What they're really asking:** Which command shows you the reason a pod is pending?
 
 **Clues in the question:**
 - "**PENDING status**": Pending means the pod **hasn't been placed on a node yet** (or its containers haven't started). The container never ran.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Keep **5 revisions**, move to cheaper class after **365 days**, delete after **5 years**, no code.
+**In plain words:**
+- **The situation:** You are moving invoice documents from on-premises to Cloud Storage.
+- **What you must achieve:** Keep documents five years, keep up to five revisions of each, and move documents older than 365 days to cheaper storage.
+- **The limits:** Follow recommended practice with minimal operations and development work.
+- **What they're really asking:** Which bucket features handle the revisions, the cheaper tier and the five-year retention?
 
 **Clues in the question:**
 - "**Up to five revisions**" → **object versioning** + lifecycle `numNewerVersions`.

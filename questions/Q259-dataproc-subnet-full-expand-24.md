@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Subnet is full. Add VMs with the **fewest steps**.
+**In plain words:**
+- **The situation:** A Dataproc cluster sits in one subnet, 172.16.20.128/25, and there are no free IP addresses left.
+- **What you must achieve:** Add new VMs that can talk to the cluster.
+- **The limits:** Fewest steps.
+- **What they're really asking:** How do you make room for the new VMs?
 
 **Clues in the question:**
 - "**no private IP addresses available**" + "**minimum number of steps**" → **expand** the subnet (/25 → /24 covers 172.16.20.0–255, including the old range).

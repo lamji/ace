@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Count **new database connections created by the app** to check reuse.
+**In plain words:**
+- **The situation:** An app on Cloud Run uses Cloud SQL.
+- **What you must achieve:** Track how many database connections the app creates, to check that connections are reused.
+- **The limits:** None stated.
+- **What they're really asking:** How do you measure and chart the number of new connections?
 
 **Clues in the question:**
 - App-specific event → **log it** in the app, make a **log-based (custom) metric**, chart it.

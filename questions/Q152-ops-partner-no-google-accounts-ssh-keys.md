@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The partner has **no Google accounts** but needs to log in to the Linux VMs.
+**In plain words:**
+- **The situation:** Your Linux workloads run on Compute Engine VMs. A new operations partner will maintain the installed tools, but they do not use Google accounts.
+- **What you must achieve:** Give the partner login access to the VMs.
+- **The limits:** They have no Google accounts, so Google-account-based login won't work for them.
+- **What they're really asking:** How do you give people without Google accounts access to your Linux VMs?
 
 **Clues in the question:**
 - "**does not use Google Accounts**": anything based on Google identity (IAP, OS Login, IAM) won't work for them.

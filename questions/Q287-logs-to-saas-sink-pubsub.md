@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Stream logs to an outside tool **as fast as possible**.
+**In plain words:**
+- **The situation:** Your company uses several clouds and wants all app logs in a third-party SaaS log tool (an online service).
+- **What you must achieve:** Send logs from Cloud Logging to that tool.
+- **The limits:** With as little delay as possible.
+- **What they're really asking:** How should Cloud Logging push logs to the outside tool quickly?
 
 **Clues in the question:**
 - "**least amount of delay**" + "**third-party**" → **sink to Pub/Sub** (streaming), tool subscribes.

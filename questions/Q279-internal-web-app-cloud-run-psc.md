@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Reachable on an **internal IP** from VPC and on-prem; **minimal infrastructure**; frequent updates.
+**In plain words:**
+- **The situation:** You will run one stateless web app with a web interface and several endpoints.
+- **What you must achieve:** Make it reachable only through an internal IP from your private VPC and your on-premises network.
+- **The limits:** You update it several times a day with little effort and want to manage as little infrastructure as possible.
+- **What they're really asking:** Where do you run it and how do you make it internal-only?
 
 **Clues in the question:**
 - "**minimal amount of cloud infrastructure**" + frequent updates → **Cloud Run**.

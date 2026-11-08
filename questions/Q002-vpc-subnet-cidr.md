@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You're creating your own private network in Google Cloud (a **custom VPC**) with only **one subnet**. Which IP range gives that subnet the **most IP addresses**, while still being a range you're allowed to use?
+**In plain words:**
+- **The situation:** You are building your own private network in Google Cloud (a custom VPC) with just one subnet (a block of private IP addresses inside that network).
+- **What you must achieve:** Choose the IP address range for that subnet.
+- **The limits:** The range must hold as many addresses as possible, and it must be a range Google Cloud allows for a private subnet.
+- **What they're really asking:** Which of the listed address ranges gives the subnet the most usable addresses?
 
 | Keyword | What it hints at |
 |---|---|

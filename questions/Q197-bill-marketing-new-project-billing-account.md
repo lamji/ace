@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Marketing must **pay only for** their new initiative.
+**In plain words:**
+- **The situation:** Your organization has three Google Cloud projects.
+- **What you must achieve:** Bill the Marketing department only for its new initiative.
+- **The limits:** Only Marketing's services for that initiative.
+- **What they're really asking:** How do you set up billing so Marketing pays only for its own work?
 
 **Clues in the question:**
 - "**bill the Marketing department for only their … services**" → a **new project** linked to a **Marketing billing account**.

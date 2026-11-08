@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Your company already has a login system (SSO). You want users to sign in to Google with **that** system. How do you set it up?
+**In plain words:**
+- **The situation:** Your company has a single sign-on provider (SSO: one login for all apps) that supports SAML (a standard for sharing logins). Users live in Cloud Identity.
+- **What you must achieve:** Users sign in to Google with the company SSO.
+- **The limits:** None stated.
+- **What they're really asking:** How do you set up Cloud Identity to use your SSO provider?
 
 **Clues in the question:**
 - "**your company's SSO provider**" = the **identity provider (IdP)** that checks passwords.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Turn on **only** the APIs you need: Compute (VMs + firewalls) and Cloud Storage.
+**In plain words:**
+- **The situation:** You received a new Google Cloud project with billing already attached.
+- **What you must achieve:** Create VMs, set up firewalls and store data in Cloud Storage.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** What do you need to set up so you can do this work the recommended way?
 
 **Clues in the question:**
 - "**create instances, set firewalls**" → **compute.googleapis.com** (firewalls are part of Compute).

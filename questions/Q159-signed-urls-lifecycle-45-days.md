@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Thousands of suppliers upload files. Each may write **only their own file**, **only for 30 minutes**. Files must vanish after **45 days**, with minimal maintenance.
+**In plain words:**
+- **The situation:** An app receives data files uploaded by thousands of suppliers.
+- **What you must achieve:** Each supplier can reach only their own data, gets write access for only 30 minutes, and data older than 45 days is deleted.
+- **The limits:** Very short development time and minimal maintenance; pick two strategies.
+- **What they're really asking:** Which two built-in features handle time-limited supplier uploads and automatic deletion of old data?
 
 **Clues in the question:**
 - "**write access … only for 30 minutes**" + "**only their own data**" → **signed URLs** (a link for one object that expires).

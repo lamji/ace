@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Move selected old videos (large total) to Cloud Storage; **minimize cost** and **control bandwidth**.
+**In plain words:**
+- **The situation:** A media company stores 150 TB of video files on-premises (each 100 MB to 100 GB), and local storage is full.
+- **What you must achieve:** Move rarely used videos older than one year to Cloud Storage.
+- **The limits:** Keep costs low and control how much network bandwidth the transfer uses.
+- **What they're really asking:** Which transfer method moves the files while letting you limit bandwidth?
 
 **Clues in the question:**
 - "**control bandwidth usage**" → **Storage Transfer Service for on-premises data** (agents, bandwidth limits, filters, scheduling).

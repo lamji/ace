@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You have one carefully set-up VM. More traffic is coming, so you need **copies** of it. What's the right way to make many identical VMs?
+**In plain words:**
+- **The situation:** You have a custom VM, and traffic will increase after an acquisition.
+- **What you must achieve:** Create a copy of that VM.
+- **The limits:** None stated.
+- **What they're really asking:** How do you duplicate the VM?
 
 **Clues in the question:**
 - "**create a copy of a custom … VM**": the goal is **new instances** (VMs), not more images.

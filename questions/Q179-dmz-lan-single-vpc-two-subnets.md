@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Public servers (DMZ) and private servers (LAN) must **talk to each other**. Only the DMZ is reachable **from the internet**.
+**In plain words:**
+- **The situation:** Your company is moving all servers to Compute Engine. Some servers must be reachable from the internet, others only internally, and all must talk to each other on certain ports. On-premises you used a DMZ (a public zone) and a LAN (the private internal network).
+- **What you must achieve:** Design the Google Cloud network to match.
+- **The limits:** Keep the public/private split, and allow only specific ports between them.
+- **What they're really asking:** How should you lay out the network and firewall rules?
 
 **Clues in the question:**
 - "**talk to each other**" → **one VPC** (subnets in one VPC can route to each other; separate VPCs can't without peering/VPN).

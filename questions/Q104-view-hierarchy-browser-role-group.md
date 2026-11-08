@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A few people need to **see the tree** of folders and projects, and nothing more. Which role, granted how?
+**In plain words:**
+- **The situation:** The organization has hundreds of folders and projects.
+- **What you must achieve:** Let a few team members view the hierarchy (the tree of folders and projects).
+- **The limits:** Minimum permissions; follow recommended practice.
+- **What they're really asking:** Which role lets them see the structure and nothing more?
 
 **Clues in the question:**
 - "**view the hierarchical structure**" + "**minimum permissions**": `roles/browser` shows folders and projects only, not what's inside them.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want to run Datastore **on your laptop** for testing. Your gcloud was installed with **apt** (Ubuntu's package manager). How do you add the emulator?
+**In plain words:**
+- **The situation:** Your Ubuntu laptop has the Cloud SDK installed from Google's package repository.
+- **What you must achieve:** Test your app on the laptop against Cloud Datastore (a NoSQL database).
+- **The limits:** It must run locally.
+- **What they're really asking:** How do you run a local stand-in for Datastore on the laptop?
 
 **Clues in the question:**
 - "**test your application locally**": you need the **Datastore emulator**, a local fake Datastore.

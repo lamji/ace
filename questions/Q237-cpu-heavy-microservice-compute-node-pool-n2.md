@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Same as Q196 with n2 instead of n1.
+**In plain words:**
+- **The situation:** Several microservices run on a GKE cluster. One renders images and needs lots of CPU but little memory; the others suit n2-standard machines.
+- **What you must achieve:** Make every workload use resources efficiently.
+- **The limits:** None stated.
+- **What they're really asking:** How should you arrange node machine types for the image service and the rest?
 
 **Clues in the question:**
 - CPU-heavy → **compute-optimized** pool. Others → **general-purpose** pool.

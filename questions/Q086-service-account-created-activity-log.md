@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want to see **when a service account was created**. Which log category and which resource type do you filter on?
+**In plain words:**
+- **The situation:** You need to confirm when a service account was created.
+- **What you must achieve:** Find its creation time.
+- **The limits:** None stated.
+- **What they're really asking:** Where do you look for the record of the service account being created?
 
 **Clues in the question:**
 - "**service account was created**": creating something is a **configuration change** (Admin Activity), not reading data.

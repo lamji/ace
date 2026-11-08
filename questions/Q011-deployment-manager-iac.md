@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** You want to **create VMs automatically** by writing what you want (machine type, disk, network, and so on) in a **configuration file**, instead of clicking in the Console. Which Google tool reads a config file and builds the VMs for you?
+**In plain words:**
+- **The situation:** You need to create VMs on Compute Engine automatically. All their details (size, disk, operating system image) are written in a separate configuration file.
+- **What you must achieve:** A repeatable way to create VMs from that file.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** Which tool or method creates VMs from a configuration file the recommended way?
 
 | Keyword | What it hints at |
 |---|---|

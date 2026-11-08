@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Resolve `internal.altostrat.com` from **VPC and on-prem**, **not public**, least overhead.
+**In plain words:**
+- **The situation:** A new internal web app sits behind an internal load balancer. Your on-premises network connects through Cloud VPN, and an inbound DNS server policy is set up.
+- **What you must achieve:** Make internal.altostrat.com reachable from both the VPC and on-premises.
+- **The limits:** The name must not resolve on the public internet; least admin work.
+- **What they're really asking:** How do you set up DNS for the internal name?
 
 **Clues in the question:**
 - "**must not be resolvable from the public internet**" → **private zone**.

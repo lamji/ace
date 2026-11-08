@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Who **has access** (can view data) right now?
+**In plain words:**
+- **The situation:** You do a monthly security check of your Google Cloud environment.
+- **What you must achieve:** Find out who can view the data stored in your project.
+- **The limits:** None stated.
+- **What they're really asking:** Where do you look to see who has access to view data?
 
 **Clues in the question:**
 - "**who has access to view data**": that's about **permissions**, not activity → review **IAM** roles that include data access.

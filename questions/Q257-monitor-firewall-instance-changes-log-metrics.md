@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Watch for **firewall changes** and **new VMs**, simply.
+**In plain words:**
+- **The situation:** After a security incident, your startup wants better visibility of what happens in Google Cloud.
+- **What you must achieve:** Monitor unexpected firewall changes and VM creation.
+- **The limits:** Keep it simple.
+- **What they're really asking:** How do you get alerts for firewall changes and new VMs?
 
 **Clues in the question:**
 - Firewall changes and VM creation are in **Admin Activity audit logs** (always on).

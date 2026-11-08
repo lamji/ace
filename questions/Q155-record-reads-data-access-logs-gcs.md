@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Every **read** of the bucket's data must be **recorded**.
+**In plain words:**
+- **The situation:** You keep sensitive information in a Cloud Storage bucket.
+- **What you must achieve:** Record every request that reads any of the stored data.
+- **The limits:** It is a legal requirement, so nothing may be missed.
+- **What they're really asking:** What must you turn on so every read of the data is logged?
 
 **Clues in the question:**
 - "**record all requests that read any of the stored data**" → **Data Access audit logs** (DATA_READ).

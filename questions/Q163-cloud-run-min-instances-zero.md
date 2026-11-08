@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A container app used only in office hours. **Zero cost** when nobody uses it. New project, nothing else set up.
+**In plain words:**
+- **The situation:** You built a containerized web app (an app packed as a container) for coworkers to use during business hours, and you have a brand-new project.
+- **What you must achieve:** Deploy the app.
+- **The limits:** No costs at all outside the hours it is used.
+- **What they're really asking:** Where should you run it so it costs nothing when nobody is using it?
 
 **Clues in the question:**
 - "**containerized**" + "**no costs … outside of the hours**" → **Cloud Run (fully managed)** scales to **zero** and bills per request.

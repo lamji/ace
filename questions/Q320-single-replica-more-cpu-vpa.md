@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Only **one replica** allowed; needs **more CPU** at peaks.
+**In plain words:**
+- **The situation:** A stateful app on GKE can only have one replica (one running copy). It becomes unstable at peak times because it needs more CPU than its manifest gives it.
+- **What you must achieve:** Give it enough CPU at peak times.
+- **The limits:** Stay cost-efficient when it's quiet, and it can still only have one copy.
+- **What they're really asking:** Which feature gives the single Pod more CPU when needed?
 
 **Clues in the question:**
 - "**can only have one replica**" rules out HPA.

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Move a project from **their org** to **yours** and bill it to **you**, with little effort.
+**In plain words:**
+- **The situation:** Your company bought a startup that has a production project in its own organization.
+- **What you must achieve:** Move that project into your organization and bill it to your company.
+- **The limits:** Minimal effort.
+- **What they're really asking:** How do you move the project and its billing?
 
 **Clues in the question:**
 - "**move this project into your organization**" → **projects.move** (`gcloud beta projects move`).

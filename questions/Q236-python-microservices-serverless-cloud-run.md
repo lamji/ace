@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Dockerized microservices → **serverless**, reusing what you have.
+**In plain words:**
+- **The situation:** An on-premises shop app is made of many Python microservices, each in a Docker container, with settings passed in through environment variables.
+- **What you must achieve:** Move it to a serverless Google Cloud service (one where you don't manage servers).
+- **The limits:** Keep the containers and the environment-variable settings working.
+- **What they're really asking:** Which serverless service can run these containers as they are?
 
 **Clues in the question:**
 - "**running on Docker containers**" + "**serverless**" → **Cloud Run** runs your images as they are.

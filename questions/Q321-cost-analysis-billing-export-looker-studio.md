@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Detailed** cost analysis + **many chart types on one dashboard**.
+**In plain words:**
+- **The situation:** Your company runs many apps on Google Cloud, and you manage cloud costs.
+- **What you must achieve:** Do detailed cost analysis.
+- **The limits:** Show the cost data in several different ways on the same dashboard.
+- **What they're really asking:** How do you get detailed cost data and build a flexible dashboard?
 
 **Clues in the question:**
 - "**detailed cost analysis**" → **billing export to BigQuery**.

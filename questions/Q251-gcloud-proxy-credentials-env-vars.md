@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Use a proxy with gcloud **without** the username/password ending up in logs or config files.
+**In plain words:**
+- **The situation:** You installed the Google Cloud CLI and set up a proxy (a middle server your traffic goes through) with credentials.
+- **What you must achieve:** Keep the proxy credentials out of gcloud's logs.
+- **The limits:** None stated.
+- **What they're really asking:** How do you stop your proxy credentials from being written to the logs?
 
 **Clues in the question:**
 - Google's docs: to avoid logging proxy credentials, set them as **environment variables** `CLOUDSDK_PROXY_USERNAME` / `CLOUDSDK_PROXY_PASSWORD` instead of `gcloud config set`.

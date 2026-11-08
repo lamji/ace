@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** The app uses **ADC**, which on your laptop uses your own login. On a VM, ADC automatically uses the **VM's service account**. What do you change?
+**In plain words:**
+- **The situation:** Your app uses Application Default Credentials (ADC: the client libraries find credentials automatically) and works on your laptop.
+- **What you must achieve:** Move it to a Compute Engine VM with proper authentication.
+- **The limits:** Follow recommended practice with minimal changes.
+- **What they're really asking:** How should the app authenticate once it runs on the VM?
 
 **Clues in the question:**
 - "**Application Default Credentials**": ADC looks for credentials automatically. On a VM, it finds the **attached service account** through the metadata server.

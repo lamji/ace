@@ -25,7 +25,11 @@
 
 ## 2. 📖 What the Question Is Asking
 
-In simple terms: a public website runs on a group of VM instances. You want the load balancer to handle the secure connection from visitors and spread their web requests across the instances.
+**In plain words:**
+- **The situation:** A group of VMs serves a public website over HTTPS (encrypted web traffic).
+- **What you must achieve:** Put a load balancer in front, and have the load balancer handle (terminate) the encrypted connection from visitors.
+- **The limits:** Follow Google's recommended practice.
+- **What they're really asking:** Which load balancer type and setup do this?
 
 - **“public web application over HTTPS”** means internet-facing web traffic.
 - **“terminate the client SSL session”** means the encrypted client connection ends at the load balancer, which then sends a separate request to a backend.

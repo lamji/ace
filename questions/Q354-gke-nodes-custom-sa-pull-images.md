@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** SA already has Artifact Registry pull permission. Make GKE use it to pull images.
+**In plain words:**
+- **The situation:** Your team's container images are in Artifact Registry, and you already have a service account allowed to pull (download) them.
+- **What you must achieve:** Create a new GKE cluster and deploy those images.
+- **The limits:** Make sure the images can actually be pulled on the cluster.
+- **What they're really asking:** How do you set up the cluster so it can pull images with that service account?
 
 **Clues in the question:**
 - Image pulls are done by the **node's** (kubelet's) identity → create nodes with **`--service-account`**.

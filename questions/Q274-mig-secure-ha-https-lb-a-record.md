@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Public **web** app, secure and HA: which LB and which DNS record?
+**In plain words:**
+- **The situation:** A web app runs in a managed instance group on Compute Engine.
+- **What you must achieve:** Make it secure and highly available.
+- **The limits:** Follow Google-recommended practices.
+- **What they're really asking:** What should you put in front of the group and how should the group be spread?
 
 **Clues in the question:**
 - "**web application**" + "**secure**" → **HTTP(S) load balancing**.

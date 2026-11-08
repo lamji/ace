@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Two projects, each with its own VPC and its own VMs. The VMs must talk to each other. Which option connects them correctly?
+**In plain words:**
+- **The situation:** Groups of VMs run in two different projects, each group in its own VPC network.
+- **What you must achieve:** Let the groups talk to each other.
+- **The limits:** None stated.
+- **What they're really asking:** How do you connect the two networks?
 
 **Clues in the question:**
 - "**two different GCP projects**": a normal VPC belongs to **one project**, so a VM in another project can't simply "join" it.

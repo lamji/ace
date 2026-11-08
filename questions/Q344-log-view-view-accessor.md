@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Show the frontend team **only certain logs** from a central bucket; least privilege, cheap.
+**In plain words:**
+- **The situation:** Logs from a frontend project and a backend project are collected in one central logging project.
+- **What you must achieve:** The frontend team sees all frontend logs and only error-level backend logs.
+- **The limits:** They must not see any other logs; least privilege and low cost.
+- **What they're really asking:** How do you give the team access to exactly those logs?
 
 **Clues in the question:**
 - "**must not be able to view any other logs**" → **log view** with a filter + **`roles/logging.viewAccessor`** on that view.

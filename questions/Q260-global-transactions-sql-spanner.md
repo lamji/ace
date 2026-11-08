@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** **Global transactions**, **SQL**, **highly available**, **scalable**.
+**In plain words:**
+- **The situation:** You are building the backend for a shopping platform that will save transactions from phones and websites, with large global volume expected.
+- **What you must achieve:** Build a highly available, scalable data store, and let the business team run SQL to analyze the data.
+- **The limits:** Global scale and SQL analysis.
+- **What they're really asking:** Which database stores the transactions, and how do analysts query them?
 
 **Clues in the question:**
 - "**persist transaction data**" + "**large volume of global transactions**" + "**SQL**" + "**highly available and scalable**" → **multi-region Spanner**.

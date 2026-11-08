@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A bank-like company must **keep audit logs for 3 years** (rules require it), across **hundreds of projects**. Nobody will read them unless an auditor or investigator asks. What's the **cheapest** way to keep them?
+**In plain words:**
+- **The situation:** A financial company with hundreds of Google Cloud projects must keep audit log files for 3 years.
+- **What you must achieve:** Store the logs for 3 years.
+- **The limits:** Keep it cost-effective across all projects.
+- **What they're really asking:** Where and how should logs from all projects be kept cheaply?
 
 | Question words | What they point to |
 |---|---|

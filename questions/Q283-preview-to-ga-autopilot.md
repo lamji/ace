@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Move from **one zone** to a **highly available** production cluster.
+**In plain words:**
+- **The situation:** A preview app runs on a single-zone GKE cluster in us-central1 and has become popular.
+- **What you must achieve:** Release it for everyone.
+- **The limits:** High availability and resilience, following recommended practice.
+- **What they're really asking:** What kind of cluster should production use?
 
 **Clues in the question:**
 - "**high availability and resilience**" → a **regional** cluster; **Autopilot** clusters are always regional and follow Google's best practices.

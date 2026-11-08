@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Secure (HTTPS) public site, VMs that autoscale, static files from Cloud Storage.
+**In plain words:**
+- **The situation:** A customer wants a secure website that autoscales on VM CPU load, with static content (images, CSS) served from Cloud Storage.
+- **What you must achieve:** Distribute user traffic correctly.
+- **The limits:** Secure (HTTPS), and both VMs and Cloud Storage serve content.
+- **What they're really asking:** Which load balancer pieces do you need to send traffic to both?
 
 **Clues in the question:**
 - "**secure website**" → HTTPS with a **Google-managed SSL certificate** on the LB.

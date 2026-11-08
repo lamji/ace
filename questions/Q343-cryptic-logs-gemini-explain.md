@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Understand unfamiliar error logs **as quickly as possible**.
+**In plain words:**
+- **The situation:** You are troubleshooting a complex failure and found cryptic error messages in Cloud Logging (they contain no personal data).
+- **What you must achieve:** Understand what the errors mean and what to do.
+- **The limits:** As quickly as possible; choose the first step.
+- **What they're really asking:** What is the fastest way to get the errors explained?
 
 **Clues in the question:**
 - "**understand the meaning of these logs**" + "**as quickly as possible**" + "**no PII**" → **Explain this log entry** (Gemini) in Logs Explorer.

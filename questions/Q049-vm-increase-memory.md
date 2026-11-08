@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** A VM has **2 CPUs and 4 GB of memory (RAM)** and keeps running out of memory. You want **exactly 8 GB**. What's the right way to change it?
+**In plain words:**
+- **The situation:** A VM has 2 vCPUs (virtual processors) and 4 GB of memory, and it is running out of memory.
+- **What you must achieve:** Give the VM 8 GB of memory.
+- **The limits:** None stated.
+- **What they're really asking:** How do you increase the VM's memory?
 
 | Keyword | What it hints at |
 |---|---|

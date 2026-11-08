@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Every day, a script must list all VMs in **two projects** (dev and prod). How do you set that up?
+**In plain words:**
+- **The situation:** You can see both production and development projects.
+- **What you must achieve:** Automatically list all VMs in both kinds of project every day.
+- **The limits:** It must be automated.
+- **What they're really asking:** How do you set up gcloud to list instances across both projects in a script?
 
 **Clues in the question:**
 - "**automated process**": a **script** that runs by itself, not someone clicking in the console every day.

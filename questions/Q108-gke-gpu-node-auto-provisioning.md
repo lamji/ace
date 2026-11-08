@@ -23,7 +23,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Data scientists need GPUs **only sometimes**, for long jobs that **can't be interrupted**. How do you keep cost low?
+**In plain words:**
+- **The situation:** Data scientists sometimes use a GKE cluster. They need GPUs for long-running jobs that cannot be restarted.
+- **What you must achieve:** Give them GPUs.
+- **The limits:** Keep costs low, and the jobs must not be interrupted.
+- **What they're really asking:** How should you set up GPU nodes cheaply without risking their jobs?
 
 **Clues in the question:**
 - "**infrequently**": don't keep GPU nodes running all the time (rules out D's minimum of 1).

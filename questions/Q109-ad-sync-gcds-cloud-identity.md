@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** Users live in **Active Directory**. AD must stay the master list, and the company must fully control everyone's Google accounts. How?
+**In plain words:**
+- **The situation:** Employee identities live in Active Directory (Microsoft's company directory), which stays the source of truth.
+- **What you must achieve:** Have full control over employees' Google accounts for all Google services, including Google Cloud.
+- **The limits:** None stated.
+- **What they're really asking:** How do you connect Active Directory to Google accounts?
 
 **Clues in the question:**
 - "**Active Directory as their source of truth**": users are created and removed in AD, and Google must follow automatically.

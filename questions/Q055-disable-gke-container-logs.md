@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** One **development container** in GKE wrote **tons of logs**, and you're paying for storing them. Stop those logs **quickly**, in the **fewest steps**.
+**In plain words:**
+- **The situation:** Costs were higher than expected because a development container on GKE wrote a huge amount of logs.
+- **What you must achieve:** Stop those logs.
+- **The limits:** Do it quickly, with the fewest steps.
+- **What they're really asking:** What is the quickest way to stop paying for those logs?
 
 | Keyword | What it hints at |
 |---|---|

@@ -21,7 +21,11 @@
 
 ## 📖 What the Question Is Asking
 
-**In plain words:** After 30 days files aren't used. **Save cost automatically** (not delete).
+**In plain words:**
+- **The situation:** Your app stores files in Cloud Storage's Standard class but only needs files from the last 30 days.
+- **What you must achieve:** Automatically save money on files the app no longer reads.
+- **The limits:** It should happen automatically.
+- **What they're really asking:** What do you set up so old files cost less?
 
 **Clues in the question:**
 - "**save costs on files that are no longer accessed**" → move them to a cheaper class, **automatically** → **lifecycle rule** `age > 30` → **Archive**.
