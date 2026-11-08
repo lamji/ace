@@ -497,6 +497,12 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
     if (store.prefs.pool === "missed" && !missed) store.prefs.pool = "all";
     var guideCount = ALL.filter(function (q) { return q.guide; }).length;
     if (store.prefs.pool === "guide" && !guideCount) store.prefs.pool = "all";
+    // A topic left over from an earlier quiz can match none of the guide questions; drop it so the guide pool isn't empty.
+    function topicFitsPool() {
+      if (store.prefs.pool !== "guide" || store.prefs.topic === "all") return true;
+      return ALL.some(function (q) { return q.guide && topicsOf(q).indexOf(store.prefs.topic) >= 0; });
+    }
+    if (!topicFitsPool()) store.prefs.topic = "all";
 
     var p = store.prefs;
     function chip(group, value, label, disabled) {
@@ -573,6 +579,10 @@ button, summary, select { touch-action: manipulation; -webkit-tap-highlight-colo
     app.querySelectorAll(".chip[data-group]").forEach(function (b) {
       b.addEventListener("click", function () {
         p[b.dataset.group] = b.dataset.value;
+        if (!topicFitsPool()) {
+          p.topic = "all";
+          document.getElementById("topic").value = "all";
+        }
         app.querySelectorAll('.chip[data-group="' + b.dataset.group + '"]').forEach(function (o) {
           o.setAttribute("aria-pressed", String(o === b));
         });
